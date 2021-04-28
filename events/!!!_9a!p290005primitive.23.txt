@@ -1,0 +1,12 @@
+namespace = primitive
+country_event = {
+    id = primitive.23
+    title = "primitive.23.name"
+    desc = "primitive.23.desc"
+    picture = GFX_primitiveages2
+    location = FROM
+    is_triggered_only = yes
+    option = {
+        name = primitive.23.a
+    }
+}

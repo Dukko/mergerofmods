@@ -1,0 +1,198 @@
+trait_erudite_upgrade = {
+    cost = 2
+    initial = no
+    randomized = no
+    advanced_trait = yes
+    opposites = {
+        "trait_nerve_stapled"
+        "remove_trait_intelligent"
+    }
+    icon = "gfx/interface/icons/traits/trait_erudite.dds"
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    species_potential_add = {
+        has_trait = trait_intelligent
+        exists = from
+        from = {
+            is_ai = yes
+        }
+    }
+    ai_weight = {
+        weight = 10000
+        modifier = {
+            factor = 0.25
+            root = {
+                NOR = {
+                    has_trait = trait_natural_engineers
+                    has_trait = trait_natural_physicists
+                    has_trait = trait_natural_sociologists
+                }
+            }
+            any_owned_species = {
+                NOT = {
+                    has_citizenship_type = {
+                        country = prev
+                        type = citizenship_slavery
+                    }
+                }
+                OR = {
+                    has_trait = trait_erudite
+                    has_trait = trait_natural_engineers
+                    has_trait = trait_natural_physicists
+                    has_trait = trait_natural_sociologists
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            root = {
+                OR = {
+                    has_citizenship_type = {
+                        country = prev
+                        type = citizenship_slavery
+                    }
+                    has_citizenship_type = {
+                        country = prev
+                        type = citizenship_organic_trophy
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            is_xenophile = no
+            root = {
+                has_citizenship_type = {
+                    country = prev
+                    type = citizenship_limited
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            any_owned_species = {
+                has_citizenship_type = {
+                    type = citizenship_slavery
+                    country = prev
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            is_materialist = yes
+        }
+        modifier = {
+            factor = 2
+            has_valid_civic = civic_technocracy
+            root = {
+                has_citizenship_type = {
+                    country = prev
+                    type = citizenship_full
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            has_valid_civic = civic_meritocracy
+            root = {
+                has_citizenship_type = {
+                    country = prev
+                    type = citizenship_full
+                }
+            }
+        }
+        modifier = {
+            factor = 4
+            exists = root.home_planet
+            root.home_planet = {
+                OR = {
+                    has_designation = col_research
+                    has_designation = col_ring_research
+                    has_designation = col_ecu_research
+                }
+                is_owned_by = prev
+            }
+        }
+        modifier = {
+            factor = 2
+            exists = root.home_planet
+            root.home_planet = {
+                OR = {
+                    has_designation = col_city
+                    has_designation = col_nexus
+                    has_designation = col_hive
+                    has_designation = col_ring_mix
+                    has_designation = col_ecu_mix
+                }
+                is_owned_by = prev
+            }
+        }
+        modifier = {
+            factor = 0.5
+            exists = root.home_planet
+            root = {
+                NOR = {
+                    has_trait = trait_void_dweller_1
+                    has_trait = trait_void_dweller_2
+                }
+            }
+            root.home_planet = {
+                NOR = {
+                    has_designation = col_capital
+                    has_designation = col_default
+                    has_designation = col_penal
+                    has_designation = col_research
+                    has_designation = col_ring_research
+                    has_designation = col_ecu_research
+                    has_designation = col_city
+                    has_designation = col_nexus
+                    has_designation = col_hive
+                    has_designation = col_ring_mix
+                    has_designation = col_ecu_mix
+                }
+                is_owned_by = prev
+            }
+        }
+        modifier = {
+            factor = 2
+            root = {
+                OR = {
+                    has_citizenship_type = {
+                        country = prev
+                        type = citizenship_full
+                    }
+                    has_military_service_type = {
+                        country = prev
+                        type = military_service_full
+                    }
+                }
+            }
+            pop_percentage = {
+                percentage < 0.5
+                limit = {
+                    OR = {
+                        has_citizenship_type = {
+                            country = prev
+                            type = citizenship_full
+                        }
+                        has_military_service_type = {
+                            country = prev
+                            type = military_service_full
+                        }
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0.01
+            root = {
+                has_citizenship_type = {
+                    country = prev
+                    type = citizenship_organic_trophy
+                }
+            }
+        }
+    }
+}

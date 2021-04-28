@@ -1,0 +1,208 @@
+@buildings_t1 = 1
+building_hab_capital = {
+    capital = yes
+    can_build = no
+    can_demolish = no
+    can_be_ruined = no
+    can_be_disabled = no
+    position_priority = 0
+    icon = building_capital
+    category = government
+    potential = {
+        OR = {
+            is_planet_class = pc_habitat
+            is_planet_class = pc_pd_gas_giant_hab
+            is_planet_class = pc_pd_barren_hab
+            is_planet_class = pc_pd_barren_cold_hab
+            is_planet_class = pc_pd_frozen_hab
+            is_planet_class = pc_pd_molten_hab
+            is_planet_class = pc_pd_toxic_hab
+            is_planet_class = pc_pd_hothouse_hab
+            is_planet_class = pc_pd_asteroid_hab
+            is_planet_class = pc_gd_hydrocarbon_hab
+        }
+        exists = owner
+        owner = {
+            is_fallen_empire = no
+        }
+    }
+    convert_to = {
+        building_hab_fe_capital
+    }
+    resources = {
+        category = planet_buildings
+        upkeep = {
+            energy = 3
+            alloys = 5
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    has_swapped_tradition = tr_domination_adopt_void
+                }
+            }
+            alloys = -1
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 3
+        planet_amenities_add = 3
+        planet_max_buildings_add = @buildings_t1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_non_swapped_tradition = tr_domination_imperious_architecture
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_swapped_tradition = tr_prosperity_void_works
+            }
+        }
+        modifier = {
+            planet_max_buildings_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_mechanical_empire = yes
+            }
+        }
+        job_roboticist_add = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                NOT = {
+                    is_megacorp = yes
+                }
+                is_regular_empire = yes
+            }
+        }
+        job_administrator_add = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_megacorp = yes
+            }
+        }
+        modifier = {
+            job_executive_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ascension_perk = ap_voidborn
+            }
+        }
+        modifier = {
+            planet_max_buildings_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        job_synapse_drone_add = 2
+        planet_amenities_add = 3
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        job_coordinator_add = 1
+        job_replicator_add = 1
+        job_maintenance_drone_add = 2
+        planet_amenities_add = 3
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                NOT = {
+                    is_megacorp = yes
+                }
+                is_regular_empire = yes
+            }
+        }
+        text = job_administrator_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_mechanical_empire = yes
+            }
+        }
+        text = job_roboticist_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_megacorp = yes
+            }
+        }
+        text = job_executive_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = job_coordinator_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = job_replicator_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = job_maintenance_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = job_synapse_drone_effect_desc
+    }
+    upgrades = {
+        "building_hab_major_capital"
+    }
+}

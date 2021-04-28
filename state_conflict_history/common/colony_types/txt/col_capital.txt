@@ -1,0 +1,28 @@
+col_capital = {
+    icon = 10
+    potential = {
+        is_capital = yes
+        NAND = {
+            exists = owner
+            owner = {
+                OR = {
+                    NOT = {
+                        is_country_type = default
+                    }
+                    is_gestalt = yes
+                }
+            }
+        }
+    }
+    planet_modifier = {
+        pop_government_ethic_attraction = 1
+        planet_stability_add = 5
+        planet_amenities_add = 10
+        planet_amenities_mult = 0.2
+        planet_jobs_upkeep_mult = -0.1
+        planet_jobs_worker_produces_mult = 0.1
+    }
+    weight_modifier = {
+        base = 90000
+    }
+}

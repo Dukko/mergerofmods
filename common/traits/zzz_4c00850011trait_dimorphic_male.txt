@@ -1,0 +1,29 @@
+trait_dimorphic_male = {
+    cost = 0
+    potential_crossbreeding_chance = 0
+    opposites = {
+        trait_dimorphic_1
+        trait_dimorphic_2
+        trait_dimorphic_female
+        trait_younger_form
+        trait_older_form
+        trait_rapid_breeders
+        trait_rapid_breeders_lithoid
+        trait_very_rapid_breeders
+        trait_very_rapid_breeders_lithoid
+        trait_slow_breeders
+        trait_very_slow_breeders
+        trait_fertile
+        trait_sterile
+    }
+    initial = no
+    modification = yes
+    species_potential_add = {
+        always = no
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    custom_tooltip = TRAIT_DIMORPHIC_EFFECT
+}

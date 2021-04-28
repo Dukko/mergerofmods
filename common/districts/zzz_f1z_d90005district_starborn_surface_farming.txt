@@ -1,0 +1,118 @@
+@hab_cost = 500
+district_starborn_surface_farming = {
+    base_buildtime = 240
+    icon = district_farming
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        OR = {
+            is_planet_class = pc_habitat
+            is_planet_class = pc_starborn_habitat_start
+        }
+        has_planet_flag = starborn_farming_habitat
+        has_retile = no
+    }
+    potential = {
+        OR = {
+            is_planet_class = pc_habitat
+            is_planet_class = pc_starborn_habitat_start
+        }
+        has_planet_flag = starborn_farming_habitat
+        has_retile = no
+    }
+    allow = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @hab_cost
+        }
+        upkeep = {
+            energy = 1
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 3
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_agri_drone_add = 4
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_agri_drone_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire_spiritualist = no
+            }
+        }
+        modifier = {
+            job_farmer_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_fallen_empire_spiritualist = yes
+            }
+        }
+        modifier = {
+            job_fe_acolyte_farm_add = 3
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_agri_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire_spiritualist = no
+            }
+        }
+        text = job_farmer_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_fallen_empire_spiritualist = yes
+            }
+        }
+        text = job_fe_acolyte_farm_effect_desc
+    }
+    ai_resource_production = {
+        food = 1
+        trigger = {
+            always = yes
+        }
+    }
+}

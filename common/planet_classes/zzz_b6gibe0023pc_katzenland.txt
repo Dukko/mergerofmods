@@ -1,0 +1,20 @@
+pc_katzenland = {
+    entity = "katzenland"
+    entity_scale = @planet_standard_scale
+    icon_frame = 1
+    picture = pc_katzenland
+    climate = "dry"
+    atmosphere_color = hsv {
+        0.5
+        0.2
+        0.8
+    }
+    atmosphere_intensity = 1
+    atmosphere_width = 0.5
+    colonizable = yes
+    starting_planet = no
+    orbit_lines = yes
+    district_set = standard
+    spawn_odds = 0
+    city_color_lut = "gfx/portraits/misc/colorcorrection_desert.dds"
+}

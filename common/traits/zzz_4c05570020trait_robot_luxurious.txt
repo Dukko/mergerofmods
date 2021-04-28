@@ -1,0 +1,25 @@
+trait_robot_luxurious = {
+    cost = -2
+    opposites = {
+        "trait_robot_recycled"
+    }
+    allowed_archetypes = {
+        ROBOT
+        MACHINE
+    }
+    assembling_modifier = {
+        planet_pop_assemblers_upkeep_mult = 0.4
+    }
+    ai_weight = {
+        weight = 400
+        modifier = {
+            factor = 0
+            NAND = {
+                has_country_flag = make_robots_luxurious
+                root = {
+                    could_use_2_more_trait_points_robotic = yes
+                }
+            }
+        }
+    }
+}

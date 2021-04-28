@@ -1,0 +1,78 @@
+giga_zro_extractor = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_giga_habitat_zro_harvester
+    clothes_texture_index = 3
+    possible = {
+        complex_specialist_job_check_trigger = yes
+    }
+    resources = {
+        category = planet_refiners
+        produces = {
+            sr_zro = 1
+        }
+        upkeep = {
+            energy = 5
+        }
+    }
+    weight = {
+        weight = @specialist_job_weight
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+            NOT = {
+                has_trait = trait_mechanical
+            }
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 2
+            species = {
+                has_species_flag = racket_species_flag
+            }
+        }
+        modifier = {
+            factor = 7
+            has_job = giga_zro_extractor
+        }
+        modifier = {
+            factor = 15
+            has_job = giga_zro_extractor
+            OR = {
+                has_trait = trait_robust
+                has_trait = trait_robot_efficient_processors
+            }
+        }
+        modifier = {
+            factor = 1.2
+            is_enslaved = yes
+            has_slavery_type = {
+                type = slavery_indentured
+            }
+        }
+        modifier = {
+            factor = 2
+            has_trait = trait_void_dweller_1
+        }
+        modifier = {
+            factor = 0.9
+            exists = owner
+            years_passed < 1
+            owner = {
+                has_valid_civic = civic_machine_assimilator
+            }
+            has_trait = trait_cybernetic
+        }
+        modifier = {
+            factor = 5
+            has_job = giga_zro_extractor
+            OR = {
+                has_trait = trait_robust
+                has_trait = trait_robot_efficient_processors
+            }
+        }
+    }
+}

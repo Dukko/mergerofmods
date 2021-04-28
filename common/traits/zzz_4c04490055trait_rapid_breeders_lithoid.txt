@@ -1,0 +1,42 @@
+trait_rapid_breeders_lithoid = {
+    cost = 2
+    icon = "gfx/interface/icons/traits/trait_rapid_breeders.dds"
+    initial = no
+    randomized = no
+    advanced_trait = yes
+    potential_crossbreeding_chance = 0.5
+    opposites = {
+        "trait_slow_breeders"
+        "trait_rapid_breeders"
+        "trait_fertile"
+        "trait_very_rapid_breeders"
+        "trait_very_slow_breeders"
+        "trait_sterile"
+        "trait_dimorphic_male"
+    }
+    allowed_archetypes = {
+        LITHOID
+    }
+    modifier = {
+        pop_growth_speed = 0.1
+    }
+    slave_cost = {
+        energy = 400
+    }
+    ai_weight = {
+        weight = 100
+        modifier = {
+            factor = 4
+            has_ai_personality = hive_mind
+        }
+        modifier = {
+            factor = 2
+            is_xenophobe = yes
+            is_same_species = root
+        }
+        modifier = {
+            factor = 0
+            has_valid_civic = civic_environmentalist
+        }
+    }
+}

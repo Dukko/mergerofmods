@@ -1,0 +1,195 @@
+namespace = rapid_evolution
+add_random_minus_1_trait = {
+    IF = {
+        limit = {
+            planet = {
+                OR = {
+                    has_deposit = d_bubbling_swamp
+                    has_deposit = d_fuming_bog
+                }
+            }
+        }
+        modify_species = {
+            species = this
+            add_trait = trait_exotic_gas_dependency
+        }
+    }
+    ELSE = {
+        random_list = {
+            10 = {
+                modify_species = {
+                    species = this
+                    add_trait = trait_weak
+                }
+                modifier = {
+                    factor = 0
+                    OR = {
+                        has_trait = trait_weak
+                        has_trait = trait_strong
+                        has_trait = trait_very_strong
+                    }
+                }
+            }
+            10 = {
+                modify_species = {
+                    species = this
+                    add_trait = trait_quarrelsome
+                }
+                modifier = {
+                    factor = 0
+                    OR = {
+                        has_trait = trait_quarrelsome
+                        has_trait = trait_traditional
+                    }
+                }
+            }
+            10 = {
+                modify_species = {
+                    species = this
+                    add_trait = trait_wasteful
+                }
+                modifier = {
+                    factor = 0
+                    OR = {
+                        has_trait = trait_wasteful
+                        has_trait = trait_conservational
+                        has_trait = trait_hive_mind
+                    }
+                }
+            }
+            10 = {
+                modify_species = {
+                    species = this
+                    add_trait = trait_solitary
+                }
+                modifier = {
+                    factor = 0
+                    OR = {
+                        has_trait = trait_solitary
+                        has_trait = trait_communal
+                    }
+                }
+            }
+            10 = {
+                modify_species = {
+                    species = this
+                    add_trait = trait_slow_learners
+                }
+                modifier = {
+                    factor = 0
+                    OR = {
+                        has_trait = trait_slow_learners
+                        has_trait = trait_quick_learners
+                    }
+                }
+            }
+            10 = {
+                modify_species = {
+                    species = this
+                    add_trait = trait_sedentary
+                }
+                modifier = {
+                    factor = 0
+                    OR = {
+                        has_trait = trait_sedentary
+                        has_trait = trait_nomadic
+                    }
+                }
+            }
+            10 = {
+                modify_species = {
+                    species = this
+                    add_trait = trait_deviants
+                }
+                modifier = {
+                    factor = 0
+                    OR = {
+                        has_trait = trait_deviants
+                        has_trait = trait_conformists
+                        has_trait = trait_hive_mind
+                    }
+                }
+            }
+            10 = {
+                IF = {
+                    limit = {
+                        has_trait = trait_lithoid
+                    }
+                    modify_species = {
+                        species = this
+                        add_trait = trait_fleeting_lithoid
+                    }
+                }
+                ELSE = {
+                limit = {
+                    has_trait = trait_lithoid
+                }
+                    modify_species = {
+                        species = this
+                        add_trait = trait_fleeting
+                    }
+                }
+                modifier = {
+                    factor = 0
+                    OR = {
+                        has_trait = trait_fleeting
+                        has_trait = trait_enduring
+                        has_trait = trait_venerable
+                    }
+                }
+            }
+            10 = {
+                modify_species = {
+                    species = this
+                    add_trait = trait_decadent
+                }
+                modifier = {
+                    factor = 0
+                    OR = {
+                        has_trait = trait_decadent
+                        has_trait = trait_hive_mind
+                    }
+                }
+            }
+            10 = {
+                modify_species = {
+                    species = this
+                    add_trait = trait_sensitive
+                }
+                modifier = {
+                    factor = 0
+                    OR = {
+                        has_trait = trait_sensitive
+                        has_trait = trait_resilient
+                    }
+                }
+            }
+            10 = {
+                modify_species = {
+                    species = this
+                    add_trait = trait_timid
+                }
+                modifier = {
+                    factor = 0
+                    OR = {
+                        has_trait = trait_timid
+                        has_trait = trait_aggressive
+                    }
+                }
+            }
+            10 = {
+                modify_species = {
+                    species = this
+                    add_trait = trait_complacent
+                }
+                modifier = {
+                    factor = 0
+                    OR = {
+                        has_trait = trait_complacent
+                        has_trait = trait_political
+                    }
+                }
+            }
+        }
+    }
+}

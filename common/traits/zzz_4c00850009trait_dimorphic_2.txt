@@ -1,0 +1,21 @@
+trait_dimorphic_2 = {
+    cost = 0
+    potential_crossbreeding_chance = 0
+    opposites = {
+        trait_dimorphic_1
+        trait_dimorphic_female
+        trait_dimorphic_male
+        trait_younger_form
+        trait_older_form
+    }
+    initial = no
+    modification = yes
+    species_potential_add = {
+        always = no
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    custom_tooltip = TRAIT_DIMORPHIC_EFFECT
+}

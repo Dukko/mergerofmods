@@ -1,0 +1,19 @@
+trait_ruler_hobby_research = {
+    cost = 0
+    leader_trait = {
+        ruler
+    }
+    leader_class = {
+        ruler
+    }
+    modifier = {
+        num_tech_alternatives_add = 1
+        all_technology_research_speed = 0.025
+        country_base_physics_research_produces_add = 3
+        country_base_society_research_produces_add = 3
+        country_base_engineering_research_produces_add = 3
+    }
+    initial = no
+    modification = no
+    randomized = no
+}

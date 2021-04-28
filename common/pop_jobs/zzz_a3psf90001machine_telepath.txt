@@ -1,0 +1,99 @@
+machine_telepath = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_psi_corps
+    clothes_texture_index = 5
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        drone_job_check_trigger = yes
+        AND = {
+            has_trait = trait_machine_unit
+            has_trait = trait_psionic
+        }
+    }
+    resources = {
+        category = planet_telepaths
+        produces = {
+            unity = 3
+        }
+        upkeep = {
+            energy = 1
+        }
+    }
+    planet_modifier = {
+        planet_crime_no_happiness_add = -35
+    }
+    weight = {
+        weight = @complex_drone_job_weight
+        modifier = {
+            factor = 0
+            NOT = {
+                has_trait = trait_psionic
+            }
+        }
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+        }
+        modifier = {
+            factor = 3
+            has_trait = trait_resilient
+        }
+        modifier = {
+            factor = 10
+            AND = {
+                has_trait = trait_machine_unit
+                has_trait = trait_psionic
+            }
+        }
+        modifier = {
+            factor = 1.5
+            has_job = telepath
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+                has_trait = trait_robot_propaganda_machines
+                has_trait = trait_traditional
+            }
+        }
+        modifier = {
+            factor = 3
+            planet = {
+                planet_crime > 0
+            }
+            has_trait = trait_very_strong
+        }
+        modifier = {
+            factor = 2
+            planet = {
+                planet_crime > 0
+            }
+            has_trait = trait_strong
+        }
+        modifier = {
+            factor = 0.5
+            has_trait = trait_weak
+        }
+        modifier = {
+            factor = 1.1
+            OR = {
+                has_trait = trait_traditional
+                has_trait = trait_robot_propaganda_machines
+            }
+        }
+        modifier = {
+            factor = 2
+            has_trait = trait_lithoid
+        }
+        modifier = {
+            factor = 1.2
+            has_trait = trait_cybernetic
+        }
+    }
+}

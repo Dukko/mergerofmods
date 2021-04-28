@@ -1,0 +1,30 @@
+namespace = crisis
+planet_event = {
+    id = crisis.2015
+    title = "crisis.2101.name"
+    desc = "crisis.2101.desc"
+    picture = GFX_evt_robot_assembly_plant
+    show_sound = event_robo
+    location = root
+    is_triggered_only = yes
+    trigger = {
+        any_pop = {
+            has_trait = "trait_mechanical"
+            NOT = {
+                has_trait = "trait_extsynth_synthetic"
+            }
+        }
+    }
+    option = {
+        name = crisis.2101.a
+        random_owned_pop = {
+            limit = {
+                has_trait = "trait_mechanical"
+                NOT = {
+                    has_trait = "trait_extsynth_synthetic"
+                }
+            }
+            kill_pop = yes
+        }
+    }
+}

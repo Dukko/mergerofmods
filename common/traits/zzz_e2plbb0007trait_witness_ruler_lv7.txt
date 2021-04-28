@@ -1,0 +1,24 @@
+trait_witness_ruler_lv7 = {
+    cost = 0
+    leader_trait = {
+        ruler
+    }
+    leader_class = {
+        ruler
+    }
+    self_modifier = {
+    }
+    modifier = {
+        country_admin_cap_mult = 0.025
+        edicts_cost_mult = -0.025
+        diplomacy_upkeep_mult = -0.025
+        decisions_cost_mult = -0.025
+        leader_cost_empire_size_mult = -0.15
+        country_naval_cap_mult = 0.1
+        country_trust_growth = 0.1
+        country_leader_pool_size = 1
+    }
+    initial = no
+    modification = no
+    randomized = no
+}

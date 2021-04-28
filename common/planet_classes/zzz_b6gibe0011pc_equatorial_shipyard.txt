@@ -1,0 +1,29 @@
+pc_equatorial_shipyard = {
+    is_artificial_planet = yes
+    ringworld = yes
+    entity = "planetary_ring_game"
+    icon_frame = 21
+    atmosphere_color = hsv {
+        0.5
+        0.2
+        0.8
+    }
+    atmosphere_intensity = 1
+    atmosphere_width = 0.5
+    show_city = no
+    entity_scale = 1
+    ideal = yes
+    enable_tilt = no
+    fixed_entity_scale = yes
+    city_color_lut = "gfx/portraits/misc/colorcorrection_desert.dds"
+    chance_of_ring = 0
+    planet_size = 10
+    moon_size = 1
+    colonizable = yes
+    starting_planet = no
+    orbit_lines = no
+    district_set = giga_planet
+    modifier = {
+        planet_max_buildings_add = 12
+    }
+}

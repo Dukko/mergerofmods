@@ -1,0 +1,26 @@
+trait_slow = {
+    cost = -2
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_swift"
+        "trait_sessile"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    modifier = {
+        army_disengage_chance_mult = -0.75
+    }
+    ai_weight = {
+        weight = 6000
+        modifier = {
+            factor = 0
+            root = {
+                NOT = {
+                    has_species_flag = make_slow@prev
+                }
+            }
+        }
+    }
+}

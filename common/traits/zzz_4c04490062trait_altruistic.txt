@@ -1,0 +1,19 @@
+trait_altruistic = {
+    cost = 1
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_decadent"
+        "trait_nerve_stapled"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    modifier = {
+        leaders_upkeep_mult = -0.8
+        leaders_cost_mult = -0.8
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

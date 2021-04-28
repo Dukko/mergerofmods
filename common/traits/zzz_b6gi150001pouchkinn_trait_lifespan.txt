@@ -1,0 +1,18 @@
+pouchkinn_trait_lifespan = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/trait_venerable.dds"
+    self_modifier = {
+        leader_age = 2500
+    }
+    leader_trait = all
+    leader_class = {
+        scientist
+        ruler
+    }
+    initial = no
+    randomized = no
+    ai_weight = {
+        weight = 0
+    }
+}

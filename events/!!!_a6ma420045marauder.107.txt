@@ -1,0 +1,41 @@
+namespace = marauder
+planet_event = {
+    id = marauder.107
+    title = "marauder.104.name"
+    desc = "marauder.107.desc"
+    picture = GFX_evt_burning_settlement
+    show_sound = event_planetary_riot
+    location = root
+    is_triggered_only = yes
+    option = {
+        name = marauder.107.a
+        random_owned_pop = {
+            limit = {
+                is_robot_pop = no
+                is_sapient = yes
+            }
+            kill_pop = yes
+        }
+        random_owned_pop = {
+            limit = {
+                is_robot_pop = no
+                is_sapient = yes
+            }
+            kill_pop = yes
+        }
+        random_owned_pop = {
+            limit = {
+                is_robot_pop = no
+                is_sapient = yes
+            }
+            kill_pop = yes
+        }
+        random_owned_pop = {
+            limit = {
+                is_robot_pop = no
+                is_sapient = yes
+            }
+            kill_pop = yes
+        }
+    }
+}

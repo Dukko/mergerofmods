@@ -1,0 +1,642 @@
+namespace = civwarcountry
+country_event = {
+    id = civwarcountry.1012
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        if = {
+            limit = {
+                event_target:civil_war_leader = {
+                    has_leader_flag = civil_war_faction_leader_admiral
+                }
+            }
+            random_list = {
+                5 = {
+                    create_country = {
+                        name = random
+                        type = default
+                        species = event_target:civwar_species
+                        ignore_initial_colony_error = yes
+                        day_zero_contact = no
+                        authority = auth_democratic
+                        ethos = {
+                            ethic = ethic_fanatic_socialism
+                            ethic = ethic_egalitarian
+                            ethic = random
+                            ethic = random
+                        }
+                        origin = origin_admiral_rebellion
+                        civics = {
+                            civic = random
+                            civic = random
+                            civic = random
+                        }
+                        flag = random
+                        effect = {
+                            save_event_target_as = current_civwar_rebels
+                            country_event = {
+                                id = civwar.10221
+                            }
+                        }
+                    }
+                }
+                5 = {
+                    create_country = {
+                        name = random
+                        type = default
+                        species = event_target:civwar_species
+                        ignore_initial_colony_error = yes
+                        day_zero_contact = no
+                        authority = auth_direct_democratic
+                        ethos = {
+                            ethic = ethic_fanatic_socialism
+                            ethic = ethic_egalitarian
+                            ethic = random
+                            ethic = random
+                        }
+                        origin = origin_admiral_rebellion
+                        civics = {
+                            civic = random
+                            civic = random
+                            civic = random
+                        }
+                        flag = random
+                        effect = {
+                            save_event_target_as = current_civwar_rebels
+                            country_event = {
+                                id = civwar.10221
+                            }
+                        }
+                    }
+                }
+                5 = {
+                    create_country = {
+                        name = random
+                        type = default
+                        species = event_target:civwar_species
+                        ignore_initial_colony_error = yes
+                        day_zero_contact = no
+                        authority = auth_strict_democratic
+                        ethos = {
+                            ethic = ethic_fanatic_socialism
+                            ethic = ethic_egalitarian
+                            ethic = random
+                            ethic = random
+                        }
+                        origin = origin_admiral_rebellion
+                        civics = {
+                            civic = random
+                            civic = random
+                            civic = random
+                        }
+                        flag = random
+                        effect = {
+                            save_event_target_as = current_civwar_rebels
+                            country_event = {
+                                id = civwar.10221
+                            }
+                        }
+                    }
+                }
+                25 = {
+                    create_country = {
+                        name = random
+                        type = default
+                        species = event_target:civwar_species
+                        ignore_initial_colony_error = yes
+                        day_zero_contact = no
+                        authority = auth_democratic_dictatorship
+                        ethos = {
+                            ethic = ethic_fanatic_socialism
+                            ethic = random
+                            ethic = random
+                            ethic = random
+                        }
+                        origin = origin_admiral_rebellion
+                        civics = {
+                            civic = random
+                            civic = random
+                            civic = random
+                        }
+                        flag = random
+                        effect = {
+                            save_event_target_as = current_civwar_rebels
+                            country_event = {
+                                id = civwar.10221
+                            }
+                        }
+                    }
+                }
+                25 = {
+                    create_country = {
+                        name = random
+                        type = default
+                        species = event_target:civwar_species
+                        ignore_initial_colony_error = yes
+                        day_zero_contact = no
+                        authority = auth_imperial
+                        ethos = {
+                            ethic = ethic_fanatic_socialism
+                            ethic = ethic_authoritarian
+                            ethic = random
+                            ethic = random
+                        }
+                        origin = origin_admiral_rebellion
+                        civics = {
+                            civic = random
+                            civic = random
+                            civic = random
+                        }
+                        flag = random
+                        effect = {
+                            save_event_target_as = current_civwar_rebels
+                            country_event = {
+                                id = civwar.10221
+                            }
+                        }
+                    }
+                }
+                25 = {
+                    create_country = {
+                        name = random
+                        type = default
+                        species = event_target:civwar_species
+                        ignore_initial_colony_error = yes
+                        day_zero_contact = no
+                        authority = auth_dictatorial
+                        ethos = {
+                            ethic = ethic_fanatic_socialism
+                            ethic = ethic_authoritarian
+                            ethic = random
+                            ethic = random
+                        }
+                        origin = origin_admiral_rebellion
+                        civics = {
+                            civic = random
+                            civic = random
+                            civic = random
+                        }
+                        flag = random
+                        effect = {
+                            save_event_target_as = current_civwar_rebels
+                            country_event = {
+                                id = civwar.10221
+                            }
+                        }
+                    }
+                }
+                10 = {
+                    create_country = {
+                        name = random
+                        type = default
+                        species = event_target:civwar_species
+                        ignore_initial_colony_error = yes
+                        day_zero_contact = no
+                        authority = auth_oligarchic
+                        ethos = {
+                            ethic = ethic_fanatic_socialism
+                            ethic = random
+                            ethic = random
+                            ethic = random
+                        }
+                        origin = origin_admiral_rebellion
+                        civics = {
+                            civic = random
+                            civic = random
+                            civic = random
+                        }
+                        flag = random
+                        effect = {
+                            save_event_target_as = current_civwar_rebels
+                            country_event = {
+                                id = civwar.10221
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                event_target:civil_war_leader = {
+                    OR = {
+                        has_leader_flag = civil_war_faction_leader_scientist
+                        has_leader_flag = civil_war_faction_leader_general
+                    }
+                }
+            }
+            random_list = {
+                5 = {
+                    create_country = {
+                        name = random
+                        type = default
+                        species = event_target:civwar_species
+                        ignore_initial_colony_error = yes
+                        day_zero_contact = no
+                        authority = auth_democratic
+                        ethos = {
+                            ethic = ethic_fanatic_socialism
+                            ethic = ethic_egalitarian
+                            ethic = random
+                            ethic = random
+                        }
+                        origin = origin_civwar
+                        civics = {
+                            civic = random
+                            civic = random
+                            civic = random
+                        }
+                        flag = random
+                        effect = {
+                            save_event_target_as = current_civwar_rebels
+                            country_event = {
+                                id = civwar.1024
+                            }
+                        }
+                    }
+                }
+                5 = {
+                    create_country = {
+                        name = random
+                        type = default
+                        species = event_target:civwar_species
+                        ignore_initial_colony_error = yes
+                        day_zero_contact = no
+                        authority = auth_direct_democratic
+                        ethos = {
+                            ethic = ethic_fanatic_socialism
+                            ethic = ethic_egalitarian
+                            ethic = random
+                            ethic = random
+                        }
+                        origin = origin_civwar
+                        civics = {
+                            civic = random
+                            civic = random
+                            civic = random
+                        }
+                        flag = random
+                        effect = {
+                            save_event_target_as = current_civwar_rebels
+                            country_event = {
+                                id = civwar.1024
+                            }
+                        }
+                    }
+                }
+                5 = {
+                    create_country = {
+                        name = random
+                        type = default
+                        species = event_target:civwar_species
+                        ignore_initial_colony_error = yes
+                        day_zero_contact = no
+                        authority = auth_strict_democratic
+                        ethos = {
+                            ethic = ethic_fanatic_socialism
+                            ethic = ethic_egalitarian
+                            ethic = random
+                            ethic = random
+                        }
+                        origin = origin_civwar
+                        civics = {
+                            civic = random
+                            civic = random
+                            civic = random
+                        }
+                        flag = random
+                        effect = {
+                            save_event_target_as = current_civwar_rebels
+                            country_event = {
+                                id = civwar.1024
+                            }
+                        }
+                    }
+                }
+                25 = {
+                    create_country = {
+                        name = random
+                        type = default
+                        species = event_target:civwar_species
+                        ignore_initial_colony_error = yes
+                        day_zero_contact = no
+                        authority = auth_democratic_dictatorship
+                        ethos = {
+                            ethic = ethic_fanatic_socialism
+                            ethic = random
+                            ethic = random
+                            ethic = random
+                        }
+                        origin = origin_civwar
+                        civics = {
+                            civic = random
+                            civic = random
+                            civic = random
+                        }
+                        flag = random
+                        effect = {
+                            save_event_target_as = current_civwar_rebels
+                            country_event = {
+                                id = civwar.1024
+                            }
+                        }
+                    }
+                }
+                25 = {
+                    create_country = {
+                        name = random
+                        type = default
+                        species = event_target:civwar_species
+                        ignore_initial_colony_error = yes
+                        day_zero_contact = no
+                        authority = auth_imperial
+                        ethos = {
+                            ethic = ethic_fanatic_socialism
+                            ethic = ethic_authoritarian
+                            ethic = random
+                            ethic = random
+                        }
+                        origin = origin_civwar
+                        civics = {
+                            civic = random
+                            civic = random
+                            civic = random
+                        }
+                        flag = random
+                        effect = {
+                            save_event_target_as = current_civwar_rebels
+                            country_event = {
+                                id = civwar.1024
+                            }
+                        }
+                    }
+                }
+                25 = {
+                    create_country = {
+                        name = random
+                        type = default
+                        species = event_target:civwar_species
+                        ignore_initial_colony_error = yes
+                        day_zero_contact = no
+                        authority = auth_dictatorial
+                        ethos = {
+                            ethic = ethic_fanatic_socialism
+                            ethic = ethic_authoritarian
+                            ethic = random
+                            ethic = random
+                        }
+                        origin = origin_civwar
+                        civics = {
+                            civic = random
+                            civic = random
+                            civic = random
+                        }
+                        flag = random
+                        effect = {
+                            save_event_target_as = current_civwar_rebels
+                            country_event = {
+                                id = civwar.1024
+                            }
+                        }
+                    }
+                }
+                10 = {
+                    create_country = {
+                        name = random
+                        type = default
+                        species = event_target:civwar_species
+                        ignore_initial_colony_error = yes
+                        day_zero_contact = no
+                        authority = auth_oligarchic
+                        ethos = {
+                            ethic = ethic_fanatic_socialism
+                            ethic = random
+                            ethic = random
+                            ethic = random
+                        }
+                        origin = origin_civwar
+                        civics = {
+                            civic = random
+                            civic = random
+                            civic = random
+                        }
+                        flag = random
+                        effect = {
+                            save_event_target_as = current_civwar_rebels
+                            country_event = {
+                                id = civwar.1024
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        else = {
+            random_list = {
+                5 = {
+                    create_country = {
+                        name = random
+                        type = default
+                        species = event_target:civwar_species
+                        ignore_initial_colony_error = yes
+                        day_zero_contact = no
+                        authority = auth_democratic
+                        ethos = {
+                            ethic = ethic_fanatic_socialism
+                            ethic = ethic_egalitarian
+                            ethic = random
+                            ethic = random
+                        }
+                        origin = origin_civwar
+                        civics = {
+                            civic = random
+                            civic = random
+                            civic = random
+                        }
+                        flag = random
+                        effect = {
+                            save_event_target_as = current_civwar_rebels
+                            country_event = {
+                                id = civwar.1022
+                            }
+                        }
+                    }
+                }
+                5 = {
+                    create_country = {
+                        name = random
+                        type = default
+                        species = event_target:civwar_species
+                        ignore_initial_colony_error = yes
+                        day_zero_contact = no
+                        authority = auth_direct_democratic
+                        ethos = {
+                            ethic = ethic_fanatic_socialism
+                            ethic = ethic_egalitarian
+                            ethic = random
+                            ethic = random
+                        }
+                        origin = origin_civwar
+                        civics = {
+                            civic = random
+                            civic = random
+                            civic = random
+                        }
+                        flag = random
+                        effect = {
+                            save_event_target_as = current_civwar_rebels
+                            country_event = {
+                                id = civwar.1022
+                            }
+                        }
+                    }
+                }
+                5 = {
+                    create_country = {
+                        name = random
+                        type = default
+                        species = event_target:civwar_species
+                        ignore_initial_colony_error = yes
+                        day_zero_contact = no
+                        authority = auth_strict_democratic
+                        ethos = {
+                            ethic = ethic_fanatic_socialism
+                            ethic = ethic_egalitarian
+                            ethic = random
+                            ethic = random
+                        }
+                        origin = origin_civwar
+                        civics = {
+                            civic = random
+                            civic = random
+                            civic = random
+                        }
+                        flag = random
+                        effect = {
+                            save_event_target_as = current_civwar_rebels
+                            country_event = {
+                                id = civwar.1022
+                            }
+                        }
+                    }
+                }
+                25 = {
+                    create_country = {
+                        name = random
+                        type = default
+                        species = event_target:civwar_species
+                        ignore_initial_colony_error = yes
+                        day_zero_contact = no
+                        authority = auth_democratic_dictatorship
+                        ethos = {
+                            ethic = ethic_fanatic_socialism
+                            ethic = random
+                            ethic = random
+                            ethic = random
+                        }
+                        origin = origin_civwar
+                        civics = {
+                            civic = random
+                            civic = random
+                            civic = random
+                        }
+                        flag = random
+                        effect = {
+                            save_event_target_as = current_civwar_rebels
+                            country_event = {
+                                id = civwar.1022
+                            }
+                        }
+                    }
+                }
+                25 = {
+                    create_country = {
+                        name = random
+                        type = default
+                        species = event_target:civwar_species
+                        ignore_initial_colony_error = yes
+                        day_zero_contact = no
+                        authority = auth_imperial
+                        ethos = {
+                            ethic = ethic_fanatic_socialism
+                            ethic = ethic_authoritarian
+                            ethic = random
+                            ethic = random
+                        }
+                        origin = origin_civwar
+                        civics = {
+                            civic = random
+                            civic = random
+                            civic = random
+                        }
+                        flag = random
+                        effect = {
+                            save_event_target_as = current_civwar_rebels
+                            country_event = {
+                                id = civwar.1022
+                            }
+                        }
+                    }
+                }
+                25 = {
+                    create_country = {
+                        name = random
+                        type = default
+                        species = event_target:civwar_species
+                        ignore_initial_colony_error = yes
+                        day_zero_contact = no
+                        authority = auth_dictatorial
+                        ethos = {
+                            ethic = ethic_fanatic_socialism
+                            ethic = ethic_authoritarian
+                            ethic = random
+                            ethic = random
+                        }
+                        origin = origin_civwar
+                        civics = {
+                            civic = random
+                            civic = random
+                            civic = random
+                        }
+                        flag = random
+                        effect = {
+                            save_event_target_as = current_civwar_rebels
+                            country_event = {
+                                id = civwar.1022
+                            }
+                        }
+                    }
+                }
+                10 = {
+                    create_country = {
+                        name = random
+                        type = default
+                        species = event_target:civwar_species
+                        ignore_initial_colony_error = yes
+                        day_zero_contact = no
+                        authority = auth_oligarchic
+                        ethos = {
+                            ethic = ethic_fanatic_socialism
+                            ethic = random
+                            ethic = random
+                            ethic = random
+                        }
+                        origin = origin_civwar
+                        civics = {
+                            civic = random
+                            civic = random
+                            civic = random
+                        }
+                        flag = random
+                        effect = {
+                            save_event_target_as = current_civwar_rebels
+                            country_event = {
+                                id = civwar.1022
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

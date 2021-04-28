@@ -1,0 +1,91 @@
+trait_robust_upgrade_1 = {
+    cost = 2
+    initial = no
+    randomized = no
+    advanced_trait = yes
+    opposites = {
+        "trait_extremely_adaptive_upgrade"
+    }
+    icon = "gfx/interface/icons/traits/trait_robust.dds"
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    species_potential_add = {
+        has_trait = trait_adaptive
+        exists = from
+        from = {
+            is_ai = yes
+        }
+    }
+    ai_weight = {
+        weight = 10000
+        modifier = {
+            factor = 2
+            is_materialist = yes
+        }
+        modifier = {
+            factor = 0.5
+            has_ethic = ethic_spiritualist
+        }
+        modifier = {
+            factor = 0.25
+            has_ethic = ethic_fanatic_spiritualist
+        }
+        modifier = {
+            factor = 0.5
+            has_valid_civic = civic_warrior_culture
+        }
+        modifier = {
+            factor = 0.5
+            root = {
+                has_citizenship_type = {
+                    country = prev
+                    type = citizenship_slavery
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            OR = {
+                has_ascension_perk = ap_voidborn
+                has_ascension_perk = ap_world_shaper
+                has_ascension_perk = ap_galactic_wonders_utopia
+                has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp
+            }
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                has_ai_personality_behaviour = purger
+                has_ai_personality_behaviour = displacer
+            }
+            is_same_species = root
+        }
+        modifier = {
+            factor = 2
+            root = {
+                OR = {
+                    has_trait = trait_rapid_breeders
+                    has_trait = trait_rapid_breeders_lithoid
+                    has_trait = trait_fertile
+                    has_trait = trait_very_rapid_breeders
+                    has_trait = trait_nomadic
+                }
+                has_citizenship_type = {
+                    country = prev
+                    type = citizenship_full
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            is_xenophile = no
+            root = {
+                has_citizenship_type = {
+                    country = prev
+                    type = citizenship_limited
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,188 @@
+district_giga_alderson_generator = {
+    base_buildtime = @giga_alderson_district_buildtime
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        uses_district_set = giga_alderson
+        exists = from
+        from = {
+            OR = {
+                is_gestalt = yes
+                is_fallen_empire = yes
+            }
+        }
+        has_planet_flag = giga_alderson_gaia
+    }
+    potential = {
+        uses_district_set = giga_alderson
+        exists = owner
+        owner = {
+            is_gestalt = yes
+        }
+        has_planet_flag = giga_alderson_gaia
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_giga_alderson_city
+        district_giga_alderson_hive
+        district_giga_alderson_nexus
+        district_giga_alderson_commercial
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @giga_alderson_cost
+            rare_crystals = @giga_alderson_cost_sr
+        }
+        upkeep = {
+            energy = @giga_alderson_maintenance
+            rare_crystals = @giga_alderson_maintenance_sr
+        }
+    }
+    triggered_planet_modifier = {
+        modifier = {
+            planet_housing_add = 120
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_technician_drone_add = 120
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            planet_housing_add = 60
+            job_technician_drone_add = 180
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire_spiritualist = no
+            }
+        }
+        modifier = {
+            job_technician_add = 120
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_fallen_empire_spiritualist = yes
+            }
+        }
+        modifier = {
+            job_fe_acolyte_generator_add = 120
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = "job_technician_drone_effect_desc"
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire_spiritualist = no
+            }
+        }
+        text = "job_technician_effect_desc"
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_fallen_empire_spiritualist = yes
+            }
+        }
+        text = "job_fe_acolyte_generator_effect_desc"
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+            has_active_building = building_energy_nexus
+        }
+        modifier = {
+            job_technician_drone_add = 45
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire_spiritualist = no
+            }
+        }
+        modifier = {
+            job_technician_add = 90
+        }
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 250
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 200
+                }
+            }
+        }
+        modifier = {
+            factor = 0.01
+            OR = {
+                planet = {
+                    has_district = district_giga_alderson_mining
+                }
+                planet = {
+                    has_district = district_giga_alderson_science
+                }
+                planet = {
+                    has_district = district_giga_alderson_farming
+                }
+                planet = {
+                    has_district = district_giga_alderson_admin
+                }
+                planet = {
+                    has_district = district_giga_alderson_consumer
+                }
+                planet = {
+                    has_district = district_giga_alderson_alloys
+                }
+                planet = {
+                    has_district = district_giga_alderson_leisure
+                }
+            }
+        }
+    }
+    ai_resource_production = {
+        energy = 10
+        trigger = {
+            always = yes
+        }
+    }
+}

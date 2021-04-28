@@ -1,0 +1,56 @@
+namespace = galcom
+country_event = {
+    id = galcom.62
+    title = galcom.62.name
+    desc = galcom.62.desc
+    picture = GFX_evt_financial_instruments
+    show_sound = event_galactic_market
+    location = event_target:market_founder_planet
+    is_triggered_only = yes
+    trigger = {
+        exists = event_target:market_founder_planet
+        any_owned_planet = {
+            is_same_value = event_target:market_founder_planet
+        }
+    }
+    immediate = {
+        remove_country_flag = has_market_access
+        enable_galactic_market = no
+        event_target:galactic_market_station = {
+            destroy_ambient_object = this
+            solar_system = {
+                save_event_target_as = galactic_market_station_system
+            }
+        }
+        remove_global_flag = galactic_market_founded
+        set_global_flag = ongoing_market_nomination
+        event_target:global_event_country = {
+            country_event = {
+                id = action.98
+                days = 1800
+            }
+        }
+        every_playable_country = {
+            limit = {
+                has_country_flag = has_market_access
+            }
+            remove_country_flag = has_market_access
+            enable_galactic_market = no
+            if = {
+                limit = {
+                    is_galactic_community_member = yes
+                    NOT = {
+                        is_same_value = root
+                    }
+                }
+                country_event = {
+                    id = galcom.63
+                }
+            }
+        }
+    }
+    option = {
+        name = galcom.62.A
+        remove_modifier = galactic_market_founder
+    }
+}

@@ -1,0 +1,28 @@
+pc_gigabrown_dwarf = {
+    entity = "gigabrown_dwarf_planet"
+    entity_scale = 14
+    picture = pc_gigabrown_dwarf
+    icon_frame = 14
+    atmosphere_color = hsv {
+        0.93
+        0.85
+        0.59
+    }
+    atmosphere_intensity = 1.1
+    atmosphere_width = 1
+    min_distance_from_sun = 40
+    max_distance_from_sun = 1000
+    spawn_odds = 0
+    can_be_moon = no
+    chance_of_ring = 0
+    planet_size = {
+        min = 35
+        max = 40
+    }
+    moon_size = {
+        min = 8
+        max = 15
+    }
+    production_spawn_chance = 0.5
+    colonizable = no
+}

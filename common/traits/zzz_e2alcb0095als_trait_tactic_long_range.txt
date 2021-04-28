@@ -1,0 +1,18 @@
+als_trait_tactic_long_range = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/als_trait_tactic_long_range.dds"
+    modifier = {
+        ship_weapon_range_mult = 0.5
+        ship_engagement_range_mult = 0.5
+    }
+    custom_tooltip = als_trait_tactic_long_range.tooltip
+    initial = no
+    randomized = no
+    leader_trait = {
+        admiral
+    }
+    leader_class = {
+        admiral
+    }
+}

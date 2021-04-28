@@ -1,0 +1,28 @@
+leader_trait_multihive_core = {
+    leader_class = {
+        admiral
+        scientist
+        general
+        governor
+    }
+    leader_trait = all
+    cost = 0
+    modification = no
+    initial = no
+    randomized = no
+    icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ruler_hive_mind.dds"
+    immortal_leaders = yes
+    hide_age = yes
+    self_modifier = {
+        fleet_leaders_energy_upkeep_mult = 0.5
+        fleet_leaders_influence_upkeep_add = 0.25
+    }
+    ai_categories = {
+        physics
+        engineering
+        society
+    }
+    ai_weight = {
+        weight = 25
+    }
+}

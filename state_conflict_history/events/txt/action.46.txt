@@ -1,0 +1,37 @@
+namespace = action
+planet_event = {
+    id = action.46
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        has_owner = yes
+        NOT = {
+            exists = fromfrom
+        }
+        owner = {
+            OR = {
+                is_country_type = default
+                is_country_type = fallen_empire
+            }
+        }
+    }
+    immediate = {
+        if = {
+            limit = {
+                owner = {
+                    NOT = {
+                        has_established_contact = from
+                    }
+                }
+            }
+            owner = {
+                from = {
+                    establish_contact = {
+                        who = prev
+                        location = prevprev
+                    }
+                }
+            }
+        }
+    }
+}

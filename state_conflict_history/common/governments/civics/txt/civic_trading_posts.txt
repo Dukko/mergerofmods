@@ -1,0 +1,20 @@
+civic_trading_posts = {
+    potential = {
+        OR = {
+        authority = {
+            OR = {
+                value = auth_corporate
+                value = auth_corporate_imperial
+            }
+            civics = {
+                value = civic_galactic_sovereign_megacorp
+            }
+        }
+    }
+    random_weight = {
+        base = 5
+    }
+    modifier = {
+        country_starbase_capacity_add = 4
+    }
+}

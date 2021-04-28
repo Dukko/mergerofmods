@@ -1,0 +1,17 @@
+lrsk_gov_var_leader_trait_admiral_esper = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/lrsk_gov_var_leader_trait_esper.dds"
+    modifier = {
+        ship_weapon_damage = 0.05
+        ship_evasion_mult = 0.075
+    }
+    leader_trait = {
+        admiral
+    }
+    leader_class = {
+        admiral
+    }
+    initial = no
+    randomized = no
+}

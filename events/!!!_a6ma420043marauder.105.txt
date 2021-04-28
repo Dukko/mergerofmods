@@ -1,0 +1,45 @@
+namespace = marauder
+planet_event = {
+    id = marauder.105
+    title = "marauder.104.name"
+    desc = "marauder.105.desc"
+    picture = GFX_evt_surrender
+    show_sound = event_planetary_riot
+    location = root
+    is_triggered_only = yes
+    option = {
+        name = marauder.105.a
+        if = {
+            limit = {
+                num_pops > 1
+            }
+            random_owned_pop = {
+                kill_pop = yes
+            }
+        }
+        if = {
+            limit = {
+                num_pops > 1
+            }
+            random_owned_pop = {
+                kill_pop = yes
+            }
+        }
+        if = {
+            limit = {
+                num_pops > 1
+            }
+            random_owned_pop = {
+                kill_pop = yes
+            }
+        }
+        if = {
+            limit = {
+                num_pops > 1
+            }
+            random_owned_pop = {
+                kill_pop = yes
+            }
+        }
+    }
+}

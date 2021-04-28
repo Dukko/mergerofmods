@@ -1,0 +1,40 @@
+namespace = galcom
+country_event = {
+    id = galcom.63
+    title = galcom.63.name
+    desc = galcom.63.desc
+    picture = GFX_evt_financial_instruments
+    show_sound = event_galactic_market
+    is_triggered_only = yes
+    immediate = {
+        set_country_flag = market_nomination_eligible
+        begin_event_chain = {
+            event_chain = market_founding_chain
+            target = this
+        }
+    }
+    after = {
+        tooltip = {
+            begin_event_chain = {
+                event_chain = market_founding_chain
+                target = this
+            }
+        }
+    }
+    option = {
+        name = galcom.63.A
+        trigger = {
+            is_megacorp = yes
+        }
+        custom_tooltip = enable_decision_market_nomination
+    }
+    option = {
+        name = galcom.63.B
+        trigger = {
+            NOT = {
+                is_megacorp = yes
+            }
+        }
+        custom_tooltip = enable_decision_market_nomination
+    }
+}

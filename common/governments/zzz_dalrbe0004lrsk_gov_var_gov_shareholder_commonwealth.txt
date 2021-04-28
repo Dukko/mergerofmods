@@ -1,0 +1,32 @@
+lrsk_gov_var_gov_shareholder_commonwealth = {
+    ruler_title = LRSK_GOV_VAR_RT_CHIEF_ARBITRATOR
+    ruler_title_female = LRSK_GOV_VAR_RT_CHIEF_ARBITRATOR_FEMALE
+    election_candidates = {
+        modifier = {
+            factor = 0
+            leader_class = admiral
+        }
+        modifier = {
+            factor = 0
+            leader_class = general
+        }
+    }
+    possible = {
+        OR = {
+            has_authority = auth_democratic
+            has_authority = auth_strict_democratic
+            has_authority = auth_democratic_dictatorship
+            has_authority = auth_dem_dict_dummy
+        }
+        has_valid_civic = lrsk_gov_var_civic_republicanism
+        has_valid_civic = civic_merchant_guilds
+        NOR = {
+            text = civic_tooltip_not_elitist
+            value = ethic_elitist
+            value = ethic_fanatic_elitist
+        }
+    }
+    weight = {
+        base = 1800
+    }
+}

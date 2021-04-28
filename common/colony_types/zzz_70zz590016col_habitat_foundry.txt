@@ -1,0 +1,78 @@
+col_habitat_foundry = {
+    icon = 25
+    potential = {
+        OR = {
+            uses_district_set = habitat
+            uses_district_set = pdarchive
+        }
+        is_capital = no
+    }
+    planet_modifier = {
+        custom_tooltip = col_habitat_foundry_custom
+        planet_district_hab_industrial_build_speed_mult = 0.25
+        planet_metallurgists_upkeep_mult = -0.2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_galactic_community_member = yes
+            }
+            OR = {
+                is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
+                is_active_resolution = "resolution_industry_project_cornucopia"
+            }
+        }
+        modifier = {
+            planet_metallurgists_produces_mult = 0.05
+        }
+    }
+    weight_modifier = {
+        base = 300
+        modifier = {
+            factor = 2
+            owner = {
+                has_monthly_income = {
+                    resource = alloys
+                    value < 10
+                }
+            }
+        }
+        modifier = {
+            factor = 3
+            has_designation = col_habitat_foundry
+        }
+        modifier = {
+            add = 2
+            has_building = building_foundry_1
+        }
+        modifier = {
+            add = 4
+            has_building = building_foundry_2
+        }
+        modifier = {
+            factor = 0
+            num_buildings = {
+                type = building_foundry_1
+                value = 0
+            }
+            num_buildings = {
+                type = building_foundry_2
+                value = 0
+            }
+            NOT = {
+                num_districts = {
+                    type = district_hab_industrial
+                    value >= 3
+                }
+            }
+        }
+        modifier = {
+            factor = 3
+            num_districts = {
+                type = district_hab_industrial
+                value >= 3
+            }
+        }
+    }
+}

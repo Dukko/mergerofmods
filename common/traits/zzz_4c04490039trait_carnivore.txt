@@ -1,0 +1,28 @@
+trait_carnivore = {
+    cost = -2
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_grazer"
+        "trait_pioneer_flora"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    modifier = {
+        planet_pops_food_upkeep_mult = 0.4
+    }
+    slave_cost = {
+        energy = -100
+    }
+    ai_weight = {
+        weight = 6000
+        modifier = {
+            factor = 0
+            root = {
+                NOT = {
+                    has_species_flag = make_carnivore@prev
+                }
+            }
+        }
+    }
+}

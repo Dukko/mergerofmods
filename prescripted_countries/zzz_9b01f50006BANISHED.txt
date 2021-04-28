@@ -1,0 +1,55 @@
+BANISHED = {
+    ship_prefix = ""
+    spawn_enabled = no
+    species = {
+        class = "Covenant"
+        portrait = "jiral"
+        name = "Jiralhanae"
+        plural = "Jiralhanae"
+        adjective = "Jiralhanae"
+        name_list = "Cov3"
+        trait = "trait_very_strong"
+        trait = "trait_deviants"
+    }
+    name = "The Banished"
+    adjective = "Jiralhanae"
+    authority = "auth_dictatorial"
+    government = "gov_martial_dictatorship"
+    planet_name = "Doisac"
+    planet_class = "pc_tropical"
+    system_name = "Oth Sonin"
+    initializer = ""
+    graphical_culture = "cov_01"
+    city_graphical_culture = "cov_01"
+    empire_flag = {
+        icon = {
+            category = "halo"
+            file = "markofshame.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "v.dds"
+        }
+        colors = {
+            "red"
+            "red"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = male
+        name = "Atriox"
+        portrait = "jiral"
+        texture = 3
+        hair = 1
+        clothes = 1
+        ruler_title = "Chiefton"
+    }
+    ethic = "ethic_authoritarian"
+    ethic = "ethic_fanatic_militarist"
+    civics = {
+        "civic_warrior_culture"
+        "civic_nationalistic_zeal"
+    }
+}

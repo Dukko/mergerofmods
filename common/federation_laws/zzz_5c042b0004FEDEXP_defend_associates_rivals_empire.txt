@@ -1,0 +1,52 @@
+@cooldown = 3600
+FEDEXP_defend_associates_rivals_empire = {
+    allow = {
+        custom_tooltip = {
+            NOT = {
+                AND = {
+                    NOT = {
+                        has_federation_law = FEDEXP_defend_associates_rivals_empire
+                    }
+                    has_modifier = law_category_FEDEXP_defend_associates_cooldown
+                    has_any_federation_law_in_category = law_category_FEDEXP_defend_associates
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = EMPIRE_LAW_CHANGE
+            NOT = {
+                AND = {
+                    NOT = {
+                        has_federation_law = FEDEXP_defend_associates_rivals_empire
+                    }
+                    has_federation_flag = vf_law_changes_disabled
+                }
+            }
+        }
+    }
+    potential = {
+        has_federation_type = vf_ef_federation
+    }
+    required_centralization = {
+        base = 3
+    }
+    modifier = {
+        description = "FEDEXP_defend_associates_rivals_effect"
+    }
+    cohesion_growth = -0.5
+    on_enact = {
+        if = {
+            limit = {
+                has_federation_flag = enable_federation_cooldowns
+            }
+            add_modifier = {
+                modifier = law_category_FEDEXP_defend_associates_cooldown
+                days = @cooldown
+            }
+        }
+        add_cohesion = -5
+    }
+    ai_weight = {
+        base = 1
+    }
+}

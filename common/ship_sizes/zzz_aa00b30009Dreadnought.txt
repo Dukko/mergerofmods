@@ -1,0 +1,67 @@
+@dreadnought_formation = 7
+@speed3 = 90
+@acceleration1 = 0.2
+@rotation2 = 0.15
+@dreadnought_collision = 9
+Dreadnought = {
+    formation_priority = @dreadnought_formation
+    max_speed = @speed3
+    acceleration = @acceleration1
+    rotation_speed = @rotation2
+    collision_radius = @dreadnought_collision
+    modifier = {
+        ship_evasion_add = 3
+        ship_piracy_suppression_add = 4
+    }
+    max_hitpoints = 9000
+    size_multiplier = 14
+    fleet_slot_size = 14
+    section_slots = {
+        "bow" = {
+            locator = "part1"
+        }
+        "mid1" = {
+            locator = "part2"
+        }
+        "mid2" = {
+            locator = "part3"
+        }
+        "mid3" = {
+            locator = "part4"
+        }
+        "stern" = {
+            locator = "part5"
+        }
+    }
+    num_target_locators = 4
+    icon_frame = 17
+    base_buildtime = 700
+    combat_disengage_chance = 0.7
+    is_space_station = no
+    can_have_federation_design = yes
+    enable_default_design = yes
+    default_behavior = line
+    prerequisites = {
+        "tech_Dreadnought_1"
+    }
+    class = shipclass_military
+    construction_type = starbase_shipyard
+    resources = {
+        category = ships
+        upkeep = {
+            energy = 3.8
+            alloys = 1.3
+        }
+    }
+    min_upgrade_cost = {
+        alloys = 12
+    }
+    required_component_set = "power_core"
+    required_component_set = "ftl_components"
+    required_component_set = "thruster_components"
+    required_component_set = "sensor_components"
+    required_component_set = "combat_computers"
+    required_component_set = "ai_behaviour"
+    required_component_set = "special_ship_slot"
+    required_component_set = "special_ship_slot"
+}

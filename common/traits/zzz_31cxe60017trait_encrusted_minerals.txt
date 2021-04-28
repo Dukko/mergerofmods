@@ -1,0 +1,17 @@
+trait_encrusted_minerals = {
+    cost = 0
+    sorting_priority = 19
+    initial = no
+    randomized = no
+    modification = no
+    modifier = {
+        planet_livestock_minerals_produces_add = 2
+        pop_environment_tolerance = 0.15
+    }
+    potential_crossbreeding_chance = 1
+    icon = "gfx/interface/icons/traits/trait_encrusted_minerals.dds"
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+}

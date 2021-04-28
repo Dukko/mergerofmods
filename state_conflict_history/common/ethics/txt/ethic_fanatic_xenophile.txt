@@ -1,0 +1,24 @@
+ethic_fanatic_xenophile = {
+    cost = 2
+    category = "xen"
+    category_value = 4
+    category_opposite = yes
+    regular_variant = ethic_xenophile
+    use_for_pops = no
+    tags = {
+        ETHIC_IMPROVED_DIPLOMACY
+        ETHIC_ALWAYS_REFUGEES
+        ETHIC_DISALLOWS_SLAVERY
+        ETHIC_DISALLOWS_DISPLACE
+    }
+    country_modifier = {
+        country_trust_growth = 0.5
+        diplomacy_upkeep_mult = -0.4
+        country_trade_attractiveness = 0.3
+        envoys_add = 2
+        max_rivalries = -1
+    }
+    random_weight = {
+        value = 100
+    }
+}

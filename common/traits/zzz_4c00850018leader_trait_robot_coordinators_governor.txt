@@ -1,0 +1,16 @@
+leader_trait_robot_coordinators_governor = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/trait_robot_coordinators.dds"
+    modifier = {
+        species_empire_size_mult = -0.05
+    }
+    leader_trait = {
+        governor
+    }
+    leader_class = {
+        governor
+    }
+    initial = no
+    randomized = no
+}

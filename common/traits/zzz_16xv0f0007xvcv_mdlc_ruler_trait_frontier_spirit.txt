@@ -1,0 +1,15 @@
+xvcv_mdlc_ruler_trait_frontier_spirit = {
+    cost = 0
+    modification = no
+    initial = no
+    randomized = no
+    icon = "gfx/interface/icons/customgui/leader_traits/xvcv_mdlc_ruler_trait_frontier_spirit.dds"
+    modifier = {
+        ship_colonizer_cost_mult = -0.25
+        planet_colony_development_speed_mult = 0.25
+    }
+    leader_class = {
+        ruler
+    }
+    leader_trait = all
+}

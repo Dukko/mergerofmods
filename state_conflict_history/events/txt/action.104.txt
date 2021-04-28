@@ -1,0 +1,148 @@
+namespace = action
+country_event = {
+    id = action.104
+    title = action.99.name
+    desc = {
+        text = action.99.desc
+        trigger = {
+            is_xenophobe = no
+        }
+    }
+    desc = {
+        text = action.99.desc.phobe
+        trigger = {
+            is_xenophobe = yes
+        }
+    }
+    picture = GFX_evt_financial_instruments
+    location = event_target:galactic_market_station
+    show_sound = event_galactic_market
+    is_triggered_only = yes
+    immediate = {
+        set_country_flag = has_market_access
+        enable_galactic_market = yes
+        enable_on_market = energy
+        enable_on_market = minerals
+        enable_on_market = food
+        enable_on_market = consumer_goods
+        enable_on_market = alloys
+        if = {
+            limit = {
+                any_country = {
+                    is_galactic_community_member = yes
+                    resource_income_compare = {
+                        resource = volatile_motes
+                        value > 0
+                    }
+                }
+            }
+            enable_on_market = volatile_motes
+        }
+        if = {
+            limit = {
+                any_country = {
+                    is_galactic_community_member = yes
+                    resource_income_compare = {
+                        resource = rare_crystals
+                        value > 0
+                    }
+                }
+            }
+            enable_on_market = rare_crystals
+        }
+        if = {
+            limit = {
+                any_country = {
+                    is_galactic_community_member = yes
+                    resource_income_compare = {
+                        resource = exotic_gases
+                        value > 0
+                    }
+                }
+            }
+            enable_on_market = exotic_gases
+        }
+        if = {
+            limit = {
+                any_country = {
+                    is_galactic_community_member = yes
+                    resource_income_compare = {
+                        resource = sr_dark_matter
+                        value > 0
+                    }
+                }
+            }
+            enable_on_market = sr_dark_matter
+        }
+        if = {
+            limit = {
+                any_country = {
+                    is_galactic_community_member = yes
+                    resource_income_compare = {
+                        resource = sr_zro
+                        value > 0
+                    }
+                }
+            }
+            enable_on_market = sr_zro
+        }
+        if = {
+            limit = {
+                any_country = {
+                    is_galactic_community_member = yes
+                    resource_income_compare = {
+                        resource = sr_living_metal
+                        value > 0
+                    }
+                }
+            }
+            enable_on_market = sr_living_metal
+        }
+        add_modifier = {
+            modifier = galactic_market_founder
+            days = -1
+        }
+        set_market_leader = yes
+        set_timed_global_flag = {
+            flag = resolution_galactic_market_relocated_recently
+            days = 18000
+        }
+        event_target:market_founder_planet.solar_system.star = {
+            create_ambient_object = {
+                type = galactic_market_station
+                location = this
+            }
+            last_created_ambient_object = {
+                save_global_event_target_as = galactic_market_station
+                set_ambient_object_flag = galactic_market_station_flag
+                set_location = {
+                    target = event_target:market_founder_planet.solar_system.star
+                    angle = random
+                    distance = 40
+                }
+            }
+        }
+        every_playable_country = {
+            limit = {
+                is_galactic_community_member = yes
+                NOT = {
+                    is_same_value = root
+                }
+            }
+            country_event = {
+                id = action.101
+            }
+        }
+    }
+    option = {
+        name = OK
+        custom_tooltip = established_galactic_market_station
+        tooltip = {
+            end_event_chain = market_founding_chain
+            add_modifier = {
+                modifier = galactic_market_founder
+                days = -1
+            }
+        }
+    }
+}

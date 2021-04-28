@@ -1,0 +1,26 @@
+trait_younger_form = {
+    cost = 0
+    potential_crossbreeding_chance = 0
+    opposites = {
+        trait_dimorphic_1
+        trait_dimorphic_2
+        trait_dimorphic_female
+        trait_dimorphic_male
+        trait_older_form
+        trait_enduring
+        trait_venerable
+        trait_fleeting
+        trait_rooted_adults
+        trait_potential_living_architecture
+    }
+    initial = no
+    modification = yes
+    species_potential_add = {
+        always = no
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    custom_tooltip = TRAIT_INSTARS_EFFECT
+}

@@ -1,0 +1,27 @@
+trait_obsessive = {
+    cost = -2
+    potential_crossbreeding_chance = 1
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    custom_tooltip = TRAIT_OBSESSIVE_EFFECT
+    modifier = {
+        planet_jobs_produces_mult = 0.05
+        army_damage_mult = 0.4
+    }
+    ai_weight = {
+        weight = 6000
+        modifier = {
+            factor = 0
+            root = {
+                NOT = {
+                    has_species_flag = make_obsessive@prev
+                }
+            }
+        }
+    }
+    slave_cost = {
+        energy = -100
+    }
+}

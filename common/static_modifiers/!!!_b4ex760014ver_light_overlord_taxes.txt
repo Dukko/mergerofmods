@@ -1,0 +1,3 @@
+ver_light_overlord_taxes = {
+    trade_value_mult = -0.05
+}

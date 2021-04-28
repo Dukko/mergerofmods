@@ -1,0 +1,3 @@
+ver_overlord_indoctrination = {
+    pop_ethic_spiritualist_attraction_mult = 0.5
+}

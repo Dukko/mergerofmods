@@ -1,0 +1,187 @@
+trait_industrious = {
+    cost = 2
+    potential_crossbreeding_chance = 1
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    modifier = {
+        planet_jobs_minerals_produces_mult = 0.3
+    }
+    slave_cost = {
+        energy = 100
+    }
+    ai_weight = {
+        weight = 100
+        modifier = {
+            factor = 2
+            has_valid_civic = civic_mining_guilds
+        }
+        modifier = {
+            factor = 0.5
+            any_owned_species = {
+                has_trait = trait_robot_power_drills
+            }
+        }
+        modifier = {
+            factor = 0.5
+            any_owned_species = {
+                has_trait = trait_industrious
+                has_similar_preference = {
+                    compare_species = root
+                }
+            }
+        }
+        modifier = {
+            factor = 0.25
+            root = {
+                has_trait = trait_industrious
+                has_same_preference = {
+                    compare_species = root
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                has_trait = trait_pc_alpine_preference
+                has_trait = trait_pc_arctic_preference
+                has_trait = trait_pc_tundra_preference
+            }
+        }
+        modifier = {
+            factor = 0.5
+            root = {
+                OR = {
+                    has_trait = trait_agrarian
+                    has_trait = trait_ingenious
+                    AND = {
+                        NOT = {
+                            has_citizenship_type = {
+                                country = prev
+                                type = citizenship_slavery
+                            }
+                        }
+                        OR = {
+                            has_trait = trait_thrifty
+                            has_trait = trait_intelligent
+                            has_trait = trait_charismatic
+                            has_trait = trait_traditional
+                        }
+                    }
+                }
+            }
+            any_owned_species = {
+                NOR = {
+                    has_trait = trait_agrarian
+                    has_trait = trait_ingenious
+                    AND = {
+                        NOT = {
+                            has_citizenship_type = {
+                                country = prev
+                                type = citizenship_slavery
+                            }
+                        }
+                        OR = {
+                            has_trait = trait_thrifty
+                            has_trait = trait_intelligent
+                            has_trait = trait_charismatic
+                            has_trait = trait_traditional
+                        }
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            root = {
+                has_citizenship_type = {
+                    country = prev
+                    type = citizenship_organic_trophy
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            root = {
+                has_citizenship_type = {
+                    country = prev
+                    type = citizenship_slavery
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            root = {
+                NOT = {
+                    has_citizenship_type = {
+                        country = prev
+                        type = citizenship_slavery
+                    }
+                }
+            }
+            any_owned_species = {
+                has_citizenship_type = {
+                    type = citizenship_slavery
+                    country = prev
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            is_lithoid_empire = yes
+        }
+        modifier = {
+            factor = 4
+            exists = root.home_planet
+            root.home_planet = {
+                has_designation = col_mining
+                is_owned_by = prev
+            }
+        }
+        modifier = {
+            factor = 2
+            exists = root.home_planet
+            root.home_planet = {
+                OR = {
+                    has_designation = col_rural
+                    has_designation = col_rural_gestalt
+                    has_designation = col_slave
+                }
+                is_owned_by = prev
+            }
+        }
+        modifier = {
+            factor = 0.5
+            exists = root.home_planet
+            root = {
+                NOR = {
+                    has_trait = trait_void_dweller_1
+                    has_trait = trait_void_dweller_2
+                }
+            }
+            root.home_planet = {
+                NOR = {
+                    has_designation = col_capital
+                    has_designation = col_default
+                    has_designation = col_penal
+                    has_designation = col_primitive
+                    has_designation = col_mining
+                    has_designation = col_rural
+                    has_designation = col_rural_gestalt
+                    has_designation = col_slave
+                }
+                is_owned_by = prev
+            }
+        }
+        modifier = {
+            factor = 0
+            root = {
+                has_citizenship_type = {
+                    country = prev
+                    type = citizenship_organic_trophy
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+@cost4 = 20
+@power3 = -20
+@engagement_range3 = 1
+utility_component_template = {
+    key = "COMBAT_COMPUTER_CARRIER_AUTONOMOUS"
+    size = small
+    icon = "GFX_ship_part_computer_carrier_sapient"
+    icon_frame = 1
+    power = @power3
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @cost4
+        }
+    }
+    class_restriction = {
+        shipclass_military
+        shipclass_starbase
+        shipclass_military_special
+    }
+    size_restriction = {
+        juggernaut
+        Carrier
+        escortcarrier
+        Flagship
+        explorationship
+        star_eater
+    }
+    component_set = "combat_computers"
+    ship_behavior = "carrier"
+    prerequisites = {
+        "tech_combat_computers_autonomous"
+    }
+    ship_modifier = {
+        ship_engagement_range_mult = @engagement_range3
+    }
+    ai_weight = {
+        weight = 90
+    }
+}

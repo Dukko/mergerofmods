@@ -1,0 +1,14 @@
+minerals_expenditure_decisions = {
+    resource = minerals
+    type = expenditure
+    category = decisions
+    potential = {
+        always = yes
+    }
+    fraction = {
+        weight = 0
+    }
+    static_min = {
+        base = 25000
+    }
+}

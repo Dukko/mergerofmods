@@ -1,0 +1,118 @@
+district_virtual_mining = {
+    base_buildtime = @giga_rw_district_buildtime
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        uses_district_set = virtual_ring
+        has_planet_flag = giga_virtual_industry
+    }
+    potential = {
+        uses_district_set = virtual_ring
+        has_planet_flag = giga_virtual_industry
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_virtual_city
+        district_virtual_hive
+        district_virtual_nexus
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @giga_rw_cost
+            volatile_motes = @giga_rw_cost_sr
+        }
+        upkeep = {
+            energy = @giga_rw_maintenance
+            volatile_motes = @giga_rw_maintenance_sr
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 10
+        planet_miners_minerals_produces_add = 1
+        planet_miners_energy_upkeep_add = 0.5
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_matter_synthesizer_drone_add = 10
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_matter_synthesizer_add = 10
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = "job_matter_synthesizer_drone_effect_desc"
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        text = "job_matter_synthesizer_effect_desc"
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 250
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 200
+                }
+            }
+        }
+        modifier = {
+            factor = 0.01
+            OR = {
+                planet = {
+                    has_district = district_virtual_generator
+                }
+                planet = {
+                    has_district = district_virtual_commercial
+                }
+                planet = {
+                    has_district = district_virtual_science
+                }
+                planet = {
+                    has_district = district_virtual_consumer
+                }
+                planet = {
+                    has_district = district_virtual_alloys
+                }
+                planet = {
+                    has_district = district_virtual_leisure
+                }
+                planet = {
+                    has_district = district_virtual_strat_res
+                }
+            }
+        }
+    }
+    ai_resource_production = {
+        minerals = 10
+        trigger = {
+            always = yes
+        }
+    }
+}

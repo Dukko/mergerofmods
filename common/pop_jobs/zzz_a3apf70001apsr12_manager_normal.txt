@@ -1,0 +1,210 @@
+apsr12_manager_normal = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = apsr12_building_part3
+    clothes_texture_index = 3
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        specialist_job_check_trigger = yes
+    }
+    planet_modifier = {
+        trade_value_add = 18
+    }
+    resources = {
+        category = apsr12_planet_manager_normal
+        produces = {
+            apsr_knowledge = 0.3
+        }
+        upkeep = {
+            consumer_goods = 2
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr12_building_part2
+                }
+            }
+            apsr_knowledge = 0.1
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr12_building_part3
+                }
+            }
+            apsr_knowledge = -0.025
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_deposit = apsr_relic_cube_deposit
+                }
+            }
+            apsr_knowledge = -0.1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                has_deposit = apsr_relic_cube_deposit
+            }
+        }
+        modifier = {
+            trade_value_add = 8.25
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                owner = {
+                    has_technology = tech_apsr12_advanced_1
+                }
+            }
+        }
+        modifier = {
+            trade_value_add = 7.3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                owner = {
+                    has_technology = tech_apsr12_advanced_2
+                }
+            }
+        }
+        modifier = {
+            trade_value_add = 7.3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                owner = {
+                    has_technology = tech_apsr12_advanced_3
+                }
+            }
+        }
+        modifier = {
+            trade_value_add = 7.3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                owner = {
+                    has_technology = tech_apsr12_advanced_4
+                }
+            }
+        }
+        modifier = {
+            trade_value_add = 7.3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                owner = {
+                    has_technology = tech_apsr12_advanced_5
+                }
+            }
+        }
+        modifier = {
+            trade_value_add = 7.3
+        }
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = planet
+            planet = {
+                owner = {
+                    has_technology = tech_apsr12_advanced_1
+                }
+            }
+        }
+        modifier = {
+            country_admin_cap_add = 1
+        }
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = planet
+            planet = {
+                owner = {
+                    has_technology = tech_apsr12_advanced_2
+                }
+            }
+        }
+        modifier = {
+            country_admin_cap_add = 1
+        }
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = planet
+            planet = {
+                owner = {
+                    has_technology = tech_apsr12_advanced_3
+                }
+            }
+        }
+        modifier = {
+            country_admin_cap_add = 1
+        }
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = planet
+            planet = {
+                owner = {
+                    has_technology = tech_apsr12_advanced_4
+                }
+            }
+        }
+        modifier = {
+            country_admin_cap_add = 1
+        }
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = planet
+            planet = {
+                owner = {
+                    has_technology = tech_apsr12_advanced_5
+                }
+            }
+        }
+        modifier = {
+            country_admin_cap_add = 1
+        }
+    }
+    weight = {
+        weight = 100
+        modifier = {
+            factor = 2
+            OR = {
+                has_trait = trait_thrifty
+                has_trait = trait_nuumismatic_administration
+            }
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+                has_trait = trait_robot_domestic_protocols
+                has_trait = trait_charismatic
+            }
+        }
+        modifier = {
+            factor = 0.5
+            has_trait = trait_repugnant
+        }
+        modifier = {
+            factor = 5
+            has_job = merchant
+        }
+    }
+}

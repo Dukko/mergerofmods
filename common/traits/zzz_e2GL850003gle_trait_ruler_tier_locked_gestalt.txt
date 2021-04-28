@@ -1,0 +1,17 @@
+gle_trait_ruler_tier_locked_gestalt = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/gle_trait_ruler_tier_locked.dds"
+    modifier = {
+    }
+    sorting_priority = 20
+    custom_tooltip = gle_trait_ruler_tier_locked_gestalt_tooltip
+    initial = no
+    randomized = no
+    leader_trait = {
+        governor
+    }
+    leader_class = {
+        governor
+    }
+}

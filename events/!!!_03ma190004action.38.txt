@@ -1,0 +1,157 @@
+namespace = action
+country_event = {
+    id = action.38
+    title = action.38.name
+    message_desc = action.38.message
+    picture_event_data = {
+        portrait = FROM
+        planet_background = FROM
+        graphical_culture = FROM
+        city_level = FROM
+        room = FROM.ruler
+    }
+    desc = {
+        trigger = {
+            hidden:from = {
+                exists = event_target:ratling_country
+                is_same_empire = event_target:ratling_country
+            }
+        }
+        text = action.38.desc.ketlings
+    }
+    desc = {
+        trigger = {
+            hidden:from = {
+                is_megacorp = yes
+            }
+        }
+        text = action.38.desc.corporate
+    }
+    desc = {
+        trigger = {
+            hidden:from = {
+                switch = {
+                    trigger = has_ai_personality
+                    honorbound_warriors = {
+                        text = action.38.desc.hw
+                    }
+                    ruthless_capitalists = {
+                        text = action.38.desc.rc
+                    }
+                    peaceful_traders = {
+                        text = action.38.desc.pt
+                    }
+                    hegemonic_imperialists = {
+                        text = action.38.desc.hi
+                    }
+                    federation_builders = {
+                        text = action.38.desc.fb
+                    }
+                    xenophobic_isolationists = {
+                        text = action.38.desc.xi
+                    }
+                    hive_mind = {
+                        text = action.38.desc.hm
+                    }
+                    migrating_flock = {
+                        text = action.38.desc.mf
+                    }
+                    evangelising_zealots = {
+                        text = action.38.desc.ez
+                    }
+                    fanatic_purifiers = {
+                        text = action.38.desc.fp
+                    }
+                    democratic_crusaders = {
+                        text = action.38.desc.dc
+                    }
+                    slaving_despots = {
+                        text = action.38.desc.sd
+                    }
+                    decadent_hierarchy = {
+                        text = action.38.desc.dh
+                    }
+                    erudite_explorers = {
+                        text = action.38.desc.ee
+                    }
+                    spiritual_seekers = {
+                        text = action.38.desc.ss
+                    }
+                    harmonious_hierarchy = {
+                        text = action.38.desc.hc
+                    }
+                    fallen_empire_spiritualist = {
+                        text = action.38.desc.hg
+                    }
+                    fallen_empire_materialist = {
+                        text = action.38.desc.kk
+                    }
+                    fallen_empire_xenophobe = {
+                        text = action.38.desc.mi
+                    }
+                    fallen_empire_xenophile = {
+                        text = action.38.desc.eo
+                    }
+                    fallen_empire_machine = {
+                        text = action.38.desc.fme
+                    }
+                    awakened_fallen_empire_spiritualist = {
+                        text = action.38.desc.hg
+                    }
+                    awakened_fallen_empire_materialist = {
+                        text = action.38.desc.kk
+                    }
+                    awakened_fallen_empire_xenophobe = {
+                        text = action.38.desc.mi
+                    }
+                    awakened_fallen_empire_xenophile = {
+                        text = action.38.desc.eo
+                    }
+                    fallen_empire_machine = {
+                        text = action.38.desc.fme
+                    }
+                    awakened_fallen_empire_machine = {
+                        text = action.38.desc.fme
+                    }
+                    berserk_fallen_empire_machine = {
+                        text = action.38.desc.bme
+                    }
+                    metalhead = {
+                        text = action.38.desc.mh
+                    }
+                    default = {
+                        text = action.38.desc.default
+                    }
+                }
+            }
+        }
+    }
+    diplomatic = yes
+    is_triggered_only = yes
+    trigger = {
+        is_ai = no
+        fromfrom = {
+            NOR = {
+                using_war_goal = {
+                    type = wg_imperial_crusade
+                    owner = root.from
+                }
+                using_war_goal = {
+                    type = wg_galactic_civil_war_loyalists
+                    owner = root.from
+                }
+                using_war_goal = {
+                    type = wg_galactic_civil_war_rebels
+                    owner = root.from
+                }
+                using_war_goal = {
+                    type = wg_restore_the_community
+                    owner = root.from
+                }
+            }
+        }
+    }
+    option = {
+        name = action.38.a
+    }
+}

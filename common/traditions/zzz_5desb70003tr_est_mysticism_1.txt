@@ -1,0 +1,87 @@
+tr_est_mysticism_1 = {
+    modifier = {
+        planet_jobs_ruler_produces_mult = 0.5
+        pop_factions_influence_produces_mult = 0.25
+    }
+    tradition_swap = {
+        name = tr_est_mysticism_1_democratic
+        inherit_effects = no
+        inherit_icon = yes
+        inherit_name = yes
+        trigger = {
+            is_democracy = yes
+            Not = {
+                has_civic = civic_shadow_council
+            }
+        }
+        modifier = {
+            country_election_influence_cost_mult = -0.25
+            planet_jobs_ruler_produces_mult = 0.5
+        }
+        weight = {
+            factor = 1
+        }
+    }
+    tradition_swap = {
+        name = tr_est_mysticism_1_oligarchic
+        inherit_effects = no
+        inherit_icon = yes
+        inherit_name = yes
+        trigger = {
+            has_authority = auth_oligarchic
+            Not = {
+                has_civic = civic_shadow_council
+            }
+        }
+        modifier = {
+            country_election_influence_cost_mult = -0.5
+            planet_jobs_ruler_produces_mult = 0.5
+        }
+        weight = {
+            factor = 1
+        }
+    }
+    tradition_swap = {
+        name = tr_est_mysticism_1_dictatorial
+        inherit_effects = no
+        inherit_icon = yes
+        inherit_name = yes
+        trigger = {
+            OR = {
+                has_authority = auth_dictatorial
+                AND = {
+                    has_authority = auth_democratic_dictatorship
+                    is_egalitarian = no
+                }
+            }
+            Not = {
+                has_civic = civic_shadow_council
+            }
+        }
+        modifier = {
+            country_election_influence_cost_mult = -0.75
+            planet_jobs_ruler_produces_mult = 0.5
+        }
+        weight = {
+            factor = 1
+        }
+    }
+    tradition_swap = {
+        name = tr_est_philosophy_1
+        inherit_effects = no
+        inherit_icon = no
+        inherit_name = no
+        trigger = {
+            has_ethic = ethic_gestalt_consciousness
+        }
+        modifier = {
+            country_physics_tech_research_speed = 0.2
+        }
+        weight = {
+            factor = 1
+        }
+    }
+    ai_weight = {
+        factor = 3000
+    }
+}

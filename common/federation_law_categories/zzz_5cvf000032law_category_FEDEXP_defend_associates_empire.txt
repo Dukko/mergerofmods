@@ -1,0 +1,10 @@
+law_category_FEDEXP_defend_associates_empire = {
+    potential = {
+        has_federation_type = vf_ef_federation
+    }
+    laws = {
+        FEDEXP_defend_associates_none_empire
+        FEDEXP_defend_associates_rivals_empire
+        FEDEXP_defend_associates_all_empire
+    }
+}

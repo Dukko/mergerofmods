@@ -1,0 +1,57 @@
+col_pd_fortress = {
+    icon = 9
+    potential = {
+        is_planet_class = pc_milarc
+        exists = owner
+        is_special_colony_type = no
+    }
+    planet_modifier = {
+        planet_jobs_upkeep_mult = -0.05
+        planet_districts_cost_mult = -0.1
+    }
+    weight_modifier = {
+        modifier = {
+            add = 5
+            has_designation = col_pd_fortress
+        }
+        modifier = {
+            add = 3
+            num_buildings = {
+                type = building_stronghold
+                value >= 2
+            }
+        }
+        modifier = {
+            add = 4
+            num_buildings = {
+                type = building_stronghold
+                value >= 3
+            }
+        }
+        modifier = {
+            add = 5
+            num_buildings = {
+                type = building_stronghold
+                value >= 4
+            }
+        }
+        modifier = {
+            add = 3
+            num_buildings = {
+                type = building_fortress
+                value >= 1
+            }
+        }
+        modifier = {
+            add = 5
+            num_buildings = {
+                type = building_fortress
+                value >= 2
+            }
+        }
+        modifier = {
+            add = 10
+            is_planet_class = pc_milarc
+        }
+    }
+}

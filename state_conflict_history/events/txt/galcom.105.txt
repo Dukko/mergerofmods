@@ -1,0 +1,46 @@
+namespace = galcom
+event = {
+    id = galcom.105
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        is_galactic_community_formed = yes
+        is_active_resolution = "resolution_tiyanki_pest_control"
+        any_playable_country = {
+            has_country_flag = resolution_breached_tiyanki_inside_borders
+        }
+    }
+    immediate = {
+        if = {
+            limit = {
+                any_playable_country = {
+                    has_country_flag = resolution_breached_tiyanki_inside_borders
+                    NOT = {
+                        any_system_within_border = {
+                            any_fleet_in_system = {
+                                owner = {
+                                    is_tiyanki_country_type = yes
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            every_playable_country = {
+                limit = {
+                    has_country_flag = resolution_breached_tiyanki_inside_borders
+                    NOT = {
+                        any_system_within_border = {
+                            any_fleet_in_system = {
+                                owner = {
+                                    is_tiyanki_country_type = yes
+                                }
+                            }
+                        }
+                    }
+                }
+                remove_country_flag = resolution_breached_tiyanki_inside_borders
+            }
+        }
+    }
+}

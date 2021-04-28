@@ -1,0 +1,74 @@
+@ap_evolutionary_mastery_POINTS = 3
+@ap_evolutionary_mastery_COST_MULT = -0.25
+ap_evolutionary_mastery = {
+    on_enabled = {
+        add_research_option = tech_genetic_resequencing
+        hidden_effect = {
+            country_event = {
+                id = utopia.2703
+            }
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "synthetic_empire_biological_ascension"
+            Or = {
+                NOT = {
+                    has_trait = trait_mechanical
+                }
+                esap_has_bio_cyber_psi_2 = yes
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_ascension_perks_2"
+            num_ascension_perks > 1
+        }
+        custom_tooltip = {
+            fail_text = "requires_technology_glandular_acclimation"
+            has_technology = tech_glandular_acclimation
+        }
+        custom_tooltip = {
+            fail_text = "requires_ap_engineered_evolution"
+            has_ascension_perk = ap_engineered_evolution
+        }
+        custom_tooltip = {
+            fail_text = "requires_ap_engineered_evolution"
+            has_ascension_perk = ap_engineered_evolution
+        }
+        custom_tooltip = {
+            fail_text = "ap_esap_ascension_path_t2_req_1"
+            Or = {
+                Not = {
+                    esap_has_bio_cyber_psi_1 = yes
+                }
+                esap_has_bio_cyber_psi_2 = yes
+            }
+        }
+    }
+    modifier = {
+        description = ap_evolutionary_mastery_modifier_desc
+        description_parameters = {
+            POINTS = @ap_evolutionary_mastery_POINTS
+            COST_MULT = @ap_evolutionary_mastery_COST_MULT
+        }
+        BIOLOGICAL_species_trait_points_add = @ap_evolutionary_mastery_POINTS
+        modify_species_cost_mult = @ap_evolutionary_mastery_COST_MULT
+    }
+    potential = {
+        host_has_dlc = "Utopia"
+        NOT = {
+            has_ascension_perk = ap_evolutionary_mastery
+            has_authority = "auth_machine_intelligence"
+        }
+        Or = {
+            And = {
+                is_mechanical_empire = no
+                is_cyborg_empire = no
+            }
+            esap_has_bio_cyber_psi_1 = yes
+        }
+    }
+    ai_weight = {
+        factor = 1000
+    }
+}

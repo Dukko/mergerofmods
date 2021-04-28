@@ -1,0 +1,19 @@
+als_trait_tactic_copycat_explosive = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/als_trait_tactic_copycat.dds"
+    modifier = {
+        ship_weapon_damage = 0.1
+        weapon_type_explosive_weapon_damage_mult = 0.15
+        weapon_type_explosive_weapon_fire_rate_mult = 0.15
+        weapon_type_explosive_speed_mult = 0.25
+    }
+    initial = no
+    randomized = no
+    leader_trait = {
+        admiral
+    }
+    leader_class = {
+        admiral
+    }
+}

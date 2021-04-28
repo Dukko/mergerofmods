@@ -1,0 +1,82 @@
+@resolution_weight_unpopular = 5
+@resolution_cost_t1 = 100
+@resolution_flag_timer = 360
+resolution_galactic_focus_war_in_heaven_support_side_1 = {
+    icon = "GFX_resolution_emergency_measure"
+    resources = {
+        category = resolutions
+        cost = {
+            influence = @resolution_cost_t1
+        }
+    }
+    target = no
+    effect = {
+        custom_tooltip = resolution_galactic_focus_war_in_heaven_support_side_1_success
+        hidden_effect = {
+            repeal_all_galactic_focus_resolutions = yes
+            set_global_flag = galactic_focus_war_in_heaven
+            set_global_flag = galactic_community_resolution_passed
+            set_timed_country_flag = {
+                flag = galactic_community_resolution_passed_general
+                days = @resolution_flag_timer
+            }
+            add_modifier = {
+                modifier = resolution_passed_diplomatic_weight
+                days = 2200
+            }
+        }
+    }
+    fail_effects = {
+        hidden_effect = {
+            set_timed_country_flag = {
+                flag = galactic_community_resolution_failed_general
+                days = @resolution_flag_timer
+            }
+            add_modifier = {
+                modifier = resolution_failed_diplomatic_weight
+                days = 2200
+            }
+        }
+    }
+    potential = {
+        has_global_flag = war_in_heaven_ongoing
+        NOT = {
+            has_global_flag = galactic_focus_war_in_heaven
+        }
+        exists = event_target:SecondSleeper
+        has_galactic_emperor = no
+    }
+    active = {
+        has_global_flag = war_in_heaven_ongoing
+        exists = event_target:FirstSleeper
+        exists = event_target:SecondSleeper
+    }
+    breach = {
+        NAND = {
+            exists = overlord
+            has_overlord = event_target:FirstSleeper
+        }
+    }
+    ai_weight = {
+        base = @resolution_weight_unpopular
+        modifier = {
+            factor = 10
+            exists = overlord
+            has_overlord = event_target:FirstAwakened
+        }
+        modifier = {
+            factor = 0
+            has_federation = yes
+            alliance = {
+                has_federation_flag = non_aligned_league
+            }
+        }
+        modifier = {
+            factor = 0
+            exists = overlord
+            NOT = {
+                has_overlord = event_target:FirstAwakened
+            }
+        }
+    }
+}

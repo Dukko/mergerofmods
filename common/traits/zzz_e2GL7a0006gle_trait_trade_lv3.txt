@@ -1,0 +1,19 @@
+gle_trait_trade_lv3 = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/gle_trait_trade_lv3.dds"
+    modifier = {
+        job_clerk_add = 1
+        job_clerk_per_pop = 0.1
+        trade_value_mult = 0.15
+    }
+    sorting_priority = 10
+    initial = no
+    randomized = no
+    leader_trait = {
+        governor
+    }
+    leader_class = {
+        governor
+    }
+}

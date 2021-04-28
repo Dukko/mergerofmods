@@ -1,0 +1,24 @@
+xvcv_mdlc_trait_rock_body = {
+    cost = 0
+    allowed_archetypes = {
+        MACHINE
+        ROBOT
+    }
+    sorting_priority = 20
+    initial = no
+    randomized = no
+    modification = no
+    custom_tooltip = xvcv_mdlc_trait_rock_body_tooltip
+    modifier = {
+        pop_category_drones_energy_upkeep_add = -1
+        pop_category_workers_energy_upkeep_add = -1
+        pop_category_specialists_energy_upkeep_add = -1
+        pop_category_rulers_energy_upkeep_add = -1
+        pop_category_drones_minerals_upkeep_add = 1
+        pop_category_workers_minerals_upkeep_add = 1
+        pop_category_specialists_minerals_upkeep_add = 1
+        pop_category_rulers_minerals_upkeep_add = 1
+        planet_pops_upkeep_mult = -0.05
+        pop_amenities_usage_mult = -0.1
+    }
+}

@@ -1,0 +1,23 @@
+system_blocks_sensors = {
+    OR = {
+        is_inside_nebula = yes
+        has_modifier = space_storm
+        has_star_flag = lcluster
+        has_star_flag = sealed_system
+        is_nebula_star = yes
+        has_star_flag = wg_sealed_system
+        has_star_flag = wg_psionic_systems
+        has_star_flag = ag_no_sensor_system
+        AND = {
+            exists = owner
+            owner = {
+                has_relic = r_invisibility_rune
+            }
+            NOT = {
+                root = {
+                    is_same_empire = prev.owner
+                }
+            }
+        }
+    }
+}

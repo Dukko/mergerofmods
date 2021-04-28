@@ -1,0 +1,12 @@
+law_category_allow_subjects_to_join = {
+    potential = {
+        NOT = {
+            has_federation_type = vf_ef_federation
+        }
+    }
+    laws = {
+        allow_subjects_to_join_no
+        allow_subjects_to_join_yes
+        allow_subjects_to_join_yes_imperial_loyalists
+    }
+}

@@ -1,0 +1,220 @@
+namespace = action
+country_event = {
+    id = action.11
+    title = "action.11.name"
+    desc = {
+        text = "action.11.desc"
+        trigger = {
+            NOT = {
+                fromfrom = {
+                    has_relation_flag = {
+                        who = root
+                        flag = AbandonedRefugees
+                    }
+                }
+            }
+        }
+    }
+    desc = {
+        text = action.11.abandoned.desc
+        trigger = {
+            fromfrom = {
+                has_relation_flag = {
+                    who = root
+                    flag = AbandonedRefugees
+                }
+            }
+        }
+    }
+    picture = GFX_evt_throne_room
+    show_sound = event_radio_chatter
+    is_triggered_only = yes
+    trigger = {
+        NOT = {
+            has_country_flag = day_0
+        }
+        fromfrom = {
+            NOT = {
+                has_country_flag = day_0
+            }
+            OR = {
+                is_country_type = default
+                is_country_type = enclave
+                is_country_type = nomad
+            }
+        }
+        NOT = {
+            has_country_flag = first_contact_completed@fromfrom
+        }
+    }
+    immediate = {
+        fromfrom = {
+            country_event = {
+                id = action.13
+            }
+            save_event_target_as = contact_empire
+        }
+        country_event = {
+            id = distar.238
+            days = 1
+        }
+    }
+    after = {
+        hidden_effect = {
+            if = {
+                limit = {
+                    fromfrom = {
+                        is_country_type = enclave
+                    }
+                }
+                fromfrom = {
+                    switch = {
+                        trigger = has_country_flag
+                        trader_enclave_country = {
+                            country_event = {
+                                id = leviathans.101
+                            }
+                        }
+                        artist_enclave_country = {
+                            country_event = {
+                                id = leviathans.301
+                            }
+                        }
+                        curator_enclave_country = {
+                            country_event = {
+                                id = leviathans.501
+                            }
+                        }
+                        default = {
+                            log_error = "Unexpected enclave type or missing script flag"
+                        }
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        trigger = {
+            fromfrom = {
+                NOT = {
+                    has_relation_flag = {
+                        who = root
+                        flag = AbandonedRefugees
+                    }
+                }
+            }
+        }
+        name = "action.11.a"
+        if = {
+            limit = {
+                OR = {
+                    has_ethic = ethic_xenophile
+                    has_ethic = ethic_fanatic_xenophile
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = influence
+                value = @tier2influencecontactxenophile
+                min = @tier2influencecontactmin
+                max = @tier2influencecontactmax
+            }
+        }
+        else = {
+            add_monthly_resource_mult = {
+                resource = influence
+                value = @tier2influencecontact
+                min = @tier2influencecontactmin
+                max = @tier2influencecontactmax
+            }
+        }
+        hidden_effect = {
+            country_event = {
+                id = action.1
+            }
+        }
+    }
+    option = {
+        trigger = {
+            fromfrom = {
+                has_relation_flag = {
+                    who = root
+                    flag = AbandonedRefugees
+                }
+            }
+            NOR = {
+                has_ethic = ethic_fanatic_xenophobe
+                has_ethic = ethic_xenophobe
+            }
+        }
+        name = WORRYING
+        if = {
+            limit = {
+                OR = {
+                    has_ethic = ethic_xenophile
+                    has_ethic = ethic_fanatic_xenophile
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = influence
+                value = @tier2influencecontactxenophile
+                min = @tier2influencecontactmin
+                max = @tier2influencecontactmax
+            }
+        }
+        else = {
+            add_monthly_resource_mult = {
+                resource = influence
+                value = @tier2influencecontact
+                min = @tier2influencecontactmin
+                max = @tier2influencecontactmax
+            }
+        }
+        hidden_effect = {
+            country_event = {
+                id = action.1
+            }
+        }
+    }
+    option = {
+        trigger = {
+            fromfrom = {
+                has_relation_flag = {
+                    who = root
+                    flag = AbandonedRefugees
+                }
+            }
+            OR = {
+                has_ethic = ethic_fanatic_xenophobe
+                has_ethic = ethic_xenophobe
+            }
+        }
+        name = OK
+        if = {
+            limit = {
+                OR = {
+                    has_ethic = ethic_xenophile
+                    has_ethic = ethic_fanatic_xenophile
+                }
+            }
+            add_monthly_resource_mult = {
+                resource = influence
+                value = @tier2influencecontactxenophile
+                min = @tier2influencecontactmin
+                max = @tier2influencecontactmax
+            }
+        }
+        else = {
+            add_monthly_resource_mult = {
+                resource = influence
+                value = @tier2influencecontact
+                min = @tier2influencecontactmin
+                max = @tier2influencecontactmax
+            }
+        }
+        hidden_effect = {
+            country_event = {
+                id = action.1
+            }
+        }
+    }
+}

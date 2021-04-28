@@ -1,0 +1,72 @@
+bluelotus_drone = {
+    category = complex_drone
+    is_capped_by_modifier = yes
+    condition_string = WORKER_JOB_TRIGGER
+    building_icon = building_illicit_research_labs
+    icon = foundry
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible = {
+        worker_job_check_trigger = yes
+        OR = {
+            traits_restrict_specialist_jobs = no
+            has_pop_flag = allow_bluelotus_technician_traits
+        }
+    }
+    resources = {
+        category = planet_metallurgists
+        produces = {
+            alloys = 4
+        }
+        upkeep = {
+            trigger = {
+                is_organic_species = yes
+                is_lithoid = no
+            }
+            food = @living_standard_food_normal
+        }
+        upkeep = {
+            trigger = {
+                is_lithoid = yes
+            }
+            minerals = @living_standard_food_normal
+        }
+        upkeep = {
+            trigger = {
+                is_robotic_species = yes
+            }
+            energy = @living_standard_energy_normal
+        }
+    }
+    weight = {
+        weight = @complex_drone_job_weight
+        modifier = {
+            factor = 5
+            has_job = bluelotus_drone
+            OR = {
+                has_trait = trait_robust
+                has_trait = trait_robot_efficient_processors
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_trait = trait_extreme_thermophile
+        }
+        modifier = {
+            factor = 1.125
+            has_trait = trait_thermophile
+        }
+        modifier = {
+            factor = 0.875
+            has_trait = trait_clumsy
+        }
+        modifier = {
+            factor = 0.08
+            has_trait = trait_limbless
+        }
+    }
+}

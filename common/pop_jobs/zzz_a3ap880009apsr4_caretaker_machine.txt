@@ -1,0 +1,164 @@
+apsr4_caretaker_machine = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = apsr4_building_part3
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        drone_job_check_trigger = yes
+    }
+    planet_modifier = {
+        planet_amenities_no_happiness_add = 10
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                has_deposit = apsr_relic_cube_deposit
+            }
+        }
+        modifier = {
+            planet_amenities_no_happiness_add = 5
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                owner = {
+                    has_technology = tech_apsr4_advanced_1
+                }
+            }
+        }
+        modifier = {
+            planet_amenities_no_happiness_add = 5.5
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                owner = {
+                    has_technology = tech_apsr4_advanced_2
+                }
+            }
+        }
+        modifier = {
+            planet_amenities_no_happiness_add = 5.5
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                owner = {
+                    has_technology = tech_apsr4_advanced_3
+                }
+            }
+        }
+        modifier = {
+            planet_amenities_no_happiness_add = 5.5
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                owner = {
+                    has_technology = tech_apsr4_advanced_4
+                }
+            }
+        }
+        modifier = {
+            planet_amenities_no_happiness_add = 5.5
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                owner = {
+                    has_technology = tech_apsr4_advanced_5
+                }
+            }
+        }
+        modifier = {
+            planet_amenities_no_happiness_add = 5.5
+        }
+    }
+    resources = {
+        category = apsr4_planet_caretaker_machine
+        produces = {
+            unity = 5
+            apsr_knowledge = 0.15
+        }
+        upkeep = {
+            energy = 4
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr4_building_part2_ext
+                }
+            }
+            unity = 1
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr4_building_part3_ext
+                }
+            }
+            unity = 1
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_deposit = apsr_relic_cube_deposit
+                }
+            }
+            unity = 4
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr4_advanced_1
+                }
+            }
+            unity = 2
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr4_advanced_2
+                }
+            }
+            unity = 2
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr4_advanced_3
+                }
+            }
+            unity = 2
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr4_advanced_4
+                }
+            }
+            unity = 2
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr4_advanced_5
+                }
+            }
+            unity = 2
+        }
+    }
+    weight = {
+        weight = 100
+    }
+}

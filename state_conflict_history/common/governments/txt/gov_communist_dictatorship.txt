@@ -1,0 +1,24 @@
+gov_communist_dictatorship = {
+    ruler_title = RT_CHAIRMAN
+    ruler_title_female = RT_CHAIRWOMAN
+    possible = {
+        has_authority = auth_dictatorial
+        has_ethic = ethic_fanatic_socialism
+        OR = {
+            has_ethic = ethic_authoritarian
+            has_ethic = ethic_fanatic_authoritarian
+        }
+        NOR = {
+            has_ethic = ethic_xenophobe
+            has_ethic = ethic_fanatic_xenophobe
+        }
+    }
+    should_force_rename = yes
+    weight = {
+        base = 2000
+        modifier = {
+            factor = 10
+            has_ethic = ethic_fanatic_authoritarian
+        }
+    }
+}

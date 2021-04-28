@@ -1,0 +1,86 @@
+ap_mind_over_matter = {
+    on_enabled = {
+        custom_tooltip = "mind_over_matter_tooltip"
+        hidden_effect = {
+            country_event = {
+                id = utopia.2600
+            }
+        }
+        add_research_option = tech_telepathy
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "synthetic_empire_psionic_ascension"
+            Or = {
+                NOT = {
+                    has_trait = trait_mechanical
+                }
+                has_ascension_perk = ap_esap_bio_cyber_psi_1
+                has_ascension_perk = ap_esap_bio_cyber_psi_2_plain
+            }
+        }
+        custom_tooltip = {
+            fail_text = "hive_mind_biological_ascension_only1"
+            NOT = {
+                has_authority = auth_hive_mind
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_ascension_perks_1"
+            num_ascension_perks > 0
+        }
+        custom_tooltip = {
+            fail_text = "requires_technology_psionic_theory"
+            has_technology = tech_psionic_theory
+        }
+        custom_tooltip = {
+            fail_text = "requires_not_ap_engineered_evolution"
+            Or = {
+                NOT = {
+                    has_ascension_perk = ap_engineered_evolution
+                }
+                has_ascension_perk = ap_esap_bio_cyber_psi_1
+                has_ascension_perk = ap_esap_bio_cyber_psi_2_plain
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_not_ap_the_flesh_is_weak"
+            Or = {
+                NOT = {
+                    has_ascension_perk = ap_the_flesh_is_weak
+                }
+                has_ascension_perk = ap_esap_bio_cyber_psi_1
+                has_ascension_perk = ap_esap_bio_cyber_psi_2_plain
+            }
+        }
+    }
+    potential = {
+        host_has_dlc = "Utopia"
+        NOT = {
+            has_ascension_perk = ap_mind_over_matter
+            has_authority = "auth_machine_intelligence"
+        }
+        Or = {
+            And = {
+                is_mechanical_empire = no
+                is_cyborg_empire = no
+            }
+            has_ascension_perk = ap_esap_bio_cyber_psi_1
+            has_ascension_perk = ap_esap_bio_cyber_psi_2_plain
+        }
+    }
+    ai_weight = {
+        factor = 100
+        modifier = {
+            factor = 0.1
+            NOR = {
+                has_ethic = ethic_spiritualist
+                has_ethic = ethic_fanatic_spiritualist
+            }
+        }
+        modifier = {
+            factor = 0
+            num_owned_planets < 10
+        }
+    }
+}

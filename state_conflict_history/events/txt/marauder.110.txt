@@ -1,0 +1,139 @@
+namespace = marauder
+fleet_event = {
+    id = marauder.110
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        set_fleet_flag = raid_accomplished
+        owner = {
+            save_event_target_as = raiding_marauder
+            if = {
+                limit = {
+                    has_country_flag = marauder_1
+                }
+                random_system = {
+                    limit = {
+                        has_star_flag = marauder_capital_1
+                    }
+                    solar_system = {
+                        save_event_target_as = marauder_system
+                    }
+                    random_system_planet = {
+                        limit = {
+                            has_planet_flag = raid_source
+                        }
+                        save_event_target_as = raid_source
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    has_country_flag = marauder_2
+                }
+                random_system = {
+                    limit = {
+                        has_star_flag = marauder_capital_2
+                    }
+                    solar_system = {
+                        save_event_target_as = marauder_system
+                    }
+                    random_system_planet = {
+                        limit = {
+                            has_planet_flag = raid_source
+                        }
+                        save_event_target_as = raid_source
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    has_country_flag = marauder_3
+                }
+                random_system = {
+                    limit = {
+                        has_star_flag = marauder_capital_3
+                    }
+                    solar_system = {
+                        save_event_target_as = marauder_system
+                    }
+                    random_system_planet = {
+                        limit = {
+                            has_planet_flag = raid_source
+                        }
+                        save_event_target_as = raid_source
+                    }
+                }
+            }
+        }
+        solar_system = {
+            save_event_target_as = fleet_system
+        }
+        clear_fleet_actions = this
+        auto_move_to_planet = {
+            target = event_target:raid_source
+            destroy_on_arrival = yes
+            clear_auto_move_on_arrival = yes
+        }
+        fleet_event = {
+            id = marauder.118
+            days = 360
+        }
+        random_country = {
+            limit = {
+                is_country_type = dormant_marauders
+                has_country_flag = parent_of@root.owner
+            }
+            save_event_target_as = raid_parent
+            remove_country_flag = raid_ongoing
+            set_timed_country_flag = {
+                flag = raid_cooldown
+                days = @raidcooldown
+            }
+        }
+        owner = {
+            remove_country_flag = raid_ongoing
+        }
+        if = {
+            limit = {
+                exists = event_target:raid_parent
+            }
+            event_target:raid_victim = {
+                country_event = {
+                    id = marauder.111
+                }
+                remove_country_flag = raid_target_of@event_target:raid_parent
+                remove_country_flag = under_marauder_attack
+                remove_country_flag = marauder_tribute_1@event_target:raid_parent
+                remove_country_flag = marauder_tribute_2@event_target:raid_parent
+                remove_country_flag = marauder_tribute_3@event_target:raid_parent
+                remove_country_flag = marauder_tribute_4@event_target:raid_parent
+                remove_country_flag = marauder_tribute_5@event_target:raid_parent
+                remove_country_flag = marauder_tribute_6@event_target:raid_parent
+                remove_relation_flag = {
+                    who = event_target:raid_parent
+                    flag = current_target
+                }
+                remove_relation_flag = {
+                    who = event_target:raid_parent
+                    flag = current_hired_target
+                }
+            }
+            if = {
+                limit = {
+                    any_country = {
+                        has_country_flag = hired@event_target:raid_parent
+                    }
+                }
+                random_country = {
+                    limit = {
+                        has_country_flag = hired@event_target:raid_parent
+                    }
+                    country_event = {
+                        id = marauder.122
+                    }
+                    remove_country_flag = hired@event_target:raid_parent
+                }
+            }
+        }
+    }
+}

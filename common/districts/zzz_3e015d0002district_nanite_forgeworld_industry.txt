@@ -1,0 +1,64 @@
+district_nanite_forgeworld_industry = {
+    icon = district_nanite_forgeworld_industry
+    base_buildtime = 240
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        uses_district_set = dso_nanite_forgeworld
+    }
+    potential = {
+        uses_district_set = dso_nanite_forgeworld
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_nexus
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = 300
+            nanites = 5
+        }
+        upkeep = {
+            energy = 2
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 3
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_fabricator_add = 3
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = job_fabricator_effect_desc
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 500
+            owner = {
+                has_monthly_income = {
+                    resource = alloys
+                    value < 500
+                }
+                has_monthly_income = {
+                    resource = minerals
+                    value > 99
+                }
+            }
+        }
+    }
+}

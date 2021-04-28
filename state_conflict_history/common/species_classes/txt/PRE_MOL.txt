@@ -1,0 +1,41 @@
+PRE_MOL = {
+    archetype = PRESAPIENT
+    playable = {
+        always = no
+    }
+    randomized = no
+    portraits = {
+        "pre_mol1"
+        "pre_mol2"
+        "pre_mol3"
+        "pre_mol4"
+        "pre_mol5"
+        "pre_mol6"
+        "pre_mol7"
+        "pre_mol8"
+        "pre_mol11"
+        "pre_mol12"
+        "pre_mol13"
+        "pre_mol14"
+        "pre_mol15"
+    }
+    graphical_culture = molluscoid_01
+    move_pop_sound_effect = "molluscoid_pops_move"
+    uplifted_into = "MOL"
+    uplifted_portraits = {
+        "mol1"
+        "mol2"
+        "mol3"
+        "mol4"
+        "mol5"
+        "mol6"
+        "mol7"
+        "mol8"
+        "mol11"
+        "mol12"
+        "mol13"
+        "mol14"
+        "mol15"
+    }
+    trait = trait_molluscoid
+}

@@ -1,0 +1,42 @@
+xvcv_mdlc_uplink_node_coordinator = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = xvcv_mdlc_building_uplink_node_facility
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        drone_job_check_trigger = yes
+    }
+    planet_modifier = {
+        planet_jobs_produces_mult = 0.05
+        planet_crime_no_happiness_mult = -0.05
+    }
+    resources = {
+        category = planet_jobs
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_ai = no
+                }
+            }
+            energy = 6
+        }
+    }
+    weight = {
+        weight = @synapse_drone_job_weight
+        modifier = {
+            factor = 0.9
+            exists = owner
+            years_passed < 1
+            owner = {
+                has_valid_civic = civic_machine_assimilator
+            }
+            has_trait = trait_cybernetic
+        }
+    }
+}

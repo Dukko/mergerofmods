@@ -1,0 +1,17 @@
+dpe_duel_victor_governor = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/leader_trait_glory_seeker.dds"
+    modifier = {
+        ARMY_DEFENSE_DAMAGE_MULT = 0.33
+        pop_ethic_militarist_attraction_mult = 0.33
+    }
+    leader_class = {
+        governor
+    }
+    leader_trait = {
+        governor
+    }
+    initial = no
+    randomized = no
+}

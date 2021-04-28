@@ -1,0 +1,44 @@
+trait_keen_senses = {
+    cost = 1
+    potential_crossbreeding_chance = 1
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    custom_tooltip = TRAIT_KEEN_SENSES_EFFECT
+    ai_weight = {
+        weight = 100
+        modifier = {
+            factor = 0
+            root = {
+                OR = {
+                    NOT = {
+                        has_citizenship_type = {
+                            country = prev
+                            type = citizenship_full
+                        }
+                    }
+                    has_trait = trait_syncretic_proles
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            root = {
+                has_citizenship_type = {
+                    country = prev
+                    type = citizenship_full
+                }
+            }
+            pop_percentage = {
+                percentage < 0.5
+                limit = {
+                    has_citizenship_type = {
+                        country = prev
+                        type = citizenship_full
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+civic_star_settlers = {
+    potential = {
+        ethics = {
+            NOT = {
+                value = ethic_gestalt_consciousness
+            }
+        }
+    }
+    possible = {
+        ethics = {
+            OR = {
+                text = civic_tooltip_pacifist
+                value = ethic_pacifist
+                value = ethic_fanatic_pacifist
+            }
+        }
+    }
+    random_weight = {
+        base = 5
+    }
+    modifier = {
+        pop_environment_tolerance = 0.05
+        country_starbase_influence_cost_mult = -0.25
+        starbases_upkeep_mult = -0.15
+        planet_colony_development_speed_mult = 0.5
+        category_new_worlds_research_speed_mult = 0.25
+        category_voidcraft_research_speed_mult = 0.25
+    }
+}

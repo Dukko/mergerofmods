@@ -1,0 +1,53 @@
+trait_avian = {
+    cost = 0
+    potential_crossbreeding_chance = 0
+    sorting_priority = 20
+    initial = no
+    randomized = no
+    modification = no
+    forced_happiness = no
+    immortal_leaders = no
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    custom_tooltip = TRAIT_AVIAN_EFFECT
+    modifier = {
+        pc_tidallylocked_habitability = -0.05
+        pc_steppe_habitability = 0.05
+        pc_prairie_habitability = -0.05
+        pc_veld_habitability = -0.05
+        pc_semiarid_habitability = -0.05
+        pc_desert_habitability = -0.05
+        pc_arid_habitability = -0.05
+        pc_outback_habitability = -0.05
+        pc_savannah_habitability = -0.05
+        pc_sandsea_habitability = -0.05
+        pc_oasis_habitability = -0.05
+        pc_mesa_habitability = -0.05
+        pc_hadesert_habitability = 0.05
+        pc_med_habitability = -0.05
+        pc_salt_habitability = -0.05
+        pc_coral_habitability = -0.05
+        pc_supercon_habitability = -0.05
+        pc_primal_habitability = -0.05
+        pc_arctic_habitability = 0.05
+        pc_alpine_habitability = 0.05
+        pc_highland_habitability = 0.05
+        pc_duneforest_habitability = 0.05
+        pc_tundra_habitability = 0.05
+        pc_swamp_habitability = 0.05
+        pc_mud_habitability = 0.05
+        pc_frozen_desert_habitability = 0.05
+        pc_glacial_habitability = 0.05
+        pc_boreal_habitability = 0.05
+        pc_mushroom_habitability = 0.05
+        pc_antarctic_habitability = 0.05
+        pc_aeolian_habitability = 0.05
+        pc_snow_habitability = 0.05
+        pc_storm_habitability = 0.05
+        pc_rogue_habitability = 0.05
+        pc_eyeball_habitability = 0.05
+        pc_glacio_habitability = 0.05
+        army_disengage_chance_mult = 0.13
+    }
+}

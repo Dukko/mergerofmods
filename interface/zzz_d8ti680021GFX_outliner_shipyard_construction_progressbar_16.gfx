@@ -1,0 +1,23 @@
+spriteTypes = {
+    @starbase_progressbar_y = 8
+    progressbarType = {
+        name = "GFX_outliner_shipyard_construction_progressbar_16"
+        color = {
+            1
+            1
+            1
+        }
+        colorTwo = {
+            1
+            1
+            1
+        }
+        textureFile1 = "gfx/interface/progressbars/outliner_shiptask_small_full.dds"
+        textureFile2 = "gfx/interface/progressbars/outliner_shiptask_small_empty.dds"
+        size = {
+            x = @[shipyard_construction_max_width / 16 - shipyard_construction_spacing]
+            y = @starbase_progressbar_y
+        }
+        effectFile = "gfx/FX/progress.lua"
+    }
+}

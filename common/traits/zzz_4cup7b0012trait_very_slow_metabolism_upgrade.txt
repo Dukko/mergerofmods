@@ -1,0 +1,68 @@
+trait_very_slow_metabolism_upgrade = {
+    cost = 2
+    initial = no
+    randomized = no
+    icon = "gfx/interface/icons/traits/trait_very_slow_metabolism.dds"
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    modifier = {
+        planet_pops_food_upkeep_mult = -0.75
+        leader_age = 40
+        pop_growth_speed = -0.4
+    }
+    species_potential_add = {
+        has_trait = trait_slow_metabolism
+        exists = from
+        from = {
+            OR = {
+                is_ai = yes
+                NOT = {
+                    has_technology = tech_genetic_resequencing
+                }
+            }
+        }
+    }
+    ai_weight = {
+        weight = 100
+        modifier = {
+            factor = 2
+            is_materialist = yes
+        }
+        modifier = {
+            factor = 4
+            has_valid_civic = civic_environmentalist
+        }
+        modifier = {
+            factor = 0.5
+            has_ethic = ethic_spiritualist
+        }
+        modifier = {
+            factor = 0.25
+            has_ethic = ethic_fanatic_spiritualist
+        }
+        modifier = {
+            factor = 0.5
+            has_valid_civic = civic_warrior_culture
+        }
+        modifier = {
+            factor = 0.5
+            root = {
+                has_citizenship_type = {
+                    country = prev
+                    type = citizenship_slavery
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            is_xenophile = no
+            root = {
+                has_citizenship_type = {
+                    country = from
+                    type = citizenship_limited
+                }
+            }
+        }
+    }
+}

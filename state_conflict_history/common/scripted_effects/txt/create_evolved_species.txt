@@ -1,0 +1,383 @@
+namespace = rapid_evolution
+create_evolved_species = {
+    switch = {
+        trigger = has_trait
+        trait_presapient_starborn = {
+            random_list = {
+                70 = {
+                    create_species = {
+                        name = random
+                        class = $class$
+                        portrait = this
+                        homeworld = root
+                        traits = {
+                            [[trait]trait = $trait$]
+                            trait = trait_adaptive
+                            trait = trait_nomadic
+                        }
+                    }
+                    last_created_species = {
+                        set_species_flag = owed_traits_minus_1
+                    }
+                }
+                30 = {
+                    create_species = {
+                        name = random
+                        class = $class$
+                        portrait = this
+                        homeworld = root
+                        traits = {
+                            [[trait]trait = $trait$]
+                            trait = trait_adaptive
+                            trait = trait_nomadic
+                            trait = random_traits
+                        }
+                        extra_trait_points = -1
+                    }
+                    last_created_species = {
+                        set_species_flag = owed_traits_minus_2
+                    }
+                }
+            }
+        }
+        trait_presapient_earthbound = {
+            random_list = {
+                50 = {
+                    create_species = {
+                        name = random
+                        class = $class$
+                        portrait = this
+                        homeworld = root
+                        traits = {
+                            [[trait]trait = $trait$]
+                            trait = trait_ingenious
+                            trait = trait_sedentary
+                            trait = random_traits
+                        }
+                        extra_trait_points = -1
+                    }
+                }
+                50 = {
+                    create_species = {
+                        name = random
+                        class = $class$
+                        portrait = this
+                        homeworld = root
+                        traits = {
+                            [[trait]trait = $trait$]
+                            trait = trait_resilient
+                            trait = trait_sedentary
+                            trait = random_traits
+                        }
+                    }
+                }
+            }
+        }
+        trait_presapient_natural_intellectuals = {
+            random_list = {
+                5 = {
+                    create_species = {
+                        name = random
+                        class = $class$
+                        portrait = this
+                        homeworld = root
+                        traits = {
+                            [[trait]trait = $trait$]
+                            trait = trait_intelligent
+                            trait = trait_decadent
+                            trait = random_traits
+                        }
+                        extra_trait_points = -1
+                    }
+                }
+                5 = {
+                    create_species = {
+                        name = random
+                        class = $class$
+                        portrait = this
+                        homeworld = root
+                        traits = {
+                            [[trait]trait = $trait$]
+                            trait = trait_intelligent
+                            trait = trait_weak
+                            trait = random_traits
+                        }
+                        extra_trait_points = -1
+                    }
+                }
+                5 = {
+                    create_species = {
+                        name = random
+                        class = $class$
+                        portrait = this
+                        homeworld = root
+                        traits = {
+                            [[trait]trait = $trait$]
+                            trait = trait_intelligent
+                            trait = trait_deviants
+                            trait = random_traits
+                        }
+                        extra_trait_points = -1
+                    }
+                }
+                10 = {
+                    create_species = {
+                        name = random
+                        class = $class$
+                        portrait = this
+                        homeworld = root
+                        traits = {
+                            [[trait]trait = $trait$]
+                            trait = trait_natural_engineers
+                            trait = random_traits
+                        }
+                        extra_trait_points = -1
+                    }
+                }
+                10 = {
+                    create_species = {
+                        name = random
+                        class = $class$
+                        portrait = this
+                        homeworld = root
+                        traits = {
+                            [[trait]trait = $trait$]
+                            trait = trait_natural_physicists
+                            trait = random_traits
+                        }
+                        extra_trait_points = -1
+                    }
+                }
+                10 = {
+                    create_species = {
+                        name = random
+                        class = $class$
+                        portrait = this
+                        homeworld = root
+                        traits = {
+                            [[trait]trait = $trait$]
+                            trait = trait_natural_sociologists
+                            trait = random_traits
+                        }
+                        extra_trait_points = -1
+                    }
+                }
+                5 = {
+                    create_species = {
+                        name = random
+                        class = $class$
+                        portrait = this
+                        homeworld = root
+                        traits = {
+                            [[trait]trait = $trait$]
+                            trait = trait_traditional
+                            trait = random_traits
+                        }
+                        extra_trait_points = -1
+                    }
+                }
+            }
+        }
+        trait_presapient_proles = {
+            random_list = {
+                8 = {
+                    create_species = {
+                        name = random
+                        class = $class$
+                        portrait = this
+                        homeworld = root
+                        traits = {
+                            [[trait]trait = $trait$]
+                            trait = trait_agrarian
+                        }
+                    }
+                }
+                15 = {
+                    create_species = {
+                        name = random
+                        class = $class$
+                        portrait = this
+                        homeworld = root
+                        traits = {
+                            [[trait]trait = $trait$]
+                            trait = trait_agrarian
+                            trait = random_traits
+                        }
+                        extra_trait_points = -1
+                    }
+                    last_created_species = {
+                        set_species_flag = owed_traits_minus_1
+                    }
+                }
+                7 = {
+                    create_species = {
+                        name = random
+                        class = $class$
+                        portrait = this
+                        homeworld = root
+                        traits = {
+                            [[trait]trait = $trait$]
+                            trait = trait_agrarian
+                            trait = random_traits
+                        }
+                    }
+                    last_created_species = {
+                        set_species_flag = owed_traits_minus_2
+                    }
+                }
+                8 = {
+                    create_species = {
+                        name = random
+                        class = $class$
+                        portrait = this
+                        homeworld = root
+                        traits = {
+                            [[trait]trait = $trait$]
+                            trait = trait_industrious
+                        }
+                    }
+                }
+                15 = {
+                    create_species = {
+                        name = random
+                        class = $class$
+                        portrait = this
+                        homeworld = root
+                        traits = {
+                            [[trait]trait = $trait$]
+                            trait = trait_industrious
+                            trait = random_traits
+                        }
+                        extra_trait_points = -1
+                    }
+                    last_created_species = {
+                        set_species_flag = owed_traits_minus_1
+                    }
+                }
+                7 = {
+                    create_species = {
+                        name = random
+                        class = $class$
+                        portrait = this
+                        homeworld = root
+                        traits = {
+                            [[trait]trait = $trait$]
+                            trait = trait_industrious
+                            trait = random_traits
+                        }
+                    }
+                    last_created_species = {
+                        set_species_flag = owed_traits_minus_2
+                    }
+                }
+                30 = {
+                    create_species = {
+                        name = random
+                        class = $class$
+                        portrait = this
+                        homeworld = root
+                        traits = {
+                            [[trait]trait = $trait$]
+                            trait = trait_strong
+                            trait = random_traits
+                        }
+                        extra_trait_points = -1
+                    }
+                }
+            }
+        }
+        trait_presapient_conservative = {
+            random_list = {
+                40 = {
+                    create_species = {
+                        name = random
+                        class = $class$
+                        portrait = this
+                        homeworld = root
+                        traits = {
+                            [[trait]trait = $trait$]
+                            trait = trait_conformists
+                            trait = trait_slow_learners
+                            trait = random_traits
+                        }
+                        extra_trait_points = -1
+                    }
+                }
+                40 = {
+                    create_species = {
+                        name = random
+                        class = $class$
+                        portrait = this
+                        homeworld = root
+                        traits = {
+                            [[trait]trait = $trait$]
+                            trait = trait_docile
+                            trait = trait_slow_learners
+                            trait = random_traits
+                        }
+                        extra_trait_points = -1
+                    }
+                }
+                20 = {
+                    create_species = {
+                        name = random
+                        class = $class$
+                        portrait = this
+                        homeworld = root
+                        traits = {
+                            [[trait]trait = $trait$]
+                            trait = trait_traditional
+                            trait = trait_slow_learners
+                            trait = random_traits
+                        }
+                    }
+                }
+            }
+        }
+        trait_presapient_irradiated = {
+            random_list = {
+                60 = {
+                    create_species = {
+                        name = random
+                        class = $class$
+                        portrait = this
+                        homeworld = root
+                        traits = {
+                            [[trait]trait = $trait$]
+                            trait = trait_enduring
+                            trait = random_traits
+                        }
+                        extra_trait_points = -1
+                    }
+                }
+                40 = {
+                    create_species = {
+                        name = random
+                        class = $class$
+                        portrait = this
+                        homeworld = root
+                        traits = {
+                            [[trait]trait = $trait$]
+                            trait = trait_venerable
+                        }
+                    }
+                    last_created_species = {
+                        set_species_flag = owed_traits_minus_2
+                    }
+                }
+            }
+        }
+        default = {
+            create_species = {
+                name = random
+                class = $class$
+                portrait = this
+                homeworld = root
+                traits = {
+                    [[trait]trait = $trait$]
+                    trait = random_traits
+                }
+            }
+        }
+    }
+}

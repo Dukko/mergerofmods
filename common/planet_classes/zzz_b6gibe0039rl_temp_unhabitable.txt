@@ -1,0 +1,11 @@
+random_list = {
+    name = "rl_temp_unhabitable"
+    planets = {
+        "pc_gas_giant"
+        "pc_barren"
+        "pc_molten"
+        "pc_toxic"
+        "pc_barren_cold"
+        "pc_frozen"
+    }
+}

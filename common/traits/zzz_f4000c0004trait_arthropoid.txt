@@ -1,0 +1,16 @@
+trait_arthropoid = {
+    cost = 0
+    potential_crossbreeding_chance = 0
+    sorting_priority = 20
+    initial = no
+    randomized = no
+    modification = no
+    forced_happiness = no
+    immortal_leaders = no
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    modifier = {
+        army_health = 0.15
+    }
+}

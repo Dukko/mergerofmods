@@ -1,0 +1,23 @@
+trait_repugnant = {
+    cost = -2
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_charismatic"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    custom_tooltip = TRAIT_REPUGNANT_EFFECT
+    ai_weight = {
+        weight = 6000
+        modifier = {
+            factor = 0
+            root = {
+                NOT = {
+                    has_species_flag = make_repugnant@prev
+                }
+            }
+        }
+    }
+}

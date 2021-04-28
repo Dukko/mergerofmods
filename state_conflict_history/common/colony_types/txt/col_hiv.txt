@@ -1,0 +1,22 @@
+col_hiv = {
+    icon = 1
+    potential = {
+        OR = {
+            uses_district_set = hive_world
+            uses_district_set = pdbioforge
+            uses_district_set = pdbiocapital
+            uses_district_set = pdfloraforge
+            uses_district_set = pdbiofort
+        }
+    }
+    planet_modifier = {
+        planet_building_build_speed_mult = 0.25
+        planet_district_build_speed_mult = 0.25
+        planet_amenities_mult = 0.1
+        planet_jobs_upkeep_mult = -0.05
+        planet_jobs_simple_drone_produces_mult = 0.05
+    }
+    weight_modifier = {
+        base = 10
+    }
+}

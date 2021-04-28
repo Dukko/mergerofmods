@@ -1,0 +1,37 @@
+trait_delicious = {
+    cost = 2
+    potential_crossbreeding_chance = 0.5
+    opposites = {
+        trait_poisonous
+    }
+    initial = no
+    randomized = no
+    advanced_trait = yes
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    modifier = {
+        planet_livestock_food_produces_add = 4
+    }
+    slave_cost = {
+        energy = 100
+    }
+    ai_weight = {
+        weight = 10000
+        modifier = {
+            factor = 0
+            root = {
+                NAND = {
+                    has_citizenship_type = {
+                        country = prev
+                        type = citizenship_slavery
+                    }
+                    has_slavery_type = {
+                        country = prev
+                        type = slavery_livestock
+                    }
+                }
+            }
+        }
+    }
+}

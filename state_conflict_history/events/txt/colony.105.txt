@@ -1,0 +1,140 @@
+namespace = colony
+planet_event = {
+    id = colony.105
+    title = "PROJECT_COMPLETE"
+    desc = "colony.105.desc"
+    picture = GFX_evt_ground_combat
+    show_sound = event_ground_battle
+    location = ROOT
+    is_triggered_only = yes
+    immediate = {
+        hidden_effect = {
+            remove_planet_flag = pdaquapicture
+            random_list = {
+                3.7 = {
+                    change_pc = pc_mangrove
+                }
+                3.7 = {
+                    change_pc = pc_wetswamp
+                }
+                3.7 = {
+                    change_pc = pc_desertislands
+                }
+                3.7 = {
+                    change_pc = pc_hajungle
+                }
+                3.7 = {
+                    change_pc = pc_cascadian
+                }
+                3.7 = {
+                    change_pc = pc_swamp
+                }
+                3.7 = {
+                    change_pc = pc_mud
+                }
+                3.7 = {
+                    change_pc = pc_subarctic
+                }
+                3.7 = {
+                    change_pc = pc_glacial
+                }
+                3.7 = {
+                    change_pc = pc_sandsea
+                }
+                3.7 = {
+                    change_pc = pc_mesa
+                }
+                3.7 = {
+                    change_pc = pc_outback
+                }
+                3.7 = {
+                    change_pc = pc_oasis
+                }
+                3.7 = {
+                    change_pc = pc_hadesert
+                }
+                3.7 = {
+                    change_pc = pc_steppe
+                }
+                3.7 = {
+                    change_pc = pc_frozen_desert
+                }
+                3.7 = {
+                    change_pc = pc_boreal
+                }
+                3.7 = {
+                    change_pc = pc_desert
+                }
+                3.7 = {
+                    change_pc = pc_tropical
+                }
+                3.7 = {
+                    change_pc = pc_arid
+                }
+                3.7 = {
+                    change_pc = pc_continental
+                }
+                3.7 = {
+                    change_pc = pc_ocean
+                }
+                3.7 = {
+                    change_pc = pc_tundra
+                }
+                3.7 = {
+                    change_pc = pc_arctic
+                }
+                3.7 = {
+                    change_pc = pc_alpine
+                }
+                3.7 = {
+                    change_pc = pc_savannah
+                }
+                3.7 = {
+                    change_pc = pc_mushroom
+                }
+            }
+            remove_modifier = "abandoned_terraforming"
+            owner = {
+                set_country_flag = terraforming_mutants_invade_country
+            }
+            set_planet_flag = terraforming_mutants_invade_planet
+            create_country = {
+                name = "NAME_Deformed_Creatures"
+                type = faction
+                effect = {
+                    establish_communications_no_message = root.owner
+                }
+            }
+            create_army = {
+                name = "NAME_Deformed_Creatures"
+                owner = last_created_country
+                type = "mutant_army"
+            }
+            create_army = {
+                name = "NAME_Twisted_Beasts"
+                owner = last_created_country
+                type = "mutant_army"
+            }
+            create_army = {
+                name = "NAME_Mutated_Horrors"
+                owner = last_created_country
+                type = "mutant_army"
+            }
+            if = {
+                limit = {
+                    NOT = {
+                        gpm_has_precursor_modifiers = yes
+                    }
+                }
+                reroll_planet_modifiers = yes
+                gpm_remove_precursor_modifiers = yes
+                gpm_remove_planetary_features = yes
+                gpm_roll_planetary_features = yes
+            }
+        }
+    }
+    option = {
+        name = colony.105.a
+        custom_tooltip = terraforming_mutants_attack
+    }
+}

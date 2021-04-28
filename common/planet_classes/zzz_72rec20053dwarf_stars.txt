@@ -1,0 +1,8 @@
+random_list = {
+    name = "dwarf_stars"
+    planets = {
+        "pc_m_star"
+        "pc_l_star"
+        "pc_d_star"
+    }
+}

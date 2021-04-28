@@ -1,0 +1,91 @@
+apsr19_power_engineer_lithoid_normal = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = apsr11_building_part_m3
+    clothes_texture_index = 3
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        specialist_job_check_trigger = yes
+    }
+    resources = {
+        category = apsr19_planet_power_engineer_lithoid_normal
+        produces = {
+            energy = 5
+            apsr_knowledge = 0.18
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr19_building_part_m3
+                }
+            }
+            apsr_knowledge = 0.09
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_deposit = apsr_relic_cube_deposit
+                }
+            }
+            energy = 5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr19_advanced_1
+                }
+            }
+            energy = 3.5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr19_advanced_2
+                }
+            }
+            energy = 3.5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr19_advanced_3
+                }
+            }
+            energy = 3.5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr19_advanced_4
+                }
+            }
+            energy = 3.5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr19_advanced_5
+                }
+            }
+            energy = 3.5
+        }
+    }
+    weight = {
+        weight = 100
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+            NOT = {
+                has_trait = trait_mechanical
+            }
+        }
+        modifier = {
+            factor = 0.1
+            is_enslaved = yes
+        }
+    }
+}

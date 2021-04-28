@@ -1,0 +1,518 @@
+@kuiper_belt_objects_angle = 90
+sol_system_initializer = {
+    name = "NAME_Sol"
+    class = "sc_g"
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 115
+    }
+    asteroid_belt = {
+        type = icy_asteroid_belt
+        radius = 385
+    }
+    flags = {
+        empire_home_system
+        sol_system
+        sol
+    }
+    usage = custom_empire
+    init_effect = {
+        every_neighbor_system = {
+            set_star_flag = empire_cluster
+            every_neighbor_system = {
+                set_star_flag = empire_cluster
+            }
+        }
+        generate_home_system_resources = yes
+    }
+    planet = {
+        name = "NAME_Sol"
+        class = "pc_g_star"
+        orbit_distance = 0
+        orbit_angle = 1
+        size = 30
+        has_ring = no
+        init_effect = {
+            prevent_anomaly = yes
+        }
+    }
+    planet = {
+        name = "NAME_Mercury"
+        class = "pc_molten"
+        orbit_distance = 25
+        orbit_angle = 15
+        size = 8
+        has_ring = no
+        flags = {
+            realsol_mercury
+            planet_mercury
+            mercury
+        }
+        init_effect = {
+            prevent_anomaly = yes
+        }
+    }
+    planet = {
+        name = "NAME_Venus"
+        class = "pc_toxic"
+        orbit_distance = 15
+        orbit_angle = 125
+        size = 15
+        has_ring = no
+        flags = {
+            realsol_venus
+            planet_venus
+            venus
+        }
+        init_effect = {
+            prevent_anomaly = yes
+        }
+    }
+    planet = {
+        name = "NAME_Earth"
+        class = "pc_continental"
+        orbit_distance = 20
+        orbit_angle = 120
+        size = 16
+        starting_planet = yes
+        has_ring = no
+        entity = "continental_planet_earth_entity"
+        tile_blockers = none
+        modifiers = none
+        flags = {
+            planet_earth
+        }
+        init_effect = {
+            prevent_anomaly = yes
+        }
+        init_effect = {
+            generate_start_buildings_and_blockers = yes
+        }
+        moon = {
+            name = "NAME_Luna"
+            class = "pc_barren_cold"
+            size = 5
+            orbit_distance = 10
+            orbit_angle = 40
+            has_ring = no
+            entity = "cold_barren_planet_luna_entity"
+            flags = {
+                planet_earth_moon
+                moon_luna
+                luna
+            }
+            init_effect = {
+                prevent_anomaly = yes
+            }
+        }
+    }
+    planet = {
+        name = "NAME_Mars"
+        class = "pc_barren"
+        orbit_distance = 25
+        orbit_angle = 60
+        size = 11
+        has_ring = no
+        entity = "barren_planet_mars_entity"
+        flags = {
+            planet_mars
+            mars
+        }
+        init_effect = {
+            add_modifier = {
+                modifier = "terraforming_candidate"
+                days = -1
+            }
+        }
+    }
+    planet = {
+        name = "NAME_1_Ceres"
+        class = "pc_barren_cold_dwarf_no_orbit"
+        entity = "cold_barren_planet_01_entity"
+        orbit_distance = 30
+        orbit_angle = -210
+        size = 5
+        has_ring = no
+        anomaly = "ak_tesla_category"
+        flags = {
+            realsol_ceres
+            dwarf_planet
+            dwarf_planet_ceres
+        }
+    }
+    planet = {
+        name = "NAME_2_Pallas"
+        class = "pc_asteroid"
+        orbit_distance = 0
+        orbit_angle = -95
+        size = 5
+        has_ring = no
+        flags = {
+            asteroid_pallas
+            pallas
+        }
+    }
+    planet = {
+        name = "NAME_3_Juno"
+        class = "pc_asteroid"
+        orbit_distance = 0
+        orbit_angle = 285
+        size = 5
+        has_ring = no
+        flags = {
+            asteroid_juno
+            juno
+        }
+    }
+    planet = {
+        name = "NAME_4_Vesta"
+        class = "pc_asteroid"
+        orbit_distance = 0
+        orbit_angle = -80
+        size = 5
+        has_ring = no
+        flags = {
+            asteroid_vesta
+            vesta
+        }
+    }
+    planet = {
+        name = "NAME_Jupiter"
+        class = "pc_gas_giant"
+        orbit_distance = 35
+        orbit_angle = -160
+        size = 40
+        has_ring = no
+        entity = "gas_giant_jupiter_entity"
+        flags = {
+            realsol_jupiter
+            planet_jupiter
+            jupiter
+        }
+        change_orbit = 6
+        init_effect = {
+            prevent_anomaly = yes
+        }
+        moon = {
+            name = "NAME_Io"
+            class = "pc_molten"
+            size = 6
+            orbit_distance = 10
+            orbit_angle = 110
+            has_ring = no
+            flags = {
+                moon_io
+                io
+            }
+        }
+        moon = {
+            name = "NAME_Europa"
+            class = "pc_frozen"
+            size = 6
+            orbit_distance = 2.5
+            orbit_angle = 10
+            has_ring = no
+            flags = {
+                moon_europa
+                subterranean_ocean_anomaly
+                europa
+            }
+        }
+        moon = {
+            name = "NAME_Ganymede"
+            class = "pc_frozen"
+            size = 9
+            orbit_distance = 2.5
+            orbit_angle = 80
+            has_ring = no
+            flags = {
+                moon_ganymede
+                ganymede
+            }
+        }
+        moon = {
+            name = "NAME_Callisto"
+            class = "pc_frozen"
+            size = 7
+            orbit_distance = 2.5
+            orbit_angle = -155
+            has_ring = no
+            flags = {
+                moon_callisto
+                callisto
+            }
+        }
+    }
+    planet = {
+        name = "NAME_Saturn"
+        class = "pc_gas_giant"
+        orbit_distance = 40
+        orbit_angle = 170
+        size = 36
+        has_ring = yes
+        entity = "gas_giant_saturn_entity"
+        flags = {
+            realsol_saturn
+            planet_saturn
+            saturn
+        }
+        change_orbit = 7
+        init_effect = {
+            prevent_anomaly = yes
+        }
+        moon = {
+            name = "NAME_Titan"
+            class = "pc_toxic"
+            size = 8
+            orbit_distance = 12
+            orbit_angle = 90
+            has_ring = no
+            flags = {
+                moon_titan
+                titan
+            }
+            init_effect = {
+                prevent_anomaly = yes
+            }
+        }
+    }
+    planet = {
+        name = "NAME_Uranus"
+        class = "pc_gas_giant"
+        orbit_distance = 45
+        orbit_angle = 125
+        size = 24
+        has_ring = no
+        entity = "gas_giant_uranus_entity"
+        flags = {
+            realsol_uranus
+            planet_uranus
+            uranus
+        }
+        change_orbit = 4
+        init_effect = {
+            prevent_anomaly = yes
+        }
+        moon = {
+            name = "NAME_Titania"
+            class = "pc_frozen"
+            size = 4
+            orbit_distance = 7
+            orbit_angle = {
+                min = 90
+                max = 270
+            }
+            has_ring = no
+            flags = {
+                moon_titania
+            }
+        }
+    }
+    planet = {
+        name = "NAME_Neptune"
+        class = "pc_gas_giant"
+        orbit_distance = 50
+        orbit_angle = -195
+        size = 24
+        has_ring = no
+        entity = "gas_giant_neptune_entity"
+        change_orbit = 4
+        flags = {
+            realsol_neptune
+            planet_neptune
+            neptune
+        }
+        moon = {
+            name = "NAME_Triton"
+            class = "pc_frozen"
+            size = 6
+            orbit_distance = 7
+            orbit_angle = 115
+            has_ring = no
+            flags = {
+                moon_triton
+                triton
+            }
+        }
+    }
+    planet = {
+        name = "NAME_Pluto"
+        class = "pc_barren"
+        entity = "barren_planet_01_entity"
+        orbit_distance = 50
+        orbit_angle = {
+            min = 90
+            max = 270
+        }
+        size = 6
+        has_ring = no
+        flags = {
+            dwarf_planet
+            dwarf_planet_pluto
+        }
+        change_orbit = 4
+        moon = {
+            name = "NAME_Charon"
+            class = "pc_frozen"
+            size = 5
+            orbit_distance = 3
+            orbit_angle = {
+                min = 90
+                max = 270
+            }
+            has_ring = no
+            flags = {
+                moon_charon
+            }
+        }
+    }
+    planet = {
+        name = "NAME_Makemake"
+        class = "pc_ice_asteroid"
+        orbit_distance = 50
+        orbit_angle = {
+            min = 0
+            max = 359
+        }
+        size = 3
+        has_ring = no
+        flags = {
+            dwarf_planet
+            dwarf_planet_makemake
+            makemake
+        }
+    }
+    planet = {
+        name = "NAME_Haumea"
+        class = "pc_ice_asteroid"
+        orbit_distance = 0
+        orbit_angle = @kuiper_belt_objects_angle
+        size = 3
+        has_ring = no
+        flags = {
+            dwarf_planet
+            dwarf_planet_haumea
+            haumea
+        }
+    }
+    planet = {
+        name = "NAME_Eris"
+        class = "pc_ice_asteroid"
+        orbit_distance = 0
+        orbit_angle = @kuiper_belt_objects_angle
+        size = 6
+        has_ring = no
+        flags = {
+            dwarf_planet
+            dwarf_planet_eris
+        }
+    }
+    planet = {
+        name = "NAME_Varuna"
+        class = "pc_ice_asteroid"
+        orbit_distance = 0
+        orbit_angle = @kuiper_belt_objects_angle
+        size = 2
+        has_ring = no
+        flags = {
+            dwarf_planet
+            dwarf_planet_varuna
+            varuna
+        }
+    }
+    planet = {
+        name = "NAME_Planet_Nine"
+        class = "pc_gas_giant"
+        orbit_distance = 50
+        orbit_angle = {
+            min = 90
+            max = 270
+        }
+        size = 20
+        flags = {
+            planet_planet_nine
+        }
+    }
+    neighbor_system = {
+        distance = {
+            min = 15
+            max = 40
+        }
+        initializer = "bernards_star_mediumsector"
+    }
+    neighbor_system = {
+        trigger = {
+            num_guaranteed_colonies >= 1
+        }
+        distance = {
+            min = 10
+            max = 40
+        }
+        initializer = "alpha_centauri_mediumsector"
+    }
+    neighbor_system = {
+        trigger = {
+            num_guaranteed_colonies = 0
+        }
+        distance = {
+            min = 10
+            max = 40
+        }
+        initializer = "alpha_centauri_mediumsector_no_col"
+    }
+    neighbor_system = {
+        trigger = {
+            num_guaranteed_colonies >= 2
+        }
+        distance = {
+            min = 15
+            max = 50
+        }
+        initializer = "sirius_mediumsector"
+    }
+    neighbor_system = {
+        trigger = {
+            num_guaranteed_colonies = 0
+        }
+        distance = {
+            min = 15
+            max = 50
+        }
+        initializer = "sirius_mediumsector_no_col"
+    }
+    neighbor_system = {
+        distance = {
+            min = 20
+            max = 60
+        }
+        initializer = "tau_ceti_mediumsector"
+    }
+    neighbor_system = {
+        distance = {
+            min = 20
+            max = 55
+        }
+        initializer = "epsilon_eridani_system"
+    }
+    neighbor_system = {
+        distance = {
+            min = 30
+            max = 70
+        }
+        initializer = "fomalhaut_mediumsector"
+    }
+    neighbor_system = {
+        distance = {
+            min = 20
+            max = 60
+        }
+        initializer = "eta_cassiopeiae_mediumsector"
+    }
+    neighbor_system = {
+        distance = {
+            min = 20
+            max = 60
+        }
+        initializer = "sigma_draconis_system"
+    }
+}

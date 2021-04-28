@@ -1,0 +1,166 @@
+@resolution_weight_hated = 3
+@resolution_cost_denounce = 25
+@resolution_flag_timer = 360
+resolution_sanctions_military_repeal_1 = {
+    icon = "GFX_repeal_red"
+    resources = {
+        category = resolutions
+        cost = {
+            influence = @resolution_cost_denounce
+        }
+    }
+    target = no
+    sanction = yes
+    effect = {
+        custom_tooltip = resolution_sanctions_military_repeal_1_effect_success
+        hidden_effect = {
+            set_timed_country_flag = {
+                flag = galactic_community_resolution_passed_general
+                days = @resolution_flag_timer
+            }
+            add_modifier = {
+                modifier = resolution_passed_diplomatic_weight
+                days = 2200
+            }
+        }
+    }
+    fail_effects = {
+        hidden_effect = {
+            set_timed_country_flag = {
+                flag = galactic_community_resolution_failed_general
+                days = @resolution_flag_timer
+            }
+            add_modifier = {
+                modifier = resolution_failed_diplomatic_weight
+                days = 2200
+            }
+        }
+    }
+    potential = {
+        is_active_resolution = "resolution_sanctions_military_1"
+    }
+    ai_weight = {
+        weight = @resolution_weight_hated
+        modifier = {
+            factor = 2
+            OR = {
+                is_in_breach_of_any = yes
+                has_modifier = resolution_denounced
+            }
+        }
+        modifier = {
+            factor = 2
+            any_federation_ally = {
+                OR = {
+                    is_in_breach_of_any = yes
+                    has_modifier = resolution_denounced
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            any_rival_country = {
+                OR = {
+                    is_in_breach_of_any = yes
+                    has_modifier = resolution_denounced
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            has_valid_civic = civic_cutthroat_politics
+            NOR = {
+                is_in_breach_of_any = yes
+                has_modifier = resolution_denounced
+            }
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+                is_in_breach_of_any = yes
+                has_modifier = resolution_denounced
+            }
+            OR = {
+                is_militarist = yes
+                has_valid_civic = civic_machine_warbots
+                has_valid_civic = civic_hive_subspace_ephapse
+                has_valid_civic = civic_hive_strength_of_legions
+                has_policy_flag = diplo_stance_belligerent
+                has_policy_flag = diplo_stance_supremacist
+            }
+        }
+        modifier = {
+            factor = 1.2
+            OR = {
+                is_militarist = yes
+                has_valid_civic = civic_machine_warbots
+                has_valid_civic = civic_hive_subspace_ephapse
+                has_valid_civic = civic_hive_strength_of_legions
+                has_policy_flag = diplo_stance_belligerent
+                has_policy_flag = diplo_stance_supremacist
+            }
+        }
+        modifier = {
+            factor = 1.2
+            OR = {
+                has_valid_civic = civic_citizen_service
+                has_valid_civic = civic_distinguished_admiralty
+                has_valid_civic = civic_warrior_culture
+                has_valid_civic = civic_private_military_companies
+                has_valid_civic = civic_naval_contractors
+            }
+        }
+        modifier = {
+            factor = 0.2
+            is_pacifist = yes
+            NOR = {
+                is_in_breach_of_any = yes
+                has_modifier = resolution_denounced
+            }
+        }
+        modifier = {
+            factor = 0.7
+            has_valid_civic = civic_inwards_perfection
+            NOR = {
+                is_in_breach_of_any = yes
+                has_modifier = resolution_denounced
+            }
+        }
+        modifier = {
+            factor = 1.1
+            any_federation_ally = {
+                OR = {
+                    is_militarist = yes
+                    has_valid_civic = civic_machine_warbots
+                    has_valid_civic = civic_hive_subspace_ephapse
+                    has_valid_civic = civic_hive_strength_of_legions
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            any_rival_country = {
+                OR = {
+                    is_militarist = yes
+                    has_valid_civic = civic_machine_warbots
+                    has_valid_civic = civic_hive_subspace_ephapse
+                    has_valid_civic = civic_hive_strength_of_legions
+                    has_policy_flag = diplo_stance_belligerent
+                    has_policy_flag = diplo_stance_supremacist
+                }
+            }
+            NOR = {
+                is_in_breach_of_any = yes
+                has_modifier = resolution_denounced
+            }
+            NOR = {
+                is_militarist = yes
+                has_valid_civic = civic_machine_warbots
+                has_valid_civic = civic_hive_subspace_ephapse
+                has_valid_civic = civic_hive_strength_of_legions
+                has_policy_flag = diplo_stance_belligerent
+                has_policy_flag = diplo_stance_supremacist
+            }
+        }
+    }
+}

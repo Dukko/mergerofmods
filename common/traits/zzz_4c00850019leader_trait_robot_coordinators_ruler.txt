@@ -1,0 +1,16 @@
+leader_trait_robot_coordinators_ruler = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/trait_robot_coordinators.dds"
+    modifier = {
+        country_admin_cap_mult = 0.02
+    }
+    leader_trait = {
+        ruler
+    }
+    leader_class = {
+        ruler
+    }
+    initial = no
+    randomized = no
+}

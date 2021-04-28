@@ -1,0 +1,28 @@
+trait_parasitoid = {
+    cost = 1
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_necrophage"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    advanced_trait = yes
+    custom_tooltip = TRAIT_PARASITOID_EFFECT
+    species_potential_add = {
+        host_has_dlc = "Necroids Species Pack"
+    }
+    ai_weight = {
+        weight = 200
+        modifier = {
+            factor = 0
+            is_xenophobe = no
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                is_same_species = root
+            }
+        }
+    }
+}

@@ -1,0 +1,275 @@
+namespace = anomaly
+country_event = {
+    id = anomaly.1199
+    title = "anomaly.1199.name"
+    desc = "anomaly.1199.desc"
+    show_sound = event_mystic_reveal
+    picture = GFX_evt_synth_organic_relations
+    location = capital_scope
+    is_triggered_only = yes
+    option = {
+        name = anomaly.189.c
+        custom_tooltip = anomaly.186.a.alt.tooltip
+        trigger = {
+            has_policy_flag = ai_servitude
+        }
+        add_resource = {
+            minerals = 200
+        }
+    }
+    option = {
+        name = anomaly.1199.a
+        custom_tooltip = anomaly.189.b.tooltip
+        trigger = {
+            NOT = {
+                has_policy_flag = ai_outlawed
+            }
+            any_system = {
+                NOR = {
+                    exists = space_owner
+                    has_star_flag = hostile_system
+                    has_star_flag = guardian
+                    has_star_flag = enclave
+                    has_star_flag = primitive_system
+                }
+                any_system_planet = {
+                    habitable_planet = yes
+                    has_anomaly = no
+                    NOT = {
+                        has_modifier = holy_planet
+                    }
+                    NOR = {
+                        exists = owner
+                        exists = controller
+                    }
+                }
+            }
+        }
+        allow = {
+            NOT = {
+                has_policy_flag = ai_outlawed
+            }
+            any_system = {
+                NOR = {
+                    exists = space_owner
+                    has_star_flag = hostile_system
+                    has_star_flag = guardian
+                    has_star_flag = enclave
+                    has_star_flag = primitive_system
+                }
+                any_system_planet = {
+                    habitable_planet = yes
+                    has_anomaly = no
+                    NOT = {
+                        has_modifier = holy_planet
+                    }
+                    NOR = {
+                        exists = owner
+                        exists = controller
+                    }
+                }
+            }
+        }
+        hidden_effect = {
+            random_system = {
+                limit = {
+                    NOR = {
+                        exists = space_owner
+                        has_star_flag = hostile_system
+                        has_star_flag = guardian
+                        has_star_flag = enclave
+                        has_star_flag = primitive_system
+                    }
+                    any_system_planet = {
+                        habitable_planet = yes
+                        has_anomaly = no
+                        is_colony = no
+                        is_capital = no
+                        NOT = {
+                            has_modifier = holy_planet
+                        }
+                        NOR = {
+                            exists = owner
+                            exists = controller
+                        }
+                    }
+                }
+                random_system_planet = {
+                    limit = {
+                        habitable_planet = yes
+                        has_owner = no
+                        has_anomaly = no
+                        is_colony = no
+                        is_capital = no
+                        NOT = {
+                            has_modifier = holy_planet
+                        }
+                        NOT = {
+                            has_modifier = phaseshifted
+                        }
+                    }
+                    save_event_target_as = colonized_planet
+                    set_surveyed = {
+                        surveyed = yes
+                        surveyor = root
+                    }
+                    prevent_anomaly = yes
+                    if = {
+                        limit = {
+                            host_has_dlc = "Synthetic Dawn Story Pack"
+                        }
+                        create_species = {
+                            name = "NAME_Awoken_Robot"
+                            plural = "NAME_Awoken_Robot"
+                            class = ROBOT
+                            namelist = FUN3
+                            portrait = "sd_fun_robot"
+                            traits = {
+                                trait = "trait_mechanical"
+                                trait = "trait_robot_awoken"
+                            }
+                        }
+                    }
+                    else = {
+                        create_species = {
+                            name = "NAME_Awoken_Robot"
+                            plural = "NAME_Awoken_Robot"
+                            class = ROBOT
+                            namelist = FUN3
+                            portrait = "default_robot"
+                            traits = {
+                                trait = "trait_mechanical"
+                                trait = "trait_robot_awoken"
+                            }
+                        }
+                    }
+                    create_country = {
+                        name = "NAME_Awoken"
+                        name_list = FUN3
+                        species = last_created_species
+                        type = default
+                        ethos = {
+                            ethic = ethic_fanatic_materialist
+                            ethic = ethic_xenophile
+                        }
+                        authority = random
+                        civics = random
+                        auto_delete = no
+                        flag = {
+                            icon = {
+                                category = "blocky"
+                                file = "flag_blocky_21.dds"
+                            }
+                            background = {
+                                category = "backgrounds"
+                                file = "new_dawn.dds"
+                            }
+                            colors = {
+                                "black"
+                                "dark_blue"
+                                "null"
+                                "null"
+                            }
+                        }
+                        exclude_day_zero_contact = root
+                        effect = {
+                            establish_communications_no_message = root
+                            root = {
+                                every_federation_ally = {
+                                    establish_communications = prevprev
+                                }
+                            }
+                            add_trust = {
+                                amount = 10
+                                who = root
+                            }
+                            save_event_target_as = awoken_country
+                            set_country_flag = limbo_country
+                            set_country_flag = synthetic_empire
+                            species = {
+                                if = {
+                                    limit = {
+                                        host_has_dlc = "Synthetic Dawn Story Pack"
+                                    }
+                                    change_species_characteristics = {
+                                        portrait = "sd_fun_robot"
+                                    }
+                                }
+                            }
+                            create_leader = {
+                                class = ruler
+                                species = owner_main_species
+                                name = random
+                                skill = 5
+                            }
+                            set_leader = last_created_leader
+                            copy_techs_from = {
+                                target = root
+                                except = {
+                                    tech_hydroponics
+                                    tech_gene_crops
+                                    tech_nano_vitality_crops
+                                    tech_nutrient_replication
+                                    tech_frontier_health
+                                    tech_frontier_hospital
+                                    tech_telepathy
+                                    tech_precognition_interface
+                                    tech_psi_jump_drive_1
+                                    tech_galactic_markets
+                                    tech_subdermal_stimulation
+                                    tech_global_research_initiative
+                                    tech_neural_implants
+                                    tech_psionic_theory
+                                    tech_genome_mapping
+                                    tech_vitality_boosters
+                                    tech_epigenetic_triggers
+                                    tech_cloning
+                                    tech_gene_banks
+                                    tech_gene_seed_purification
+                                    tech_morphogenetic_field_mastery
+                                    tech_gene_tailoring
+                                    tech_glandular_acclimation
+                                    tech_gene_expressions
+                                    tech_selected_lineages
+                                    tech_capacity_boosters
+                                    tech_akx_worm_1
+                                    tech_akx_worm_2
+                                    tech_akx_worm_3
+                                }
+                            }
+                        }
+                    }
+                    set_owner = event_target:awoken_country
+                    set_capital = yes
+                    while = {
+                        count = 6
+                        create_pop = {
+                            species = last_created_species
+                        }
+                    }
+                    add_district = district_city
+                    add_district = district_city
+                    add_district = district_industrial
+                    add_district = district_industrial
+                    add_building = building_research_lab_1
+                    add_district = district_generator
+                    add_district = district_generator
+                    add_district = district_mining
+                    add_district = district_mining
+                    create_army = {
+                        name = "NAME_Awoken_Army"
+                        owner = event_target:awoken_country
+                        species = event_target:awoken_country
+                        type = "defense_army"
+                    }
+                    root = {
+                        country_event = {
+                            id = anomaly.1196
+                            days = 10
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

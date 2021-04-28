@@ -1,0 +1,16 @@
+trait_ruler_hobby_machine = {
+    cost = 0
+    leader_trait = {
+        ruler
+    }
+    leader_class = {
+        ruler
+    }
+    self_modifier = {
+    }
+    modifier = {
+    }
+    initial = no
+    modification = no
+    randomized = no
+}

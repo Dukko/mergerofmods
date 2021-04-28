@@ -1,0 +1,24 @@
+sls_trait_research_engineering_lv14 = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/sls_trait_research_engineering_lv14.dds"
+    sorting_priority = -30
+    modifier = {
+        country_base_engineering_research_produces_add = 28
+        country_engineering_research_produces_mult = 0.08
+    }
+    initial = no
+    randomized = no
+    leader_trait = {
+        scientist
+    }
+    leader_class = {
+        scientist
+    }
+    ai_categories = {
+        engineering
+    }
+    ai_weight = {
+        weight = 500
+    }
+}

@@ -1,0 +1,22 @@
+att_trait_point2 = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/att_trait_point2.dds"
+    sorting_priority = -10
+    modifier = {
+        weapon_type_point_defense_weapon_damage_mult = 0.3
+        weapon_type_point_defense_weapon_fire_rate_mult = 0.75
+        weapon_type_kinetic_weapon_damage_mult = 0.05
+        weapon_type_kinetic_weapon_fire_rate_mult = 0.08
+        ship_tracking_add = 3
+        ship_tracking_mult = 0.05
+    }
+    initial = no
+    randomized = no
+    leader_trait = {
+        admiral
+    }
+    leader_class = {
+        admiral
+    }
+}

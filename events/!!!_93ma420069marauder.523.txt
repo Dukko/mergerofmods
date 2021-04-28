@@ -1,0 +1,28 @@
+namespace = marauder
+country_event = {
+    id = marauder.523
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        if = {
+            limit = {
+                exists = from
+            }
+            from = {
+                country_event = {
+                    id = marauder.507
+                }
+            }
+        }
+        else = {
+            every_country = {
+                limit = {
+                    is_ai = no
+                }
+                country_event = {
+                    id = marauder.524
+                }
+            }
+        }
+    }
+}

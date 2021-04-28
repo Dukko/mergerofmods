@@ -1,0 +1,21 @@
+pc_wh_star = {
+    entity = "wh_star_class_star_entity"
+    entity_scale = 30
+    icon_frame = 32
+    atmosphere_color = hsv {
+        1
+        0
+        1
+    }
+    atmosphere_intensity = 0
+    atmosphere_width = 0
+    star = yes
+    min_distance_from_sun = 0
+    max_distance_from_sun = 0
+    spawn_odds = 0
+    extra_orbit_size = 0
+    extra_planet_count = 0
+    chance_of_ring = 0
+    planet_size = 24
+    colonizable = no
+}

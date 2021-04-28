@@ -1,0 +1,14 @@
+law_category_invite_members_vote = {
+    potential = {
+        NOT = {
+            has_federation_type = vf_ef_federation
+        }
+    }
+    laws = {
+        invite_members_unanimous_vote
+        invite_members_majority_vote
+        invite_members_president_vote
+        invite_members_president_vote_hegemony
+        invite_members_president_vote_imperial_loyalists
+    }
+}

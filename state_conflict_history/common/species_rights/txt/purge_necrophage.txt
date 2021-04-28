@@ -1,0 +1,181 @@
+purge_necrophage = {
+    token = purge_necrophage
+    pop_escape_chance = 0.1
+    pop_decline_rate = 50
+    triggered_pop_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_origin = origin_necrophage
+            }
+        }
+        pop_happiness = -0.5
+    }
+    triggered_pop_modifier = {
+        potential = {
+            NAND = {
+                exists = owner
+                owner = {
+                    has_origin = origin_necrophage
+                }
+            }
+        }
+        pop_happiness = -10
+    }
+    triggered_pop_modifier = {
+    potential = {
+            planet = {
+                OR = {
+                    has_planet_flag = very_rapid_necroid_breeding
+                    AND = {
+                        no_necroid_purge_species_flag = yes
+                        exists = owner
+                        owner = {
+                            any_owned_species = {
+                                is_same_species = prev
+                                OR = {
+                                    has_trait = trait_necrophage
+                                    has_trait = trait_parasitoid
+                                }
+                                OR = {
+                                    has_trait = trait_very_rapid_breeders
+                                    has_trait = trait_very_rapid_breeders_lithoid
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        pop_decline_speed = 0.2
+    }
+    triggered_pop_modifier = {
+        potential = {
+            planet = {
+                OR = {
+                    has_planet_flag = rapid_necroid_breeding
+                    AND = {
+                        no_necroid_purge_species_flag = yes
+                        exists = owner
+                        owner = {
+                            any_owned_species = {
+                                is_same_species = prev
+                                OR = {
+                                    has_trait = trait_necrophage
+                                    has_trait = trait_parasitoid
+                                }
+                                OR = {
+                                    has_trait = trait_rapid_breeders
+                                    has_trait = trait_rapid_breeders_lithoid
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        pop_decline_speed = 0.1
+    }
+    triggered_pop_modifier = {
+        potential = {
+            planet = {
+                OR = {
+                    has_planet_flag = slow_necroid_breeding
+                    AND = {
+                        no_necroid_purge_species_flag = yes
+                        exists = owner
+                        owner = {
+                            any_owned_species = {
+                                is_same_species = prev
+                                OR = {
+                                    has_trait = trait_necrophage
+                                    has_trait = trait_parasitoid
+                                }
+                                has_trait = trait_slow_breeders
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        pop_decline_speed = -0.1
+    }
+    triggered_pop_modifier = {
+        potential = {
+            planet = {
+                OR = {
+                    has_planet_flag = very_slow_necroid_breeding
+                    AND = {
+                        no_necroid_purge_species_flag = yes
+                        exists = owner
+                        owner = {
+                            any_owned_species = {
+                                is_same_species = prev
+                                OR = {
+                                    has_trait = trait_necrophage
+                                    has_trait = trait_parasitoid
+                                }
+                                has_trait = trait_very_slow_breeders
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        pop_decline_speed = -0.2
+    }
+    triggered_pop_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_lithoid_empire = yes
+            }
+        }
+        pop_decline_speed = -0.25
+    }
+    potential = {
+        exists = from
+        from = {
+            any_owned_species = {
+                is_same_species = prev
+            OR = {
+                has_valid_civic = civic_machine_replicators
+                has_valid_civic = civic_hive_parasitic
+                AND = {
+                    has_origin = origin_necrophage
+                    has_trait = trait_necrophage
+                    has_trait = trait_parasitoid
+                }
+            }
+        }
+    }
+    allow = {
+        hidden_trigger = {
+            exists = from
+        }
+        custom_tooltip = {
+            fail_text = CANNOT_NECROPHAGE_MACHINES
+            is_robotic_species = no
+        }
+        if = {
+            limit = {
+                is_lonely_hive_mind_pop = no
+            }
+            custom_tooltip = {
+                fail_text = PURGES_ALLOWED
+                from = {
+                    OR = {
+                        has_valid_civic = civic_machine_replicators
+                        has_valid_civic = civic_hive_parasitic
+                        has_valid_civic = civic_fanatic_purifiers
+                        has_policy_flag = purge_allowed
+                    }
+                }
+            }
+        }
+    }
+    ai_will_do = {
+        factor = 100
+        }
+    }
+}

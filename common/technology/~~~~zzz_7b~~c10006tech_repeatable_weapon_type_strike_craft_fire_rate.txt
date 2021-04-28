@@ -1,0 +1,51 @@
+@RepeatRepeatable = 0.5
+tech_repeatable_weapon_type_strike_craft_fire_rate = {
+    area = engineering
+    cost = @repeatableTechBaseCost
+    cost_per_level = @repeatableTechLevelCost
+    tier = @repeatableTechTier
+    category = {
+        voidcraft
+    }
+    ai_update_type = military
+    levels = -1
+    prerequisites = {
+        "tech_strike_craft_3"
+    }
+    weight = 0
+    weight_modifier = {
+        factor = @repatableTechFactor
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            has_country_flag = wrd_hwdis
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+    potential = {
+        AND = {
+            is_country_type = fallen_empire
+            is_country_type = default
+        }
+    }
+    ai_weight = {
+        factor = 1
+    }
+    weight_groups = {
+        repeatable
+    }
+    mod_weight_if_group_picked = {
+        repeatable = @RepeatRepeatable
+    }
+    modifier = {
+        weapon_type_strike_craft_weapon_damage_mult = 0.04
+        weapon_type_strike_craft_weapon_fire_rate_mult = 0.04
+    }
+}

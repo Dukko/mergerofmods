@@ -1,0 +1,56 @@
+COV = {
+    name = "The Covenant"
+    spawn_enabled = no
+    name_list = "Cove"
+    ship_prefix = ""
+    species_name = "Adherent"
+    species_plural = "Adherents"
+    species_adjective = "Adherent"
+    species_class = "Covenant"
+    trait = "trait_adaptive"
+    portrait = "covn"
+    adjective = "Covenant"
+    authority = "auth_oligarchic"
+    civics = {
+        "civic_exalted_priesthood"
+        "civic_nationalistic_zeal"
+    }
+    government = "gov_holy_tribunal"
+    ethic = "ethic_militarist"
+    ethic = "ethic_fanatic_spiritualist"
+    flags = {
+        cov_wartime1
+        custom_start_screen
+    }
+    planet_name = "High Charity"
+    planet_class = "pc_continental"
+    initializer = ""
+    system_name = "High Charity"
+    graphical_culture = "cov_01"
+    city_graphical_culture = "cov_01"
+    empire_flag = {
+        icon = {
+            category = "halo"
+            file = "covenant.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "v.dds"
+        }
+        colors = {
+            "dark_purple"
+            "dark_purple"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = male
+        name = "Ord Casto"
+        portrait = "sanshyuum_01"
+        texture = 0
+        hair = 0
+        clothes = 0
+        ruler_title = "High Prophet of Truth"
+    }
+}

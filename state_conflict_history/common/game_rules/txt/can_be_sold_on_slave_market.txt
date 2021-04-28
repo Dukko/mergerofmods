@@ -1,0 +1,61 @@
+can_be_sold_on_slave_market = {
+    exists = owner
+    OR = {
+        is_enslaved = yes
+        is_non_sapient_robot = yes
+        is_shackled_robot = yes
+    }
+    ROOT = {
+        NOR = {
+            has_authority = auth_warshipgirls
+            has_authority = auth_shenhai
+        }
+    }
+    NOR = {
+        has_trait = wsg_trait_warshipgirls
+        has_trait = wsg_trait_warshipgirls1
+        has_trait = wsg_trait_warshipgirls2
+        has_trait = sh_trait_shenhai
+        has_trait = sh_trait_shenhai1
+        has_trait = sh_trait_shenhai2
+        has_trait = sh_trait_shenhai3
+    }
+    OR = {
+        ROOT = {
+            is_ai = no
+        }
+        has_citizenship_rights = no
+        AND = {
+            is_unemployed = yes
+            planet = {
+                count_owned_pop = {
+                    count > 3
+                    limit = {
+                        is_unemployed = yes
+                    }
+                }
+            }
+        }
+    }
+    if = {
+        limit = {
+            has_global_flag = organic_slave_trade_banned_flag
+        }
+        is_organic_species = no
+    }
+    if = {
+        limit = {
+            has_global_flag = sentient_slave_trade_banned_flag
+        }
+        is_sapient = no
+    }
+    if = {
+        limit = {
+            OR = {
+                has_trait = trait_living_architecture
+                has_trait = trait_rooted_adults_rooted
+            }
+        }
+        always = no
+    }
+}

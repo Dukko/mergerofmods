@@ -1,0 +1,17 @@
+gle_trait_coordinator_ruler_tier = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/gle_trait_coordinator_lv1.dds"
+    modifier = {
+        job_coordinator_add = 2
+    }
+    sorting_priority = 20
+    initial = no
+    randomized = no
+    leader_trait = {
+        governor
+    }
+    leader_class = {
+        governor
+    }
+}

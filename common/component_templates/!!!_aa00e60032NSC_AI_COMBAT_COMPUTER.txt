@@ -1,0 +1,32 @@
+@cost4 = 20
+utility_component_template = {
+    key = "NSC_AI_COMBAT_COMPUTER"
+    size = small
+    icon = "GFX_ship_part_nsc_ai_computer"
+    icon_frame = 1
+    power = -40
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @cost4
+        }
+    }
+    ship_behavior = "nsc_ai"
+    prerequisites = {
+        "tech_nsc_ai_computer_1"
+    }
+    size_restriction = {
+        juggernaut
+        escortcarrier
+        Carrier
+        Flagship
+        explorationship
+    }
+    component_set = "combat_computers"
+    valid_for_country = {
+        modifier = {
+            factor = 0
+            is_ai = yes
+        }
+    }
+}

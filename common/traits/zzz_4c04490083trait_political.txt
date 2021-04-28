@@ -1,0 +1,32 @@
+trait_political = {
+    cost = 1
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_complacent"
+        "trait_hive_mind"
+        "trait_nerve_stapled"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    modifier = {
+        pop_political_power = 0.5
+    }
+    slave_cost = {
+        energy = -15
+    }
+    ai_weight = {
+        weight = 200
+        modifier = {
+            factor = 0
+            NAND = {
+                is_same_species = root
+                is_authoritarian = no
+                any_enslaved_species = {
+                    always = yes
+                }
+            }
+        }
+    }
+}

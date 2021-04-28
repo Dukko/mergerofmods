@@ -1,0 +1,190 @@
+district_giga_birch_extraction = {
+    base_buildtime = 600
+    ai_weight = {
+        weight = 1
+    }
+    is_capped_by_modifier = yes
+    show_on_uncolonized = {
+        uses_district_set = giga_birch
+        from = {
+            has_technology = giga_tech_birch_world_4
+        }
+        has_district = district_giga_birch_structure
+    }
+    potential = {
+        uses_district_set = giga_birch
+        owner = {
+            has_technology = giga_tech_birch_world_4
+        }
+        has_district = district_giga_birch_structure
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            alloys = @giga_birch_cost
+            rare_crystals = @giga_birch_cost_sr
+        }
+        upkeep = {
+            energy = @giga_birch_maintenance
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_birch_empire = yes
+            }
+        }
+        modifier = {
+            job_bore_manager_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_birch_empire = yes
+            }
+        }
+        modifier = {
+            job_penrose_manager_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_birch_empire = yes
+            }
+        }
+        modifier = {
+            job_bore_manager_per_pop = 0.01
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_birch_empire = yes
+            }
+        }
+        modifier = {
+            job_penrose_manager_per_pop = 0.01
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_bore_mind_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_penrose_mind_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_bore_mind_per_pop = 0.01
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_penrose_mind_per_pop = 0.01
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_bore_process_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_penrose_process_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_bore_process_per_pop = 0.01
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_penrose_process_per_pop = 0.01
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = "jobs_extraction_process_desc"
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = "jobs_extraction_mind_desc"
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_birch_empire = yes
+            }
+        }
+        text = "jobs_extraction_desc"
+    }
+}

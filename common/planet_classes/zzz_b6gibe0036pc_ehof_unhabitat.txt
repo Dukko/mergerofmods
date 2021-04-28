@@ -1,0 +1,28 @@
+pc_ehof_unhabitat = {
+    entity = "ehof_habitat_shielded"
+    habitat = yes
+    picture = pc_habitat
+    icon_frame = 22
+    entity_scale = 1.5
+    enable_tilt = no
+    fixed_entity_scale = yes
+    place_entity_on_planet_plane = yes
+    entity_face_object = no
+    atmosphere_color = hsv {
+        0
+        0
+        1
+    }
+    atmosphere_intensity = 1
+    atmosphere_width = 0.5
+    city_color_lut = "gfx/portraits/misc/colorcorrection_continental.dds"
+    extra_orbit_size = 0
+    extra_planet_count = 0
+    chance_of_ring = 0
+    planet_size = 25
+    moon_size = 1
+    colonizable = no
+    orbit_lines = no
+    has_colonization_influence_cost = no
+    spawn_odds = 0
+}

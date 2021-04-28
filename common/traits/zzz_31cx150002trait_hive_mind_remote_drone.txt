@@ -1,0 +1,26 @@
+trait_hive_mind_remote_drone = {
+    cost = 1
+    sorting_priority = 19
+    randomized = no
+    initial = no
+    modification = no
+    icon = "gfx/interface/icons/traits/trait_primitive.dds"
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    opposites = {
+        "trait_nonadaptive"
+        "trait_fleeting"
+        "trait_fleeting_lithoid"
+        "trait_slow_learners"
+        "trait_quick_learners"
+        "trait_venerable"
+        "trait_enduring"
+        "trait_talented"
+    }
+    custom_tooltip = TRAIT_REMOTE_DRONE_EFFECT
+    modifier = {
+        pop_environment_tolerance = 0.2
+    }
+}

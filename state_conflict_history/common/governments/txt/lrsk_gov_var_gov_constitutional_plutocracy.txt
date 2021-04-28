@@ -1,0 +1,37 @@
+lrsk_gov_var_gov_constitutional_plutocracy = {
+    ruler_title = LRSK_GOV_VAR_RT_PROP_PRES
+    ruler_title_female = LRSK_GOV_VAR_RT_PROP_PRES_FEMALE
+    election_candidates = {
+        modifier = {
+            factor = 0
+            leader_class = admiral
+        }
+        modifier = {
+            factor = 0
+            leader_class = general
+        }
+    }
+    possible = {
+        OR = {
+            has_authority = auth_democratic
+            has_authority = auth_direct_democratic
+            has_authority = auth_strict_democratic
+            has_authority = auth_democratic_dictatorship
+            has_authority = auth_dem_dict_dummy
+        }
+        has_valid_civic = civic_meritocracy
+        has_valid_civic = civic_merchant_guilds
+        NOR = {
+            has_ethic = ethic_egalitarian
+            has_ethic = ethic_fanatic_egalitarian
+        }
+        NOR = {
+            text = civic_tooltip_not_pluralist
+            value = ethic_pluralist
+            value = ethic_fanatic_pluralist
+        }
+    }
+    weight = {
+        base = 1800
+    }
+}

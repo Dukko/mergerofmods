@@ -1,0 +1,33 @@
+can_be_part_of_galactic_community = {
+    custom_tooltip = {
+        fail_text = "community_default_failtext"
+        OR = {
+            is_country_type = default
+            is_country_type = default_ev
+        }
+    }
+    custom_tooltip = {
+        fail_text = "community_homicidal_failtext"
+        NOR = {
+            has_civic = civic_fanatic_purifiers
+            has_civic = civic_hive_devouring_swarm
+            has_civic = civic_machine_terminator
+        has_country_flag = dark_side
+        }
+    }
+    custom_tooltip = {
+        fail_text = "community_declared_crisis_failtext"
+        has_been_declared_crisis = no
+    }
+    custom_tooltip = {
+        fail_text = "community_declared_crisis_failtext"
+        OR = {
+            NOT = {
+                exists = overlord
+            }
+            overlord = {
+                has_been_declared_crisis = no
+            }
+        }
+    }
+}

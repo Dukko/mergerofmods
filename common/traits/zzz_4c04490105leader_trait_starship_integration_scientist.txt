@@ -1,0 +1,18 @@
+leader_trait_starship_integration_scientist = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/trait_starship_integration.dds"
+    modifier = {
+        science_ship_survey_speed = 0.25
+        ship_evasion_mult = 0.25
+        ships_upkeep_mult = -0.1
+    }
+    leader_trait = {
+        scientist
+    }
+    leader_class = {
+        scientist
+    }
+    initial = no
+    randomized = no
+}

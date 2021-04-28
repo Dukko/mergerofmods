@@ -1,0 +1,66 @@
+ap_transcendence = {
+    on_enabled = {
+        custom_tooltip = "transcendence_tooltip"
+        hidden_effect = {
+            country_event = {
+                id = utopia.2650
+            }
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "synthetic_empire_psionic_ascension"
+            Or = {
+                NOT = {
+                    has_trait = trait_mechanical
+                }
+                esap_has_bio_cyber_psi_1 = yes
+            }
+        }
+        custom_tooltip = {
+            fail_text = "hive_mind_biological_ascension_only1"
+            NOT = {
+                has_authority = auth_hive_mind
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_ascension_perks_2"
+            num_ascension_perks > 1
+        }
+        custom_tooltip = {
+            fail_text = "requires_ap_mind_over_matter"
+            has_ascension_perk = ap_mind_over_matter
+        }
+        custom_tooltip = {
+            fail_text = "ap_esap_ascension_path_t2_req_1"
+            Or = {
+                Not = {
+                    esap_has_bio_cyber_psi_1 = yes
+                }
+                esap_has_bio_cyber_psi_2 = yes
+            }
+        }
+    }
+    modifier = {
+        intel_decryption_add = 2
+        intel_encryption_add = 2
+        add_base_country_intel = 10
+    }
+    potential = {
+        host_has_dlc = "Utopia"
+        NOT = {
+            has_ascension_perk = ap_transcendence
+            has_authority = "auth_machine_intelligence"
+        }
+        Or = {
+            And = {
+                is_mechanical_empire = no
+                is_cyborg_empire = no
+            }
+            esap_has_bio_cyber_psi_1 = yes
+        }
+    }
+    ai_weight = {
+        factor = 1000
+    }
+}

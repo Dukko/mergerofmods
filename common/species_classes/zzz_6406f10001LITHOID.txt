@@ -1,0 +1,94 @@
+LITHOID = {
+    archetype = LITHOID
+    playable = {
+        has_lithoids = yes
+    }
+    possible = {
+        authority = {
+            NOT = {
+                value = auth_machine_intelligence
+                text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE
+            }
+        }
+        origin = {
+            NOR = {
+                value = origin_sterile
+                value = origin_gas_dependency
+            }
+        }
+    }
+    possible_secondary = {
+        OR = {
+            origin = {
+                NOR = {
+                    value = origin_dimorphic
+                    value = origin_dimorphic_sexual
+                    value = origin_instars
+                }
+            }
+            species = {
+                value = LITHOID
+            }
+        }
+    }
+    randomized = {
+        has_lithoids = yes
+    }
+    gender = no
+    custom_portraits = {
+        randomized = {
+            has_lithoids = yes
+        }
+        playable = {
+            has_lithoids = yes
+        }
+        portraits = {
+            "lith1"
+            "lith2"
+            "lith3"
+            "lith4"
+            "lith5"
+            "lith6"
+            "lith7"
+            "lith8"
+            "lith9"
+            "lith10"
+            "lith11"
+            "lith12"
+            "lith13"
+            "lith14"
+            "lith15"
+        }
+    }
+    custom_portraits = {
+        trigger = {
+            has_lithoids = yes
+        }
+        randomized = {
+            has_lithoids = yes
+        }
+        portraits = {
+            "lith16"
+            "lith17"
+            "lith19"
+            "lithbaol"
+        }
+    }
+    custom_portraits = {
+        trigger = {
+            always = yes
+        }
+        portraits = {
+            "silicoid_01"
+            "silicoid_b_01"
+            "silicoid_02"
+            "silicoid_03"
+            "silicoid_04"
+        }
+    }
+    graphical_culture = lithoid_01
+    move_pop_sound_effect = "reptilian_pops_move"
+    resources = {
+    }
+    trait = "trait_lithoid"
+}

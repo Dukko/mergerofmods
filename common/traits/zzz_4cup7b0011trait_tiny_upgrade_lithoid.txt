@@ -1,0 +1,45 @@
+trait_tiny_upgrade_lithoid = {
+    cost = 4
+    opposites = {
+        "trait_big_lithoid"
+        "trait_tiny_lithoid"
+    }
+    initial = no
+    randomized = no
+    icon = "gfx/interface/icons/traits/trait_tiny.dds"
+    allowed_archetypes = {
+        LITHOID
+    }
+    custom_tooltip = TRAIT_TINY_EFFECT
+    species_potential_add = {
+        has_trait = trait_small_lithoid
+        exists = from
+        from = {
+            OR = {
+                is_ai = yes
+                NOT = {
+                    has_technology = tech_genetic_resequencing
+                }
+            }
+        }
+    }
+    ai_weight = {
+        weight = 100
+        modifier = {
+            factor = 0.25
+            is_materialist = yes
+            root = {
+                NOT = {
+                    has_citizenship_type = {
+                        country = from
+                        type = citizenship_slavery
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 4
+            has_valid_civic = civic_environmentalist
+        }
+    }
+}

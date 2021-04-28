@@ -1,0 +1,54 @@
+tech_global_production_strategy = {
+    cost = @tier3cost1
+    area = society
+    tier = 3
+    category = {
+        good_trading
+    }
+    prerequisites = {
+        "tech_alloys_1"
+        "tech_luxuries_1"
+        "tech_colonial_centralization"
+    }
+    weight = @tier3weight1
+    weight_modifier = {
+        factor = 1.5
+        modifier = {
+            factor = 0
+            NOR = {
+                has_technology = "tech_luxuries_1"
+                country_uses_consumer_goods = no
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_good_trading"
+            }
+        }
+        modifier = {
+            factor = 2
+            has_policy_flag = economic_stance_market
+        }
+    }
+        modifier = {
+            factor = 2
+            has_valid_civic = civic_manufactory
+    }
+    ai_weight = {
+        weight = 40
+        factor = 25
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_good_trading"
+            }
+        }
+                modifier = {
+            factor = 500
+            has_technology = tech_energy_torpedoes_2
+        }
+    }
+}

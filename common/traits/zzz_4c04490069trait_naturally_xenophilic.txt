@@ -1,0 +1,36 @@
+trait_naturally_xenophilic = {
+    cost = 1
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_naturally_xenophobic"
+        "trait_hive_mind"
+        "trait_necrophage"
+        "trait_parasitoid"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    modifier = {
+        pop_ethic_xenophile_attraction_mult = 0.6
+        pop_ethic_xenophobe_attraction_mult = -0.95
+    }
+    ai_weight = {
+        weight = 100
+        modifier = {
+            factor = 0
+            NAND = {
+                is_xenophile = yes
+                is_egalitarian = no
+                OR = {
+                    is_authoritarian = yes
+                    is_same_species = root
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            has_ethic = ethic_fanatic_xenophile
+        }
+    }
+}

@@ -1,0 +1,61 @@
+namespace = utopia
+namespace = akx
+country_event = {
+    id = utopia.4001
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        from = {
+            OR = {
+                is_megastructure_type = dyson_sphere_1
+                is_megastructure_type = dyson_sphere_1_a_star
+                is_megastructure_type = dyson_sphere_1_b_star
+                is_megastructure_type = dyson_sphere_1_f_star
+                is_megastructure_type = dyson_sphere_1_g_star
+                is_megastructure_type = dyson_sphere_1_k_star
+                is_megastructure_type = dyson_sphere_1_m_giant_star
+                is_megastructure_type = dyson_sphere_1_m_star
+            }
+        }
+    }
+    immediate = {
+        fromfrom = {
+            save_event_target_as = dyson_system
+        }
+        every_relation = {
+            limit = {
+                is_ai = no
+                has_communications = root
+                OR = {
+                    has_intel_level = {
+                        who = root
+                        category = economy
+                        level >= 1
+                    }
+                    has_intel_level = {
+                        who = root
+                        category = technology
+                        level >= 1
+                    }
+                }
+            }
+            country_event = {
+                id = utopia.4002
+            }
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_country_flag = started_first_dyson_sphere
+                }
+            }
+            set_country_flag = started_first_dyson_sphere
+        }
+        else_if = {
+            limit = {
+                has_country_flag = started_first_dyson_sphere
+            }
+            set_country_flag = started_first_dyson_sphere_2
+        }
+    }
+}

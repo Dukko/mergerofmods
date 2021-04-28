@@ -1,0 +1,3 @@
+ver_puppet_state = {
+    planet_stability_add = -10
+}

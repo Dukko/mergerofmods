@@ -1,0 +1,53 @@
+lrsk_gov_var_civic_workers_councils = {
+    potential = {
+        ethics = {
+            NOT = {
+                value = ethic_gestalt_consciousness
+            }
+        }
+        authority = {
+            NOR = {
+                value = auth_corporate
+                value = auth_corporate_imperial
+            }
+        }
+    }
+    description = "civic_tooltip_lrsk_gov_var_civic_workers_councils_effects"
+    possible = {
+        ethics = {
+            OR = {
+                text = civic_tooltip_egalitarian
+                value = ethic_egalitarian
+                value = ethic_fanatic_egalitarian
+            }
+            NOR = {
+                text = civic_tooltip_not_capitalism
+                value = ethic_capitalism
+                value = ethic_fanatic_capitalism
+            }
+            NOR = {
+                text = civic_tooltip_not_elitist
+                value = ethic_elitist
+                value = ethic_fanatic_elitist
+            }
+        }
+        civics = {
+            NOR = {
+                value = lrsk_gov_var_civic_enlightened_liberalism
+                value = civic_shared_burden
+            }
+        }
+    }
+    random_weight = {
+        base = 5
+    }
+    modifier = {
+        planet_building_build_speed_mult = 0.1
+        starbase_building_build_speed_mult = 0.1
+        starbase_shipyard_build_speed_mult = 0.1
+        pop_cat_worker_happiness = 0.05
+        pop_cat_worker_political_power = 0.5
+        pop_cat_specialist_happiness = 0.025
+        pop_cat_specialist_political_power = 0.25
+    }
+}

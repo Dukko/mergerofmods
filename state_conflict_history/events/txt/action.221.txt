@@ -1,0 +1,57 @@
+namespace = action
+country_event = {
+    id = action.221
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        random_list = {
+            900 = {
+            }
+            125 = {
+                country_event = {
+                    id = federations2.50
+                }
+            }
+            125 = {
+                country_event = {
+                    id = vfef.500
+                }
+            }
+            125 = {
+                country_event = {
+                    id = federations2.100
+                }
+            }
+            75 = {
+                country_event = {
+                    id = envoy_events.1
+                }
+            }
+            100 = {
+                country_event = {
+                    id = envoy_events.3
+                }
+            }
+            50 = {
+                country_event = {
+                    id = envoy_events.4
+                }
+            }
+            75 = {
+                country_event = {
+                    id = envoy_events.5
+                }
+            }
+            75 = {
+                country_event = {
+                    id = envoy_events.7
+                }
+            }
+            20 = {
+                country_event = {
+                    id = envoy_events.15
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+trait_ruler_hobby_agrarian_expert = {
+    cost = 0
+    leader_trait = {
+        ruler
+    }
+    leader_class = {
+        ruler
+    }
+    self_modifier = {
+    }
+    modifier = {
+        country_base_food_produces_add = 10
+        country_food_produces_mult = 0.15
+        planet_farmers_food_produces_add = 0.75
+    }
+    initial = no
+    modification = no
+    randomized = no
+}

@@ -1,0 +1,283 @@
+namespace = unrest
+country_event = {
+    id = unrest.4210
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        has_country_flag = standard_unrest_rebels
+    }
+    immediate = {
+        this = {
+            save_event_target_as = cc_sec_rebels
+        }
+        From = {
+            remove_planet_flag = revolt_in_progress
+            save_event_target_as = nationalist_revolt_planet
+            solar_system = {
+                starbase = {
+                    set_owner = root
+                }
+                add_claims = {
+                    who = from.owner
+                    num_of_claims = 1
+                    show_notification = no
+                }
+            }
+        }
+        create_leader = {
+            class = ruler
+            species = owner_main_species
+            name = random
+            skill = 2
+            traits = {
+            }
+        }
+        assign_leader = last_created_leader
+        ruler = {
+            add_random_leader_trait = yes
+        }
+        from.owner = {
+            save_event_target_as = rebelled_against
+            country_event = {
+                id = unrest.4211
+            }
+        }
+        from = {
+            if = {
+                limit = {
+                    has_modifier = free_at_last
+                }
+                remove_modifier = free_at_last
+            }
+            if = {
+                limit = {
+                    has_modifier = insurgents_free
+                }
+                remove_modifier = insurgents_free
+            }
+            if = {
+                limit = {
+                    has_modifier = slaves_defected
+                }
+                remove_modifier = slaves_defected
+            }
+            add_modifier = {
+                modifier = insurgents_free
+                days = 7200
+            }
+                }
+        if = {
+            limit = {
+                from = {
+                    has_planet_flag = nationalist_revolt
+                }
+            }
+            from = {
+                remove_planet_flag = nationalist_revolt
+            }
+            if = {
+                limit = {
+                    any_country = {
+                        is_country_type = default
+                        has_communications = ROOT
+                    is_same_species = root
+                    is_mechanical_empire = yes
+                        NOT = {
+                            has_country_flag = ccrebel_has_existed_5_years
+                        }
+                        NOR = {
+                            is_same_value = from.owner
+                            is_same_value = root
+                            is_same_empire = root
+                            has_country_flag = cc_rebels_merging
+                            would_join_war = {
+                                attacker = root
+                                defender = from.owner
+                                side = from.owner
+                            }
+                        }
+                     }
+                }
+            random_country = {
+                limit = {
+                        is_country_type = default
+                        has_communications = ROOT
+                    is_same_species = root
+                    is_mechanical_empire = yes
+                        NOT = {
+                            has_country_flag = ccrebel_has_existed_5_years
+                        }
+                        NOR = {
+                            is_same_value = from.owner
+                            is_same_value = root
+                            is_same_empire = root
+                            has_country_flag = cc_rebels_merging
+                            would_join_war = {
+                                attacker = root
+                                defender = from.owner
+                                side = from.owner
+                            }
+                        }
+                    }
+                    save_event_target_as = fatherland
+                }
+            }
+            else = {
+                if = {
+                    limit = {
+                        any_country = {
+                            is_country_type = default
+                            is_same_species = root
+                            has_communications = ROOT
+                            from = {
+                                is_original_owner = prev
+                            }
+                            NOR = {
+                                is_same_value = from.owner
+                                would_join_war = {
+                                    attacker = root
+                                    defender = from.owner
+                                    side = from.owner
+                                }
+                            }
+                        }
+                    }
+                    random_country = {
+                        limit = {
+                            from = {
+                                is_original_owner = prev
+                            }
+                        }
+                        save_event_target_as = fatherland
+                    }
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            exists = event_target:fatherland
+                        }
+                        any_country = {
+                            has_communications = ROOT
+                            is_country_type = default
+                            is_same_species = root
+                            NOR = {
+                                is_same_value = from.owner
+                                would_join_war = {
+                                    attacker = root
+                                    defender = from.owner
+                                    side = from.owner
+                                }
+                                is_same_value = root
+                                is_same_empire = root
+                                has_country_flag = cc_rebels_merging
+                                has_country_flag = cc_chain_revolt
+                            }
+                        }
+                    }
+                    random_country = {
+                        limit = {
+                            has_communications = ROOT
+                            is_country_type = default
+                            is_same_species = root
+                            any_owned_planet = {
+                                distance = {
+                                    source = from
+                                    max_distance <= 150
+                                    min_distance >= 0
+                                }
+                            }
+                            NOR = {
+                                is_same_value = from.owner
+                                would_join_war = {
+                                    attacker = root
+                                    defender = from.owner
+                                    side = from.owner
+                                }
+                                is_same_value = root
+                                is_same_empire = root
+                                has_country_flag = cc_rebels_merging
+                                has_country_flag = cc_chain_revolt
+                            }
+                        }
+                        save_event_target_as = fatherland
+                    }
+                }
+                else_if = {
+                    limit = {
+                        NOT = {
+                            exists = event_target:fatherland
+                        }
+                    }
+                    random_country = {
+                        limit = {
+                            has_communications = ROOT
+                            is_country_type = default
+                            is_same_species = root
+                            any_owned_planet = {
+                                distance = {
+                                    source = from
+                                    max_distance <= 150
+                                    min_distance >= 0
+                                }
+                            }
+                            NOR = {
+                                is_same_value = from.owner
+                                would_join_war = {
+                                    attacker = root
+                                    defender = from.owner
+                                    side = from.owner
+                                }
+                                is_same_value = root
+                                is_same_empire = root
+                                has_country_flag = cc_rebels_merging
+                    }
+                }
+                save_event_target_as = fatherland
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    exists = event_target:fatherland
+                }
+                if = {
+                    limit = {
+                        event_target:fatherland = {
+                            OR = {
+                                NOT = {
+                                    has_country_flag = ccrebel_has_existed_5_years
+                                }
+                                is_at_war_with = from.owner
+                                has_federation = yes
+                            }
+                        }
+                    }
+                    set_timed_country_flag = {
+                        flag = ccrebel_dont_declare_war
+                        days = 5
+                    }
+                    set_country_flag = cc_rebels_merging
+            event_target:fatherland = {
+                country_event = {
+                    id = unrest.4220
+                    days = 5
+                }
+            }
+                }
+                else = {
+                    event_target:fatherland = {
+                        country_event = {
+                            id = ccrebel_wg_script.10
+                            days = 5
+                        }
+                    }
+                }
+            }
+        }
+        else = {
+            from = {
+                remove_planet_flag = secessionist_revolt
+            }
+        }
+    }
+}

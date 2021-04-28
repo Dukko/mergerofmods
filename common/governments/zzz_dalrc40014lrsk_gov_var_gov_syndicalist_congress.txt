@@ -1,0 +1,32 @@
+lrsk_gov_var_gov_syndicalist_congress = {
+    ruler_title = LRSK_GOV_VAR_RT_GENERAL_SECRETARY
+    possible = {
+        has_valid_civic = lrsk_gov_var_civic_workers_councils
+        OR = {
+            has_authority = auth_democratic
+            has_authority = auth_direct_democratic
+            has_authority = auth_strict_democratic
+            has_authority = auth_democratic_dictatorship
+            has_authority = auth_dem_dict_dummy
+            has_ethic = ethic_socialism
+            has_ethic = ethic_fanatic_socialism
+        }
+    }
+    election_candidates = {
+        modifier = {
+            add = 500
+            OR = {
+                leader_class = governor
+            }
+        }
+        modifier = {
+            add = 100
+            OR = {
+                leader_class = scientist
+            }
+        }
+    }
+    weight = {
+        base = 1000
+    }
+}

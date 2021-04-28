@@ -1,0 +1,38 @@
+can_generate_leader_from_pop = {
+    has_citizenship_rights = yes
+    NOR = {
+        has_trait = trait_syncretic_proles
+        has_trait = trait_nerve_stapled
+        has_trait = trait_subsapient_form
+        has_trait = trait_living_architecture
+    }
+    NOT = {
+        has_trait = trait_slave_gene
+    }
+    NOT = {
+        root = {
+            has_origin = origin_hive_overmind
+        }
+    }
+    OR = {
+        is_robot_pop = no
+        root = {
+            has_technology = tech_synthetic_leaders
+        }
+        root = {
+            has_authority = auth_machine_intelligence
+        }
+        root = {
+            is_mechanical_empire = yes
+        }
+    }
+    OR = {
+        is_same_species = root
+        root = {
+            NAND = {
+                has_origin = origin_necrophage
+                has_trait = trait_necrophage
+            }
+        }
+    }
+}

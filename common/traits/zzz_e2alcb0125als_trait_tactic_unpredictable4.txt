@@ -1,0 +1,18 @@
+als_trait_tactic_unpredictable4 = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/als_trait_tactic_unpredictable.dds"
+    modifier = {
+        ship_accuracy_add = 10
+        ship_tracking_add = 10
+    }
+    custom_tooltip = als_trait_tactic_unpredictable.tooltip_actived
+    initial = no
+    randomized = no
+    leader_trait = {
+        admiral
+    }
+    leader_class = {
+        admiral
+    }
+}

@@ -1,0 +1,26 @@
+trait_witness_ruler_lv9 = {
+    cost = 0
+    leader_trait = {
+        ruler
+    }
+    leader_class = {
+        ruler
+    }
+    self_modifier = {
+    }
+    modifier = {
+        country_admin_cap_mult = 0.075
+        edicts_cost_mult = -0.075
+        diplomacy_upkeep_mult = -0.075
+        decisions_cost_mult = -0.075
+        country_claim_influence_cost_mult = -0.075
+        country_starbase_influence_cost_mult = -0.075
+        leader_cost_empire_size_mult = -0.25
+        country_naval_cap_mult = 0.15
+        country_trust_growth = 0.2
+        country_leader_pool_size = 2
+    }
+    initial = no
+    modification = no
+    randomized = no
+}

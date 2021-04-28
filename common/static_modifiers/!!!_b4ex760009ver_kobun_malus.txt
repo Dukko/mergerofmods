@@ -1,0 +1,3 @@
+ver_kobun_malus = {
+    planet_crime_add = 50
+}

@@ -1,0 +1,21 @@
+civic_private_prospectors = {
+    potential = {
+        OR = {
+        authority = {
+            OR = {
+                value = auth_corporate
+                value = auth_corporate_imperial
+            }
+            civics = {
+                value = civic_galactic_sovereign_megacorp
+            }
+        }
+    }
+    random_weight = {
+        base = 5
+    }
+    modifier = {
+        country_admin_cap_add = 20
+    }
+    description = "civic_tooltip_private_prospectors_effects"
+}

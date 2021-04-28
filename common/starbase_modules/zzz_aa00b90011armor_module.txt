@@ -1,0 +1,39 @@
+armor_module = {
+    section = "ANCHORAGE_STARBASE_SECTION"
+    icon = "GFX_starbase_armor_module"
+    construction_days = 180
+    resources = {
+        category = starbase_modules
+        cost = {
+            alloys = 75
+        }
+        upkeep = {
+            alloys = 1
+        }
+    }
+    station_modifier = {
+        ship_armor_add = 3000
+    }
+    ai_build_at_chokepoint = yes
+    ai_build_outside_chokepoint = yes
+    potential = {
+        has_starbase_size >= starbase_starport
+    }
+    ai_weight = {
+        weight = 20
+        modifier = {
+            factor = 0.5
+            count_starbase_modules = {
+                type = armor_module
+                count > 10
+            }
+        }
+        modifier = {
+            factor = 0
+            count_starbase_modules = {
+                type = armor_module
+                count >= 15
+            }
+        }
+    }
+}

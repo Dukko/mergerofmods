@@ -1,0 +1,113 @@
+@giga_district_upkeep_energy_medium = 3
+district_giga_planet_wind = {
+    base_buildtime = @giga_planet_district_buildtime
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        uses_district_set = giga_planet
+        has_planet_flag = giga_hab_gas_giant
+    }
+    potential = {
+        uses_district_set = giga_planet
+        has_planet_flag = giga_hab_gas_giant
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @giga_planet_cost
+        }
+        upkeep = {
+            energy = @giga_district_upkeep_energy_medium
+        }
+    }
+    conversion_ratio = 0.5
+    convert_to = {
+        district_giga_planet_city
+        district_giga_planet_hive
+        district_giga_planet_nexus
+    }
+    triggered_planet_modifier = {
+        modifier = {
+            planet_housing_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_technician_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_fallen_empire = yes
+            }
+        }
+        modifier = {
+            job_fe_acolyte_generator_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_technician_drone_add = 3
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire_spiritualist = no
+            }
+        }
+        text = "job_technician_effect_desc"
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_fallen_empire_spiritualist = yes
+            }
+        }
+        text = "job_fe_acolyte_generator_effect_desc"
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = "job_technician_drone_effect_desc"
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 250
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 200
+                }
+            }
+        }
+    }
+    ai_resource_production = {
+        energy = 1
+        trigger = {
+            always = yes
+        }
+    }
+}

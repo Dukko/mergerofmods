@@ -1,0 +1,47 @@
+@regen = 0.5
+strike_craft_component_template = {
+    key = "GG_STRIKE_CRAFT"
+    size = LARGE
+    entity = "gatebuilder_01_strikecraft_entity"
+    resources = {
+        cost = {
+            alloys = 60
+        }
+    }
+    prerequisites = {
+        tech_repeatable_nanite_technology_insight
+    }
+    power = -60
+    hidden = yes
+    count = 10
+    regeneration_per_day = @regen
+    launch_time = 1
+    damage = {
+        min = 19
+        max = 21
+    }
+    cooldown = 8
+    range = 20
+    engagement_range = 120
+    accuracy = 1
+    tracking = 1
+    health = 100
+    armor = 50
+    shield = 50
+    evasion = 0.8
+    speed = 400
+    rotation_speed = 0.2
+    acceleration = 0.5
+    shield_damage = 1
+    shield_penetration = 1
+    armor_penetration = 0.66
+    ship_behavior = "bombers_behavior"
+    weapon_type = instant
+    projectile_gfx = "strike_craft_laser_3"
+    component_set = "AI_STRIKE_CRAFT_1"
+    icon = "GFX_ship_part_strike_craft_scout_1"
+    icon_frame = 1
+    tags = {
+        weapon_type_strike_craft
+    }
+}

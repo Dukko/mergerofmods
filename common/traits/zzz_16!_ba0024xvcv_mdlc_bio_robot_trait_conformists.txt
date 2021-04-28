@@ -1,0 +1,21 @@
+xvcv_mdlc_bio_robot_trait_conformists = {
+    cost = 2
+    allowed_archetypes = {
+        XVCV_MDLC_BIO_ROBOT
+    }
+    icon = "gfx/interface/icons/traits/trait_conformists.dds"
+    species_potential_add = {
+        exists = from
+        from = {
+            NOT = {
+                has_authority = auth_machine_intelligence
+            }
+        }
+    }
+    modifier = {
+        pop_government_ethic_attraction = 0.3
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

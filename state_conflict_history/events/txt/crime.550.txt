@@ -1,0 +1,29 @@
+namespace = crime
+planet_event = {
+    id = crime.550
+    title = crime.550.name
+    desc = crime.550.desc
+    picture = GFX_evt_glitchy_matrix
+    show_sound = event_ground_battle
+    location = root
+    pre_triggers = {
+        has_owner = yes
+    }
+    trigger = {
+        has_modifier = drone_corruption
+    }
+    is_triggered_only = yes
+    immediate = {
+        add_planet_devastation = 15
+        set_timed_planet_flag = {
+            flag = planet_crime_flag
+            days = 3600
+        }
+    }
+    option = {
+        name = crime.550.a
+        tooltip = {
+            add_planet_devastation = 15
+        }
+    }
+}

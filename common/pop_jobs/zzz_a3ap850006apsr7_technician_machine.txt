@@ -1,0 +1,88 @@
+apsr7_technician_machine = {
+    category = simple_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = apsr7_building_part2
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        drone_job_check_trigger = yes
+    }
+    resources = {
+        category = apsr7_planet_technician_machine
+        produces = {
+            energy = 7
+            apsr_knowledge = 0.075
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_deposit = apsr_relic_cube_deposit
+                }
+            }
+            energy = 3.5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr7_advanced_1
+                }
+            }
+            energy = 2.5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr7_advanced_2
+                }
+            }
+            energy = 2.5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr7_advanced_3
+                }
+            }
+            energy = 2.5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr7_advanced_4
+                }
+            }
+            energy = 2.5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr7_advanced_5
+                }
+            }
+            energy = 2.5
+        }
+    }
+    weight = {
+        weight = 100
+        modifier = {
+            factor = 2
+            OR = {
+                has_trait = trait_robot_superconductive
+                has_trait = trait_ingenious
+            }
+        }
+        modifier = {
+            factor = 1.1
+            exists = owner
+            years_passed < 1
+            owner = {
+                has_valid_civic = civic_machine_assimilator
+            }
+            has_trait = trait_cybernetic
+        }
+    }
+}

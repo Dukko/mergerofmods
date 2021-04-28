@@ -1,0 +1,121 @@
+trait_charismatic = {
+    cost = 2
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_repugnant"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    custom_tooltip = TRAIT_CHARISMATIC_EFFECT
+    ai_weight = {
+        weight = 150
+        modifier = {
+            factor = 4
+            has_valid_civic = civic_media_conglomerate
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = ap_xeno_compatibility
+        }
+        modifier = {
+            factor = 2
+            is_xenophile = yes
+        }
+        modifier = {
+            factor = 0.25
+            root = {
+                NOR = {
+                    has_trait = trait_thrifty
+                    has_trait = trait_traditional
+                }
+            }
+            any_owned_species = {
+                has_citizenship_type = {
+                    country = prev
+                    type = citizenship_full
+                }
+                OR = {
+                    has_trait = trait_charismatic
+                    has_trait = trait_robot_domestic_protocols
+                    has_trait = trait_robot_emotion_emulators
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            root = {
+                OR = {
+                    AND = {
+                        OR = {
+                            has_trait = trait_industrious
+                            has_trait = trait_ingenious
+                            has_trait = trait_agrarian
+                        }
+                        NOT = {
+                            prev = {
+                                any_owned_species = {
+                                    has_citizenship_type = {
+                                        country = prev
+                                        type = citizenship_slavery
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    AND = {
+                        NOT = {
+                            has_citizenship_type = {
+                                country = prev
+                                type = citizenship_slavery
+                            }
+                        }
+                        OR = {
+                            has_trait = trait_thrifty
+                            has_trait = trait_intelligent
+                            has_trait = trait_traditional
+                        }
+                    }
+                }
+            }
+            any_owned_species = {
+                NOR = {
+                    has_trait = trait_industrious
+                    has_trait = trait_ingenious
+                    has_trait = trait_agrarian
+                    AND = {
+                        NOT = {
+                            has_citizenship_type = {
+                                country = prev
+                                type = citizenship_slavery
+                            }
+                        }
+                        OR = {
+                            has_trait = trait_thrifty
+                            has_trait = trait_intelligent
+                            has_trait = trait_traditional
+                        }
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 4
+            exists = root.home_planet
+            root.home_planet = {
+                has_designation = col_resort
+                is_owned_by = prev
+            }
+        }
+        modifier = {
+            factor = 0
+            root = {
+                has_citizenship_type = {
+                    country = prev
+                    type = citizenship_organic_trophy
+                }
+            }
+        }
+    }
+}

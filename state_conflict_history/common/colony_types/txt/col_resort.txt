@@ -1,0 +1,12 @@
+col_resort = {
+    icon = 14
+    potential = {
+        has_modifier = resort_colony
+    }
+    planet_modifier = {
+        planet_housing_add = 10
+    }
+    weight_modifier = {
+        base = 1000
+    }
+}

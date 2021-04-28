@@ -1,0 +1,94 @@
+@giga_district_upkeep_energy_heavy = 4
+@giga_district_upkeep_alloys = 1
+district_giga_planet_exotic = {
+    base_buildtime = @giga_planet_district_buildtime
+    is_capped_by_modifier = yes
+    show_on_uncolonized = {
+        uses_district_set = giga_planet
+        has_planet_flag = giga_hab_gas_giant
+    }
+    potential = {
+        uses_district_set = giga_planet
+        has_planet_flag = giga_hab_gas_giant
+    }
+    conversion_ratio = 0.5
+    convert_to = {
+        district_giga_planet_city
+        district_giga_planet_hive
+        district_giga_planet_nexus
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @giga_planet_cost
+            alloys = @giga_planet_sr
+        }
+        upkeep = {
+            energy = @giga_district_upkeep_energy_heavy
+            alloys = @giga_district_upkeep_alloys
+        }
+    }
+    triggered_planet_modifier = {
+        modifier = {
+            planet_housing_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_giga_gas_harvester_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_giga_gas_harvester_drone_add = 3
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        text = "job_giga_gas_harvester_effect_desc"
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = "job_giga_gas_harvester_drone_effect_desc"
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 250
+            owner = {
+                has_monthly_income = {
+                    resource = exotic_gases
+                    value < 20
+                }
+            }
+        }
+    }
+    ai_resource_production = {
+        exotic_gases = 10
+        trigger = {
+            always = yes
+        }
+    }
+}

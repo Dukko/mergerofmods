@@ -1,0 +1,19 @@
+gle_trait_miner_lv3 = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/gle_trait_miner_lv3.dds"
+    modifier = {
+        job_miner_add = 1
+        job_miner_per_pop = 0.05
+        planet_miners_minerals_produces_add = 0.5
+    }
+    sorting_priority = 10
+    initial = no
+    randomized = no
+    leader_trait = {
+        governor
+    }
+    leader_class = {
+        governor
+    }
+}

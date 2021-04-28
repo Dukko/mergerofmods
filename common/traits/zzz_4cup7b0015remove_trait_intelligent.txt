@@ -1,0 +1,35 @@
+remove_trait_intelligent = {
+    cost = -2
+    initial = no
+    randomized = no
+    opposites = {
+        "trait_erudite_upgrade"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    icon = "gfx/interface/icons/traits/trait_slow_learners.dds"
+    species_potential_add = {
+        has_trait = trait_intelligent
+        from = {
+            is_ai = yes
+            has_technology = tech_genetic_resequencing
+        }
+    }
+    ai_weight = {
+        weight = 6000
+        modifier = {
+            factor = 0
+            root = {
+                NAND = {
+                    has_species_flag = remove_intelligent@prev
+                    has_citizenship_type = {
+                        country = prev
+                        type = citizenship_slavery
+                    }
+                }
+            }
+        }
+    }
+}

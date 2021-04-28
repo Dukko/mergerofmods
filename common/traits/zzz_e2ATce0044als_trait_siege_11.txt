@@ -1,0 +1,17 @@
+als_trait_siege_11 = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/als_trait_siege_11.dds"
+    sorting_priority = -9
+    modifier = {
+        ship_orbital_bombardment_mult = 0.75
+    }
+    initial = no
+    randomized = no
+    leader_trait = {
+        admiral
+    }
+    leader_class = {
+        admiral
+    }
+}

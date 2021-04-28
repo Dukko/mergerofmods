@@ -1,0 +1,37 @@
+trait_big_lithoid = {
+    cost = -4
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_small_lithoid"
+        "trait_tiny_lithoid"
+        "trait_huge_lithoid"
+    }
+    icon = "gfx/interface/icons/traits/trait_big.dds"
+    allowed_archetypes = {
+        LITHOID
+    }
+    custom_tooltip = TRAIT_BIG_LITHOID_EFFECT
+    modifier = {
+        planet_pops_minerals_upkeep_mult = 0.4
+        pop_housing_usage_mult = 0.5
+        pop_growth_speed = -0.05
+        army_damage_mult = 0.4
+        army_health = 0.3
+        planet_jobs_worker_produces_mult = 0.1
+        leader_age = 40
+    }
+    slave_cost = {
+        energy = -150
+    }
+    ai_weight = {
+        weight = 800
+        modifier = {
+            factor = 0
+            root = {
+                NOT = {
+                    has_species_flag = make_big@prev
+                }
+            }
+        }
+    }
+}

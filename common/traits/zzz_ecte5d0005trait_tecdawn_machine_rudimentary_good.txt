@@ -1,0 +1,17 @@
+trait_tecdawn_machine_rudimentary_good = {
+    icon = gfx/interface/icons/traits/trait_robotic_1.dds
+    cost = 1
+    initial = no
+    sapient = no
+    modifier = {
+        planet_jobs_engineering_research_produces_mult = 0.05
+        planet_jobs_energy_produces_mult = 0.1
+    }
+    allowed_archetypes = {
+        ROBOT
+        MACHINE
+    }
+    species_potential_add = {
+        always = no
+    }
+}

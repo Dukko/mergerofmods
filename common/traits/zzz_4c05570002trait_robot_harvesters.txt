@@ -1,0 +1,41 @@
+trait_robot_harvesters = {
+    cost = 2
+    allowed_archetypes = {
+        ROBOT
+    }
+    modifier = {
+        planet_jobs_food_produces_mult = 0.3
+    }
+    ai_weight = {
+        weight = 200
+        modifier = {
+            factor = 0.25
+            is_lithoid_empire = yes
+        }
+        modifier = {
+            factor = 0.25
+            any_owned_species = {
+                OR = {
+                    has_trait = trait_agrarian
+                    has_trait = trait_robot_harvesters
+                }
+            }
+        }
+        modifier = {
+            factor = 0.25
+            root = {
+                OR = {
+                    has_trait = trait_robot_power_drills
+                    has_trait = trait_robot_superconductive
+                    has_trait = trait_robot_logic_engines
+                    has_trait = trait_robot_propaganda_machines
+                    has_trait = trait_robot_domestic_protocols
+                }
+            }
+        }
+        modifier = {
+            factor = 0.25
+            has_valid_civic = civic_agrarian_idyll
+        }
+    }
+}

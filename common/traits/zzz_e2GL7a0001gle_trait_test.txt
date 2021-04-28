@@ -1,0 +1,24 @@
+gle_trait_test = {
+    cost = 0
+    modification = no
+    sorting_priority = 30
+    modifier = {
+        job_artisan_add = 1
+        job_artisan_per_pop = 0.1
+        decisions_cost_mult = -0.5
+        planet_decision_enact_speed_mult = 123
+        planet_building_refund_mult = 11
+        building_time_mult = -0.95
+        planet_researchers_produces_mult = 15
+        planet_amenities_add = 100
+        country_leader_pool_size = 25
+    }
+    initial = no
+    randomized = no
+    leader_trait = {
+        governor
+    }
+    leader_class = {
+        governor
+    }
+}

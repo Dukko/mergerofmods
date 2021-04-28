@@ -1,0 +1,30 @@
+trait_robot_rare_crystal_components = {
+    cost = -2
+    initial = no
+    randomized = no
+    allowed_archetypes = {
+        ROBOT
+        MACHINE
+    }
+    assembling_modifier = {
+        planet_pop_assemblers_rare_crystals_upkeep_add = 0.2
+    }
+    species_potential_add = {
+        exists = from
+        from = {
+            has_country_resource = {
+                type = rare_crystals
+                amount > 0
+            }
+        }
+    }
+    ai_weight = {
+        weight = 800
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = make_robots_rare_crystal_components
+            }
+        }
+    }
+}

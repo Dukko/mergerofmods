@@ -1,0 +1,3 @@
+NShip = {
+    FLEET_BASE_FORMATION_SCALE = 4
+}

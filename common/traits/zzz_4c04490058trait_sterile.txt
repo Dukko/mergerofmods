@@ -1,0 +1,37 @@
+trait_sterile = {
+    cost = -8
+    initial = no
+    randomized = no
+    advanced_trait = yes
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_rapid_breeders"
+        "trait_very_rapid_breeders"
+        "trait_slow_breeders"
+        "trait_very_slow_breeders"
+        "trait_fertile"
+        "trait_fast_metabolism"
+        "trait_very_fast_metabolism"
+        "trait_necroid"
+        "trait_parasitoid"
+        "trait_dimorphic_male"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    modifier = {
+        pop_growth_speed = -1
+    }
+    slave_cost = {
+        energy = -500
+    }
+    species_potential_add = {
+        exists = from
+        from = {
+            has_artificial_wombs = yes
+        }
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

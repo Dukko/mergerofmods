@@ -1,0 +1,42 @@
+namespace = galcom
+country_event = {
+    id = galcom.61
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        set_country_flag = galcom_form_nay
+        every_country = {
+            limit = {
+                NOT = {
+                    is_same_value = root
+                }
+                has_opinion_modifier = {
+                    who = root
+                    modifier = opinion_fellow_galcom_member
+                }
+            }
+            remove_opinion_modifier = {
+                who = root
+                modifier = opinion_fellow_galcom_member
+            }
+            root = {
+                remove_opinion_modifier = {
+                    who = prev
+                    modifier = opinion_fellow_galcom_member
+                }
+            }
+        }
+        if = {
+            limit = {
+                exists = event_target:market_founder_planet
+                NOT = {
+                    any_owned_planet = {
+                        is_same_value = event_target:market_founder_planet
+                    }
+                }
+            }
+            remove_country_flag = has_market_access
+            enable_galactic_market = no
+        }
+    }
+}

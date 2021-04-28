@@ -1,0 +1,20 @@
+pw_leader_trait_general_codex_of_past_ages = {
+    cost = 1
+    modification = no
+    initial = no
+    randomized = no
+    icon = "gfx/interface/icons/traits/leader_traits/leader_trait_intellectual.dds"
+    self_modifier = {
+        species_leader_exp_gain = 0.25
+    }
+    modifier = {
+        army_damage_mult = 0.1
+        army_experience_gain_mult = 0.25
+    }
+    leader_trait = {
+        general
+    }
+    leader_class = {
+        general
+    }
+}

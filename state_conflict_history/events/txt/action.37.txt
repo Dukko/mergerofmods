@@ -1,0 +1,200 @@
+namespace = action
+country_event = {
+    id = action.37
+    title = action.37.name
+    message_desc = action.37.message
+    picture_event_data = {
+        portrait = FROM
+        planet_background = FROM
+        graphical_culture = FROM
+        city_level = FROM
+        room = FROM.ruler
+    }
+    desc = {
+        trigger = {
+            hidden:from = {
+                exists = event_target:ratling_country
+                is_same_empire = event_target:ratling_country
+            }
+        }
+        text = action.37.desc.ketlings
+    }
+    desc = {
+        trigger = {
+            hidden:from = {
+                is_megacorp = yes
+            }
+        }
+        text = action.37.desc.corporate
+    }
+    desc = {
+        trigger = {
+            hidden:from = {
+                switch = {
+                    trigger = has_ai_personality
+                    honorbound_warriors = {
+                        text = action.37.desc.hw
+                    }
+                    ruthless_capitalists = {
+                        text = action.37.desc.rc
+                    }
+                    peaceful_traders = {
+                        text = action.37.desc.pt
+                    }
+                    hegemonic_imperialists = {
+                        text = action.37.desc.hi
+                    }
+                    federation_builders = {
+                        text = action.37.desc.fb
+                    }
+                    xenophobic_isolationists = {
+                        text = action.37.desc.xi
+                    }
+                    hive_mind = {
+                        text = action.37.desc.hm
+                    }
+                    migrating_flock = {
+                        text = action.37.desc.mf
+                    }
+                    evangelising_zealots = {
+                        text = action.37.desc.ez
+                    }
+                    fanatic_purifiers = {
+                        text = action.37.desc.fp
+                    }
+                    democratic_crusaders = {
+                        text = action.37.desc.dc
+                    }
+                    slaving_despots = {
+                        text = action.37.desc.sd
+                    }
+                    decadent_hierarchy = {
+                        text = action.37.desc.dh
+                    }
+                    erudite_explorers = {
+                        text = action.37.desc.ee
+                    }
+                    spiritual_seekers = {
+                        text = action.37.desc.ss
+                    }
+                    harmonious_hierarchy = {
+                        text = action.37.desc.hc
+                    }
+                    fallen_empire_spiritualist = {
+                        text = action.37.desc.hg
+                    }
+                    fallen_empire_materialist = {
+                        text = action.37.desc.kk
+                    }
+                    fallen_empire_xenophobe = {
+                        text = action.37.desc.mi
+                    }
+                    fallen_empire_xenophile = {
+                        text = action.37.desc.eo
+                    }
+                    fallen_empire_machine = {
+                        text = action.37.desc.fme
+                    }
+                    awakened_fallen_empire_machine = {
+                        text = action.37.desc.fme
+                    }
+                    berserk_fallen_empire_machine = {
+                        text = action.37.desc.bme
+                    }
+                    metalhead = {
+                        text = action.37.desc.mh
+                    }
+                    default = {
+                        text = action.37.desc.default
+                    }
+                }
+            }
+        }
+    }
+    diplomatic = yes
+    is_triggered_only = yes
+    trigger = {
+        is_ai = no
+        fromfrom = {
+            NOR = {
+                using_war_goal = {
+                    type = wg_imperial_crusade
+                    owner = root
+                }
+                using_war_goal = {
+                    type = wg_galactic_civil_war_loyalists
+                    owner = root
+                }
+                using_war_goal = {
+                    type = wg_galactic_civil_war_rebels
+                    owner = root
+                }
+                using_war_goal = {
+                    type = wg_restore_the_community
+                    owner = root
+                }
+            }
+        }
+        AND = {
+            fromfrom = {
+                OR = {
+                    using_war_goal = {
+                        type = wg_conquest
+                        owner = root
+                    }
+                    using_war_goal = {
+                        type = wg_counterattack
+                        owner = root
+                    }
+                    using_war_goal = {
+                        type = wg_independence
+                        owner = root
+                    }
+                }
+            }
+            OR = {
+                AND = {
+                    fromfrom = {
+                        any_attacker = {
+                            is_same_value = root
+                        }
+                    }
+                    from = {
+                        any_owned_planet = {
+                            is_colony = yes
+                            NOT = {
+                                fromfrom = {
+                                    any_attacker = {
+                                        has_claim = prevprev.solar_system
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                AND = {
+                    fromfrom = {
+                        any_defender = {
+                            is_same_value = root
+                        }
+                    }
+                    from = {
+                        any_owned_planet = {
+                            is_colony = yes
+                            NOT = {
+                                fromfrom = {
+                                    any_defender = {
+                                        has_claim = prevprev.solar_system
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = action.37.a
+    }
+}

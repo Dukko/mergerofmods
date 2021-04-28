@@ -1,0 +1,28 @@
+trait_robot_surveilance_protocol = {
+    cost = 2
+    allowed_archetypes = {
+        ROBOT
+    }
+    opposites = {
+        trait_robot_poor_security
+    }
+    custom_tooltip = TRAIT_ROBOT_SURVEILANCE_PROTOCOL_EFFECT
+    ai_weight = {
+        weight = 100
+        modifier = {
+            factor = 2
+            is_authoritarian = yes
+        }
+        modifier = {
+            factor = 0
+            is_egalitarian = yes
+        }
+        modifier = {
+            factor = 2
+            has_valid_civic = civic_police_state
+        }
+    }
+    slave_cost = {
+        energy = 100
+    }
+}

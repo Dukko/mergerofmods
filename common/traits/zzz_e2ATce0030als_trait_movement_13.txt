@@ -1,0 +1,20 @@
+als_trait_movement_13 = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/als_trait_movement_13.dds"
+    sorting_priority = -9
+    modifier = {
+        ship_evasion_add = 6
+        ship_evasion_mult = 0.13
+        ship_speed_mult = 0.216
+        ship_interstellar_speed_mult = 0.7
+    }
+    initial = no
+    randomized = no
+    leader_trait = {
+        admiral
+    }
+    leader_class = {
+        admiral
+    }
+}

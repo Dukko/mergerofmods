@@ -1,0 +1,105 @@
+district_virtual_shipyard = {
+    base_buildtime = @giga_rw_district_buildtime
+    is_capped_by_modifier = yes
+    show_on_uncolonized = {
+        uses_district_set = virtual_ring
+        has_planet_flag = giga_virtual_stellar_industry
+    }
+    potential = {
+        uses_district_set = virtual_ring
+        has_planet_flag = giga_virtual_stellar_industry
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_virtual_city
+        district_virtual_hive
+        district_virtual_nexus
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @giga_rw_cost
+        }
+        upkeep = {
+            energy = @giga_rw_maintenance
+            alloys = @giga_rw_maintenance
+            exotic_gases = @giga_rw_maintenance_sr
+            volatile_motes = @giga_rw_maintenance_sr
+            rare_crystals = @giga_rw_maintenance_sr
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 10
+        planet_metallurgists_alloys_produces_add = 1
+        planet_metallurgists_energy_upkeep_add = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_fabricator_add = 10
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_alloy_drone_add = 10
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_foundry_add = 10
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = "job_fabricator_effect_desc"
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = "job_alloy_drone_effect_desc"
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = "job_foundry_effect_desc"
+    }
+    ai_weight = {
+        weight = 1
+    }
+    ai_resource_production = {
+        alloys = 1
+        trigger = {
+            always = yes
+        }
+    }
+}

@@ -1,0 +1,19 @@
+trait_necroid = {
+    cost = 0
+    potential_crossbreeding_chance = 0
+    sorting_priority = 20
+    initial = no
+    randomized = no
+    modification = no
+    forced_happiness = no
+    immortal_leaders = no
+    modifier = {
+        pc_nuked_habitability = 0.2
+        pop_growth_speed = -0.1
+        army_health = 0.1
+        army_morale_damage_mult = 0.3
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+}

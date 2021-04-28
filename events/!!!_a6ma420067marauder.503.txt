@@ -1,0 +1,147 @@
+namespace = marauder
+country_event = {
+    id = marauder.503
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        is_country_type = awakened_marauders
+    }
+    immediate = {
+        fromfrom = {
+            save_event_target_as = conquered_planet
+            set_owner = root
+        }
+        from = {
+            country_event = {
+                id = marauder.504
+            }
+            change_variable = {
+                which = "planets_lost_to_marauder"
+                value = 1
+            }
+            set_country_flag = former_owner@fromfrom
+        }
+        fromfrom = {
+            create_army = {
+                owner = root
+                species = root.species
+                type = "defense_army"
+            }
+            create_army = {
+                owner = root
+                species = root.species
+                type = "defense_army"
+            }
+            create_army = {
+                owner = root
+                species = root.species
+                type = "defense_army"
+            }
+            create_army = {
+                owner = root
+                species = root.species
+                type = "defense_army"
+            }
+            create_army = {
+                owner = root
+                species = root.species
+                type = "defense_army"
+            }
+            create_army = {
+                owner = root
+                species = root.species
+                type = "defense_army"
+            }
+            if = {
+                limit = {
+                    free_housing < 1
+                }
+                while = {
+                    count = 4
+                    limit = {
+                        num_pops > 1
+                    }
+                    random_owned_pop = {
+                        kill_pop = yes
+                    }
+                }
+                while = {
+                    count = 4
+                    create_pop = {
+                        species = root.species
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    free_housing > 1
+                    free_housing < 6
+                }
+                while = {
+                    count = 4
+                    limit = {
+                        num_pops > 1
+                    }
+                    random_owned_pop = {
+                        kill_pop = yes
+                    }
+                }
+                while = {
+                    count = 8
+                    create_pop = {
+                        species = root.species
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    free_housing > 5
+                }
+                while = {
+                    count = 3
+                    limit = {
+                        num_pops > 1
+                    }
+                    random_owned_pop = {
+                        kill_pop = yes
+                    }
+                }
+                while = {
+                    count = 12
+                    create_pop = {
+                        species = root.species
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    solar_system = {
+                        exists = starbase
+                        starbase = {
+                            fleet = {
+                                owner = {
+                                    NOT = {
+                                        is_same_value = root
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                solar_system = {
+                    starbase = {
+                        set_owner = root
+                    }
+                }
+            }
+            else = {
+                solar_system = {
+                    create_starbase = {
+                        size = "starbase_marauder"
+                        owner = root
+                    }
+                }
+            }
+        }
+    }
+}

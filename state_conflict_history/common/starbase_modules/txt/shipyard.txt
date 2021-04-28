@@ -1,0 +1,39 @@
+shipyard = {
+    icon = "GFX_starbase_shipyard"
+    section = "ASSEMBLYYARD_STARBASE_SECTION"
+    construction_days = 180
+    initial = yes
+    resources = {
+        category = starbase_modules
+        cost = {
+            alloys = 50
+        }
+        upkeep = {
+            energy = 1
+        }
+    }
+    station_modifier = {
+        starbase_shipyard_capacity_add = 1
+    }
+    ai_build_at_chokepoint = yes
+    ai_build_outside_chokepoint = yes
+    ai_weight = {
+        weight = 300
+        modifier = {
+            factor = 0
+            not = {
+                has_starbase_module = shipyard
+            }
+            owner = {
+                needs_shipyard = no
+            }
+        }
+        modifier = {
+            factor = 0
+            has_starbase_module = anchorage
+            not = {
+            has_starbase_module = shipyard
+            }
+        }
+    }
+}

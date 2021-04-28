@@ -1,0 +1,117 @@
+has_same_preference = {
+    IF = {
+        limit = {
+            has_desert_type_preference = yes
+        }
+        $compare_species$ = {
+            has_desert_type_preference = yes
+        }
+    }
+    ELSE_IF = {
+        limit = {
+            has_arid_type_preference = yes
+        }
+        $compare_species$ = {
+            has_arid_type_preference = yes
+        }
+    }
+    ELSE_IF = {
+        limit = {
+            has_savannah_type_preference = yes
+        }
+        $compare_species$ = {
+            has_savannah_type_preference = yes
+        }
+    }
+    ELSE_IF = {
+        limit = {
+            has_continental_type_preference = yes
+        }
+        $compare_species$ = {
+            has_continental_type_preference = yes
+        }
+    }
+    ELSE_IF = {
+        limit = {
+            has_ocean_type_preference = yes
+        }
+        $compare_species$ = {
+            has_ocean_type_preference = yes
+        }
+    }
+    ELSE_IF = {
+        limit = {
+            has_tropical_type_preference = yes
+        }
+        $compare_species$ = {
+            has_tropical_type_preference = yes
+        }
+    }
+    ELSE_IF = {
+        limit = {
+            has_arctic_type_preference = yes
+        }
+        $compare_species$ = {
+            has_arctic_type_preference = yes
+        }
+    }
+    ELSE_IF = {
+        limit = {
+            has_alpine_type_preference = yes
+        }
+        $compare_species$ = {
+            has_alpine_type_preference = yes
+        }
+    }
+    ELSE_IF = {
+        limit = {
+            has_tundra_type_preference = yes
+        }
+        $compare_species$ = {
+            has_tundra_type_preference = yes
+        }
+    }
+    ELSE = {
+        switch = {
+            trigger = has_trait
+            trait_pc_nuked_preference = {
+                $compare_species$ = {
+                    has_trait = trait_pc_nuked_preference
+                }
+            }
+            trait_pc_gaia_preference = {
+                $compare_species$ = {
+                    has_trait = trait_pc_gaia_preference
+                }
+            }
+            trait_pc_ringworld_habitable_preference = {
+                $compare_species$ = {
+                    has_trait = trait_pc_habitat_preference
+                }
+            }
+            trait_pc_habitat_preference = {
+                $compare_species$ = {
+                    has_trait = trait_pc_desert_preference
+                }
+            }
+            trait_pc_relic_preference = {
+                $compare_species$ = {
+                    has_trait = trait_pc_relic_preference
+                }
+            }
+            trait_pc_archive_preference = {
+                $compare_species$ = {
+                    has_trait = trait_pc_archive_preference
+                }
+            }
+            trait_pc_megaflorahive_preference = {
+                $compare_species$ = {
+                    has_trait = trait_pc_megaflorahive_preference
+                }
+            }
+            default = {
+                always = no
+            }
+        }
+    }
+}

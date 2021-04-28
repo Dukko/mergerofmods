@@ -1,0 +1,9 @@
+namespace = marauder
+country_event = {
+    potential = {
+        country_type = {
+            value = dormant_marauders
+        }
+    }
+    set_graphical_culture = madd_01
+}

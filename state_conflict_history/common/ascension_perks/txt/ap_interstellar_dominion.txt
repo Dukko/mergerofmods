@@ -1,0 +1,35 @@
+ap_interstellar_dominion = {
+    modifier = {
+        country_starbase_influence_cost_mult = -0.3
+        country_claim_influence_cost_mult = -0.3
+    }
+    potential = {
+        NOT = {
+            has_ascension_perk = ap_interstellar_dominion
+        }
+    }
+    ai_weight = {
+        factor = 20
+        modifier = {
+            factor = 0
+            is_pacifist = yes
+        }
+        modifier = {
+            factor = 2
+            has_ethic = ethic_xenophobe
+        }
+        modifier = {
+            factor = 3
+            has_ethic = ethic_fanatic_xenophobe
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_civic = civic_fanatic_purifiers
+                has_civic = civic_hive_devouring_swarm
+                has_civic = civic_machine_terminator
+                has_civic = civic_machine_assimilator
+            }
+        }
+    }
+}

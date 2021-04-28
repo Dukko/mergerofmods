@@ -1,0 +1,59 @@
+can_species_procreate = {
+    is_sapient = yes
+    NOR = {
+        has_trait = trait_machine_unit
+        has_trait = trait_mechanical
+        has_trait = trait_dimorphic_male
+    }
+    NAND = {
+        root = {
+            has_modifier = slave_colony
+        }
+        NOT = {
+            has_citizenship_type = {
+                type = citizenship_slavery
+                country = root.owner
+            }
+        }
+    }
+    NAND = {
+        has_trait = trait_exotic_gas_dependency
+        exists = root.owner
+        root.owner = {
+            resource_stockpile_compare = {
+                resource = exotic_gases
+                value <= 0
+            }
+        }
+    }
+    NAND = {
+        has_trait = trait_delicate
+        exists = root.owner
+        has_citizenship_type = {
+            type = citizenship_slavery
+            country = root.owner
+        }
+    }
+    NAND = {
+        has_trait = trait_sterile
+        exists = root.owner
+        root.owner = {
+            has_artificial_wombs = no
+        }
+    }
+    NOT = {
+        has_trait = trait_hive_mind_overlord
+    }
+    if = {
+        limit = {
+            has_trait = trait_necrophage
+        }
+        NOT = {
+            root = {
+                any_owned_species = {
+                    species_can_be_necrophaged = yes
+                }
+            }
+        }
+    }
+}

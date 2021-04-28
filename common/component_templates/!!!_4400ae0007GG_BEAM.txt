@@ -1,0 +1,16 @@
+weapon_component_template = {
+    key = "GG_BEAM"
+    size = titanic
+    type = instant
+    prerequisites = {
+        tech_repeatable_nanite_technology_insight
+    }
+    prio_projectile = yes
+    hidden = yes
+    icon = "GFX_ship_part_space_whale_weapon_1"
+    icon_frame = 1
+    tags = {
+        weapon_type_energy
+    }
+    projectile_gfx = "gatebuilder_titan_weapon"
+}

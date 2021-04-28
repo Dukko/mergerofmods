@@ -1,0 +1,82 @@
+TEYA = {
+    name = "Artificer Guilds of Teya"
+    key = "Artificer Guilds of Teya"
+    playable = has_lithoids
+    ship_prefix = "AGT"
+    species = {
+        class = "REP"
+        portrait = "rep3"
+        name = "Teyan"
+        plural = "Teyans"
+        adjective = "Teyan"
+        species_bio = "The Teyans are a calm and steady people, who with great patience achieved creation of a rock automaton; Their 'golems'. With their patient nature paid off, they now seem poised to combine the strengths of both populations."
+        name_list = "REP2"
+        trait = "trait_natural_engineers"
+        trait = "trait_weak"
+        trait = "trait_intelligent"
+    }
+    secondary_species = {
+        class = "LITHOID"
+        portrait = "lith5"
+        name = "Teyan Golem"
+        plural = "Teyan Golems"
+        adjective = "Teyanic Golem"
+        species_bio = "The Golems of the Teyans."
+        name_list = "LITHOID3"
+        trait = "trait_lithoid"
+        trait = "trait_syncretic_proles"
+        trait = "trait_conformists"
+        trait = "trait_strong"
+        trait = "trait_slow_learners"
+        trait = "trait_solitary"
+    }
+    name = "Artificer Guilds of Teya"
+    adjective = "Teyan"
+    authority = "auth_oligarchic"
+    government = "gov_irenic_bureaucracy"
+    advisor_voice_type = "l_materialist"
+    planet_name = "Kirirn"
+    planet_class = "pc_savannah"
+    system_name = "Teya"
+    initializer = ""
+    graphical_culture = "reptilian_01"
+    city_graphical_culture = "mammalian_01"
+    empire_flag = {
+        icon = {
+            category = "ornate"
+            file = "flag_ornate_23.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "circle.dds"
+        }
+        colors = {
+            "light_green"
+            "black"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = male
+        name = "Gazan"
+        portrait = "rep3_m"
+        texture = 1
+        hair = 0
+        clothes = 4
+        ruler_title = "Senator"
+        ruler_title_female = "Senator"
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = yes
+    room = "personality_peaceful_traders_room"
+    spawn_enabled = yes
+    ethic = "ethic_authoritarian"
+    ethic = "ethic_pacifist"
+    ethic = "ethic_materialist"
+    origin = "origin_syncretic_evolution"
+    civics = {
+        "civic_merchant_guilds"
+    }
+}

@@ -1,0 +1,84 @@
+apsr15_servant_machine = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = apsr15_building_part44
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        drone_job_check_trigger = yes
+    }
+    resources = {
+        category = apsr15_planet_servant_machine
+        produces = {
+            unity = 16
+            apsr_knowledge = 0.15
+        }
+        upkeep = {
+            energy = 6
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr15_building_part44
+                }
+            }
+            apsr_knowledge = 0.065
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_deposit = apsr_relic_cube_deposit
+                }
+            }
+            unity = 7.2
+            apsr_knowledge = -0.015
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr15_advanced_1
+                }
+            }
+            unity = 5.5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr15_advanced_2
+                }
+            }
+            unity = 5.5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr15_advanced_3
+                }
+            }
+            unity = 5.5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr15_advanced_4
+                }
+            }
+            unity = 5.5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr15_advanced_5
+                }
+            }
+            unity = 5.5
+        }
+    }
+    weight = {
+        weight = 100
+    }
+}

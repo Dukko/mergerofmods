@@ -1,0 +1,47 @@
+@cost4 = 20
+@power3 = -20
+@fire_rate2 = 0.15
+@tracking1 = 10
+@accuracy3 = 15
+utility_component_template = {
+    key = "COMBAT_COMPUTER_LINE_PRECOG"
+    size = small
+    icon = "GFX_ship_part_computer_line_precog"
+    icon_frame = 1
+    power = @power3
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @cost4
+        }
+    }
+    size_restriction = {
+        corvette
+        destroyer
+        cruiser
+        crisis_destroyer
+        crisis_cruiser
+        StrikeCruiser
+        Battlecruiser
+        battleship
+        Carrier
+        Dreadnought
+        titan
+        Flagship
+        escortcarrier
+        explorationship
+    }
+    component_set = "combat_computers"
+    ship_behavior = "line"
+    prerequisites = {
+        "tech_precognition_interface"
+    }
+    ship_modifier = {
+        ship_fire_rate_mult = @fire_rate2
+        ship_accuracy_add = @accuracy3
+        ship_tracking_add = @tracking1
+    }
+    ai_weight = {
+        weight = 100
+    }
+}

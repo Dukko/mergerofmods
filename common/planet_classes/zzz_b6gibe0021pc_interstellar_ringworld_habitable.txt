@@ -1,0 +1,34 @@
+pc_interstellar_ringworld_habitable = {
+    ringworld = yes
+    entity = "interstellar_ringworld"
+    preview_entity = "interstellar_full_entity"
+    picture = pc_interstellar_ringworld_habitable
+    icon_frame = 21
+    entity_scale = 1
+    enable_tilt = no
+    fixed_entity_scale = yes
+    atmosphere_color = hsv {
+        0
+        0
+        1
+    }
+    atmosphere_intensity = 1
+    atmosphere_width = 0.5
+    show_city = no
+    city_color_lut = "gfx/portraits/misc/colorcorrection_arid.dds"
+    extra_orbit_size = 0
+    extra_planet_count = 0
+    chance_of_ring = 0
+    planet_size = 10
+    moon_size = 1
+    colonizable = yes
+    starting_planet = no
+    orbit_lines = no
+    has_colonization_influence_cost = no
+    ideal = yes
+    is_artificial_planet = yes
+    district_set = interstellar_ring
+    modifier = {
+        planet_max_buildings_add = 12
+    }
+}

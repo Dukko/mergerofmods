@@ -1,0 +1,35 @@
+pc_flat_world = {
+    ringworld = yes
+    entity = "flat_earth_planet"
+    preview_entity = "flat_earth_planet_preview"
+    picture = pc_continental
+    tile_set = pc_continental
+    icon_frame = 3
+    entity_scale = 5
+    enable_tilt = no
+    fixed_entity_scale = yes
+    atmosphere_color = hsv {
+        0.59
+        0.45
+        0.95
+    }
+    atmosphere_intensity = 1
+    atmosphere_width = 0.5
+    show_city = yes
+    city_color_lut = "gfx/portraits/misc/colorcorrection_continental.dds"
+    extra_orbit_size = 0
+    extra_planet_count = 0
+    chance_of_ring = 0
+    planet_size = 25
+    moon_size = 25
+    colonizable = yes
+    district_set = standard
+    ideal = yes
+    starting_planet = no
+    orbit_lines = yes
+    has_colonization_influence_cost = no
+    is_artificial_planet = yes
+    modifier = {
+        pop_environment_tolerance = 0.8
+    }
+}

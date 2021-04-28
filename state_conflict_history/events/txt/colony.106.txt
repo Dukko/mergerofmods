@@ -1,0 +1,34 @@
+namespace = colony
+planet_event = {
+    id = colony.106
+    title = "PROJECT_COMPLETE"
+    desc = "colony.106.desc"
+    picture = GFX_evt_alien_nature
+    show_sound = event_activating_unknown_technology
+    location = ROOT
+    is_triggered_only = yes
+    option = {
+        name = MARVELOUS
+        change_pc = pc_gaia
+        add_modifier = {
+            modifier = "gaia_world"
+            days = -1
+        }
+        add_deposit = d_pdgaia
+        hidden_effect = {
+            remove_modifier = "abandoned_terraforming"
+            remove_planet_flag = pdaquapicture
+            if = {
+                limit = {
+                    NOT = {
+                        gpm_has_precursor_modifiers = yes
+                    }
+                }
+                reroll_planet_modifiers = yes
+                gpm_remove_precursor_modifiers = yes
+                gpm_remove_planetary_features = yes
+                gpm_roll_planetary_features = yes
+            }
+        }
+    }
+}

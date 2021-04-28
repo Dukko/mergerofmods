@@ -1,0 +1,166 @@
+namespace = dpe_conspiracy
+country_event = {
+    id = dpe_conspiracy.20
+    title = dpe_conspiracy.20.name
+    desc = dpe_conspiracy.20.desc
+    picture = GFX_evt_alien_propaganda
+    trigger = {
+        is_country_type = default
+        is_democracy = yes
+        NOT = {
+            has_country_flag = cc_recent_authoritarian_conspiracy
+        }
+        any_country = {
+            OR = {
+                is_hostile_to = root
+                is_rival = root
+                is_domineering_to = root
+            }
+            relative_power = {
+                who = root
+                category = fleet
+                value > equivalent
+            }
+        }
+        is_at_war = no
+        has_faction = totalitarian
+        any_owned_leader = {
+            NOT = {
+                is_same_value = root.ruler
+            }
+            leader_of_faction = totalitarian
+        }
+    }
+    is_triggered_only = yes
+    immediate = {
+        random_owned_leader = {
+            limit = {
+                leader_of_faction = totalitarian
+            }
+            save_event_target_as = authoritarian
+            exile_leader_as = dpe_authoritarian_conspirator
+        }
+        set_timed_country_flag = {
+            flag = cc_recent_authoritarian_conspiracy
+            years = 50
+        }
+        country_event = {
+            id = dpe_conspiracy.28
+            days = 360
+        }
+    }
+    option = {
+        name = dpe_conspiracy.20.A
+        custom_tooltip = dpe_conspiracy.20.A.tooltip
+        hidden_effect = {
+            random_list = {
+                1 = {
+                    country_event = {
+                        id = dpe_conspiracy.21
+                        days = 45
+                    }
+                }
+                1 = {
+                    country_event = {
+                        id = dpe_conspiracy.22
+                        days = 60
+                    }
+                }
+            }
+        }
+        ai_chance = {
+            factor = 1.5
+        }
+    }
+    option = {
+        name = dpe_conspiracy.20.B
+        hidden_effect = {
+            country_event = {
+                id = dpe_conspiracy.23
+                days = 5
+            }
+        }
+        ai_chance = {
+            factor = 0
+        }
+    }
+    option = {
+        name = dpe_conspiracy.20.C
+        shift_ethic = ethic_authoritarian
+        change_government = {
+            authority = auth_dictatorial
+            civics = random
+        }
+        random_pop_faction = {
+            limit = {
+                is_pop_faction_type = totalitarian
+            }
+            add_modifier = {
+                modifier = embraced_faction
+                days = 3600
+            }
+            hidden_effect = {
+                add_modifier = {
+                    modifier = embraced_faction_timer
+                    days = 3600
+                }
+                owner = {
+                    every_pop_faction = {
+                        limit = {
+                            NOT = {
+                                is_same_value = prevprev
+                            }
+                        }
+                        add_modifier = {
+                            modifier = embraced_another_faction
+                            days = 3600
+                        }
+                    }
+                }
+            }
+        }
+        hidden_effect = {
+            set_timed_country_flag = {
+                flag = dpe_authoritarian_conspiracy_chain_ended
+                years = 1
+            }
+        }
+        allow = {
+            custom_tooltip = {
+                fail_text = dpe_tot_faction_15
+                any_pop_faction = {
+                    is_pop_faction_type = totalitarian
+                    support > 0.15
+                }
+            }
+        }
+        ai_chance = {
+            factor = 1
+            modifier = {
+                factor = 0
+                NOT = {
+                    any_pop_faction = {
+                        is_pop_faction_type = totalitarian
+                        support > 0.2
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = dpe_conspiracy.20.D
+        hidden_effect = {
+            set_timed_country_flag = {
+                flag = dpe_didnt_bother_on_conspiracy
+                days = 361
+            }
+            country_event = {
+                id = dpe_conspiracy.27
+                days = 360
+            }
+        }
+        ai_chance = {
+            factor = 0
+        }
+    }
+}

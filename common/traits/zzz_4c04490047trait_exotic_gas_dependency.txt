@@ -1,0 +1,25 @@
+trait_exotic_gas_dependency = {
+    cost = -1
+    potential_crossbreeding_chance = 1
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    initial = no
+    randomized = no
+    custom_tooltip = TRAIT_EXOTIC_GAS_DEPENDENCY_EFFECT
+    species_potential_add = {
+        exists = from
+        from = {
+            has_country_resource = {
+                type = exotic_gases
+                amount > 0
+            }
+        }
+    }
+    ai_weight = {
+        weight = 0
+    }
+    slave_cost = {
+        energy = -50
+    }
+}

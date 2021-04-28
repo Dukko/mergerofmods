@@ -1,0 +1,80 @@
+trait_very_slow_metabolism = {
+    cost = 4
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_fast_metabolism"
+        "trait_slow_metabolism"
+        "trait_very_fast_metabolism"
+        "trait_fleeting"
+        "trait_small"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    species_potential_add = {
+        OR = {
+            NOT = {
+                has_global_flag = game_started
+            }
+            NOT = {
+                exists = from
+            }
+            NOT = {
+                has_trait = trait_slow_metabolism
+            }
+            from = {
+                has_technology = tech_genetic_resequencing
+            }
+        }
+    }
+    modifier = {
+        planet_pops_food_upkeep_mult = -0.75
+        leader_age = 40
+        pop_growth_speed = -0.1
+    }
+    slave_cost = {
+        energy = 0
+    }
+    ai_weight = {
+        weight = 100
+        modifier = {
+            factor = 2
+            is_materialist = yes
+        }
+        modifier = {
+            factor = 4
+            has_valid_civic = civic_environmentalist
+        }
+        modifier = {
+            factor = 0.5
+            has_ethic = ethic_spiritualist
+        }
+        modifier = {
+            factor = 0.25
+            has_ethic = ethic_fanatic_spiritualist
+        }
+        modifier = {
+            factor = 0.5
+            has_valid_civic = civic_warrior_culture
+        }
+        modifier = {
+            factor = 0.5
+            root = {
+                has_citizenship_type = {
+                    country = prev
+                    type = citizenship_slavery
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            is_xenophile = no
+            root = {
+                has_citizenship_type = {
+                    country = prev
+                    type = citizenship_limited
+                }
+            }
+        }
+    }
+}

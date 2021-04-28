@@ -1,0 +1,23 @@
+trait_spendthrifts = {
+    cost = -2
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    opposites = {
+        "trait_hive_mind"
+        "trait_thrifty"
+    }
+    custom_tooltip = TRAIT_SPENDTHRIFTS_EFFECT
+    ai_weight = {
+        weight = 6000
+        modifier = {
+            factor = 0
+            root = {
+                NOT = {
+                    has_species_flag = make_spendthrifts@prev
+                }
+            }
+        }
+    }
+}

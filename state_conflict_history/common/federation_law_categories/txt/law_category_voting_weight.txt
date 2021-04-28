@@ -1,0 +1,12 @@
+law_category_voting_weight = {
+    potential = {
+        NOT = {
+            has_federation_type = vf_ef_federation
+        }
+    }
+    laws = {
+        vote_weight_equal
+        vote_weight_diplomatic
+        vote_weight_diplomatic_imperial_loyalists
+    }
+}

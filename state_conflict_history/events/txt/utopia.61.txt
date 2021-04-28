@@ -1,0 +1,29 @@
+namespace = utopia
+country_event = {
+    id = "utopia.61"
+    title = "utopia.61.name"
+    desc = {
+        trigger = {
+            NOT = {
+                has_country_flag = already_built_habitat
+            }
+        }
+        text = "utopia.61.desc.a"
+    }
+    desc = {
+        trigger = {
+            has_country_flag = already_built_habitat
+        }
+        text = "utopia.61.desc.b"
+    }
+    show_sound = event_mystic_reveal
+    picture = GFX_evt_colony_settlement
+    is_triggered_only = yes
+    location = event_target:habitat_planet
+    option = {
+        name = EXCELLENT
+        hidden_effect = {
+            set_country_flag = already_built_habitat
+        }
+    }
+}

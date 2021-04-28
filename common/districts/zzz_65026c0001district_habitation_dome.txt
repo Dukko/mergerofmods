@@ -1,0 +1,179 @@
+district_habitation_dome = {
+    base_buildtime = 180
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        exists = from
+        from = {
+            is_machine_empire = no
+        }
+        uses_district_set = hostile
+    }
+    potential = {
+        exists = owner
+        owner = {
+            is_machine_empire = no
+        }
+        uses_district_set = hostile
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_nexus
+        district_city
+        district_hive
+        district_megacity
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = 250
+        }
+        upkeep = {
+            energy = 1
+            sr_ice = 1
+            sr_biomass = 1
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    exists = owner
+                    owner = {
+                        not = {
+                            has_origin = origin_steppingstone
+                        }
+                    }
+                }
+            }
+            energy = 2
+            sr_ice = 1
+            sr_biomass = 1
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    exists = owner
+                    owner = {
+                        country_uses_food = yes
+                    }
+                }
+            }
+            food = 2
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 4
+        planet_max_buildings_add = 1
+        pop_environment_tolerance = 0.05
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_biomass_left = yes
+            has_ice_left = yes
+        }
+        modifier = {
+            pop_environment_tolerance = 0.05
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_origin = origin_steppingstone
+            }
+        }
+        modifier = {
+            pop_environment_tolerance = 0.05
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_non_swapped_tradition = tr_prosperity_public_works
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_housing_1
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_housing_2
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                country_uses_food = yes
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_agri_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                country_uses_food = yes
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_farmer_add = 1
+        }
+    }
+    ai_weight = {
+        weight = 2
+        modifier = {
+            factor = 10
+            free_housing < 3
+        }
+        modifier = {
+            factor = 5
+            num_districts = {
+                type = district_habitation_dome
+                value < 2
+            }
+        }
+        modifier = {
+            factor = 2
+            num_districts = {
+                type = district_habitation_dome
+                value < 3
+            }
+        }
+        modifier = {
+            factor = 0.9
+            free_housing > 3
+        }
+        modifier = {
+            factor = 0
+            free_housing > 7
+        }
+    }
+    ai_resource_production = {
+        consumer_goods = 2
+        trigger = {
+            always = yes
+        }
+    }
+}

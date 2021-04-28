@@ -1,0 +1,77 @@
+@hab_cost = 500
+district_starborn_starting_scavenger = {
+    base_buildtime = 240
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        OR = {
+            is_planet_class = pc_starborn_habitat_start
+            is_planet_class = pc_habitat
+        }
+        has_planet_flag = starborn_tomb_scavenging
+        has_retile = no
+    }
+    potential = {
+        OR = {
+            is_planet_class = pc_starborn_habitat_start
+            is_planet_class = pc_habitat
+        }
+        has_planet_flag = starborn_tomb_scavenging
+        has_retile = no
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @hab_cost
+        }
+        upkeep = {
+            energy = 2
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_starborn_tombworld_scavenger_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_mining_drone_add = 2
+            job_alloy_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_mining_drone_add = 1
+            job_fabricator_add = 1
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        text = job_starborn_tombworld_scavenger_effect_desc
+    }
+}

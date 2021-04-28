@@ -1,0 +1,72 @@
+education = {
+    potential = {
+        NOT = {
+            has_ethic = ethic_gestalt_consciousness
+        }
+    }
+    option = {
+        name = "mixed_education"
+        valid = {
+            NOR = {
+                has_valid_civic = civic_shared_burden
+            }
+        }
+        policy_flags = {
+            mixed_education
+        }
+        modifier = {
+        }
+    }
+    option = {
+        name = "private_education"
+        valid = {
+            NOR = {
+                has_valid_civic = civic_welfare_state
+                has_ethic = "ethic_fanatic_socialism"
+            }
+        }
+        policy_flags = {
+            private_education
+        }
+        modifier = {
+            planet_jobs_specialist_produces_mult = 0.15
+            planet_crime_add = 10
+            pop_ethic_capitalism_attraction_mult = 0.1
+        }
+        AI_weight = {
+            modifier = {
+                factor = 10
+                OR = {
+                    has_ethic = "ethic_fanatic_capitalism"
+                }
+            }
+        }
+    }
+    option = {
+        name = "public_education"
+        valid = {
+            NOR = {
+                has_ethic = "ethic_fanatic_capitalism"
+                has_valid_civic = civic_merchant_guilds
+            }
+        }
+        policy_flags = {
+            public_education
+        }
+        modifier = {
+            pop_government_ethic_attraction = 0.1
+            country_unity_produces_mult = 0.1
+            planet_crime_add = -10
+            country_energy_produces_mult = -0.05
+            pop_ethic_socialism_attraction_mult = 0.1
+        }
+        AI_weight = {
+            modifier = {
+                factor = 10
+                OR = {
+                    has_ethic = "ethic_fanatic_socialism"
+                }
+            }
+        }
+    }
+}

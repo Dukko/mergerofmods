@@ -1,0 +1,25 @@
+colonizeable_planet = {
+    OR = {
+        is_planet_class = pc_pdshroud
+        is_planet_class = pc_city
+        is_planet_class = pc_nuked
+        is_planet_class = pc_hive
+        is_planet_class = pc_machine
+        has_apsr_modifiers = yes
+        habitable_structure = yes
+        habitable_planet = yes
+        is_planet_class = pc_irradiated
+        is_planet_class = pc_katzenland
+        is_planet_class = pc_necropolis
+        is_planet_class = pc_ecocity
+        is_planet_class = pc_bioforge
+        is_planet_class = pc_pdbiofort
+        is_planet_class = pc_machine_factory
+        is_planet_class = pc_machine_fort
+        is_planet_class = pc_milarc
+        is_planet_class = pc_milarc_relic
+        is_planet_class = pc_relic
+        is_planet_class = pc_pdhive1
+        is_planet_class = pc_pdhive2
+    }
+}

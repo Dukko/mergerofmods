@@ -1,0 +1,67 @@
+namespace = marauder
+country_event = {
+    id = marauder.1
+    title = "marauder.1.name"
+    desc = "marauder.1.desc"
+    picture = GFX_evt_pirate_armada
+    show_sound = event_radio_chatter
+    location = event_target:marauder_system
+    is_triggered_only = yes
+    immediate = {
+        event_target:encountered_marauder = {
+            establish_communications_no_message = ROOT
+            owner_species = {
+                save_event_target_as = marauder_species
+            }
+        }
+        if = {
+            limit = {
+                event_target:encountered_marauder = {
+                    has_country_flag = marauder_1
+                }
+            }
+            random_system = {
+                limit = {
+                    has_star_flag = marauder_capital_1
+                }
+                save_event_target_as = marauder_system
+            }
+            break = yes
+        }
+        if = {
+            limit = {
+                event_target:encountered_marauder = {
+                    has_country_flag = marauder_2
+                }
+            }
+            random_system = {
+                limit = {
+                    has_star_flag = marauder_capital_2
+                }
+                save_event_target_as = marauder_system
+            }
+            break = yes
+        }
+        if = {
+            limit = {
+                event_target:encountered_marauder = {
+                    has_country_flag = marauder_3
+                }
+            }
+            random_system = {
+                limit = {
+                    has_star_flag = marauder_capital_3
+                }
+                save_event_target_as = marauder_system
+            }
+        }
+    }
+    option = {
+        name = marauder.1.a
+        hidden_effect = {
+            country_event = {
+                id = marauder.15
+            }
+        }
+    }
+}

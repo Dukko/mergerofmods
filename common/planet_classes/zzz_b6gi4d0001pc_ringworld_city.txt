@@ -1,0 +1,34 @@
+pc_ringworld_city = {
+    is_artificial_planet = yes
+    ringworld = yes
+    entity = "gargantuan_gaia_habitable_sector"
+    climate = "dry"
+    icon_frame = 21
+    entity_scale = 1
+    enable_tilt = no
+    fixed_entity_scale = yes
+    atmosphere_color = hsv {
+        0
+        0
+        1
+    }
+    atmosphere_intensity = 1
+    atmosphere_width = 0.5
+    show_city = yes
+    fixed_city_level = 6
+    city_color_lut = "gfx/portraits/misc/colorcorrection_continental.dds"
+    modifier = {
+        planet_max_buildings_add = 12
+        planet_jobs_produces_mult = 0.2
+        pop_growth_speed = 0.5
+    }
+    chance_of_ring = 0
+    planet_size = 10
+    moon_size = 1
+    colonizable = yes
+    ideal = yes
+    starting_planet = no
+    orbit_lines = no
+    has_colonization_influence_cost = no
+    district_set = ring_world
+}

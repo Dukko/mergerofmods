@@ -1,0 +1,31 @@
+trait_metal_blood = {
+    cost = 2
+    sorting_priority = 19
+    initial = no
+    randomized = no
+    modification = yes
+    modifier = {
+        planet_livestock_sr_living_metal_produces_add = 0.01
+        army_health = 0.5
+    }
+    species_potential_add = {
+        always = no
+        exists = from
+        from = {
+            has_ascension_perk = ap_life_masters
+            OR = {
+                has_modifier = life_masters_6_trait
+                has_modifier = life_masters_7_trait
+                has_modifier = life_masters_8_trait
+                has_modifier = life_masters_9_trait
+                has_modifier = life_masters_10_trait
+            }
+        }
+    }
+    potential_crossbreeding_chance = 0.5
+    icon = "gfx/interface/icons/traits/trait_metal_blood.dds"
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+}

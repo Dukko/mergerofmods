@@ -1,0 +1,112 @@
+district_utility_domes = {
+    base_buildtime = 180
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        exists = from
+        from = {
+            is_gestalt = no
+        }
+        uses_district_set = hostile
+    }
+    potential = {
+        exists = owner
+        owner = {
+            is_gestalt = no
+        }
+        uses_district_set = hostile
+    }
+    allow = {
+        NOT = {
+            has_modifier = slave_colony
+        }
+        NOT = {
+            has_modifier = penal_colony
+        }
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_parish
+        district_warrior_house
+        district_labour_camp
+        district_markettowns
+        district_securityzone
+        district_local_network
+        district_wildnest
+        district_community
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = 250
+        }
+        upkeep = {
+            energy = 1
+        }
+        produces = {
+            sr_waste = 1
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 3
+        job_healthcare_add = 1
+        job_clerk_add = 1
+        job_entertainer_add = 1
+    }
+    ai_weight = {
+        weight = 1.5
+        modifier = {
+            factor = 5
+            num_districts = {
+                type = district_utility_domes
+                value < 1
+            }
+        }
+        modifier = {
+            factor = 5
+            free_jobs < 2
+            free_amenities < 15
+        }
+        modifier = {
+            factor = 0
+            free_housing > 4
+        }
+        modifier = {
+            factor = 0
+            free_jobs > 8
+            num_districts = {
+                type = district_utility_domes
+                value > 0
+            }
+            free_amenities > 20
+        }
+        modifier = {
+            factor = 0
+            free_jobs > 2
+            num_districts = {
+                type = district_utility_domes
+                value > 1
+            }
+            free_amenities > 0
+        }
+        modifier = {
+            factor = 0
+            num_districts = {
+                type = district_utility_domes
+                value > 3
+            }
+        }
+        modifier = {
+            weight = -1
+            free_jobs > 6
+            free_housing > 6
+            free_amenities > 35
+        }
+    }
+    ai_resource_production = {
+        energy = 1
+        consumer_goods = 1
+        trigger = {
+            always = yes
+        }
+    }
+}

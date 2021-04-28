@@ -1,0 +1,25 @@
+lrsk_gov_var_gov_occult_franchise_fam = {
+    ruler_title = LRSK_GOV_VAR_RT_GRAND_EXECUTIVE_SAGE
+    heir_title = HT_HIGH_MYSTIC
+    heir_title_female = HT_HIGH_MYSTIC
+    should_force_rename = yes
+    use_regnal_names = yes
+    dynastic_last_names = yes
+    possible = {
+        OR = {
+            AND = {
+                has_valid_civic = civic_corporate_dominion
+                has_valid_civic = civic_exalted_priesthood
+            }
+            AND = {
+                has_authority = auth_corporate_imperial
+                has_valid_civic = civic_gospel_of_the_masses
+            }
+        }
+        has_ethic = ethic_authoritarian
+        has_ethic = ethic_fanatic_spiritualist
+    }
+    weight = {
+        base = 1300
+    }
+}

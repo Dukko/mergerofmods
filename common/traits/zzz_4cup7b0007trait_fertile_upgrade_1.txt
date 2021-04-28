@@ -1,0 +1,40 @@
+trait_fertile_upgrade_1 = {
+    cost = 2
+    initial = no
+    randomized = no
+    advanced_trait = yes
+    opposites = {
+        "trait_very_rapid_breeders_upgrade"
+    }
+    icon = "gfx/interface/icons/traits/trait_fertile.dds"
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    species_potential_add = {
+        has_trait = trait_rapid_breeders
+        exists = from
+        from = {
+            is_ai = yes
+        }
+    }
+    ai_weight = {
+        weight = 10000
+        modifier = {
+            factor = 0
+            has_valid_civic = civic_environmentalist
+        }
+        modifier = {
+            factor = 4
+            has_ai_personality = hive_mind
+        }
+        modifier = {
+            factor = 5
+            root = {
+                has_citizenship_type = {
+                    country = prev
+                    type = citizenship_organic_trophy
+                }
+            }
+        }
+    }
+}

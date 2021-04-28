@@ -1,0 +1,29 @@
+trait_robot_recycled = {
+    cost = 2
+    opposites = {
+        "trait_robot_luxurious"
+    }
+    allowed_archetypes = {
+        ROBOT
+        MACHINE
+    }
+    assembling_modifier = {
+        planet_pop_assemblers_upkeep_mult = -0.4
+    }
+    ai_weight = {
+        weight = 100
+        modifier = {
+            factor = 4
+            has_valid_civic = civic_environmentalist
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                has_origin = origin_remnants
+                has_origin = origin_shattered_ring
+                has_origin = origin_post_apocalyptic
+                has_origin = origin_void_dwellers
+            }
+        }
+    }
+}

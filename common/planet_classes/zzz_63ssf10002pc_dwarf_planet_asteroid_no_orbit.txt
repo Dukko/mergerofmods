@@ -1,0 +1,23 @@
+pc_dwarf_planet_asteroid_no_orbit = {
+    entity = "dwarf_planetoid"
+    entity_scale = 9
+    icon_frame = 53
+    picture = pc_dwarf_planet_asteroid
+    atmosphere_color = hsv {
+        0.55
+        0.3
+        0.75
+    }
+    atmosphere_intensity = 1
+    atmosphere_width = 0.15
+    colonizable = no
+    planet_size = {
+        min = 6
+        max = 8
+    }
+    moon_size = {
+        min = 5
+        max = 7
+    }
+    orbit_lines = no
+}

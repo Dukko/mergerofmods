@@ -1,0 +1,79 @@
+@buildings_t2 = 2
+building_hive_capital = {
+    capital = yes
+    can_build = no
+    can_demolish = no
+    can_be_ruined = no
+    can_be_disabled = no
+    position_priority = 0
+    category = government
+    potential = {
+        exists = owner
+        owner = {
+            OR = {
+                is_hive_empire = yes
+                is_country_type = swarm
+            }
+            is_fallen_empire = no
+        }
+    }
+    destroy_trigger = {
+        exists = owner
+        owner = {
+            is_hive_empire = no
+        }
+    }
+    convert_to = {
+        building_machine_capital
+        building_capital
+        building_ancient_control_center
+        building_ancient_palace
+    }
+    upgrades = {
+        "building_hive_major_capital"
+    }
+    prerequisites = {
+        "tech_planetary_government"
+    }
+    show_tech_unlock_if = {
+        is_hive_empire = yes
+    }
+    planet_modifier = {
+        planet_housing_add = 5
+        planet_amenities_add = 8
+        job_synapse_drone_add = 2
+        job_maintenance_drone_add = 2
+        job_patrol_drone_add = 1
+        planet_max_buildings_add = @buildings_t2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_capital_productivity_1
+            }
+        }
+        modifier = {
+            planet_jobs_upkeep_mult = 0.1
+            planet_jobs_produces_mult = 0.1
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 1000
+        }
+        upkeep = {
+            energy = 2
+        }
+    }
+    triggered_desc = {
+        text = job_synapse_drone_effect_desc
+    }
+    triggered_desc = {
+        text = job_maintenance_drone_effect_desc
+    }
+    triggered_desc = {
+        text = job_patrol_drone_effect_desc
+    }
+}

@@ -1,0 +1,16 @@
+dpe_duel_loser_admiral = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/dpe_trait_wooden_spoon.dds"
+    modifier = {
+        ship_fire_rate_mult = -0.1
+    }
+    leader_class = {
+        admiral
+    }
+    leader_trait = {
+        admiral
+    }
+    initial = no
+    randomized = no
+}

@@ -1,0 +1,203 @@
+trait_agrarian = {
+    cost = 2
+    potential_crossbreeding_chance = 1
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    modifier = {
+        planet_jobs_food_produces_mult = 0.3
+    }
+    slave_cost = {
+        energy = 100
+    }
+    ai_weight = {
+        weight = 100
+        modifier = {
+            factor = 4
+            has_valid_civic = civic_agrarian_idyll
+            root = {
+                has_citizenship_type = {
+                    country = prev
+                    type = citizenship_full
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            any_owned_species = {
+                has_trait = trait_robot_harvesters
+            }
+        }
+        modifier = {
+            factor = 0.5
+            any_owned_species = {
+                has_trait = trait_agrarian
+                has_similar_preference = {
+                    compare_species = root
+                }
+            }
+        }
+        modifier = {
+            factor = 0.25
+            any_owned_species = {
+                has_trait = trait_agrarian
+                has_same_preference = {
+                    compare_species = root
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            root = {
+                OR = {
+                    has_trait = trait_pc_tropical_preference
+                    has_trait = trait_pc_continental_preference
+                    has_trait = trait_pc_ocean_preference
+                }
+            }
+            NOR = {
+                has_ai_personality_behaviour = isolationist
+                is_homicidal = yes
+            }
+        }
+        modifier = {
+            factor = 0.5
+            root = {
+                OR = {
+                    has_trait = trait_industrious
+                    has_trait = trait_ingenious
+                    AND = {
+                        NOT = {
+                            has_citizenship_type = {
+                                country = prev
+                                type = citizenship_slavery
+                            }
+                        }
+                        OR = {
+                            has_trait = trait_thrifty
+                            has_trait = trait_intelligent
+                            has_trait = trait_charismatic
+                            has_trait = trait_traditional
+                        }
+                    }
+                }
+            }
+            any_owned_species = {
+                NOR = {
+                    has_trait = trait_industrious
+                    has_trait = trait_ingenious
+                    AND = {
+                        NOT = {
+                            has_citizenship_type = {
+                                country = prev
+                                type = citizenship_slavery
+                            }
+                        }
+                        OR = {
+                            has_trait = trait_thrifty
+                            has_trait = trait_intelligent
+                            has_trait = trait_charismatic
+                            has_trait = trait_traditional
+                        }
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            root = {
+                has_citizenship_type = {
+                    country = prev
+                    type = citizenship_slavery
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            root = {
+                NOT = {
+                    has_citizenship_type = {
+                        country = prev
+                        type = citizenship_slavery
+                    }
+                }
+            }
+            any_owned_species = {
+                has_citizenship_type = {
+                    country = prev
+                    type = citizenship_slavery
+                }
+            }
+        }
+        modifier = {
+            factor = 4
+            exists = root.home_planet
+            root.home_planet = {
+                OR = {
+                    has_designation = col_farming
+                    has_designation = col_ring_farming
+                }
+                is_owned_by = prev
+            }
+        }
+        modifier = {
+            factor = 2
+            exists = root.home_planet
+            root.home_planet = {
+                OR = {
+                    has_designation = col_rural
+                    has_designation = col_rural_gestalt
+                    has_designation = col_slave
+                    has_designation = col_ring_mix
+                }
+                is_owned_by = prev
+            }
+        }
+        modifier = {
+            factor = 0.25
+            exists = root.home_planet
+            root = {
+                NOR = {
+                    has_trait = trait_void_dweller_1
+                    has_trait = trait_void_dweller_2
+                }
+            }
+            root.home_planet = {
+                NOR = {
+                    has_designation = col_capital
+                    has_designation = col_default
+                    has_designation = col_penal
+                    has_designation = col_primitive
+                    has_designation = col_farming
+                    has_designation = col_ring_farming
+                    has_designation = col_rural
+                    has_designation = col_rural_gestalt
+                    has_designation = col_slave
+                    has_designation = col_ring_mix
+                }
+                is_owned_by = prev
+            }
+        }
+        modifier = {
+            factor = 0.25
+            root = {
+                NOT = {
+                    is_same_species = prev
+                }
+                OR = {
+                    has_trait = trait_void_dweller_1
+                    has_trait = trait_void_dweller_2
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            root = {
+                has_citizenship_type = {
+                    country = prev
+                    type = citizenship_organic_trophy
+                }
+            }
+        }
+    }
+}

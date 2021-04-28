@@ -1,0 +1,29 @@
+namespace = distar_nanite_ecosystem
+namespace = nanite_ecosystem_uplift
+namespace = nanite_ecosystem_colony
+namespace = ldragon_country_starts_nanite_ecosystem
+namespace = nanite_ecosystem_enter
+namespace = graygoo
+namespace = harvest_nanite_gaia
+namespace = nanite_ecosystem_anomaly
+ship_event = {
+    id = graygoo.550
+    title = "graygoo.550.name"
+    desc = "graygoo.550.desc"
+    picture = GFX_evt_ruined_system
+    show_sound = event_radio_chatter
+    location = FROM
+    is_triggered_only = yes
+    trigger = {
+        NOR = {
+            has_global_flag = gray_goo_crisis_set
+            has_global_flag = gray_goo_empire_set
+        }
+        from = {
+            has_star_flag = lcluster1
+        }
+    }
+    option = {
+        name = graygoo.550.a
+    }
+}

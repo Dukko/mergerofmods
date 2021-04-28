@@ -1,0 +1,137 @@
+@giga_district_upkeep_energy_medium = 3
+district_giga_planet_nexus = {
+    base_buildtime = @giga_planet_district_buildtime
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        exists = from
+        from = {
+            is_machine_empire = yes
+        }
+        uses_district_set = giga_planet
+    }
+    potential = {
+        exists = owner
+        owner = {
+            is_machine_empire = yes
+        }
+        uses_district_set = giga_planet
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_giga_planet_hive
+        district_giga_planet_city
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @giga_planet_cost
+        }
+        upkeep = {
+            energy = @giga_district_upkeep_energy_medium
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    has_planet_flag = giga_hab_gas_giant
+                }
+            }
+            energy = 1
+        }
+    }
+    triggered_planet_modifier = {
+        modifier = {
+            planet_housing_add = 8
+            job_maintenance_drone_add = 1
+            job_technician_drone_add = 1
+            planet_max_buildings_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_housing_1
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_housing_2
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+            job_maintenance_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_swapped_tradition = tr_prosperity_optimized_nexus
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_planet_flag = giga_elysium
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_giga_preserver_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_planet_flag = giga_elysium
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_giga_preserver_add = 2
+        }
+    }
+    triggered_desc = {
+        text = "job_maintenance_drone_effect_desc"
+    }
+    triggered_desc = {
+        trigger = {
+            has_planet_flag = giga_elysium
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        text = "job_giga_preserver_effect_desc"
+    }
+    triggered_desc = {
+        trigger = {
+            has_planet_flag = giga_elysium
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = "job_giga_preserver_drone_effect_desc"
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 300
+            free_housing < 1
+        }
+    }
+}

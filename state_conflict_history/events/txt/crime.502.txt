@@ -1,0 +1,35 @@
+namespace = crime
+planet_event = {
+    id = crime.502
+    title = crime.502.name
+    desc = crime.502.desc
+    picture = GFX_evt_hive_mind
+    show_sound = event_criminal_activity
+    location = root
+    pre_triggers = {
+        has_owner = yes
+    }
+    trigger = {
+        has_modifier = drone_deviancy
+    }
+    is_triggered_only = yes
+    immediate = {
+        add_modifier = {
+            modifier = "ringleader_killed"
+            days = 3600
+        }
+        set_timed_planet_flag = {
+            flag = planet_crime_flag
+            days = 3600
+        }
+    }
+    option = {
+        name = crime.502.a
+        tooltip = {
+            add_modifier = {
+                modifier = "ringleader_killed"
+                days = 3600
+            }
+        }
+    }
+}

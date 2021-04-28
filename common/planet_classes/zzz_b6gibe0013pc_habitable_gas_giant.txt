@@ -1,0 +1,36 @@
+pc_habitable_gas_giant = {
+    is_artificial_planet = yes
+    entity = "habitable_gas_giant_planet"
+    entity_scale = 14
+    picture = pc_habitable_gas_giant
+    icon_frame = 14
+    atmosphere_color = hsv {
+        0.59
+        0.45
+        0.95
+    }
+    atmosphere_intensity = 1
+    atmosphere_width = 0.5
+    min_distance_from_sun = @habitable_min_distance
+    max_distance_from_sun = @habitable_max_distance
+    spawn_odds = 0
+    city_color_lut = "gfx/portraits/misc/colorcorrection_arid.dds"
+    modifier = {
+        planet_max_buildings_add = 12
+        pop_environment_tolerance = 0.5
+    }
+    chance_of_ring = 0.2
+    planet_size = {
+        min = 16
+        max = 25
+    }
+    moon_size = {
+        min = 12
+        max = 16
+    }
+    colonizable = yes
+    starting_planet = no
+    orbit_lines = yes
+    show_city = no
+    district_set = giga_planet
+}

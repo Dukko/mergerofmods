@@ -1,0 +1,51 @@
+lrsk_gov_var_gov_crusading_company_fam = {
+    ruler_title = LRSK_GOV_VAR_RT_CHAPLAINMARTIAL
+    ruler_title_female = LRSK_GOV_VAR_RT_CHAPLAINMARTIAL
+    heir_title = HT_DEPUTY_CHAPLAIN
+    heir_title_female = HT_DEPUTY_CHAPLAIN
+    should_force_rename = yes
+    use_regnal_names = yes
+    dynastic_last_names = yes
+    election_candidates = {
+        modifier = {
+            add = 500
+            leader_class = ruler
+        }
+        modifier = {
+            add = 150
+            leader_class = governor
+        }
+        modifier = {
+            add = 50
+            leader_class = scientist
+        }
+        modifier = {
+            add = 250
+            leader_class = admiral
+        }
+        modifier = {
+            add = 250
+            leader_class = general
+        }
+    }
+    possible = {
+        OR = {
+            AND = {
+                has_valid_civic = civic_corporate_dominion
+                has_valid_civic = civic_exalted_priesthood
+                has_valid_civic = civic_citizen_service
+            }
+            AND = {
+                has_authority = auth_corporate_imperial
+                has_valid_civic = civic_gospel_of_the_masses
+                OR = {
+                    has_valid_civic = civic_naval_contractors
+                    has_valid_civic = civic_private_military_companies
+                }
+            }
+        }
+    }
+    weight = {
+        base = 1500
+    }
+}

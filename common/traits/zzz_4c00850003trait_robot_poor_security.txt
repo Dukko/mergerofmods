@@ -1,0 +1,22 @@
+trait_robot_poor_security = {
+    cost = -2
+    allowed_archetypes = {
+        ROBOT
+    }
+    opposites = {
+        trait_robot_surveilance_protocol
+    }
+    custom_tooltip = TRAIT_ROBOT_POOR_SECURITY_EFFECT
+    slave_cost = {
+        energy = -100
+    }
+    ai_weight = {
+        weight = 800
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = make_robots_poor_security
+            }
+        }
+    }
+}

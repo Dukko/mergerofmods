@@ -1,0 +1,72 @@
+@Edict2Cost = 200
+@EdictDuration = 3600
+exalted_developing_civilization_outreach = {
+    length = @EdictDuration
+    icon = "GFX_edict_type_time"
+    potential = {
+        has_country_flag = exalted_domination_subject_edicts
+    }
+    allow = {
+        any_subject = {
+            relative_power = {
+                who = FROM
+                value <= equivalent
+            }
+        }
+    }
+    resources = {
+        category = subject_edicts
+        cost = {
+            influence = @Edict2Cost
+        }
+    }
+    effect = {
+        every_subject = {
+            limit = {
+                relative_power = {
+                    who = FROM
+                    value <= equivalent
+                }
+            }
+            add_modifier = {
+                modifier = modifier_exalted_developing_civilization_outreach
+            }
+            hidden_effect = {
+                set_country_flag = exalted_developing_civilization_outreach_isactive
+                add_opinion_modifier = {
+                    who = FROM
+                    modifier = opinion_subject_provided_aid
+                }
+            }
+        }
+    }
+    ai_weight = {
+        weight = @EdictMedPrio
+        modifier = {
+            weight = @EdictHighPrio
+            has_ascension_perk = ap_shared_destiny
+        }
+        modifier = {
+            factor = 0.1
+            has_country_resource = {
+                type = influence
+                amount < 500
+            }
+        }
+        modifier = {
+            factor = 0.5
+            NOR = {
+                has_ethic = ethic_egalitarian
+                has_ethic = ethic_fanatic_egalitarian
+                has_ethic = ethic_pacifist
+                has_ethic = ethic_fanatic_pacifist
+                has_ethic = ethic_xenophile
+                has_ethic = ethic_fanatic_xenophile
+            }
+        }
+        modifier = {
+            factor = 5
+            has_civic = civic_feudal_realm
+        }
+    }
+}

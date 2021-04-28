@@ -1,0 +1,209 @@
+apsr14_replicator_machine = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = apsr14_building_part_m3
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        drone_job_check_trigger = yes
+    }
+    planet_modifier = {
+        planet_pop_assembly_add = 1
+    }
+    resources = {
+        category = apsr14_planet_replicator_machine
+        produces = {
+            apsr_knowledge = 0.3
+        }
+        upkeep = {
+            energy = 5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr14_building_part_m2
+                }
+            }
+            apsr_knowledge = 0.3
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr14_building_part_m3
+                }
+            }
+            apsr_knowledge = 0.4
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                has_deposit = apsr_relic_cube_deposit
+            }
+        }
+        modifier = {
+            planet_amenities_add = 5
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                owner = {
+                    has_technology = tech_apsr14_advanced_1
+                }
+            }
+        }
+        modifier = {
+            planet_pop_assembly_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                owner = {
+                    has_technology = tech_apsr14_advanced_2
+                }
+            }
+        }
+        modifier = {
+            planet_pop_assembly_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                owner = {
+                    has_technology = tech_apsr14_advanced_3
+                }
+            }
+        }
+        modifier = {
+            planet_pop_assembly_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                owner = {
+                    has_technology = tech_apsr14_advanced_4
+                }
+            }
+        }
+        modifier = {
+            planet_pop_assembly_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                owner = {
+                    has_technology = tech_apsr14_advanced_5
+                }
+            }
+        }
+        modifier = {
+            planet_pop_assembly_add = 1
+        }
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = planet
+            planet = {
+                owner = {
+                    has_technology = tech_apsr14_advanced_1
+                }
+            }
+        }
+        modifier = {
+            planet_pop_assembly_mult = 0.01
+        }
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = planet
+            planet = {
+                owner = {
+                    has_technology = tech_apsr14_advanced_2
+                }
+            }
+        }
+        modifier = {
+            planet_pop_assembly_mult = 0.01
+        }
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = planet
+            planet = {
+                owner = {
+                    has_technology = tech_apsr14_advanced_3
+                }
+            }
+        }
+        modifier = {
+            planet_pop_assembly_mult = 0.01
+        }
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = planet
+            planet = {
+                owner = {
+                    has_technology = tech_apsr14_advanced_4
+                }
+            }
+        }
+        modifier = {
+            planet_pop_assembly_mult = 0.01
+        }
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = planet
+            planet = {
+                owner = {
+                    has_technology = tech_apsr14_advanced_5
+                }
+            }
+        }
+        modifier = {
+            planet_pop_assembly_mult = 0.01
+        }
+    }
+    weight = {
+        weight = 100
+        modifier = {
+            factor = 0.9
+            exists = owner
+            years_passed < 1
+            owner = {
+                has_valid_civic = civic_machine_assimilator
+            }
+            has_trait = trait_cybernetic
+        }
+        modifier = {
+            factor = 0.5
+            planet = {
+                has_modifier = planet_population_control_gestalt
+            }
+        }
+        modifier = {
+            factor = 1.25
+            OR = {
+                has_trait = trait_charismatic
+                has_trait = trait_robot_emotion_emulators
+            }
+        }
+        modifier = {
+            factor = 0.9
+            OR = {
+                has_trait = trait_repugnant
+                has_trait = trait_robot_uncanny
+            }
+        }
+    }
+}

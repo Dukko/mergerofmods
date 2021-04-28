@@ -1,0 +1,106 @@
+building_fortress = {
+    base_buildtime = @b1_time
+    can_build = no
+    planetary_ftl_inhibitor = yes
+    position_priority = 100
+    category = army
+    allow = {
+        has_upgraded_capital = yes
+    }
+    destroy_trigger = {
+        exists = owner
+        owner = {
+            is_ai = yes
+        }
+        OR = {
+            AND = {
+                num_buildings = {
+                    type = building_fortress
+                    value > 1
+                }
+                free_building_slots = 0
+                owner = {
+                    used_naval_capacity_percent < 0.4
+                }
+            }
+            buildings_no_motes = yes
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                not = {
+                    has_valid_civic = civic_private_militaries
+                }
+            }
+        }
+        modifier = {
+            job_soldier_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            owner = {
+                has_valid_civic = civic_private_militaries
+            }
+        }
+        modifier = {
+            job_soldier_add = 2
+            job_mercenary_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_warrior_drone_add = 3
+        }
+    }
+    resources = {
+        category = planet_buildings_strongholds
+        cost = {
+            minerals = @b2_minerals
+            volatile_motes = @b2_rare_cost
+        }
+        upkeep = {
+            energy = 1
+            volatile_motes = @b2_rare_upkeep
+        }
+    }
+    prerequisites = {
+        "tech_global_defense_grid"
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_warrior_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        text = job_soldier_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_private_militaries
+            }
+        }
+        text = job_mercenary_effect_desc
+    }
+}

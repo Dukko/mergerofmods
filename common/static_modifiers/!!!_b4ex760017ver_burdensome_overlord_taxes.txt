@@ -1,0 +1,3 @@
+ver_burdensome_overlord_taxes = {
+    trade_value_mult = -0.3
+}

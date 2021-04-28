@@ -1,0 +1,19 @@
+gle_trait_soldier_lv2 = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/gle_trait_soldier_lv2.dds"
+    modifier = {
+        job_soldier_add = 1
+        job_soldier_per_pop = 0.025
+        planet_soldiers_unity_produces_add = 1.5
+    }
+    sorting_priority = 10
+    initial = no
+    randomized = no
+    leader_trait = {
+        governor
+    }
+    leader_class = {
+        governor
+    }
+}

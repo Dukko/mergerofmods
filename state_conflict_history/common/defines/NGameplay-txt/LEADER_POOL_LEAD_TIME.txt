@@ -1,0 +1,3 @@
+NGameplay = {
+    LEADER_POOL_LEAD_TIME = 1
+}

@@ -1,0 +1,33 @@
+lrsk_gov_var_gov_proletarian_dictatorship = {
+    ruler_title = LRSK_GOV_VAR_RT_PARTY_CHAIRMAN
+    ruler_title_female = LRSK_GOV_VAR_RT_PARTY_CHAIRWOMAN
+    possible = {
+        has_valid_civic = lrsk_gov_var_civic_institutionalized_collectivism
+        OR = {
+            has_authority = auth_dictatorial
+            has_authority = auth_democratic_dictatorship
+            has_authority = auth_dem_dict_dummy
+            has_ethic = ethic_socialism
+            has_ethic = ethic_fanatic_socialism
+        }
+    }
+    election_candidates = {
+        modifier = {
+            add = 500
+            OR = {
+                leader_class = admiral
+                leader_class = general
+            }
+        }
+        modifier = {
+            add = 100
+            OR = {
+                leader_class = governor
+                leader_class = scientist
+            }
+        }
+    }
+    weight = {
+        base = 1000
+    }
+}

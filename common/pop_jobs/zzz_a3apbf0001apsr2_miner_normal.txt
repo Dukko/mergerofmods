@@ -1,0 +1,120 @@
+apsr2_miner_normal = {
+    category = worker
+    condition_string = WORKER_JOB_TRIGGER
+    building_icon = apsr2_building_part2
+    clothes_texture_index = 2
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        hidden_trigger = {
+            exists = owner
+        }
+        worker_job_check_trigger = yes
+        owner = {
+            is_gestalt = no
+        }
+    }
+    resources = {
+        category = apsr2_planet_miner_normal
+        produces = {
+            minerals = 7
+            apsr_knowledge = 0.075
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_deposit = apsr_relic_cube_deposit
+                }
+            }
+            minerals = 3.5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr2_advanced_1
+                }
+            }
+            minerals = 2.5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr2_advanced_2
+                }
+            }
+            minerals = 2.5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr2_advanced_3
+                }
+            }
+            minerals = 2.5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr2_advanced_4
+                }
+            }
+            minerals = 2.5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr2_advanced_5
+                }
+            }
+            minerals = 2.5
+        }
+    }
+    weight = {
+        weight = 100
+        modifier = {
+            factor = 1.5
+            OR = {
+                has_trait = trait_industrious
+                has_trait = trait_robot_power_drills
+            }
+        }
+        modifier = {
+            factor = 10
+            is_enslaved = yes
+            can_take_servant_job = no
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                is_non_sapient_robot = yes
+                is_shackled_robot = yes
+            }
+            can_take_servant_job = no
+        }
+        modifier = {
+            factor = 0.25
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 2
+            species = {
+                has_species_flag = racket_species_flag
+            }
+        }
+        modifier = {
+            factor = 1.2
+            has_trait = trait_very_strong
+        }
+        modifier = {
+            factor = 1.1
+            has_trait = trait_strong
+        }
+        modifier = {
+            factor = 0.9
+            has_trait = trait_weak
+        }
+    }
+}

@@ -1,0 +1,21 @@
+trait_nsc_freebooter_6 = {
+    icon = "gfx/interface/icons/traits/trait_nsc_freebooter_6.dds"
+    initial = no
+    modification = no
+    randomized = no
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    sorting_priority = 90
+    potential_crossbreeding_chance = 1
+    modifier = {
+        planet_jobs_produces_mult = -0.1
+        planet_metallurgists_alloys_produces_mult = 0.2
+        planet_researchers_produces_mult = 0.1
+    }
+    custom_tooltip = trait_nsc_freebooter_6_tooltip
+    ai_weight = {
+        weight = 0
+    }
+}

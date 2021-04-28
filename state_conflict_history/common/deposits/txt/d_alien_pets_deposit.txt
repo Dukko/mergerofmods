@@ -1,0 +1,91 @@
+@mid_rare = 0.25
+d_alien_pets_deposit = {
+    is_for_colonizeable = yes
+    category = deposit_cat_rare
+    potential = {
+        can_have_habitable_deposits = yes
+    }
+    planet_modifier = {
+        building_xeno_zoo_max = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_keepers_harmony
+            }
+        }
+        modifier = {
+            job_druid_add = 1
+            biological_pop_happiness = 0.05
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_terraforming
+            }
+        }
+        modifier = {
+            job_xenobiologist_add = 2
+        }
+    }
+    drop_weight = {
+        weight = @mid_rare
+        modifier = {
+            factor = 2
+            is_planet_class = pc_gaia
+        }
+        modifier = {
+            factor = 2
+            is_planet_class = pc_pdshroud
+        }
+        modifier = {
+            factor = 2
+            is_planet_class = pc_geothermal
+        }
+        modifier = {
+            factor = 2
+            is_planet_class = pc_superhabitable
+        }
+        modifier = {
+            factor = 2
+            is_planet_class = pc_tidallylocked
+        }
+        modifier = {
+            factor = 2
+            is_planet_class = pc_supercon
+        }
+        modifier = {
+            factor = 2
+            is_planet_class = pc_graveyard
+        }
+        modifier = {
+            factor = 2
+            is_planet_class = pc_floating
+        }
+        modifier = {
+            factor = 2
+            is_planet_class = pc_crystal
+        }
+        modifier = {
+            factor = 2
+            is_planet_class = pc_technoorganic
+        }
+        modifier = {
+            factor = 2
+            is_planet_class = pc_karst
+        }
+        modifier = {
+            factor = 0
+            solar_system = {
+                OR = {
+                    has_star_flag = empire_home_system
+                    has_star_flag = sol_system
+                    has_star_flag = deneb_system
+                }
+            }
+        }
+    }
+}

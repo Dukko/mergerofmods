@@ -1,0 +1,137 @@
+trait_traditional = {
+    cost = 1
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_quarrelsome"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    modifier = {
+        planet_jobs_unity_produces_mult = 0.2
+        pop_ethic_spiritualist_attraction_mult = 0.2
+    }
+    ai_weight = {
+        weight = 100
+        modifier = {
+            factor = 2
+            is_spiritualist = yes
+        }
+        modifier = {
+            factor = 0.5
+            has_ethic = ethic_materialist
+        }
+        modifier = {
+            factor = 0.25
+            has_ethic = ethic_fanatic_materialist
+        }
+        modifier = {
+            factor = 0.5
+            has_ethic = ethic_egalitarian
+        }
+        modifier = {
+            factor = 0.25
+            has_ethic = ethic_fanatic_egalitarian
+        }
+        modifier = {
+            factor = 0.25
+            is_spiritualist = no
+            any_owned_species = {
+                NOT = {
+                    has_citizenship_type = {
+                        country = prev
+                        type = citizenship_slavery
+                    }
+                }
+                OR = {
+                    has_trait = trait_traditional
+                    has_trait = trait_robot_propaganda_machines
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            root = {
+                OR = {
+                    AND = {
+                        OR = {
+                            has_trait = trait_industrious
+                            has_trait = trait_ingenious
+                            has_trait = trait_agrarian
+                        }
+                        NOT = {
+                            prev = {
+                                any_owned_species = {
+                                    has_citizenship_type = {
+                                        country = prev
+                                        type = citizenship_slavery
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    AND = {
+                        NOT = {
+                            has_citizenship_type = {
+                                country = prev
+                                type = citizenship_slavery
+                            }
+                        }
+                        OR = {
+                            has_trait = trait_thrifty
+                            has_trait = trait_intelligent
+                            has_trait = trait_charismatic
+                        }
+                    }
+                }
+            }
+            any_owned_species = {
+                NOR = {
+                    has_trait = trait_industrious
+                    has_trait = trait_ingenious
+                    has_trait = trait_agrarian
+                    AND = {
+                        NOT = {
+                            has_citizenship_type = {
+                                country = prev
+                                type = citizenship_slavery
+                            }
+                        }
+                        OR = {
+                            has_trait = trait_thrifty
+                            has_trait = trait_intelligent
+                            has_trait = trait_charismatic
+                        }
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 4
+            exists = root.home_planet
+            root.home_planet = {
+                has_designation = col_resort
+                is_owned_by = prev
+            }
+        }
+        modifier = {
+            factor = 0
+            root = {
+                has_citizenship_type = {
+                    country = prev
+                    type = citizenship_slavery
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            any_owned_species = {
+                has_citizenship_type = {
+                    type = citizenship_slavery
+                    country = prev
+                }
+            }
+        }
+    }
+}
