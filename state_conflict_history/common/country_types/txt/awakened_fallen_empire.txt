@@ -1,5 +1,4 @@
 awakened_fallen_empire = {
-    needs_survey = yes
     scaled_difficulty_bonuses = 1
     counts_for_victory = yes
     sub_title = "COUNTRY_AWAKENED_FALLEN_EMPIRE"
@@ -8,6 +7,7 @@ awakened_fallen_empire = {
     relations = yes
     fallen_empire = yes
     awakened_fallen_empire = yes
+    needs_survey = no
     diplomatic_wars = yes
     ship_disengagement = yes
     army_disengagement = yes
@@ -148,8 +148,6 @@ awakened_fallen_empire = {
         exclusive_diplomacy_module = {
             contact_rule = always
             can_receive = {
-                action_open_borders
-                action_close_borders
                 action_declare_war
                 action_offer_peace
                 action_make_rival

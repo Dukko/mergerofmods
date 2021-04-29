@@ -61,6 +61,7 @@ purge_processing = {
         modifier = {
             factor = 0
             NOR = {
+                has_trait = trait_delicious
                 from = {
                     OR = {
                         has_valid_civic = civic_hive_parasitic

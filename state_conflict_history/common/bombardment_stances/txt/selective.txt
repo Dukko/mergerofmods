@@ -3,7 +3,7 @@ selective = {
         OR = {
             owner = {
                 is_ai = no
-            OR = {
+                OR = {
                     has_policy_flag = orbital_bombardment_selective
                     has_policy_flag = orbital_bombardment_indiscriminate
                     has_policy_flag = orbital_bombardment_armageddon
@@ -13,24 +13,24 @@ selective = {
                 is_ai = yes
                 has_policy_flag = orbital_bombardment_selective
                 NOR = {
-                has_policy_flag = orbital_bombardment_indiscriminate
-                has_policy_flag = orbital_bombardment_armageddon
+                    has_policy_flag = orbital_bombardment_indiscriminate
+                    has_policy_flag = orbital_bombardment_armageddon
                     has_valid_civic = civic_barbaric_despoilers
                     has_ascension_perk = ap_nihilistic_acquisition
+                }
             }
         }
-    }
     }
     icon_frame = 1
     default = yes
     stop_when_armies_dead = yes
     abduct_pops = no
-    planet_damage = 0.5
-    army_damage = 3
+    planet_damage = 1
+    army_damage = 5
     kill_pop_chance = {
         base = 0.25
     }
-    min_pops_to_kill_pop = 21
+    min_pops_to_kill_pop = 11
     ai_weight = {
         weight = 1
     }

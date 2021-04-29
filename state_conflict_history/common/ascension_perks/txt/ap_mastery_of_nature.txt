@@ -1,5 +1,6 @@
 ap_mastery_of_nature = {
     on_enabled = {
+        custom_tooltip = "worthy_ap_mastery_of_nature"
         custom_tooltip = "allow_decision_mastery_of_nature"
         custom_tooltip = "describe_decision_mastery_of_nature"
         hidden_effect = {

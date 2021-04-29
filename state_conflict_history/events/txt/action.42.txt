@@ -1,0 +1,235 @@
+namespace = action
+planet_event = {
+    id = action.42
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        NOT = {
+            has_planet_flag = ccrebel_rebellion_transfer
+        }
+        owner = {
+            has_policy_flag = appropriation_allowed
+        }
+    }
+    immediate = {
+        random_list = {
+            25 = {
+                while = {
+                    count = 5
+                    if = {
+                        limit = {
+                            OR = {
+                                num_pops > 10
+                                AND = {
+                                    num_pops > 3
+                                    free_housing < 1
+                                }
+                            }
+                        }
+                        random_owned_pop = {
+                            limit = {
+                                is_sapient = yes
+                                has_citizenship_rights = no
+                                NOT = {
+                                    has_citizenship_type = {
+                                        type = citizenship_assimilation
+                                    }
+                                }
+                            }
+                            pop_event = {
+                                id = refugees.4
+                            }
+                            root = {
+                                change_variable = {
+                                    which = land_appropriated
+                                    value = 1
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            25 = {
+                while = {
+                    count = 4
+                    if = {
+                        limit = {
+                            OR = {
+                                num_pops > 10
+                                AND = {
+                                    num_pops > 3
+                                    free_housing < 1
+                                }
+                            }
+                        }
+                        random_owned_pop = {
+                            limit = {
+                                is_sapient = yes
+                                has_citizenship_rights = no
+                                NOT = {
+                                    has_citizenship_type = {
+                                        type = citizenship_assimilation
+                                    }
+                                }
+                            }
+                            pop_event = {
+                                id = refugees.4
+                            }
+                            root = {
+                                change_variable = {
+                                    which = land_appropriated
+                                    value = 1
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            25 = {
+                while = {
+                    count = 3
+                    if = {
+                        limit = {
+                            OR = {
+                                num_pops > 10
+                                AND = {
+                                    num_pops > 3
+                                    free_housing < 1
+                                }
+                            }
+                        }
+                        random_owned_pop = {
+                            limit = {
+                                is_sapient = yes
+                                has_citizenship_rights = no
+                                NOT = {
+                                    has_citizenship_type = {
+                                        type = citizenship_assimilation
+                                    }
+                                }
+                            }
+                            pop_event = {
+                                id = refugees.4
+                            }
+                            root = {
+                                change_variable = {
+                                    which = land_appropriated
+                                    value = 1
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        while = {
+            limit = {
+                check_variable = {
+                    which = land_appropriated
+                    value > 0
+                }
+            }
+            change_variable = {
+                which = land_appropriated
+                value = -1
+            }
+            owner = {
+                if = {
+                    limit = {
+                        any_owned_planet = {
+                            free_housing < 1
+                            any_owned_pop = {
+                                is_sapient = yes
+                                has_citizenship_rights = yes
+                                OR = {
+                                    is_pop_category = worker
+                                    is_pop_category = simple_drone
+                                }
+                            }
+                        }
+                    }
+                    random_owned_planet = {
+                        limit = {
+                            free_housing < 1
+                            any_owned_pop = {
+                                is_sapient = yes
+                                has_citizenship_rights = yes
+                                OR = {
+                                    is_pop_category = worker
+                                    is_pop_category = simple_drone
+                                }
+                            }
+                        }
+                        random_owned_pop = {
+                            limit = {
+                                is_sapient = yes
+                                has_citizenship_rights = yes
+                                OR = {
+                                    is_pop_category = worker
+                                    is_pop_category = simple_drone
+                                }
+                            }
+                            resettle_pop = {
+                                pop = this
+                                planet = root
+                            }
+                        }
+                    }
+                }
+                else_if = {
+                    limit = {
+                        any_owned_planet = {
+                            any_owned_pop = {
+                                is_sapient = yes
+                                has_citizenship_rights = yes
+                                OR = {
+                                    is_pop_category = worker
+                                    is_pop_category = simple_drone
+                                }
+                            }
+                        }
+                    }
+                    random_owned_planet = {
+                        limit = {
+                            any_owned_pop = {
+                                is_sapient = yes
+                                has_citizenship_rights = yes
+                                OR = {
+                                    is_pop_category = worker
+                                    is_pop_category = simple_drone
+                                }
+                            }
+                        }
+                        random_owned_pop = {
+                            limit = {
+                                is_sapient = yes
+                                has_citizenship_rights = yes
+                                OR = {
+                                    is_pop_category = worker
+                                    is_pop_category = simple_drone
+                                }
+                            }
+                            resettle_pop = {
+                                pop = this
+                                planet = root
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        if = {
+            limit = {
+                owner = {
+                    NOT = {
+                        has_ethic = ethic_gestalt_consciousness
+                    }
+                }
+            }
+            add_modifier = {
+                modifier = "land_appropriation"
+                years = 5
+            }
+        }
+    }
+}
