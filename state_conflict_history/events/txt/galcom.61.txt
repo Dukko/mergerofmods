@@ -25,6 +25,16 @@ country_event = {
                     modifier = opinion_fellow_galcom_member
                 }
             }
+            remove_opinion_modifier = {
+                who = root
+                modifier = opinion_prosperously_unified_galaxy
+            }
+            root = {
+                remove_opinion_modifier = {
+                    who = prev
+                    modifier = opinion_prosperously_unified_galaxy
+                }
+            }
         }
         if = {
             limit = {

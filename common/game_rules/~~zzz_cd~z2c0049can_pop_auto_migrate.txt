@@ -1,0 +1,15 @@
+can_pop_auto_migrate = {
+    planet = {
+        NOT = {
+            has_modifier = planet_culture_shock
+        }
+        OR = {
+            colony_age > 60
+            is_capital = yes
+        }
+        exists = owner
+    }
+    is_sapient = yes
+    is_unemployed = yes
+    is_being_assimilated = no
+}
