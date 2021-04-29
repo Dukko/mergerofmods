@@ -1,0 +1,44 @@
+PRE_FUN = {
+    archetype = PRESAPIENT
+    playable = {
+        always = no
+    }
+    randomized = no
+    gender = no
+    portraits = {
+        "pre_fun1"
+        "pre_fun2"
+        "pre_fun3"
+        "pre_fun4"
+        "pre_fun6"
+        "pre_fun7"
+        "pre_fun8"
+        "pre_fun9"
+        "pre_fun10"
+        "pre_fun11"
+        "pre_fun12"
+        "pre_fun13"
+        "pre_fun14"
+        "pre_fun15"
+    }
+    graphical_culture = fungoid_01
+    move_pop_sound_effect = "fungoid_pops_move"
+    uplifted_into = "FUN"
+    uplifted_portraits = {
+        "fun1"
+        "fun2"
+        "fun3"
+        "fun4"
+        "fun6"
+        "fun7"
+        "fun8"
+        "fun9"
+        "fun10"
+        "fun11"
+        "fun12"
+        "fun13"
+        "fun14"
+        "fun15"
+    }
+    trait = trait_fungoid
+}

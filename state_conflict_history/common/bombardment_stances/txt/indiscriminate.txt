@@ -32,12 +32,12 @@ indiscriminate = {
     default = no
     stop_when_armies_dead = no
     abduct_pops = no
-    planet_damage = 5
-    army_damage = 10
+    planet_damage = 1.5
+    army_damage = 4.5
     kill_pop_chance = {
         base = 0.75
     }
-    min_pops_to_kill_pop = 2
+    min_pops_to_kill_pop = 11
     ai_weight = {
         weight = 5
         modifier = {

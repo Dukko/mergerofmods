@@ -123,7 +123,6 @@ planet_event = {
                             has_federation = yes
                             is_in_federation_with = from.owner
                         }
-                        is_loyal_to = from.owner
                     }
                     OR = {
                         has_communications = from.owner

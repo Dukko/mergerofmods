@@ -22,7 +22,6 @@ can_support_branch_offices = {
             has_authority = auth_corporate
             has_civic = civic_galactic_sovereign_megacorp
         }
-                is_subject_type = subsidiary2
     }
     custom_tooltip = {
         fail_text = BRANCH_OFFICE_NOT_REGULAR_EMPIRE

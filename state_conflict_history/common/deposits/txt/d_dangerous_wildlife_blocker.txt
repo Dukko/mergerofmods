@@ -15,7 +15,6 @@ d_dangerous_wildlife_blocker = {
     planet_modifier = {
         planet_max_districts_add = -2
     }
-    all_blocker_swap_types = yes
     triggered_planet_modifier = {
         potential = {
             exists = owner
@@ -41,29 +40,22 @@ d_dangerous_wildlife_blocker = {
             job_xenobiologist_add = 2
         }
     }
+    all_blocker_swap_types = yes
     on_cleared = {
         hidden_effect = {
         if = {
             limit = {
                 exists = owner
-            }
-            owner = {
-                add_resource = {
-                    society_research = 50
-                }
-            }
-            if = {
-                limit = {
                     owner = {
                         has_valid_civic = civic_hive_devouring_swarm
                     }
-                }
-                owner = {
-                    add_resource = {
+            }
+            owner = {
+                add_resource = {
                         food = 200
-                    }
                 }
             }
+        }
             if = {
                 limit = {
                     exists = owner

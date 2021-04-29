@@ -79,8 +79,6 @@ building_hab_capital = {
             }
         }
         job_roboticist_add = 1
-        planet_pop_assembly_add = 1
-        pop_growth_speed = -0.5
     }
     triggered_planet_modifier = {
         potential = {
@@ -137,7 +135,6 @@ building_hab_capital = {
         job_replicator_add = 1
         job_maintenance_drone_add = 2
         planet_amenities_add = 3
-        planet_pop_assembly_add = 1
     }
     triggered_desc = {
         trigger = {

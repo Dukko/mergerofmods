@@ -1,8 +1,4 @@
 ap_galactic_force_projection = {
-    on_enabled = {
-        custom_tooltip = "worthy_ap_galactic_force_projection_jobs"
-        custom_tooltip = "worthy_ap_galactic_force_projection_anchorage"
-    }
     possible = {
         custom_tooltip = {
             fail_text = "requires_ascension_perks_2"

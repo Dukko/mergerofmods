@@ -1,0 +1,75 @@
+space_factory = {
+    section = "ANCHORAGE_STARBASE_SECTION"
+    icon = "GFX_starbase_space_factory"
+    construction_days = 120
+    resources = {
+        category = starbase_modules
+        cost = {
+            alloys = 75
+        }
+        produces = {
+            consumer_goods = 10
+        }
+        produces = {
+            trigger = {
+                has_starbase_building = chain_manufacturing
+            }
+            consumer_goods = 2
+        }
+        upkeep = {
+            minerals = 10
+            energy = 2
+        }
+    }
+    ai_build_at_chokepoint = no
+    ai_build_outside_chokepoint = yes
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = tech_luxuries_1
+        }
+    }
+    ai_weight = {
+        weight = 50
+        modifier = {
+            factor = 5
+            has_starbase_size < starbase_starport
+        }
+        modifier = {
+            factor = 4
+            count_starbase_modules = {
+                type = space_factory
+                count > 1
+            }
+        }
+        modifier = {
+            factor = 3
+            count_starbase_modules = {
+                type = space_factory
+                count > 2
+            }
+        }
+        modifier = {
+            factor = 2
+            count_starbase_modules = {
+                type = space_factory
+                count > 3
+            }
+        }
+        modifier = {
+            factor = 1
+            count_starbase_modules = {
+                type = space_factory
+                count > 4
+            }
+        }
+        modifier = {
+            factor = 0
+            count_starbase_modules = {
+                type = space_factory
+                count > 5
+            }
+        }
+    }
+    show_in_tech = "tech_luxuries_1"
+}
