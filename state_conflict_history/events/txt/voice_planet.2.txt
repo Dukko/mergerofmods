@@ -1,0 +1,109 @@
+namespace = immortal_ruler
+namespace = unity_patrons
+namespace = glorious_fleet
+namespace = voice_planet
+namespace = observation
+planet_event = {
+    id = voice_planet.2
+    hide_window = yes
+    is_triggered_only = yes
+    location = ROOT
+    immediate = {
+        if = {
+            limit = {
+                has_modifier = "unstable_tectonics"
+            }
+            remove_modifier = "unstable_tectonics"
+        }
+        if = {
+            limit = {
+                has_modifier = "weak_magnetic_field"
+            }
+            remove_modifier = "weak_magnetic_field"
+        }
+        if = {
+            limit = {
+                has_modifier = "tidal_locked"
+            }
+            remove_modifier = "tidal_locked"
+        }
+        if = {
+            limit = {
+                has_modifier = "irradiated_planet"
+            }
+            remove_modifier = "irradiated_planet"
+        }
+        if = {
+            limit = {
+                has_modifier = "damaged_ecology"
+            }
+            remove_modifier = "damaged_ecology"
+        }
+        if = {
+            limit = {
+                has_modifier = "wasteland_radiation"
+            }
+            remove_modifier = "wasteland_radiation"
+        }
+        if = {
+            limit = {
+                has_modifier = "abandoned_terraforming"
+            }
+            remove_modifier = "abandoned_terraforming"
+        }
+        if = {
+            limit = {
+                has_modifier = "gpm_thin_atmospheres"
+            }
+            remove_modifier = "gpm_thin_atmospheres"
+        }
+        if = {
+            limit = {
+                has_modifier = "gpm_strong_volcanism"
+            }
+            remove_modifier = "gpm_strong_volcanism"
+        }
+        if = {
+            limit = {
+                has_modifier = "gpm_weak_magnetic_field_2"
+            }
+            remove_modifier = "gpm_weak_magnetic_field_2"
+        }
+        if = {
+            limit = {
+                has_modifier = "gpm_strong_magnetic_field_2"
+            }
+            remove_modifier = "gpm_strong_magnetic_field_2"
+        }
+        if = {
+            limit = {
+                has_modifier = "gpm_unstable_tectonics_2"
+            }
+            remove_modifier = "gpm_unstable_tectonics_2"
+        }
+        if = {
+            limit = {
+                has_modifier = "gpm_artificial_water"
+            }
+            remove_modifier = "gpm_artificial_water"
+        }
+        if = {
+            limit = {
+                has_modifier = "gpm_unusual_formations"
+            }
+            remove_modifier = "gpm_unusual_formations"
+        }
+        if = {
+            limit = {
+                has_modifier = "gpm_flat_terrain"
+            }
+            remove_modifier = "gpm_flat_terrain"
+        }
+        if = {
+            limit = {
+                has_modifier = "gpm_rugged_terrain"
+            }
+            remove_modifier = "gpm_rugged_terrain"
+        }
+    }
+}

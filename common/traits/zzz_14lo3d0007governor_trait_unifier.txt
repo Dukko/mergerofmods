@@ -1,0 +1,14 @@
+governor_trait_unifier = {
+    cost = 1
+    modification = no
+    icon = "gfx/interface/icons/traits/governor_trait_unifier.dds"
+    modifier = {
+        planet_jobs_unity_produces_mult = 0.1
+    }
+    leader_trait = {
+        governor
+    }
+    leader_class = {
+        governor
+    }
+}

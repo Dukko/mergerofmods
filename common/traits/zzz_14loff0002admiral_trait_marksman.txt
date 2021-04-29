@@ -1,0 +1,17 @@
+admiral_trait_marksman = {
+    cost = 1
+    modification = no
+    icon = "gfx/interface/icons/traits/admiral_trait_marksman.dds"
+    modifier = {
+        ship_tracking_mult = 0.1
+    }
+    leader_trait = {
+        admiral
+    }
+    leader_class = {
+        admiral
+    }
+    opposites = {
+        "admiral_boon_expert_marksman"
+    }
+}

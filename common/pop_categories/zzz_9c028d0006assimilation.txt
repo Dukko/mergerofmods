@@ -1,0 +1,82 @@
+assimilation = {
+    rank = 0
+    assign_to_pop = {
+        is_being_assimilated = yes
+    }
+    weight = {
+        weight = 15
+    }
+    allow_resettlement = {
+        always = yes
+    }
+    resettlement_cost = {
+        energy = 100
+    }
+    pop_modifier = {
+        pop_political_power = -1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            valuable_secretions_check = yes
+            can_generate_trade_value = yes
+        }
+        trade_value_add = 0.4
+    }
+    triggered_pop_modifier = {
+        potential = {
+            has_trait = trait_exotic_gas_dependency
+            exists = owner
+            owner = {
+                has_deficit = exotic_gases
+            }
+        }
+        pop_happiness = -0.5
+        planet_pops_produces_mult = -0.4
+        pop_decline_speed = 2
+    }
+    triggered_pop_modifier = {
+        potential = {
+            has_trait = trait_dimorphic_female
+            has_reproductive_politics = yes
+            owner = {
+                has_valid_civic = civic_patriarchy
+            }
+        }
+        pop_political_power = -0.25
+        pop_happiness = -0.5
+    }
+    triggered_pop_modifier = {
+        potential = {
+            has_trait = trait_dimorphic_male
+            has_reproductive_politics = yes
+            owner = {
+                has_valid_civic = civic_patriarchy
+            }
+        }
+        pop_political_power = 0.25
+        pop_happiness = 0.5
+    }
+    resources = {
+        category = pop_category_assimilation
+        upkeep = {
+            trigger = {
+                is_organic_species = yes
+                is_lithoid = no
+            }
+            food = @living_standard_food_normal
+        }
+        upkeep = {
+            trigger = {
+                has_trait = trait_exotic_gas_dependency
+            }
+            exotic_gases = 0.01
+        }
+        upkeep = {
+            trigger = {
+                is_organic_species = yes
+                is_lithoid = yes
+            }
+            minerals = @living_standard_food_normal
+        }
+    }
+}

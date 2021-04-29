@@ -15,6 +15,7 @@ pc_midas_city = {
         planet_jobs_produces_mult = 0.2
         trade_value_mult = 0.25
         pop_growth_speed = 0.5
+        planet_max_buildings_add = 12
     }
     spawn_odds = 0
     extra_orbit_size = 0

@@ -20,24 +20,25 @@ anchorage = {
         }
         country_naval_cap_add = 10
     }
-    ai_build_at_chokepoint = yes
-    ai_build_outside_chokepoint = yes
-    ai_weight = {
-        weight = 300
-        modifier = {
-            factor = 0
-            not = {
-                has_starbase_module = anchorage
-            }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
             owner = {
-                needs_shipyard = yes
+                has_ascension_perk = ap_galactic_force_projection
             }
         }
         modifier = {
-            factor = 0
-            has_starbase_module = shipyard
+            country_naval_cap_add = 2
+        }
+    }
+    ai_build_at_chokepoint = no
+    ai_build_outside_chokepoint = yes
+    ai_weight = {
+        weight = 20
+        modifier = {
+            factor = 2
             count_starbase_modules = {
-                type = shipyard
+                type = anchorage
                 count < 2
             }
         }

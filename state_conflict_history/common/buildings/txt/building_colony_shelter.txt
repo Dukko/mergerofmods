@@ -49,6 +49,8 @@ building_colony_shelter = {
         }
         job_roboticist_add = 1
         job_colonist_add = 1
+        planet_pop_assembly_add = 2
+        pop_growth_speed = -0.5
     }
     resources = {
         category = planet_buildings

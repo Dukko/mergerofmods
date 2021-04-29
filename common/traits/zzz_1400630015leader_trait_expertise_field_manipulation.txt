@@ -1,0 +1,60 @@
+@categorybonus = 0.15
+leader_trait_expertise_field_manipulation = {
+    cost = 1
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/leader_trait_expertise_field_manipulation.dds"
+    modifier = {
+        category_field_manipulation_research_speed_mult = @categorybonus
+    }
+    leader_trait = {
+        scientist
+    }
+    leader_class = {
+        scientist
+    }
+    opposites = {
+        "leader_trait_expertise_biology"
+        "leader_trait_expertise_computing"
+        "leader_trait_expertise_field_manipulation"
+        "leader_trait_expertise_industry"
+        "leader_trait_expertise_materials"
+        "leader_trait_expertise_military_theory"
+        "leader_trait_expertise_new_worlds"
+        "leader_trait_expertise_particles"
+        "leader_trait_expertise_propulsion"
+        "leader_trait_expertise_psionics"
+        "leader_trait_expertise_statecraft"
+        "leader_trait_expertise_voidcraft"
+        "researcher_boon_mastery_biology"
+        "researcher_boon_mastery_computing"
+        "researcher_boon_mastery_field_manipulation"
+        "researcher_boon_mastery_industry"
+        "researcher_boon_mastery_materials"
+        "researcher_boon_mastery_military_theory"
+        "researcher_boon_mastery_new_worlds"
+        "researcher_boon_mastery_particles"
+        "researcher_boon_mastery_propulsion"
+        "researcher_boon_mastery_psionics"
+        "researcher_boon_mastery_statecraft"
+        "researcher_boon_mastery_voidcraft"
+        "leader_trait_archaeologist"
+        "leader_trait_archaeologist_ancrel"
+        "leader_trait_carefree"
+        "leader_trait_meticulous"
+        "leader_trait_roamer"
+        "surveyor_boon_observer"
+        "surveyor_flaw_anxious"
+        "surveyor_flaw_inattentive"
+        "surveyor_flaw_slow"
+        "surveyor_quirk_quick"
+        "surveyor_quirk_thorough"
+        "surveyor_trait_explorer"
+        "surveyor_trait_systems_engineer"
+    }
+    ai_categories = {
+        physics
+    }
+    ai_weight = {
+        weight = 100
+    }
+}

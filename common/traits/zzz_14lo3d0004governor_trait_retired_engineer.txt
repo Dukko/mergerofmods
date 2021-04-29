@@ -1,0 +1,21 @@
+governor_trait_retired_engineer = {
+    cost = 1
+    modification = no
+    icon = "gfx/interface/icons/traits/governor_trait_retired_engineer.dds"
+    modifier = {
+        planet_jobs_engineering_research_produces_mult = 0.3
+    }
+    leader_trait = {
+        governor
+    }
+    leader_class = {
+        governor
+    }
+    opposites = {
+        "leader_trait_army_veteran"
+        "leader_trait_retired_fleet_officer"
+        "governor_flaw_pseudo_intellectual"
+        "governor_trait_retired_physicist"
+        "governor_trait_retired_sociologist"
+    }
+}

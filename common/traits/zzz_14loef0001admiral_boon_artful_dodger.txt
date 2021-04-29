@@ -1,0 +1,18 @@
+admiral_boon_artful_dodger = {
+    cost = 2
+    modification = no
+    icon = "gfx/interface/icons/traits/admiral_boon_artful_dodger.dds"
+    modifier = {
+        ship_evasion_mult = 0.22
+    }
+    leader_trait = {
+        admiral
+    }
+    leader_class = {
+        admiral
+    }
+    opposites = {
+        "admiral_trait_nimble"
+        "admiral_flaw_sitting_duck"
+    }
+}

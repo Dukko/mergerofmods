@@ -31,6 +31,13 @@ can_build_branch_office_on_planet = {
                     is_same_value = owner
                 }
             }
+            root = {
+                is_subject = yes
+                is_subject_type = subsidiary2
+                overlord = {
+                    is_same_value = owner
+                }
+            }
             owner = {
                 is_subject = yes
                 is_subject_type = subsidiary
@@ -38,6 +45,13 @@ can_build_branch_office_on_planet = {
                     is_same_value = root
                 }
             }
+            owner = {
+                is_subject = yes
+                is_subject_type = subsidiary2
+                overlord = {
+                    is_same_value = root
+        }
+    }
         }
     }
     custom_tooltip = {
