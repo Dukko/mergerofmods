@@ -1,0 +1,27 @@
+civic_functional_architecture = {
+    description = "civic_tooltip_functional_architecture_effects"
+    pickable_at_start = no
+    modification = no
+    potential = {
+        always = no
+        ethics = {
+            NOT = {
+                value = ethic_gestalt_consciousness
+            }
+        }
+        authority = {
+            NOR = {
+                value = auth_corporate
+                value = auth_corporate_imperial
+            }
+        }
+    }
+    random_weight = {
+        base = 5
+    }
+    modifier = {
+        planet_structures_cost_mult = -0.1
+        planet_structures_upkeep_mult = -0.1
+        planet_max_buildings_add = 1
+    }
+}

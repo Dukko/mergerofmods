@@ -74,8 +74,8 @@ dependencies={
 	"Civics Expanded+ & More Authorities Compatibility Patch"
 	"Sins of the Prophets: NSC Compatibility Patch"
 }
-path="D:/Documents/Paradox Interactive/Stellaris/mod/IronyModManager_Dick_0.7.9.6"
-name="IronyModManager_Dick_0.7.9.6"
+path="D:/Documents/Paradox Interactive/Stellaris/mod/IronyModManager_Dick_0.7.9.7"
+name="IronyModManager_Dick_0.7.9.7"
 tags={
 	"Fixes"
 }

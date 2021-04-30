@@ -74,11 +74,12 @@ d_dangerous_wildlife_blocker = {
                 owner = {
                     add_resource = {
                         society_research = 200
+                        }
                     }
                 }
             }
         }
-    }
+    }    
     drop_weight = {
         weight = @blocker_low
         modifier = {

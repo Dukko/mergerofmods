@@ -1,0 +1,35 @@
+computer_technician = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_super_computers_station
+    clothes_texture_index = 3
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        complex_specialist_job_check_trigger = yes
+    }
+    planet_modifier = {
+        planet_researchers_physics_research_produces_mult = 0.1
+    }
+    resources = {
+        category = planet_computer
+        upkeep = {
+            consumer_goods = 1
+        }
+    }
+    weight = {
+        weight = @colonist_job_weight
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 5
+            has_job = computer_technician
+        }
+    }
+}
