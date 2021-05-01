@@ -157,7 +157,7 @@ country_event = {
             limit = {
                 has_star_flag = lcluster5
             }
-            save_global_event_target_as = lcluster5
+                    save_global_event_target_as = lcluster_factory_system
                 }
             }
         }
@@ -223,10 +223,9 @@ country_event = {
                     id = gpm_engine.1
                 }
             }
-        }
-        event_target:lcluster5 = {
+        event_target:lcluster_factory_system = {
             add_hyperlane = {
-                from = event_target:lcluster5
+                from = event_target:lcluster_factory_system
                 to = event_target:lcluster4
             }
         }
@@ -273,11 +272,19 @@ country_event = {
                 from = event_target:lcluster1
                 to = event_target:lcluster1b
             }
-        }
-        event_target:lcluster1b = {
-            add_hyperlane = {
-                from = event_target:lcluster1b
-                to = event_target:lcluster2b
+                random_system_megastructure = {
+                    limit = {
+                        is_megastructure_type = lgate_base
+                    }
+                    activate_gateway = this
+                    set_megastructure_flag = lgate_activated
+                }
+            }
+            event_target:lcluster1b = {
+                add_hyperlane = {
+                    from = event_target:lcluster1b
+                    to = event_target:lcluster2b
+                }
             }
         }
         set_spawn_system_batch = end

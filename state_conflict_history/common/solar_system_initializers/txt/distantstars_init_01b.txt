@@ -9,7 +9,6 @@ distantstars_init_01b = {
     flags = {
         hostile_system
         lcluster
-        empire_cluster
         lcluster1b
     }
     planet = {

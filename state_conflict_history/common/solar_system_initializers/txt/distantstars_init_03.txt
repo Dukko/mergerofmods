@@ -5,7 +5,6 @@ distantstars_init_03 = {
     flags = {
         hostile_system
         lcluster
-        empire_cluster
         lcluster3
     }
     planet = {
@@ -21,7 +20,6 @@ distantstars_init_03 = {
     }
     change_orbit = 70
     planet = {
-        name = "NAME_Sel-Ufaan"
         class = pc_shattered
         orbit_distance = 10
         orbit_angle = {

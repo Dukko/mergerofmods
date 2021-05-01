@@ -14,6 +14,13 @@ soldier = {
                     has_designation = col_habitat_fortress
                 }
             }
+        }
+        modifier = {
+            country_naval_cap_add = 2
+        }
+    }
+    triggered_country_modifier = {
+        potential = {
             OR = {
                 has_trait = trait_zero_g_adapted
                 has_trait = trait_robot_astro
@@ -92,12 +99,6 @@ soldier = {
         soldier_job_check_trigger = yes
         owner = {
             is_gestalt = no
-        }
-        OR = {
-            NOT = {
-                has_ethic = ethic_pacifist
-            }
-            is_enslaved = yes
         }
         OR = {
             traits_restrict_worker_jobs = no

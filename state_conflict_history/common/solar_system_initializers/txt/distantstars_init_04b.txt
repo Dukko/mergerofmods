@@ -50,6 +50,17 @@ distantstars_init_04b = {
             min = 90
             max = 270
         }
+        size = 20
+        init_effect = {
+            if = {
+                limit = {
+                    no_scope = {
+                        has_global_flag = gray_goo_empire_set
+                    }
+                }
+                set_capital = yes
+            }
+        }
     }
     planet = {
         class = pc_barren_cold

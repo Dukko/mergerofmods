@@ -2,7 +2,7 @@ trait_naturally_spiritualist = {
     cost = 1
     potential_crossbreeding_chance = 1
     opposites = {
-        "trait_naturally_spiritualist"
+        "trait_naturally_materialist"
         "trait_hive_mind"
         "trait_necrophage"
         "trait_parasitoid"
