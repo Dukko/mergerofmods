@@ -1,0 +1,3 @@
+NGameplay = {
+    HYPERLANE_GEN_REMOVED_MAX_DIST = 16
+}

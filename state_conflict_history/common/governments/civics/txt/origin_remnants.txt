@@ -27,6 +27,15 @@ origin_remnants = {
     }
     advanced_start = yes
     random_weight = {
-        base = 5
+        base = 0
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = game_started
+                NOT = {
+                    has_global_flag = game_started
+                }
+            }
+        }
     }
 }

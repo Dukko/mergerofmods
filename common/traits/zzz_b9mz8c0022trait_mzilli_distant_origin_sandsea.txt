@@ -1,0 +1,83 @@
+trait_mzilli_distant_origin_sandsea = {
+    cost = 0
+    icon = "gfx/interface/icons/traits/trait_pc_sandsea_preference.dds"
+    sorting_priority = -20
+    modification = no
+    allowed_archetypes = {
+        BIOLOGICAL
+        MACHINE
+        ROBOT
+        LITHOID
+    }
+    opposites = {
+        "trait_mzilli_distant_origin_desert"
+        "trait_mzilli_distant_origin_savannah"
+        "trait_mzilli_distant_origin_arctic"
+        "trait_mzilli_distant_origin_alpine"
+        "trait_mzilli_distant_origin_tundra"
+        "trait_mzilli_distant_origin_continental"
+        "trait_mzilli_distant_origin_tropical"
+        "trait_mzilli_distant_origin_ocean"
+        "trait_mzilli_distant_origin_earth"
+        "trait_mzilli_distant_origin_xarmir"
+        "trait_mzilli_distant_origin_arid"
+        "trait_mzilli_distant_origin_hajungle"
+        "trait_mzilli_distant_origin_desertislands"
+        "trait_mzilli_distant_origin_cascadian"
+        "trait_mzilli_distant_origin_swamp"
+        "trait_mzilli_distant_origin_geothermal"
+        "trait_mzilli_distant_origin_glacial"
+        "trait_mzilli_distant_origin_subarctic"
+        "trait_mzilli_distant_origin_mesa"
+        "trait_mzilli_distant_origin_oasis"
+        "trait_mzilli_distant_origin_mangrove"
+        "trait_mzilli_distant_origin_frozen_desert"
+        "trait_mzilli_distant_origin_steppe"
+        "trait_mzilli_distant_origin_hadesert"
+        "trait_mzilli_distant_origin_methane"
+        "trait_mzilli_distant_origin_ammonia"
+        "trait_mzilli_distant_origin_tidallylocked"
+        "trait_mzilli_distant_origin_biolumen"
+        "trait_mzilli_distant_origin_boreal"
+        "trait_mzilli_distant_origin_mushroom"
+        "trait_mzilli_distant_origin_superhabitable"
+        "trait_mzilli_distant_origin_retinal"
+        "trait_mzilli_distant_origin_forest"
+        "trait_mzilli_distant_origin_prairie"
+        "trait_mzilli_distant_origin_med"
+        "trait_mzilli_distant_origin_antarctic"
+        "trait_mzilli_distant_origin_snow"
+        "trait_mzilli_distant_origin_karst"
+        "trait_mzilli_distant_origin_primal"
+        "trait_mzilli_distant_origin_irradiated"
+        "trait_mzilli_distant_origin_ash"
+        "trait_mzilli_distant_origin_aquatic"
+        "trait_mzilli_distant_origin_salt"
+        "trait_mzilli_distant_origin_wetswamp"
+        "trait_mzilli_distant_origin_outback"
+        "trait_mzilli_distant_origin_highland"
+        "trait_mzilli_distant_origin_lake"
+        "trait_mzilli_distant_origin_veld"
+        "trait_mzilli_distant_origin_mud"
+        "trait_mzilli_distant_origin_megaflora"
+        "trait_mzilli_distant_origin_coral"
+        "trait_mzilli_distant_origin_storm"
+        "trait_mzilli_distant_origin_rogue"
+        "trait_mzilli_distant_origin_acid"
+        "trait_mzilli_distant_origin_tepid"
+        "trait_mzilli_distant_origin_semiarid"
+        "trait_mzilli_distant_origin_glacio"
+        "trait_mzilli_distant_origin_eyeball"
+        "trait_mzilli_distant_origin_sulfur"
+        "trait_mzilli_distant_origin_supercon"
+        "trait_mzilli_distant_origin_aeolian"
+        "trait_mzilli_distant_origin_duneforest"
+        "trait_mzilli_distant_origin_aquifer"
+        "trait_mzilli_distant_origin_lanthanide"
+        "trait_mzilli_distant_origin_lichen"
+    }
+    ai_weight = {
+        weight = 0
+    }
+    randomized = no
+}

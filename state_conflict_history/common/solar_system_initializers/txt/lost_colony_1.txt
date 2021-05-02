@@ -29,6 +29,9 @@ lost_colony_1 = {
                         }
                     }
                 }
+                NOT = {
+                    has_a_distant_origin_trait = yes
+                }
             }
             NOT = {
                 has_star_flag = empire_cluster

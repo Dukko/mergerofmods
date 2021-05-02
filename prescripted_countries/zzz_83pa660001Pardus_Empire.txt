@@ -1,0 +1,65 @@
+"Pardus Empire" = {
+    key = "Pardus Empire"
+    ship_prefix = "ISS"
+    species = {
+        class = "EPARD"
+        portrait = "pardus"
+        name = "Pardus"
+        plural = "Pardusa"
+        adjective = "Pardusan"
+        species_bio = "It is an axiom, dating back from the very first stories in recorded history, that the Pardus are destined for glory. The first emperors brought the unruly pride of warriors together for a single purpose - the glory of all Pardus kind. The early empire spread quickly, and peace, through discipline and faith, spread across all Panthera - peace for those wise enough to accept the benovolent rule of the empire. Now a united Panthera has discovered space travel, and with it, a host of new worlds to benefit from the enlightened rule of the Pardus - those worlds wise enough to accept it, anyway."
+        name_list = "HUMAN3"
+        trait = "trait_strong"
+        trait = "trait_resilient"
+        trait = "trait_traditional"
+        trait = "trait_enduring"
+        trait = "trait_unruly"
+    }
+    name = "Pardus Empire"
+    adjective = "Pardusan"
+    authority = "auth_imperial"
+    government = "gov_martial_empire"
+    advisor_voice_type = "l_militarist"
+    planet_name = "Panthera"
+    planet_class = "pc_savannah"
+    system_name = "Leonin"
+    initializer = "custom_starting_init_04"
+    graphical_culture = "pardus_01"
+    city_graphical_culture = "pardus_01"
+    empire_flag = {
+        icon = {
+            category = "ornate"
+            file = "flag_ornate_11.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "diagonal_stripe.dds"
+        }
+        colors = {
+            "red"
+            "light_orange"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = female
+        name = "Felinia Tigris"
+        portrait = "pardus_female_02"
+        texture = 2
+        hair = 25
+        clothes = 6
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = yes
+    ignore_portrait_duplication = no
+    room = "personality_honorbound_warriors_room"
+    spawn_enabled = yes
+    ethic = "ethic_fanatic_militarist"
+    ethic = "ethic_spiritualist"
+    civics = {
+        "civic_warrior_culture"
+        "civic_philosopher_king"
+    }
+    origin = "origin_default"
+}

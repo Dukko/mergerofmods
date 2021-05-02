@@ -1,0 +1,69 @@
+titan_hunter_drone = {
+    category = simple_drone
+    is_capped_by_modifier = yes
+    icon = hunter_gatherer
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        drone_job_check_trigger = yes
+    }
+    resources = {
+        category = planet_farmers
+        produces = {
+            food = 9
+        }
+    }
+    weight = {
+        weight = @complex_drone_job_weight
+        modifier = {
+            factor = 2
+            OR = {
+                has_trait = trait_agrarian
+            }
+        }
+        modifier = {
+            factor = 2
+            has_trait = trait_syncretic_proles
+        }
+        modifier = {
+            factor = 1.2
+            has_trait = trait_very_strong
+        }
+        modifier = {
+            factor = 1.1
+            has_trait = trait_strong
+        }
+        modifier = {
+            factor = 0.9
+            has_trait = trait_weak
+        }
+        modifier = {
+            factor = 1.5
+            has_trait = trait_syncretic_proles
+        }
+        modifier = {
+            factor = 1.4
+            has_trait = trait_presapient_proles
+        }
+        modifier = {
+            factor = 1.1
+            OR = {
+                has_trait = trait_robust
+            }
+        }
+        modifier = {
+            factor = 0.5
+            has_trait = trait_lithoid
+            owner = {
+                is_lithoid_empire = yes
+                has_monthly_income = {
+                    resource = food
+                    value >= 0
+                }
+            }
+        }
+    }
+}

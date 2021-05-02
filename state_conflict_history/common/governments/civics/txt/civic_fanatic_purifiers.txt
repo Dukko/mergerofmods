@@ -35,7 +35,7 @@ civic_fanatic_purifiers = {
             }
         }
         civics = {
-            NOR = {
+            NOT = {
                 value = civic_barbaric_despoilers
             }
         }
@@ -45,7 +45,6 @@ civic_fanatic_purifiers = {
                 value = origin_common_ground
                 value = origin_hegemon
                 value = origin_next_generation
-                value = origin_monster_tamers
             }
         }
     }

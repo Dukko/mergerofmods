@@ -1,0 +1,62 @@
+"Valbaran " = {
+    key = "Valbaran "
+    ship_prefix = "VN"
+    species = {
+        class = "EVALB"
+        portrait = "valbaran"
+        name = "Valbaran"
+        plural = "Valbarans"
+        adjective = "Valbaran"
+        species_bio = "The Valbarans are a spacefaring race of feathered reptiles native to the planet Valbara, a tropical world with a rich biosphere. They live in family units called flocks, which are comprised of between four and eight members, who they share close social bonds with. Their colorful feathers are used to display emotion, with different combinations of colors signaling different emotional states. Valbarans revere nature, living in eco-friendly, walled cities that let the life beyond their bounds flourish without interference. While they remain open and accepting of aliens, recent encounters with hostile species have led them to develop their Navy into a more formidable force capable of protecting their worlds."
+        name_list = "REP1"
+        trait = "trait_natural_engineers"
+        trait = "trait_communal"
+    }
+    name = "Valbaran "
+    adjective = "Valbaran"
+    authority = "auth_democratic"
+    government = "gov_representative_democracy"
+    planet_name = "Valbara"
+    planet_class = "pc_tropical"
+    system_name = "HD-217107"
+    initializer = "custom_starting_init_05"
+    graphical_culture = "reptilian_01"
+    city_graphical_culture = "reptilian_01"
+    empire_flag = {
+        icon = {
+            category = "zoological"
+            file = "flag_zoological_10.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "circle.dds"
+        }
+        colors = {
+            "teal"
+            "black"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = female
+        name = "Matla'xol'atzi"
+        portrait = "valbaran_female_01"
+        texture = 0
+        hair = 3
+        clothes = 9
+        ruler_title_female = "Ensi"
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = yes
+    ignore_portrait_duplication = no
+    room = "personality_spiritual_seekers_room"
+    spawn_enabled = yes
+    ethic = "ethic_egalitarian"
+    ethic = "ethic_fanatic_xenophile"
+    civics = {
+        "civic_beacon_of_liberty"
+        "civic_environmentalist"
+    }
+    origin = "origin_default"
+}

@@ -101,6 +101,10 @@ tech_psionic_theory = {
                 }
             }
         }
+        modifier = {
+            factor = 8
+            has_origin = origin_immortal_messiah
+        }
     }
     ai_weight = {
         factor = 5
