@@ -1,3 +1,0 @@
-NGraphics = {
-    GALAXY_STAR_ICON_MAX_SCALE = 1
-}

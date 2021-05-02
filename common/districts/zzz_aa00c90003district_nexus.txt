@@ -33,6 +33,7 @@ district_nexus = {
         district_arcology_housing
         district_city
         district_hive
+        district_matryoshka_housing
     }
     resources = {
         category = planet_districts_cities

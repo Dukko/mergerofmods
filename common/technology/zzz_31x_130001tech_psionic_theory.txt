@@ -10,8 +10,11 @@ tech_psionic_theory = {
     is_reverse_engineerable = no
     gateway = psionics
     potential = {
-        NOT = {
-            has_authority = auth_machine_intelligence
+        OR = {
+            NOT = {
+                has_authority = auth_machine_intelligence
+            }
+            is_active_resolution = resolution_galacticstudies_extradimensional_experimentation
         }
     }
     modifier = {
@@ -19,6 +22,10 @@ tech_psionic_theory = {
     }
     weight_modifier = {
         factor = 0.5
+        modifier = {
+            factor = 0
+            has_authority = auth_machine_intelligence
+        }
         modifier = {
             factor = 0.5
             is_spiritualist = no
@@ -110,6 +117,9 @@ tech_psionic_theory = {
                 area = society
                 has_trait = "leader_trait_expertise_psionics"
             }
+        modifier = {
+            factor = 2
+            is_ai = no
         }
     }
 }

@@ -4,6 +4,11 @@ planet_event = {
     is_triggered_only = yes
     hide_window = yes
     trigger = {
+        from = {
+            NOT = {
+                has_valid_civic = civic_machine_replicators
+            }
+        }
         fromfrom = {
             has_purge_type = {
                 type = purge_necrophage

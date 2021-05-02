@@ -146,8 +146,7 @@ colonizer = {
                 }
             }
             alloys = 50
-            food = 1000
-            minerals = 1000
+            minerals = 2000
         }
         cost = {
             trigger = {

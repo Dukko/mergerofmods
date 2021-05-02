@@ -1,3 +1,0 @@
-NCamera = {
-    GALAXY_SHOW_FLEETS_ZOOM = 1450
-}
