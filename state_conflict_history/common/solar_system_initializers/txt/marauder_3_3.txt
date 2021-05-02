@@ -1,4 +1,4 @@
-@base_moon_distance = 6
+@base_moon_distance = 7
 marauder_3_3 = {
     class = "rl_standard_stars"
     asteroid_belt = {

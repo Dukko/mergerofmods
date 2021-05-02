@@ -75,7 +75,7 @@ can_destroy_planet_with_PLANET_KILLER_CRACKER = {
                 AND = {
                     exists = space_owner
                     space_owner = {
-                        is_same_value = from.owner
+                        is_same_empire = from.owner
                     }
                 }
             }
@@ -92,6 +92,25 @@ can_destroy_planet_with_PLANET_KILLER_CRACKER = {
                 is_planet_class = pc_hydrocarbon
                 is_planet_class = pc_subglacial
                 is_planet_class = pc_iron
+                is_planet_class = pc_barren
+                is_planet_class = pc_barren_cold
+                is_planet_class = pc_frozen
+                is_planet_class = pc_molten
+                is_planet_class = pc_toxic
+                is_planet_class = pc_desert
+                is_planet_class = pc_tropical
+                is_planet_class = pc_arid
+                is_planet_class = pc_continental
+                is_planet_class = pc_ocean
+                is_planet_class = pc_tundra
+                is_planet_class = pc_arctic
+                is_planet_class = pc_alpine
+                is_planet_class = pc_savannah
+                is_planet_class = pc_gaia
+                is_planet_class = pc_relic
+                is_planet_class = pc_nuked
+                is_planet_class = pc_ringworld_habitable
+                is_planet_class = pc_habitat
             }
         }
     }

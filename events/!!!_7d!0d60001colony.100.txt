@@ -1,4 +1,5 @@
 namespace = colony
+namespace = gpm_colony
 planet_event = {
     id = colony.100
     title = "colony.100.name"
@@ -11,15 +12,13 @@ planet_event = {
         has_owner = yes
         is_homeworld = no
         original_owner = yes
+        is_ai = no
         has_ground_combat = no
         is_capital = no
         is_occupied_flag = no
     }
     trigger = {
         num_pops > 0
-        owner = {
-            is_ai = no
-        }
         habitable_planet = yes
         uses_district_set = standard
         NOR = {

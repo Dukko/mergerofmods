@@ -1,4 +1,4 @@
-@base_moon_distance = 6
+@base_moon_distance = 7
 sanctuary_system = {
     asteroid_belt = {
         type = rocky_asteroid_belt

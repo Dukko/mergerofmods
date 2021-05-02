@@ -48,7 +48,10 @@ preacher = {
     }
     triggered_planet_modifier = {
         potential = {
-            has_trait = trait_thrifty
+            OR = {
+                has_trait = trait_thrifty
+                has_trait = trait_nuumismatic_administration
+            }
         }
         modifier = {
             trade_value_add = 2
@@ -60,14 +63,6 @@ preacher = {
         }
         modifier = {
             trade_value_add = -2
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            has_trait = trait_nuumismatic_administration
-        }
-        modifier = {
-            trade_value_add = 2
         }
     }
     weight = {

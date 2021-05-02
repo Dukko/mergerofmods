@@ -1,4 +1,4 @@
-@base_moon_distance = 6
+@base_moon_distance = 7
 marauder_2_2 = {
     class = "rl_standard_stars"
     flags = {

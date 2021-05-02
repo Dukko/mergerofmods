@@ -10,7 +10,7 @@ colonist = {
         is_sapient = yes
     }
     possible = {
-        specialist_job_check_trigger = yes
+        complex_specialist_job_check_trigger = yes
     }
     pop_modifier = {
         pop_defense_armies_add = 1

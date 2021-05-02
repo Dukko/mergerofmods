@@ -1,4 +1,4 @@
-@base_moon_distance = 6
+@base_moon_distance = 7
 marauder_1_1 = {
     class = "rl_standard_stars"
     usage = misc_system_init
