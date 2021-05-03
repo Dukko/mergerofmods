@@ -29,7 +29,7 @@ slave_toiler = {
             }
         }
         modifier = {
-            planet_amenities_add = 1
+            planet_amenities_add = 0.5
         }
     }
     triggered_planet_modifier = {
@@ -37,10 +37,14 @@ slave_toiler = {
             has_trait = trait_repugnant
         }
         modifier = {
-            planet_amenities_add = -1
+            planet_amenities_add = -0.5
         }
     }
     weight = {
         weight = @special_job_weight
+        modifier = {
+            factor = 1.5
+            has_job = slave_toiler
+        }
     }
 }

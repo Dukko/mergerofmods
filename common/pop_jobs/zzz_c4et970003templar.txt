@@ -206,5 +206,10 @@ templar = {
                 has_trait = trait_enigmatic_intelligence_poor
             }
         }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = specialist
+        }
     }
 }

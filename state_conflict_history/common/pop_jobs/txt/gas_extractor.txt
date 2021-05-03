@@ -77,6 +77,10 @@ gas_extractor = {
             }
         }
         modifier = {
+            factor = 1.5
+            has_job = gas_extractor
+        }
+        modifier = {
             factor = 3
             has_trait = trait_very_strong
         }

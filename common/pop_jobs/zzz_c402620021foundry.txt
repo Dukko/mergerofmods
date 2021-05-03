@@ -10,9 +10,6 @@ foundry = {
     }
     possible = {
         specialist_job_check_trigger = yes
-        owner = {
-            is_gestalt = no
-        }
         OR = {
             traits_restrict_specialist_jobs = no
             has_pop_flag = allow_foundry_traits
@@ -51,6 +48,17 @@ foundry = {
     weight = {
         weight = @specialist_job_weight
         modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+            NOT = {
+                has_trait = trait_mechanical
+            }
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+        modifier = {
             factor = 2
             is_enslaved = yes
             can_take_servant_job = no
@@ -78,13 +86,6 @@ foundry = {
             }
         }
         modifier = {
-            factor = 1.2
-            is_enslaved = yes
-            has_slavery_type = {
-                type = slavery_indentured
-            }
-        }
-        modifier = {
             factor = 1.5
             has_trait = trait_void_dweller_1
         }
@@ -108,6 +109,18 @@ foundry = {
             factor = 0.1
             has_trait = trait_delicate
             is_enslaved = yes
+        }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = specialist
+        }
+        modifier = {
+            factor = 1.2
+            is_enslaved = yes
+            has_slavery_type = {
+                type = slavery_indentured
+            }
         }
     }
 }

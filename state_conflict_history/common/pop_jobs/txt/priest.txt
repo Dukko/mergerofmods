@@ -124,13 +124,17 @@ priest = {
         modifier = {
             factor = 0.1
             has_ethic = ethic_materialist
-            NOT = {
+            NOR = {
                 has_job = priest
+                has_job = death_priest
             }
         }
         modifier = {
             factor = 1.5
-            has_job = priest
+            OR = {
+                has_job = priest
+                has_job = death_priest
+            }
         }
         modifier = {
             factor = 1.5
@@ -187,6 +191,11 @@ priest = {
         modifier = {
             factor = 1.5
             has_trait = trait_necrophage
+        }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = specialist
         }
         modifier = {
             factor = 0.1

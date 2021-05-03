@@ -26,7 +26,7 @@ colonist = {
             }
         }
         modifier = {
-            planet_amenities_add = 2
+            planet_amenities_add = 1
         }
     }
     triggered_planet_modifier = {
@@ -34,7 +34,7 @@ colonist = {
             has_trait = trait_repugnant
         }
         modifier = {
-            planet_amenities_add = -2
+            planet_amenities_add = -1
         }
     }
     resources = {
@@ -116,6 +116,11 @@ colonist = {
         modifier = {
             factor = 1.5
             has_trait = trait_void_dweller_1
+        }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = specialist
         }
     }
 }

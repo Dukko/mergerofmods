@@ -42,8 +42,12 @@ mortal_initiate = {
                     has_valid_civic = civic_imperial_cult
                     has_valid_civic = civic_divine_council
                     has_valid_civic = civic_spiritual_democracy
-                }
             }
+        }
+        }
+        modifier = {
+            factor = 1.5
+            has_job = mortal_initiate
         }
         modifier = {
             factor = 1.5

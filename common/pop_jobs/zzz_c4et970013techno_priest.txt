@@ -115,5 +115,10 @@ techno_priest = {
             factor = 1.5
             has_job = techno_priest
         }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = specialist
+        }
     }
 }

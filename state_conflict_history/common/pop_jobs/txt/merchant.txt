@@ -115,7 +115,7 @@ merchant = {
             has_trait = trait_repugnant
         }
         modifier = {
-            factor = 5
+            factor = 1.5
             has_job = merchant
         }
         modifier = {
@@ -170,6 +170,11 @@ merchant = {
                     }
                 }
             }
+        }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = specialist
         }
     }
 }

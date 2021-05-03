@@ -200,6 +200,11 @@ death_priest = {
             has_trait = trait_necrophage
         }
         modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = specialist
+        }
+        modifier = {
             factor = 0.1
             has_trait = trait_delicate
             is_enslaved = yes

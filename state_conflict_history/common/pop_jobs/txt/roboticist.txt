@@ -42,6 +42,15 @@ roboticist = {
     weight = {
         weight = 500
         modifier = {
+            factor = 1.4
+            has_job = roboticist
+        }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = specialist
+        }
+        modifier = {
             factor = 4
             has_trait = trait_living_architecture
         }

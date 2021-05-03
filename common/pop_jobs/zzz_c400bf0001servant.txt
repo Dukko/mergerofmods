@@ -32,7 +32,7 @@ servant = {
             }
         }
         modifier = {
-            planet_amenities_add = 2
+            planet_amenities_add = 1
         }
     }
     triggered_planet_modifier = {
@@ -40,10 +40,14 @@ servant = {
             has_trait = trait_repugnant
         }
         modifier = {
-            planet_amenities_add = -2
+            planet_amenities_add = -1
         }
     }
     weight = {
         weight = @special_job_weight
+        modifier = {
+            factor = 1.5
+            has_job = servant
+        }
     }
 }

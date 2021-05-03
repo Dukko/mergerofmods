@@ -157,5 +157,10 @@ bureaucrat = {
             factor = 0.5
             has_trait = trait_enigmatic_intelligence_failed
         }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = specialist
+        }
     }
 }

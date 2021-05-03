@@ -163,6 +163,10 @@ mercenary = {
             has_trait = trait_cybernetic
         }
         modifier = {
+            factor = 1.5
+            has_job = mercenary
+        }
+        modifier = {
             factor = 2
             has_trait = trait_presapient_earthbound
         }
@@ -219,6 +223,11 @@ mercenary = {
         modifier = {
             factor = 0
             can_be_soldier = no
+        }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = specialist
         }
     }
 }

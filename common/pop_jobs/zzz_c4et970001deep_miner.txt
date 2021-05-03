@@ -111,6 +111,10 @@ deep_miner = {
             can_take_servant_job = yes
         }
         modifier = {
+            factor = 1.5
+            has_job = deep_miner
+        }
+        modifier = {
             factor = 1.2
             has_trait = trait_very_strong
         }
@@ -121,6 +125,11 @@ deep_miner = {
         modifier = {
             factor = 0.9
             has_trait = trait_weak
+        }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = specialist
         }
         modifier = {
             factor = 1.2

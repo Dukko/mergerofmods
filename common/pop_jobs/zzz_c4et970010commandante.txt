@@ -127,6 +127,15 @@ commandante = {
             has_trait = trait_repugnant
         }
         modifier = {
+            factor = 5
+            has_job = commandante
+        }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = ruler
+        }
+        modifier = {
             factor = 1.1
             has_trait = trait_starship_integration
         }

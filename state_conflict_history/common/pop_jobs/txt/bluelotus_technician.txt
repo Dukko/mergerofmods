@@ -101,8 +101,17 @@ bluelotus_technician = {
             has_trait = trait_clumsy
         }
         modifier = {
+            factor = 1.3
+            has_job = bluelotus_technician
+        }
+        modifier = {
             factor = 0.08
             has_trait = trait_limbless
+        }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = specialist
         }
         modifier = {
             factor = 0.1

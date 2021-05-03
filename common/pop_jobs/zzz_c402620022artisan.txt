@@ -10,9 +10,6 @@ artisan = {
     }
     possible = {
         specialist_job_check_trigger = yes
-        owner = {
-            is_gestalt = no
-        }
         OR = {
             traits_restrict_specialist_jobs = no
             has_pop_flag = allow_artisan_traits
@@ -72,13 +69,6 @@ artisan = {
             }
         }
         modifier = {
-            factor = 1.2
-            is_enslaved = yes
-            has_slavery_type = {
-                type = slavery_indentured
-            }
-        }
-        modifier = {
             factor = 1.5
             has_trait = trait_void_dweller_1
         }
@@ -102,6 +92,26 @@ artisan = {
             factor = 0.1
             has_trait = trait_delicate
             is_enslaved = yes
+        }
+        modifier = {
+            factor = 1.2
+            is_enslaved = yes
+            has_slavery_type = {
+                type = slavery_indentured
+            }
+        }
+        modifier = {
+            factor = 1.5
+            has_trait = trait_void_dweller_1
+        }
+        modifier = {
+            factor = 1.5
+            has_trait = trait_necrophage
+        }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = specialist
         }
     }
 }

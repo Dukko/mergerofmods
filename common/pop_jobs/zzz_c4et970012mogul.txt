@@ -110,5 +110,10 @@ mogul = {
             factor = 1.5
             has_ethic = ethic_capitalism
         }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = ruler
+        }
     }
 }

@@ -48,7 +48,7 @@ administrator = {
             }
         }
         modifier = {
-            planet_amenities_add = 3.2
+            planet_amenities_add = 1.6
         }
     }
     triggered_planet_modifier = {
@@ -56,7 +56,7 @@ administrator = {
             has_trait = trait_repugnant
         }
         modifier = {
-            planet_amenities_add = -3.2
+            planet_amenities_add = -1.6
         }
     }
     weight = {
@@ -132,6 +132,11 @@ administrator = {
                     is_country_type = ai_empire
                 }
             }
+        }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = ruler
         }
     }
 }

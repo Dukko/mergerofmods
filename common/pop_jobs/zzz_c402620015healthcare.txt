@@ -65,7 +65,7 @@ healthcare = {
             }
         }
         modifier = {
-            planet_amenities_add = 2
+            planet_amenities_add = 1
         }
     }
     triggered_planet_modifier = {
@@ -88,7 +88,7 @@ healthcare = {
             }
         }
         modifier = {
-            planet_amenities_add = 2
+            planet_amenities_add = 1
         }
     }
     triggered_planet_modifier = {
@@ -96,7 +96,7 @@ healthcare = {
             has_trait = trait_repugnant
         }
         modifier = {
-            planet_amenities_add = -2
+            planet_amenities_add = -1
         }
     }
     weight = {
@@ -137,6 +137,11 @@ healthcare = {
             has_slavery_type = {
                 type = slavery_indentured
             }
+        }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = specialist
         }
     }
 }

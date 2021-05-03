@@ -45,5 +45,9 @@ servant = {
     }
     weight = {
         weight = @special_job_weight
+        modifier = {
+            factor = 1.5
+            has_job = servant
+        }
     }
 }

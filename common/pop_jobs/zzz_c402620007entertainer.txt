@@ -36,7 +36,7 @@ entertainer = {
             }
         }
         modifier = {
-            planet_amenities_add = 4
+            planet_amenities_add = 2
         }
     }
     triggered_planet_modifier = {
@@ -44,7 +44,7 @@ entertainer = {
             has_trait = trait_repugnant
         }
         modifier = {
-            planet_amenities_add = -4
+            planet_amenities_add = -2
         }
     }
     weight = {
@@ -116,6 +116,11 @@ entertainer = {
         modifier = {
             factor = 1.25
             has_trait = trait_necrophage
+        }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = specialist
         }
         modifier = {
             factor = 0.1

@@ -24,7 +24,15 @@ manager = {
             has_trait = trait_thrifty
         }
         modifier = {
-            trade_value_add = 1.5
+            trade_value_add = 0.75
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_trait = trait_nuumismatic_administration
+        }
+        modifier = {
+            trade_value_add = 0.75
         }
     }
     triggered_planet_modifier = {
@@ -37,10 +45,37 @@ manager = {
     }
     triggered_planet_modifier = {
         potential = {
-            has_trait = trait_nuumismatic_administration
+            exists = owner
+            owner = {
+                has_valid_civic = civic_efficiency_expert
+            }
         }
         modifier = {
-            trade_value_add = 1.5
+            trade_value_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_trait = trait_thrifty
+            exists = owner
+            owner = {
+                has_valid_civic = civic_efficiency_expert
+            }
+        }
+        modifier = {
+            trade_value_add = 0.5
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_trait = trait_nuumismatic_administration
+            exists = owner
+            owner = {
+                has_valid_civic = civic_efficiency_expert
+            }
+        }
+        modifier = {
+            trade_value_add = 0.5
         }
     }
     resources = {
@@ -48,6 +83,16 @@ manager = {
         produces = {
             unity = 3
             society_research = 2
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_valid_civic = civic_efficiency_expert
+                }
+            }
+            unity = 1
+            society_research = -2
         }
         upkeep = {
             consumer_goods = 2
@@ -168,6 +213,11 @@ manager = {
         modifier = {
             factor = 1.25
             has_trait = trait_necrophage
+        }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = specialist
         }
         modifier = {
             factor = 0.1

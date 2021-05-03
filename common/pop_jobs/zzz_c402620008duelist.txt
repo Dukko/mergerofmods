@@ -12,6 +12,12 @@ duelist = {
     possible = {
         battle_thrall_job_check_trigger = yes
         OR = {
+            NOT = {
+                has_ethic = ethic_pacifist
+            }
+            is_enslaved = yes
+        }
+        OR = {
             traits_restrict_specialist_jobs = no
             has_pop_flag = allow_duelist_traits
         }
@@ -58,7 +64,7 @@ duelist = {
             }
         }
         modifier = {
-            planet_amenities_add = 4
+            planet_amenities_add = 2
         }
     }
     triggered_planet_modifier = {
@@ -66,7 +72,18 @@ duelist = {
             has_trait = trait_repugnant
         }
         modifier = {
-            planet_amenities_add = -4
+            planet_amenities_add = -2
+        }
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ascension_perk = ap_galactic_force_projection
+            }
+        }
+        modifier = {
+            country_naval_cap_add = 2
         }
     }
     weight = {
@@ -151,6 +168,11 @@ duelist = {
         modifier = {
             factor = 1.25
             has_trait = trait_necrophage
+        }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = specialist
         }
         modifier = {
             factor = 0.1

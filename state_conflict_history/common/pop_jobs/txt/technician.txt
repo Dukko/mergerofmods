@@ -1,7 +1,7 @@
 technician = {
     category = worker
     condition_string = WORKER_JOB_TRIGGER
-    building_icon = building_energy_grid
+    building_icon = building_power_plant
     clothes_texture_index = 2
     possible_pre_triggers = {
         has_owner = yes
@@ -84,6 +84,10 @@ technician = {
             species = {
                 has_species_flag = racket_species_flag
             }
+        }
+        modifier = {
+            factor = 1.5
+            has_job = technician
         }
         modifier = {
             factor = 1.2

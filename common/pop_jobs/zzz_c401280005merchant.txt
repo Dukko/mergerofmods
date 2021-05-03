@@ -44,14 +44,6 @@ merchant = {
     }
     triggered_planet_modifier = {
         potential = {
-            has_trait = trait_thrifty
-        }
-        modifier = {
-            trade_value_add = 6
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
             has_trait = trait_spendthrifts
         }
         modifier = {
@@ -60,10 +52,18 @@ merchant = {
     }
     triggered_planet_modifier = {
         potential = {
+            has_trait = trait_thrifty
+        }
+        modifier = {
+            trade_value_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
             has_trait = trait_nuumismatic_administration
         }
         modifier = {
-            trade_value_add = 6
+            trade_value_add = 3
         }
     }
     triggered_planet_modifier = {
@@ -74,7 +74,7 @@ merchant = {
             }
         }
         modifier = {
-            planet_amenities_add = 2
+            planet_amenities_add = 1
         }
     }
     triggered_planet_modifier = {
@@ -82,11 +82,11 @@ merchant = {
             has_trait = trait_repugnant
         }
         modifier = {
-            planet_amenities_add = -2
+            planet_amenities_add = -1
         }
     }
     weight = {
-        weight = @ruler_job_weight
+        weight = @specialist_job_weight
         modifier = {
             factor = 4
             has_trait = trait_living_architecture
@@ -115,7 +115,7 @@ merchant = {
             has_trait = trait_repugnant
         }
         modifier = {
-            factor = 5
+            factor = 1.5
             has_job = merchant
         }
         modifier = {
@@ -170,6 +170,11 @@ merchant = {
                     }
                 }
             }
+        }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = specialist
         }
     }
 }

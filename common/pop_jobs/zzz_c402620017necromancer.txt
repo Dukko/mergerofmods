@@ -53,6 +53,12 @@ necromancer = {
     possible = {
         battle_thrall_job_check_trigger = yes
         OR = {
+            NOT = {
+                has_ethic = ethic_pacifist
+            }
+            is_enslaved = yes
+        }
+        OR = {
             traits_restrict_specialist_jobs = no
             has_pop_flag = allow_necromancer_traits
         }
@@ -153,6 +159,15 @@ necromancer = {
         modifier = {
             factor = 2
             has_trait = trait_huge_lithoid
+        }
+        modifier = {
+            factor = 1.3
+            has_job = necromancer
+        }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = specialist
         }
         modifier = {
             factor = 1.5

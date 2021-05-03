@@ -48,6 +48,9 @@ miner = {
     weight = {
         weight = @worker_job_weight
         modifier = {
+            factor = 2
+        }
+        modifier = {
             factor = 3
             OR = {
                 has_trait = trait_industrious
@@ -92,6 +95,10 @@ miner = {
             species = {
                 has_species_flag = racket_species_flag
             }
+        }
+        modifier = {
+            factor = 1.5
+            has_job = miner
         }
         modifier = {
             factor = 1.2

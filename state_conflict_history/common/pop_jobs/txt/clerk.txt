@@ -142,6 +142,10 @@ clerk = {
             }
         }
         modifier = {
+            factor = 1.5
+            has_job = clerk
+        }
+        modifier = {
             factor = 0.5
             has_trait = trait_repugnant
         }

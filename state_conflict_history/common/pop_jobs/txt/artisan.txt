@@ -104,5 +104,14 @@ artisan = {
             factor = 1.5
             has_trait = trait_void_dweller_1
         }
+        modifier = {
+            factor = 1.5
+            has_trait = trait_necrophage
+        }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = specialist
+        }
     }
 }

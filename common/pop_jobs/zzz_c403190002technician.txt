@@ -86,6 +86,10 @@ technician = {
             }
         }
         modifier = {
+            factor = 1.5
+            has_job = technician
+        }
+        modifier = {
             factor = 1.2
             has_trait = trait_very_strong
         }

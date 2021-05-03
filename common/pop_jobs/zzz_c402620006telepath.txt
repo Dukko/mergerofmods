@@ -16,6 +16,12 @@ telepath = {
             has_trait = trait_psionic
         }
         OR = {
+            NOT = {
+                has_ethic = ethic_authoritarian
+            }
+            is_enslaved = yes
+        }
+        OR = {
             traits_restrict_specialist_jobs = no
             has_pop_flag = allow_enforcer_traits
         }
@@ -160,6 +166,11 @@ telepath = {
             factor = 0.1
             has_trait = trait_delicate
             is_enslaved = yes
+        }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = specialist
         }
     }
 }

@@ -161,6 +161,15 @@ necromancer = {
             has_trait = trait_huge_lithoid
         }
         modifier = {
+            factor = 1.3
+            has_job = necromancer
+        }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = specialist
+        }
+        modifier = {
             factor = 1.5
             has_trait = trait_big_lithoid
         }

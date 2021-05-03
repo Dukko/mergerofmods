@@ -1,7 +1,7 @@
 miner = {
     category = worker
     condition_string = WORKER_JOB_TRIGGER
-    building_icon = building_mineral_purification_plant
+    building_icon = building_mine_generic
     clothes_texture_index = 2
     possible_pre_triggers = {
         has_owner = yes
@@ -95,6 +95,10 @@ miner = {
             species = {
                 has_species_flag = racket_species_flag
             }
+        }
+        modifier = {
+            factor = 1.5
+            has_job = miner
         }
         modifier = {
             factor = 1.2

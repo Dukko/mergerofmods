@@ -184,6 +184,10 @@ labour_hero = {
             has_trait = trait_nerve_stapled
         }
         modifier = {
+            factor = 1.5
+            has_job = labour_hero
+        }
+        modifier = {
             factor = 1.2
             owner = {
                 has_monthly_income = {
