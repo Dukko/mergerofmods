@@ -4,17 +4,6 @@ building_clone_vats = {
     base_cap_amount = 1
     potential = {
         exists = owner
-        OR = {
-            owner = {
-                is_ai = no
-            }
-            and = {
-                free_building_slots > 0
-                owner = {
-                    num_pops < 400
-                }
-            }
-        }
         owner = {
             has_ascension_perk = ap_engineered_evolution
         }
@@ -47,12 +36,6 @@ building_clone_vats = {
                     has_ascension_perk = ap_engineered_evolution
                 }
             }
-            and = {
-                owner = {
-                    is_ai = yes
-                    num_pops > 450
-                }
-            }
         }
     }
     planet_modifier = {
@@ -72,16 +55,64 @@ building_clone_vats = {
     resources = {
         category = planet_buildings
         cost = {
+            trigger = {
+                NOT = {
+                    owner = {
+                        has_ascension_perk = ap_plentiful_traditions_vast_slave_procreation
+                    }
+                    OR = {
+                        has_building = building_plentiful_traditions_advanced_slave_processing
+                        has_building = building_slave_processing
+                    }
+                }
+            }
             minerals = 500
             food = 500
         }
+        cost = {
+            trigger = {
+                owner = {
+                    has_ascension_perk = ap_plentiful_traditions_vast_slave_procreation
+                }
+                OR = {
+                    has_building = building_plentiful_traditions_advanced_slave_processing
+                    has_building = building_slave_processing
+                }
+            }
+            minerals = 100
+            food = 100
+        }
         upkeep = {
+            trigger = {
+                NOT = {
+                    owner = {
+                        has_ascension_perk = ap_plentiful_traditions_vast_slave_procreation
+                    }
+                    OR = {
+                        has_building = building_plentiful_traditions_advanced_slave_processing
+                        has_building = building_slave_processing
+                    }
+                }
+            }
             energy = 2
             food = 30
         }
+        upkeep = {
+            trigger = {
+                owner = {
+                    has_ascension_perk = ap_plentiful_traditions_vast_slave_procreation
+                }
+                OR = {
+                    has_building = building_plentiful_traditions_advanced_slave_processing
+                    has_building = building_slave_processing
+                }
+            }
+            energy = 2
+            food = 15
+        }
     }
     upgrades = {
-        "building_avb_clone_vats_2"
+        building_eutab_adv_clone_vats
     }
     triggered_desc = {
         trigger = {

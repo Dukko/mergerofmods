@@ -16,16 +16,10 @@ life_masters_bio_trophy = {
     resources = {
         category = planet_bio_trophies
         produces = {
-            trigger = {
-                happiness >= 0.5
-            }
             society_research = 2
         }
     }
     triggered_planet_modifier = {
-        potential = {
-            happiness >= 0.5
-        }
         modifier = {
             planet_jobs_complex_drone_produces_mult = 0.01
         }

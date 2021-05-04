@@ -4,6 +4,7 @@ specialist_job_check_trigger = {
         exists = owner
         OR = {
             is_enslaved = no
+            is_slave_complex_possible = yes
             has_slavery_type = {
                 type = slavery_indentured
             }
@@ -17,10 +18,10 @@ specialist_job_check_trigger = {
             has_trait = trait_slave_gene
         }
         NOT = {
-            has_trait = trait_subsapient_form
+            has_trait = trait_nerve_stapled
         }
         NOT = {
-            has_trait = trait_nerve_stapled
+            has_trait = trait_subsapient_form
         }
         OR = {
             NOT = {

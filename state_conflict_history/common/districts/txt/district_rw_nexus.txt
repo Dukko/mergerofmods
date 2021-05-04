@@ -46,7 +46,6 @@ district_rw_nexus = {
     triggered_planet_modifier = {
         modifier = {
             planet_housing_add = 25
-        planet_max_buildings_add = 4
             job_maintenance_drone_add = 10
             job_technician_drone_add = 2
         }

@@ -44,7 +44,7 @@ building_capital = {
         planet_housing_add = 5
         planet_amenities_add = 5
         planet_max_buildings_add = @buildings_t2
-        planet_max_branch_office_buildings_add = 2
+        planet_max_branch_office_buildings_add = 1
     }
     triggered_planet_modifier = {
         potential = {
@@ -96,8 +96,6 @@ building_capital = {
             owner = {
                 NOR = {
                     is_megacorp = yes
-                    has_civic = civic_bancorp
-                    has_civic = civic_science_syndicate
                     has_valid_civic = civic_imperial_cult
                     has_valid_civic = civic_divine_council
                     has_valid_civic = civic_spiritual_democracy
@@ -130,49 +128,9 @@ building_capital = {
             owner = {
                 is_megacorp = yes
             }
-            owner = {
-                NOT = {
-                    has_civic = civic_bancorp
-                }
-            }
-            owner = {
-                NOT = {
-                    has_civic = civic_science_syndicate
-                }
-            }
         }
         modifier = {
             job_executive_add = 2
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_megacorp = yes
-            }
-            owner = {
-                has_civic = civic_bancorp
-            }
-        }
-        modifier = {
-            job_merchant_add = 1
-            job_executive_add = 1
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_megacorp = yes
-            }
-            owner = {
-                has_civic = civic_science_syndicate
-            }
-        }
-        modifier = {
-            job_head_researcher_add = 1
-            job_executive_add = 1
         }
     }
     triggered_planet_modifier = {
@@ -339,17 +297,6 @@ building_capital = {
             }
         }
         text = job_mogul_effect_desc
-    }
-    triggered_desc = {
-        trigger = {
-            exists = owner
-            owner = {
-                OR = {
-                    has_civic = civic_bancorp
-                }
-            }
-        }
-        text = job_merchant_effect_desc
     }
     triggered_desc = {
         trigger = {

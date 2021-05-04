@@ -1,0 +1,9 @@
+guiTypes = {
+    positionType = {
+        name = "tr_simple_prosperity_administrative_operations"
+        position = {
+            x = 96
+            y = 55
+        }
+    }
+}

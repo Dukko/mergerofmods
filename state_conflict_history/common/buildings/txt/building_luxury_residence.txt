@@ -27,10 +27,7 @@ building_luxury_residence = {
         owner = {
             is_regular_empire = yes
             NOT = {
-                OR = {
-                    has_valid_civic = civic_shared_burden
-                    has_valid_civic = civic_employee_ownership
-                }
+                has_valid_civic = civic_shared_burden
             }
         }
     }
@@ -52,10 +49,7 @@ building_luxury_residence = {
                 is_regular_empire = no
             }
             owner = {
-                OR = {
-                    has_valid_civic = civic_shared_burden
-                    has_valid_civic = civic_employee_ownership
-                }
+                has_valid_civic = civic_shared_burden
             }
             has_modifier = slave_colony
         }

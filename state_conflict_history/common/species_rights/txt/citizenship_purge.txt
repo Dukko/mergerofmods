@@ -1,0 +1,167 @@
+citizenship_purge = {
+    token = citizenship_purge
+    new_pop_weight = 0
+    potential = {
+        exists = from
+        NOT = {
+            from = {
+                has_authority = auth_machine_intelligence
+            }
+        }
+        OR = {
+            NOT = {
+                has_trait = trait_mechanical
+            }
+            from = {
+                NOT = {
+                    has_policy_flag = ai_full_rights
+                }
+            }
+            AND = {
+                from = {
+                    has_authority = auth_hive_mind
+                }
+                is_robotic_species = yes
+            }
+        }
+    }
+    allow = {
+        hidden_trigger = {
+            exists = from
+        }
+        custom_tooltip = {
+            fail_text = "HIVE_MIND_MAIN_SPECIES_ALWAYS_CITIZEN"
+            NAND = {
+                from = {
+                    has_authority = auth_hive_mind
+                }
+                has_trait = trait_hive_mind
+            }
+        }
+        if = {
+            limit = {
+                is_lonely_hive_mind_pop = yes
+            }
+            hidden_trigger = {
+                always = yes
+            }
+        }
+        else = {
+            custom_tooltip = {
+                fail_text = same_species_disallowed
+                NOT = {
+                    is_same_species = from
+                }
+            }
+            if = {
+                limit = {
+                    NOR = {
+                        has_trait = trait_machine_unit
+                        has_trait = trait_mechanical
+                    }
+                }
+                custom_tooltip = {
+                    fail_text = PURGING_NOT_ALLOWED
+                    from = {
+                        allows_purge = yes
+                    }
+                }
+            }
+            custom_tooltip = {
+                fail_text = yes_service_yes_citizenship
+                if = {
+                    limit = {
+                        from = {
+                            has_valid_civic = civic_citizen_service
+                        }
+                    }
+                    NOT = {
+                        has_military_service_type = {
+                            type = military_service_full
+                            country = from
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ai_will_do = {
+        factor = 20
+        modifier = {
+            factor = 0
+            ariphaos_patch_slaves_expel = no
+            has_trait = trait_machine_unit
+            from = {
+                has_authority = auth_machine_intelligence
+            }
+        }
+        modifier = {
+            factor = 0
+            from = {
+                has_valid_ai_personality = no
+                NOT = {
+                    has_authority = auth_hive_mind
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            from = {
+                has_valid_ai_personality = yes
+                NOR = {
+                    has_ai_personality_behaviour = purger
+                    AND = {
+                        has_ai_personality_behaviour = displacer
+                        NOT = {
+                            has_origin = origin_necrophage
+                        }
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            from = {
+                has_authority = auth_machine_intelligence
+                has_government = gov_machine_industrial
+            }
+        }
+        modifier = {
+            factor = 0
+            from = {
+                has_authority = auth_hive_mind
+                NOT = {
+                    has_valid_civic = civic_hive_devouring_swarm
+                }
+                OR = {
+                    has_valid_civic = civic_hive_one_mind
+                    has_valid_civic = civic_hive_subsumed_will
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            ariphaos_patch_slaves_rare_trait = yes
+            from = {
+                has_origin = origin_syncretic_evolution
+            }
+        }
+        modifier = {
+            factor = 10
+            from = {
+                is_ai = yes
+                has_ascension_perk = ap_become_the_crisis
+            }
+        }
+        modifier = {
+            factor = 10
+            from = {
+                OR = {
+                    is_xenophobe = yes
+                    is_authoritarian = yes
+                }
+            }
+            ariphaos_patch_slaves_expel = yes
+        }
+    }
+}

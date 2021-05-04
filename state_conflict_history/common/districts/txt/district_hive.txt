@@ -27,14 +27,13 @@ district_hive = {
         NOT = {
             has_modifier = resort_colony
         }
-        ai_hive_district_allow = yes
     }
     conversion_ratio = 0.5
     convert_to = {
+        district_hollow_housing
         district_arcology_housing
         district_nexus
         district_city
-        district_hollow_housing
     }
     resources = {
         category = planet_districts_cities
@@ -48,7 +47,7 @@ district_hive = {
     planet_modifier = {
         planet_housing_add = 6
         job_maintenance_drone_add = 3
-        planet_max_buildings_add = 2
+        planet_max_buildings_add = 1
     }
     triggered_planet_modifier = {
         potential = {

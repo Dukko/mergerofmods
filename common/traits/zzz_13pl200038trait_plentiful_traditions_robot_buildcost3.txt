@@ -1,0 +1,21 @@
+trait_plentiful_traditions_robot_buildcost3 = {
+    cost = 3
+    initial = no
+    randomized = no
+    prerequisites = {
+        tech_plentiful_traditions_metaverse_ecosystem
+    }
+    opposites = {
+        trait_plentiful_traditions_robot_buildcost1
+        trait_plentiful_traditions_robot_buildcost2
+        trait_plentiful_traditions_robot_buildcost4
+    }
+    allowed_archetypes = {
+        ROBOT
+        MACHINE
+    }
+    modifier = {
+        planet_pops_robotics_upkeep_mult = -0.35
+        planet_pop_assemblers_upkeep_mult = -0.1
+    }
+}

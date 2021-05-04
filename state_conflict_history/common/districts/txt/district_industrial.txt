@@ -327,6 +327,117 @@ district_industrial = {
             job_maintenance_drone_add = 1
         }
     }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_tradition = tr_plentiful_affinity_finish
+            }
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+            job_alloy_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_tradition = tr_plentiful_affinity_finish
+            }
+            owner = {
+                is_machine_empire = yes
+            }
+            owner = {
+                country_uses_consumer_goods = no
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+            job_fabricator_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_tradition = tr_plentiful_affinity_finish
+            }
+            owner = {
+                is_machine_empire = yes
+            }
+            owner = {
+                country_uses_consumer_goods = yes
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+            job_artisan_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_tradition = tr_plentiful_affinity_finish
+            }
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+            job_artisan_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_tradition = tr_plentiful_industry_3
+            }
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+            job_alloy_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_tradition = tr_plentiful_industry_3
+            }
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+            job_fabricator_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_tradition = tr_plentiful_industry_3
+            }
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+            job_foundry_add = 1
+        }
+    }
     triggered_desc = {
         trigger = {
             exists = owner

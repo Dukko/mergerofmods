@@ -1,3 +1,5 @@
+@ebh_min1 = 400
+@ebh_upkeep2 = 2
 building_communal_housing = {
     base_buildtime = @b1_time
     icon = building_residence
@@ -25,10 +27,7 @@ building_communal_housing = {
         exists = owner
         owner = {
             is_regular_empire = yes
-            OR = {
-                has_valid_civic = civic_shared_burden
-                has_valid_civic = civic_employee_ownership
-            }
+            has_valid_civic = civic_shared_burden
         }
     }
     allow = {
@@ -83,14 +82,14 @@ building_communal_housing = {
     resources = {
         category = planet_buildings
         cost = {
-            minerals = @b1_minerals
+            minerals = @ebh_min1
         }
         upkeep = {
-            energy = 2
+            energy = @ebh_upkeep2
         }
     }
     upgrades = {
         "ebh_communal_housing"
         "building_communal_housing_large"
-        }
     }
+}

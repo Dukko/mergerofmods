@@ -55,7 +55,7 @@ building_hab_major_capital = {
         planet_housing_add = 5
         planet_amenities_add = 5
         planet_max_buildings_add = @buildings_t2
-        planet_max_branch_office_buildings_add = 2
+        planet_max_branch_office_buildings_add = 1
     }
     triggered_planet_modifier = {
         potential = {
@@ -118,7 +118,7 @@ building_hab_major_capital = {
                 is_mechanical_empire = yes
             }
         }
-        job_roboticist_add = 2
+        job_roboticist_add = 1
         planet_pop_assembly_add = 1
         pop_growth_speed = -0.5
     }

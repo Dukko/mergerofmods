@@ -61,11 +61,36 @@ district_mining_uncapped = {
         potential = {
             exists = owner
             owner = {
+                has_valid_civic = civic_mining_guilds
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+            job_miner_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
                 has_valid_civic = civic_agrarian_idyll
             }
         }
         modifier = {
             planet_housing_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                or = {
+                    has_valid_civic = civic_keepers_harmony
+                }
+            }
+        }
+        modifier = {
+            planet_amenities_add = -1
         }
     }
     triggered_planet_modifier = {
@@ -155,31 +180,6 @@ district_mining_uncapped = {
         potential = {
             exists = owner
             owner = {
-                has_valid_civic = civic_mining_guilds
-            }
-        }
-        modifier = {
-            planet_housing_add = 1
-            job_miner_add = 1
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                or = {
-                    has_valid_civic = civic_keepers_harmony
-                }
-            }
-        }
-        modifier = {
-            planet_amenities_add = -1
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
                 or = {
                     has_valid_civic = civic_welfare_state
                     has_valid_civic = civic_shared_burden
@@ -189,6 +189,67 @@ district_mining_uncapped = {
         modifier = {
             job_miner_add = 1
             planet_housing_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_tradition = tr_plentiful_industry_3
+            }
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+            job_mining_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_tradition = tr_plentiful_industry_3
+            }
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+            job_mining_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_tradition = tr_plentiful_industry_3
+            }
+            owner = {
+                is_gestalt = no
+                is_fallen_empire_spiritualist = no
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+            job_miner_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_tradition = tr_plentiful_industry_3
+            }
+            owner = {
+                is_fallen_empire_spiritualist = yes
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+            job_fe_acolyte_mine_add = 1
         }
     }
     triggered_desc = {
@@ -225,6 +286,17 @@ district_mining_uncapped = {
         minerals = 1
         trigger = {
             always = yes
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_tradition = tr_industry_compact_extraction_centers
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
         }
     }
 }

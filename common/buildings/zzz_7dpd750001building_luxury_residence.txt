@@ -1,0 +1,101 @@
+@ebh_min1 = 400
+@ebh_upkeep2 = 2
+building_luxury_residence = {
+    base_buildtime = @b1_time
+    category = amenity
+    potential = {
+        OR = {
+            NOT = {
+                OR = {
+                    is_planet_class = pc_habitat
+                    is_planet_class = pc_pd_barren_cold_hab
+                    is_planet_class = pc_pd_barren_hab
+                    is_planet_class = pc_pd_frozen_hab
+                    is_planet_class = pc_pd_gas_giant_hab
+                    is_planet_class = pc_pd_hothouse_hab
+                    is_planet_class = pc_pd_toxic_hab
+                    is_planet_class = pc_pd_molten_hab
+                    is_planet_class = pc_gd_hydrocarbon_hab
+                }
+            }
+            has_planet_flag = advanced_habitat
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+        exists = owner
+        owner = {
+            is_regular_empire = yes
+            NOT = {
+                has_valid_civic = civic_shared_burden
+            }
+        }
+    }
+    allow = {
+        buildings_simple_allow = yes
+    }
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            AND = {
+                free_building_slots = 0
+                free_jobs < 1
+                free_housing > 10
+                owner = {
+                    is_ai = yes
+                }
+            }
+            owner = {
+                is_regular_empire = no
+            }
+            owner = {
+                has_valid_civic = civic_shared_burden
+            }
+            has_modifier = slave_colony
+        }
+    }
+    convert_to = {
+        building_drone_storage
+        building_hive_warren
+        building_communal_housing
+    }
+    planet_modifier = {
+        planet_housing_add = 3
+        planet_amenities_add = 5
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_non_swapped_tradition = tr_domination_imperious_architecture
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_eutab_habitation_studies
+            }
+        }
+        modifier = {
+            planet_housing_add = 3
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @ebh_min1
+        }
+        upkeep = {
+            energy = @ebh_upkeep2
+        }
+    }
+    upgrades = {
+        "ebh_luxury_residence"
+        "building_paradise_dome"
+    }
+}

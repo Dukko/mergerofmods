@@ -29,7 +29,7 @@ building_system_capital = {
         building_ancient_palace
     }
     allow = {
-        num_pops >= 80
+        num_pops >= 40
     }
     prerequisites = {
         "tech_galactic_administration"
@@ -42,7 +42,7 @@ building_system_capital = {
         planet_housing_add = 12
         planet_amenities_add = 12
         planet_max_buildings_add = @buildings_t4
-        planet_max_branch_office_buildings_add = 6
+        planet_max_branch_office_buildings_add = 3
     }
     triggered_planet_modifier = {
         potential = {
@@ -95,7 +95,7 @@ building_system_capital = {
                 is_mechanical_empire = yes
             }
         }
-        job_roboticist_add = 3
+        job_roboticist_add = 1
         planet_pop_assembly_add = 2
         pop_growth_speed = -0.5
     }
@@ -124,8 +124,6 @@ building_system_capital = {
                     has_valid_civic = civic_bureaucracy
                     has_valid_civic = civic_stratocracy
                     has_valid_civic = civic_state_monopoly
-                    has_valid_civic = civic_bancorp
-                    has_valid_civic = civic_science_syndicate
                 }
             }
         }
@@ -142,36 +140,6 @@ building_system_capital = {
         }
         modifier = {
             job_executive_add = 4
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_megacorp = yes
-            }
-            owner = {
-                has_civic = civic_bancorp
-            }
-        }
-        modifier = {
-            job_merchant_add = 2
-            job_executive_add = 2
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_megacorp = yes
-            }
-            owner = {
-                has_civic = civic_science_syndicate
-            }
-        }
-        modifier = {
-            job_head_researcher_add = 2
-            job_executive_add = 2
         }
     }
     triggered_planet_modifier = {
@@ -374,7 +342,6 @@ building_system_capital = {
                     has_valid_civic = civic_science_directorate
                     has_valid_civic = civic_cyber_demos_cratos
                     has_valid_civic = civic_technocracy
-                    has_civic = civic_science_syndicate
                 }
             }
         }
@@ -388,15 +355,6 @@ building_system_capital = {
             }
         }
         text = job_mogul_effect_desc
-    }
-    triggered_desc = {
-        trigger = {
-            exists = owner
-            owner = {
-                has_civic = civic_bancorp
-            }
-        }
-        text = job_merchant_effect_desc
     }
     triggered_desc = {
         trigger = {
@@ -433,6 +391,5 @@ building_system_capital = {
     }
     upgrades = {
         building_imperial_capital
-        "building_avb_capital_4"
     }
 }

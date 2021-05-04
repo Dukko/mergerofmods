@@ -20,7 +20,7 @@ building_major_capital = {
         }
     }
     allow = {
-        num_pops >= 40
+        num_pops >= 20
     }
     convert_to = {
         building_hive_major_capital
@@ -41,7 +41,7 @@ building_major_capital = {
         planet_housing_add = 8
         planet_amenities_add = 8
         planet_max_buildings_add = @buildings_t3
-        planet_max_branch_office_buildings_add = 4
+        planet_max_branch_office_buildings_add = 2
     }
     triggered_planet_modifier = {
         potential = {
@@ -83,7 +83,7 @@ building_major_capital = {
                 is_mechanical_empire = yes
             }
         }
-        job_roboticist_add = 2
+        job_roboticist_add = 1
         planet_pop_assembly_add = 2
         pop_growth_speed = -0.5
     }
@@ -111,8 +111,6 @@ building_major_capital = {
                     has_valid_civic = civic_technocracy
                     has_valid_civic = civic_bureaucracy
                     has_valid_civic = civic_stratocracy
-                    has_civic = civic_bancorp
-                    has_civic = civic_science_syndicate
                     has_valid_civic = civic_state_monopoly
                 }
             }
@@ -127,49 +125,9 @@ building_major_capital = {
             owner = {
                 is_megacorp = yes
             }
-            owner = {
-                NOT = {
-                    has_civic = civic_bancorp
-                }
-            }
-            owner = {
-                NOT = {
-                    has_civic = civic_science_syndicate
-                }
-            }
         }
         modifier = {
             job_executive_add = 3
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_megacorp = yes
-            }
-            owner = {
-                has_civic = civic_bancorp
-            }
-        }
-        modifier = {
-            job_merchant_add = 1
-            job_executive_add = 2
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_megacorp = yes
-            }
-            owner = {
-                has_civic = civic_science_syndicate
-            }
-        }
-        modifier = {
-            job_head_researcher_add = 1
-            job_executive_add = 2
         }
     }
     triggered_planet_modifier = {
@@ -360,7 +318,6 @@ building_major_capital = {
                     has_valid_civic = civic_science_directorate
                     has_valid_civic = civic_cyber_demos_cratos
                     has_valid_civic = civic_technocracy
-                    has_civic = civic_science_syndicate
                 }
             }
         }
@@ -374,15 +331,6 @@ building_major_capital = {
             }
         }
         text = job_mogul_effect_desc
-    }
-    triggered_desc = {
-        trigger = {
-            exists = owner
-            owner = {
-                has_civic = civic_bancorp
-            }
-        }
-        text = job_merchant_effect_desc
     }
     triggered_desc = {
         trigger = {

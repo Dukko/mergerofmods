@@ -35,7 +35,7 @@ building_resort_major_capital = {
         planet_amenities_add = 10
         job_entertainer_add = 2
         planet_max_buildings_add = 11
-        planet_max_branch_office_buildings_add = 4
+        planet_max_branch_office_buildings_add = 2
     }
     triggered_planet_modifier = {
         potential = {
@@ -56,7 +56,7 @@ building_resort_major_capital = {
                 is_mechanical_empire = yes
             }
         }
-        job_roboticist_add = 2
+        job_roboticist_add = 1
         planet_pop_assembly_add = 1
         pop_growth_speed = -0.5
     }

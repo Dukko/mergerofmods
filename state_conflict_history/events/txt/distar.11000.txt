@@ -21,11 +21,11 @@ country_event = {
                         exists = event_target:lcluster1
                     }
                 }
-            random_system = {
-                limit = {
-                    has_star_flag = lcluster1
-                }
-                save_global_event_target_as = lcluster1
+                random_system = {
+                    limit = {
+                        has_star_flag = lcluster1
+                    }
+                    save_global_event_target_as = lcluster1
                 }
             }
             event_target:lcluster1 = {
@@ -61,13 +61,13 @@ country_event = {
                 limit = {
                     NOT = {
                         exists = event_target:lcluster2
+                    }
                 }
-            }
-            random_system = {
-                limit = {
-                    has_star_flag = lcluster2
-                }
-                save_global_event_target_as = lcluster2
+                random_system = {
+                    limit = {
+                        has_star_flag = lcluster2
+                    }
+                    save_global_event_target_as = lcluster2
                 }
             }
             event_target:lcluster2 = {
@@ -151,12 +151,12 @@ country_event = {
                 limit = {
                     NOT = {
                         exists = event_target:lcluster_factory_system
-            }
-        }
-        random_system = {
-            limit = {
-                has_star_flag = lcluster5
-            }
+                    }
+                }
+                random_system = {
+                    limit = {
+                        has_star_flag = lcluster5
+                    }
                     save_global_event_target_as = lcluster_factory_system
                 }
             }
@@ -180,11 +180,11 @@ country_event = {
                     exists = event_target:lcluster2b
                 }
             }
-        random_system = {
-            limit = {
-                has_star_flag = lcluster2b
-            }
-            save_global_event_target_as = lcluster2b
+            random_system = {
+                limit = {
+                    has_star_flag = lcluster2b
+                }
+                save_global_event_target_as = lcluster2b
             }
         }
         if = {
@@ -223,7 +223,7 @@ country_event = {
                     id = gpm_engine.1
                 }
             }
-        event_target:lcluster_factory_system = {
+        }
             add_hyperlane = {
                 from = event_target:lcluster_factory_system
                 to = event_target:lcluster4
@@ -271,20 +271,34 @@ country_event = {
             add_hyperlane = {
                 from = event_target:lcluster1
                 to = event_target:lcluster1b
-            }
+                }
                 random_system_megastructure = {
                     limit = {
                         is_megastructure_type = lgate_base
                     }
                     activate_gateway = this
                     set_megastructure_flag = lgate_activated
+            }
+        }
+        event_target:lcluster1b = {
+            add_hyperlane = {
+                from = event_target:lcluster1b
+                to = event_target:lcluster2b
                 }
             }
-            event_target:lcluster1b = {
-                add_hyperlane = {
-                    from = event_target:lcluster1b
-                    to = event_target:lcluster2b
+        }
+        if = {
+            limit = {
+                OR = {
+                    has_global_flag = dragon_season
+                    has_global_flag = gray_goo_crisis_set
                 }
+            }
+            every_megastructure = {
+                limit = {
+                    CmtTriggerIsClosedLgate = yes
+                }
+                CmtEffectOpenLgate = yes
             }
         }
         set_spawn_system_batch = end

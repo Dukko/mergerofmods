@@ -27,7 +27,6 @@ district_nexus = {
         NOT = {
             has_modifier = resort_colony
         }
-        ai_nexus_district_allow = yes
     }
     conversion_ratio = 0.5
     convert_to = {
@@ -48,7 +47,7 @@ district_nexus = {
     planet_modifier = {
         planet_housing_add = 5
         job_maintenance_drone_add = 3
-        planet_max_buildings_add = 2
+        planet_max_buildings_add = 1
     }
     triggered_planet_modifier = {
         potential = {

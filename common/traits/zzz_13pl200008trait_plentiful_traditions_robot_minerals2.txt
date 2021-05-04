@@ -1,0 +1,21 @@
+trait_plentiful_traditions_robot_minerals2 = {
+    cost = 2
+    initial = no
+    randomized = no
+    prerequisites = {
+        tech_plentiful_traditions_metaverse_ecosystem
+    }
+    opposites = {
+        trait_plentiful_traditions_robot_supercharged_drills
+        trait_plentiful_traditions_robot_minerals1
+        trait_plentiful_traditions_robot_minerals3
+        trait_plentiful_traditions_robot_minerals4
+    }
+    allowed_archetypes = {
+        ROBOT
+        MACHINE
+    }
+    modifier = {
+        planet_jobs_minerals_produces_mult = 0.15
+    }
+}
