@@ -1,0 +1,29 @@
+pt_cocoon = {
+    category = pt_cocoon_cat
+    is_capped_by_modifier = no
+    can_set_priority = no
+    clothes_texture_index = 2
+    building_icon = building_spawning_pool
+    pop_modifier = {
+        pop_housing_usage_add = -1
+    }
+    possible_pre_triggers = {
+        is_enslaved = yes
+    }
+    possible = {
+        has_citizenship_type = {
+            type = citizenship_slavery
+        }
+        has_slavery_type = {
+            type = slavery_livestock
+        }
+        has_trait = trait_plentiful_traditions_pt_cocoon
+    }
+    weight = {
+        weight = @special_job_weight
+        modifier = {
+            factor = 1000
+            has_trait = trait_plentiful_traditions_pt_cocoon
+        }
+    }
+}

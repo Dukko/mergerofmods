@@ -1,0 +1,3 @@
+NAI = {
+    PEACE_OCCUPATION_FACTOR = 100
+}

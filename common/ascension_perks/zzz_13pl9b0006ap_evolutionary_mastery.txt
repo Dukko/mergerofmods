@@ -12,11 +12,8 @@ ap_evolutionary_mastery = {
     possible = {
         custom_tooltip = {
             fail_text = "synthetic_empire_biological_ascension"
-            Or = {
-                NOT = {
-                    has_trait = trait_mechanical
-                }
-                esap_has_bio_cyber_psi_2 = yes
+            NOT = {
+                has_trait = trait_mechanical
             }
         }
         custom_tooltip = {
@@ -30,19 +27,6 @@ ap_evolutionary_mastery = {
         custom_tooltip = {
             fail_text = "requires_ap_engineered_evolution"
             has_ascension_perk = ap_engineered_evolution
-        }
-        custom_tooltip = {
-            fail_text = "requires_ap_engineered_evolution"
-            has_ascension_perk = ap_engineered_evolution
-        }
-        custom_tooltip = {
-            fail_text = "ap_esap_ascension_path_t2_req_1"
-            Or = {
-                Not = {
-                    esap_has_bio_cyber_psi_1 = yes
-                }
-                esap_has_bio_cyber_psi_2 = yes
-            }
         }
     }
     modifier = {
@@ -58,14 +42,7 @@ ap_evolutionary_mastery = {
         host_has_dlc = "Utopia"
         NOT = {
             has_ascension_perk = ap_evolutionary_mastery
-            has_authority = "auth_machine_intelligence"
-        }
-        Or = {
-            And = {
-                is_mechanical_empire = no
-                is_cyborg_empire = no
-            }
-            esap_has_bio_cyber_psi_1 = yes
+            has_civic = civic_machine_terminator
         }
     }
     ai_weight = {

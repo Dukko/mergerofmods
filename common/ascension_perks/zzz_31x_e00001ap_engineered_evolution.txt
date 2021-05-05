@@ -12,12 +12,8 @@ ap_engineered_evolution = {
     possible = {
         custom_tooltip = {
             fail_text = "synthetic_empire_biological_ascension"
-            Or = {
-                NOT = {
-                    has_trait = trait_mechanical
-                }
-                has_ascension_perk = ap_esap_bio_cyber_psi_1
-                has_ascension_perk = ap_esap_bio_cyber_psi_2_plain
+            NOT = {
+                has_trait = trait_mechanical
             }
         }
         custom_tooltip = {
@@ -34,18 +30,35 @@ ap_engineered_evolution = {
                 NOT = {
                     has_ascension_perk = ap_the_flesh_is_weak
                 }
-                has_ascension_perk = ap_esap_bio_cyber_psi_1
-                has_ascension_perk = ap_esap_bio_cyber_psi_2_plain
-            }
+                    AND = {
+                    num_ascension_perks > 12
+                    AND = {
+                        has_tradition = tr_plentiful_biogenesis_finish
+                        has_tradition = tr_plentiful_mutagenesis_finish
+                    }
+                    has_tradition = tr_plentiful_cybernetics_finish
+                    has_ascension_perk = ap_the_flesh_is_weak
+                }
+                }
         }
         custom_tooltip = {
             fail_text = "requires_not_ap_mind_over_matter"
-            Or = {
-            NOT = {
-                has_ascension_perk = ap_mind_over_matter
-            }
-                has_ascension_perk = ap_esap_bio_cyber_psi_1
-                has_ascension_perk = ap_esap_bio_cyber_psi_2_plain
+            OR = {
+                NOT = {
+                    has_ascension_perk = ap_mind_over_matter
+                }
+                AND = {
+                    num_ascension_perks > 12
+                    AND = {
+                        has_tradition = tr_plentiful_biogenesis_finish
+                        has_tradition = tr_plentiful_mutagenesis_finish
+        }
+                    AND = {
+                        has_tradition = tr_plentiful_mysticism_finish
+                        has_tradition = tr_plentiful_faith_finish
+                    }
+                    has_ascension_perk = ap_mind_over_matter
+                }
             }
         }
         custom_tooltip = {
@@ -76,14 +89,8 @@ ap_engineered_evolution = {
             has_ascension_perk = ap_engineered_evolution
             has_authority = "auth_machine_intelligence"
         }
-        Or = {
-            And = {
-                is_mechanical_empire = no
-                is_cyborg_empire = no
-            }
-            has_ascension_perk = ap_esap_bio_cyber_psi_1
-            has_ascension_perk = ap_esap_bio_cyber_psi_2_plain
-        }
+        is_mechanical_empire = no
+        is_cyborg_empire = no
     }
     ai_weight = {
         factor = 100

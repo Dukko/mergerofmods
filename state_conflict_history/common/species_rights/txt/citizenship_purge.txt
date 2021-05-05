@@ -89,6 +89,16 @@ citizenship_purge = {
         factor = 20
         modifier = {
             factor = 0
+            has_trait = trait_plentiful_traditions_pt_cocoon
+            from = {
+                has_authority = auth_hive_mind
+                NOT = {
+                    has_civic = civic_hive_devouring_swarm
+                }
+            }
+        }
+        modifier = {
+            factor = 0
             ariphaos_patch_slaves_expel = no
             has_trait = trait_machine_unit
             from = {

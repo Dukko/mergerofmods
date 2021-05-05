@@ -10,7 +10,7 @@ ap_synthetic_evolution = {
         }
         hidden_effect = {
             country_event = {
-                id = esap_ascension_paths.3
+                id = utopia.2550
             }
         }
     }
@@ -52,15 +52,6 @@ ap_synthetic_evolution = {
             fail_text = "requires_finished_cybernetics_project"
             NOT = {
                 has_special_project = FLESH_IS_WEAK_PROJECT
-            }
-        }
-        custom_tooltip = {
-            fail_text = "ap_esap_ascension_path_t2_req_1"
-            Or = {
-                Not = {
-                    esap_has_bio_cyber_psi_1 = yes
-                }
-                esap_has_bio_cyber_psi_2 = yes
             }
         }
     }

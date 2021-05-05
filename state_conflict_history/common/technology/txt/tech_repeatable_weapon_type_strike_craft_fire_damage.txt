@@ -14,11 +14,15 @@ tech_repeatable_weapon_type_strike_craft_fire_damage = {
     prerequisites = {
         "tech_strike_craft_3"
     }
-    weight = @repeatableTechWeight
+    weight = 5
     weight_modifier = {
-        factor = @repatableTechFactor
-    }
-    weight_modifier = {
+        modifier = {
+            factor = 1.4
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
         modifier = {
             factor = 0
             has_country_flag = wrd_hwdis
@@ -41,7 +45,6 @@ tech_repeatable_weapon_type_strike_craft_fire_damage = {
         repeatable = @RepeatRepeatable
     }
     modifier = {
-        weapon_type_strike_craft_weapon_damage_mult = 0.06
-        weapon_type_strike_craft_weapon_fire_rate_mult = 0.06
+        weapon_type_strike_craft_weapon_damage_mult = 0.1
     }
 }

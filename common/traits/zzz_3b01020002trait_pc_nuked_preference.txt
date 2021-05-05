@@ -1,15 +1,18 @@
 trait_pc_nuked_preference = {
     icon = "gfx/interface/icons/traits/trait_pc_nuked_preference.dds"
-    modification = no
     allowed_archetypes = {
         BIOLOGICAL
         PRESAPIENT
         LITHOID
     }
+    prerequisites = {
+        tech_ap_plentiful_traditions_tomb_life
+    }
     sorting_priority = 30
     ai_weight = {
         weight = 0
     }
+    custom_tooltip = TRAIT_NUKED_PREFERENCE_EFFECT
     modifier = {
         pc_nuked_habitability = 0.8
         pc_irradiated_habitability = 0.65

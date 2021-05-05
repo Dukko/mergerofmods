@@ -12,6 +12,7 @@ tech_construction_templates = {
     weight = @tier3weight2
     modifier = {
         planet_building_build_speed_mult = 0.5
+        planet_decision_enact_speed_mult = 0.3
         empire_size_districts_mult = -0.1
     }
     weight_modifier = {
@@ -52,8 +53,6 @@ tech_construction_templates = {
         }
     }
     ai_weight = {
-        factor = 20
-        factor = 25
         modifier = {
             factor = 1.25
             research_leader = {

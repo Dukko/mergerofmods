@@ -60,6 +60,21 @@ building_hive_major_capital = {
         potential = {
             exists = owner
             owner = {
+                has_ascension_perk = ap_total_assimilation
+            }
+            OR = {
+                is_homeworld = yes
+                is_hive_world = yes
+            }
+        }
+        modifier = {
+            job_queen_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
                 has_technology = tech_capital_productivity_2
             }
         }

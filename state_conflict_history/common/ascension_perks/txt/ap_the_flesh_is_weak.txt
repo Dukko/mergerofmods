@@ -34,22 +34,36 @@ ap_the_flesh_is_weak = {
         }
         custom_tooltip = {
             fail_text = "requires_not_ap_engineered_evolution"
-            Or = {
+            OR = {
                 NOT = {
                     has_ascension_perk = ap_engineered_evolution
                 }
-                has_ascension_perk = ap_esap_bio_cyber_psi_1
-                has_ascension_perk = ap_esap_bio_cyber_psi_2_plain
+                AND = {
+                    num_ascension_perks > 12
+                    AND = {
+                        has_tradition = tr_plentiful_biogenesis_finish
+                        has_tradition = tr_plentiful_mutagenesis_finish
+                    }
+                    has_tradition = tr_plentiful_cybernetics_finish
+                    has_ascension_perk = ap_engineered_evolution
+                }
             }
         }
         custom_tooltip = {
             fail_text = "requires_not_ap_mind_over_matter"
-            Or = {
+            OR = {
                 NOT = {
                     has_ascension_perk = ap_mind_over_matter
                 }
-                has_ascension_perk = ap_esap_bio_cyber_psi_1
-                has_ascension_perk = ap_esap_bio_cyber_psi_2_plain
+                AND = {
+                    num_ascension_perks > 12
+                    has_tradition = tr_plentiful_cybernetics_finish
+                    AND = {
+                        has_tradition = tr_plentiful_mysticism_finish
+                        has_tradition = tr_plentiful_faith_finish
+                    }
+                    has_ascension_perk = ap_mind_over_matter
+                }
             }
         }
     }

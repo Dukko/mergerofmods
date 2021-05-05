@@ -223,7 +223,7 @@ country_event = {
                     id = gpm_engine.1
                 }
             }
-        }
+        event_target:lcluster_factory_system = {
             add_hyperlane = {
                 from = event_target:lcluster_factory_system
                 to = event_target:lcluster4
