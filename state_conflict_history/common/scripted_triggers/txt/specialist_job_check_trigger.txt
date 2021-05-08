@@ -20,9 +20,6 @@ specialist_job_check_trigger = {
         NOT = {
             has_trait = trait_nerve_stapled
         }
-        NOT = {
-            has_trait = trait_subsapient_form
-        }
         OR = {
             NOT = {
                 has_trait = trait_mechanical

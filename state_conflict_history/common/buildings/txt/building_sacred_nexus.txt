@@ -94,9 +94,6 @@ building_sacred_nexus = {
             rare_crystals = @b3_rare_upkeep
         }
     }
-    upgrades = {
-        "building_avb_temple_4"
-    }
     prerequisites = {
         "tech_consecration_fields"
     }

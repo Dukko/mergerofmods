@@ -10,10 +10,6 @@ cave_cleaner = {
     }
     possible = {
         specialist_job_check_trigger = yes
-        OR = {
-            traits_restrict_worker_jobs = no
-            has_pop_flag = allow_cave_cleaner_traits
-        }
     }
     triggered_planet_modifier = {
         potential = {

@@ -10,7 +10,6 @@ country_event = {
                 is_megastructure_type = strategic_coordination_center_0
                 is_megastructure_type = mega_art_installation_0
                 is_megastructure_type = interstellar_assembly_0
-                is_megastructure_type = mega_shipyard_0
             }
         }
     }

@@ -1,0 +1,76 @@
+esc_dark_matter_shaper = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = nhsc_building_dark_matter_facility
+    clothes_texture_index = 2
+    possible = {
+        complex_specialist_job_check_trigger = yes
+    }
+    resources = {
+        category = planet_jobs
+        produces = {
+            sr_dark_matter = 1
+            physics_research = 3
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_galactic_community_member = yes
+                }
+                OR = {
+                    is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
+                    is_active_resolution = "resolution_industry_project_cornucopia"
+                }
+            }
+            sr_dark_matter = 0.05
+        }
+        upkeep = {
+            consumer_goods = 2
+            energy = 5
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    colony_type = col_refinery
+                }
+            }
+            energy = -0.5
+            consumer_goods = -0.2
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    colony_type = col_habitat_refinery
+                }
+            }
+            energy = -1
+            consumer_goods = -0.4
+        }
+    }
+    weight = {
+        weight = @specialist_job_weight
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+            NOT = {
+                has_trait = trait_mechanical
+            }
+        }
+        modifier = {
+            factor = 2
+            has_trait = trait_natural_physicists
+            has_trait = trait_intelligent
+            has_trait = trait_erudite
+            has_trait = trait_enigmatic_intelligence_poor
+        }
+        modifier = {
+            factor = 2.5
+            has_trait = trait_enigmatic_intelligence
+        }
+        modifier = {
+            factor = 1.5
+            has_job = esc_dark_matter_shaper
+        }
+    }
+}

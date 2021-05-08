@@ -1,0 +1,21 @@
+trait_additrait_unfit_sociologists = {
+    cost = -1
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    modifier = {
+        planet_jobs_society_research_produces_mult = -0.15
+    }
+    opposites = {
+        "trait_natural_physicists"
+        "trait_natural_engineers"
+        "trait_natural_sociologists"
+        "trait_nerve_stapled"
+        "trait_additrait_unfit_engineers"
+        "trait_additrait_unfit_physicists"
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

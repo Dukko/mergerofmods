@@ -52,6 +52,9 @@ building_clone_vats = {
             planet_jobs_unity_produces_mult = 0.05
         }
     }
+    upgrades = {
+        building_eutab_adv_clone_vats
+    }
     resources = {
         category = planet_buildings
         cost = {
@@ -110,9 +113,6 @@ building_clone_vats = {
             energy = 2
             food = 15
         }
-    }
-    upgrades = {
-        building_eutab_adv_clone_vats
     }
     triggered_desc = {
         trigger = {

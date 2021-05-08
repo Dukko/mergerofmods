@@ -18,6 +18,12 @@ planet_event = {
             }
         }
         habitable_planet = yes
+        NAND = {
+            exists = owner
+            owner = {
+                is_crisis_faction = yes
+            }
+        }
     }
     immediate = {
         owner = {

@@ -13,13 +13,6 @@ slave_overseer = {
         planet = {
             has_modifier = slave_colony
         }
-        OR = {
-            traits_restrict_worker_jobs = no
-            has_pop_flag = allow_enforcer_traits
-        }
-        NOT = {
-            has_trait = trait_robot_simplistic_morality
-        }
     }
     resources = {
         category = planet_enforcers

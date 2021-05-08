@@ -1,0 +1,14 @@
+ship_behavior = {
+    name = "carrier"
+    preferred_attack_range = 1000
+    formation_distance = 1000
+    return_to_formation_distance = 410
+    source_target_anchor_factor = 1
+    combat_target_anchor = root
+    collision_awareness = 1
+    collision_radius = 1.2
+    collision_strafe = 1.5
+    attack_move_pattern = stay_at_range
+    passive_move_pattern = stationary
+    desc = "EAC_CARRIER_BEHAVIOR_DESC"
+}

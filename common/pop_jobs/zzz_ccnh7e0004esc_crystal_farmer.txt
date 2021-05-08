@@ -1,0 +1,113 @@
+esc_crystal_farmer = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = nhsc_building_crystal_farm_1
+    clothes_texture_index = 2
+    possible = {
+        specialist_job_check_trigger = yes
+        owner = {
+            is_fallen_empire = no
+        }
+    }
+    resources = {
+        category = planet_jobs
+        produces = {
+            esc_living_crystal = 2
+            alloys = 1
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_galactic_community_member = yes
+                }
+                OR = {
+                    is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
+                    is_active_resolution = "resolution_industry_project_cornucopia"
+                }
+            }
+            esc_living_crystal = 0.1
+            alloys = 0.05
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = nhsc_tech_rare_crystals_cultivation
+                }
+            }
+            rare_crystals = 0.5
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = nhsc_tech_rare_crystals_cultivation
+                    is_galactic_community_member = yes
+                }
+                OR = {
+                    is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
+                    is_active_resolution = "resolution_industry_project_cornucopia"
+                }
+            }
+            rare_crystals = 0.025
+        }
+        upkeep = {
+            consumer_goods = 1
+            minerals = 4
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    colony_type = col_refinery
+                }
+            }
+            consumer_goods = -0.1
+            minerals = -0.4
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    colony_type = col_habitat_refinery
+                }
+            }
+            consumer_goods = -0.2
+            minerals = -0.8
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            owner = {
+                has_technology = nhsc_tech_crystalline_valuables
+            }
+        }
+        modifier = {
+            trade_value_add = 1
+        }
+    }
+    weight = {
+        weight = @specialist_job_weight
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+                has_trait = trait_strong
+                has_trait = trait_very_strong
+                has_trait = trait_agrarian
+                has_trait = trait_industrious
+                has_trait = trait_cybernetic
+            }
+        }
+        modifier = {
+            factor = 0.75
+            has_trait = trait_nerve_stapled
+            has_trait = trait_weak
+        }
+        modifier = {
+            factor = 1.5
+            has_job = esc_crystal_farmer
+        }
+    }
+}

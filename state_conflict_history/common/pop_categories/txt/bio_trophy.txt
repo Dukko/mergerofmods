@@ -102,7 +102,7 @@ bio_trophy = {
                 has_trait = trait_lithoid_zro_byproducts
             }
             sr_zro = @lithoid_trait_resource_production
-            }
+        }
     }
     unemployment_penalties = {
         pop_happiness = -0.8

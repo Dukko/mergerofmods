@@ -30,40 +30,9 @@ ap_mind_over_matter = {
             has_technology = tech_psionic_theory
         }
         custom_tooltip = {
-            fail_text = "requires_not_ap_engineered_evolution"
-            OR = {
-                NOT = {
-                    has_ascension_perk = ap_engineered_evolution
-                }
-                AND = {
-                    num_ascension_perks > 12
-                    AND = {
-                        has_tradition = tr_plentiful_biogenesis_finish
-                        has_tradition = tr_plentiful_mutagenesis_finish
-                    }
-                    AND = {
-                        has_tradition = tr_plentiful_mysticism_finish
-                        has_tradition = tr_plentiful_faith_finish
-                    }
-                    has_ascension_perk = ap_engineered_evolution
-                }
-            }
-        }
-        custom_tooltip = {
-            fail_text = "requires_not_ap_the_flesh_is_weak"
-            OR = {
-                NOT = {
-                    has_ascension_perk = ap_the_flesh_is_weak
-                }
-                AND = {
-                    num_ascension_perks > 12
-                    has_tradition = tr_plentiful_cybernetics_finish
-                    AND = {
-                        has_tradition = tr_plentiful_mysticism_finish
-                        has_tradition = tr_plentiful_faith_finish
-                    }
-                    has_ascension_perk = ap_the_flesh_is_weak
-                }
+            fail_text = "ariphaos_requires_not_ap_synthetic_evolution"
+            NOT = {
+                has_ascension_perk = ap_synthetic_evolution
             }
         }
     }
@@ -76,17 +45,13 @@ ap_mind_over_matter = {
         is_mechanical_empire = no
     }
     ai_weight = {
-        factor = 100
+        factor = 10
         modifier = {
             factor = 0.1
             NOR = {
                 has_ethic = ethic_spiritualist
                 has_ethic = ethic_fanatic_spiritualist
             }
-        }
-        modifier = {
-            factor = 0
-            num_owned_planets < 10
         }
     }
 }

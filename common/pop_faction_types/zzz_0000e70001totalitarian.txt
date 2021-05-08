@@ -154,32 +154,26 @@ totalitarian = {
         trigger = {
             owner = {
                 OR = {
-                    NOT = {
+                    NOR = {
                         any_owned_pop = {
                             NOR = {
                                 has_living_standard = {
                                     type = living_standard_stratified
-                                    country = prev
                                 }
                                 has_living_standard = {
                                     type = living_standard_academic_privilege
-                                    country = prev
                                 }
                                 has_living_standard = {
                                     type = living_standard_none
-                                    country = prev
                                 }
                                 has_living_standard = {
                                     type = living_standard_psi_assimilation
-                                    country = prev
                                 }
                                 has_living_standard = {
                                     type = living_standard_tech_assimilation
-                                    country = prev
                                 }
                                 has_living_standard = {
                                     type = living_standard_deassimilation
-                                    country = prev
                                 }
                                 NAND = {
                                     OR = {

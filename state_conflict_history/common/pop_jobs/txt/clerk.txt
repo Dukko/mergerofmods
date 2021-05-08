@@ -16,20 +16,6 @@ clerk = {
             has_pop_flag = allow_clerk_traits
         }
     }
-    resources = {
-        category = planet_clerks
-        produces = {
-            trigger = {
-                exists = owner
-                owner = {
-                    has_valid_civic = civic_founder_cult
-                }
-            }
-            physics_research = 0.5
-            engineering_research = 0.5
-            society_research = 0.5
-        }
-    }
     planet_modifier = {
         planet_amenities_add = 2
         trade_value_add = 2
@@ -42,7 +28,7 @@ clerk = {
             }
         }
         modifier = {
-            planet_amenities_add = 0.4
+            planet_amenities_add = 0.8
         }
     }
     triggered_planet_modifier = {
@@ -50,7 +36,7 @@ clerk = {
             has_trait = trait_repugnant
         }
         modifier = {
-            planet_amenities_add = -0.4
+            planet_amenities_add = -0.8
         }
     }
     triggered_planet_modifier = {
@@ -61,7 +47,7 @@ clerk = {
             }
         }
         modifier = {
-            trade_value_add = 0.5
+            trade_value_add = 1
         }
     }
     triggered_planet_modifier = {
@@ -105,19 +91,6 @@ clerk = {
                 is_shackled_robot = yes
             }
             can_take_servant_job = no
-        }
-        modifier = {
-            factor = 0
-            or = {
-                years_passed < 90
-                planet = {
-                    free_housing < 5
-                    num_pops > 30
-                }
-            }
-            owner = {
-                is_ai = yes
-            }
         }
         modifier = {
             factor = 1.5

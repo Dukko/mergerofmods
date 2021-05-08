@@ -11,10 +11,6 @@ evaluator = {
     }
     possible = {
         drone_job_check_trigger = yes
-        OR = {
-            traits_restrict_specialist_jobs = no
-            has_pop_flag = allow_evaluator_traits
-        }
     }
     resources = {
         category = planet_evaluators
@@ -27,10 +23,6 @@ evaluator = {
     }
     weight = {
         weight = @synapse_drone_job_weight
-        modifier = {
-            factor = 4
-            has_trait = trait_living_architecture
-        }
         modifier = {
             factor = 0.9
             exists = owner

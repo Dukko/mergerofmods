@@ -17,14 +17,7 @@ orbital_bombardment = {
                     has_ethic = "ethic_pacifist"
                     has_ethic = "ethic_fanatic_pacifist"
                 }
-                NOT = {
-                    is_galactic_community_member = yes
-                    OR = {
-                        is_active_resolution = "resolution_rulesofwar_independent_tribunals"
-                        is_active_resolution = "resolution_rulesofwar_last_resort_doctrine"
-                        is_active_resolution = "resolution_rulesofwar_demobilization_initiative"
-                    }
-                }
+                bombardment_stances_improved_avoid_heavy_bombing_by_resolution = no
             }
         }
     }
@@ -54,15 +47,30 @@ orbital_bombardment = {
                 NOR = {
                     has_ethic = "ethic_pacifist"
                     has_ethic = "ethic_fanatic_pacifist"
+                    AND = {
+                        is_xenophile = yes
+                        is_militarist = no
+                    }
                 }
+                bombardment_stances_improved_avoid_heavy_bombing_by_resolution = no
             }
             modifier = {
-                factor = 0.1
-                is_galactic_community_member = yes
-                OR = {
-                    is_active_resolution = "resolution_galacticstudies_ethical_guideline_refactoring"
-                    is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+                factor = 5
+                has_crisis = yes
+                bombardment_stances_improved_avoid_heavy_bombing_by_resolution = no
+            }
+            modifier = {
+                factor = 5
+                is_homicidal = yes
+                NOR = {
+                    has_valid_civic = civic_fanatic_purifiers
+                    has_valid_civic = civic_machine_terminator
                 }
+                bombardment_stances_improved_avoid_heavy_bombing_by_resolution = no
+                }
+            modifier = {
+                factor = 0.1
+                bombardment_stances_improved_avoid_heavy_bombing_by_resolution = yes
             }
         }
     }
@@ -78,6 +86,18 @@ orbital_bombardment = {
                 has_valid_civic = civic_fanatic_purifiers
                 has_valid_civic = civic_machine_terminator
                 has_valid_civic = civic_bringers_of_death
+                AND = {
+                    hidden_trigger = {
+                        OR = {
+                            is_ai = no
+                            has_crisis = yes
+                        }
+                    }
+                    OR = {
+                        has_ethic = "ethic_fanatic_militarist"
+                        has_ethic = "ethic_fanatic_xenophobe"
+            }
+        }
             }
         }
         policy_flags = {
@@ -87,16 +107,29 @@ orbital_bombardment = {
         }
         AI_weight = {
             modifier = {
-                factor = 10
+                factor = 25
                 OR = {
                     has_valid_civic = civic_fanatic_purifiers
                     has_valid_civic = civic_machine_terminator
                     has_valid_civic = civic_bringers_of_death
                 }
+                bombardment_stances_improved_avoid_heavy_bombing_by_resolution = no
+            }
+            modifier = {
+                factor = 2
+                has_ethic = "ethic_fanatic_militarist"
+                has_ethic = "ethic_fanatic_xenophobe"
+                is_xenophile = no
+                bombardment_stances_improved_avoid_heavy_bombing_by_resolution = no
+            }
+            modifier = {
+                factor = 15
+                has_crisis = yes
+                bombardment_stances_improved_avoid_heavy_bombing_by_resolution = no
             }
                         modifier = {
-                factor = 10
-                has_ascension_perk = ap_become_the_crisis
+                factor = 0.1
+                bombardment_stances_improved_avoid_heavy_bombing_by_resolution = yes
             }
         }
     }

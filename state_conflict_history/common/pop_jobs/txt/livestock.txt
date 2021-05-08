@@ -28,32 +28,6 @@ livestock = {
         }
         produces = {
             trigger = {
-                is_organic_species = yes
-                is_lithoid = no
-                owner = {
-                    has_trait = trait_carnivore
-                }
-                NOT = {
-                    is_species_class = PLANT
-                }
-            }
-            food = 1.6
-        }
-        produces = {
-            trigger = {
-                is_organic_species = yes
-                is_lithoid = no
-                owner = {
-                    has_trait = trait_grazer
-                }
-                NOT = {
-                    is_species_class = PLANT
-                }
-            }
-            food = -1.6
-        }
-        produces = {
-            trigger = {
                 is_lithoid = yes
             }
             minerals = 2

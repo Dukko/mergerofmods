@@ -11,10 +11,6 @@ agri_drone = {
     }
     possible = {
         drone_job_check_trigger = yes
-        OR = {
-            traits_restrict_worker_jobs = no
-            has_pop_flag = allow_farmer_traits
-        }
     }
     resources = {
         category = planet_farmers
@@ -94,42 +90,6 @@ agri_drone = {
         modifier = {
             factor = 0.65
             has_trait = trait_necrophage
-        }
-        modifier = {
-            factor = 1.2
-            has_trait = trait_huge
-        }
-        modifier = {
-            factor = 1.1
-            has_trait = trait_big
-        }
-        modifier = {
-            factor = 0.9
-            has_trait = trait_small
-        }
-        modifier = {
-            factor = 0.8
-            has_trait = trait_tiny
-        }
-        modifier = {
-            factor = 1.2
-            has_trait = trait_huge_lithoid
-        }
-        modifier = {
-            factor = 1.1
-            has_trait = trait_big_lithoid
-        }
-        modifier = {
-            factor = 0.9
-            has_trait = trait_small_lithoid
-        }
-        modifier = {
-            factor = 0.8
-            has_trait = trait_tiny_lithoid
-        }
-        modifier = {
-            factor = 0.25
-            has_trait = trait_limbless
         }
     }
 }

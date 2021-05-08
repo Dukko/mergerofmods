@@ -1,0 +1,103 @@
+mogul = {
+    category = ruler
+    condition_string = RULER_JOB_TRIGGER
+    building_icon = building_galactic_stock_exchange
+    clothes_texture_index = 1
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible = {
+        ruler_job_check_trigger = yes
+        owner = {
+            NOT = {
+                has_valid_civic = civic_distributism
+            }
+        }
+    }
+    planet_modifier = {
+        planet_amenities_add = 7
+        trade_value_add = 12
+    }
+    triggered_planet_modifier = {
+        potential = {
+            OR = {
+                has_trait = trait_thrifty
+                has_trait = trait_nuumismatic_administration
+            }
+        }
+        modifier = {
+            trade_value_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            OR = {
+                owner = {
+                    has_valid_civic = civic_merchant_guilds
+                }
+            }
+        }
+        modifier = {
+            planet_technician_produces_mult = 0.04
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            OR = {
+                owner = {
+                    has_valid_civic = civic_state_monopoly
+                }
+            }
+        }
+        modifier = {
+            planet_technician_produces_mult = 0.05
+            planet_miners_produces_mult = 0.05
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_trait = trait_repugnant
+        }
+        modifier = {
+            planet_amenities_add = -1
+        }
+    }
+    weight = {
+        weight = @ruler_job_weight
+        modifier = {
+            factor = 2
+            OR = {
+                has_trait = trait_thrifty
+                has_trait = trait_nuumismatic_administration
+            }
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+                has_trait = trait_robot_domestic_protocols
+                has_trait = trait_charismatic
+            }
+        }
+        modifier = {
+            factor = 0.5
+            has_trait = trait_repugnant
+        }
+        modifier = {
+            factor = 5
+            has_job = mogul
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_capitalism
+        }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = ruler
+        }
+    }
+}

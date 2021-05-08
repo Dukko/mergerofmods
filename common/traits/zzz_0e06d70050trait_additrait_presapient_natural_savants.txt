@@ -1,0 +1,24 @@
+trait_additrait_presapient_natural_savants = {
+    cost = 1
+    initial = no
+    sapient = no
+    modification = no
+    icon = "gfx/interface/icons/traits/trait_primitive.dds"
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+        LITHOID
+    }
+    modifier = {
+        planet_jobs_unity_produces_mult = 0.05
+        planet_jobs_engineering_research_produces_mult = 0.05
+        planet_jobs_physics_research_produces_mult = 0.2
+        planet_jobs_society_research_produces_mult = 0.05
+        planet_jobs_minerals_produces_mult = -0.1
+    }
+    opposites = {
+        "trait_presapient_proles"
+        "trait_presapient_natural_intellectuals"
+        "trait_additrait_presapient_natural_inventors"
+    }
+}

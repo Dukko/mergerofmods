@@ -13,10 +13,6 @@ slave_toiler = {
         planet = {
             has_modifier = slave_colony
         }
-        OR = {
-            traits_restrict_worker_jobs = no
-            has_pop_flag = allow_slave_toiler_traits
-        }
     }
     planet_modifier = {
         planet_amenities_add = 2

@@ -12,8 +12,8 @@ decision_shroud_arc = {
     potential = {
         has_global_flag = planetarydiversityshroud
         OR = {
-            owner = {
-                has_ascension_perk = ap_transcendence
+        owner = {
+            has_ascension_perk = ap_transcendence
             }
             owner = {
                 has_ascension_perk = ap_synthetic_transcendence
@@ -1250,7 +1250,7 @@ decision_shroud_arc = {
                 is_planet_class = pc_palacearc
             }
             set_planet_entity = {
-                entity = shroudpalacearc_planet_01_entity
+                entity = sshroudpalacearc_planet_01_entity
                 picture = pc_shroudpalacearc
             }
             set_planet_flag = shroudedarc

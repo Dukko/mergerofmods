@@ -22,12 +22,18 @@ armageddon = {
         weight = 10
         modifier = {
             factor = 0.01
+            NOT = {
+                owner = {
+                    is_homicidal = yes
+                }
+            }
             exists = from
             from = {
                 owner = {
                     NOT = {
                         is_hostile = root.owner
                     }
+                    is_crisis_faction = no
                 }
             }
             exists = owner

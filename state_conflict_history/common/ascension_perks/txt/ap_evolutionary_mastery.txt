@@ -42,8 +42,9 @@ ap_evolutionary_mastery = {
         host_has_dlc = "Utopia"
         NOT = {
             has_ascension_perk = ap_evolutionary_mastery
-            has_civic = civic_machine_terminator
+            has_authority = "auth_machine_intelligence"
         }
+        is_mechanical_empire = no
     }
     ai_weight = {
         factor = 1000

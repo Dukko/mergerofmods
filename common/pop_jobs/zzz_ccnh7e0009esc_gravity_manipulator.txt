@@ -1,0 +1,81 @@
+esc_gravity_manipulator = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = nhsc_building_graviton_condenser
+    clothes_texture_index = 2
+    possible = {
+        specialist_job_check_trigger = yes
+    }
+    resources = {
+        category = planet_jobs
+        produces = {
+            esc_gravitic_anomaly = 2
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_galactic_community_member = yes
+                }
+                OR = {
+                    is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
+                    is_active_resolution = "resolution_industry_project_cornucopia"
+                }
+            }
+            esc_gravitic_anomaly = 0.1
+        }
+        upkeep = {
+            energy = 2
+            consumer_goods = 2
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    colony_type = col_refinery
+                }
+            }
+            energy = -0.2
+            consumer_goods = -0.2
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    colony_type = col_habitat_refinery
+                }
+            }
+            energy = -0.4
+            consumer_goods = -0.4
+        }
+    }
+    weight = {
+        weight = @specialist_job_weight
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+            NOT = {
+                has_trait = trait_mechanical
+            }
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+                has_trait = trait_intelligent
+                has_trait = trait_natural_physicists
+                has_trait = trait_erudite
+                has_trait = trait_enigmatic_intelligence
+                has_trait = trait_enigmatic_intelligence_poor
+                has_trait = trait_brainslug
+                has_trait = trait_robot_logic_engines
+            }
+        }
+        modifier = {
+            factor = 0.25
+            has_trait = trait_nerve_stapled
+            has_trait = trait_enigmatic_intelligence_failed
+        }
+        modifier = {
+            factor = 1.5
+            has_job = esc_gravity_manipulator
+        }
+    }
+}

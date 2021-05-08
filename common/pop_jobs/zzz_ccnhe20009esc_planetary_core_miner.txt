@@ -1,0 +1,182 @@
+esc_planetary_core_miner = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = nhsc_building_magmaminer_2
+    clothes_texture_index = 2
+    possible = {
+        complex_specialist_job_check_trigger = yes
+        hidden_trigger = {
+            exists = owner
+        }
+        owner = {
+            is_gestalt = no
+        }
+    }
+    resources = {
+        category = planet_jobs
+        upkeep = {
+            trigger = {
+                NOR = {
+                    has_trait = trait_lithoid
+                    has_trait = trait_mechanical
+                    has_trait = trait_machine_unit
+                }
+            }
+            food = 5
+            consumer_goods = 5
+            energy = 5
+        }
+        upkeep = {
+            trigger = {
+                has_trait = trait_lithoid
+            }
+            minerals = 5
+            consumer_goods = 5
+            energy = 5
+        }
+        upkeep = {
+            trigger = {
+                OR = {
+                    has_trait = trait_mechanical
+                    has_trait = trait_machine_unit
+                }
+            }
+            consumer_goods = 5
+            energy = 10
+        }
+        produces = {
+            minerals = 20
+            engineering_research = 5
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    colony_type = col_mining
+                }
+            }
+            minerals = 4
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_mining_1
+                }
+            }
+            minerals = 5
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    colony_type = col_mining
+                }
+                owner = {
+                    has_technology = tech_mining_1
+                }
+            }
+            minerals = 1
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_mining_2
+                }
+            }
+            minerals = 5
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    colony_type = col_mining
+                }
+                owner = {
+                    has_technology = tech_mining_2
+                }
+            }
+            minerals = 1
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_mining_3
+                }
+            }
+            minerals = 5
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    colony_type = col_mining
+                }
+                owner = {
+                    has_technology = tech_mining_3
+                }
+            }
+            minerals = 1
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    OR = {
+                        has_building = building_mineral_purification_plant
+                        has_building = building_mineral_purification_hub
+                    }
+                }
+            }
+            minerals = 5
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    colony_type = col_mining
+                    OR = {
+                        has_building = building_mineral_purification_plant
+                        has_building = building_mineral_purification_hub
+                    }
+                }
+            }
+            minerals = 1
+        }
+        produces = {
+            trigger = {
+                has_global_flag = gf_alphamod_activated
+            }
+            sr_actinides = 1
+            sr_precious_stones = 1
+            sr_rare_metals = 1
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    colony_type = col_mining
+                }
+                has_global_flag = gf_alphamod_activated
+            }
+            sr_actinides = 0.2
+            sr_precious_stones = 0.2
+            sr_rare_metals = 0.2
+        }
+    }
+    weight = {
+        weight = @specialist_job_weight
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+            NOT = {
+                has_trait = trait_mechanical
+            }
+        }
+        modifier = {
+            factor = 2
+            has_trait = trait_strong
+            has_trait = trait_very_strong
+            has_trait = trait_industrious
+            has_trait = trait_resilient
+            has_trait = trait_robot_efficient_processors
+            has_trait = trait_robot_power_drills
+        }
+        modifier = {
+            factor = 1.5
+            has_job = esc_planetary_core_miner
+        }
+    }
+}

@@ -1,0 +1,20 @@
+trait_additrait_genetically_ill = {
+    cost = -3
+    opposites = {
+        "trait_extremely_adaptive"
+        "trait_nonadaptive"
+        "trait_adaptive"
+        "trait_robust"
+        "trait_adaptive_lithoid"
+        "trait_additrait_immune"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    modifier = {
+        pop_environment_tolerance = -0.2
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

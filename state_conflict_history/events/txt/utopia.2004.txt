@@ -57,11 +57,11 @@ country_event = {
                 }
             }
             hidden_effect = {
-            country_event = {
-                id = utopia.2005
+                country_event = {
+                    id = utopia.2005
+                }
             }
         }
-    }
     }
     after = {
         hidden_effect = {

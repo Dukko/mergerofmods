@@ -1,0 +1,75 @@
+esc_nanite_breeder = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = nhsc_building_nanite_foundry
+    clothes_texture_index = 2
+    possible = {
+        specialist_job_check_trigger = yes
+        owner = {
+            is_fallen_empire = no
+        }
+    }
+    resources = {
+        category = planet_jobs
+        produces = {
+            nanites = 2
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_galactic_community_member = yes
+                }
+                OR = {
+                    is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
+                    is_active_resolution = "resolution_industry_project_cornucopia"
+                }
+            }
+            nanites = 0.1
+        }
+        upkeep = {
+            alloys = 4
+            consumer_goods = 1
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    colony_type = col_refinery
+                }
+            }
+            alloys = -0.4
+            consumer_goods = -0.1
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    colony_type = col_habitat_refinery
+                }
+            }
+            alloys = -0.8
+            consumer_goods = -0.2
+        }
+    }
+    weight = {
+        weight = @specialist_job_weight
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+                has_trait = trait_industrious
+                has_trait = trait_cybernetic
+            }
+        }
+        modifier = {
+            factor = 0.75
+            has_trait = trait_nerve_stapled
+        }
+        modifier = {
+            factor = 1.5
+            has_job = esc_nanite_breeder
+        }
+    }
+}

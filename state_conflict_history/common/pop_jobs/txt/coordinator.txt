@@ -11,10 +11,6 @@ coordinator = {
     }
     possible = {
         drone_job_check_trigger = yes
-        OR = {
-            traits_restrict_specialist_jobs = no
-            has_pop_flag = allow_bureaucrat_traits
-        }
     }
     resources = {
         category = planet_bureaucrats
@@ -41,6 +37,17 @@ coordinator = {
             }
         }
         modifier = {
+            country_admin_cap_add = 1.5
+        }
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = planet
+            planet = {
+                has_designation = col_bureau
+            }
+        }
+        modifier = {
             country_admin_cap_add = 3
         }
     }
@@ -57,14 +64,6 @@ coordinator = {
     }
     country_modifier = {
         country_admin_cap_add = 15
-    }
-    triggered_country_modifier = {
-        potential = {
-            has_trait = trait_robot_coordinators
-        }
-        modifier = {
-            country_admin_cap_add = 2.25
-        }
     }
     triggered_country_modifier = {
         potential = {
@@ -86,10 +85,6 @@ coordinator = {
     weight = {
         weight = @synapse_drone_job_weight
         modifier = {
-            factor = 4
-            has_trait = trait_living_architecture
-        }
-        modifier = {
             factor = 0.9
             exists = owner
             years_passed < 1
@@ -97,10 +92,6 @@ coordinator = {
                 has_valid_civic = civic_machine_assimilator
             }
             has_trait = trait_cybernetic
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_robot_coordinators
         }
     }
 }

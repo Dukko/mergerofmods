@@ -1,8 +1,4 @@
 ap_galactic_force_projection = {
-    on_enabled = {
-        custom_tooltip = "worthy_ap_galactic_force_projection_jobs"
-        custom_tooltip = "worthy_ap_galactic_force_projection_anchorage"
-    }
     possible = {
         custom_tooltip = {
             fail_text = "requires_ascension_perks_2"
@@ -12,9 +8,6 @@ ap_galactic_force_projection = {
     modifier = {
         country_naval_cap_add = 80
         country_command_limit_add = 20
-        starbase_shipyard_build_speed_mult = 0.05
-        starbase_shipyard_build_cost_mult = -0.10
-        ships_upkeep_mult = -0.10
     }
     potential = {
         NOT = {

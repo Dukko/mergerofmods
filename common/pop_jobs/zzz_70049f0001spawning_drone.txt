@@ -11,10 +11,6 @@ spawning_drone = {
     }
     possible = {
         drone_job_check_trigger = yes
-        OR = {
-            traits_restrict_specialist_jobs = no
-            has_pop_flag = allow_healthcare_traits
-        }
     }
     planet_modifier = {
         planet_amenities_no_happiness_add = 5
@@ -53,10 +49,6 @@ spawning_drone = {
     }
     weight = {
         weight = @spawner_drone_job_weight
-        modifier = {
-            factor = 4
-            has_trait = trait_living_architecture
-        }
         modifier = {
             factor = 1.25
             has_trait = trait_charismatic

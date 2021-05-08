@@ -21,36 +21,6 @@ soldier = {
     }
     triggered_country_modifier = {
         potential = {
-            OR = {
-                has_trait = trait_zero_g_adapted
-                has_trait = trait_robot_astro
-            }
-        }
-        modifier = {
-            country_naval_cap_add = 2
-        }
-    }
-    triggered_country_modifier = {
-        potential = {
-            has_trait = trait_starship_integration
-        }
-        modifier = {
-            country_naval_cap_add = 2
-        }
-    }
-    triggered_country_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                has_ascension_perk = ap_galactic_force_projection
-            }
-        }
-        modifier = {
-            country_naval_cap_add = 2
-        }
-    }
-    triggered_country_modifier = {
-        potential = {
             exists = planet
             planet = {
                 exists = owner
@@ -99,10 +69,6 @@ soldier = {
         soldier_job_check_trigger = yes
         owner = {
             is_gestalt = no
-        }
-        OR = {
-            traits_restrict_worker_jobs = no
-            has_pop_flag = allow_soldier_traits
         }
     }
     weight = {
@@ -207,61 +173,6 @@ soldier = {
         modifier = {
             factor = 2
             has_trait = trait_lithoid
-        }
-        modifier = {
-            factor = 2
-            has_trait = trait_huge
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_big
-        }
-        modifier = {
-            factor = 0.5
-            has_trait = trait_small
-        }
-        modifier = {
-            factor = 0.25
-            has_trait = trait_tiny
-        }
-        modifier = {
-            factor = 2
-            has_trait = trait_huge_lithoid
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_big_lithoid
-        }
-        modifier = {
-            factor = 0.5
-            has_trait = trait_small_lithoid
-        }
-        modifier = {
-            factor = 0.25
-            has_trait = trait_tiny_lithoid
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_aggressive
-        }
-        modifier = {
-            factor = 0.5
-            has_trait = trait_timid
-        }
-        modifier = {
-            factor = 0.25
-            has_trait = trait_sessile
-        }
-        modifier = {
-            factor = 1.2
-            OR = {
-                has_trait = trait_zero_g_adapted
-                has_trait = trait_robot_astro
-            }
-        }
-        modifier = {
-            factor = 1.2
-            has_trait = trait_starship_integration
         }
     }
 }

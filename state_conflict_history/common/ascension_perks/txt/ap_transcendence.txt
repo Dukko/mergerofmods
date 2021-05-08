@@ -41,7 +41,6 @@ ap_transcendence = {
             has_authority = "auth_machine_intelligence"
         }
         is_mechanical_empire = no
-        is_cyborg_empire = no
     }
     ai_weight = {
         factor = 1000

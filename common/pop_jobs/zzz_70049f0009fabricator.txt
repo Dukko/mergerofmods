@@ -11,10 +11,6 @@ fabricator = {
     }
     possible = {
         drone_job_check_trigger = yes
-        OR = {
-            traits_restrict_specialist_jobs = no
-            has_pop_flag = allow_foundry_traits
-        }
     }
     resources = {
         category = planet_metallurgists
@@ -36,10 +32,6 @@ fabricator = {
     }
     weight = {
         weight = @complex_drone_job_weight
-        modifier = {
-            factor = 4
-            has_trait = trait_living_architecture
-        }
         modifier = {
             factor = 0.9
             exists = owner

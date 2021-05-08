@@ -8,10 +8,6 @@ servant = {
     }
     possible = {
         can_take_servant_job = yes
-        OR = {
-            traits_restrict_worker_jobs = no
-            has_pop_flag = allow_servant_traits
-        }
     }
     resources = {
     }
@@ -33,6 +29,16 @@ servant = {
         }
         modifier = {
             planet_amenities_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            OR = {
+                has_trait = trait_additrait_customized_servitors
+            }
+        }
+        modifier = {
+            planet_amenities_add = 2
         }
     }
     triggered_planet_modifier = {

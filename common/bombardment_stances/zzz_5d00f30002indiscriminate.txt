@@ -1,0 +1,47 @@
+indiscriminate = {
+    trigger = {
+        owner = {
+            OR = {
+                NOT = {
+                    is_country_type = default
+                }
+                has_policy_flag = orbital_bombardment_indiscriminate
+                has_policy_flag = orbital_bombardment_armageddon
+            }
+            NAND = {
+                is_ai = yes
+                bombardment_stances_ai_should_not_use_indiscriminate = yes
+            }
+        }
+    }
+    icon_frame = 2
+    default = no
+    stop_when_armies_dead = no
+    abduct_pops = no
+    planet_damage = 5
+    army_damage = 10
+    kill_pop_chance = {
+        base = 0.75
+    }
+    min_pops_to_kill_pop = 2
+    ai_weight = {
+        weight = 5
+        modifier = {
+            factor = 0.01
+            owner = {
+                bombardment_stances_ai_can_use_indiscriminate = no
+            }
+            AND = {
+                exists = from
+                from = {
+                    owner = {
+                        NOT = {
+                            is_hostile = root.owner
+                        }
+                        is_crisis_faction = no
+                    }
+                }
+            }
+        }
+    }
+}

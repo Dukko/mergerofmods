@@ -21,7 +21,7 @@ ap_shared_destiny = {
         custom_tooltip = subjugate_equals
     }
     ai_weight = {
-        factor = 0
+        factor = 5
         modifier = {
             factor = 0
             NOT = {

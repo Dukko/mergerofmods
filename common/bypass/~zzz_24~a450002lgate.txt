@@ -14,58 +14,12 @@ lgate = {
     animation_time = 1
     ftl_ship_effect = "gateway_ftl_ship_effect_entity"
     ftl_bypass_effect = "gateway_ftl_bypass_effect_entity"
-    on_pre_explore = {
-        if = {
-            limit = {
-                exists = owner
-                has_global_flag = lgates_activated_globally
-                owner = {
-                    has_country_flag = lgates_activated
-                    has_technology = tech_lgate_activation
-                }
-            }
-            fromfrom = {
-                if = {
-                    limit = {
-                        CmtTriggerIsClosedLgate = yes
-                    }
-                    prev.owner = {
-                        country_event = {
-                            id = distar.10960
-                        }
-                    }
-                }
-                else = {
-                    CmtEffectOpenLgate = yes
-                }
-            }
-        }
-    }
     country_can_use = {
         custom_tooltip = {
             fail_text = LGATE_COUNTRY_CANNOT_USE
-            exists = this
-            is_scope_type = country
             OR = {
                 has_global_flag = lgates_activated_globally
                 has_country_flag = lgates_activated
-                AND = {
-                    exists = owner
-                    owner = {
-                        has_country_flag = lgates_activated
-                    }
-                }
-            }
-            NOR = {
-                is_country_type = amoeba
-                is_country_type = amoeba_borderless
-                is_country_type = caravaneer_fleet
-                is_country_type = crystal
-                is_country_type = feral_prethoryn
-                is_country_type = guardian
-                is_country_type = guardian_dragon
-                is_country_type = tiyanki
-                is_country_type = vluur
             }
         }
     }

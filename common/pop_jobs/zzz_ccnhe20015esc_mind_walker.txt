@@ -1,0 +1,50 @@
+esc_mind_walker = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_hive_capital
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        drone_job_check_trigger = yes
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_swapped_tradition = tr_synchronicity_instinctive_synchronization
+            }
+        }
+        modifier = {
+            planet_amenities_no_happiness_add = 2
+        }
+    }
+    resources = {
+        category = planet_synapse_drones
+        produces = {
+            unity = 4
+        }
+        upkeep = {
+            trigger = {
+                NOT = {
+                    has_trait = trait_lithoid
+                }
+            }
+            food = 2
+            energy = 2
+        }
+        upkeep = {
+            trigger = {
+                has_trait = trait_lithoid
+            }
+            minerals = 2
+            energy = 2
+        }
+    }
+    weight = {
+        weight = @synapse_drone_job_weight
+    }
+}

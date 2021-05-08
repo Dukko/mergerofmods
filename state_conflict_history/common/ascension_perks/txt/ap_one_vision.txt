@@ -1,6 +1,6 @@
 ap_one_vision = {
     modifier = {
-        country_unity_produces_mult = 0.2
+        country_unity_produces_mult = 0.1
         pop_amenities_usage_mult = -0.1
         pop_government_ethic_attraction = 0.5
     }

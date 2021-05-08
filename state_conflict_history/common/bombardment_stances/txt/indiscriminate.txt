@@ -8,23 +8,9 @@ indiscriminate = {
                 has_policy_flag = orbital_bombardment_indiscriminate
                 has_policy_flag = orbital_bombardment_armageddon
             }
-            OR = {
-                is_ai = no
-                AND = {
-                    NOT = {
-                        has_policy_flag = orbital_bombardment_armageddon
-                    }
-                    NOT = {
-                        owner_species = {
-                            has_trait = trait_pc_nuked_preference
-                        }
-                    }
-                    NOT = {
-                        owner_species = {
-                            has_trait = trait_survivor
-                        }
-                    }
-                }
+            NAND = {
+                is_ai = yes
+                bombardment_stances_ai_should_not_use_indiscriminate = yes
             }
         }
     }
@@ -42,28 +28,19 @@ indiscriminate = {
         weight = 5
         modifier = {
             factor = 0.01
-            exists = from
-            from = {
             owner = {
-                    NOT = {
-                        is_hostile = root.owner
+                bombardment_stances_ai_can_use_indiscriminate = no
             }
-        }
-    }
-        }
-        modifier = {
-            factor = 0.01
-            exists = from
-            from = {
-                owner = {
-                    NOT = {
-                        is_hostile = root.owner
+            AND = {
+                exists = from
+                from = {
+                    owner = {
+                        NOT = {
+                            is_hostile = root.owner
+                        }
+                        is_crisis_faction = no
                     }
                 }
-            }
-            owner = {
-                has_policy_flag = orbital_bombardment_armageddon
-                has_valid_civic = civic_machine_terminator
             }
         }
     }

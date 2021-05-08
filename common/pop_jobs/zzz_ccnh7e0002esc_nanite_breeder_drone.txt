@@ -1,0 +1,104 @@
+esc_nanite_breeder_drone = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = nhsc_building_nanite_foundry
+    possible = {
+        drone_job_check_trigger = yes
+    }
+    resources = {
+        category = planet_jobs
+        produces = {
+            nanites = 2
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_galactic_community_member = yes
+                }
+                OR = {
+                    is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
+                    is_active_resolution = "resolution_industry_project_cornucopia"
+                }
+            }
+            nanites = 0.1
+        }
+        upkeep = {
+            trigger = {
+                NOT = {
+                    has_trait = trait_lithoid
+                }
+            }
+            alloys = 4
+            food = 2
+        }
+        upkeep = {
+            trigger = {
+                has_trait = trait_lithoid
+            }
+            alloys = 4
+            minerals = 2
+        }
+        upkeep = {
+            trigger = {
+                NOT = {
+                    has_trait = trait_lithoid
+                }
+                planet = {
+                    colony_type = col_refinery
+                }
+            }
+            alloys = -0.4
+            food = -0.2
+        }
+        upkeep = {
+            trigger = {
+                NOT = {
+                    has_trait = trait_lithoid
+                }
+                planet = {
+                    colony_type = col_habitat_refinery
+                }
+            }
+            alloys = -0.8
+            food = -0.4
+        }
+        upkeep = {
+            trigger = {
+                has_trait = trait_lithoid
+                planet = {
+                    colony_type = col_refinery
+                }
+            }
+            alloys = -0.4
+            minerals = -0.2
+        }
+        upkeep = {
+            trigger = {
+                has_trait = trait_lithoid
+                planet = {
+                    colony_type = col_habitat_refinery
+                }
+            }
+            alloys = -0.8
+            minerals = -0.4
+        }
+    }
+    weight = {
+        weight = @complex_drone_job_weight
+        modifier = {
+            factor = 1.5
+            OR = {
+                has_trait = trait_industrious
+            }
+        }
+        modifier = {
+            factor = 0.75
+            has_trait = trait_nerve_stapled
+        }
+        modifier = {
+            factor = 1.5
+            has_job = esc_nanite_breeder_drone
+        }
+    }
+}

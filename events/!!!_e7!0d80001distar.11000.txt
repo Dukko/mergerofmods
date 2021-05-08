@@ -223,6 +223,7 @@ country_event = {
                     id = gpm_engine.1
                 }
             }
+        }
         event_target:lcluster_factory_system = {
             add_hyperlane = {
                 from = event_target:lcluster_factory_system
@@ -271,34 +272,12 @@ country_event = {
             add_hyperlane = {
                 from = event_target:lcluster1
                 to = event_target:lcluster1b
-                }
-                random_system_megastructure = {
-                    limit = {
-                        is_megastructure_type = lgate_base
-                    }
-                    activate_gateway = this
-                    set_megastructure_flag = lgate_activated
             }
         }
         event_target:lcluster1b = {
             add_hyperlane = {
                 from = event_target:lcluster1b
                 to = event_target:lcluster2b
-                }
-            }
-        }
-        if = {
-            limit = {
-                OR = {
-                    has_global_flag = dragon_season
-                    has_global_flag = gray_goo_crisis_set
-                }
-            }
-            every_megastructure = {
-                limit = {
-                    CmtTriggerIsClosedLgate = yes
-                }
-                CmtEffectOpenLgate = yes
             }
         }
         set_spawn_system_batch = end

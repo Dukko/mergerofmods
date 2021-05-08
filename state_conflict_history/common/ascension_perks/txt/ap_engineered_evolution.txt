@@ -25,40 +25,9 @@ ap_engineered_evolution = {
             has_technology = tech_gene_tailoring
         }
         custom_tooltip = {
-            fail_text = "requires_not_ap_the_flesh_is_weak"
-            Or = {
-                NOT = {
-                    has_ascension_perk = ap_the_flesh_is_weak
-                }
-                    AND = {
-                    num_ascension_perks > 12
-                    AND = {
-                        has_tradition = tr_plentiful_biogenesis_finish
-                        has_tradition = tr_plentiful_mutagenesis_finish
-                    }
-                    has_tradition = tr_plentiful_cybernetics_finish
-                    has_ascension_perk = ap_the_flesh_is_weak
-                }
-                }
-        }
-        custom_tooltip = {
-            fail_text = "requires_not_ap_mind_over_matter"
-            OR = {
-                NOT = {
-                    has_ascension_perk = ap_mind_over_matter
-                }
-                AND = {
-                    num_ascension_perks > 12
-                    AND = {
-                        has_tradition = tr_plentiful_biogenesis_finish
-                        has_tradition = tr_plentiful_mutagenesis_finish
-        }
-                    AND = {
-                        has_tradition = tr_plentiful_mysticism_finish
-                        has_tradition = tr_plentiful_faith_finish
-                    }
-                    has_ascension_perk = ap_mind_over_matter
-                }
+            fail_text = "ariphaos_requires_not_ap_synthetic_evolution"
+            NOT = {
+                has_ascension_perk = ap_synthetic_evolution
             }
         }
         custom_tooltip = {
@@ -85,18 +54,13 @@ ap_engineered_evolution = {
     }
     potential = {
         host_has_dlc = "Utopia"
-        NOT = {
+        NOR = {
             has_ascension_perk = ap_engineered_evolution
             has_authority = "auth_machine_intelligence"
         }
         is_mechanical_empire = no
-        is_cyborg_empire = no
     }
     ai_weight = {
-        factor = 100
-        modifier = {
-            factor = 0
-            num_owned_planets < 10
-        }
+        factor = 10
     }
 }

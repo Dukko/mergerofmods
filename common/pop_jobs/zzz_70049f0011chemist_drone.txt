@@ -11,10 +11,6 @@ chemist_drone = {
     }
     possible = {
         drone_job_check_trigger = yes
-        OR = {
-            traits_restrict_specialist_jobs = no
-            has_pop_flag = allow_chemist_traits
-        }
     }
     resources = {
         category = planet_chemists
@@ -27,10 +23,6 @@ chemist_drone = {
     }
     weight = {
         weight = @complex_drone_job_weight
-        modifier = {
-            factor = 4
-            has_trait = trait_living_architecture
-        }
         modifier = {
             factor = 0.9
             exists = owner
@@ -47,10 +39,6 @@ chemist_drone = {
                 has_trait = trait_robust
                 has_trait = trait_robot_efficient_processors
             }
-        }
-        modifier = {
-            factor = 0.1
-            has_trait = trait_limbless
         }
     }
 }

@@ -1,24 +1,19 @@
 selective = {
     trigger = {
-        OR = {
-            owner = {
-                is_ai = no
-                OR = {
-                    has_policy_flag = orbital_bombardment_selective
-                    has_policy_flag = orbital_bombardment_indiscriminate
-                    has_policy_flag = orbital_bombardment_armageddon
+        owner = {
+            OR = {
+                NOT = {
+                    is_country_type = default
                 }
-            }
-            owner = {
-                is_ai = yes
                 has_policy_flag = orbital_bombardment_selective
-                NOR = {
-                    has_policy_flag = orbital_bombardment_indiscriminate
-                    has_policy_flag = orbital_bombardment_armageddon
-                    has_valid_civic = civic_barbaric_despoilers
-                    has_ascension_perk = ap_nihilistic_acquisition
-                }
+                has_policy_flag = orbital_bombardment_indiscriminate
+                has_policy_flag = orbital_bombardment_armageddon
             }
+            NAND = {
+                is_ai = yes
+                bombardment_stances_ai_should_not_use_selective = yes
+            }
+            is_crisis_faction = no
         }
     }
     icon_frame = 1
@@ -33,5 +28,33 @@ selective = {
     min_pops_to_kill_pop = 11
     ai_weight = {
         weight = 1
+        modifier = {
+            factor = 0.01
+            exists = from
+            from = {
+                owner = {
+                    is_crisis_faction = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                is_crisis_faction = yes
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                is_ai = yes
+                bombardment_stances_ai_should_not_use_selective = yes
+            }
+        }
+        modifier = {
+            factor = 0.01
+            owner = {
+                bombardment_stances_ai_can_eagerly_use_indiscriminate = yes
+            }
+        }
     }
 }

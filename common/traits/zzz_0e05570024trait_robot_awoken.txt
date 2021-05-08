@@ -1,0 +1,17 @@
+trait_robot_awoken = {
+    icon = "gfx/interface/icons/traits/trait_robot_logic_engines.dds"
+    allowed_archetypes = {
+        ROBOT
+        MACHINE
+    }
+    initial = no
+    randomized = no
+    modification = no
+    modifier = {
+        planet_jobs_engineering_research_produces_mult = 0.3
+        planet_jobs_physics_research_produces_mult = 0.3
+        planet_jobs_society_research_produces_mult = 0.3
+        planet_pops_consumer_goods_upkeep_mult = 0.2
+        pop_resettlement_cost_mult = 0.5
+    }
+}

@@ -41,7 +41,7 @@ country_event = {
             solar_system = {
                 exists = owner
             }
-            any_owned_species = {
+            any_owned_pop = {
                 is_same_species = event_target:mardak_vol_species
             }
         }

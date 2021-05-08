@@ -11,10 +11,6 @@ synapse_drone = {
     }
     possible = {
         drone_job_check_trigger = yes
-        OR = {
-            traits_restrict_specialist_jobs = no
-            has_pop_flag = allow_synapse_drone_traits
-        }
     }
     resources = {
         category = planet_synapse_drones
@@ -75,15 +71,22 @@ synapse_drone = {
             }
         }
         modifier = {
+            country_admin_cap_add = 0.5
+        }
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = planet
+            planet = {
+                has_designation = col_bureau
+            }
+        }
+        modifier = {
             country_admin_cap_add = 1
         }
     }
     weight = {
         weight = @synapse_drone_job_weight
-        modifier = {
-            factor = 4
-            has_trait = trait_living_architecture
-        }
         modifier = {
             factor = 1.25
             OR = {

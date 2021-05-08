@@ -13,9 +13,7 @@ citizenship_purge = {
                 has_trait = trait_mechanical
             }
             from = {
-                NOT = {
-                    has_policy_flag = ai_full_rights
-                }
+                has_policy_flag = robots_outlawed
             }
             AND = {
                 from = {
@@ -89,21 +87,14 @@ citizenship_purge = {
         factor = 20
         modifier = {
             factor = 0
-            has_trait = trait_plentiful_traditions_pt_cocoon
+            has_trait = trait_machine_unit
             from = {
-                has_authority = auth_hive_mind
-                NOT = {
-                    has_civic = civic_hive_devouring_swarm
-                }
+                has_authority = auth_machine_intelligence
             }
         }
         modifier = {
             factor = 0
             ariphaos_patch_slaves_expel = no
-            has_trait = trait_machine_unit
-            from = {
-                has_authority = auth_machine_intelligence
-            }
         }
         modifier = {
             factor = 0

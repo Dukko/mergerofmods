@@ -58,6 +58,11 @@ building_institute = {
             planet_jobs_unity_produces_mult = 0.05
         }
     }
+    upgrades = {
+        building_eutab_genetic_data_vault
+        building_eutab_afterlife_vault
+        building_eutab_foundation_institute
+    }
     prerequisites = {
         "tech_global_research_initiative"
     }
@@ -66,12 +71,6 @@ building_institute = {
     }
     show_tech_unlock_if = {
         is_regular_empire = yes
-    }
-    upgrades = {
-        building_avb_institute_2
-        building_eutab_genetic_data_vault
-        building_eutab_afterlife_vault
-        building_eutab_foundation_institute
     }
     ai_resource_production = {
         trigger = {

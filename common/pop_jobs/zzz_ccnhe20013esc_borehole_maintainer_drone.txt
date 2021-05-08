@@ -1,0 +1,44 @@
+esc_borehole_maintainer_drone = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = nhsc_building_dark_matter_facility
+    possible = {
+        drone_job_check_trigger = yes
+        hidden_trigger = {
+            exists = owner
+        }
+        owner = {
+            is_hive_empire = yes
+        }
+    }
+    resources = {
+        category = planet_miners
+        produces = {
+            rare_crystals = 1
+            engineering_research = 8
+        }
+        upkeep = {
+            trigger = {
+                NOT = {
+                    has_trait = trait_lithoid
+                }
+            }
+            food = 5
+            alloys = 1
+        }
+        upkeep = {
+            trigger = {
+                has_trait = trait_lithoid
+            }
+            minerals = 5
+            alloys = 1
+        }
+    }
+    weight = {
+        weight = @complex_drone_job_weight
+        modifier = {
+            factor = 1.5
+            has_job = esc_borehole_maintainer_drone
+        }
+    }
+}

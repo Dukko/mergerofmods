@@ -62,44 +62,6 @@ distantstars_init_02b = {
             min = 90
             max = 270
         }
-        init_effect = {
-            if = {
-                limit = {
-                    no_scope = {
-                        has_global_flag = dragon_season
-                        exists = event_target:spawning_dragons
-                    }
-                }
-                prev = {
-                    set_star_flag = dragon_point
-                }
-                create_fleet = {
-                    name = "NAME_Young_Dragon"
-                    settings = {
-                        is_boss = yes
-                        spawn_debris = no
-                        can_upgrade = no
-                        can_disband = yes
-                        can_change_composition = no
-                        can_change_leader = no
-                        uses_naval_capacity = no
-                    }
-                    effect = {
-                        set_owner = event_target:spawning_dragons
-                        create_ship = {
-                            design = "NAME_Nanite_Dragon"
-                            name = "NAME_Young_Dragon"
-                            prefix = no
-                            upgradable = yes
-                        }
-                        set_location = prev
-                        set_fleet_stance = passive
-                        set_aggro_range_measure_from = self
-                        set_aggro_range = 10
-                    }
-                }
-            }
-        }
     }
     planet = {
         class = pc_broken

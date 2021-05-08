@@ -24,6 +24,7 @@ utility_component_template = {
     class_restriction = {
         shipclass_military_station
     }
+    upgrades_to = "PLATFORM_NHSC_DARK_MATTER_CORE_2"
     size_restriction = {
         military_station_small
         military_station_medium
@@ -33,10 +34,8 @@ utility_component_template = {
         weight = 6
         modifier = {
             factor = 0
-            is_country_type = default
-            resource_stockpile_compare = {
-                resource = sr_dark_matter
-                value <= 50
+            no_resource_for_component = {
+                RESOURCE = sr_dark_matter
             }
         }
     }
