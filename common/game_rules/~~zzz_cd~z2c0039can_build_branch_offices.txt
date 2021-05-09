@@ -1,0 +1,27 @@
+can_build_branch_offices = {
+    custom_tooltip = {
+        fail_text = BRANCH_OFFICE_NOT_MEGACORP
+        OR = {
+            is_megacorp = yes
+            has_valid_civic = civic_galactic_sovereign_megacorp
+            has_authority = auth_warshipgirls
+            has_valid_civic = civic_machine_trading
+            has_authority = auth_azur_lane_0
+            has_authority = auth_azur_lane_1
+            has_authority = auth_azur_lane_2
+            has_valid_civic = civic_machine_aperature_science
+            AND = {
+                has_global_flag = gf_alphamod_activated
+                OR = {
+                    has_valid_civic = civic_criminal_heritage
+                    is_overlord = yes
+                    has_federation = yes
+                }
+            }
+            AND = {
+                has_global_flag = gf_am_foreignaffairs_activated
+                is_subject = yes
+            }
+        }
+    }
+}
