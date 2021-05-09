@@ -23,7 +23,6 @@ dependencies={
 	"VF EF - Feudal Origins Patch"
 	"VF EF - Federations Expanded Patch"
 	"VF EF - Exalted Domination Patch"
-	"No Preset Countries from Mods"
 	"Giga Diversity"
 	"Golden Galaxy: IBS"
 	"Planetary Diversity - Ringworlds"

@@ -69,6 +69,7 @@ Feudal Origins
 Fatherland: Colonial Empires
 Extra Events Unoffical fix
 Expanded Gestalts: Forgotten Queens
+Extra Origins (3.0)
 Even More Origins
 Dynamic Political Events
 Potent Rebellions
@@ -104,6 +105,7 @@ Jump Gates
 Invasion! (3.0)
 Intervene: Help Friendly Nations - 3.*
 Interstellar Incorporated: Space Corp [3.0]
+Double Corp Ship Cost
 Influence Cap+
 Improved Planet and Sector Automation
 Get Off My Lawn!
@@ -211,7 +213,7 @@ Galactic Community Expanded
 UI Overhaul Dynamic + Ethics and Civics Alternative
 SpeedDial
 UI Overhaul Dynamic + SpeedDial
-Tiny Fleets
+Tiny Fleets for UI Overhaul Dynamic
 Tiny Megastructures
 Tiny Outliner v2
 Kaityo`s Tiny Planet Buildings for UI Overhaul Dynamic
@@ -304,5 +306,4 @@ Magnum's Mods - Tradition Cost Scaling
 !!!Universal Resource Patch [2.4+]
 !! K !! - Realistic Asteroids
 ! The Merger of Rules 3.0
-No Default Paradox Species - Ironman / Achievement Compatible (Any Version / Any DLC Combinations)
-No Preset Countries from Mods
+Absolutely no prescripted countries pls

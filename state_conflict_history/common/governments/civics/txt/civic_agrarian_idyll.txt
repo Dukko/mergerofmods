@@ -25,6 +25,7 @@ civic_agrarian_idyll = {
                 value = origin_shattered_ring
                 value = origin_void_dwellers
                 value = origin_remnants
+                value = origin_irradiated_evolution
             }
         }
     }
