@@ -9,6 +9,8 @@ AI-Player Exclusive Archaeology
 AI Species Limit
 Aggressive Crisis Engine
 More Natural Looking Galaxies
+Just More Empires 3.0.x (Expanded)
+Edit - Just More Empires 3.0.x (Expanded)
 Tass Cheat Tool
 Otter Editor
 [v1.0] Insults and Injuries
@@ -31,11 +33,16 @@ Just Name Lists
 Elf Names
 Cybrxkhan's Assortment of Namelists for Stellaris
 Benjaseth's Species Names
+V-Mods Species
+V-Mods Species - Ascellian Free Traders
+V-Mods Species - Shemei Covenant
 Zro Lithoid Trait
 Young Leaders
 Ruler Agenda and Traits
 Merged Leader Levels
 Leader Overhaul - Full Edition
+Just More Traits 3.0.x
+Decadence Unlimited
 Trace's Better Necroids
 Trace's Better Lithoids
 The Pirate Republic
@@ -43,10 +50,12 @@ Talking Non-Humanoid Portraits
 Rapid Evolution for 3.x
 PSO: Ringworlds Are 50
 PSO: EPSI x2
+Silfae's Portraits with updated city sets - organics
 Primitive Worlds for 3.x
 LLX's Mods - Compiled Dimorphism (3.0 'Dick')
 Honorary Species
 Extra Fallen Empires
+Animated Ascellian Portraits (2.2.6 Le Guin +)
 Animated Valbaran Species
 Animated Pardus Species
 Animated Budgie Species
@@ -68,6 +77,7 @@ Grand Custodianship
 Feudal Origins
 Fatherland: Colonial Empires
 Extra Events Unoffical fix
+More Events Mod
 Expanded Gestalts: Forgotten Queens
 Extra Origins (3.0)
 Even More Origins
@@ -83,7 +93,10 @@ Archaeology Story Pack
 Ancient Juggernaut Origin
 akeean_s2020mj_originmod
 A Second Dawn - Modjam 2020
+Just More Flags (Achievement Compatible)
 Flags in the void
+Diverse Rooms
+Diverse Basics
 Weapon Research Menu
 Size 25 Homeworlds
 Shut Up, We Don't Care! (3.0)
@@ -125,6 +138,7 @@ Choosable Shroud
 Change Shipset
 Biopsionic Mastery (Patch Edition)
 Better War Doctrines (Ethics and Civics Alternative)
+Arcane Institue Fix
 Better Terraforming Candidates
 Better Sliders - Mid/End/Victory Game Years and Tech/Tradition cost
 Better Raiding
@@ -165,6 +179,7 @@ Compatibility - Guilli's Techs & Planetary Diversity
 Building Slot Technologies
 Building Adjustments
 Additional Balanced Repeatables
+All Tech Researchable [3.*]
 Extra Ship Components 3.0 [Actual]
 Extra Ship Components 3.0 - Overwrites [Actual]
 Hypothetical Stars
@@ -292,6 +307,7 @@ Stellaris Enhanced Sound Project
 Magnum's Mods - Tradition Cost Scaling
 !Yet Another Districts Patch for Vanilla AI
 !Tweak - MNLG Personal Tweaks
+!Stellaris Enhanced Sound Project - Unofficial ESC Patch
 !StartPopsPatch
 ¡Compatibility - Ruler Agenda and Traits & More Origins Mod
 !patch PD: More Arcologies - Ethics and Civics _____
@@ -300,9 +316,11 @@ Magnum's Mods - Tradition Cost Scaling
 !Patch - EST & PT Duplicated Traditions Update
 !Patch - ECA - Real Space & Real Sol - No Name Empires
 !Patch - ECA - All in One - No Name Empires
+All unique systems in [3.x]
 !Colossus Hiveworld Fix
 !Additional Traits AI Patch
 !!Universal Modifier Patch (3.0.*)
+!!!Unofficial Hive DLC: Forgotten Queens + Just More Traits 3.0.x
 !!!Universal Resource Patch [2.4+]
 !! K !! - Realistic Asteroids
 ! The Merger of Rules 3.0

@@ -1,0 +1,65 @@
+"Settakian Providential Stars" = {
+    key = "Settakian Providential Stars"
+    ship_prefix = "PNC"
+    species = {
+        class = "MOL"
+        portrait = "mol13"
+        name = "Settak"
+        plural = "Settaki"
+        adjective = "Settakian"
+        species_bio = "Devoted subjects of a heavenly hereditary autocrat, the Settaki of Gluggnal see far greater promise in building their own civilization up to be a brilliant example of Providence than in the prospect of relations with sullied alien outsiders. The stars that shine upon their celestial empire are surely blessed, but the tourism opportunities are few."
+        name_list = "just-name-lists_molluscoid3"
+        trait = "trait_agrarian"
+        trait = "trait_strong"
+        trait = "trait_sedentary"
+    }
+    name = "Settakian Providential Stars"
+    adjective = "Settakian"
+    authority = "auth_dictatorial"
+    government = "gov_irenic_dictatorship"
+    planet_name = "Gluggnal"
+    planet_class = "pc_desertislands"
+    system_name = "Daggimga"
+    initializer = ""
+    graphical_culture = "molluscoid_01"
+    city_graphical_culture = "molluscoid_01"
+    empire_flag = {
+        icon = {
+            category = "just-more-flags"
+            file = "flag_spiritualist3.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "fabric_horizon.dds"
+        }
+        colors = {
+            "dark_blue"
+            "teal"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = female
+        name = "Awn Cliash"
+        portrait = "mol13"
+        texture = 0
+        hair = 0
+        clothes = 0
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "throne3_room"
+    spawn_enabled = yes
+    ethic = "ethic_xenophobe"
+    ethic = "ethic_fanatic_pacifist"
+    ethic = "ethic_spiritualist"
+    ethic = "ethic_socialism"
+    civics = {
+        "civic_inwards_perfection"
+        "civic_philosopher_king"
+        "civic_spiritual_seekers"
+    }
+    origin = "origin_scion"
+}

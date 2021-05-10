@@ -1,0 +1,81 @@
+"Tribunal of Elder Zegalax" = {
+    key = "Tribunal of Elder Zegalax"
+    ship_prefix = ""
+    species = {
+        class = "MOL"
+        portrait = "mol15"
+        name = "Zegal"
+        plural = "Zegalax"
+        adjective = "Zegalan"
+        species_bio = "Naff'Canno, the wet jungle homeworld of both the Zegal and Ra-Clexu species, was once host to a Medival Age society under the passive protection of an ancient xenophilic interstellar empire. A small group of ancestors to the modern Zegalax ended this relationship when they perpetrated the Treason of Sovon. This cabal detected and mind-controlled several teams of alien observers, who were as yet unaware of the psionic potential of their Zegalan subjects. Over more than forty years, their thralls were carefully manipulated and infiltrated into key positions, while advanced alien technology was clandestinely secreted to the Zegalans by way of psionic coercion. When the fateful betrayal at last came, their alien guardians were left in ruins and the Tribunal arose to light a new flame amongst the stars."
+        name_list = "just-name-lists_molluscoid2"
+        trait = "trait_just-more-traits_indelible"
+        trait = "trait_just-more-traits_prodigious"
+        trait = "trait_just-more-traits_prudent"
+        trait = "trait_decadent"
+        trait = "trait_just-more-traits_particular"
+    }
+    secondary_species = {
+        class = "AVI"
+        portrait = "avi17"
+        name = "Ra-Clexu"
+        plural = "Ra-Clexu"
+        adjective = "Ra-Clexian"
+        species_bio = "Sapient but simplistic natives of Naff'Canno, the avian Ra-Clexu evolved to rule the high jungle canopies. Below them, precursors of the psionically sensitive Zegalax roamed the seas and inland rivers. Early in the development of Zegalan civilization, the Ra-Clexu became first livestock and then servants to their molluscoid masters, a relationship that endures into the Interstellar Age."
+        name_list = "AVI2"
+        trait = "trait_syncretic_proles"
+        trait = "trait_communal"
+        trait = "trait_resilient"
+        trait = "trait_fleeting"
+    }
+    name = "Tribunal of Elder Zegalax"
+    adjective = "Zegalan"
+    authority = "auth_oligarchic"
+    government = "gov_holy_tribunal"
+    planet_name = "Naff'Canno"
+    planet_class = "pc_tropical"
+    system_name = "Sovon"
+    initializer = ""
+    graphical_culture = "avian_01"
+    city_graphical_culture = "molluscoid_01"
+    empire_flag = {
+        icon = {
+            category = "just-more-flags"
+            file = "flag_authoritarian2.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "fabric_circle.dds"
+        }
+        colors = {
+            "purple"
+            "indigo"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = male
+        name = "J'atl the Gruesome"
+        portrait = "mol15"
+        texture = 3
+        hair = 0
+        clothes = 0
+        ruler_title = "Thaumatergic Primarch"
+        ruler_title_female = "Thaumatergic Primarch"
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "plantoid10_room"
+    spawn_enabled = yes
+    ethic = "ethic_authoritarian"
+    ethic = "ethic_fanatic_militarist"
+    ethic = "ethic_fanatic_spiritualist"
+    civics = {
+        "civic_exalted_priesthood"
+        "civic_shadow_council"
+        "civic_divine_council"
+    }
+    origin = "origin_syncretic_evolution"
+}

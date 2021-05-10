@@ -1,0 +1,14 @@
+subject_can_expand = {
+    AND = {
+        NOT = {
+            has_global_flag = has_exalted_domination_mod
+        }
+        root = {
+            OR = {
+                has_origin = origin_fdlorg_feudal_empire
+                has_valid_civic = civic_feudal_realm
+                has_policy_flag = vassal_expansion_allowed
+            }
+        }
+    }
+}

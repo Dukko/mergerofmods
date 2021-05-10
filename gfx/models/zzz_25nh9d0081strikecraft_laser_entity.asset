@@ -1,0 +1,24 @@
+entity = {
+    name = "strikecraft_laser_entity"
+    pdxmesh = "locator_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        state_time = 2
+        looping = no
+        event = {
+            time = 0
+            particle = "infrared_laser_medium_muzzle_particle"
+            keep_particle = yes
+            sound = {
+                soundeffect = strikecraft_laser_fire
+            }
+        }
+        event = {
+            trigger_once = yes
+            sound = {
+                soundeffect = "distance_laser_fire"
+            }
+        }
+    }
+}

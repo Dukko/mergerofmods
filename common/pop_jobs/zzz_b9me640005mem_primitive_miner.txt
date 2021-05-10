@@ -1,0 +1,25 @@
+mem_primitive_miner = {
+    category = worker
+    is_capped_by_modifier = yes
+    building_icon = building_primitive_mine
+    icon = miner
+    clothes_texture_index = 2
+    possible = {
+        hidden_trigger = {
+            exists = owner
+        }
+        owner = {
+            is_primitive = yes
+            has_country_flag = mem_use_custom_primitive_buildings
+        }
+    }
+    resources = {
+        category = planet_miners
+        produces = {
+            minerals = 3
+        }
+    }
+    weight = {
+        weight = 2
+    }
+}

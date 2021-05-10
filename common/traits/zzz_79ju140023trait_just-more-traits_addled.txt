@@ -1,0 +1,20 @@
+trait_just-more-traits_addled = {
+    cost = -2
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_intelligent"
+        "trait_just-more-traits_dull"
+        "trait_just-more-traits_curious"
+        "trait_nerve_stapled"
+        "trait_erudite"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    modifier = {
+        planet_jobs_engineering_research_produces_mult = -0.1
+        planet_jobs_physics_research_produces_mult = -0.1
+        planet_jobs_society_research_produces_mult = -0.1
+    }
+}

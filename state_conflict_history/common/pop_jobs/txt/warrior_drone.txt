@@ -76,6 +76,10 @@ warrior_drone = {
             }
         }
         modifier = {
+            factor = 20
+            has_trait = trait_pandora
+        }
+        modifier = {
             factor = 4
             has_trait = trait_resilient
         }

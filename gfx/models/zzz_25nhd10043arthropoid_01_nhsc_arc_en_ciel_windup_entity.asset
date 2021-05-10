@@ -1,0 +1,24 @@
+entity = {
+    name = "arthropoid_01_nhsc_arc_en_ciel_windup_entity"
+    default_state = "attack"
+    get_state_from_parent = no
+    state = {
+        name = "attack"
+        looping = yes
+        state_time = 0.8
+        event = {
+            trigger_once = yes
+            sound = {
+                soundeffect = "arc_en_ciel_windup"
+            }
+        }
+        event = {
+            time = 0
+            use_parent_nodes = yes
+            node = xl_gun_01
+            particle = "nhsc_arc_emitter_4_muzzle_windup_effect"
+            trigger_once = yes
+            keep_particle = yes
+        }
+    }
+}

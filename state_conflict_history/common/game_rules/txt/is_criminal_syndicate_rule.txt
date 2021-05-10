@@ -1,7 +1,28 @@
 is_criminal_syndicate_rule = {
-    is_megacorp = yes
-    OR = {
-        has_valid_civic = civic_criminal_heritage
-        has_valid_civic = civic_ev_criminal_ship
+    if = {
+        limit = {
+            has_global_flag = gf_alphamod_activated
+            OR = {
+                has_valid_civic = civic_criminal_heritage
+                has_valid_civic = civic_ev_criminal_ship
+            }
+        }
+        always = true
+    }
+    else_if = {
+        limit = {
+            NOT = {
+                has_global_flag = gf_alphamod_activated
+            }
+            is_megacorp = yes
+            OR = {
+                has_valid_civic = civic_criminal_heritage
+                has_valid_civic = civic_ev_criminal_ship
+            }
+        }
+        always = true
+    }
+    else = {
+        always = false
     }
 }

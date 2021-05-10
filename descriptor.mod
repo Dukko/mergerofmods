@@ -35,8 +35,8 @@ dependencies={
 	"UI Overhaul Dynamic + Lots of Traditions - PT, EST, & ST"
 	"Sins of the Prophets: NSC Compatibility Patch"
 }
-path="D:/Documents/Paradox Interactive/Stellaris/mod/IronyModManager_Dick_0.8.5"
-name="IronyModManager_Dick_0.8.5"
+path="D:/Documents/Paradox Interactive/Stellaris/mod/IronyModManager_Dick_0.8.6"
+name="IronyModManager_Dick_0.8.6"
 tags={
 	"Fixes"
 }

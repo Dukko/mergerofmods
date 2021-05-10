@@ -1,0 +1,69 @@
+"V'Takan Trade Commission" = {
+    key = "V'Takan Trade Commission"
+    ship_prefix = "TCNV"
+    species = {
+        class = "AVI"
+        portrait = "avi9"
+        name = "Urv-K'Kel"
+        plural = "Urvo-K'Kel"
+        adjective = "Urv-K'Kelian"
+        species_bio = "The Urv-K'Kel are an avian species native to Jyydru in the V'Taka system whose civilization prizes entrepreneurial spirit and celebrates business cunning equally with battlefield courage. Led by an Executive Strategist, their global Trade Commission controls most of the ancestral nations of Jyydru and now seeks to divide and conquer the markets of this galaxy with the utmost efficiency."
+        name_list = "just-name-lists_avian1"
+        trait = "trait_natural_physicists"
+        trait = "trait_talented"
+        trait = "trait_ingenious"
+        trait = "trait_wasteful"
+        trait = "trait_weak"
+    }
+    name = "V'Takan Trade Commission"
+    adjective = "V'Takan"
+    authority = "auth_corporate"
+    government = "gov_trade_league"
+    planet_name = "Jyydru"
+    planet_class = "pc_desert"
+    system_name = "V'Taka"
+    initializer = ""
+    graphical_culture = "avian_01"
+    city_graphical_culture = "avian_01"
+    empire_flag = {
+        icon = {
+            category = "just-more-flags"
+            file = "flag_materialist4.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "fabric_half.dds"
+        }
+        colors = {
+            "brown"
+            "beige"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = female
+        name = "Tikate Katake"
+        portrait = "avi9"
+        texture = 2
+        hair = 0
+        clothes = 3
+        ruler_title = "Executive Strategist"
+        ruler_title_female = "Executive Strategist"
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "spiritualist7_room"
+    spawn_enabled = yes
+    ethic = "ethic_egalitarian"
+    ethic = "ethic_militarist"
+    ethic = "ethic_fanatic_materialist"
+    ethic = "ethic_capitalism"
+    civics = {
+        "civic_naval_contractors"
+        "civic_brand_loyalty"
+        "civic_free_traders"
+    }
+    origin = "origin_default"
+}

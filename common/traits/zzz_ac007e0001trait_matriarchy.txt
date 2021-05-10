@@ -1,0 +1,14 @@
+trait_matriarchy = {
+    cost = 0
+    sorting_priority = 20
+    randomized = no
+    initial = no
+    modification = no
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    modifier = {
+    }
+    custom_tooltip = trait_matriarchy_EFFECT
+    icon = "gfx/interface/icons/traits/trait_matriarchy.dds"
+}

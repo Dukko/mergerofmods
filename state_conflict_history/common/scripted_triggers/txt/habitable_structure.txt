@@ -4,6 +4,7 @@ habitable_structure = {
         is_planet_class = pc_starborn_habitat_start
         is_planet_class = pc_ringworld_habitable
         is_planet_class = pc_habitat
+        mem_habitable_structure = yes
         is_planet_class = pc_archive
         is_planet_class = pc_pd_gas_giant_hab
         is_planet_class = pc_pd_barren_hab

@@ -1,0 +1,75 @@
+"Terran Colonial Empire" = {
+    key = "Terran Colonial Empire"
+    ship_prefix = "HMS"
+    species = {
+        class = "HUM"
+        portrait = "human"
+        name = "Human"
+        plural = "Humans"
+        adjective = "Human"
+        species_bio = "An unknown alien vessel appeared over the city of St. Petersburg in June 1908. After hovering above the city for weeks, this Visitor vanished as suddenly as it came. The attentions of the peoples of Earth were all at once turned toward the stars. In the chaotic years of the early 20th Century, religious and political movements inspired by the Visitor threatened to upend the global order. Secretly, the British and Russian Empires exploited the wreckage of second Visitor, discovered crashed in Siberia, to rapidly advance their aerospace technologies. The personal union of Britain and Russia precipitated war with Germany and Austria. The resulting Continental War of 1939 firmy secured Russo-British hegemony over Earth. In time, great statesmen crafted the Terra Carta, the founding document of an imperial federation to govern all Humanity. The King-Emperors of the House of Romanov-Westminster have ruled the planet ever since, organizing and protecting its people, and directing their labor toward perpetual empire."
+        name_list = "just-name-lists_human7"
+        trait = "trait_adaptive"
+        trait = "trait_nomadic"
+        trait = "trait_wasteful"
+        trait = "trait_fleeting"
+        trait = "trait_strong"
+    }
+    name = "Terran Colonial Empire"
+    adjective = "Terran"
+    authority = "auth_imperial"
+    flags = {
+        "terran_colonial_empire"
+        "custom_start_screen"
+    }
+    government = "gov_feudal_empire"
+    planet_name = "Terra"
+    planet_class = "pc_continental"
+    system_name = "Sol"
+    initializer = "sol_system_initializer"
+    graphical_culture = "mammalian_01"
+    city_graphical_culture = "mammalian_01"
+    empire_flag = {
+        icon = {
+            category = "just-more-flags"
+            file = "flag_human2.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "fabric_x60.dds"
+        }
+        colors = {
+            "dark_blue"
+            "red"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = male
+        name = "Richard Romanov-Westminster"
+        portrait = "human_male_01"
+        texture = 0
+        hair = 27
+        clothes = 4
+        ruler_title = "King-Emperor"
+        heir_title = "Prince of Sol"
+        ruler_title_female = "Queen-Empress"
+        heir_title_female = "Princess of Sol"
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "command6_room"
+    spawn_enabled = yes
+    ethic = "ethic_authoritarian"
+    ethic = "ethic_xenophile"
+    ethic = "ethic_fanatic_militarist"
+    ethic = "ethic_capitalism"
+    civics = {
+        "civic_feudal_realm"
+        "civic_naval_traditions"
+        "civic_military_dictatorship"
+    }
+    origin = "origin_galactic_doorstep"
+}

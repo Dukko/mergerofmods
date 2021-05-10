@@ -1,34 +1,88 @@
 can_support_branch_offices = {
     custom_tooltip = {
         fail_text = BRANCH_OFFICE_NOT_FALLEN_EMPIRES
-        NOR = {
-            is_country_type = fallen_empire
-            is_country_type = awakened_fallen_empire
-        }
-    }
-    is_regular_empire = yes
-    custom_tooltip = {
-        fail_text = ACTION_RECIPIENT_NOT_YOUR_CORP
-        NOR = {
+        OR = {
+            OR = {
+                has_global_flag = underground_realms
+                has_global_flag = gf_am_foreignaffairs_activated
+            }
             AND = {
-                is_megacorp = yes
-                is_subject = no
+                NOR = {
+                    has_global_flag = underground_realms
+                    has_global_flag = gf_am_foreignaffairs_activated
+                }
+                NOR = {
+                    is_country_type = fallen_empire
+                    is_country_type = awakened_fallen_empire
+                }
             }
         }
     }
     custom_tooltip = {
         fail_text = BRANCH_OFFICE_NOT_ON_MEGACORP_PLANET
-        NOR = {
-            has_authority = auth_corporate
-            has_civic = civic_galactic_sovereign_megacorp
+        OR = {
+            OR = {
+                has_global_flag = underground_realms
+                has_global_flag = gf_am_foreignaffairs_activated
+                has_global_flag = expanded_pops_active
+            }
+            AND = {
+                NOR = {
+                    has_global_flag = underground_realms
+                    has_global_flag = gf_am_foreignaffairs_activated
+                    has_global_flag = expanded_pops_active
+                }
+                NOR = {
+                    is_megacorp = yes
+                    is_country_type = civic_galactic_sovereign_megacorp
+                    is_subject_type = subsidiary2
+                }
+            }
         }
-                is_subject_type = subsidiary2
     }
     custom_tooltip = {
         fail_text = BRANCH_OFFICE_NOT_REGULAR_EMPIRE
-        is_regular_empire = yes
-        NOT = {
+        OR = {
+            is_regular_empire = yes
+            is_country_type = default
+            is_country_type = ascended_empire
+            is_country_type = lost_empire
+        }
+        OR = {
+            NOT = {
+                has_global_flag = gf_alphamod_activated
+            }
+            AND = {
+                has_global_flag = gf_alphamod_activated
+                has_federation = yes
+            }
+        }
+        NOR = {
             has_authority = auth_warshipgirls
+            has_authority = auth_corporate
+            has_authority = auth_azur_lane_1
+            AND = {
+                has_global_flag = underground_realms
+                OR = {
+                    has_authority = auth_hive_mind
+                    has_authority = auth_machine_intelligence
+                }
+            }
+        }
+    }
+    custom_tooltip = {
+        fail_text = ACTION_RECIPIENT_NOT_YOUR_CORP
+        OR = {
+            NOT = {
+                has_global_flag = gf_moreauthorities_activated
+            }
+            AND = {
+                has_global_flag = gf_moreauthorities_activated
+                NAND = {
+                    is_megacorp = yes
+                    is_subject = no
+                }
+            }
         }
     }
 }

@@ -1,0 +1,20 @@
+trait_fleeting_2 = {
+    cost = -2
+    potential_crossbreeding_chance = 1
+    modifier = {
+        leader_age = -20
+    }
+    opposites = {
+        "trait_venerable"
+        "trait_enduring"
+        "trait_fleeting_lithoid"
+        "trait_methusalem"
+        "trait_methusalem_2"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

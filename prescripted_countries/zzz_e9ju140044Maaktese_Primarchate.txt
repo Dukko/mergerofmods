@@ -1,0 +1,66 @@
+"Maaktese Primarchate" = {
+    key = "Maaktese Primarchate"
+    ship_prefix = "PNV"
+    species = {
+        class = "MAM"
+        portrait = "mam7"
+        name = "Uruula"
+        plural = "Uruulae"
+        adjective = "Uruulic"
+        species_bio = "Some might consider its leaders backward and stubborn, but the Primarchate is an open and tolerant society centered in the Maakt system, home to the Uruulae of Surosa. The Maaktese Patriarchs oversee an agrarian utopia that welcomes any being who converts to its state religion. Devotees are taught to care for the land, water, and air that sustains them, whether those elements be planetbound or found on a space habitat."
+        name_list = "just-name-lists_mammalian1"
+        trait = "trait_void_dweller_1"
+        trait = "trait_agrarian"
+        trait = "trait_conservational"
+        trait = "trait_slow_learners"
+    }
+    name = "Maaktese Primarchate"
+    adjective = "Maaktese"
+    authority = "auth_dictatorial"
+    government = "gov_theocratic_dictatorship"
+    advisor_voice_type = "l_spiritualist"
+    planet_name = "Surosa"
+    planet_class = "pc_frozen_desert"
+    system_name = "Maakt"
+    initializer = "void_dweller_system"
+    graphical_culture = "mammalian_01"
+    city_graphical_culture = "mammalian_01"
+    empire_flag = {
+        icon = {
+            category = "just-more-flags"
+            file = "flag_spiritualist5.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "fabric_spiral.dds"
+        }
+        colors = {
+            "red"
+            "orange"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = female
+        name = "Kuomi Stormy-Spirit"
+        portrait = "mam7"
+        texture = 0
+        hair = 0
+        clothes = 1
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "throne1_room"
+    spawn_enabled = yes
+    ethic = "ethic_authoritarian"
+    ethic = "ethic_fanatic_xenophile"
+    ethic = "ethic_fanatic_spiritualist"
+    civics = {
+        "civic_environmentalist"
+        "civic_free_haven"
+        "civic_exalted_priesthood"
+    }
+    origin = "origin_void_dwellers"
+}

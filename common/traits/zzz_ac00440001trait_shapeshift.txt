@@ -1,0 +1,16 @@
+trait_shapeshift = {
+    cost = 3
+    sorting_priority = 20
+    randomized = no
+    initial = no
+    modification = no
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    advanced_trait = yes
+    modifier = {
+        planet_jobs_unity_produces_mult = -0.1
+        pop_environment_tolerance = 0.2
+    }
+    icon = "gfx/interface/icons/traits/trait_shapeshift.dds"
+}
