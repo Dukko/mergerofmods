@@ -90,36 +90,4 @@ building_organic_sanctuary = {
     upgrades = {
         "building_organic_paradise"
     }
-    ai_weight = {
-        weight = 0
-        modifier = {
-            weight = 5000
-            any_owned_pop = {
-                is_unemployed = yes
-                has_citizenship_type = {
-                    type = citizenship_organic_trophy
-                }
-            }
-        }
-        modifier = {
-            weight = 5000
-            NOR = {
-                has_building = building_organic_sanctuary
-                has_building = building_organic_paradise
-            }
-            planet = {
-                owner = {
-                    any_owned_pop = {
-                        is_organic_species = yes
-                        prevprev = {
-                            habitability = {
-                                who = prev
-                                value > 0.5
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
 }

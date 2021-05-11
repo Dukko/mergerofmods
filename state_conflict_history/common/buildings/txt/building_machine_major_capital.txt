@@ -45,7 +45,7 @@ building_machine_major_capital = {
         potential = {
             exists = owner
             owner = {
-                has_civic = civic_machine_assimilator
+                has_valid_civic = civic_machine_assimilator
             }
         }
         modifier = {

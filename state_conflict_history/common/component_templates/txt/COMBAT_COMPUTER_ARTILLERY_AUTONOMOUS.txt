@@ -36,6 +36,7 @@ utility_component_template = {
         explorationship
         juggernaut
         crisis_destroyer
+        scavenger_bot
         crisis_cruiser
         star_eater
     }

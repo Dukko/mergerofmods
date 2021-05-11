@@ -25,6 +25,7 @@ distantstars_init_00 = {
             factor = 0
             any_neighbor_system = {
                 OR = {
+                    has_megastructure = lgate_disabled
                     has_megastructure = lgate_base
                     has_megastructure = gateway_ruined
                 }
@@ -75,7 +76,7 @@ distantstars_init_00 = {
     }
     init_effect = {
         spawn_megastructure = {
-            type = lgate_base
+            type = lgate_disabled
             orbit_angle = 225
             orbit_distance = 30
         }

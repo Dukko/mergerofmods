@@ -66,33 +66,6 @@ district_city = {
         potential = {
             exists = owner
             owner = {
-                OR = {
-                    has_valid_civic = civic_consumerism
-                }
-            }
-        }
-        modifier = {
-            job_clerk_add = 1
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                or = {
-                    has_valid_civic = civic_welfare_state
-                    has_valid_civic = civic_shared_burden
-                }
-            }
-        }
-        modifier = {
-            planet_housing_add = 1
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
                 is_regular_empire = yes
             }
         }
@@ -145,6 +118,33 @@ district_city = {
         }
         modifier = {
             job_clerk_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                OR = {
+                    has_valid_civic = civic_consumerism
+                }
+            }
+        }
+        modifier = {
+            job_clerk_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                or = {
+                    has_valid_civic = civic_welfare_state
+                    has_valid_civic = civic_shared_burden
+                }
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
         }
     }
     triggered_desc = {

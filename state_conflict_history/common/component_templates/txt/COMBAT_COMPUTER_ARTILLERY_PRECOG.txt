@@ -38,6 +38,7 @@ utility_component_template = {
         juggernaut
         crisis_destroyer
         crisis_cruiser
+        scavenger_bot
         star_eater
     }
     component_set = "combat_computers"

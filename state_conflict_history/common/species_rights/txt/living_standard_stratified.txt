@@ -43,13 +43,8 @@ living_standard_stratified = {
         exists = from
         from = {
             is_gestalt = no
-        }
-        NOR = {
-            from = {
+            NOT = {
                 has_valid_civic = civic_shared_burden
-            }
-            from = {
-                has_valid_civic = civic_employee_ownership
             }
         }
         NOR = {

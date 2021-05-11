@@ -7,6 +7,9 @@ sectors_others_group = {
         sr_zro
         sr_dark_matter
         nanites
+        techcaches
+        favour
+        arcane_power_tw
         minor_artifacts
         esc_living_crystal
         esc_gravitic_anomaly

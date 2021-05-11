@@ -1,0 +1,31 @@
+namespace = utopia
+country_event = {
+    id = utopia.3601
+    title = "utopia.3000.name"
+    desc = "utopia.3601.desc"
+    diplomatic = yes
+    force_open = yes
+    picture_event_data = {
+        portrait = shroud1
+        room = shroud_room
+    }
+    is_triggered_only = yes
+    immediate = {
+        set_country_flag = shroud_diplomacy_engaged
+        set_country_flag = outpost_here
+    }
+    after = {
+        hidden_effect = {
+            remove_country_flag = shroud_diplomacy_engaged
+        }
+    }
+    option = {
+        name = "utopia.3601.a"
+        add_research_option = tech_outpost
+    }
+    option = {
+        name = "exit.shroud"
+        custom_tooltip = "exit.shroud.tooltip"
+        default_hide_option = yes
+    }
+}

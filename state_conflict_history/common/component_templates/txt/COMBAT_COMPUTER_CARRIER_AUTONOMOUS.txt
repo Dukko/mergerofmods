@@ -22,6 +22,7 @@ utility_component_template = {
         juggernaut
         Carrier
         escortcarrier
+        scavenger_bot
         Flagship
         explorationship
         star_eater

@@ -2,17 +2,17 @@ weapon_component_template = {
     key = "SCAVENGER_MAIN_WEAPON"
     size = titanic
     type = instant
-    prerequisites = {
-        tech_repeatable_nanite_technology_insight
-    }
     prio_projectile = yes
-    hidden = yes
     icon = "GFX_ship_part_aura_minefield"
     icon_frame = 1
+    prerequisites = {
+        "tech_scavenger_bot"
+    }
     firing_arc = 15
     min_range = 30
     tags = {
         weapon_type_kinetic
     }
     projectile_gfx = "scavenger_bot_main_weapon"
+    hidden = yes
 }

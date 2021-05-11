@@ -21,10 +21,10 @@ civic_welfare_state = {
         }
         civics = {
             NOR = {
-                value = civic_shared_burden
-                value = civic_divine_order
                 value = civic_consumerism
+                value = civic_divine_order
                 value = civic_merchant_guilds
+                value = civic_shared_burden
                 value = civic_slaver_guilds
             }
         }

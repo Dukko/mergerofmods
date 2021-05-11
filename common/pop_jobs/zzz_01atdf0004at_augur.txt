@@ -1,0 +1,41 @@
+at_augur = {
+    category = precursor_at
+    icon = priest
+    is_capped_by_modifier = yes
+    building_icon = building_temple_oranos
+    clothes_texture_index = 2
+    possible_pre_triggers = {
+        has_owner = yes
+    }
+    possible = {
+        owner = {
+            has_civic = civic_tw_atlantis
+        }
+        is_same_species = owner
+    }
+    resources = {
+        category = planet_priests
+        produces = {
+            unity = 3
+            society_research = 2
+            favour = 1
+        }
+        upkeep = {
+            consumer_goods = 6
+        }
+    }
+    planet_modifier = {
+    }
+    weight = {
+        weight = 25000
+        modifier = {
+            factor = 0.01
+            planet.controller = {
+                OR = {
+                    is_country_type = swarm
+                    is_country_type = ai_empire
+                }
+            }
+        }
+    }
+}

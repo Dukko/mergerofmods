@@ -20,7 +20,7 @@ mogul = {
     }
     planet_modifier = {
         planet_amenities_add = 7
-        trade_value_add = 12
+        trade_value_add = 8
     }
     triggered_planet_modifier = {
         potential = {
@@ -93,11 +93,6 @@ mogul = {
         modifier = {
             factor = 1.5
             has_ethic = ethic_capitalism
-        }
-        modifier = {
-            factor = 1.2
-            is_unemployed = yes
-            is_pop_category = ruler
         }
     }
 }

@@ -1,0 +1,38 @@
+namespace = utopia
+country_event = {
+    id = utopia.3309
+    title = "utopia.3000.name"
+    desc = "utopia.3309.desc"
+    diplomatic = yes
+    force_open = yes
+    picture_event_data = {
+        portrait = shroud1
+        room = shroud_room
+    }
+    is_triggered_only = yes
+    immediate = {
+        set_country_flag = shroud_diplomacy_engaged
+    }
+    after = {
+        hidden_effect = {
+            remove_country_flag = shroud_diplomacy_engaged
+        }
+    }
+    option = {
+        name = "utopia.3309.a"
+        custom_tooltip = anchor.tooltip
+        custom_tooltip = "covenant.tooltip"
+        hidden_effect = {
+            set_country_flag = anchor_of_disaster
+            set_country_flag = has_shroud_patron
+            country_event = {
+                id = utopia.3310
+            }
+        }
+    }
+    option = {
+        name = "exit.shroud"
+        custom_tooltip = "exit.shroud.tooltip"
+        default_hide_option = yes
+    }
+}

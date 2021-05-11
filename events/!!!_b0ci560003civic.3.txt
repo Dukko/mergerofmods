@@ -1,0 +1,14 @@
+namespace = civic
+planet_event = {
+    id = civic.3
+    title = "civic.3.name"
+    desc = "civic.3.desc"
+    picture = GFX_evt_atmospheric_entry
+    location = root
+    is_triggered_only = yes
+    immediate = {
+    }
+    option = {
+        name = "civic.3.a"
+    }
+}

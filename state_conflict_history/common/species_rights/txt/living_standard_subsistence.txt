@@ -35,12 +35,9 @@ living_standard_subsistence = {
     }
     potential = {
         exists = from
-        NOR = {
+        NOT = {
             from = {
                 has_valid_civic = civic_shared_burden
-            }
-            from = {
-                has_valid_civic = civic_employee_ownership
             }
         }
         OR = {
@@ -64,32 +61,32 @@ living_standard_subsistence = {
         }
         custom_tooltip = {
             fail_text = MUST_BE_SLAVES_LIMITED_OR_DISPLACEMENT
-        OR = {
-            has_citizenship_type = {
-                country = from
-                type = citizenship_slavery
-            }
-            has_citizenship_type = {
-                type = citizenship_limited
-                country = from
-            }
-            AND = {
-                OR = {
-                    has_citizenship_type = {
-                        country = from
-                        type = citizenship_purge_machine
-                    }
-                    has_citizenship_type = {
-                        country = from
-                        type = citizenship_purge
-                    }
-                }
-                has_purge_type = {
+            OR = {
+                has_citizenship_type = {
                     country = from
-                    type = purge_displacement
+                    type = citizenship_slavery
+                }
+                has_citizenship_type = {
+                    type = citizenship_limited
+                    country = from
+                }
+                AND = {
+                    OR = {
+                        has_citizenship_type = {
+                            country = from
+                            type = citizenship_purge_machine
+                        }
+                        has_citizenship_type = {
+                            country = from
+                            type = citizenship_purge
+                        }
+                    }
+                    has_purge_type = {
+                        country = from
+                        type = purge_displacement
+                    }
                 }
             }
-        }
         }
         custom_tooltip = {
             fail_text = SPECIES_MUST_NOT_BE_ASSIMILATING
@@ -102,7 +99,7 @@ living_standard_subsistence = {
         }
     }
     ai_will_do = {
-        factor = 0
+        factor = 10
         modifier = {
             factor = 0
             from = {
@@ -111,7 +108,7 @@ living_standard_subsistence = {
             }
         }
         modifier = {
-            factor = 0.1
+            factor = 0
             from = {
                 is_galactic_community_member = yes
             }

@@ -1,0 +1,11 @@
+gov_imperial_domain_hives = {
+    ruler_title = RT_GALACTIC_OVERMIND
+    should_force_rename = yes
+    possible = {
+        has_valid_civic = civic_galactic_sovereign
+        is_hive_empire = yes
+    }
+    weight = {
+        base = 900000
+    }
+}

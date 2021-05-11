@@ -317,6 +317,11 @@ diplomatic_stance = {
                 is_country_type = default
                 is_country_type = awakened_fallen_empire
             }
+            OR = {
+                is_megacorp = yes
+                has_ethic = ethic_capitalism
+                has_ethic = ethic_fanatic_capitalism
+            }
         }
         valid = {
             NOR = {
@@ -327,7 +332,10 @@ diplomatic_stance = {
                 limit = {
                     has_megacorp = yes
                     is_megacorp = yes
+                }
+                is_megacorp = yes
             }
+            else = {
             OR = {
                 is_megacorp = yes
                 has_ethic = ethic_capitalism

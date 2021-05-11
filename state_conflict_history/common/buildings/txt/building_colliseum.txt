@@ -60,4 +60,17 @@ building_colliseum = {
     triggered_desc = {
         text = job_gladiator_effect_desc
     }
+    ai_weight = {
+        weight = 1
+    }
+    on_built = {
+        planet = {
+            owner = {
+                set_timed_country_flag = {
+                    flag = buildings_new_alloys_building
+                    days = 480
+                }
+            }
+        }
+    }
 }

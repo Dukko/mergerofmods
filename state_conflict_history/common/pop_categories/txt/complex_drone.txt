@@ -94,6 +94,12 @@ complex_drone = {
         }
         upkeep = {
             trigger = {
+                has_trait = trait_grey_tempest_nanitecommunication
+            }
+            nanites = 1
+        }
+        upkeep = {
+            trigger = {
                 has_trait = trait_exotic_gas_dependency
             }
             exotic_gases = 0.01

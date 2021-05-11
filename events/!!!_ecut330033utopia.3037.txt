@@ -1,0 +1,34 @@
+namespace = utopia
+country_event = {
+    id = utopia.3037
+    title = "boon.bestowed"
+    desc = "utopia.3037.desc"
+    diplomatic_title = BLANK_STRING
+    diplomatic = yes
+    force_open = yes
+    picture_event_data = {
+        portrait = shroud1
+        room = shroud_room
+    }
+    is_triggered_only = yes
+    immediate = {
+        set_country_flag = shroud_diplomacy_engaged
+    }
+    after = {
+        hidden_effect = {
+            remove_country_flag = shroud_diplomacy_engaged
+            set_timed_country_flag = {
+                flag = positive_shroud_outcome
+                days = 1800
+            }
+        }
+    }
+    option = {
+        name = "exit.shroud"
+        add_modifier = {
+            modifier = "shroud_influence_boost"
+            days = 1800
+        }
+        default_hide_option = yes
+    }
+}

@@ -1,0 +1,40 @@
+@shipAuraRange = 80
+utility_component_template = {
+    key = "SHIP_AURA_INSPIRING_PRESENCE"
+    size = medium
+    icon = "GFX_ship_part_aura_nanobot"
+    icon_frame = 1
+    power = 0
+    size_restriction = {
+        titan
+        scavenger_bot
+        graygoo_mothership
+        dreadnought
+    }
+    component_set = "ship_aura_components"
+    friendly_aura = {
+        name = "aura_inspiring_presence"
+        radius = @shipAuraRange
+        apply_on = ships
+        stack_info = {
+            id = friendly_inspiring_presence
+            priority = 20
+        }
+        modifier = {
+            ship_fire_rate_mult = 0.05
+        }
+        graphics = {
+            area_effect = {
+                entity = "circle_area_entity"
+                dynamic_scale = yes
+            }
+            ship_effect = {
+                entity = "ship_aura_positive_entity"
+                dynamic_scale = no
+            }
+        }
+    }
+    ai_weight = {
+        weight = 10
+    }
+}

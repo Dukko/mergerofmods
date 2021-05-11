@@ -1,0 +1,45 @@
+namespace = utopia
+country_event = {
+    id = utopia.3041
+    title = "boon.bestowed"
+    desc = "utopia.3041.desc"
+    diplomatic_title = BLANK_STRING
+    diplomatic = yes
+    force_open = yes
+    picture_event_data = {
+        portrait = shroud1
+        room = shroud_room
+    }
+    is_triggered_only = yes
+    immediate = {
+        set_country_flag = shroud_diplomacy_engaged
+    }
+    after = {
+        hidden_effect = {
+            remove_country_flag = shroud_diplomacy_engaged
+            set_timed_country_flag = {
+                flag = positive_shroud_outcome
+                days = 1800
+            }
+        }
+    }
+    option = {
+        name = "exit.shroud"
+        every_owned_leader = {
+            limit = {
+                species = {
+                    has_trait = trait_psionic
+                }
+                NOR = {
+                    has_trait = leader_trait_admiral_chosen
+                    has_trait = leader_trait_general_chosen
+                    has_trait = leader_trait_governor_chosen
+                    has_trait = leader_trait_ruler_chosen
+                    has_trait = leader_trait_scientist_chosen
+                }
+            }
+            add_trait = leader_trait_shroud_age
+        }
+        default_hide_option = yes
+    }
+}

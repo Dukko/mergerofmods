@@ -15,7 +15,6 @@ civic_distributism = {
     possible = {
         ethics = {
             OR = {
-                value = ethic_capitalism
                 value = ethic_socialism
                 value = ethic_fanatic_socialism
             }

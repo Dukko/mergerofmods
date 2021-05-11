@@ -31,27 +31,10 @@ living_standard_good = {
         exists = from
         from = {
             is_gestalt = no
-        }
-        NOT = {
-            from = {
+            NOR = {
                 has_valid_civic = civic_shared_burden
-            }
-        }
-        NOT = {
-            from = {
                 has_valid_civic = civic_beacon_of_liberty
-            }
-        }
-        NOT = {
-            from = {
-                has_valid_civic = civic_employee_ownership
-            }
-        }        
-        NOT = {
-            from = {
-                OR = {
-                    has_ethic = ethic_fanatic_capitalism
-                }
+                has_ethic = ethic_fanatic_capitalism
             }
         }
         NOR = {
@@ -116,7 +99,7 @@ living_standard_good = {
             }
         }
         from = {
-            NOR = {
+            NOT = {
                 has_policy_flag = economic_stance_market
             }
         }

@@ -1,16 +1,17 @@
 weapon_component_template = {
     key = "GG_ENERGY_MISSILE"
     size = torpedo
+    entity = "invisible_turret_entity"
     type = missile
-    prerequisites = {
-        tech_repeatable_nanite_technology_insight
-    }
     prio_projectile = yes
-    hidden = yes
-    icon = "GFX_ship_part_space_whale_weapon_1"
+    prerequisites = {
+        "tech_graygoo_nanite_energy_missiles"
+    }
+    icon = "GFX_ship_part_nanite_ball"
     icon_frame = 1
+    component_set = "NANITE_BALLS_1"
     tags = {
-        weapon_type_energy
+        weapon_type_nanite
     }
     projectile_gfx = "gatebuilder_torpedo"
 }

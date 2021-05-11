@@ -39,17 +39,11 @@ living_standard_academic_privilege = {
         }
         NOT = {
             from = {
-                has_valid_civic = civic_reeducated_labor
-            }
-        }
-        NOT = {
-            from = {
-                has_valid_civic = civic_welfare_state
-            }
-        }
-        NOT = {
-            from = {
-                has_valid_civic = civic_shared_burden
+                OR = {
+                    has_valid_civic = civic_reeducated_labor
+                    has_valid_civic = civic_welfare_state
+                    has_valid_civic = civic_shared_burden
+                }
             }
         }
         NOR = {

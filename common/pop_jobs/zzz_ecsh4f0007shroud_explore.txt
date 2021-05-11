@@ -1,0 +1,30 @@
+shroud_explore = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_xeno_tourism_agency
+    clothes_texture_index = 5
+    possible = {
+        complex_specialist_job_check_trigger = yes
+    }
+    resources = {
+        category = planet_researchers
+        produces = {
+            unity = 50
+            society_research = 50
+        }
+        upkeep = {
+            energy = 5
+        }
+    }
+    weight = {
+        weight = @specialist_job_weight
+        modifier = {
+            factor = 0.2
+            has_trait = trait_repugnant
+        }
+        modifier = {
+            factor = 2
+            has_trait = trait_charismatic
+        }
+    }
+}

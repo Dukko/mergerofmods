@@ -37,9 +37,6 @@ geoengineer = {
         modifier = {
             factor = 0.2
             has_citizenship_rights = no
-            NOT = {
-                has_trait = trait_mechanical
-            }
         }
         modifier = {
             factor = 2

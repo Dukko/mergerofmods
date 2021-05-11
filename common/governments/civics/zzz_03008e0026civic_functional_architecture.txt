@@ -1,5 +1,4 @@
 civic_functional_architecture = {
-    description = "civic_tooltip_functional_architecture_effects"
     pickable_at_start = no
     modification = no
     potential = {

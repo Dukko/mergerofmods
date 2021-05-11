@@ -1,5 +1,6 @@
-@caravaneerfleetlaunch1 = 9000
-@caravaneerfleetlaunch2 = 14400
+@caravaneerfleetlaunch1 = 7200
+@caravaneerfleetlaunch2 = 10800
+@caravaneerfleetlaunch3 = 14400
 megacorp_caravaneer_init = {
     class = "rl_standard_stars"
     usage = misc_system_init
@@ -18,10 +19,6 @@ megacorp_caravaneer_init = {
         modifier = {
             factor = 0
             has_star_flag = empire_cluster
-        }
-        modifier = {
-            factor = 0
-            is_bottleneck_system = yes
         }
     }
     max_instances = 1
@@ -672,13 +669,6 @@ megacorp_caravaneer_init = {
         }
         random_list = {
             1 = {
-                modifier = {
-                    factor = 0
-                    NAND = {
-                        has_global_flag = spawn_caravaneer_1
-                        has_global_flag = spawn_caravaneer_2
-                    }
-                }
                 event_target:caravaneer_fleet1_fleet = {
                     fleet_event = {
                         id = cara.1000
@@ -691,15 +681,14 @@ megacorp_caravaneer_init = {
                         days = @caravaneerfleetlaunch2
                     }
                 }
-            }
-            1 = {
-                modifier = {
-                    factor = 0
-                    NAND = {
-                        has_global_flag = spawn_caravaneer_1
-                        has_global_flag = spawn_caravaneer_3
+                event_target:caravaneer_fleet3_fleet = {
+                    fleet_event = {
+                        id = cara.2000
+                        days = @caravaneerfleetlaunch3
                     }
                 }
+            }
+            1 = {
                 event_target:caravaneer_fleet1_fleet = {
                     fleet_event = {
                         id = cara.1000
@@ -712,15 +701,14 @@ megacorp_caravaneer_init = {
                         days = @caravaneerfleetlaunch2
                     }
                 }
-            }
-            1 = {
-                modifier = {
-                    factor = 0
-                    NAND = {
-                        has_global_flag = spawn_caravaneer_2
-                        has_global_flag = spawn_caravaneer_1
+                event_target:caravaneer_fleet2_fleet = {
+                    fleet_event = {
+                        id = cara.2000
+                        days = @caravaneerfleetlaunch3
                     }
                 }
+            }
+            1 = {
                 event_target:caravaneer_fleet2_fleet = {
                     fleet_event = {
                         id = cara.2000
@@ -733,15 +721,14 @@ megacorp_caravaneer_init = {
                         days = @caravaneerfleetlaunch2
                     }
                 }
-            }
-            1 = {
-                modifier = {
-                    factor = 0
-                    NAND = {
-                        has_global_flag = spawn_caravaneer_2
-                        has_global_flag = spawn_caravaneer_3
+                event_target:caravaneer_fleet3_fleet = {
+                    fleet_event = {
+                        id = cara.2000
+                        days = @caravaneerfleetlaunch3
                     }
                 }
+            }
+            1 = {
                 event_target:caravaneer_fleet2_fleet = {
                     fleet_event = {
                         id = cara.2000
@@ -754,15 +741,14 @@ megacorp_caravaneer_init = {
                         days = @caravaneerfleetlaunch2
                     }
                 }
-            }
-            1 = {
-                modifier = {
-                    factor = 0
-                    NAND = {
-                        has_global_flag = spawn_caravaneer_3
-                        has_global_flag = spawn_caravaneer_2
+                event_target:caravaneer_fleet1_fleet = {
+                    fleet_event = {
+                        id = cara.2000
+                        days = @caravaneerfleetlaunch3
                     }
                 }
+            }
+            1 = {
                 event_target:caravaneer_fleet3_fleet = {
                     fleet_event = {
                         id = cara.3000
@@ -775,15 +761,14 @@ megacorp_caravaneer_init = {
                         days = @caravaneerfleetlaunch2
                     }
                 }
-            }
-            1 = {
-                modifier = {
-                    factor = 0
-                    NAND = {
-                        has_global_flag = spawn_caravaneer_3
-                        has_global_flag = spawn_caravaneer_1
+                event_target:caravaneer_fleet1_fleet = {
+                    fleet_event = {
+                        id = cara.2000
+                        days = @caravaneerfleetlaunch3
                     }
                 }
+            }
+            1 = {
                 event_target:caravaneer_fleet3_fleet = {
                     fleet_event = {
                         id = cara.3000
@@ -794,6 +779,12 @@ megacorp_caravaneer_init = {
                     fleet_event = {
                         id = cara.1000
                         days = @caravaneerfleetlaunch2
+                    }
+                }
+                event_target:caravaneer_fleet2_fleet = {
+                    fleet_event = {
+                        id = cara.2000
+                        days = @caravaneerfleetlaunch3
                     }
                 }
             }

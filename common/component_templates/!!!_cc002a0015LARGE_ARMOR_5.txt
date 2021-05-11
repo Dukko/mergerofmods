@@ -1,0 +1,25 @@
+utility_component_template = {
+    key = "LARGE_ARMOR_5"
+    size = large
+    icon = "GFX_ship_part_armor_5"
+    icon_frame = 1
+    power = 0
+    modifier = {
+        ship_armor_add = @armor_5L
+    }
+    prerequisites = {
+        "tech_ship_armor_5"
+    }
+    component_set = "ARMOR_5"
+    upgrades_to = "LARGE_NHSC_ADV_ARMOR_1"
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @l_t5_cost
+        }
+        upkeep = {
+            energy = @l_t5_upkeep_energy
+            alloys = @l_t5_upkeep_alloys
+        }
+    }
+}

@@ -61,6 +61,7 @@ spiritual_seekers = {
         OR = {
             has_ethic = "ethic_spiritualist"
             has_ethic = "ethic_fanatic_spiritualist"
+            has_valid_civic = civic_environmentalist
         }
     }
     weight_modifier = {

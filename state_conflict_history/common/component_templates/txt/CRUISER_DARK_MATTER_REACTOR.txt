@@ -23,6 +23,7 @@ utility_component_template = {
     component_set = "power_core"
     size_restriction = {
         cruiser
+        graygoo_interdictor
         crisis_cruiser
     }
     upgrades_to = "CRUISER_GRAVITON_REACTOR"

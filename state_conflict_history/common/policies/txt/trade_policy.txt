@@ -105,7 +105,7 @@ trade_policy = {
         modifier = {
         }
         AI_weight = {
-            factor = 0
+            factor = 10
         }
     }
     option = {

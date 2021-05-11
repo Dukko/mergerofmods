@@ -1,0 +1,36 @@
+@starbase_power_6 = 10000
+utility_component_template = {
+    key = "STARBASE_DARK_MATTER_REACTOR"
+    size = large
+    icon = "GFX_ship_part_dark_matter_power_core"
+    icon_frame = 1
+    power = @starbase_power_6
+    prerequisites = {
+        "tech_dark_matter_power_core"
+    }
+    component_set = "power_core"
+    class_restriction = {
+        shipclass_starbase
+    }
+    size_restriction = {
+        starbase_outpost
+        starbase_starport
+        starbase_starhold
+        starbase_starfortress
+        starbase_citadel
+        starbase_gatebuilders
+        juggernaut
+        graygoo_factory
+    }
+    ai_weight = {
+        weight = 6
+        modifier = {
+            factor = 0
+            is_country_type = default
+            has_monthly_income = {
+                resource = sr_dark_matter
+                value <= 0
+            }
+        }
+    }
+}

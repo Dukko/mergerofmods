@@ -1,6 +1,6 @@
 gateway_0 = {
-    entity = "construction_platform_entity"
-    construction_entity = "construction_platform_entity"
+    entity = "deactivated_gateway_entity"
+    construction_entity = "deactivated_gateway_entity"
     portrait = "GFX_megastructure_construction_background"
     place_entity_on_planet_plane = no
     build_outside_gravity_well = yes
@@ -57,14 +57,7 @@ gateway_0 = {
         }
         custom_tooltip = {
             fail_text = "requires_surveyed_system"
-            NOT = {
-                any_system_planet = {
-                    is_surveyed = {
-                        who = prev.from
-                        status = no
-                    }
-                }
-            }
+            giga_system_is_surveyed = yes
         }
         custom_tooltip = {
             fail_text = "requires_no_existing_gateway"
@@ -83,6 +76,12 @@ gateway_0 = {
             fail_text = "requires_technology_gateway_construction"
             from = {
                 has_technology = tech_gateway_construction
+            }
+        }
+        custom_tooltip = {
+            fail_text = "not_in_lcluster"
+            NOT = {
+                has_star_flag = lcluster
             }
         }
     }

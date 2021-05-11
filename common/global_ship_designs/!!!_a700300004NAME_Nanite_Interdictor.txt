@@ -1,0 +1,83 @@
+ship_design = {
+    name = "NAME_Nanite_Interdictor"
+    ship_size = graygoo_interdictor
+    is_event_design = yes
+    is_special_buildable = yes
+    section = {
+        template = "nanite_interdictor_key"
+        slot = "mid"
+        component = {
+            slot = "TORPEDO_01"
+            template = "NHSC_NANITE_TORPEDO_2"
+        }
+        component = {
+            slot = "TORPEDO_02"
+            template = "NHSC_NANITE_TORPEDO_2"
+        }
+        component = {
+            slot = "TORPEDO_03"
+            template = "NHSC_NANITE_TORPEDO_2"
+        }
+        component = {
+            slot = "TORPEDO_04"
+            template = "NHSC_NANITE_TORPEDO_2"
+        }
+        component = {
+            slot = "STRIKE_CRAFT_01"
+            template = "NHSC_NANITE_STRIKECRAFT"
+        }
+        component = {
+            slot = "STRIKE_CRAFT_02"
+            template = "NHSC_NANITE_STRIKECRAFT"
+        }
+        component = {
+            slot = "STRIKE_CRAFT_03"
+            template = "NHSC_NANITE_STRIKECRAFT"
+        }
+        component = {
+            slot = "MEDIUM_UTILITY_1"
+            template = "MEDIUM_NHSC_ADV_SHIELD_2"
+        }
+        component = {
+            slot = "MEDIUM_UTILITY_2"
+            template = "MEDIUM_NHSC_ADV_SHIELD_2"
+        }
+        component = {
+            slot = "MEDIUM_UTILITY_3"
+            template = "MEDIUM_NHSC_ADV_SHIELD_2"
+        }
+        component = {
+            slot = "MEDIUM_UTILITY_4"
+            template = "MEDIUM_NHSC_ADV_SHIELD_2"
+        }
+        component = {
+            slot = "MEDIUM_UTILITY_5"
+            template = "MEDIUM_NHSC_NANO_ARMOR_2"
+        }
+        component = {
+            slot = "MEDIUM_UTILITY_6"
+            template = "MEDIUM_NHSC_NANO_ARMOR_2"
+        }
+        component = {
+            slot = "MEDIUM_UTILITY_7"
+            template = "MEDIUM_NHSC_NANO_ARMOR_2"
+        }
+        component = {
+            slot = "MEDIUM_UTILITY_8"
+            template = "MEDIUM_NHSC_NANO_ARMOR_2"
+        }
+        component = {
+            slot = "AUX_UTILITY_1"
+            template = "AUTO_REPAIR_2"
+        }
+        component = {
+            slot = "AUX_UTILITY_2"
+            template = "SHIELD_BOOSTER"
+        }
+    }
+    required_component = "HYPER_DRIVE_3"
+    required_component = "NHSC_ADV_TACHYON_SENSOR_SHIP"
+    required_component = "NHSC_ADV_THRUSTERS_1"
+    required_component = "CRUISER_NHSC_ADV_REACTOR_1"
+    required_component = "COMBAT_COMPUTER_LINE_AUTONOMOUS"
+}

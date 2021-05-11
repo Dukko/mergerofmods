@@ -1,0 +1,45 @@
+entity = {
+    name = "grey_tempesttw_interstellar_assembly_stage_4_entity"
+    pdxmesh = "interstellar_assembly_01_stage_4_mesh"
+    default_state = "idle"
+    state = {
+        name = "idle"
+        animation = "idle"
+        animation_speed = 0.2
+        start_event = {
+            node = "effect_1"
+            particle = "interstellar_assembly_effect"
+            keep_particle = yes
+            trigger_once = yes
+        }
+        start_event = {
+            trigger_once = yes
+            sound = {
+                soundeffect = "sfx_interstellar_assembly_hum"
+            }
+        }
+        start_event = {
+            trigger_once = yes
+            sound = {
+                soundeffect = "sfx_interstellar_assembly_pulse"
+            }
+        }
+        start_event = {
+            trigger_once = yes
+            sound = {
+                soundeffect = "sfx_interstellar_assembly_beats"
+            }
+        }
+    }
+    meshsettings = {
+        name = "body_4Shape"
+        index = 0
+        texture_diffuse = "grey_tempesttw_interstellar_assembly_diffuse.dds"
+        texture_normal = "arthropoid_01_interstellar_assembly_normal.dds"
+        texture_specular = "arthropoid_01_interstellar_assembly_specular.dds"
+        shader = "PdxMeshShip"
+    }
+    attach = {
+        ring_1 = "interstellar_assembly_effect_entity"
+    }
+}

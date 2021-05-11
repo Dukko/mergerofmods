@@ -33,6 +33,12 @@ Just Name Lists
 Elf Names
 Cybrxkhan's Assortment of Namelists for Stellaris
 Benjaseth's Species Names
+( Twinks Atlanteans )
+( Twinks Dessanu )
+( Twinks I.A.A.T )
+( Twinks Kaldorei )
+( Twinks Paradise Initiative )
+( Twinks Sin'dorei )
 V-Mods Species
 V-Mods Species - Ascellian Free Traders
 V-Mods Species - Shemei Covenant
@@ -68,6 +74,8 @@ Precursor Story Pack
 Origins of Civilization for 3.0.x
 Origins Extended
 Nanite Machines & Distant Stars Overhaul
+A Deadly Tempest (3.0b)
+Morbid Origin 3.0.2
 More Origins Mod
 More Origins - Planetary Diversity compat
 More Default Origins
@@ -100,6 +108,7 @@ Diverse Basics
 Weapon Research Menu
 Size 25 Homeworlds
 Shut Up, We Don't Care! (3.0)
+【3.0.2】Shroud Expanded【虚境扩展】The Decadance of Sanity--理智的终末癫狂
 Robot Rights
 Resettle Colony
 resettlement_mod
@@ -134,7 +143,6 @@ Dynamic Difficulty - Ultimate Customization
 Diplomacy Adjustments
 Claims Decay - Dynamic Diplomacy [3.0]
 Civil Wars
-Choosable Shroud
 Change Shipset
 Biopsionic Mastery (Patch Edition)
 Better War Doctrines (Ethics and Civics Alternative)
@@ -310,7 +318,7 @@ Magnum's Mods - Tradition Cost Scaling
 !Stellaris Enhanced Sound Project - Unofficial ESC Patch
 !StartPopsPatch
 ¡Compatibility - Ruler Agenda and Traits & More Origins Mod
-!patch PD: More Arcologies - Ethics and Civics _____
+!patch PD: More Arcologies - Universal Authorities patch
 !Patch - Shader merge for ACoT, Gigastructures, Jump Gates and Real Space 3.7
 !Patch - Fix PT Slave Armies
 !Patch - EST & PT Duplicated Traditions Update

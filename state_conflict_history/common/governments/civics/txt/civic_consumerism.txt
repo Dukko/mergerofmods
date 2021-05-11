@@ -5,6 +5,11 @@ civic_consumerism = {
                 value = ethic_gestalt_consciousness
             }
         }
+        authority = {
+            NOT = {
+                is_megacorp = yes
+            }
+        }
     }
     possible = {
         ethics = {

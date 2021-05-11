@@ -51,7 +51,6 @@ per_relation = {
                             is_same_value = FROM
                         }
                     }
-                    has_ethic = ethic_fanatic_xenophobe
                 }
             }
         }

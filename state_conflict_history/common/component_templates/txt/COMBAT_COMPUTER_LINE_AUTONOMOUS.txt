@@ -1,0 +1,38 @@
+@cost3 = 20
+@power3 = -25
+utility_component_template = {
+    key = "COMBAT_COMPUTER_LINE_AUTONOMOUS"
+    size = small
+    icon = "GFX_ship_part_computer_line_sapient"
+    icon_frame = 1
+    power = @power3
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @cost3
+        }
+    }
+    class_restriction = {
+        shipclass_military
+    }
+    size_restriction = {
+        destroyer
+        cruiser
+        battleship
+        graygoo_interdictor
+        crisis_destroyer
+        crisis_cruiser
+    }
+    component_set = "combat_computers"
+    ship_behavior = "line"
+    prerequisites = {
+        "tech_combat_computers_autonomous"
+    }
+    ship_modifier = {
+        ship_fire_rate_mult = 0.2
+        ship_accuracy_add = 20
+    }
+    ai_weight = {
+        weight = 5
+    }
+}

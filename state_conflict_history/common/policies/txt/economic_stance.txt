@@ -62,6 +62,8 @@ economic_stance = {
         policy_flags = {
             economic_stance_mixed
         }
+        modifier = {
+        }
         valid = {
         }
         AI_weight = {

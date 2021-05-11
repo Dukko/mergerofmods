@@ -1,0 +1,71 @@
+district_eco_arcology_food_industry = {
+    base_buildtime = 600
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        uses_district_set = eco_city_world
+        from = {
+            is_regular_empire = yes
+        }
+    }
+    potential = {
+        uses_district_set = eco_city_world
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_farming
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = 700
+            exotic_gases = 40
+        }
+        upkeep = {
+            energy = 4
+            exotic_gases = 1
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 7
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                NOT = {
+                    has_valid_civic = civic_warrior_culture
+                }
+            }
+        }
+        modifier = {
+            job_farmer_add = 7
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire_spiritualist = no
+            }
+        }
+        text = job_farmer_effect_desc
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 250
+            owner = {
+                has_monthly_income = {
+                    resource = consumer_goods
+                    value > 200
+                }
+                has_monthly_income = {
+                    resource = alloys
+                    value > 500
+                }
+            }
+        }
+    }
+}

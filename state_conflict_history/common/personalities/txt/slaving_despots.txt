@@ -62,6 +62,10 @@ slaving_despots = {
     weight_modifier = {
         weight = 200
         modifier = {
+            weight = 100
+            has_valid_civic = civic_slaver_guilds
+        }
+        modifier = {
             weight = 1000
             has_valid_civic = civic_reeducated_labor
         }

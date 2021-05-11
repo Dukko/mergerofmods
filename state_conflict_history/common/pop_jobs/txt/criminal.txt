@@ -26,9 +26,5 @@ criminal = {
     }
     weight = {
         weight = @criminal_job_weight
-        modifier = {
-            factor = 1.5
-            has_job = criminal
-        }
     }
 }

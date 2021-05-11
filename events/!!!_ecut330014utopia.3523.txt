@@ -1,0 +1,34 @@
+namespace = utopia
+country_event = {
+    id = utopia.3523
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        create_fleet = {
+            name = "Fallen Treasure"
+            settings = {
+                spawn_debris = no
+                is_boss = no
+            }
+            effect = {
+                set_owner = root
+                create_ship = {
+                    name = random
+                    design = "Alpha"
+                    graphical_culture = "fallen_empire_02"
+                }
+                create_ship = {
+                    name = random
+                    design = "Alpha"
+                    graphical_culture = "fallen_empire_02"
+                }
+                create_ship = {
+                    name = random
+                    design = "Alpha"
+                    graphical_culture = "fallen_empire_02"
+                }
+                set_location = root.capital_scope
+            }
+        }
+    }
+}

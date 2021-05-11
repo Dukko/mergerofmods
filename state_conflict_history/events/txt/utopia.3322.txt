@@ -1,0 +1,31 @@
+namespace = utopia
+planet_event = {
+    id = utopia.3322
+    hide_window = yes
+    trigger = {
+        has_owner = yes
+        owner = {
+            OR = {
+                has_modifier = covenant_end_of_the_cycle
+                AND = {
+                    is_subject = yes
+                    overlord = {
+                        has_modifier = covenant_end_of_the_cycle
+                    }
+                }
+            }
+        }
+        NOT = {
+            has_modifier = covenant_shroud_marked
+        }
+    }
+    mean_time_to_happen = {
+        months = 1
+    }
+    immediate = {
+        add_modifier = {
+            modifier = covenant_shroud_marked
+            days = -1
+        }
+    }
+}

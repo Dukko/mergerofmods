@@ -35,6 +35,24 @@ planet_event = {
         }
         if = {
             limit = {
+                has_modifier = "damaged_ecology"
+            }
+            remove_modifier = "damaged_ecology"
+        }
+        if = {
+            limit = {
+                has_modifier = "wasteland_radiation"
+            }
+            remove_modifier = "wasteland_radiation"
+        }
+        if = {
+            limit = {
+                has_modifier = "irradiated_planet"
+            }
+            remove_modifier = "irradiated_planet"
+        }
+        if = {
+            limit = {
                 has_modifier = "gpm_global_thunderstorms"
             }
             remove_modifier = "gpm_global_thunderstorms"

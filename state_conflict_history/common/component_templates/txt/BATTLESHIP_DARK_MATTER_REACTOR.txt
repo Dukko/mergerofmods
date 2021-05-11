@@ -23,6 +23,7 @@ utility_component_template = {
     component_set = "power_core"
     size_restriction = {
         battleship
+        graygoo_interdictor
     }
     upgrades_to = "BATTLESHIP_GRAVITON_REACTOR"
     ai_weight = {

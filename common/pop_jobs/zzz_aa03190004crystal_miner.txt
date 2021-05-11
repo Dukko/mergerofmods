@@ -76,10 +76,6 @@ crystal_miner = {
             }
         }
         modifier = {
-            factor = 1.5
-            has_job = crystal_miner
-        }
-        modifier = {
             factor = 3
             has_trait = trait_very_strong
         }

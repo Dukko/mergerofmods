@@ -129,10 +129,6 @@ farmer = {
             can_take_servant_job = yes
         }
         modifier = {
-            factor = 1.5
-            has_job = farmer
-        }
-        modifier = {
             factor = 2
             has_trait = trait_syncretic_proles
         }

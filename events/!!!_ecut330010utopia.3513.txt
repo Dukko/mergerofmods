@@ -1,0 +1,32 @@
+namespace = utopia
+country_event = {
+    id = utopia.3513
+    title = "TRANSMISSION"
+    desc = "utopia.3153.desc"
+    diplomatic = yes
+    force_open = yes
+    picture_event_data = {
+        portrait = event_target:stolen_empire
+        room = event_target:stolen_empire
+    }
+    is_triggered_only = yes
+    immediate = {
+        event_target:stolen_empire = {
+            add_opinion_modifier = {
+                who = root
+                modifier = opinion_stole_resources
+            }
+        }
+    }
+    option = {
+        name = "utopia.3053.a"
+        tooltip = {
+            event_target:stolen_empire = {
+                add_opinion_modifier = {
+                    who = root
+                    modifier = opinion_stole_resources
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+leader_trait_governor_optimized = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/trait_uplifted.dds"
+    modifier = {
+        planet_jobs_produces_mult = 0.025
+        pop_happiness = -0.1
+    }
+    leader_trait = {
+        governor
+    }
+    leader_class = {
+        governor
+    }
+    initial = no
+    randomized = no
+}

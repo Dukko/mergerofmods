@@ -1,0 +1,102 @@
+district_arcane_leyline = {
+    base_buildtime = 240
+    show_on_uncolonized = {
+        uses_district_set = standard
+        owner = {
+            has_civic = civic_arcane_precursor
+        }
+    }
+    potential = {
+        uses_district_set = standard
+        owner = {
+            has_civic = civic_arcane_precursor
+        }
+    }
+    allow = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_generator_uncapped
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = 2500
+        }
+        produces = {
+            arcane_power_tw = 15
+        }
+        upkeep = {
+            energy = 3
+        }
+    }
+    planet_modifier = {
+        planet_max_districts_add = 1
+        planet_max_buildings_add = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire_spiritualist = no
+            }
+        }
+        modifier = {
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_fallen_empire_spiritualist = yes
+            }
+        }
+        modifier = {
+        }
+    }
+    prerequisites = {
+        tech_power_plant_1
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 1000
+            owner = {
+                has_monthly_income = {
+                    resource = arcane_power_tw
+                    value < 100
+                }
+            }
+        }
+    }
+    ai_resource_production = {
+        energy = 1
+        trigger = {
+            always = yes
+        }
+    }
+}

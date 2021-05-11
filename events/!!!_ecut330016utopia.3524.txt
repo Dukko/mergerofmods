@@ -1,0 +1,31 @@
+namespace = utopia
+country_event = {
+    id = utopia.3524
+    hide_window = yes
+    trigger = {
+        has_country_flag = spaceship_stolen
+    }
+    mean_time_to_happen = {
+        months = 1
+    }
+    immediate = {
+        random_country = {
+            limit = {
+                is_country_type = fallen_empire
+                NOT = {
+                    has_ethic = ethic_gestalt_consciousness
+                }
+                has_communications = root
+                has_country_flag = stole_spaceship_target
+            }
+            save_event_target_as = fallen_empire
+            remove_country_flag = stole_spaceship_target
+        }
+        country_event = {
+            id = utopia.3526
+        }
+    }
+    after = {
+        remove_country_flag = spaceship_stolen
+    }
+}

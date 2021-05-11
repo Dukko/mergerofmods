@@ -3,6 +3,18 @@ soldier = {
     condition_string = SOLDIER_JOB_TRIGGER
     building_icon = building_stronghold
     clothes_texture_index = 4
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible = {
+        soldier_job_check_trigger = yes
+        owner = {
+            is_gestalt = no
+        }
+    }
     country_modifier = {
         country_naval_cap_add = 4
     }
@@ -59,18 +71,6 @@ soldier = {
             planet_stability_add = 5
         }
     }
-    possible_pre_triggers = {
-        has_owner = yes
-        is_being_purged = no
-        is_being_assimilated = no
-        is_sapient = yes
-    }
-    possible = {
-        soldier_job_check_trigger = yes
-        owner = {
-            is_gestalt = no
-        }
-    }
     weight = {
         weight = @soldier_job_weight
         modifier = {
@@ -87,10 +87,6 @@ soldier = {
         modifier = {
             factor = 2
             has_trait = trait_natural_warriors
-        }
-        modifier = {
-            factor = 1.5
-            has_job = soldier
         }
         modifier = {
             factor = 2

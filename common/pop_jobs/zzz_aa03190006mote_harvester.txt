@@ -63,10 +63,6 @@ mote_harvester = {
             can_take_servant_job = yes
         }
         modifier = {
-            factor = 1.5
-            has_job = mote_harvester
-        }
-        modifier = {
             factor = 5
             has_trait = trait_syncretic_proles
         }

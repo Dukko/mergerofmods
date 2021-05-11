@@ -1,0 +1,46 @@
+genius_job = {
+    category = specialist
+    is_capped_by_modifier = no
+    icon = researcher
+    building_icon = building_academy_lab_3
+    possible = {
+        hidden_trigger = {
+            exists = owner
+        }
+        owner = {
+            OR = {
+                has_policy_flag = techun_policy_genius_scientists
+                has_policy_flag = techun_policy_intelligent_scientists
+                has_policy_flag = techun_policy_universal
+            }
+        }
+        has_trait = trait_genetic_optimization
+    }
+    resources = {
+        category = planet_jobs
+        upkeep = {
+            consumer_goods = 2
+        }
+        produces = {
+            engineering_research = 4
+            physics_research = 4
+            society_research = 4
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_valid_civic = civic_technocracy
+                }
+            }
+            unity = 1
+        }
+    }
+    planet_modifier = {
+    }
+    pop_modifier = {
+    }
+    weight = {
+        weight = 1
+    }
+}

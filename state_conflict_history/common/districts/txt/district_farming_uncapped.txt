@@ -103,21 +103,6 @@ district_farming_uncapped = {
         potential = {
             exists = owner
             owner = {
-                or = {
-                    has_valid_civic = civic_welfare_state
-                    has_valid_civic = civic_shared_burden
-                }
-            }
-        }
-        modifier = {
-            job_farmer_add = 1
-            planet_housing_add = 1
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
                 is_fallen_empire_spiritualist = yes
             }
         }
@@ -184,6 +169,21 @@ district_farming_uncapped = {
         modifier = {
             planet_housing_add = 1
             job_fe_acolyte_farm_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                or = {
+                    has_valid_civic = civic_welfare_state
+                    has_valid_civic = civic_shared_burden
+                }
+            }
+        }
+        modifier = {
+            job_farmer_add = 1
+            planet_housing_add = 1
         }
     }
     triggered_desc = {

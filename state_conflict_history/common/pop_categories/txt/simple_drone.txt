@@ -117,6 +117,12 @@ simple_drone = {
         }
         upkeep = {
             trigger = {
+                has_trait = trait_grey_tempest_nanitecommunication
+            }
+            nanites = 1
+        }
+        upkeep = {
+            trigger = {
                 is_robotic_species = yes
                 is_unemployed = no
             }

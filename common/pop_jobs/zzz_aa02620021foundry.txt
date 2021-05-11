@@ -47,13 +47,6 @@ foundry = {
     weight = {
         weight = @specialist_job_weight
         modifier = {
-            factor = 0.2
-            has_citizenship_rights = no
-            NOT = {
-                has_trait = trait_mechanical
-            }
-        }
-        modifier = {
             factor = 0.1
             can_take_servant_job = yes
         }

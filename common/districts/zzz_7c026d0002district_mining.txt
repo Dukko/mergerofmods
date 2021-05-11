@@ -162,6 +162,19 @@ district_mining = {
             exists = owner
             owner = {
                 or = {
+                    has_valid_civic = civic_keepers_harmony
+                }
+            }
+        }
+        modifier = {
+            planet_amenities_add = -1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                or = {
                     has_valid_civic = civic_welfare_state
                     has_valid_civic = civic_shared_burden
                 }
@@ -170,19 +183,6 @@ district_mining = {
         modifier = {
             job_miner_add = 1
             planet_housing_add = 1
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                or = {
-                    has_valid_civic = civic_keepers_harmony
-                }
-            }
-        }
-        modifier = {
-            planet_amenities_add = -1
         }
     }
     triggered_planet_modifier = {

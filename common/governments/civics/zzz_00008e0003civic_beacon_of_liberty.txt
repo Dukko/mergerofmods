@@ -1,0 +1,49 @@
+civic_beacon_of_liberty = {
+    potential = {
+        ethics = {
+            NOT = {
+                value = ethic_gestalt_consciousness
+            }
+        }
+        authority = {
+            NOT = {
+                is_megacorp = yes
+            }
+        }
+    }
+    possible = {
+        authority = {
+            OR = {
+                value = auth_democratic
+                value = auth_direct_democratic
+            }
+        }
+        ethics = {
+            OR = {
+                text = civic_tooltip_egalitarian
+                value = ethic_egalitarian
+                value = ethic_fanatic_egalitarian
+            }
+            OR = {
+                text = civic_tooltip_capitalism
+                value = ethic_capitalism
+                value = ethic_fanatic_capitalism
+            }
+            NOR = {
+                text = civic_tooltip_not_xenophobe
+                value = ethic_xenophobe
+                value = ethic_fanatic_xenophobe
+            }
+        }
+    }
+    random_weight = {
+        base = 5
+    }
+    modifier = {
+        trade_value_mult = 0.15
+        country_starbase_influence_cost_mult = -0.25
+        tech_cost_empire_size_mult = -0.33
+        pop_growth_from_immigration = 0.15
+        country_base_influence_produces_add = -0.5
+    }
+}

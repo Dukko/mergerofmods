@@ -1,0 +1,36 @@
+nanite_replicator = {
+    category = simple_drone
+    building_icon = building_nanite_transmuter
+    is_capped_by_modifier = no
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        owner = {
+            has_valid_civic = civic_machine_nanites
+        }
+    }
+    resources = {
+        category = planet_metallurgists
+        upkeep = {
+            energy = 5
+        }
+    }
+    planet_modifier = {
+        planet_pop_assembly_add = 1
+        planet_amenities_no_happiness_add = 0.5
+        planet_pops_upkeep_mult = 0.03
+    }
+    pop_modifier = {
+        pop_amenities_usage_mult = -0.5
+    }
+    weight = {
+        weight = 0.1
+        modifier = {
+            factor = 1
+        }
+    }
+}

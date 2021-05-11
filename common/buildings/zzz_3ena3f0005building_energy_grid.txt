@@ -78,17 +78,6 @@ building_energy_grid = {
         potential = {
             exists = owner
             owner = {
-                has_policy_flag = economic_stance_market
-            }
-        }
-        modifier = {
-            trade_value_add = 7
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
                 is_gestalt = yes
             }
         }
@@ -123,6 +112,17 @@ building_energy_grid = {
         }
         modifier = {
             district_generator_max = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_policy_flag = economic_stance_market
+            }
+        }
+        modifier = {
+            trade_value_add = 7
         }
     }
     resources = {

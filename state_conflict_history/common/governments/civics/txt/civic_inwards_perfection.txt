@@ -34,7 +34,7 @@ civic_inwards_perfection = {
         }
     }
     random_weight = {
-        base = 1000
+        base = 10
     }
     modifier = {
         country_unity_produces_mult = 0.1

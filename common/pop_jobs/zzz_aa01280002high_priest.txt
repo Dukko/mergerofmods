@@ -26,12 +26,7 @@ high_priest = {
             trigger = {
                 exists = owner
                 owner = {
-                    or = {
-                        has_valid_civic = civic_exalted_priesthood
-                        has_valid_civic = civic_imperial_cult
-                        has_valid_civic = civic_divine_council
-                        has_valid_civic = civic_spiritual_democracy
-                    }
+                    has_valid_civic = civic_spiritual_democracy
                 }
             }
             society_research = 2
@@ -56,12 +51,7 @@ high_priest = {
         potential = {
             exists = owner
             owner = {
-                or = {
-                    has_valid_civic = civic_exalted_priesthood
-                    has_valid_civic = civic_imperial_cult
-                    has_valid_civic = civic_divine_council
-                    has_valid_civic = civic_spiritual_democracy
-                }
+                has_valid_civic = civic_spiritual_democracy
             }
         }
         modifier = {
@@ -159,11 +149,6 @@ high_priest = {
                     is_country_type = ai_empire
                 }
             }
-        }
-        modifier = {
-            factor = 1.2
-            is_unemployed = yes
-            is_pop_category = ruler
         }
     }
 }

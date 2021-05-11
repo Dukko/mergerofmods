@@ -35,7 +35,7 @@ building_deployment_post = {
         potential = {
             exists = owner
             owner = {
-                has_civic = civic_machine_assimilator
+                has_valid_civic = civic_machine_assimilator
             }
         }
         modifier = {

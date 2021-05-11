@@ -2,10 +2,11 @@ gov_anarchy_communism = {
     ruler_title = RT_GENERALISSIMO
     ruler_title_female = RT_GENERALISSIMO
     possible = {
-        or = {
+        OR = {
             has_authority = auth_dictatorial
-            has_authority = auth_imperial
             has_authority = auth_oligarchic
+            has_authority = auth_democratic_dictatorship
+            has_authority = auth_dem_dict_dummy
         }
         has_ethic = ethic_fanatic_socialism
         OR = {
@@ -33,7 +34,7 @@ gov_anarchy_communism = {
         base = 5000
         modifier = {
             factor = 100
-            or = {
+            OR = {
                 has_valid_civic = civic_military_dictatorship
                 has_ethic = ethic_fanatic_militarist
             }

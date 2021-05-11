@@ -265,6 +265,19 @@ district_industrial = {
             job_alloy_drone_add = -1
         }
     }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                OR = {
+                    has_valid_civic = civic_consumerism
+                }
+            }
+        }
+        modifier = {
+            job_artisan_add = 1
+        }
+    }
     triggered_desc = {
         trigger = {
             exists = owner

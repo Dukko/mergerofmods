@@ -21,7 +21,5 @@ civic_cutthroat_politics = {
     modifier = {
         edicts_cost_mult = -0.2
         intel_decryption_add = 1
-        leader_skill_levels = 1
     }
-    description = "civic_tooltip_cutthroat_politics_effects"
 }

@@ -1,0 +1,50 @@
+namespace = utopia
+country_event = {
+    id = utopia.3020
+    title = "utopia.3000.name"
+    desc = "utopia.3020.desc"
+    diplomatic_title = BLANK_STRING
+    diplomatic = yes
+    force_open = yes
+    picture_event_data = {
+        portrait = shroud1
+        room = shroud_room
+    }
+    is_triggered_only = yes
+    immediate = {
+        set_country_flag = shroud_diplomacy_engaged
+    }
+    after = {
+        hidden_effect = {
+            remove_country_flag = shroud_diplomacy_engaged
+            set_timed_country_flag = {
+                flag = positive_shroud_outcome
+                days = 1800
+            }
+        }
+    }
+    option = {
+        name = "exit.shroud"
+        create_fleet = {
+            name = "NAME_Psionic_Avatar"
+            settings = {
+                can_upgrade = no
+                can_change_composition = no
+                can_change_leader = no
+                uses_naval_capacity = no
+                spawn_debris = no
+            }
+            effect = {
+                set_owner = root
+                create_ship = {
+                    name = "NAME_Avatar"
+                    design = "NAME_Shroud_Avatar"
+                    prefix = no
+                    upgradable = no
+                }
+                set_location = root.capital_scope
+            }
+        }
+        default_hide_option = yes
+    }
+}

@@ -1,4 +1,4 @@
-@regen = 0.5
+@regen = 0.13
 strike_craft_component_template = {
     key = "GG_STRIKE_CRAFT"
     size = LARGE
@@ -8,11 +8,7 @@ strike_craft_component_template = {
             alloys = 60
         }
     }
-    prerequisites = {
-        tech_repeatable_nanite_technology_insight
-    }
     power = -60
-    hidden = yes
     count = 10
     regeneration_per_day = @regen
     launch_time = 1
@@ -22,9 +18,7 @@ strike_craft_component_template = {
     }
     cooldown = 8
     range = 20
-    engagement_range = 120
     accuracy = 1
-    tracking = 1
     health = 100
     armor = 50
     shield = 50
@@ -38,10 +32,13 @@ strike_craft_component_template = {
     ship_behavior = "bombers_behavior"
     weapon_type = instant
     projectile_gfx = "strike_craft_laser_3"
-    component_set = "AI_STRIKE_CRAFT_1"
-    icon = "GFX_ship_part_strike_craft_scout_1"
+    prerequisites = {
+        "tech_graygoo_nanite_strike_craft"
+    }
+    component_set = "NANITE_STRIKE_CRAFT_1"
+    icon = "GFX_ship_part_nanitetw_strike_craft_fighter"
     icon_frame = 1
     tags = {
-        weapon_type_strike_craft
+        weapon_type_nanite
     }
 }

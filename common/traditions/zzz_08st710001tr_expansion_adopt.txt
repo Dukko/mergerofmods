@@ -54,7 +54,7 @@ tr_expansion_adopt = {
         factor = 10
         modifier = {
             factor = 5
-            years_passed < 25
+            years_passed < 10
         }
         modifier = {
             factor = 0
@@ -74,7 +74,7 @@ tr_expansion_adopt = {
                 AND = {
                     has_tradition = tr_domination_adopt
                     NOT = {
-                        has_tradition = tr_simple_domination_finish
+                        has_tradition = tr_domination_finish
                     }
                 }
                 AND = {
@@ -84,45 +84,15 @@ tr_expansion_adopt = {
                     }
                 }
                 AND = {
-                    has_tradition = tr_simple_prosperity_adopt
+                    has_tradition = tr_prosperity_adopt
                     NOT = {
-                        has_tradition = tr_simple_prosperity_finish
+                        has_tradition = tr_prosperity_finish
                     }
                 }
                 AND = {
                     has_tradition = tr_supremacy_adopt
                     NOT = {
                         has_tradition = tr_supremacy_finish
-                    }
-                }
-                AND = {
-                    has_tradition = tr_statecraft_adopt
-                    NOT = {
-                        has_tradition = tr_statecraft_finish
-                    }
-                }
-                AND = {
-                    has_tradition = tr_specialist_adopt
-                    NOT = {
-                        has_tradition = tr_specialist_finish
-                    }
-                }
-                AND = {
-                    has_tradition = tr_industry_adopt
-                    NOT = {
-                        has_tradition = tr_industry_finish
-                    }
-                }
-                AND = {
-                    has_tradition = tr_navy_adopt
-                    NOT = {
-                        has_tradition = tr_navy_finish
-                    }
-                }
-                AND = {
-                    has_tradition = tr_research_adopt
-                    NOT = {
-                        has_tradition = tr_research_finish
                     }
                 }
             }

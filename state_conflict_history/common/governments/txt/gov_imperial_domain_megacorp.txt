@@ -1,0 +1,14 @@
+gov_imperial_domain_megacorp = {
+    ruler_title = RT_IMP_EXECUTIVE
+    heir_title = HT_IMP_VICE_EXECUTIVE
+    use_regnal_names = yes
+    dynastic_last_names = yes
+    should_force_rename = yes
+    possible = {
+        has_valid_civic = civic_galactic_sovereign_megacorp
+        is_gestalt = no
+    }
+    weight = {
+        base = 100000
+    }
+}

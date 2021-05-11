@@ -23,6 +23,9 @@ utility_component_template = {
     component_set = "power_core"
     size_restriction = {
         titan
+        graygoo_mothership
+        scavenger_bot
+        dreadnought
     }
     upgrades_to = "TITAN_GRAVITON_REACTOR"
     ai_weight = {

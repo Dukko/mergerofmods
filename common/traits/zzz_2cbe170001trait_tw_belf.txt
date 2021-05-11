@@ -1,0 +1,42 @@
+trait_tw_belf = {
+    cost = 4
+    opposites = {
+        "trait_hive_mind"
+        "trait_fleeting"
+        "trait_repugnant"
+        "trait_nerve_stapled"
+        "trait_quarrelsome"
+        "trait_enigmatic_intelligence_poor"
+        "trait_nonadaptive"
+        "trait_wasteful"
+        "trait_decadent"
+        "trait_deviants"
+        "trait_solitary"
+        "trait_sedentary"
+        "trait_weak"
+        "trait_slow_breeders"
+        "trait_slow_learners"
+    }
+    species_potential_add = {
+        species_portrait = elven_02
+    }
+    leader_age_min = 100
+    leader_age_max = 10000
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    randomized = no
+    modification = no
+    immortal_leaders = yes
+    modifier = {
+        species_leader_exp_gain = -0.25
+        pop_growth_speed = -0.15
+    }
+    slave_cost = {
+        energy = 2500
+    }
+    potential_crossbreeding_chance = 0
+    ai_weight = {
+        weight = 0
+    }
+}
