@@ -25,12 +25,9 @@ country_event = {
             has_country_flag = chosen_one_ruler_event
         }
         OR = {
-            has_authority = auth_democratic
+            is_democracy = yes
             has_authority = auth_oligarchic
-            has_authority = auth_dictatorial
-            has_authority = auth_strict_democratic
-            has_authority = auth_democratic_dictatorship
-            has_authority = auth_dem_dict_dummy
+            is_dictatorial = yes
         }
         any_owned_leader = {
             OR = {

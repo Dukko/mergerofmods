@@ -41,7 +41,7 @@ country_event = {
             solar_system = {
                 exists = owner
             }
-            any_owned_pop = {
+            any_owned_species = {
                 is_same_species = event_target:mardak_vol_species
             }
         }
@@ -65,10 +65,12 @@ country_event = {
             civics = {
                 civic = civic_fanatic_purifiers
                 civic = civic_warrior_culture
+                civic = random
             }
             ethos = {
                 ethic = ethic_fanatic_xenophobe
                 ethic = ethic_fanatic_militarist
+                ethic = random
             }
             flag = {
                 icon = {

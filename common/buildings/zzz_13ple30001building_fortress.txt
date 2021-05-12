@@ -12,9 +12,18 @@ building_fortress = {
         owner = {
             is_ai = yes
         }
+        OR = {
+            AND = {
         num_buildings = {
             type = building_fortress
             value > 1
+        }
+                free_building_slots = 0
+                owner = {
+                    used_naval_capacity_percent < 0.4
+                }
+            }
+            buildings_no_motes = yes
         }
         NOT = {
             owner = {

@@ -46,8 +46,7 @@ diplomatic_stance = {
             modifier = {
                 factor = 0
                 has_ethic = ethic_fanatic_pacifist
-                NOR = {
-                    is_at_war = yes
+                NOT = {
                     any_neighbor_country = {
                         is_rival = root
                     }
@@ -56,8 +55,7 @@ diplomatic_stance = {
             modifier = {
                 factor = 0.5
                 has_ethic = ethic_pacifist
-                NOR = {
-                    is_at_war = yes
+                NOT = {
                     any_neighbor_country = {
                         is_rival = root
                     }
@@ -337,19 +335,9 @@ diplomatic_stance = {
             }
             else = {
             OR = {
-                is_megacorp = yes
-                has_ethic = ethic_capitalism
-                has_ethic = ethic_fanatic_capitalism
-            }
-            }
-            else_if = {
-                limit = {
-                    has_megacorp = yes
+                    has_ethic = ethic_capitalism
+                    has_ethic = ethic_fanatic_capitalism
                 }
-                has_civic = civic_merchant_guilds
-            }
-            else = {
-                has_civic = civic_corporate_dominion
             }
         }
         policy_flags = {

@@ -6,6 +6,7 @@ amaryllian_district_arcology_sanctuary_industry = {
     }
     potential = {
         has_planet_flag = amaryllian_sanctuary_arcology
+        exists = owner
         owner = {
             has_valid_civic = civic_machine_servitor
         }

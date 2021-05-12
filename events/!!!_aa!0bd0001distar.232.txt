@@ -72,8 +72,8 @@ country_event = {
             adjective = "NAME_Ketling"
             ethos = {
                 ethic = ethic_fanatic_materialist
-                ethic = ethic_fanatic_egalitarian
-                ethic = ethic_pacifist
+                ethic = ethic_fanatic_pacifist
+                ethic = ethic_egalitarian
             }
             authority = auth_oligarchic
             civics = {

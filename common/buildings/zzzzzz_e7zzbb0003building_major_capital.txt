@@ -204,8 +204,8 @@ building_major_capital = {
             }
         }
         modifier = {
-            job_commandante_add = 1
             job_administrator_add = 2
+            job_commandante_add = 1
         }
     }
     triggered_planet_modifier = {

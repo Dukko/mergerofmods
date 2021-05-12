@@ -55,11 +55,13 @@ country_event = {
                 civics = {
                     civic = civic_fanatic_purifiers
                     civic = civic_warrior_culture
+                    civic = random
                 }
                 species = last_created_species
                 ethos = {
                     ethic = ethic_fanatic_xenophobe
                     ethic = ethic_fanatic_militarist
+                    ethoic = random
                 }
                 flag = {
                     icon = {

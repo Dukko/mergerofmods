@@ -30,6 +30,7 @@ distantstars_init_00 = {
                     has_megastructure = gateway_ruined
                 }
             }
+        }
         modifier = {
             factor = 0
             any_neighbor_system = {

@@ -211,6 +211,17 @@ district_generator = {
             job_fe_acolyte_generator_add = 1
         }
     }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_tradition = tr_industry_compact_extraction_centers
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
     triggered_desc = {
         trigger = {
             exists = owner
@@ -246,17 +257,6 @@ district_generator = {
         energy = 1
         trigger = {
             always = yes
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                has_tradition = tr_industry_compact_extraction_centers
-            }
-        }
-        modifier = {
-            planet_housing_add = 1
         }
     }
 }

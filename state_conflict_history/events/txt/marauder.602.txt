@@ -45,12 +45,14 @@ country_event = {
             authority = auth_imperial
             civics = {
                 civic = civic_great_khans_legacy
+                civic = random
+                civic = random
             }
             origin = "origin_khan_successor"
             ethos = {
+                ethic = ethic_fanatic_authoritarian
                 ethic = ethic_fanatic_militarist
                 ethic = ethic_xenophobe
-                ethic = ethic_fanatic_authoritarian
             }
             ignore_initial_colony_error = yes
         }
@@ -175,6 +177,7 @@ country_event = {
             create_marauder_successor_fleet = yes
             create_marauder_successor_fleet = yes
             create_marauder_successor_fleet = yes
+            set_name = random
         }
         every_country = {
             limit = {

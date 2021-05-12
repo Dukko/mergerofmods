@@ -186,6 +186,17 @@ district_farming_uncapped = {
             planet_housing_add = 1
         }
     }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_tradition = tr_industry_compact_extraction_centers
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
     triggered_desc = {
         trigger = {
             exists = owner
@@ -218,17 +229,6 @@ district_farming_uncapped = {
         food = 1
         trigger = {
             always = yes
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                has_tradition = tr_industry_compact_extraction_centers
-            }
-        }
-        modifier = {
-            planet_housing_add = 1
         }
     }
 }
