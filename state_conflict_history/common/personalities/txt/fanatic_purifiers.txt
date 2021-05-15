@@ -35,7 +35,10 @@ fanatic_purifiers = {
         attack_neutrals = yes
     }
     allow = {
-        is_country_type = default
+        OR = {
+            is_country_type = default
+            is_country_type = ark
+        }
         OR = {
             AND = {
                 NOT = {
@@ -51,6 +54,6 @@ fanatic_purifiers = {
         }
     }
     weight_modifier = {
-        weight = 10000
+        weight = 1000
     }
 }

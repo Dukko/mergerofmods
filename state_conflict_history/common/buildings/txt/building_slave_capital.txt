@@ -29,7 +29,7 @@ building_slave_capital = {
         job_slave_overseer_add = 2
         planet_stability_add = 5
         planet_max_buildings_add = 5
-        planet_max_branch_office_buildings_add = 2
+        planet_max_branch_office_buildings_add = 1
     }
     triggered_planet_modifier = {
         potential = {

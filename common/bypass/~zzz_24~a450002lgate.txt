@@ -44,17 +44,9 @@ lgate = {
     country_can_use = {
         custom_tooltip = {
             fail_text = LGATE_COUNTRY_CANNOT_USE
-            exists = this
-            is_scope_type = country
             OR = {
                 has_global_flag = lgates_activated_globally
                 has_country_flag = lgates_activated
-                AND = {
-                    exists = owner
-                    owner = {
-                        has_country_flag = lgates_activated
-                    }
-                }
             }
             NOR = {
                 is_country_type = amoeba

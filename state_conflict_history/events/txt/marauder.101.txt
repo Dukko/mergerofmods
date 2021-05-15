@@ -434,6 +434,49 @@ country_event = {
         }
     }
     option = {
+        name = marauder.101.e_mod
+        trigger = {
+            event_target:raiding_marauder = {
+                has_country_flag = marauder_1
+            }
+        }
+        response_text = marauder.101.1.a.response
+        allow = {
+            determine_alloy_tribute = yes
+        }
+        tribute_cost_alloy = yes
+        hidden_effect = {
+            remove_country_flag = raid_target_of@event_target:raiding_marauder
+            remove_country_flag = under_marauder_attack
+            remove_country_flag = marauder_tribute_1@event_target:raiding_marauder
+            remove_country_flag = marauder_tribute_2@event_target:raiding_marauder
+            remove_country_flag = marauder_tribute_3@event_target:raiding_marauder
+            remove_country_flag = marauder_tribute_4@event_target:raiding_marauder
+            remove_country_flag = marauder_tribute_5@event_target:raiding_marauder
+            remove_country_flag = marauder_tribute_6@event_target:raiding_marauder
+            remove_relation_flag = {
+                who = event_target:raiding_marauder
+                flag = current_target
+            }
+            event_target:raiding_marauder = {
+                remove_country_flag = raid_ongoing
+                set_timed_country_flag = {
+                    flag = raid_cooldown
+                    days = @raidcooldown
+                }
+            }
+            event_target:marauder_raiding_country = {
+                random_owned_fleet = {
+                    limit = {
+                        has_fleet_flag = raiding_fleet
+                    }
+                    delete_fleet = this
+                }
+                destroy_country = yes
+            }
+        }
+    }
+    option = {
         name = marauder.101.d
         trigger = {
             event_target:raiding_marauder = {
@@ -573,6 +616,49 @@ country_event = {
         }
     }
     option = {
+        name = marauder.101.e_mod
+        trigger = {
+            event_target:raiding_marauder = {
+                has_country_flag = marauder_2
+            }
+        }
+        response_text = marauder.101.2.a.response
+        allow = {
+            determine_alloy_tribute = yes
+        }
+        tribute_cost_alloy = yes
+        hidden_effect = {
+            remove_country_flag = raid_target_of@event_target:raiding_marauder
+            remove_country_flag = under_marauder_attack
+            remove_country_flag = marauder_tribute_1@event_target:raiding_marauder
+            remove_country_flag = marauder_tribute_2@event_target:raiding_marauder
+            remove_country_flag = marauder_tribute_3@event_target:raiding_marauder
+            remove_country_flag = marauder_tribute_4@event_target:raiding_marauder
+            remove_country_flag = marauder_tribute_5@event_target:raiding_marauder
+            remove_country_flag = marauder_tribute_6@event_target:raiding_marauder
+            remove_relation_flag = {
+                who = event_target:raiding_marauder
+                flag = current_target
+            }
+            event_target:raiding_marauder = {
+                remove_country_flag = raid_ongoing
+                set_timed_country_flag = {
+                    flag = raid_cooldown
+                    days = @raidcooldown
+                }
+            }
+            event_target:marauder_raiding_country = {
+                random_owned_fleet = {
+                    limit = {
+                        has_fleet_flag = raiding_fleet
+                    }
+                    delete_fleet = this
+                }
+                destroy_country = yes
+            }
+        }
+    }
+    option = {
         name = marauder.101.d
         trigger = {
             event_target:raiding_marauder = {
@@ -680,6 +766,49 @@ country_event = {
             determine_food_tribute = yes
         }
         tribute_cost_food = yes
+        hidden_effect = {
+            remove_country_flag = raid_target_of@event_target:raiding_marauder
+            remove_country_flag = under_marauder_attack
+            remove_country_flag = marauder_tribute_1@event_target:raiding_marauder
+            remove_country_flag = marauder_tribute_2@event_target:raiding_marauder
+            remove_country_flag = marauder_tribute_3@event_target:raiding_marauder
+            remove_country_flag = marauder_tribute_4@event_target:raiding_marauder
+            remove_country_flag = marauder_tribute_5@event_target:raiding_marauder
+            remove_country_flag = marauder_tribute_6@event_target:raiding_marauder
+            remove_relation_flag = {
+                who = event_target:raiding_marauder
+                flag = current_target
+            }
+            event_target:raiding_marauder = {
+                remove_country_flag = raid_ongoing
+                set_timed_country_flag = {
+                    flag = raid_cooldown
+                    days = @raidcooldown
+                }
+            }
+            event_target:marauder_raiding_country = {
+                random_owned_fleet = {
+                    limit = {
+                        has_fleet_flag = raiding_fleet
+                    }
+                    delete_fleet = this
+                }
+                destroy_country = yes
+            }
+        }
+    }
+    option = {
+        name = marauder.101.e_mod
+        trigger = {
+            event_target:raiding_marauder = {
+                has_country_flag = marauder_3
+            }
+        }
+        response_text = marauder.101.3.a.response
+        allow = {
+            determine_alloy_tribute = yes
+        }
+        tribute_cost_alloy = yes
         hidden_effect = {
             remove_country_flag = raid_target_of@event_target:raiding_marauder
             remove_country_flag = under_marauder_attack

@@ -40,6 +40,6 @@ tech_repeatable_improved_core_system_cap = {
         repeatable = @RepeatRepeatable
     }
     modifier = {
-        country_admin_cap_mult = 0.04
+        country_admin_cap_add = 15
     }
 }

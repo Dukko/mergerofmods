@@ -52,56 +52,68 @@ resolution_galactic_focus_crisis_nanites = {
         base = @resolution_weight_normal
         modifier = {
             factor = 2
-            any_neighbor_country = {
-                is_country_type = gray_goo
-            }
-        }
-        modifier = {
-            factor = 0.75
-            NOT = {
-                any_country = {
-                    is_country_type = gray_goo
-                    galaxy_percentage > 0.1
+            OR = {
+                has_country_flag = nanite_bomb_affected
+                event_target:graygoo_country = {
+                    num_killed_ships = {
+                        target = prev
+                        value > 15
+                    }
+                }
+                event_target:graygoo_country = {
+                    any_owned_fleet = {
+                        exists = solar_system
+                        solar_system = {
+                            NOT = {
+                                has_star_flag = lcluster
+                            }
+                            any_neighbor_system = {
+                                has_owner = yes
+                                is_owned_by = prevprevprevprev
+                            }
+                        }
+                    }
                 }
             }
         }
         modifier = {
+            factor = 0.75
+            event_target:graygoo_country = {
+                fleet_power <= 300000
+            }
+        }
+        modifier = {
             factor = 1.1
-            any_country = {
-                is_country_type = gray_goo
-                galaxy_percentage > 0.1
-                galaxy_percentage <= 0.2
+            event_target:graygoo_country = {
+                fleet_power > 300000
+                fleet_power <= 500000
             }
         }
         modifier = {
             factor = 1.5
-            any_country = {
-                is_country_type = gray_goo
-                galaxy_percentage > 0.2
-                galaxy_percentage <= 0.3
+            event_target:graygoo_country = {
+                fleet_power > 500000
+                fleet_power <= 750000
             }
         }
         modifier = {
             factor = 2
-            any_country = {
-                is_country_type = gray_goo
-                galaxy_percentage > 0.3
-                galaxy_percentage <= 0.4
+            event_target:graygoo_country = {
+                fleet_power > 750000
+                fleet_power <= 1100000
             }
         }
         modifier = {
             factor = 3
-            any_country = {
-                is_country_type = gray_goo
-                galaxy_percentage > 0.4
-                galaxy_percentage <= 0.5
+            event_target:graygoo_country = {
+                fleet_power > 1100000
+                fleet_power <= 1600000
             }
         }
         modifier = {
             factor = 10
-            any_country = {
-                is_country_type = gray_goo
-                galaxy_percentage > 0.5
+            event_target:graygoo_country = {
+                fleet_power > 1600000
             }
         }
         modifier = {
@@ -119,9 +131,27 @@ resolution_galactic_focus_crisis_nanites = {
         modifier = {
             factor = 0.5
             is_xenophobe = yes
-            NOT = {
-                any_neighbor_country = {
-                    is_country_type = gray_goo
+            NOR = {
+                has_country_flag = nanite_bomb_affected
+                event_target:graygoo_country = {
+                    num_killed_ships = {
+                        target = prev
+                        value > 15
+                    }
+                }
+                event_target:graygoo_country = {
+                    any_owned_fleet = {
+                        exists = solar_system
+                        solar_system = {
+                            NOT = {
+                                has_star_flag = lcluster
+                            }
+                            any_neighbor_system = {
+                                has_owner = yes
+                                is_owned_by = prevprevprevprev
+                            }
+                        }
+                    }
                 }
             }
         }

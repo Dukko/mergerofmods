@@ -1,6 +1,20 @@
 living_standard_stratified = {
     token = living_standard_stratified
     name = living_standard_stratified
+    potential = {
+        exists = from
+        from = {
+            is_gestalt = no
+            NOT = {
+                has_valid_civic = civic_shared_burden
+            }
+        }
+        NOR = {
+            has_trait = trait_hive_mind
+            has_trait = trait_machine_unit
+            is_shackled_robot_species_rights = yes
+        }
+    }
     triggered_pop_modifier = {
         potential = {
             NAND = {
@@ -38,20 +52,6 @@ living_standard_stratified = {
         pop_cat_slave_happiness = -0.1
         pop_cat_worker_political_power = -0.5
         pop_cat_slave_political_power = -0.5
-    }
-    potential = {
-        exists = from
-        from = {
-            is_gestalt = no
-            NOT = {
-                has_valid_civic = civic_shared_burden
-            }
-        }
-        NOR = {
-            has_trait = trait_hive_mind
-            has_trait = trait_machine_unit
-            is_shackled_robot_species_rights = yes
-        }
     }
     allow = {
         hidden_trigger = {
@@ -124,7 +124,7 @@ living_standard_stratified = {
         }
     }
     ai_will_do = {
-        factor = 500
+        factor = 5
         modifier = {
             factor = 0.2
             from = {

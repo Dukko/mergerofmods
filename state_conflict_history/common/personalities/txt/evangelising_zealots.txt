@@ -38,7 +38,10 @@ evangelising_zealots = {
         crisis_fighter = yes
     }
     allow = {
-        is_country_type = default
+        OR = {
+            is_country_type = default
+            is_country_type = ark
+        }
         NOT = {
             has_ethic = "ethic_pacifist"
             has_ethic = "ethic_fanatic_pacifist"

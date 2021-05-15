@@ -1,0 +1,41 @@
+@RepeatRepeatable = 0.5
+@infiniteRepeatableTechBaseCost = 50000
+@infiniteRepeatableTechLevelCost = 5000
+tech_repeatable_improved_leader_life_span = {
+    area = society
+    cost = @infiniteRepeatableTechBaseCost
+    cost_per_level = @infiniteRepeatableTechLevelCost
+    tier = @repeatableTechTier
+    category = {
+        biology
+    }
+    levels = -1
+    prerequisites = {
+        "tech_vitality_boosters"
+    }
+    weight = @repeatableTechWeight
+    weight_modifier = {
+        factor = @repatableTechFactor
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 1
+    }
+    weight_groups = {
+        repeatable
+    }
+    mod_weight_if_group_picked = {
+        repeatable = @RepeatRepeatable
+    }
+    modifier = {
+        leader_age = 5
+    }
+}

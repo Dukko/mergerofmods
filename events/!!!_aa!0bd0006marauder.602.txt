@@ -177,6 +177,8 @@ country_event = {
             create_marauder_successor_fleet = yes
             create_marauder_successor_fleet = yes
             create_marauder_successor_fleet = yes
+            create_marauder_successor_fleet = yes
+            create_marauder_successor_fleet = yes
             set_name = random
         }
         every_country = {

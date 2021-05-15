@@ -913,6 +913,9 @@ room_selector = {
     "crystalline_room" = {
       always = yes
     }
+        "runic_room" = {
+            always = yes
+        }
     "organic_room" = {
       always = yes
     }
@@ -934,6 +937,9 @@ room_selector = {
     "runic_room" = {
       always = yes
     }
+        "tree_dwellers_room" = {
+            always = yes
+        }
     "scrappy_room" = {
       always = yes
     }
@@ -943,6 +949,30 @@ room_selector = {
     "ship_room" = {
       always = yes
     }
+        "children_of_dunes_room" = {
+            always = yes
+        }
+        "subterranean_room" = {
+            always = yes
+        }
+        "mariners_room" = {
+            always = yes
+        }
+        "postglacial_room" = {
+            always = yes
+        }
+        "scavengers_room" = {
+            always = yes
+        }
+        "twilight_denizens_room" = {
+            always = yes
+        }
+        "awakened_room" = {
+            always = yes
+        }
+        "machine_room" = {
+            always = yes
+        }
     "personality_fallen_empire_blue_room" = {
       always = yes
     }

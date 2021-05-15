@@ -1,6 +1,23 @@
 living_standard_normal = {
     token = living_standard_normal
     name = living_standard_normal
+    potential = {
+        exists = from
+        from = {
+            is_gestalt = no
+            NOR = {
+                has_valid_civic = civic_shared_burden
+                has_valid_civic = civic_reeducated_labor
+                has_valid_civic = civic_welfare_state
+                has_ethic = ethic_fanatic_socialism
+            }
+        }
+        NOR = {
+            has_trait = trait_hive_mind
+            has_trait = trait_machine_unit
+            is_shackled_robot_species_rights = yes
+        }
+    }
     triggered_pop_modifier = {
         potential = {
             NAND = {
@@ -28,22 +45,6 @@ living_standard_normal = {
         }
     }
     pop_modifier = {
-    }
-    potential = {
-        exists = from
-        from = {
-            is_gestalt = no
-            NOR = {
-                has_valid_civic = civic_shared_burden
-                has_valid_civic = civic_reeducated_labor
-                has_valid_civic = civic_welfare_state
-            }
-        }
-        NOR = {
-            has_trait = trait_hive_mind
-            has_trait = trait_machine_unit
-            is_shackled_robot_species_rights = yes
-        }
     }
     allow = {
         hidden_trigger = {
@@ -81,7 +82,7 @@ living_standard_normal = {
         }
     }
     ai_will_do = {
-        factor = 100
+        factor = 1
         modifier = {
             factor = 0.5
             from = {

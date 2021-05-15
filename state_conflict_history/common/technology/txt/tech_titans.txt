@@ -42,12 +42,16 @@ tech_titans = {
             }
         }
         modifier = {
-            factor = 1
-            years_passed > 120
+            factor = 2
+            years_passed > 130
         }
         modifier = {
-            factor = 10
-            years_passed > 130
+            factor = 3
+            years_passed > 140
+        }
+        modifier = {
+            factor = 4
+            years_passed > 150
         }
         modifier = {
             factor = 1.25
@@ -62,8 +66,7 @@ tech_titans = {
         }
     }
     ai_weight = {
-        weight = 300
-        factor = 625
+        factor = 100
         modifier = {
             factor = 1.25
             research_leader = {

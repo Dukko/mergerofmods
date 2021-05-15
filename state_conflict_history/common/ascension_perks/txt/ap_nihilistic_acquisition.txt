@@ -1,23 +1,24 @@
 ap_nihilistic_acquisition = {
     potential = {
         host_has_dlc = "Apocalypse"
-        NOT = {
-            has_ascension_perk = ap_nihilistic_acquisition
-        }
-        NOT = {
-            has_valid_civic = civic_barbaric_despoilers
-        }
+        is_raider = no
     }
     on_enabled = {
         custom_tooltip = "allow_raiding"
-        custom_tooltip = "RAID_MORE"
+        hidden_effect = {
+            country_event = {
+                id = relytor_raider.1
+            }
+        }
     }
     possible = {
         OR = {
             is_authoritarian = yes
             is_xenophobe = yes
+            is_militarist = yes
             has_ethic = ethic_gestalt_consciousness
         }
+        is_xenophile = no
     }
     ai_weight = {
         factor = 10

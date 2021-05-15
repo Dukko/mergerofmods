@@ -38,7 +38,10 @@ slaving_despots = {
         crisis_fighter = yes
     }
     allow = {
-        is_country_type = default
+        OR = {
+            is_country_type = default
+            is_country_type = ark
+        }
         has_valid_civic = civic_slaver_guilds
         OR = {
             has_ethic = "ethic_authoritarian"

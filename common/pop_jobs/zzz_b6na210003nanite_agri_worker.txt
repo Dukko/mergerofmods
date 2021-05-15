@@ -74,7 +74,9 @@ nanite_agri_worker = {
             factor = 0.5
             has_trait = trait_lithoid
             owner = {
-                is_lithoid_empire = yes
+                owner_main_species = {
+                    is_lithoid = yes
+                }
                 has_monthly_income = {
                     resource = food
                     value >= 0

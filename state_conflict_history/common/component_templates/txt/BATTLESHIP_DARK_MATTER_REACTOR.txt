@@ -25,7 +25,7 @@ utility_component_template = {
         battleship
         graygoo_interdictor
     }
-    upgrades_to = "BATTLESHIP_GRAVITON_REACTOR"
+    upgrades_to = BATTLESHIP_GRAVITON_REACTOR
     ai_weight = {
         weight = 6
         modifier = {

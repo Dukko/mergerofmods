@@ -4,7 +4,12 @@ living_standard_shared_burden = {
     potential = {
         exists = from
         from = {
-            has_valid_civic = civic_shared_burden
+            is_gestalt = no
+        }
+        NOR = {
+            has_trait = trait_hive_mind
+            has_trait = trait_machine_unit
+            is_shackled_robot_species_rights = yes
         }
     }
     triggered_pop_modifier = {
@@ -77,6 +82,6 @@ living_standard_shared_burden = {
         }
     }
     ai_will_do = {
-        factor = 10000
+        factor = 1
     }
 }

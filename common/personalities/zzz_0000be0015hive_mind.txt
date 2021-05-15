@@ -38,7 +38,10 @@ hive_mind = {
         crisis_fighter = yes
     }
     allow = {
-        is_country_type = default
+        OR = {
+            is_country_type = default
+            is_country_type = ark
+        }
         has_authority = "auth_hive_mind"
         NOR = {
             has_valid_civic = civic_hive_devouring_swarm

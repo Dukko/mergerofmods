@@ -56,11 +56,13 @@ Talking Non-Humanoid Portraits
 Rapid Evolution for 3.x
 PSO: Ringworlds Are 50
 PSO: EPSI x2
+Spaceborne Civs Expanded
 Silfae's Portraits with updated city sets - organics
 Primitive Worlds for 3.x
 LLX's Mods - Compiled Dimorphism (3.0 'Dick')
 Honorary Species
 Extra Fallen Empires
+Another Animated Avali
 Animated Ascellian Portraits (2.2.6 Le Guin +)
 Animated Valbaran Species
 Animated Pardus Species
@@ -149,7 +151,7 @@ Better War Doctrines (Ethics and Civics Alternative)
 Arcane Institue Fix
 Better Terraforming Candidates
 Better Sliders - Mid/End/Victory Game Years and Tech/Tradition cost
-Better Raiding
+Relytor's True Raiding 3.0.*
 Federations Expanded
 Exalted Domination - Vassals and Tributaries [3.0]
 Viable Feudalism and Imperialism - Empire Federation
@@ -193,6 +195,7 @@ Extra Ship Components 3.0 - Overwrites [Actual]
 Hypothetical Stars
 Real Sol Textures
 Real Space 3.8
+Real Space - New Frontiers
 Real Space Nebulae
 Real Machine Worlds (Now v3.0.* Compatible)
 Sol System Expanded (Real Space)
@@ -298,6 +301,7 @@ Longer Greetings Timer (3.0)
 Habitats Capped Dynamic
 Habitat AI colonisation fix
 Golden Galaxy: IBS
+Diverse New Frontiers
 Giga Diversity
 Galactic Market Foundation Tweak
 Galactic Community Expanded Defines

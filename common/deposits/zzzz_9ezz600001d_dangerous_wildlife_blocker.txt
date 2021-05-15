@@ -83,8 +83,15 @@ d_dangerous_wildlife_blocker = {
     drop_weight = {
         weight = @blocker_low
         modifier = {
+            factor = 5
+            has_modifier = "death_world"
+        }
+        modifier = {
             factor = 2
-            has_modifier = "dangerous_wildlife"
+            OR = {
+                has_modifier = "dangerous_wildlife"
+                is_extreme_subclass = yes
+            }
         }
         modifier = {
             factor = 10
@@ -100,6 +107,10 @@ d_dangerous_wildlife_blocker = {
                 type = district_city
                 value < 2
             }
+        }
+        modifier = {
+            factor = 0
+            is_planet_class = pc_sterile
         }
     }
     prerequisites = {

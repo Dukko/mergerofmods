@@ -49,6 +49,10 @@ tech_juggernaut = {
         }
         modifier = {
             factor = 1.25
+            has_technology = "tech_titans"
+        }
+        modifier = {
+            factor = 1.25
             research_leader = {
                 area = engineering
                 has_trait = "leader_trait_expertise_voidcraft"
@@ -64,7 +68,6 @@ tech_juggernaut = {
     }
     ai_weight = {
         factor = 100
-        factor = 625
         modifier = {
             factor = 1.25
             research_leader = {

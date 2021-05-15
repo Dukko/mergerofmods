@@ -46,16 +46,12 @@ tech_droid_workers = {
             has_origin = origin_mechanists
         }
         modifier = {
-            factor = 10
-            has_valid_civic = civic_engineering_cult
-        }
-        modifier = {
-            factor = 1.5
-            has_valid_civic = civic_automated_workforce
-        }
-        modifier = {
             factor = 2
             has_valid_civic = civic_machine_cult
+        }
+        modifier = {
+            factor = 10
+            has_valid_civic = civic_engineering_cult
         }
         modifier = {
             factor = 1.25
@@ -67,8 +63,7 @@ tech_droid_workers = {
         }
     }
     ai_weight = {
-        weight = 100
-        factor = 5
+        weight = 2
         modifier = {
             factor = 2
             OR = {
@@ -86,10 +81,6 @@ tech_droid_workers = {
         modifier = {
             factor = 2
             has_origin = origin_mechanists
-        }
-        modifier = {
-            factor = 1.5
-            has_valid_civic = civic_automated_workforce
         }
         modifier = {
             factor = 1.25

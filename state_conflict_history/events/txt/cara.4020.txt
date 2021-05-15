@@ -42,7 +42,7 @@ country_event = {
             }
             save_event_target_as = caravan_hulk_system
             create_ambient_object = {
-                type = abandoned_ship_2_object
+                type = abandoned_ship_object
                 location = this.star
             }
             last_created_ambient_object = {

@@ -9,6 +9,7 @@ tech_ecological_adaptation = {
         "tech_terrestrial_sculpting"
     }
     weight = @tier3weight2
+    gateway = plague2
     feature_flags = {
         terraform_inhabited
     }
@@ -24,14 +25,8 @@ tech_ecological_adaptation = {
                 has_trait = "leader_trait_expertise_new_worlds"
             }
         }
-        modifier = {
-            factor = 2
-            has_valid_civic = civic_reclamation
-        }
     }
     ai_weight = {
-        factor = 10000
-        factor = 25
         modifier = {
             factor = 1.25
             research_leader = {

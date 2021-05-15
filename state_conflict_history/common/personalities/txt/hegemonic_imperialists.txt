@@ -38,7 +38,9 @@ hegemonic_imperialists = {
         crisis_fighter = yes
     }
     allow = {
+        OR = {
         is_country_type = default
+            is_country_type = ark
         NOR = {
             has_ethic = "ethic_pacifist"
             has_ethic = "ethic_fanatic_pacifist"

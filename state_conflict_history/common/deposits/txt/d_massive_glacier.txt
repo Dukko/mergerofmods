@@ -1,0 +1,116 @@
+@blocker_high = 10
+d_massive_glacier = {
+    time = 180
+    is_for_colonizeable = yes
+    category = deposit_cat_blockers
+    resources = {
+        category = deposit_blockers
+        cost = {
+            energy = 500
+        }
+    }
+    potential = {
+        OR = {
+            is_cold = yes
+            is_planet_class = pc_tidallylocked
+            has_modifier = "boreal_world"
+        }
+    }
+    planet_modifier = {
+        planet_max_districts_add = -1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_keepers_harmony
+            }
+        }
+        modifier = {
+            planet_amenities_add = 3
+            planet_housing_add = 1
+            job_druid_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_terraforming
+            }
+        }
+        modifier = {
+            planet_housing_add = 2
+            job_geoengineer_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_environmentalist
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+            job_miner_add = 1
+        }
+    }
+    on_cleared = {
+        if = {
+            limit = {
+                exists = owner
+                owner = {
+                    has_valid_civic = civic_terraforming
+                }
+            }
+            owner = {
+                add_resource = {
+                    minerals = 100
+                }
+            }
+        }
+    }
+    all_blocker_swap_types = yes
+    drop_weight = {
+        weight = @blocker_high
+        modifier = {
+            factor = 2
+            OR = {
+                is_planet_class = pc_alpine
+                is_planet_class = pc_arctic
+            }
+        }
+        modifier = {
+            factor = 3
+            OR = {
+                has_modifier = "glacial_world"
+                has_modifier = "ice_world"
+            }
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                has_modifier = "melting_world"
+                has_modifier = "geothermal_world"
+            }
+        }
+        modifier = {
+            factor = 0.5
+            OR = {
+                has_modifier = "boreal_world"
+                is_planet_class = pc_tidallylocked
+            }
+        }
+        modifier = {
+            factor = 0
+            num_free_districts = {
+                type = district_city
+                value < 2
+            }
+        }
+    }
+    prerequisites = {
+        "tech_massive_glacier"
+    }
+}
