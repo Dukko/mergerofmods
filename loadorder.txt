@@ -301,6 +301,7 @@ Longer Greetings Timer (3.0)
 Habitats Capped Dynamic
 Habitat AI colonisation fix
 Golden Galaxy: IBS
+PD-RS:NF Compatibility Patch
 Diverse New Frontiers
 Giga Diversity
 Galactic Market Foundation Tweak

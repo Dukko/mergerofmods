@@ -1,0 +1,71 @@
+@low = 4
+@planet_type_bonus = 1.5
+d_geothermal_vent = {
+    is_for_colonizeable = yes
+    use_for_min_max_adjustments = yes
+    category = deposit_cat_energy
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+    terraforming_swap_types = {
+        d_tempestous_mountain
+        d_underwater_vent
+    }
+    planet_modifier = {
+        district_generator_max = 3
+    }
+    potential = {
+        OR = {
+            is_planet_class = pc_arctic
+            is_planet_class = pc_tundra
+            is_planet_class = pc_rogue
+            is_planet_class = pc_lichen
+            is_planet_class = pc_eyeball
+            is_planet_class = pc_glacio
+            is_planet_class = pc_lanthanide
+            is_planet_class = pc_savannah
+            is_planet_class = pc_desert
+            is_planet_class = pc_salt
+            is_planet_class = pc_aquifer
+            is_planet_class = pc_coral
+            is_planet_class = pc_storm
+            is_planet_class = pc_arid
+            is_planet_class = pc_outback
+            is_planet_class = pc_steppe
+            is_planet_class = pc_prairie
+            is_planet_class = pc_veld
+            is_planet_class = pc_semiarid
+            is_planet_class = pc_med
+            is_planet_class = pc_sandsea
+            is_planet_class = pc_oasis
+            is_planet_class = pc_swamp
+            is_planet_class = pc_mud
+            is_planet_class = pc_frozen_desert
+            is_planet_class = pc_mushroom
+            is_planet_class = pc_graveyard
+            is_planet_class = pc_geothermal
+            is_planet_class = pc_karst
+            is_planet_class = pc_primal
+            is_planet_class = pc_wetswamp
+            is_planet_class_pc_hothouse = yes
+            is_planet_class_pc_desolate = yes
+            is_planet_class_pc_irradiated_marginal = yes
+            is_planet_class = pc_tidallylocked
+            is_planet_class = pc_sterile
+        }
+    }
+    drop_weight = {
+        weight = @low
+        modifier = {
+            factor = @planet_type_bonus
+            is_dry = yes
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_modifier = "cryokarst_world"
+                has_modifier = "ice_world"
+                has_modifier = "ocean_tidally_locked"
+            }
+        }
+    }
+}

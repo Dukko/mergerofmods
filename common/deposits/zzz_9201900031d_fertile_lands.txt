@@ -1,0 +1,64 @@
+@med = 8
+@planet_type_bonus = 1.5
+d_fertile_lands = {
+    is_for_colonizeable = yes
+    use_for_min_max_adjustments = yes
+    category = deposit_cat_food
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+    terraforming_swap_types = {
+        d_fungal_caves
+        d_lush_jungle
+        d_great_river
+        d_kelp_forests
+        d_huge_tree
+    }
+    planet_modifier = {
+        district_farming_max = 2
+    }
+    potential = {
+        OR = {
+            is_planet_class = pc_savannah
+            is_planet_class = pc_continental
+            is_planet_class = pc_gaia
+            is_planet_class = pc_pdshroud
+            is_planet_class = pc_arid
+            is_planet_class = pc_outback
+            is_planet_class = pc_cascadian
+            is_planet_class = pc_steppe
+            is_planet_class = pc_prairie
+            is_planet_class = pc_veld
+            is_planet_class = pc_semiarid
+            is_planet_class = pc_tidallylocked
+            is_planet_class = pc_supercon
+            is_planet_class = pc_floating
+            is_planet_class = pc_crystal
+            is_planet_class = pc_technoorganic
+            is_planet_class = pc_ammonia
+            is_planet_class = pc_sulfur
+            is_planet_class = pc_acid
+            is_planet_class = pc_methane
+            is_planet_class = pc_graveyard
+            is_planet_class = pc_retinal
+            is_planet_class = pc_forest
+            is_planet_class = pc_lake
+            is_planet_class = pc_tepid
+            is_planet_class = pc_megaflora
+            is_planet_class = pc_megaflorahive
+            is_planet_class = pc_megafloratol
+            has_modifier = "arctic_tidally_locked"
+            is_planet_class_pc_marginal_warm = yes
+        }
+    }
+    drop_weight = {
+        weight = @med
+        modifier = {
+            factor = @planet_type_bonus
+            is_wet = yes
+        }
+        modifier = {
+            factor = @planet_type_bonus
+            is_pd_exotic = yes
+        }
+    }
+}

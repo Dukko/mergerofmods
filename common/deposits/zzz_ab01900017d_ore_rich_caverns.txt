@@ -1,0 +1,97 @@
+@med = 8
+@planet_type_bonus = 1.5
+d_ore_rich_caverns = {
+    is_for_colonizeable = yes
+    use_for_min_max_adjustments = yes
+    category = deposit_cat_minerals
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+    terraforming_swap_types = {
+        d_prosperous_mesa
+        d_submerged_caves
+    }
+    planet_modifier = {
+        district_mining_max = 2
+    }
+    potential = {
+        OR = {
+            is_planet_class = pc_ocean
+            is_planet_class = pc_alpine
+            is_planet_class = pc_highland
+            is_planet_class = pc_duneforest
+            is_planet_class = pc_arctic
+            is_planet_class = pc_arid
+            is_planet_class = pc_outback
+            is_planet_class = pc_tundra
+            is_planet_class = pc_rogue
+            is_planet_class = pc_lichen
+            is_planet_class = pc_eyeball
+            is_planet_class = pc_glacio
+            is_planet_class = pc_lanthanide
+            is_planet_class = pc_nuked
+            is_planet_class = pc_irradiated
+            is_planet_class = pc_gaia
+            is_planet_class = pc_pdshroud
+            is_planet_class = pc_relic
+            is_planet_class = pc_milarc_relic
+            is_planet_class = pc_desertislands
+            is_planet_class = pc_mangrove
+            is_planet_class = pc_wetswamp
+            is_planet_class = pc_biolumen
+            is_planet_class = pc_swamp
+            is_planet_class = pc_mud
+            is_planet_class = pc_frozen_desert
+            is_planet_class = pc_glacial
+            is_planet_class = pc_hadesert
+            is_planet_class = pc_boreal
+            is_planet_class = pc_snow
+            is_planet_class = pc_mushroom
+            is_planet_class = pc_ammonia
+            is_planet_class = pc_sulfur
+            is_planet_class = pc_acid
+            is_planet_class = pc_methane
+            is_planet_class = pc_graveyard
+            is_planet_class = pc_floating
+            is_planet_class = pc_crystal
+            is_planet_class = pc_technoorganic
+            is_planet_class = pc_antarctic
+            is_planet_class = pc_aeolian
+            is_planet_class = pc_geothermal
+            is_planet_class = pc_subarctic
+            is_planet_class = pc_karst
+            is_planet_class = pc_ash
+            is_planet_class = pc_storm
+            is_planet_class_pc_hothouse = yes
+            is_planet_class_pc_desolate = yes
+            is_planet_class_pc_primordial = yes
+            is_planet_class_pc_irradiated_marginal = yes
+            is_planet_class = pc_tidallylocked
+            is_planet_class = pc_sterile
+            has_modifier = "underground_world"
+        }
+    }
+    drop_weight = {
+        weight = @med
+        modifier = {
+            factor = @planet_type_bonus
+            is_cold = yes
+        }
+        modifier = {
+            factor = @planet_type_bonus
+            is_pd_exotic = yes
+        }
+        modifier = {
+            factor = 5
+            has_modifier = "underground_world"
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_modifier = "panthalassic_world"
+                has_modifier = "ocean_tidally_locked"
+                has_modifier = "cryokarst_world"
+                has_modifier = "ice_world"
+            }
+        }
+    }
+}

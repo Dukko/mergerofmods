@@ -1,0 +1,28 @@
+@high = 16
+@planet_type_bonus = 1.5
+d_coral_deposit = {
+    is_for_colonizeable = yes
+    use_for_min_max_adjustments = yes
+    category = deposit_cat_minerals
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+    terraforming_swap_types = {
+        d_mineral_fields
+        d_mineral_striations
+        d_veiny_cliffs
+    }
+    planet_modifier = {
+        district_mining_max = 1
+    }
+    potential = {
+        is_planet_class = pc_aquatic
+        has_modifier = "panthalassic_world"
+    }
+    drop_weight = {
+        weight = @high
+        modifier = {
+            factor = @planet_type_bonus
+            is_planet_class = pc_aquatic
+        }
+    }
+}

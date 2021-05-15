@@ -1,0 +1,46 @@
+@low = 4
+@planet_type_bonus = 1.5
+d_fungal_forest = {
+    is_for_colonizeable = yes
+    use_for_min_max_adjustments = yes
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+    terraforming_swap_types = {
+        d_black_soil
+        d_teeming_reef
+        d_marvelous_oasis
+        d_tropical_island
+        d_hydrocarbon_lakes
+        d_ammonia_seas
+    }
+    category = deposit_cat_food
+    planet_modifier = {
+        district_farming_max = 3
+    }
+    potential = {
+        OR = {
+            is_cold = yes
+            is_planet_class = pc_storm
+            has_modifier = "fungal_world"
+            is_planet_class_pc_marginal_cold = yes
+        }
+    }
+    drop_weight = {
+        weight = @low
+        modifier = {
+            factor = @planet_type_bonus
+            OR = {
+                is_wet = yes
+                is_planet_class = pc_karst
+            }
+        }
+        modifier = {
+            factor = 0
+            has_modifier = "cryokarst_world"
+        }
+        modifier = {
+            factor = 0
+            has_modifier = "ice_world"
+        }
+    }
+}
