@@ -12,6 +12,7 @@ utility_component_template = {
     class_restriction = {
         shipclass_starbase
     }
+    upgrades_to = "STARBASE_NHSC_DARK_MATTER_CORE_2"
     size_restriction = {
         starbase_outpost
         starbase_starport

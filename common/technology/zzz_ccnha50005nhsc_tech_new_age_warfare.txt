@@ -1,7 +1,6 @@
 @tier_core = 300
 nhsc_tech_new_age_warfare = {
     area = society
-    icon = tech_nanite
     category = {
         military_theory
     }

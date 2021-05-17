@@ -1,0 +1,100 @@
+namespace = exalted_subjects
+country_event = {
+    id = exalted_subjects.8
+    title = exalted_subjects.5.name
+    desc = exalted_subjects.5.desc
+    picture = GFX_evt_arguing_senate
+    show_sound = event_conversation
+    location = from
+    is_triggered_only = yes
+    trigger = {
+        exists = FROM
+        FROM = {
+            NOT = {
+                has_country_flag = exalted_advanced_vassal_offered
+            }
+            is_gestalt = yes
+            is_hive_empire = yes
+        }
+        is_overlord_to = FROM
+    }
+    immediate = {
+        log = "exalted_subjects.8: [This.GetName] deciding subjugation of [From.GetName]"
+        FROM = {
+            set_country_flag = exalted_advanced_vassal_offered
+        }
+    }
+    option = {
+        name = SUBJECT_exalted_subject_pet
+        custom_tooltip = choice_exalted_subject_pet_tooltip
+        trigger = {
+            OR = {
+                has_civic = civic_feudal_realm
+                has_authority = auth_machine_intelligence
+                has_ethic = ethic_authoritarian
+                has_ethic = ethic_fanatic_authoritarian
+                has_ethic = ethic_militarist
+                has_ethic = ethic_fanatic_militarist
+                has_ethic = ethic_spiritualist
+                has_ethic = ethic_fanatic_spiritualist
+                has_ethic = ethic_xenophobe
+                has_ethic = ethic_fanatic_xenophobe
+            }
+        }
+        hidden_effect = {
+            log = "exalted_subjects.8: [This.GetName] chose to make [From.GetName] a Pet"
+            FROM = {
+                set_subject_of = {
+                    who = PREV
+                    subject_type = exalted_subject_pet
+                }
+                country_event = {
+                    id = exalted_subjects.17
+                }
+            }
+        }
+    }
+    option = {
+        name = SUBJECT_exalted_subject_symbiont
+        custom_tooltip = choice_exalted_subject_symbiont_tooltip
+        trigger = {
+            OR = {
+                has_civic = civic_feudal_realm
+                has_authority = auth_hive_mind
+                has_ethic = ethic_egalitarian
+                has_ethic = ethic_fanatic_egalitarian
+                has_ethic = ethic_materialist
+                has_ethic = ethic_fanatic_materialist
+                has_ethic = ethic_pacifist
+                has_ethic = ethic_fanatic_pacifist
+                has_ethic = ethic_xenophile
+                has_ethic = ethic_fanatic_xenophile
+            }
+        }
+        hidden_effect = {
+            log = "exalted_subjects.8: [This.GetName] chose to make [From.GetName] a Symbiont"
+            FROM = {
+                set_subject_of = {
+                    who = PREV
+                    subject_type = exalted_subject_symbiont
+                }
+                country_event = {
+                    id = exalted_subjects.16
+                }
+            }
+        }
+    }
+    option = {
+        name = choice_exalted_subject_vassal
+        custom_tooltip = choice_exalted_subject_vassal_tooltip
+        hidden_effect = {
+            log = "exalted_subjects.8: Leaving [From.GetName] as Vassal"
+            from = {
+                set_subject_of = {
+                    who = root
+                    subject_type = vervassal
+                }
+            }
+        }
+    }
+}
