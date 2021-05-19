@@ -39,7 +39,7 @@ nhsc_tech_advanced_materials = {
         }
     }
     ai_weight = {
-        factor = 1.5
+        factor = @ESC_AI_tech_weight_multiplier
         modifier = {
             factor = 1.15
             OR = {

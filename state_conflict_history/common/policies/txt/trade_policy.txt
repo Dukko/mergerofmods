@@ -226,4 +226,18 @@ trade_policy = {
             factor = 0
         }
     }
+    option = {
+        name = "trade_policy_technocorp"
+        potential = {
+            has_valid_civic = civic_technocorp
+        }
+        policy_flags = {
+            trade_conversion_technocorp
+        }
+        modifier = {
+        }
+        AI_weight = {
+            factor = 12
+        }
+    }
 }

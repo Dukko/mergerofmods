@@ -5,9 +5,9 @@ ap_one_vision = {
         pop_government_ethic_attraction = 0.5
     }
     potential = {
-        NOT = {
+        NOR = {
             has_ascension_perk = ap_one_vision
-            has_authority = "auth_machine_intelligence"
+            has_ethic = ethic_gestalt_consciousness
         }
     }
     ai_weight = {

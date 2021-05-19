@@ -16,7 +16,7 @@ country_event = {
         }
     }
     desc = {
-        text = action.11.abandoned.desc
+        text = "action.11.abandoned.desc"
         trigger = {
             fromfrom = {
                 has_relation_flag = {
@@ -107,6 +107,17 @@ country_event = {
         name = "action.11.a"
         if = {
             limit = {
+                NOR = {
+                    root = {
+                        is_subject_type = member_state
+                    }
+                    fromfrom = {
+                        is_subject_type = member_state
+                    }
+                }
+            }
+            if = {
+                limit = {
                 OR = {
                     has_ethic = ethic_xenophile
                     has_ethic = ethic_fanatic_xenophile
@@ -130,6 +141,7 @@ country_event = {
         hidden_effect = {
             country_event = {
                 id = action.1
+                }
             }
         }
     }
@@ -149,6 +161,17 @@ country_event = {
         name = WORRYING
         if = {
             limit = {
+                NOR = {
+                    root = {
+                        is_subject_type = member_state
+                    }
+                    fromfrom = {
+                        is_subject_type = member_state
+                    }
+                }
+            }
+            if = {
+                limit = {
                 OR = {
                     has_ethic = ethic_xenophile
                     has_ethic = ethic_fanatic_xenophile
@@ -172,6 +195,7 @@ country_event = {
         hidden_effect = {
             country_event = {
                 id = action.1
+                }
             }
         }
     }
@@ -189,6 +213,17 @@ country_event = {
             }
         }
         name = OK
+        if = {
+            limit = {
+                NOR = {
+                    root = {
+                        is_subject_type = member_state
+                    }
+                    fromfrom = {
+                        is_subject_type = member_state
+                    }
+                }
+            }
         if = {
             limit = {
                 OR = {
@@ -214,6 +249,7 @@ country_event = {
         hidden_effect = {
             country_event = {
                 id = action.1
+                }
             }
         }
     }

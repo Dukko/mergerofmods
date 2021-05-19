@@ -32,6 +32,8 @@ Just Star Names
 Just Name Lists
 Elf Names
 Cybrxkhan's Assortment of Namelists for Stellaris
+Enhanced - Plavalaguna Portraits
+Enhanced - Vulcan Portraits
 Benjaseth's Species Names
 ( Twinks Atlanteans )
 ( Twinks Dessanu )
@@ -108,6 +110,8 @@ Flags in the void
 Diverse Rooms
 Diverse Basics
 Weapon Research Menu
+Useful Heirs
+Separate Peace Treaties
 Size 25 Homeworlds
 Shut Up, We Don't Care! (3.0)
 【3.0.2】Shroud Expanded【虚境扩展】The Decadance of Sanity--理智的终末癫狂
@@ -131,6 +135,7 @@ Intervene: Help Friendly Nations - 3.*
 Interstellar Incorporated: Space Corp [3.0]
 Double Corp Ship Cost
 Influence Cap+
+Imperial Projects
 Improved Planet and Sector Automation
 Get Off My Lawn!
 Gateway Policy Federation
@@ -153,6 +158,7 @@ Better Terraforming Candidates
 Better Sliders - Mid/End/Victory Game Years and Tech/Tradition cost
 Relytor's True Raiding 3.0.*
 Federations Expanded
+Decentralized Empires 3.0 (Regentmaker)
 Exalted Domination - Vassals and Tributaries [3.0]
 Viable Feudalism and Imperialism - Empire Federation
 Vassals Expanded and Reworked - 3.0

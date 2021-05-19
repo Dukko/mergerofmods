@@ -68,7 +68,7 @@ nhsc_tech_new_age_warfare = {
         }
     }
     ai_weight = {
-        factor = 3
+        factor = @ESC_AI_tech_weight_multiplier
         modifier = {
             factor = 0
             NOR = {

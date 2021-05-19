@@ -7,7 +7,7 @@ country_event = {
         if = {
             limit = {
                 event_target:civil_war_leader = {
-                    has_leader_flag = civil_war_faction_leader_admiral
+                    has_leader_flag = civil_war_leader_admiral_faction
                 }
             }
             random_list = {
@@ -220,8 +220,8 @@ country_event = {
             limit = {
                 event_target:civil_war_leader = {
                     OR = {
-                        has_leader_flag = civil_war_faction_leader_scientist
-                        has_leader_flag = civil_war_faction_leader_general
+                        has_leader_flag = civil_war_leader_scientist_faction
+                        has_leader_flag = civil_war_leader_general_faction
                     }
                 }
             }
