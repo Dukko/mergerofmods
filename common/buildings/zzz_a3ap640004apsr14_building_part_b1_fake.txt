@@ -1,0 +1,30 @@
+@apsr14part1cost_energy = 0
+@apsr14part1cost_minerals = 2500
+@apsr14part1cost_time = 750
+@apsr14part1upkeep_fake = 1
+apsr14_building_part_b1_fake = {
+    base_buildtime = @apsr14part1cost_time
+    icon = "apsr14_building_part_b1"
+    is_capped_by_modifier = no
+    category = amenity
+    can_build = no
+    potential = {
+        has_modifier = "apsr14_planet_modifier"
+    }
+    resources = {
+        category = planet_apsr_buildings
+        cost = {
+            energy = @apsr14part1cost_energy
+            minerals = @apsr14part1cost_minerals
+        }
+        upkeep = {
+            energy = @apsr14part1upkeep_fake
+        }
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    ai_weight = {
+        weight = 50000
+    }
+}

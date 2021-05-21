@@ -17,6 +17,22 @@ mining_drone = {
         produces = {
             minerals = 4
         }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_mineral_purification_plant
+                }
+            }
+            minerals = 1
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_mineral_purification_hub
+                }
+            }
+            minerals = 2
+        }
         upkeep = {
             trigger = {
                 exists = owner

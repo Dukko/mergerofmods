@@ -1,0 +1,47 @@
+@tier3cost3 = 5000
+@tier3weight3 = 50
+tech_eutab_h_direct_governance = {
+    cost = @tier3cost3
+    area = society
+    tier = 3
+    category = {
+        biology
+    }
+    prerequisites = {
+        "tech_eutab_breed_t3"
+        "tech_autonomous_agents"
+    }
+    weight = @tier3weight3
+    is_rare = yes
+    potential = {
+        has_authority = auth_hive_mind
+    }
+    modifier = {
+        leader_governors_cost_mult = -0.75
+        leader_governors_upkeep_mult = -0.75
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = ap_executive_vigor
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+    }
+}

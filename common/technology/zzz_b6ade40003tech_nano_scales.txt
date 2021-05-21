@@ -1,0 +1,40 @@
+tech_nano_scales = {
+    icon = "old_tech_icons/tech_mine_garanthium"
+    cost = @tier4cost1
+    area = society
+    tier = 4
+    category = {
+        biology
+    }
+    weight = @tier5weight1
+    gateway = biological
+    modifier = {
+        country_food_produces_mult = 0.2
+    }
+    potential = {
+        has_global_flag = l_cluster_opened
+        has_resource = {
+            type = nanites
+            amount > 0
+        }
+        OR = {
+            NOT = {
+                has_global_flag = distar_overhaul_mod_active
+            }
+            has_country_flag = completed_nanite_technology_mastery_chain
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            has_monthly_income = {
+                resource = nanites
+                value < 1
+            }
+            resource_stockpile_compare = {
+                resource = nanites
+                value < 300
+            }
+        }
+    }
+}

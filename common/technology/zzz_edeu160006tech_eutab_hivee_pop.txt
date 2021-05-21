@@ -1,0 +1,35 @@
+@tier2cost2 = 1500
+@tier2weight2 = 75
+tech_eutab_hivee_pop = {
+    cost = @tier2cost2
+    area = society
+    tier = 2
+    category = {
+        biology
+    }
+    prerequisites = {
+        "tech_autonomous_agents"
+    }
+    weight = @tier2weight2
+    potential = {
+        has_authority = auth_hive_mind
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+    }
+}

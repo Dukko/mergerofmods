@@ -1,0 +1,75 @@
+@apsr6part4cost_minerals = 5000
+@apsr6part4cost_time = 500
+@apsr6part4upkeep_energy = 20
+@apsr6part4upkeep_minerals = 20
+@apsr6part3job = 11
+apsr6_building_part4 = {
+    base_buildtime = @apsr6part4cost_time
+    icon = apsr6_building_part3
+    is_capped_by_modifier = no
+    category = research
+    can_build = no
+    potential = {
+        has_modifier = "apsr6_planet_modifier"
+        has_deposit = apsr_relic_cube_deposit
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_apsr6_scientist_hive_add = @apsr6part3job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_apsr6_scientist_machine_add = @apsr6part3job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_apsr6_scientist_normal_add = @apsr6part3job
+        }
+    }
+    resources = {
+        category = planet_apsr_buildings
+        cost = {
+            minerals = @apsr6part4cost_minerals
+        }
+        upkeep = {
+            energy = @apsr6part4upkeep_energy
+            minerals = @apsr6part4upkeep_minerals
+        }
+    }
+    country_modifier = {
+        species_leader_exp_gain = 0.25
+        leader_skill_levels = 2
+        damage_vs_country_type_swarm_mult = 0.5
+        damage_vs_country_type_extradimensional_mult = 0.5
+        damage_vs_country_type_extradimensional_2_mult = 0.5
+        damage_vs_country_type_extradimensional_3_mult = 0.5
+        damage_vs_country_type_ai_empire_mult = 0.5
+        damage_vs_country_type_gray_goo_mult = 0.5
+    }
+    allow = {
+        has_major_upgraded_capital = yes
+    }
+    ai_weight = {
+        weight = 50000
+    }
+}

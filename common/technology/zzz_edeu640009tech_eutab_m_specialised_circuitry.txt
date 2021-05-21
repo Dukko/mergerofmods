@@ -1,0 +1,46 @@
+@tier2cost3 = 2000
+@tier2weight3 = 70
+tech_eutab_m_specialised_circuitry = {
+    cost = @tier2cost3
+    area = engineering
+    tier = 2
+    category = {
+        industry
+    }
+    is_rare = yes
+    prerequisites = {
+        "tech_micro_replicators"
+    }
+    weight = @tier2weight3
+    potential = {
+        has_authority = auth_machine_intelligence
+    }
+    modifier = {
+        planet_pops_robotics_upkeep_mult = -0.1
+        pop_assembly_speed = 0.15
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = ap_one_vision
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+}

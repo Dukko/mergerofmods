@@ -65,54 +65,6 @@ district_arcology_civilian_industry = {
             job_artisan_add = 6
         }
     }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_regular_empire = yes
-            }
-            has_active_building = building_factory_2
-        }
-        modifier = {
-            job_artisan_add = 1
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_regular_empire = yes
-            }
-            has_active_building = building_factory_3
-        }
-        modifier = {
-            job_artisan_add = 2
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_machine_empire = yes
-            }
-            has_active_building = building_factory_2
-        }
-        modifier = {
-            job_artisan_drone_add = 1
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_machine_empire = yes
-            }
-            has_active_building = building_factory_3
-        }
-        modifier = {
-            job_artisan_drone_add = 2
-        }
-    }
     triggered_desc = {
         trigger = {
             exists = owner

@@ -1,0 +1,46 @@
+@lrsk_gov_var_planet_synaptic_unity_cost_upgrade = 200
+@lrsk_gov_var_planet_synaptic_unity_cost_upkeep = 5
+@lrsk_gov_var_planet_synaptic_crime_5 = 0.5
+@lrsk_gov_var_planet_synaptic_amenities_5 = 0.3
+@lrsk_gov_var_planet_synaptic_popsreq_5 = 35
+lrsk_gov_var_bldg_planet_synaptic_nexus = {
+    base_buildtime = 800
+    category = government
+    can_build = no
+    potential = {
+        exists = owner
+        owner = {
+            is_hive_empire = yes
+            has_valid_civic = lrsk_gov_var_civic_hive_planetmind_creativity
+        }
+    }
+    allow = {
+        num_pops >= @lrsk_gov_var_planet_synaptic_popsreq_5
+    }
+    planet_modifier = {
+        planet_amenities_no_happiness_mult = @lrsk_gov_var_planet_synaptic_amenities_5
+        job_lrsk_gov_var_job_planetmind_overseer_add = 5
+        job_maintenance_drone_add = 1
+        planet_crime_no_happiness_mult = @lrsk_gov_var_planet_synaptic_crime_5
+    }
+    triggered_desc = {
+        text = job_lrsk_gov_var_job_planetmind_overseer_effect_desc
+    }
+    triggered_desc = {
+        text = job_maintenance_drone_effect_desc
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 800
+            unity = @lrsk_gov_var_planet_synaptic_unity_cost_upgrade
+        }
+        upkeep = {
+            energy = 4
+            unity = @lrsk_gov_var_planet_synaptic_unity_cost_upkeep
+        }
+    }
+    ai_weight = {
+        weight = 1
+    }
+}

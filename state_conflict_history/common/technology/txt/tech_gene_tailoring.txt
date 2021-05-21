@@ -27,8 +27,8 @@ tech_gene_tailoring = {
             NOT = {
                 has_authority = auth_machine_intelligence
             }
-            has_civic = civic_machine_assimilator
-            has_civic = civic_machine_servitor
+            has_valid_civic = civic_machine_assimilator
+            has_valid_civic = civic_machine_servitor
         }
     }
     weight_modifier = {

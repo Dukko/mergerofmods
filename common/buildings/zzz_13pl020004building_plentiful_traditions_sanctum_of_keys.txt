@@ -1,0 +1,76 @@
+building_plentiful_traditions_sanctum_of_keys = {
+    base_buildtime = 300
+    base_cap_amount = 1
+    category = unity
+    potential = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+        owner = {
+            has_non_swapped_tradition = tr_plentiful_mysticism_5
+        }
+    }
+    allow = {
+        has_major_upgraded_capital = yes
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 275
+            influence = 50
+        }
+        upkeep = {
+            energy = 2
+        }
+        produces = {
+            unity = 6
+        }
+    }
+    planet_modifier = {
+        pop_happiness = 0.05
+        pop_environment_tolerance = 0.05
+        pop_amenities_usage_mult = -0.05
+        pop_housing_usage_mult = -0.05
+    }
+    triggered_planet_modifier = {
+        potential = {
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_culture_worker_add = 5
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_synapse_drone_add = 5
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_coordinator_add = 5
+        }
+    }
+    show_tech_unlock_if = {
+        owner = {
+            has_non_swapped_tradition = tr_plentiful_mysticism_5
+        }
+    }
+    ai_weight = {
+        weight = 12
+    }
+}

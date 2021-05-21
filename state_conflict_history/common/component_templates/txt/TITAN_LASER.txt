@@ -27,13 +27,5 @@ weapon_component_template = {
     }
     ai_weight = {
         weight = 1
-        modifier = {
-            factor = 0
-            is_country_type = default
-            resource_stockpile_compare = {
-                resource = rare_crystals
-                value <= 100
-            }
-        }
     }
 }

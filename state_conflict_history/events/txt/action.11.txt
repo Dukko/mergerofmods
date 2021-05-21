@@ -136,12 +136,12 @@ country_event = {
                 value = @tier2influencecontact
                 min = @tier2influencecontactmin
                 max = @tier2influencecontactmax
+                }
             }
         }
         hidden_effect = {
             country_event = {
                 id = action.1
-                }
             }
         }
     }
@@ -192,10 +192,10 @@ country_event = {
                 max = @tier2influencecontactmax
             }
         }
+        }
         hidden_effect = {
             country_event = {
                 id = action.1
-                }
             }
         }
     }
@@ -246,10 +246,10 @@ country_event = {
                 max = @tier2influencecontactmax
             }
         }
+        }
         hidden_effect = {
             country_event = {
                 id = action.1
-                }
             }
         }
     }

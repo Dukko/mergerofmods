@@ -360,6 +360,27 @@ action_invite_to_federation = {
         }
     }
     possible = {
+        if = {
+            limit = {
+                has_federation = no
+                is_country_type = default
+            }
+            if = {
+                limit = {
+                    has_authority = auth_machine_intelligence
+                }
+                custom_tooltip = {
+                    fail_text = requires_tradition_universal_compatibility
+                    has_swapped_tradition = tr_versatility_universal_compatibility
+                }
+            }
+            else = {
+                custom_tooltip = {
+                    fail_text = requires_tradition_the_federation
+                    has_non_swapped_tradition = tr_diplomacy_the_federation
+                }
+            }
+        }
         custom_tooltip = {
             fail_text = "ACTION_RECIPIENT_NOT_YOURS"
             FROM = {
@@ -370,30 +391,6 @@ action_invite_to_federation = {
                             has_overlord = root
                         }
                     }
-                }
-            }
-        }
-        custom_tooltip = {
-            fail_text = "requires_tradition_the_federation"
-            OR = {
-                has_authority = auth_machine_intelligence
-                has_federation = yes
-                has_non_swapped_tradition = tr_diplomacy_the_federation
-                NOT = {
-                    is_country_type = default
-                }
-            }
-        }
-        custom_tooltip = {
-            fail_text = "requires_tradition_universal_compatibility"
-            OR = {
-                NOT = {
-                    has_authority = auth_machine_intelligence
-                }
-                has_federation = yes
-                has_swapped_tradition = tr_versatility_universal_compatibility
-                NOT = {
-                    is_country_type = default
                 }
             }
         }
@@ -436,10 +433,10 @@ action_invite_to_federation = {
             OR = {
                 is_same_species = from
                 NOT = {
-                    has_civic = civic_machine_terminator
+                    has_valid_civic = civic_machine_terminator
                 }
                 AND = {
-                    has_civic = civic_machine_terminator
+                    has_valid_civic = civic_machine_terminator
                     from = {
                         OR = {
                             has_country_flag = synthetic_empire
@@ -460,7 +457,7 @@ action_invite_to_federation = {
                 }
                 AND = {
                     from = {
-                        has_civic = civic_machine_terminator
+                        has_valid_civic = civic_machine_terminator
                     }
                     OR = {
                         has_country_flag = synthetic_empire
@@ -469,11 +466,28 @@ action_invite_to_federation = {
                 }
             }
         }
-        custom_tooltip = {
-            fail_text = "requires_recipient_not_inward_perfection"
-            from = {
-                NOT = {
+        if = {
+            limit = {
+                from = {
                     has_valid_civic = civic_inwards_perfection
+                }
+            }
+            if = {
+                limit = {
+                    has_intel = {
+                        who = from
+                        intel = civics
+                    }
+                }
+                custom_tooltip = {
+                    fail_text = requires_recipient_not_inward_perfection
+                    always = no
+                }
+            }
+            else = {
+                custom_tooltip = {
+                    fail_text = diplo_action_no_low_intel
+                    always = no
                 }
             }
         }
@@ -520,6 +534,18 @@ action_invite_to_federation = {
                                 }
                             }
                         }
+                    }
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_actor_recipient_not_in_galactic_empire"
+            NAND = {
+                has_galactic_emperor = yes
+                OR = {
+                    is_galactic_community_member = yes
+                    from = {
+                        is_galactic_community_member = yes
                     }
                 }
             }

@@ -18,9 +18,15 @@ decision_arcology_project = {
             is_planet_class = pc_apsr_unique
             is_planet_class = pc_milarc_relic
             is_planet_class = pc_ecocity
+            is_planet_class = pc_corpoarc
             is_planet_class = pc_palacearc
             is_planet_class = pc_capitalarc
             is_planet_class = pc_shroudcity
+            is_planet_class = pc_shroudecocity
+            is_planet_class = pc_shroudcapitalarc
+            is_planet_class = pc_shroudpalacearc
+            is_planet_class = pc_shroudmilarc
+            is_planet_class = pc_shroudcorpoarc
             is_planet_class = pc_milarc
             is_planet_class = pc_necropolis
             is_planet_class = pc_machine_necropolis
@@ -103,6 +109,7 @@ decision_arcology_project = {
                 remove_modifier = ammonia
                 set_planet_entity = {
                     picture = pc_ammoniacity
+                    entity = ammonia_arc_planet_01_entity
                 }
             }
             IF = {
@@ -124,6 +131,7 @@ decision_arcology_project = {
                 remove_modifier = pdsulfur
                 set_planet_entity = {
                     picture = pc_sulfurcity
+                    entity = sulfur_arc_planet_01_entity
                 }
             }
             IF = {
@@ -145,6 +153,7 @@ decision_arcology_project = {
                 remove_modifier = methane
                 set_planet_entity = {
                     picture = pc_methanecity
+                    entity = methane_arc_planet_01_entity
                 }
             }
             IF = {
@@ -166,19 +175,7 @@ decision_arcology_project = {
                 remove_modifier = ash
                 set_planet_entity = {
                     picture = pc_ashcity
-                }
-            }
-            IF = {
-                limit = {
-                    owner = {
-                        has_origin = origin_pd_shroud
-                        has_ascension_perk = ap_transcendence
-                    }
-                }
-                change_pc = pc_shroudcity
-                While = {
-                    count = 10
-                    add_district = district_pdshroudarc_housing
+                    entity = ash_arc_planet_01_entity
                 }
             }
             owner = {

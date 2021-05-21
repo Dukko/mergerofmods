@@ -13,11 +13,11 @@ weapon_component_template = {
     }
     component_set = "PERDITION_BEAM"
     projectile_gfx = "ion_cannon"
-    tags = {
-        weapon_type_energy
-    }
     size_restriction = {
         ion_cannon
+    }
+    tags = {
+        weapon_type_energy
     }
     resources = {
         category = ship_components
@@ -32,13 +32,5 @@ weapon_component_template = {
     }
     ai_weight = {
         weight = 1
-        modifier = {
-            factor = 0
-            is_country_type = default
-            has_monthly_income = {
-                resource = rare_crystals
-                value <= 0
-            }
-        }
     }
 }

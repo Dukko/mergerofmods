@@ -1,0 +1,36 @@
+tech_compound_drives = {
+    area = physics
+    cost = @tier7cost3
+    weight = 0
+    tier = 5
+    category = {
+        particles
+    }
+    is_rare = yes
+    ai_update_type = all
+    prerequisites = {
+        tech_jump_drive_1
+    }
+    feature_flags = {
+        jump_method
+    }
+    weight_modifier = {
+        factor = 0
+    }
+    prereqfor_desc = {
+        component = {
+            title = "TECH_UNLOCK_COMPOUND_JUMPDRIVE_TITLE"
+            desc = "TECH_UNLOCK_COMPOUND_JUMPDRIVE_DESC"
+        }
+    }
+    ai_weight = {
+        factor = @ehof_t2_weight
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+nhsc_tech_advanced_reactor_1 = {
+    area = physics
+    category = {
+        particles
+    }
+    tier = 5
+    cost = @tier5cost1
+    weight = @tier5weight1
+    prerequisites = {
+        "nhsc_tech_central_research_bureau"
+        "tech_zero_point_power"
+    }
+    ai_update_type = all
+    prereqfor_desc = {
+        hide_prereq_for_desc = component
+        custom = {
+            title = "NHSC_TECH_UNLOCK_REACTOR_6_TITLE"
+            desc = "NHSC_TECH_UNLOCK_REACTOR_6_DESC"
+        }
+    }
+    potential = {
+        NOT = {
+            has_global_flag = ESC_reactors_forbidden
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            OR = {
+                has_ethic = ethic_materialist
+                has_ethic = ethic_fanatic_materialist
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+    ai_weight = {
+        factor = @ESC_AI_tech_weight_multiplier
+        modifier = {
+            factor = 1.15
+            OR = {
+                has_ethic = ethic_materialist
+                has_ethic = ethic_fanatic_materialist
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+}

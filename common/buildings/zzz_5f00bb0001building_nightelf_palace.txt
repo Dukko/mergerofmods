@@ -1,0 +1,99 @@
+building_nightelf_palace = {
+    base_buildtime = 480
+    capital = yes
+    can_build = no
+    can_demolish = no
+    can_be_ruined = no
+    can_be_disabled = no
+    add_to_first_building_slot = yes
+    planetary_ftl_inhibitor = yes
+    category = government
+    potential = {
+        exists = owner
+        owner = {
+            OR = {
+            }
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 10
+        planet_amenities_add = 10
+        planet_max_buildings_add = 1
+    }
+    country_modifier = {
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                num_assigned_jobs = {
+                    job = arcane_constructs
+                    value < 50
+                }
+            }
+        }
+        planet_pop_assembly_add = 2
+    }
+    triggered_planet_modifier = {
+        modifier = {
+            job_highborne_security_add = 1
+            job_highborne_lord_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+            }
+        }
+        modifier = {
+            job_highborne_security_add = 1
+            job_highborne_lord_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                num_pops > 25
+            }
+        }
+        modifier = {
+            job_highborne_security_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                num_pops > 50
+            }
+        }
+        modifier = {
+            job_highborne_security_add = 1
+        }
+    }
+    resources = {
+        category = planet_buildings
+        upkeep = {
+            energy = 3
+            arcane_power_tw = 10
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_ai = yes
+                }
+            }
+            food = 100
+            minerals = 100
+            energy = 30
+            alloys = 100
+            consumer_goods = 100
+        }
+    }
+    prerequisites = {
+    }
+    upgrades = {
+    }
+    ai_weight = {
+        weight = 100
+    }
+}

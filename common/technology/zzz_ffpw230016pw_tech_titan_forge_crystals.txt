@@ -1,0 +1,21 @@
+pw_tech_titan_forge_crystals = {
+    area = engineering
+    category = {
+        materials
+    }
+    tier = 5
+    cost = @tier5cost2
+    prerequisites = {
+        pw_tech_titan_forge
+    }
+    weight = 0
+    potential = {
+        has_country_flag = pw_titan_forge_built
+    }
+    modifier = {
+        country_rare_crystals_produces_mult = 0.1
+    }
+    ai_weight = {
+        factor = 20
+    }
+}

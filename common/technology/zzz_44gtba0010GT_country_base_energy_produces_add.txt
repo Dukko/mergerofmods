@@ -1,0 +1,67 @@
+GT_country_base_energy_produces_add = {
+    cost = @tier1cost3
+    area = physics
+    tier = 1
+    is_rare = yes
+    category = {
+        particles
+    }
+    prerequisites = {
+        "tech_planetary_unification"
+    }
+    weight = @tier4weight3
+    modifier = {
+        starbase_constructions_energy_produces_mult = 0.2
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            years_passed > 25
+        }
+        factor = 0.5
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = 0.05
+            has_technology = GT_country_base_minerals_produces_add
+        }
+        modifier = {
+            factor = 0.05
+            has_technology = GT_country_base_engineering_research_produces_add
+        }
+        modifier = {
+            factor = 0.05
+            has_technology = GT_country_base_energy_produces_add
+        }
+        modifier = {
+            factor = 0.05
+            has_technology = GT_country_base_physics_research_produces_add
+        }
+        modifier = {
+            factor = 0.05
+            has_technology = GT_country_base_food_produces_add
+        }
+        modifier = {
+            factor = 0.05
+            has_technology = GT_country_base_society_research_produces_add
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+}

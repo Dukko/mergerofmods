@@ -16,8 +16,8 @@ tech_colonization_2 = {
     potential = {
         OR = {
             is_machine_empire = no
-            has_civic = civic_machine_assimilator
-            has_civic = civic_machine_servitor
+            has_valid_civic = civic_machine_assimilator
+            has_valid_civic = civic_machine_servitor
         }
     }
     weight_modifier = {
@@ -31,8 +31,8 @@ tech_colonization_2 = {
         modifier = {
             factor = 0.7
             OR = {
-                has_civic = civic_machine_servitor
-                has_civic = civic_machine_assimilator
+                has_valid_civic = civic_machine_servitor
+                has_valid_civic = civic_machine_assimilator
             }
         }
     }

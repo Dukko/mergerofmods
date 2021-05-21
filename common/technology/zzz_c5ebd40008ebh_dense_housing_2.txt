@@ -1,0 +1,32 @@
+ebh_dense_housing_2 = {
+    cost = @tier4cost1
+    area = physics
+    tier = 4
+    category = {
+        field_manipulation
+    }
+    prerequisites = {
+        "ebh_dense_housing"
+    }
+    weight = @tier4weight1
+    icon = tech_mine_dark_matter
+    weight_modifier = {
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 1
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+}

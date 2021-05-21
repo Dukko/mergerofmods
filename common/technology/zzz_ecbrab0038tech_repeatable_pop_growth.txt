@@ -1,0 +1,107 @@
+@EarlyRepeatableTechCost = 12000
+@EarlyRepeatableTechLevelCost = 6000
+@EarlyRepatableTechFactor = 0.65
+@RepeatableCategoryFactor = 0.25
+@RepeatableDifferntFactor = 0.5
+@EarlyRepeatableWeight = 13
+@EarlyRepeatableTier = 3
+tech_repeatable_pop_growth = {
+    area = society
+    cost = @EarlyRepeatableTechCost
+    cost_per_level = @EarlyRepeatableTechLevelCost
+    tier = @EarlyRepeatableTier
+    category = {
+        biology
+    }
+    levels = 10
+    prerequisites = {
+        "tech_gene_tailoring"
+    }
+    weight = @EarlyRepeatableWeight
+    weight_modifier = {
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_pop_growth
+                value > 0
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_pop_growth
+                value > 1
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_pop_growth
+                value > 2
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_pop_growth
+                value > 3
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_pop_growth
+                value > 4
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_pop_growth
+                value > 5
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_pop_growth
+                value > 6
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_pop_growth
+                value > 7
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_pop_growth
+                value > 8
+            }
+        }
+    }
+    potential = {
+        NOT = {
+            is_country_type = fallen_empire
+        }
+    }
+    ai_weight = {
+        factor = 1
+    }
+    weight_groups = {
+        production
+    }
+    mod_weight_if_group_picked = {
+        ship_repeatable = @RepeatableDifferntFactor
+        job_repeatable = @RepeatableDifferntFactor
+    }
+    mod_weight_if_group_picked = {
+        production_repeatable = @RepeatableCategoryFactor
+    }
+    modifier = {
+        pop_growth_speed = 0.05
+    }
+}

@@ -1,0 +1,46 @@
+@tier2cost3 = 2500
+@tier2weight3 = 70
+tech_eutab_buy_influence = {
+    cost = @tier2cost3
+    area = society
+    tier = 2
+    category = {
+        statecraft
+    }
+    prerequisites = {
+        "tech_galactic_administration"
+    }
+    weight = @tier2weight3
+    is_rare = yes
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                AND = {
+                    has_authority = auth_democratic
+                    OR = {
+                        has_ascension_perk = ap_interstellar_dominion
+                        has_ascension_perk = ap_imperial_prerogative
+                        has_ascension_perk = ap_grasp_the_void
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+}

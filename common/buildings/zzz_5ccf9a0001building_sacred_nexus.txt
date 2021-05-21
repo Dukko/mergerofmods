@@ -50,7 +50,7 @@ building_sacred_nexus = {
             }
         }
         modifier = {
-            job_priest_add = 7
+            job_priest_add = 8
             pop_ethic_spiritualist_attraction_mult = 0.15
         }
     }

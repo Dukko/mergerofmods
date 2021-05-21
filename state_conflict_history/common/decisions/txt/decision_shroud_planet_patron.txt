@@ -12,8 +12,8 @@ decision_shroud_planet_patron = {
     potential = {
         has_global_flag = planetarydiversityshroud
         OR = {
-        owner = {
-            has_ascension_perk = ap_transcendence
+            owner = {
+                has_ascension_perk = ap_transcendence
             }
             owner = {
                 has_ascension_perk = ap_synthetic_transcendence
@@ -22,10 +22,15 @@ decision_shroud_planet_patron = {
                 has_ascension_perk = ap_machine_transcendence
             }
         }
-        habitable_structure = no
+        is_artificial = no
         OR = {
             is_planet_class = pc_pdshroud
             is_planet_class = pc_shroudcity
+            is_planet_class = pc_shroudecocity
+            is_planet_class = pc_shroudcapitalarc
+            is_planet_class = pc_shroudpalacearc
+            is_planet_class = pc_shroudmilarc
+            is_planet_class = pc_shroudcorpoarc
         }
         NOT = {
             OR = {

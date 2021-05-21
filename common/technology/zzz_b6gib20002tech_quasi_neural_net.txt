@@ -1,0 +1,26 @@
+tech_quasi_neural_net = {
+    cost = @tier6cost1
+    area = physics
+    tier = 5
+    category = {
+        computing
+    }
+    is_reverse_engineerable = no
+    weight = 0
+    is_rare = yes
+    modifier = {
+        country_admin_cap_add = 30
+        ship_evasion_mult = 0.15
+        ship_fire_rate_mult = 0.1
+    }
+    ai_weight = {
+        factor = @ehof_t1_weight
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+}

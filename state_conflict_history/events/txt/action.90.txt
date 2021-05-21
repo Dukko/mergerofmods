@@ -33,7 +33,7 @@ event = {
                         }
                     }
                     solar_system = {
-                        NOT = {
+                        NOR = {
                             any_fleet_in_system = {
                                 exists = owner
                                 owner = {
@@ -43,6 +43,22 @@ event = {
                                     OR = {
                                         is_hostile = prevprevprev.owner
                                         is_at_war_with = prevprevprev.owner
+                                    }
+                                }
+                            }
+                            any_system_planet = {
+                                exists = owner
+                                NOT = {
+                                    is_same_value = prevprev
+                                }
+                                owner = {
+                                    NOT = {
+                                        is_same_value = prevprevprev.owner
+                                    }
+                                    OR = {
+                                        is_country_type = default
+                                        is_country_type = fallen_empire
+                                        is_country_type = awakened_fallen_empire
                                     }
                                 }
                             }
@@ -60,6 +76,35 @@ event = {
                             is_country_type = default
                             is_country_type = fallen_empire
                             is_country_type = awakened_fallen_empire
+                        }
+                    }
+                    solar_system = {
+                        NOR = {
+                            any_fleet_in_system = {
+                                exists = owner
+                                owner = {
+                                    NOT = {
+                                        is_same_value = prevprevprev.owner
+                                    }
+                                    OR = {
+                                        is_hostile = prevprevprev.owner
+                                        is_at_war_with = prevprevprev.owner
+                                    }
+                                }
+                            }
+                            any_system_planet = {
+                                exists = owner
+                                owner = {
+                                    NOT = {
+                                        is_same_value = prevprev.owner
+                                    }
+                                    OR = {
+                                        is_country_type = default
+                                        is_country_type = fallen_empire
+                                        is_country_type = awakened_fallen_empire
+                                    }
+                                }
+                            }
                         }
                     }
                 }

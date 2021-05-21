@@ -1,0 +1,38 @@
+building_shroud_military_base_2 = {
+    base_buildtime = 720
+    potential = {
+        exists = planet
+        NOT = {
+            has_modifier = slave_colony
+        }
+        has_modifier = harsh_shroud
+    }
+    can_build = no
+    allow = {
+        has_upgraded_capital = yes
+    }
+    upgrades = {
+        "building_shroud_military_base_3"
+    }
+    army_modifier = {
+        army_starting_experience_add = 1100
+    }
+    planet_modifier = {
+        planet_orbital_bombardment_damage = -0.5
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 1000
+            energy = 1000
+            sr_zro = 400
+            yin = 100
+        }
+        upkeep = {
+            energy = 120
+        }
+    }
+    ai_weight = {
+        factor = 50
+    }
+}

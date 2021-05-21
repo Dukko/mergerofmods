@@ -11,13 +11,9 @@ specialist_job_check_trigger = {
         }
         is_being_purged = no
         is_being_assimilated = no
-        NOT = {
+        NOR = {
             has_trait = trait_syncretic_proles
-        }
-        NOT = {
             has_trait = trait_slave_gene
-        }
-        NOT = {
             has_trait = trait_nerve_stapled
         }
         OR = {

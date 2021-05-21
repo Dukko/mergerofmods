@@ -1,0 +1,20 @@
+action_insult = {
+    requires_recipient_independence = no
+    requires_actor_independence = no
+    auto_accepted = yes
+    should_show_auto_accept_message_recipient = yes
+    on_accept = {
+        hidden_effect = {
+            set_timed_relation_flag = {
+                flag = dpe_insult
+                who = from
+                days = 3
+            }
+            from = {
+                country_event = {
+                    id = dpe_hw_duel.1
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,135 @@
+@EarlyRepeatableTechCost = 12000
+@EarlyRepeatableTechLevelCost = 6000
+@EarlyRepatableTechFactor = 0.65
+@RepeatableCategoryFactor = 0.25
+@RepeatableDifferntFactor = 0.5
+@EarlyRepeatableWeight = 13
+@EarlyRepeatableTier = 3
+@SpecializationPenalty = 0.6
+tech_repeatable_improved_ship_escape = {
+    area = engineering
+    cost = @EarlyRepeatableTechCost
+    cost_per_level = @EarlyRepeatableTechLevelCost
+    tier = @EarlyRepeatableTier
+    category = {
+        voidcraft
+    }
+    levels = 5
+    prerequisites = {
+        "tech_thrusters_3"
+    }
+    weight = @EarlyRepeatableWeight
+    weight_modifier = {
+        modifier = {
+            factor = @SpecializationPenalty
+            check_variable = {
+                which = repeatable_ship_escape
+                value > 0
+            }
+        }
+        modifier = {
+            factor = @SpecializationPenalty
+            check_variable = {
+                which = repeatable_ship_escape
+                value > 1
+            }
+        }
+        modifier = {
+            factor = @SpecializationPenalty
+            check_variable = {
+                which = repeatable_ship_escape
+                value > 2
+            }
+        }
+        modifier = {
+            factor = @SpecializationPenalty
+            check_variable = {
+                which = repeatable_ship_escape
+                value > 3
+            }
+        }
+        modifier = {
+            factor = @SpecializationPenalty
+            check_variable = {
+                which = repeatable_ship_escape
+                value > 4
+            }
+        }
+        modifier = {
+            factor = @SpecializationPenalty
+            check_variable = {
+                which = repeatable_ship_escape
+                value > 5
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_force_disparity
+                value > 0
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_force_disparity
+                value > 1
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_force_disparity
+                value > 2
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_force_disparity
+                value > 3
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_force_disparity
+                value > 4
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_force_disparity
+                value > 5
+            }
+        }
+    }
+    potential = {
+        NOT = {
+            is_country_type = fallen_empire
+        }
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "escape_focus"
+            desc = "escape_focus_desc"
+        }
+    }
+    ai_weight = {
+        factor = 1
+    }
+    weight_groups = {
+        ship_repeatable
+    }
+    mod_weight_if_group_picked = {
+        ship_repeatable = @RepeatableCategoryFactor
+    }
+    mod_weight_if_group_picked = {
+        production_repeatable = @RepeatableDifferntFactor
+        job_repeatable = @RepeatableDifferntFactor
+    }
+    modifier = {
+        ship_disengage_chance_mult = 0.05
+    }
+}

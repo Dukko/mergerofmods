@@ -9,6 +9,7 @@ col_ecu_mix = {
             uses_district_set = pdmachinecapital
             uses_district_set = pdmilarc
             uses_district_set = pdmachinecapital
+            uses_district_set = pdcorpoarc
         }
     }
     planet_modifier = {

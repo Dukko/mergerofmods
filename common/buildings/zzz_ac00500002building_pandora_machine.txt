@@ -1,0 +1,19 @@
+building_pandora_machine = {
+    can_build = no
+    can_demolish = no
+    can_be_ruined = no
+    can_be_disabled = no
+    resources = {
+        category = planet_buildings
+        cost = {
+        }
+        upkeep = {
+            minerals = 10
+        }
+        produces = {
+            engineering_research = 10
+        }
+    }
+    upgrades = {
+    }
+}

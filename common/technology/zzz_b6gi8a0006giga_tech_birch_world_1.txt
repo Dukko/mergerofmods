@@ -1,0 +1,24 @@
+giga_tech_birch_world_1 = {
+    cost = 150000
+    area = engineering
+    tier = 5
+    category = {
+        voidcraft
+    }
+    weight = 0
+    is_rare = yes
+    prereqfor_desc = {
+        hide_prereq_for_desc = ship
+        hide_prereq_for_desc = component
+        hide_prereq_for_desc = feature
+        hide_prereq_for_desc = resource
+        custom = {
+            title = "header_04_lud_insane"
+            desc = "header_04_lud_insane_desc"
+        }
+        custom = {
+            title = "allow_birch"
+            desc = "desc_birch"
+        }
+    }
+}

@@ -1,0 +1,16 @@
+Empyreal_Travel_Beacon_tech = {
+    cost = 30000
+    area = physics
+    tier = 3
+    category = {
+        particles
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "allow_Beacon"
+            desc = "desc_allow_Beacon"
+        }
+    }
+    is_rare = yes
+    weight = 0
+}

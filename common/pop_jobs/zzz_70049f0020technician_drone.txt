@@ -26,6 +26,22 @@ technician_drone = {
             }
             energy = 2
         }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_energy_grid
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_energy_nexus
+                }
+            }
+            energy = 2
+        }
         upkeep = {
             trigger = {
                 exists = owner

@@ -1,0 +1,41 @@
+tech_capital_productivity_2 = {
+    cost = @tier3cost3
+    area = society
+    tier = 3
+    category = {
+        statecraft
+    }
+    prerequisites = {
+        "tech_colonial_centralization"
+        "tech_capital_productivity_1"
+    }
+    weight = @tier2weight3
+    modifier = {
+        description = tech_capital_productivity_2_effect
+    }
+    weight_modifier = {
+        factor = 1
+        modifier = {
+            factor = 0.25
+            NOT = {
+                has_tradition = tr_prosperity_finish
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+GT_ship_battleship_alloys_cost_add = {
+    cost = @tier5cost1
+    area = engineering
+    tier = 5
+    is_rare = yes
+    category = {
+        voidcraft
+    }
+    prerequisites = {
+        "tech_starbase_5"
+    }
+    weight = @tier6weight3
+    modifier = {
+        ship_battleship_alloys_cost_add = -150
+    }
+    weight_modifier = {
+        factor = 0.5
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+}

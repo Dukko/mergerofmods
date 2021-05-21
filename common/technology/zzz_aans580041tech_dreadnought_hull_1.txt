@@ -1,0 +1,38 @@
+tech_dreadnought_hull_1 = {
+    cost = @tier5cost1
+    area = engineering
+    tier = 5
+    category = {
+        voidcraft
+    }
+    prerequisites = {
+        "tech_Dreadnought_1"
+    }
+    weight = @tier5weight1
+    modifier = {
+        shipsize_Dreadnought_hull_add = 900
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+    }
+    ai_weight = {
+        factor = 3
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+}

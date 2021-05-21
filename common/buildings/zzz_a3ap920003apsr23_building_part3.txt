@@ -1,0 +1,72 @@
+@apsr23part3cost_minerals = 2000
+@apsr23part3cost_time = 700
+@apsr23part3upkeep_energy = 7
+@apsr23part3upkeep_minerals = 5
+@apsr23part3job = 4
+apsr23_building_part3 = {
+    base_buildtime = @apsr23part3cost_time
+    icon = apsr23_building_part3
+    is_capped_by_modifier = no
+    category = manufacturing
+    can_build = no
+    potential = {
+        has_modifier = "apsr23_planet_modifier"
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_apsr23_processing_hive_add = @apsr23part3job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_apsr23_processing_machine_add = @apsr23part3job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_apsr23_processing_normal_add = @apsr23part3job
+        }
+    }
+    resources = {
+        category = planet_apsr_buildings
+        cost = {
+            minerals = @apsr23part3cost_minerals
+        }
+        upkeep = {
+            energy = @apsr23part3upkeep_energy
+            minerals = @apsr23part3upkeep_minerals
+        }
+    }
+    planet_modifier = {
+        planet_jobs_rare_crystals_produces_mult = 0.03
+        planet_jobs_volatile_motes_produces_mult = 0.03
+        planet_jobs_exotic_gases_produces_mult = 0.03
+    }
+    prerequisites = {
+        "tech_apsr23_building_part3"
+    }
+    allow = {
+        has_major_upgraded_capital = yes
+    }
+    ai_weight = {
+        weight = 50000
+    }
+}

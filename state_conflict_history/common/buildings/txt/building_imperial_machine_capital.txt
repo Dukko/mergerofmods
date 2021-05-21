@@ -29,7 +29,7 @@ building_imperial_machine_capital = {
         building_ancient_palace
     }
     allow = {
-        num_pops >= 80
+        num_pops >= 50
     }
     prerequisites = {
     }

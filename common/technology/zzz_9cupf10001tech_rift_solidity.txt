@@ -1,0 +1,36 @@
+tech_rift_solidity = {
+    area = physics
+    cost = @tier7cost2
+    tier = 7
+    category = {
+        particles
+    }
+    is_rare = no
+    weight = @tier7weight2
+    prerequisites = {
+        "tech_artifical_physics"
+    }
+    modifier = {
+        country_physics_tech_research_speed = 0.1
+    }
+    weight_modifier = {
+        factor = 1.25
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 2
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+}

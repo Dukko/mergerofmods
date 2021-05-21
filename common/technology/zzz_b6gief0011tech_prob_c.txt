@@ -1,0 +1,24 @@
+tech_prob_c = {
+    area = physics
+    cost = @tier7cost3
+    weight = 0
+    tier = 5
+    is_rare = yes
+    is_reverse_engineerable = no
+    category = {
+        field_manipulation
+    }
+    modifier = {
+        all_technology_research_speed = 0.05
+    }
+    ai_weight = {
+        factor = @ehof_t1_weight
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+}

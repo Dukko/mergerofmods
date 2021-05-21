@@ -1,0 +1,16 @@
+decadent_engineering = {
+    cost = 45000
+    area = engineering
+    tier = 3
+    category = {
+        industry
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "allow_Engineers"
+            desc = "desc_allow_Engineers"
+        }
+    }
+    is_rare = yes
+    weight = 0
+}

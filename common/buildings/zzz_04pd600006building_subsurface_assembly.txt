@@ -1,0 +1,83 @@
+building_subsurface_assembly = {
+    base_buildtime = 360
+    is_capped_by_modifier = yes
+    category = resource
+    potential = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+            planet = {
+                has_building = building_robot_assembly_plant
+            }
+        }
+        modifier = {
+            job_techno_eng_add = 2
+            job_techno_eng_per_pop = 0.05
+            planet_pop_assembly_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+            planet = {
+                NOT = {
+                    has_building = building_robot_assembly_plant
+                }
+            }
+        }
+        modifier = {
+            job_techno_eng_add = 2
+            job_techno_eng_per_pop = 0.05
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_techno_drone_add = 2
+            job_techno_drone_per_pop = 0.05
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_techno_drone_add = 2
+            job_techno_drone_per_pop = 0.05
+            planet_pop_assembly_add = 2
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 400
+        }
+        upkeep = {
+            energy = 1
+        }
+    }
+    ai_weight = {
+        weight = 10
+    }
+}

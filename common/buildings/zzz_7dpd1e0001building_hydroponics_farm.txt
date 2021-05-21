@@ -78,6 +78,16 @@ building_hydroponics_farm = {
                     }
                 }
             }
+            planet = {
+                free_building_slots = 0
+                owner = {
+                    is_ai = yes
+                    has_monthly_income = {
+                        resource = food
+                        value > 250
+                    }
+                }
+            }
         }
     }
     triggered_planet_modifier = {
@@ -96,36 +106,11 @@ building_hydroponics_farm = {
         potential = {
             exists = owner
             owner = {
-                is_gestalt = no
-                is_fallen_empire_spiritualist = no
-            }
-            has_active_building = building_food_processing_center
-        }
-        modifier = {
-            job_farmer_add = 1
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
                 is_fallen_empire_spiritualist = yes
             }
         }
         modifier = {
             job_fe_acolyte_farm_add = @b1_jobs
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_fallen_empire_spiritualist = yes
-            }
-            has_active_building = building_food_processing_center
-        }
-        modifier = {
-            job_fe_acolyte_farm_add = 1
         }
     }
     triggered_planet_modifier = {
@@ -148,18 +133,6 @@ building_hydroponics_farm = {
         }
         modifier = {
             job_agri_drone_add = @b1_jobs
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_gestalt = yes
-            }
-            has_active_building = building_food_processing_center
-        }
-        modifier = {
-            job_agri_drone_add = 1
         }
     }
     resources = {
@@ -204,7 +177,7 @@ building_hydroponics_farm = {
     }
     upgrades = {
         "eb_hydrofarm2"
-         building_eutab_hydroponics_tower
+        building_eutab_hydroponics_tower
     }
     ai_resource_production = {
         food = 1

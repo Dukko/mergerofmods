@@ -1,0 +1,25 @@
+tech_extensive_analysis = {
+    cost = @tier4cost2
+    area = society
+    tier = 4
+    category = {
+        statecraft
+    }
+    prerequisites = {
+        "tech_vaccine_tests"
+    }
+    weight = @tier4weight3
+    is_rare = yes
+    potential = {
+        has_origin = origin_pandemic
+    }
+    modifier = {
+        description = ps_tech_1
+    }
+    weight_modifier = {
+        factor = 0
+    }
+    ai_weight = {
+        factor = 5
+    }
+}

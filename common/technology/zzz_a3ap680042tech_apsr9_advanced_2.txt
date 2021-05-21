@@ -1,0 +1,63 @@
+@apsr_advanced_2_cost = 50000
+@apsr_advanced_2_weight = 3
+tech_apsr9_advanced_2 = {
+    icon = tech_apsr9_advanced_1
+    cost = @apsr_advanced_2_cost
+    area = physics
+    tier = 4
+    category = {
+        field_manipulation
+    }
+    prerequisites = {
+        "tech_apsr9_upgrade_3"
+        "tech_apsr9_advanced_1"
+    }
+    weight = @apsr_advanced_2_weight
+    is_rare = yes
+    prereqfor_desc = {
+        custom = {
+            title = "TECH_APSR_ADVANCED_TITLE"
+            desc = "TECH_APSR_ADVANCED_DESC"
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_deposit = apsr9_deposit
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            any_owned_planet = {
+                OR = {
+                    has_planet_flag = apsr9_boom_in_step_1
+                    has_planet_flag = apsr9_boom_in_step_2
+                    has_planet_flag = apsr9_boom_in_step_3
+                    has_planet_flag = apsr9_boom_in_step_4
+                }
+            }
+        }
+        modifier = {
+            factor = 5
+            has_origin = apsr_origin_unique_capital
+        }
+        modifier = {
+            factor = 0
+            has_global_flag = apsr_advanced_count_1
+        }
+        modifier = {
+            factor = 0.5
+            has_global_flag = apsr_advanced_factor_050
+        }
+        modifier = {
+            factor = 2
+            has_global_flag = apsr_advanced_factor_200
+        }
+    }
+    ai_weight = {
+        factor = 150
+    }
+}

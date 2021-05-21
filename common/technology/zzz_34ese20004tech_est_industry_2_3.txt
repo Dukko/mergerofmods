@@ -1,0 +1,44 @@
+@tier3cost2 = 5000
+@tier4weight2 = 40
+@ap_technological_ascendancy_rare_tech = 1.5
+tech_est_industry_2_3 = {
+    cost = @tier3cost2
+    area = engineering
+    tier = 3
+    is_rare = yes
+    category = {
+        industry
+    }
+    weight = @tier4weight2
+    modifier = {
+        shipclass_mining_station_build_cost_mult = -0.2
+    }
+    weight_modifier = {
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 0
+            Not = {
+                has_tradition = tr_est_industry_2
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+}

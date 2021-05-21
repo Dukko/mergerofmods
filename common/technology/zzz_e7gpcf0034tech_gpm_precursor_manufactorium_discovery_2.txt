@@ -1,0 +1,17 @@
+tech_gpm_precursor_manufactorium_discovery_2 = {
+    area = physics
+    cost = @tier2cost1
+    category = {
+        field_manipulation
+    }
+    tier = 2
+    is_rare = yes
+    ai_update_type = all
+    weight = 1
+    modifier = {
+        planet_jobs_consumer_goods_produces_mult = 0.12
+    }
+    weight_modifier = {
+        factor = 0
+    }
+}

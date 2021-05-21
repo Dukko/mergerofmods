@@ -45,7 +45,7 @@ building_fortress = {
             }
         }
         modifier = {
-            job_soldier_add = 3
+            job_soldier_add = @b2_jobs
         }
     }
     triggered_planet_modifier = {
@@ -67,7 +67,7 @@ building_fortress = {
             }
         }
         modifier = {
-            job_warrior_drone_add = 3
+            job_warrior_drone_add = @b2_jobs
         }
     }
     resources = {

@@ -1,0 +1,56 @@
+tech_repeatable_bio_synergy = {
+    area = society
+    cost = @tier6cost2
+    cost_per_level = @tier5cost2
+    tier = 6
+    category = {
+        biology
+    }
+    levels = -1
+    prerequisites = {
+        "tech_bio_materials"
+    }
+    weight = @tier6weight2
+    weight_modifier = {
+        factor = @repatableTechFactor
+        modifier = {
+            weight = 5
+            any_owned_planet = {
+                num_buildings = {
+                    type = building_bio_structorizer
+                    value > 1
+                }
+            }
+        }
+        modifier = {
+            factor = 1.5
+            has_technology = tech_repeatable_bio_synergy
+        }
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 5
+            any_owned_planet = {
+                num_buildings = {
+                    type = building_bio_structorizer
+                    value > 1
+                }
+            }
+        }
+        modifier = {
+            factor = 1.5
+            has_technology = tech_repeatable_bio_synergy
+        }
+    }
+    weight_groups = {
+        repeatable
+    }
+    mod_weight_if_group_picked = {
+        repeatable = 0.01
+    }
+    modifier = {
+        planet_bio_engineer_alloys_produces_add = 1
+        planet_bio_engineer_food_upkeep_add = 3
+    }
+}

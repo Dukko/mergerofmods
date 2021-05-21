@@ -1,0 +1,28 @@
+@apsr1part3cost_minerals = 10000
+@apsr1part3cost_time = 1500
+@apsr1part3upkeep_fake = 5
+apsr1_building_part3_fake = {
+    base_buildtime = @apsr1part3cost_time
+    icon = "apsr1_building_part3"
+    is_capped_by_modifier = no
+    category = government
+    can_build = no
+    potential = {
+        has_modifier = "apsr1_planet_modifier"
+    }
+    resources = {
+        category = planet_apsr_buildings
+        cost = {
+            minerals = @apsr1part3cost_minerals
+        }
+        upkeep = {
+            energy = @apsr1part3upkeep_fake
+        }
+    }
+    allow = {
+        has_major_upgraded_capital = yes
+    }
+    ai_weight = {
+        weight = 50000
+    }
+}

@@ -1,0 +1,46 @@
+nhsc_tech_advanced_thrusters_1 = {
+    area = engineering
+    category = {
+        propulsion
+    }
+    tier = 5
+    cost = @tier5cost1
+    weight = @tier5weight1
+    ai_update_type = all
+    prerequisites = {
+        "nhsc_tech_central_research_bureau"
+        "tech_thrusters_4"
+    }
+    prereqfor_desc = {
+        hide_prereq_for_desc = component
+        custom = {
+            title = "NHSC_TECH_UNLOCK_ADV_THRUSTERS_1_TITLE"
+            desc = "NHSC_TECH_UNLOCK_ADV_THRUSTERS_1_DESC"
+        }
+    }
+    potential = {
+        NOT = {
+            has_global_flag = ESC_thrusters_forbidden
+        }
+    }
+    weight_modifier = {
+        factor = 1.25
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_propulsion"
+            }
+        }
+    }
+    ai_weight = {
+        factor = @ESC_AI_tech_weight_multiplier
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_propulsion"
+            }
+        }
+    }
+}

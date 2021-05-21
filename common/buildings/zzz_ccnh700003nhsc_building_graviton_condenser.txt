@@ -1,0 +1,176 @@
+@AI_build_additional_building_threshold = 2
+@AI_no_build_additional_building_threshold = 3
+nhsc_building_graviton_condenser = {
+    base_buildtime = 540
+    icon = nhsc_building_graviton_condenser
+    category = manufacturing
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 600
+            sr_dark_matter = 25
+        }
+        upkeep = {
+            energy = 5
+            sr_dark_matter = 1
+        }
+    }
+    potential = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+        NOT = {
+            has_global_flag = ESC_weapons_gravity_forbidden
+        }
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_esc_gravity_manipulator_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_esc_gravity_manipulator_drone_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_esc_gravity_manipulator_unit_add = 2
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = job_esc_gravity_manipulator_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = job_esc_gravity_manipulator_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = job_esc_gravity_manipulator_unit_effect_desc
+    }
+    prerequisites = {
+        "nhsc_tech_gravity_manipulation"
+    }
+    on_queued = {
+        owner = {
+            set_country_flag = nhsc_queued_graviton_condenser
+        }
+    }
+    on_unqueued = {
+        owner = {
+            remove_country_flag = nhsc_queued_graviton_condenser
+        }
+    }
+    on_built = {
+        owner = {
+            set_country_flag = nhsc_has_graviton_condenser
+            remove_country_flag = nhsc_queued_graviton_condenser
+            set_timed_country_flag = {
+                flag = nhsc_just_built_graviton_condenser
+                days = 35
+            }
+        }
+    }
+    on_destroy = {
+        planet_event = {
+            id = nhsc_buildings.30
+            days = 0
+        }
+    }
+    ai_weight = {
+        weight = 0.5
+        modifier = {
+            factor = 0
+            owner = {
+                is_normal_empire_or_materialist_fe_nhsc = no
+            }
+        }
+        modifier = {
+            factor = 0.01
+            owner = {
+                has_monthly_income = {
+                    resource = sr_dark_matter
+                    value < 1
+                }
+            }
+        }
+        modifier = {
+            factor = 100
+            owner = {
+                NOR = {
+                    has_country_flag = nhsc_queued_graviton_condenser
+                    has_country_flag = nhsc_has_graviton_condenser
+                }
+            }
+        }
+        modifier = {
+            factor = 20
+            owner = {
+                NOR = {
+                    has_country_flag = nhsc_queued_graviton_condenser
+                    has_country_flag = nhsc_just_built_graviton_condenser
+                }
+                has_monthly_income = {
+                    resource = esc_gravitic_anomaly
+                    value < @AI_build_additional_building_threshold
+                }
+            }
+        }
+        modifier = {
+            factor = 0.001
+            owner = {
+                has_monthly_income = {
+                    resource = esc_gravitic_anomaly
+                    value > @AI_no_build_additional_building_threshold
+                }
+            }
+        }
+    }
+    ai_resource_production = {
+        esc_gravitic_anomaly = 3
+        trigger = {
+            always = yes
+        }
+    }
+}

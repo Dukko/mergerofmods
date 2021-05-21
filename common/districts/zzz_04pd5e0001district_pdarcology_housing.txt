@@ -2,10 +2,22 @@ district_pdarcology_housing = {
     base_buildtime = 600
     is_capped_by_modifier = no
     show_on_uncolonized = {
-        uses_district_set = pdecocity
+        OR = {
+            uses_district_set = pdecocity
+            uses_district_set = pdcorpoarc
+            uses_district_set = pdmilarc
+            uses_district_set = pdpalacearc
+            uses_district_set = pdnecropolis
+        }
     }
     potential = {
-        uses_district_set = pdecocity
+        OR = {
+            uses_district_set = pdecocity
+            uses_district_set = pdcorpoarc
+            uses_district_set = pdmilarc
+            uses_district_set = pdpalacearc
+            uses_district_set = pdnecropolis
+        }
     }
     conversion_ratio = 1
     convert_to = {
@@ -92,7 +104,7 @@ district_pdarcology_housing = {
             }
         }
         modifier = {
-            job_clerk_add = 6
+            job_clerk_add = 3
         }
     }
     triggered_planet_modifier = {
@@ -103,7 +115,7 @@ district_pdarcology_housing = {
             }
         }
         modifier = {
-            job_clerk_add = 6
+            job_clerk_add = 3
         }
     }
     triggered_desc = {

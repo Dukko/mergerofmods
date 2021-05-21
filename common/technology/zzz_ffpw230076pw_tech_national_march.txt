@@ -1,0 +1,58 @@
+pw_tech_national_march = {
+    area = society
+    category = {
+        military_theory
+    }
+    tier = 4
+    cost = @tier5cost2
+    prerequisites = {
+        pw_tech_parades_of_supremacy
+    }
+    weight = @tier4weight1
+    potential = {
+        is_gestalt = no
+        is_militarist = yes
+        has_valid_civic = civic_nationalistic_zeal
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = society
+                has_trait = leader_trait_expertise_military_theory
+            }
+        }
+        modifier = {
+            factor = 0
+            is_militarist = no
+        }
+        modifier = {
+            factor = 2.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = pw_ap_planetary_wonders
+        }
+        modifier = {
+            factor = 3
+            any_owned_planet = {
+                has_active_building = pw_building_martial_avenue
+            }
+        }
+        modifier = {
+            factor = 0
+            is_at_war = yes
+        }
+    }
+    ai_weight = {
+        factor = 10
+        modifier = {
+            factor = 2
+            research_leader = {
+                area = society
+                has_trait = leader_trait_expertise_military_theory
+            }
+        }
+    }
+}

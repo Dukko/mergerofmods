@@ -1,0 +1,33 @@
+building_crisis_cache = {
+    base_buildtime = 900
+    base_cap_amount = 1
+    can_demolish = no
+    can_be_ruined = no
+    can_be_disabled = no
+    can_build = no
+    potential = {
+        owner = {
+            has_country_flag = flag_that_doesnt_exist
+        }
+    }
+    allow = {
+    }
+    planet_modifier = {
+        planet_researchers_produces_mult = 0.1
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 1000
+        }
+        upkeep = {
+            energy = 30
+        }
+        produces = {
+            minor_artifacts = 1
+        }
+    }
+    ai_weight = {
+        factor = 0
+    }
+}

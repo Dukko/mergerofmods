@@ -17,8 +17,40 @@ fabricator = {
         produces = {
             alloys = 4
         }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_foundry_2
+                }
+            }
+            alloys = 1
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_foundry_3
+                }
+            }
+            alloys = 2
+        }
         upkeep = {
             minerals = 8
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    has_active_building = building_foundry_2
+                }
+            }
+            minerals = 2
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    has_active_building = building_foundry_3
+                }
+            }
+            minerals = 4
         }
         upkeep = {
             trigger = {

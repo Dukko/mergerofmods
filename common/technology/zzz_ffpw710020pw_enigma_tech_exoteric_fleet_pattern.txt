@@ -1,0 +1,76 @@
+pw_enigma_tech_exoteric_fleet_pattern = {
+    area = society
+    category = {
+        military_theory
+    }
+    cost = @pw_enigma_tech_cost
+    tier = 5
+    prerequisites = {
+        pw_tech_metaphysical_singularity
+        tech_society_3
+    }
+    weight = @tier5weight2
+    is_rare = yes
+    potential = {
+        any_owned_planet = {
+            has_active_building = pw_building_enigma_engine
+        }
+    }
+    modifier = {
+        country_command_limit_add = 50
+    }
+    weight_modifier = {
+        factor = 0.5
+        modifier = {
+            factor = 1.5
+            OR = {
+                research_leader = {
+                    area = society
+                    has_trait = leader_trait_expertise_biology
+                }
+                research_leader = {
+                    area = society
+                    has_trait = leader_trait_curator
+                }
+                research_leader = {
+                    area = society
+                    has_trait = leader_trait_maniacal
+                }
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_enigmatic_engineering
+        }
+        modifier = {
+            factor = @federation_perk_factor
+            has_federation = yes
+            federation = {
+                has_federation_perk = rare_tech_boost
+                any_member = {
+                    has_technology = pw_enigma_tech_bio_frequency_emitters
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            any_owned_species = {
+                is_organic_species = yes
+            }
+        }
+    }
+    ai_weight = {
+        factor = 10
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = leader_trait_expertise_military_theory
+            }
+        }
+    }
+}

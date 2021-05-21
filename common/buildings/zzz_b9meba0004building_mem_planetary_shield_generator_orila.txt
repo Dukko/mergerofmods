@@ -1,0 +1,56 @@
+building_mem_planetary_shield_generator_orila = {
+    icon = "building_mem_orila_shield_generator"
+    can_build = no
+    can_demolish = yes
+    position_priority = 100
+    category = army
+    resources = {
+        category = planet_buildings
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_soldier_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_warrior_drone_add = 1
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_warrior_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        text = job_soldier_effect_desc
+    }
+    planet_modifier = {
+        planet_orbital_bombardment_damage = -0.7
+    }
+    ai_weight = {
+        weight = 100000
+    }
+}

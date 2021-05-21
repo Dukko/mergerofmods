@@ -1,0 +1,57 @@
+@wonder_build_time = 1080
+@wonder_build_cost = 4000
+@wonder_influence_cost = 200
+@wonder_unity_prod = 2
+building_est_aesthetics_5_wonder_monument = {
+    icon = "building_est_aesthetics_5_wonder_monument"
+    base_buildtime = @wonder_build_time
+    base_cap_amount = 1
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @wonder_build_cost
+            influence = @wonder_influence_cost
+        }
+        produces = {
+            unity = @wonder_unity_prod
+        }
+    }
+    planet_modifier = {
+        planet_jobs_unity_produces_mult = 0.1
+    }
+    country_modifier = {
+        pop_government_ethic_attraction = 0.05
+    }
+    allow = {
+        has_major_upgraded_capital = yes
+        num_pops >= 100
+    }
+    potential = {
+        planet = {
+            NOT = {
+                has_building = building_est_aesthetics_5_wonder_garden
+                has_building_construction = building_est_aesthetics_5_wonder_garden
+                has_building = building_est_aesthetics_5_wonder_stage
+                has_building_construction = building_est_aesthetics_5_wonder_stage
+                has_building = building_est_aesthetics_5_wonder_halls
+                has_building_construction = building_est_aesthetics_5_wonder_halls
+                has_building = building_est_aesthetics_5_wonder_museum
+                has_building_construction = building_est_aesthetics_5_wonder_museum
+            }
+        }
+        owner = {
+            has_non_swapped_tradition = tr_est_aesthetics_5
+            Or = {
+                Not = {
+                    has_country_flag = flag_est_aesthetics_5_built_monument
+                }
+                root = {
+                    has_building = building_est_aesthetics_5_wonder_monument
+                }
+            }
+        }
+    }
+    ai_weight = {
+        factor = 30
+    }
+}

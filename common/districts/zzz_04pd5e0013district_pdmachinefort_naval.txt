@@ -1,0 +1,64 @@
+@pdarcjobs = 6
+district_pdmachinefort_naval = {
+    base_buildtime = 600
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        OR = {
+            uses_district_set = pdmachinefort
+            uses_district_set = pdmachinecapital
+        }
+    }
+    potential = {
+        OR = {
+            uses_district_set = pdmachinefort
+            uses_district_set = pdmachinecapital
+        }
+        owner = {
+            exists = owner
+            is_machine_empire = yes
+        }
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_city
+        district_nexus
+        district_hive
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = 1000
+            volatile_motes = 50
+        }
+        upkeep = {
+            energy = 5
+            volatile_motes = 1
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 10
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_naval_admin_hive_add = @pdarcjobs
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = job_naval_admin_hive_effect_desc
+    }
+    ai_weight = {
+        weight = 5
+    }
+}

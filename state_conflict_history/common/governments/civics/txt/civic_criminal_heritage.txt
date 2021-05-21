@@ -16,6 +16,7 @@ civic_criminal_heritage = {
     }
     modifier = {
         spy_network_daily_value_mult = 0.2
+        intel_decryption_add = 1
     }
     description = "civic_tooltip_criminal_heritage_effects"
 }

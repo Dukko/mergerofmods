@@ -1,0 +1,75 @@
+@apsr16part2cost_minerals = 1000
+@apsr16part2cost_time = 500
+@apsr16part2upkeep_energy = 5
+@apsr16part2upkeep_minerals = 3
+@apsr16part2job = 2
+apsr16_building_part2 = {
+    base_buildtime = @apsr16part2cost_time
+    icon = apsr16_building_part2
+    is_capped_by_modifier = no
+    category = research
+    can_build = no
+    potential = {
+        has_modifier = "apsr16_planet_modifier"
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_apsr16_scientist_hive_add = @apsr16part2job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_apsr16_scientist_machine_add = @apsr16part2job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_apsr16_scientist_normal_add = @apsr16part2job
+        }
+    }
+    resources = {
+        category = planet_apsr_buildings
+        cost = {
+            minerals = @apsr16part2cost_minerals
+        }
+        upkeep = {
+            energy = @apsr16part2upkeep_energy
+            minerals = @apsr16part2upkeep_minerals
+        }
+    }
+    planet_modifier = {
+        planet_jobs_society_research_produces_mult = 0.02
+        planet_jobs_engineering_research_produces_mult = 0.02
+        planet_jobs_physics_research_produces_mult = 0.02
+    }
+    upgrades = {
+        "apsr16_building_part3"
+    }
+    prerequisites = {
+        "tech_apsr16_building_part2"
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    ai_weight = {
+        weight = 50000
+    }
+}

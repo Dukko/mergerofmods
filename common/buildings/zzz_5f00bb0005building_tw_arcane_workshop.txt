@@ -1,0 +1,88 @@
+building_tw_arcane_workshop = {
+    base_buildtime = 480
+    can_be_ruined = no
+    category = government
+    potential = {
+        owner = {
+            OR = {
+                has_valid_civic = civic_arcane_precursor
+            }
+        }
+    }
+    allow = {
+    }
+    destroy_trigger = {
+        NOT = {
+            owner = {
+                OR = {
+                    has_valid_civic = civic_kaldorei_castes
+                    has_valid_civic = civic_arcane_precursor
+                }
+            }
+        }
+    }
+    planet_modifier = {
+        job_highborne_artificer_add = 3
+        job_kaldorei_artisan_per_pop = 0.05
+    }
+    triggered_desc = {
+        text = kaldorei_artisan_effect_desc
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 500
+            arcane_power_tw = 100
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_ai = no
+                }
+            }
+            minerals = 500
+        }
+        upkeep = {
+            energy = 3
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_ai = no
+                }
+            }
+            energy = 3
+        }
+        produces = {
+            consumer_goods = 10
+        }
+    }
+    triggered_desc = {
+    }
+    upgrades = {
+    }
+    ai_weight = {
+        weight = 10000
+        modifier = {
+            factor = 5
+            owner = {
+                has_monthly_income = {
+                    resource = consumer_goods
+                    value < 5
+                }
+                has_monthly_income = {
+                    resource = minerals
+                    value > 6
+                }
+            }
+        }
+    }
+    ai_resource_production = {
+        consumer_goods = 30
+        trigger = {
+            always = yes
+        }
+    }
+}

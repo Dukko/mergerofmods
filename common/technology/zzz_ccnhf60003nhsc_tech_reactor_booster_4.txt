@@ -1,0 +1,47 @@
+@NSC_active_flag = "has_nsc_active"
+nhsc_tech_reactor_booster_4 = {
+    area = physics
+    category = {
+        particles
+    }
+    tier = 4
+    cost = @tier4cost2
+    weight = @tier4weight2
+    ai_update_type = all
+    prerequisites = {
+        "tech_zero_point_power"
+        "tech_reactor_boosters_3"
+        "nhsc_tech_central_research_bureau"
+    }
+    potential = {
+        NOT = {
+            has_global_flag = ESC_aux_forbidden
+        }
+        NOT = {
+            has_global_flag = ESC_reactors_forbidden
+        }
+        NOT = {
+            has_global_flag = @NSC_active_flag
+        }
+    }
+    weight_modifier = {
+        factor = 1.5
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+    ai_weight = {
+        factor = @ESC_AI_tech_weight_multiplier
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+}

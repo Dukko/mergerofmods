@@ -1,4 +1,4 @@
-@juggernaut_power_2 = 1450
+@juggernaut_power_2 = 2170
 utility_component_template = {
     key = "JUGGERNAUT_FUSION_REACTOR"
     size = large

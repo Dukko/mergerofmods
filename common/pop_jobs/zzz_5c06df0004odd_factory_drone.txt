@@ -18,8 +18,30 @@ odd_factory_drone = {
         produces = {
             alloys = 4
         }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_foundry_2
+                }
+            }
+            alloys = 1
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_foundry_3
+                }
+            }
+            alloys = 2
+        }
     }
     weight = {
         weight = 999
+        modifier = {
+            factor = 0
+            planet = {
+                num_pops < 2
+            }
+        }
     }
 }

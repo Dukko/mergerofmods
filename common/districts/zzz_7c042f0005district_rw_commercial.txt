@@ -59,18 +59,48 @@ district_rw_commercial = {
         }
     }
     triggered_planet_modifier = {
+        planet_housing_add = 10
+        job_merchant_add = 2
+        job_clerk_add = 6
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_global_flag = SPBM_enabled
+                is_regular_empire = yes
+            }
+            planet = {
+                OR = {
+                    has_deposit = d_shattered_ring_superblocker
+                    has_deposit = d_shattered_ring_superblocker2
+                }
+            }
+        }
         modifier = {
-            planet_housing_add = 10
+            job_merchant_add = -1
+            job_clerk_add = -5
+            planet_housing_add = -7
         }
     }
     triggered_planet_modifier = {
-        modifier = {
-            job_merchant_add = 2
+        potential = {
+            exists = owner
+            owner = {
+                has_global_flag = SPBM_enabled
+                is_regular_empire = yes
+            }
+            planet = {
+                OR = {
+                    has_deposit = d_shattered_ring_superblocker3
+                    has_deposit = d_shattered_ring_superblocker4
+                }
+            }
         }
-    }
-    triggered_planet_modifier = {
         modifier = {
-            job_clerk_add = 10
+            job_merchant_add = -1
+            job_clerk_add = -4
+            planet_housing_add = -5
         }
     }
     triggered_desc = {
@@ -88,45 +118,40 @@ district_rw_commercial = {
         text = "job_merchant_effect_desc"
     }
     triggered_desc = {
-        text = "job_clerk_effect_desc"
-    }
-    ai_weight = {
-        weight = 0
-        modifier = {
-            weight = 250
+        trigger = {
+            exists = owner
             owner = {
-                has_monthly_income = {
-                    resource = energy
-                    value < 200
+                has_global_flag = SPBM_enabled
+            }
+            planet = {
+                OR = {
+                    has_deposit = d_shattered_ring_superblocker
+                    has_deposit = d_shattered_ring_superblocker2
                 }
             }
         }
-        modifier = {
-            factor = 0.01
-            OR = {
-                planet = {
-                    has_district = district_rw_mining
-                }
-                planet = {
-                    has_district = district_rw_science
-                }
-                planet = {
-                    has_district = district_rw_farming
-                }
-                planet = {
-                    has_district = district_rw_consumer
-                }
-                planet = {
-                    has_district = district_rw_alloys
-                }
-                planet = {
-                    has_district = district_rw_leisure
-                }
-                planet = {
-                    has_district = district_rw_quberine
+        text = shattered_ring_superblocker_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                has_global_flag = SPBM_enabled
+            }
+            planet = {
+                OR = {
+                    has_deposit = d_shattered_ring_superblocker3
+                    has_deposit = d_shattered_ring_superblocker4
                 }
             }
         }
+        text = shattered_ring_superblocker2_desc
+    }
+    triggered_desc = {
+        text = job_merchant_effect_desc
+    }
+    triggered_desc = {
+        text = job_clerk_effect_desc
     }
     ai_resource_production = {
         energy = 10

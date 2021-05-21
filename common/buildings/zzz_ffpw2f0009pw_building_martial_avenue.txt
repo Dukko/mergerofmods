@@ -1,0 +1,466 @@
+pw_building_martial_avenue = {
+    base_buildtime = @pw_building_buildtime
+    position_priority = 125
+    category = army
+    base_cap_amount = 1
+    can_be_ruined = no
+    prerequisites = {
+        pw_tech_parades_of_supremacy
+    }
+    potential = {
+        exists = owner
+        owner = {
+            is_gestalt = no
+        }
+        OR = {
+            NOT = {
+                is_planet_class = pc_habitat
+            }
+            owner = {
+                has_ascension_perk = ap_voidborn
+            }
+        }
+    }
+    allow = {
+        owner = {
+            is_militarist = yes
+        }
+        has_major_upgraded_capital = yes
+        free_district_slots > 0
+        pw_can_build_planetary_wonder = yes
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @pw_building_cost
+            volatile_motes = @pw_building_cost_rare
+        }
+        upkeep = {
+            energy = @pw_building_upkeep_expensive
+            volatile_motes = @pw_building_upkeep_rare
+        }
+    }
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            owner = {
+                is_gestalt = yes
+            }
+            owner = {
+                is_militarist = no
+            }
+        }
+    }
+    convert_to = {
+        building_dread_encampment
+        building_fortress
+        building_military_academy
+        building_hive_cluster
+        building_simulation_2
+    }
+    planet_modifier = {
+        planet_max_districts_add = -1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_at_war = yes
+            }
+        }
+        modifier = {
+            pop_happiness = 0.25
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_militarist = yes
+            }
+        }
+        modifier = {
+            job_merchant_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_militarist = yes
+            }
+            owner = {
+                is_megacorp = no
+            }
+        }
+        modifier = {
+            job_administrator_add = 1
+            job_culture_worker_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_militarist = yes
+            }
+            owner = {
+                is_megacorp = yes
+            }
+        }
+        modifier = {
+            job_executive_add = 1
+            job_manager_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_militarist = yes
+                NOT = {
+                    has_valid_civic = civic_warrior_culture
+                }
+            }
+        }
+        modifier = {
+            job_entertainer_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_militarist = yes
+                has_valid_civic = civic_warrior_culture
+            }
+        }
+        modifier = {
+            job_duelist_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_militarist = yes
+                NOT = {
+                    has_ascension_perk = ap_mind_over_matter
+                }
+            }
+        }
+        modifier = {
+            job_enforcer_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_militarist = yes
+                has_ascension_perk = ap_mind_over_matter
+            }
+        }
+        modifier = {
+            job_telepath_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_militarist = yes
+                NOT = {
+                    has_valid_civic = civic_reanimated_armies
+                }
+            }
+        }
+        modifier = {
+            job_soldier_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_militarist = yes
+                has_valid_civic = civic_reanimated_armies
+            }
+        }
+        modifier = {
+            job_soldier_add = 1
+            job_necromancer_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_edict = pw_ambition_monumentality
+            }
+        }
+        modifier = {
+            planet_stability_add = @pw_stability_production
+        }
+    }
+    triggered_desc = {
+        text = pw_planet_wonder_lb
+    }
+    triggered_desc = {
+        text = pw_martial_avenue_tooltip
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_militarist = yes
+            }
+        }
+        text = job_merchant_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_militarist = yes
+            }
+            owner = {
+                is_megacorp = no
+            }
+        }
+        text = job_administrator_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_militarist = yes
+            }
+            owner = {
+                is_megacorp = yes
+            }
+        }
+        text = job_executive_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_militarist = yes
+            }
+            NOT = {
+                owner = {
+                    has_valid_civic = civic_warrior_culture
+                }
+            }
+        }
+        text = job_entertainer_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_militarist = yes
+            }
+            owner = {
+                has_valid_civic = civic_warrior_culture
+            }
+        }
+        text = job_duelist_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_militarist = yes
+            }
+            NOT = {
+                owner = {
+                    has_ascension_perk = ap_mind_over_matter
+                }
+            }
+        }
+        text = job_enforcer_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_militarist = yes
+            }
+            owner = {
+                has_ascension_perk = ap_mind_over_matter
+            }
+        }
+        text = job_telepath_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_militarist = yes
+            }
+            owner = {
+                is_megacorp = no
+            }
+        }
+        text = job_culture_worker_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_militarist = yes
+            }
+            owner = {
+                is_megacorp = yes
+            }
+        }
+        text = job_manager_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_militarist = yes
+            }
+        }
+        text = job_soldier_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_militarist = yes
+            }
+            owner = {
+                has_valid_civic = civic_reanimated_armies
+            }
+        }
+        text = job_necromancer_effect_desc
+    }
+    on_built = {
+        planet_event = {
+            id = pw_wonder.2000
+        }
+    }
+    ai_weight = {
+        weight = 35
+        modifier = {
+            factor = 0
+            buildings_has_motes = no
+            building_relaxed_basic_income_check = no
+            owner = {
+                OR = {
+                    AND = {
+                        country_uses_consumer_goods = yes
+                        has_monthly_income = {
+                            resource = consumer_goods
+                            value < 5
+                        }
+                    }
+                    AND = {
+                        country_uses_consumer_goods = no
+                        has_monthly_income = {
+                            resource = minerals
+                            value < 75
+                        }
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0.25
+            free_building_slots < 1
+            free_district_slots < 1
+        }
+        modifier = {
+            factor = 0.25
+            pw_has_any_planetary_wonder = yes
+            exists = owner
+            NOT = {
+                owner = {
+                    has_ascension_perk = pw_ap_planetary_wonders
+                }
+            }
+            NOT = {
+                has_active_building = pw_building_martial_avenue
+            }
+            NOT = {
+                has_building_construction = pw_building_martial_avenue
+            }
+        }
+        modifier = {
+            factor = 2
+            exists = owner
+            owner = {
+                has_ethic = ethic_fanatic_militarist
+            }
+        }
+        modifier = {
+            factor = 1.25
+            exists = owner
+            owner = {
+                num_rivals > 0
+            }
+        }
+        modifier = {
+            factor = 1.25
+            exists = owner
+            owner = {
+                num_rivals > 1
+            }
+        }
+        modifier = {
+            factor = 1.5
+            exists = owner
+            owner = {
+                num_rivals > 2
+            }
+        }
+        modifier = {
+            factor = 1.15
+            owner = {
+                has_valid_civic = civic_warrior_culture
+            }
+        }
+        modifier = {
+            factor = 1.15
+            owner = {
+                has_valid_civic = civic_nationalistic_zeal
+            }
+        }
+        modifier = {
+            factor = 1.15
+            owner = {
+                has_valid_civic = civic_distinguished_admiralty
+            }
+        }
+        modifier = {
+            factor = 1.15
+            owner = {
+                has_valid_civic = civic_private_military_companies
+            }
+        }
+        modifier = {
+            factor = 1.15
+            owner = {
+                has_valid_civic = civic_naval_contractors
+            }
+        }
+        modifier = {
+            factor = 2
+            exists = owner
+            owner = {
+                is_at_war = yes
+            }
+        }
+        modifier = {
+            factor = 0.5
+            exists = owner
+            owner = {
+                is_at_war = no
+            }
+        }
+    }
+}

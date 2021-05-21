@@ -1,0 +1,36 @@
+GT_planet_researchers_society_research_produces_mult2 = {
+    cost = @tier3cost3
+    area = society
+    tier = 3
+    category = {
+        biology
+    }
+    prerequisites = {
+        "tech_society_2"
+        "GT_planet_researchers_society_research_produces_mult"
+    }
+    weight = @tier4weight3
+    modifier = {
+        planet_researchers_society_research_produces_add = 0.15
+        station_researchers_produces_mult = 0.15
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 5
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+    }
+}

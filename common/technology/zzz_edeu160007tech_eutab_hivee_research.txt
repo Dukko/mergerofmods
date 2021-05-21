@@ -1,0 +1,38 @@
+@tier3cost2 = 4000
+@tier3weight2 = 60
+tech_eutab_hivee_research = {
+    cost = @tier3cost2
+    area = physics
+    tier = 3
+    category = {
+        computing
+    }
+    prerequisites = {
+        "tech_physics_3"
+        "tech_engineering_3"
+        "tech_society_3"
+        "tech_eutab_hivee_pop"
+    }
+    weight = @tier3weight2
+    potential = {
+        has_authority = auth_hive_mind
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+}

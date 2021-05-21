@@ -1,0 +1,46 @@
+@tier4cost1 = 6000
+@tier4weight1 = 45
+tech_eutab_m_god_machine = {
+    cost = @tier4cost1
+    area = physics
+    tier = 4
+    category = {
+        computing
+    }
+    prerequisites = {
+        "tech_global_research_initiative"
+    }
+    weight = @tier4weight1
+    is_rare = yes
+    potential = {
+        has_authority = auth_machine_intelligence
+    }
+    modifier = {
+        planet_pop_assemblers_engineering_research_produces_add = 3
+        MACHINE_species_trait_points_add = 1
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = ap_technological_ascendancy
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+}

@@ -22,6 +22,7 @@ col_rural_gestalt = {
             uses_district_set = pdfloraforge
             uses_district_set = pdbiofort
             uses_district_set = pdmachinefort
+            uses_district_set = pdcorpoarc
         }
         exists = owner
         owner = {

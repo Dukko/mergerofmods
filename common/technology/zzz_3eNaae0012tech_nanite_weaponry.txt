@@ -1,0 +1,60 @@
+tech_nanite_weaponry = {
+    area = engineering
+    cost = 50000
+    tier = 3
+    is_dangerous = yes
+    category = {
+        computing
+    }
+    weight = 25
+    is_reverse_engineerable = no
+    prerequisites = {
+        "tech_orbital_nanite_shipyard"
+    }
+    prereqfor_desc = {
+        custom = {
+            title = tech_nanite_weaponry_effect
+            desc = tech_nanite_weaponry_effect_desc
+        }
+    }
+    ai_weight = {
+        factor = 0.1
+        modifier = {
+            factor = 0
+            OR = {
+                has_authority = auth_hive_mind
+                has_ethic = ethic_spiritualist
+                has_ethic = ethic_fanatic_spiritualist
+            }
+        }
+        modifier = {
+            factor = 0.35
+            OR = {
+                has_ethic = ethic_materialists
+                has_ethic = ethic_fanatic_materialists
+            }
+        }
+        modifier = {
+            factor = 1
+            AND = {
+                has_authority = auth_machine_intelligence
+                NOT = {
+                    has_origin = civic_harvester_nanites
+                }
+                NOT = {
+                    has_origin = civic_gateway_pursuer
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            AND = {
+                has_authority = auth_machine_intelligence
+                OR = {
+                    has_origin = civic_harvester_nanites
+                    has_origin = civic_gateway_pursuer
+                }
+            }
+        }
+    }
+}

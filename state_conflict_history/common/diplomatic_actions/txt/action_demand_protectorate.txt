@@ -51,10 +51,10 @@ action_demand_protectorate = {
             OR = {
                 is_same_species = from
                 NOT = {
-                    has_civic = civic_machine_terminator
+                    has_valid_civic = civic_machine_terminator
                 }
                 AND = {
-                    has_civic = civic_machine_terminator
+                    has_valid_civic = civic_machine_terminator
                     from = {
                         OR = {
                             has_country_flag = synthetic_empire
@@ -70,12 +70,12 @@ action_demand_protectorate = {
                 is_same_species = from
                 from = {
                     NOT = {
-                        has_civic = civic_machine_terminator
+                        has_valid_civic = civic_machine_terminator
                     }
                 }
                 AND = {
                     from = {
-                        has_civic = civic_machine_terminator
+                        has_valid_civic = civic_machine_terminator
                     }
                     OR = {
                         has_country_flag = synthetic_empire

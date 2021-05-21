@@ -13,12 +13,12 @@ mil_clerk = {
         worker_job_check_trigger = yes
     }
     planet_modifier = {
-        planet_amenities_add = 2
+        planet_amenities_add = 4
     }
     resources = {
         category = planet_jobs
         produces = {
-            unity = 1
+            unity = 2
         }
     }
     triggered_planet_modifier = {
@@ -38,17 +38,6 @@ mil_clerk = {
         }
         modifier = {
             planet_amenities_add = -0.4
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            OR = {
-                has_trait = trait_thrifty
-                has_trait = trait_nuumismatic_administration
-            }
-        }
-        modifier = {
-            trade_value_add = 0.5
         }
     }
     weight = {

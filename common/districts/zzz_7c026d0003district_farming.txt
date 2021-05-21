@@ -91,18 +91,6 @@ district_farming = {
         potential = {
             exists = owner
             owner = {
-                is_gestalt = yes
-            }
-            has_active_building = building_food_processing_center
-        }
-        modifier = {
-            job_agri_drone_add = 1
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
                 is_gestalt = no
                 is_fallen_empire_spiritualist = no
             }
@@ -115,36 +103,11 @@ district_farming = {
         potential = {
             exists = owner
             owner = {
-                is_gestalt = no
-                is_fallen_empire_spiritualist = no
-            }
-            has_active_building = building_food_processing_center
-        }
-        modifier = {
-            job_farmer_add = 1
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
                 is_fallen_empire_spiritualist = yes
             }
         }
         modifier = {
             job_fe_acolyte_farm_add = 2
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_fallen_empire_spiritualist = yes
-            }
-            has_active_building = building_food_processing_center
-        }
-        modifier = {
-            job_fe_acolyte_farm_add = 1
         }
     }
     triggered_planet_modifier = {

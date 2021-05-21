@@ -1,0 +1,27 @@
+namespace = ne
+country_event = {
+    id = ne.13
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        exists = from
+        from = {
+            NOT = {
+                has_communications = root
+            }
+        }
+    }
+    immediate = {
+        from = {
+            root = {
+                establish_communications_no_message = prev
+            }
+            country_event = {
+                id = ne.14
+                scopes = {
+                    from = root
+                }
+            }
+        }
+    }
+}

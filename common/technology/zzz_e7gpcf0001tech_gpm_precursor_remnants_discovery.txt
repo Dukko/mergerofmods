@@ -1,0 +1,17 @@
+tech_gpm_precursor_remnants_discovery = {
+    area = society
+    cost = @tier2cost1
+    category = {
+        new_worlds
+    }
+    tier = 2
+    is_rare = yes
+    ai_update_type = all
+    weight = 1
+    modifier = {
+        ship_anomaly_research_speed_mult = 0.2
+    }
+    weight_modifier = {
+        factor = 0
+    }
+}

@@ -1,0 +1,47 @@
+@tier4cost1 = 8000
+@tier4weight1 = 45
+tech_eutab_act_on_instinct = {
+    cost = @tier4cost1
+    area = society
+    tier = 4
+    category = {
+        military_theory
+    }
+    prerequisites = {
+        "tech_doctrine_navy_size_3"
+    }
+    weight = @tier4weight1
+    is_rare = yes
+    modifier = {
+        shipsize_titan_build_speed_mult = 0.2
+        shipsize_ion_cannon_build_speed_mult = 0.33
+        country_naval_cap_mult = 0.1
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                AND = {
+                    has_ascension_perk = ap_technological_ascendancy
+                    has_ascension_perk = ap_enigmatic_engineering
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+    }
+}

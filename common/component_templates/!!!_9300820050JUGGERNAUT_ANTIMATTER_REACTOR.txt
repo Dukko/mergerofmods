@@ -1,4 +1,4 @@
-@juggernaut_power_4 = 2500
+@juggernaut_power_4 = 3750
 utility_component_template = {
     key = "JUGGERNAUT_ANTIMATTER_REACTOR"
     size = large

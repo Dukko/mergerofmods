@@ -28,6 +28,22 @@ technician = {
             }
             energy = 2
         }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_energy_grid
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_energy_nexus
+                }
+            }
+            energy = 2
+        }
         upkeep = {
             trigger = {
                 exists = owner
@@ -121,7 +137,7 @@ technician = {
             has_trait = trait_void_dweller_1
         }
         modifier = {
-            factor = 1.2
+            factor = 250
             OR = {
                 is_unemployed = yes
                 has_job = "technician"
@@ -130,10 +146,12 @@ technician = {
             planet = {
                 has_available_jobs = "technician"
             }
+            exists = owner
             owner = {
+                is_ai = yes
                 has_monthly_income = {
                     resource = energy
-                    value < 0
+                    value < 20
                 }
             }
         }

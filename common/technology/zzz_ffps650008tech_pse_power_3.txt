@@ -1,0 +1,85 @@
+tech_pse_power_3 = {
+    cost = @tier5cost1
+    area = society
+    tier = 5
+    category = {
+        psionics
+    }
+    prerequisites = {
+        "tech_pse_power_2"
+    }
+    weight = @tier5weight1
+    is_reverse_engineerable = no
+    is_rare = yes
+    gateway = psionics
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            has_ascension_perk = ap_transcendence
+        }
+        modifier = {
+            factor = 2
+            research_leader = {
+                area = society
+                species = {
+                    has_trait = trait_psionic
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 2
+                has_trait = "leader_trait_expertise_psionics"
+            }
+        }
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_psionics"
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = 2
+            research_leader = {
+                area = society
+                has_level > 4
+                has_trait = "leader_trait_expertise_psionics"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_level > 5
+            }
+        }
+        modifier = {
+            factor = 4
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_maniacal"
+            }
+        }
+    }
+    modifier = {
+        description = tech_pse_power_3_tooltip
+    }
+    ai_weight = {
+        factor = 5
+        modifier = {
+            factor = 2.5
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_psionics"
+            }
+        }
+    }
+}

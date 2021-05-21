@@ -75,11 +75,28 @@ action_form_migration_pact = {
                 }
             }
         }
-        custom_tooltip = {
-            fail_text = "requires_recipient_not_inward_perfection"
-            from = {
-                NOT = {
+        if = {
+            limit = {
+                from = {
                     has_valid_civic = civic_inwards_perfection
+                }
+            }
+            if = {
+                limit = {
+                    has_intel = {
+                        who = from
+                        intel = civics
+                    }
+                }
+                custom_tooltip = {
+                    fail_text = requires_recipient_not_inward_perfection
+                    always = no
+                }
+            }
+            else = {
+                custom_tooltip = {
+                    fail_text = diplo_action_no_low_intel
+                    always = no
                 }
             }
         }
@@ -89,11 +106,28 @@ action_form_migration_pact = {
                 has_valid_civic = civic_inwards_perfection
             }
         }
-        custom_tooltip = {
-            fail_text = "requires_recipient_not_barbaric_despoilers"
-            from = {
-                NOT = {
+        if = {
+            limit = {
+                from = {
                     has_valid_civic = civic_barbaric_despoilers
+                }
+            }
+            if = {
+                limit = {
+                    has_intel = {
+                        who = from
+                        intel = civics
+                    }
+                }
+                custom_tooltip = {
+                    fail_text = requires_recipient_not_barbaric_despoilers
+                    always = no
+                }
+            }
+            else = {
+                custom_tooltip = {
+                    fail_text = diplo_action_no_low_intel
+                    always = no
                 }
             }
         }

@@ -1,0 +1,81 @@
+building_tw_conjurer = {
+    base_buildtime = 480
+    can_be_ruined = no
+    category = government
+    potential = {
+        owner = {
+            OR = {
+                has_valid_civic = civic_arcane_precursor
+            }
+        }
+    }
+    allow = {
+    }
+    destroy_trigger = {
+        NOT = {
+            owner = {
+                OR = {
+                    has_valid_civic = civic_kaldorei_castes
+                    has_valid_civic = civic_arcane_precursor
+                }
+            }
+        }
+    }
+    planet_modifier = {
+        job_highborne_conjurer_add = 3
+        job_kaldorei_foundry_per_pop = 0.05
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 500
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_ai = no
+                }
+            }
+            minerals = 500
+            arcane_power_tw = 100
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_ai = no
+                }
+            }
+            energy = 3
+        }
+        upkeep = {
+            energy = 3
+        }
+        produces = {
+        }
+    }
+    triggered_desc = {
+        text = kaldorei_foundry_effect_desc
+    }
+    upgrades = {
+    }
+    ai_weight = {
+        weight = 100000
+        modifier = {
+            factor = 50
+            owner = {
+                has_monthly_income = {
+                    resource = alloys
+                    value < 5
+                }
+            }
+        }
+    }
+    ai_resource_production = {
+        alloys = 30
+        trigger = {
+            always = yes
+        }
+    }
+}

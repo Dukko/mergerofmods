@@ -1,0 +1,25 @@
+tech_atlantis_start = {
+    cost = @guardiantechcost
+    area = physics
+    tier = @guardiantechtier
+    is_reverse_engineerable = no
+    category = {
+        computing
+    }
+    ai_update_type = all
+    weight = 0
+    is_rare = yes
+    prereqfor_desc = {
+    }
+    modifier = {
+        country_base_consumer_goods_produces_add = 12
+        country_base_energy_produces_add = 25
+        damage_vs_country_type_original_empire_mult = 2
+        damage_vs_country_type_ascended_empire_mult = 0.5
+        damage_vs_country_type_fallen_empire_mult = 0.5
+        damage_vs_country_type_awakened_fallen_empire_mult = 0.5
+    }
+    weight_modifier = {
+        factor = 0
+    }
+}

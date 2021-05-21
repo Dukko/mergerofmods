@@ -1,0 +1,14 @@
+namespace = ne
+country_event = {
+    id = ne.1000
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        From.owner = {
+            country_event = {
+                id = story.7
+                days = 2
+            }
+        }
+    }
+}

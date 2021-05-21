@@ -1,0 +1,116 @@
+building_tw_kaldorei_theory = {
+    base_buildtime = 480
+    can_be_ruined = no
+    category = government
+    potential = {
+        owner = {
+            OR = {
+                has_valid_civic = civic_arcane_precursor
+            }
+        }
+    }
+    allow = {
+    }
+    destroy_trigger = {
+        NOT = {
+            owner = {
+                OR = {
+                    has_valid_civic = civic_kaldorei_castes
+                    has_valid_civic = civic_arcane_precursor
+                }
+            }
+        }
+    }
+    planet_modifier = {
+        job_kaldorei_entertainer_add = 5
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 500
+            arcane_power_tw = 100
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_ai = no
+                }
+            }
+            minerals = 500
+        }
+        upkeep = {
+            energy = 3
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_ai = no
+                }
+            }
+            energy = 3
+        }
+    }
+    upgrades = {
+    }
+    ai_weight = {
+        weight = 2
+        modifier = {
+            factor = 5
+            owner = {
+                has_monthly_income = {
+                    resource = food
+                    value < 5
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                OR = {
+                    is_mechanical_empire = no
+                    AND = {
+                        is_mechanical_empire = yes
+                        OR = {
+                            has_civic = civic_machine_servitor
+                            has_civic = civic_machine_assimilator
+                        }
+                    }
+                }
+                has_monthly_income = {
+                    resource = energy
+                    value < 5
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                is_mechanical_empire = yes
+                NOR = {
+                    has_civic = civic_machine_servitor
+                    has_civic = civic_machine_assimilator
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            count_owned_pops = {
+                limit = {
+                    OR = {
+                        is_unemployed = yes
+                        has_job = servant
+                    }
+                }
+                count < 1
+            }
+        }
+    }
+    ai_resource_production = {
+        food = 10
+        trigger = {
+            always = yes
+        }
+    }
+}

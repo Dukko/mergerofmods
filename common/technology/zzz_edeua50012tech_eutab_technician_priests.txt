@@ -1,0 +1,47 @@
+@tier3cost3 = 6000
+@tier3weight3 = 50
+tech_eutab_technician_priests = {
+    cost = @tier3cost3
+    area = physics
+    tier = 3
+    category = {
+        computing
+    }
+    prerequisites = {
+        "tech_cryostasis_2"
+    }
+    weight = @tier3weight3
+    is_rare = yes
+    potential = {
+        has_ethic = ethic_fanatic_spiritualist
+    }
+    gateway = eu_fanatic
+    modifier = {
+        science_ship_survey_speed = 0.25
+        ships_upkeep_mult = -0.05
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = ap_the_flesh_is_weak
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+}

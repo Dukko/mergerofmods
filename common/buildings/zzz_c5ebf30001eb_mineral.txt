@@ -1,0 +1,99 @@
+eb_mineral = {
+    base_buildtime = 360
+    category = resource
+    potential = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+        NOR = {
+            is_planet_class = pc_ringworld_habitable
+            is_planet_class = pc_cybrex
+            is_planet_class = pc_habitat
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_miner_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+            has_active_building = building_mineral_purification_plant
+        }
+        modifier = {
+            job_miner_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_mining_drone_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+            has_active_building = building_mineral_purification_plant
+        }
+        modifier = {
+            job_mining_drone_add = 1
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 300
+        }
+        upkeep = {
+            energy = 2
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_mining_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        text = job_miner_effect_desc
+    }
+    prerequisites = {
+        tech_mineral_purification_1
+    }
+    upgrades = {
+        "eb_mineral2"
+    }
+    ai_resource_production = {
+        minerals = 1
+        trigger = {
+            always = yes
+        }
+    }
+}

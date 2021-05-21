@@ -9,6 +9,7 @@ tech_terrestrial_sculpting = {
         "tech_colonization_1"
     }
     weight = @tier2weight3
+    gateway = plague2
     feature_flags = {
         build_terraform_station
     }
@@ -30,23 +31,22 @@ tech_terrestrial_sculpting = {
                 has_trait = "leader_trait_expertise_new_worlds"
             }
         }
-        modifier = {
-            factor = 2
-            has_valid_civic = civic_reclamation
-        }
     }
     ai_weight = {
-        factor = 10000
-        modifier = {
-            factor = 500
-            reroll_society = yes
-        }
         modifier = {
             factor = 1.25
             research_leader = {
                 area = society
                 has_trait = "leader_trait_expertise_new_worlds"
             }
+        }
+        modifier = {
+            factor = 2
+            is_xenophobe = yes
+        }
+        modifier = {
+            factor = 2
+            is_ai = no
         }
     }
 }

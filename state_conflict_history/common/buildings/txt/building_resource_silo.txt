@@ -44,7 +44,7 @@ building_resource_silo = {
             }
         }
         modifier = {
-            job_clerk_add = 3
+            job_clerk_add = 1
         }
     }
     triggered_planet_modifier = {
@@ -55,7 +55,7 @@ building_resource_silo = {
             }
         }
         modifier = {
-            job_maintenance_drone_add = 2
+            job_maintenance_drone_add = 1
         }
     }
     resources = {
@@ -72,6 +72,9 @@ building_resource_silo = {
     }
     prerequisites = {
         "tech_basic_industry"
+    }
+    upgrades = {
+        "eb_silo"
     }
     triggered_desc = {
         trigger = {
@@ -90,8 +93,5 @@ building_resource_silo = {
             }
         }
         text = job_clerk_effect_desc
-    }
-    upgrades = {
-        "eb_silo"
     }
 }

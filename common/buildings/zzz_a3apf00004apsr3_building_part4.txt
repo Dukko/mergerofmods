@@ -1,0 +1,64 @@
+@apsr3part4cost_minerals = 15000
+@apsr3part4cost_time = 2000
+@apsr3part4upkeep_energy = 50
+@apsr3part4upkeep_minerals = 50
+@apsr3part4job = 12
+@apsr3cubejobs = 3
+apsr3_building_part4 = {
+    base_buildtime = @apsr3part4cost_time
+    icon = apsr3_building_part4
+    is_capped_by_modifier = no
+    category = research
+    can_build = no
+    potential = {
+        has_modifier = "apsr3_planet_modifier"
+    }
+    allow = {
+        is_capital = yes
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_apsr3_scientist_machine_add = @apsr3part4job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                has_deposit = apsr_relic_cube_deposit
+            }
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_apsr3_scientist_machine_add = @apsr3cubejobs
+        }
+    }
+    resources = {
+        category = planet_apsr_buildings
+        cost = {
+            minerals = @apsr3part4cost_minerals
+        }
+        upkeep = {
+            energy = @apsr3part4upkeep_energy
+            minerals = @apsr3part4upkeep_minerals
+        }
+    }
+    country_modifier = {
+        all_technology_research_speed = 0.1
+        planet_pop_assembly_mult = 0.1
+    }
+    prerequisites = {
+        "tech_apsr3_building_part4"
+    }
+    ai_weight = {
+        weight = 50000
+    }
+}

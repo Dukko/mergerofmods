@@ -1,0 +1,99 @@
+pw_tech_guardian_angel = {
+    area = society
+    cost = @tier4cost3
+    tier = 4
+    category = {
+        military_theory
+    }
+    prerequisites = {
+        pw_tech_planetary_mega_engineering
+        tech_planetary_defenses
+        tech_combat_training
+    }
+    weight = @tier4weight3
+    is_rare = yes
+    weight_modifier = {
+        factor = 0.25
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = society
+                has_trait = leader_trait_expertise_military_theory
+            }
+        }
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = society
+                has_trait = leader_trait_spark_of_genius
+            }
+        }
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = society
+                has_trait = leader_trait_curator
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = @federation_perk_factor
+            has_federation = yes
+            federation = {
+                has_federation_perk = rare_tech_boost
+                any_member = {
+                    has_technology = pw_tech_guardian_angel
+                }
+            }
+        }
+        modifier = {
+            factor = 1.5
+            has_valid_civic = civic_citizen_service
+        }
+        modifier = {
+            factor = 1.5
+            has_valid_civic = civic_distinguished_admiralty
+        }
+        modifier = {
+            factor = 1.5
+            has_valid_civic = civic_warrior_culture
+        }
+        modifier = {
+            factor = 1.5
+            has_valid_civic = civic_private_military_companies
+        }
+        modifier = {
+            factor = 1.5
+            has_valid_civic = civic_hive_strength_of_legions
+        }
+        modifier = {
+            factor = 1.5
+            has_valid_civic = civic_hive_devouring_swarm
+        }
+        modifier = {
+            factor = 1.5
+            has_valid_civic = civic_machine_warbots
+        }
+        modifier = {
+            factor = 1.5
+            has_valid_civic = civic_machine_terminator
+        }
+        modifier = {
+            factor = 0.5
+            is_pacifist = yes
+        }
+    }
+    ai_weight = {
+        factor = 10
+        modifier = {
+            factor = 2
+            research_leader = {
+                area = society
+                has_trait = leader_trait_expertise_military_theory
+            }
+        }
+    }
+}

@@ -17,10 +17,6 @@ farmer = {
         owner = {
             is_gestalt = no
         }
-        OR = {
-            traits_restrict_worker_jobs = no
-            has_pop_flag = allow_farmer_traits
-        }
     }
     resources = {
         category = planet_farmers
@@ -35,6 +31,22 @@ farmer = {
                 }
             }
             food = -1
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_food_processing_facility
+                }
+            }
+            food = 1
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_food_processing_center
+                }
+            }
+            food = 2
         }
         upkeep = {
             trigger = {
@@ -133,10 +145,6 @@ farmer = {
             can_take_servant_job = yes
         }
         modifier = {
-            factor = 1.5
-            has_job = farmer
-        }
-        modifier = {
             factor = 2
             has_trait = trait_syncretic_proles
         }
@@ -194,55 +202,6 @@ farmer = {
         }
         modifier = {
             factor = 1.2
-            has_trait = trait_huge
-        }
-        modifier = {
-            factor = 1.1
-            has_trait = trait_big
-        }
-        modifier = {
-            factor = 0.9
-            has_trait = trait_small
-        }
-        modifier = {
-            factor = 0.8
-            has_trait = trait_tiny
-        }
-        modifier = {
-            factor = 1.2
-            has_trait = trait_huge_lithoid
-        }
-        modifier = {
-            factor = 1.1
-            has_trait = trait_big_lithoid
-        }
-        modifier = {
-            factor = 0.9
-            has_trait = trait_small_lithoid
-        }
-        modifier = {
-            factor = 0.8
-            has_trait = trait_tiny_lithoid
-        }
-        modifier = {
-            factor = 0.25
-            has_trait = trait_limbless
-        }
-        modifier = {
-            factor = 0.25
-            has_trait = trait_delicate
-            is_enslaved = yes
-        }
-        modifier = {
-            factor = 0.25
-            has_trait = trait_sessile
-        }
-        modifier = {
-            factor = 0.4
-            has_trait = trait_limbless
-        }
-        modifier = {
-            factor = 1.2
             OR = {
                 is_unemployed = yes
                 has_job = farmer
@@ -254,7 +213,7 @@ farmer = {
             owner = {
                 has_monthly_income = {
                     resource = food
-                    value < 0
+                    value < 10
                 }
             }
         }

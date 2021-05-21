@@ -1,0 +1,447 @@
+@apsr10part1cost_energy = 2000
+@apsr10part1cost_minerals = 5000
+@apsr10part1cost_time = 1000
+@apsr10part1upkeep_energy = 0
+@apsr10part1upkeep_minerals = 7
+@apsr10part1job = 9
+@apsr10cubejobs1 = 5
+@apsr10part1powjob = 3
+@apsr10cubejobs2 = 2
+apsr10_building_part1 = {
+    base_buildtime = @apsr10part1cost_time
+    icon = "apsr10_building_part1"
+    base_cap_amount = 1
+    is_capped_by_modifier = no
+    category = resource
+    potential = {
+        AND = {
+            has_modifier = "apsr10_planet_modifier"
+            NOT = {
+                has_building = apsr10_building_part1_fake
+            }
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_apsr10_technician_hive_add = @apsr10part1job
+            job_apsr10_power_engineer_hive_add = @apsr10part1powjob
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                has_deposit = apsr_relic_cube_deposit
+            }
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_apsr10_technician_hive_add = @apsr10cubejobs1
+            job_apsr10_power_engineer_hive_add = @apsr10cubejobs2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_apsr10_technician_machine_add = @apsr10part1job
+            job_apsr10_power_engineer_machine_add = @apsr10part1powjob
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                has_deposit = apsr_relic_cube_deposit
+            }
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_apsr10_technician_machine_add = @apsr10cubejobs1
+            job_apsr10_power_engineer_machine_add = @apsr10cubejobs2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_apsr10_technician_normal_add = @apsr10part1job
+            job_apsr10_power_engineer_normal_add = @apsr10part1powjob
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                has_deposit = apsr_relic_cube_deposit
+            }
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_apsr10_technician_normal_add = @apsr10cubejobs1
+            job_apsr10_power_engineer_normal_add = @apsr10cubejobs2
+        }
+    }
+    resources = {
+        category = planet_apsr_buildings
+        cost = {
+            energy = @apsr10part1cost_energy
+            minerals = @apsr10part1cost_minerals
+        }
+        upkeep = {
+            energy = @apsr10part1upkeep_energy
+            minerals = @apsr10part1upkeep_minerals
+        }
+        produces = {
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = energy
+                        value >= 68150
+                    }
+                }
+            }
+            energy = 7.74
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = energy
+                        value >= 63700
+                    }
+                }
+            }
+            energy = 7.21
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = energy
+                        value >= 59400
+                    }
+                }
+            }
+            energy = 6.72
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = energy
+                        value >= 55250
+                    }
+                }
+            }
+            energy = 6.26
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = energy
+                        value >= 51250
+                    }
+                }
+            }
+            energy = 5.83
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = energy
+                        value >= 47400
+                    }
+                }
+            }
+            energy = 5.43
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = energy
+                        value >= 43700
+                    }
+                }
+            }
+            energy = 5.06
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = energy
+                        value >= 40150
+                    }
+                }
+            }
+            energy = 4.72
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = energy
+                        value >= 36750
+                    }
+                }
+            }
+            energy = 4.4
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = energy
+                        value >= 33500
+                    }
+                }
+            }
+            energy = 4.1
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = energy
+                        value >= 30400
+                    }
+                }
+            }
+            energy = 3.82
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = energy
+                        value >= 27450
+                    }
+                }
+            }
+            energy = 3.56
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = energy
+                        value >= 24650
+                    }
+                }
+            }
+            energy = 3.32
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = energy
+                        value >= 22000
+                    }
+                }
+            }
+            energy = 3.09
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = energy
+                        value >= 19500
+                    }
+                }
+            }
+            energy = 2.88
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = energy
+                        value >= 17150
+                    }
+                }
+            }
+            energy = 2.68
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = energy
+                        value >= 14950
+                    }
+                }
+            }
+            energy = 2.5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = energy
+                        value >= 12900
+                    }
+                }
+            }
+            energy = 2.33
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = energy
+                        value >= 11000
+                    }
+                }
+            }
+            energy = 2.17
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = energy
+                        value >= 9250
+                    }
+                }
+            }
+            energy = 2.02
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = energy
+                        value >= 7650
+                    }
+                }
+            }
+            energy = 1.88
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = energy
+                        value >= 6200
+                    }
+                }
+            }
+            energy = 1.75
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = energy
+                        value >= 4900
+                    }
+                }
+            }
+            energy = 1.63
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = energy
+                        value >= 3750
+                    }
+                }
+            }
+            energy = 1.52
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = energy
+                        value >= 2750
+                    }
+                }
+            }
+            energy = 1.42
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = energy
+                        value >= 1900
+                    }
+                }
+            }
+            energy = 1.32
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = energy
+                        value >= 1200
+                    }
+                }
+            }
+            energy = 1.23
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = energy
+                        value >= 650
+                    }
+                }
+            }
+            energy = 1.15
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = energy
+                        value >= 250
+                    }
+                }
+            }
+            energy = 1.07
+        }
+    }
+    prerequisites = {
+        "tech_apsr10_building_part1"
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    ai_weight = {
+        weight = 50000
+    }
+}

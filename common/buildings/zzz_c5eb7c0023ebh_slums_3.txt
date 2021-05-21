@@ -1,0 +1,104 @@
+ebh_slums_3 = {
+    base_buildtime = 300
+    category = amenity
+    can_build = no
+    potential = {
+        exists = owner
+    }
+    allow = {
+        buildings_simple_allow = yes
+    }
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            AND = {
+                free_building_slots = 0
+                free_jobs < 1
+                free_housing > 10
+                owner = {
+                    is_ai = yes
+                }
+            }
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            planet_housing_add = 60
+            planet_amenities_add = 30
+            planet_crime_add = 60
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            planet_housing_add = 60
+            planet_amenities_add = 30
+            planet_crime_no_happiness_add = 60
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_non_swapped_tradition = tr_domination_imperious_architecture
+            }
+        }
+        modifier = {
+            planet_housing_add = 15
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+            planet = {
+                OR = {
+                    has_building = building_precinct_house
+                    has_building = building_hall_judgment
+                }
+            }
+        }
+        modifier = {
+            planet_crime_add = -15
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+            planet = {
+                has_building = building_sentinel_posts
+            }
+        }
+        modifier = {
+            planet_crime_no_happiness_add = -30
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 500
+        }
+        upkeep = {
+            energy = 15
+        }
+    }
+    prerequisites = {
+        "tech_housing_2"
+    }
+}

@@ -35,6 +35,22 @@ deep_miner = {
             volatile_motes = 1
             rare_crystals = 1
         }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_mineral_purification_plant
+                }
+            }
+            minerals = 1
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_mineral_purification_hub
+                }
+            }
+            minerals = 2
+        }
         upkeep = {
             trigger = {
                 owner = {

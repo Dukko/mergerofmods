@@ -30,6 +30,9 @@ decision_shrouded_world = {
         NOT = {
             has_planet_flag = pd_shroud_transformation
         }
+        from = {
+            has_technology = tech_climate_restoration
+        }
     }
     effect = {
         custom_tooltip = decision_shrouded_world_effects_custom

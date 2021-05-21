@@ -28,15 +28,11 @@ pc_milarc = {
     colonizable = yes
     starting_planet = no
     ideal = yes
-    uses_alternative_skies_for_moons = yes
+    uses_alternative_skies_for_moons = no
     district_set = pdmilarc
     modifier = {
         planet_jobs_produces_mult = 0.2
-        pop_growth_speed = 0.25
-        planet_orbital_bombardment_damage = -0.75
-        army_starting_experience_add = 300
-        planet_buildings_strongholds_cost_mult = -0.5
-        army_defense_damage_mult = 0.5
+        pop_growth_speed = 0.5
         planet_max_buildings_add = 12
     }
     carry_cap_per_free_district = @carry_cap_high

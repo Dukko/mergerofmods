@@ -1,0 +1,78 @@
+building_tw_arcane_hold = {
+    base_buildtime = 480
+    can_be_ruined = no
+    category = government
+    potential = {
+        owner = {
+            OR = {
+                has_valid_civic = civic_arcane_precursor
+            }
+        }
+    }
+    allow = {
+    }
+    destroy_trigger = {
+        NOT = {
+            owner = {
+                OR = {
+                    has_valid_civic = civic_kaldorei_castes
+                    has_valid_civic = civic_arcane_precursor
+                }
+            }
+        }
+    }
+    planet_modifier = {
+        job_kaldorei_enforcer_add = 2
+        job_kaldorei_enforcer_per_pop = 0.01
+        planet_orbital_bombardment_damage = -0.25
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 500
+            arcane_power_tw = 100
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_ai = no
+                }
+            }
+            minerals = 500
+        }
+        upkeep = {
+            energy = 3
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_ai = no
+                }
+            }
+            energy = 3
+        }
+        produces = {
+            arcane_technology = 30
+            mana_crystals = 30
+        }
+    }
+    triggered_desc = {
+        text = kaldorei_moonguard_effect_desc
+    }
+    upgrades = {
+    }
+    ai_weight = {
+        weight = 15000
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value <= 3
+                }
+            }
+        }
+    }
+}

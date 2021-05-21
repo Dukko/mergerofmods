@@ -1,0 +1,66 @@
+tech_grav_control = {
+    area = physics
+    cost = @tier6cost2
+    weight = @tier6weight2
+    tier = 4
+    is_rare = yes
+    category = {
+        field_manipulation
+    }
+    prerequisites = {
+        "tech_physics_3"
+        "tech_ehof_phase_02"
+    }
+    modifier = {
+        all_technology_research_speed = 0.05
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0.1
+            years_passed < 50
+        }
+        modifier = {
+            factor = 2
+            years_passed > 60
+        }
+        modifier = {
+            factor = 3
+            years_passed > 70
+        }
+        modifier = {
+            factor = 4
+            years_passed > 80
+        }
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+        modifier = {
+            factor = 1.5
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = 2
+            has_federation = yes
+            federation = {
+                has_federation_perk = rare_tech_boost
+                any_member = {
+                    has_technology = tech_grav_control
+                }
+            }
+        }
+    }
+    ai_weight = {
+        factor = @ehof_t1_weight
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+}

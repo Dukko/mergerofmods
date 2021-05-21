@@ -2,7 +2,6 @@ namespace = immortal_ruler
 namespace = unity_patrons
 namespace = glorious_fleet
 namespace = voice_planet
-namespace = observation
 planet_event = {
     id = voice_planet.1
     hide_window = yes

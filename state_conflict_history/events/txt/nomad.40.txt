@@ -14,11 +14,9 @@ fleet_event = {
                 limit = {
                     is_colony = no
                     OR = {
+                        is_wet = yes
+                        is_dry = yes
                         is_planet_class = pc_gaia
-                        is_planet_class = pc_tropical
-                        is_planet_class = pc_desert
-                        is_planet_class = pc_ocean
-                        is_planet_class = pc_arid
                     }
                     NOT = {
                         has_modifier = "holy_planet"

@@ -1,0 +1,53 @@
+@megastructure_repeatable_tech_weight = 10
+@grand_megastructure_base_tech_cost = 96000
+@grand_megastructure_per_level_cost = 288000
+giga_tech_repeatable_compressor_cap = {
+    area = physics
+    category = {
+        particles
+    }
+    tier = 5
+    weight = @megastructure_repeatable_tech_weight
+    cost = @grand_megastructure_base_tech_cost
+    cost_per_level = @grand_megastructure_per_level_cost
+    levels = 40
+    prerequisites = {
+        "giga_tech_substellar_compressor"
+    }
+    weight_groups = {
+        repeatable
+    }
+    mod_weight_if_group_picked = {
+        repeatable = 0.1
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "giga_compressor_capacity_increase_title"
+            desc = "giga_compressor_capacity_increase_desc"
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_global_flag = compressor_capped_r
+            }
+        }
+        modifier = {
+            factor = 0
+            has_global_flag = compressor_disabled
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_global_flag = compressor_capped_r
+            }
+        }
+        modifier = {
+            factor = 0
+            has_global_flag = compressor_disabled
+        }
+    }
+}

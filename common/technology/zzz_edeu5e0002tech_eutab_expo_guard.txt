@@ -1,0 +1,38 @@
+@tier3cost3 = 6000
+@tier2weight3 = 70
+tech_eutab_expo_guard = {
+    cost = @tier3cost3
+    area = society
+    tier = 2
+    category = {
+        biology
+    }
+    prerequisites = {
+        "tech_eutab_dev_district"
+        "tech_colonial_bureaucracy"
+    }
+    weight = @tier2weight3
+    is_rare = yes
+    potential = {
+        eu_req_xpho_and_pac = yes
+    }
+    gateway = eu_xenophobe
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+    }
+}

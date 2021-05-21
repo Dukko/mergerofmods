@@ -1,0 +1,21 @@
+building_vbp_factory = {
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = no
+    icon = building_primitive_factory
+    potential = {
+        exists = owner
+        owner = {
+            has_country_flag = vbp_hive_superego_stage
+        }
+    }
+    planet_modifier = {
+        job_vbp_industry_drone_add = 3
+    }
+    destroy_trigger = {
+        exists = owner
+        owner = {
+            is_primitive = no
+        }
+    }
+}

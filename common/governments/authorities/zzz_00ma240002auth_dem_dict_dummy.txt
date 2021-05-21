@@ -1,0 +1,35 @@
+auth_dem_dict_dummy = {
+    election_type = democratic
+    can_have_emergency_elections = yes
+    emergency_election_cost = 150
+    uses_mandates = yes
+    potential = {
+        ethics = {
+            value = ethic_dem_dict_dummy
+        }
+    }
+    possible = {
+        ethics = {
+            NOR = {
+                value = ethic_gestalt_consciousness
+                value = ethic_fanatic_authoritarian
+                value = ethic_fanatic_egalitarian
+            }
+        }
+    }
+    random_weight = {
+        modifier = {
+            factor = 0
+        }
+    }
+    country_modifier = {
+        planet_resettlement_unemployed_mult = 0.25
+        edicts_cost_mult = -0.3
+        pop_cat_worker_political_power = 2
+        pop_cat_specialist_political_power = 3
+        pop_cat_ruler_political_power = 5
+    }
+    tags = {
+        AUTHORITY_ELECTION_ON_RULER_DEATH
+    }
+}

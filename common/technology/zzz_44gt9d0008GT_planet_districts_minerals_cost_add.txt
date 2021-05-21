@@ -1,0 +1,33 @@
+GT_planet_districts_minerals_cost_add = {
+    cost = @tier1cost3
+    area = society
+    tier = 1
+    category = {
+        statecraft
+    }
+    prerequisites = {
+        "tech_adaptive_bureaucracy"
+    }
+    weight = @tier2weight3
+    modifier = {
+        planet_districts_minerals_cost_add = -40
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+}

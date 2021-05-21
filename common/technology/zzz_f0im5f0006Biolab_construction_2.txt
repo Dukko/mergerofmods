@@ -1,0 +1,20 @@
+Biolab_construction_2 = {
+    cost = 80000
+    area = society
+    tier = 4
+    category = {
+        biology
+    }
+    prerequisites = {
+        Biolab_construction
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "allow_Biolab_2"
+            desc = "desc_allow_Biolab_2"
+        }
+    }
+    is_rare = yes
+    is_dangerous = yes
+    weight = 0
+}

@@ -1,0 +1,33 @@
+tech_contamination_removal = {
+    cost = @tier2cost2
+    area = society
+    tier = 2
+    category = {
+        new_worlds
+    }
+    prerequisites = {
+        "tech_colonization_2"
+        "tech_vaccine_tests"
+    }
+    weight = @tier2weight1
+    gateway = plague2
+    potential = {
+        has_origin = origin_pandemic
+    }
+    modifier = {
+        description = ps_tech_2
+    }
+    weight_modifier = {
+        factor = 2.5
+        modifier = {
+            factor = 2
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 5
+    }
+}

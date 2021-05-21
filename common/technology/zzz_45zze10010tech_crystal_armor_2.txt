@@ -1,0 +1,43 @@
+tech_crystal_armor_2 = {
+    area = engineering
+    cost = @tier3cost3
+    tier = 5
+    is_rare = yes
+    category = {
+        materials
+    }
+    ai_update_type = all
+    weight = 30
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = @federation_perk_factor
+            has_federation = yes
+            federation = {
+                has_federation_perk = rare_tech_boost
+                any_member = {
+                    has_technology = tech_crystal_armor_2
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_technology = tech_crystal_armor_1
+            }
+        }
+    }
+    ai_weight = {
+        factor = 100
+    }
+}

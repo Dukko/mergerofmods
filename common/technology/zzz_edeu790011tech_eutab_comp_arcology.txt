@@ -1,0 +1,44 @@
+@tier4cost1 = 8000
+@tier4weight1 = 45
+tech_eutab_comp_arcology = {
+    cost = @tier4cost1
+    area = physics
+    tier = 4
+    category = {
+        computing
+    }
+    prerequisites = {
+        "tech_eutab_arcology"
+        "tech_synthetic_workers"
+    }
+    weight = @tier4weight1
+    is_rare = yes
+    potential = {
+        has_ethic = ethic_fanatic_materialist
+    }
+    gateway = eu_fanatic
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = ap_the_flesh_is_weak
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+}

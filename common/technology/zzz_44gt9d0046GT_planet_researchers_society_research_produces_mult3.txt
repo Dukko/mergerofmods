@@ -1,0 +1,41 @@
+GT_planet_researchers_society_research_produces_mult3 = {
+    cost = @tier4cost3
+    area = society
+    tier = 4
+    is_rare = yes
+    category = {
+        biology
+    }
+    prerequisites = {
+        "tech_society_3"
+        "GT_planet_researchers_society_research_produces_mult2"
+    }
+    weight = @tier6weight1
+    modifier = {
+        station_researchers_produces_mult = 0.5
+    }
+    weight_modifier = {
+        factor = 0.5
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 5
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+    }
+}

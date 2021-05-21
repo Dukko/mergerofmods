@@ -1,0 +1,89 @@
+eb_nanite_assembly = {
+    base_buildtime = @b2_time
+    category = manufacturing
+    potential = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+        building_basic_income_check = yes
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    destroy_trigger = {
+        free_building_slots = 0
+        exists = owner
+        owner = {
+            is_ai = yes
+            has_monthly_income = {
+                resource = nanites
+                value > 9
+            }
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_eb_nanite_assembler_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_eb_nanite_assembler_drone_add = 2
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 1000
+            rare_crystals = 50
+            exotic_gases = 50
+            volatile_motes = 50
+        }
+        upkeep = {
+            energy = 10
+            sr_dark_matter = 1
+        }
+    }
+    prerequisites = {
+        "tech_nanite_transmutation"
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        text = job_eb_nanites_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_eb_nanites_drone_effect_desc
+    }
+    ai_resource_production = {
+        nanites = 2
+        trigger = {
+            always = yes
+        }
+    }
+}

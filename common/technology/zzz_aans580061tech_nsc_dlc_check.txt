@@ -1,0 +1,21 @@
+tech_nsc_dlc_check = {
+    area = physics
+    cost = 0
+    Tier = 0
+    start_tech = yes
+    category = {
+        particles
+    }
+    potential = {
+        host_has_dlc = "Apocalypse"
+    }
+    prereqfor_desc = {
+        ship = {
+            title = "TECH_UNLOCK_NSC_DLC_CONSTRUCTION_TITLE"
+            desc = "TECH_UNLOCK_NSC_DLC_CONSTRUCTION_DESC"
+        }
+    }
+    ai_weight = {
+        factor = 0
+    }
+}

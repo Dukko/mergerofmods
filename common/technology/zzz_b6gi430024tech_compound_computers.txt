@@ -1,0 +1,34 @@
+tech_compound_computers = {
+    area = physics
+    cost = @tier7cost3
+    weight = 0
+    tier = 5
+    category = {
+        computing
+    }
+    is_rare = yes
+    ai_update_type = military
+    prerequisites = {
+        "tech_combat_computers_2"
+    }
+    weight_modifier = {
+        factor = 0
+    }
+    prereqfor_desc = {
+        hide_prereq_for_desc = component
+        custom = {
+            title = "TECH_UNLOCK_COMPOUND_COMPUTERS_TITLE"
+            desc = "TECH_UNLOCK_COMPOUND_COMPUTERS_DESC"
+        }
+    }
+    ai_weight = {
+        factor = @ehof_t2_weight
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+}

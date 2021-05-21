@@ -1,7 +1,7 @@
 technician = {
     category = worker
     condition_string = WORKER_JOB_TRIGGER
-    building_icon = building_power_plant
+    building_icon = building_energy_grid
     clothes_texture_index = 2
     possible_pre_triggers = {
         has_owner = yes
@@ -24,6 +24,22 @@ technician = {
             trigger = {
                 owner = {
                     is_robot_empire = yes
+                }
+            }
+            energy = 2
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_energy_grid
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_energy_nexus
                 }
             }
             energy = 2
@@ -52,7 +68,7 @@ technician = {
             factor = 8
             is_enslaved = yes
             can_take_servant_job = no
-            NOR = {
+            OR = {
                 has_trait = trait_syncretic_proles
                 has_trait = trait_nuumismatic_administration
                 has_trait = trait_robot_superconductive
@@ -80,10 +96,6 @@ technician = {
             species = {
                 has_species_flag = racket_species_flag
             }
-        }
-        modifier = {
-            factor = 1.5
-            has_job = technician
         }
         modifier = {
             factor = 1.2
@@ -125,7 +137,7 @@ technician = {
             has_trait = trait_void_dweller_1
         }
         modifier = {
-            factor = 1.2
+            factor = 250
             OR = {
                 is_unemployed = yes
                 has_job = "technician"
@@ -134,10 +146,12 @@ technician = {
             planet = {
                 has_available_jobs = "technician"
             }
+            exists = owner
             owner = {
+                is_ai = yes
                 has_monthly_income = {
                     resource = energy
-                    value < 0
+                    value < 20
                 }
             }
         }

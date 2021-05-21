@@ -1,0 +1,19 @@
+tech_hive_worlds = {
+    cost = 2000
+    area = society
+    tier = 3
+    is_rare = yes
+    category = {
+        new_worlds
+    }
+    weight = 0
+    modifier = {
+        country_resource_max_add = 10000
+    }
+    prereqfor_desc = {
+        diplo_action = {
+            title = "TECH_UNLOCK_TERRAFORMING_BARREN_TO_HIVE_CHANGE_TITLE"
+            desc = "TECH_UNLOCK_TERRAFORMING_BARREN_TO_HIVE_CHANGE_DESC"
+        }
+    }
+}

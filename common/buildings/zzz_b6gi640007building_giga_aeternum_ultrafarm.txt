@@ -1,0 +1,18 @@
+building_giga_aeternum_ultrafarm = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = no
+    ai_weight = {
+        weight = 0
+    }
+    potential = {
+        always = no
+    }
+    resources = {
+        category = planet_buildings
+        produces = {
+            food = 150
+        }
+    }
+}

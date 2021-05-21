@@ -25,6 +25,22 @@ miner = {
         }
         produces = {
             trigger = {
+                planet = {
+                    has_active_building = building_mineral_purification_plant
+                }
+            }
+            minerals = 1
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_mineral_purification_hub
+                }
+            }
+            minerals = 2
+        }
+        produces = {
+            trigger = {
                 owner = {
                     is_lithoid_empire = yes
                 }
@@ -137,7 +153,7 @@ miner = {
             owner = {
                 has_monthly_income = {
                     resource = minerals
-                    value < 30
+                    value < 0
                 }
             }
         }

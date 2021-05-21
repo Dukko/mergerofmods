@@ -11,6 +11,7 @@ trait_pc_mesa_preference = {
     }
     modifier = {
         pc_mesa_habitability = 0.8
+        pc_badlands_habitability = 0.8
         pc_savannah_habitability = 0.7
         pc_arid_habitability = 0.7
         pc_med_habitability = 0.7
@@ -27,6 +28,7 @@ trait_pc_mesa_preference = {
         pc_highland_habitability = 0.5
         pc_duneforest_habitability = 0.5
         pc_hajungle_habitability = 0.4
+        pc_cenote_habitability = 0.4
         pc_forest_habitability = 0.4
         pc_retinal_habitability = 0.4
         pc_tundra_habitability = 0.4

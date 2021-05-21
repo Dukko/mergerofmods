@@ -1,0 +1,46 @@
+@tier4cost3 = 10000
+@tier4weight3 = 35
+tech_eutab_m_automation_sector = {
+    cost = @tier4cost3
+    area = engineering
+    tier = 4
+    category = {
+        industry
+    }
+    prerequisites = {
+        "tech_mega_assembly"
+        "tech_embodied_dynamism"
+    }
+    weight = @tier4weight3
+    is_rare = yes
+    potential = {
+        has_authority = auth_machine_intelligence
+    }
+    modifier = {
+        planet_pops_robotics_upkeep_mult = -0.05
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = ap_synthetic_age
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+}

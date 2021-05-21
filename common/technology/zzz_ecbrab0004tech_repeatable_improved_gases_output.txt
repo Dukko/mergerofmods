@@ -1,0 +1,109 @@
+@EarlyRepeatableTechCost = 12000
+@EarlyRepeatableTechLevelCost = 6000
+@EarlyRepatableTechFactor = 0.65
+@RepeatableCategoryFactor = 0.25
+@RepeatableDifferntFactor = 0.5
+@EarlyRepeatableWeight = 13
+@EarlyRepeatableTier = 3
+tech_repeatable_improved_gases_output = {
+    area = engineering
+    cost = @EarlyRepeatableTechCost
+    cost_per_level = @EarlyRepeatableTechLevelCost
+    tier = @EarlyRepeatableTier
+    category = {
+        materials
+    }
+    prerequisites = {
+        "tech_exotic_gases"
+    }
+    levels = -1
+    weight = @EarlyRepeatableWeight
+    weight_modifier = {
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_gases_output
+                value > 0
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_gases_output
+                value > 1
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_gases_output
+                value > 2
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_gases_output
+                value > 3
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_gases_output
+                value > 4
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_gases_output
+                value > 5
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_gases_output
+                value > 6
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_gases_output
+                value > 7
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_gases_output
+                value > 8
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_gases_output
+                value > 9
+            }
+        }
+    }
+    ai_weight = {
+        factor = 1
+    }
+    weight_groups = {
+        production_repeatable
+    }
+    mod_weight_if_group_picked = {
+        production_repeatable = @RepeatableCategoryFactor
+    }
+    mod_weight_if_group_picked = {
+        ship_repeatable = @RepeatableDifferntFactor
+        job_repeatable = @RepeatableDifferntFactor
+    }
+    modifier = {
+        planet_jobs_exotic_gases_produces_mult = 0.1
+    }
+}

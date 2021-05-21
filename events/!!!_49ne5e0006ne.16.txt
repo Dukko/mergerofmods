@@ -1,0 +1,46 @@
+namespace = ne
+country_event = {
+    id = ne.16
+    hide_window = yes
+    trigger = {
+        is_country_type = ne_enclave
+        any_relation = {
+            is_country_type = default
+            any_relation = {
+                is_country_type = default
+                NOT = {
+                    has_communications = ROOT
+                }
+            }
+        }
+    }
+    mean_time_to_happen = {
+        months = 80
+    }
+    immediate = {
+        random_relation = {
+            limit = {
+                any_relation = {
+                    is_country_type = default
+                    NOT = {
+                        has_communications = ROOT
+                    }
+                }
+            }
+            random_relation = {
+                limit = {
+                    is_country_type = default
+                    NOT = {
+                        has_communications = ROOT
+                    }
+                }
+                root = {
+                    establish_communications_no_message = prev
+                }
+                country_event = {
+                    id = ne.14
+                }
+            }
+        }
+    }
+}

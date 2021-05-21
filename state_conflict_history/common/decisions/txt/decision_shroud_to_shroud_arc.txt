@@ -20,11 +20,8 @@ decision_shroud_to_shroud_arc = {
     }
     allow = {
         custom_tooltip = {
-            fail_text = decision_eco_arcology_project_requirements
-            num_districts = {
-                type = district_city
-                value >= 10
-            }
+            fail_text = decision_arcology_project_requirements
+            free_district_slots < 1
             num_districts = {
                 type = district_farming
                 value < 1
@@ -45,11 +42,6 @@ decision_shroud_to_shroud_arc = {
         hidden_effect = {
             clear_deposits = yes
             change_pc = pc_shroudcity
-            add_district = district_pdshroudarc_housing
-            add_district = district_pdshroudarc_housing
-            add_district = district_pdshroudarc_housing
-            add_district = district_pdshroudarc_housing
-            add_district = district_pdshroudarc_housing
             owner = {
                 country_event = {
                     id = distar.201
@@ -70,7 +62,7 @@ decision_shroud_to_shroud_arc = {
                 }
             }
             planet_event = {
-                id = pdengine.09
+                id = mega.200
             }
             remove_modifier = engineered_environment
             remove_modifier = engineered_environment_gaia

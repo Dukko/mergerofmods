@@ -53,10 +53,10 @@ action_ask_to_become_protectorate = {
             OR = {
                 is_same_species = from
                 NOT = {
-                    has_civic = civic_machine_terminator
+                    has_valid_civic = civic_machine_terminator
                 }
                 AND = {
-                    has_civic = civic_machine_terminator
+                    has_valid_civic = civic_machine_terminator
                     from = {
                         OR = {
                             has_country_flag = synthetic_empire
@@ -72,12 +72,12 @@ action_ask_to_become_protectorate = {
                 is_same_species = from
                 from = {
                     NOT = {
-                        has_civic = civic_machine_terminator
+                        has_valid_civic = civic_machine_terminator
                     }
                 }
                 AND = {
                     from = {
-                        has_civic = civic_machine_terminator
+                        has_valid_civic = civic_machine_terminator
                     }
                     OR = {
                         has_country_flag = synthetic_empire
@@ -86,11 +86,28 @@ action_ask_to_become_protectorate = {
                 }
             }
         }
-        custom_tooltip = {
-            fail_text = "requires_recipient_not_inward_perfection"
-            from = {
-                NOT = {
+        if = {
+            limit = {
+                from = {
                     has_valid_civic = civic_inwards_perfection
+                }
+            }
+            if = {
+                limit = {
+                    has_intel = {
+                        who = from
+                        intel = civics
+                    }
+                }
+                custom_tooltip = {
+                    fail_text = requires_recipient_not_inward_perfection
+                    always = no
+                }
+            }
+            else = {
+                custom_tooltip = {
+                    fail_text = diplo_action_no_low_intel
+                    always = no
                 }
             }
         }

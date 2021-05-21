@@ -1,0 +1,44 @@
+@RepeatRepeatable = 0.5
+tech_repeatable_improved_escape = {
+    area = physics
+    cost = @repeatableTechBaseCost
+    cost_per_level = @repeatableTechLevelCost
+    tier = @repeatableTechTier
+    category = {
+        computing
+    }
+    levels = 5
+    prerequisites = {
+        "tech_combat_computers_2"
+    }
+    weight = @repeatableTechWeight
+    weight_modifier = {
+        factor = @repatableTechFactor
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+    potential = {
+        NOT = {
+            is_country_type = fallen_empire
+        }
+    }
+    ai_weight = {
+        factor = 1
+    }
+    weight_groups = {
+        repeatable
+    }
+    mod_weight_if_group_picked = {
+        repeatable = @RepeatRepeatable
+    }
+    modifier = {
+        ship_disengage_chance_mult = 0.04
+    }
+}

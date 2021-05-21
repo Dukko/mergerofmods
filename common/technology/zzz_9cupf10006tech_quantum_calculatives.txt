@@ -1,0 +1,59 @@
+tech_quantum_calculatives = {
+    area = physics
+    cost = @tier4cost3
+    tier = 4
+    category = {
+        computing
+    }
+    is_rare = yes
+    weight = @rareweight
+    prerequisites = {
+        "tech_quantum_computers"
+        "tech_basic_science_lab_3"
+    }
+    modifier = {
+        planet_researchers_physics_research_produces_mult = 0.1
+    }
+    weight_modifier = {
+        factor = 1
+        modifier = {
+            factor = 2
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = 2.5
+            research_leader = {
+                area = physics
+                has_level > 5
+            }
+        }
+    }
+    ai_weight = {
+        factor = 2
+        modifier = {
+            factor = 2.5
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = 2.5
+            research_leader = {
+                area = physics
+                has_level > 5
+            }
+        }
+    }
+}

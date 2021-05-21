@@ -1,0 +1,30 @@
+@apsr11part2cost_energy = 0
+@apsr11part2cost_minerals = 5000
+@apsr11part2cost_time = 1000
+@apsr11part2upkeep_fake = 3
+apsr11_building_part_m2_fake = {
+    base_buildtime = @apsr11part2cost_time
+    icon = "apsr11_building_part_m2"
+    is_capped_by_modifier = no
+    category = research
+    can_build = no
+    potential = {
+        has_modifier = "apsr11_planet_modifier"
+    }
+    resources = {
+        category = planet_apsr_buildings
+        cost = {
+            energy = @apsr11part2cost_energy
+            minerals = @apsr11part2cost_minerals
+        }
+        upkeep = {
+            energy = @apsr11part2upkeep_fake
+        }
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    ai_weight = {
+        weight = 50000
+    }
+}

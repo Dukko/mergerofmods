@@ -1,0 +1,48 @@
+@tier3cost2 = 5000
+@tier3weight2 = 60
+tech_eutab_graphic_propaganda = {
+    cost = @tier3cost2
+    area = society
+    tier = 3
+    category = {
+        statecraft
+    }
+    prerequisites = {
+        "tech_galactic_administration"
+    }
+    weight = @tier3weight2
+    is_rare = yes
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                AND = {
+                    OR = {
+                        has_authority = auth_dictatorial
+                        has_authority = auth_imperial
+                    }
+                    OR = {
+                        has_ascension_perk = ap_defender_of_the_galaxy
+                        has_ascension_perk = ap_nihilistic_acquisition
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+}

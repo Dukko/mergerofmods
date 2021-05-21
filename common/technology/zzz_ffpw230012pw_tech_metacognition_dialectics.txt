@@ -1,0 +1,86 @@
+pw_tech_metacognition_dialectics = {
+    area = society
+    cost = @tier5cost2
+    tier = 5
+    category = {
+        statecraft
+    }
+    prerequisites = {
+        pw_tech_planetary_mega_engineering
+        tech_hive_confluence
+        tech_society_3
+    }
+    weight = @tier5weight1
+    is_rare = yes
+    potential = {
+        is_hive_empire = yes
+    }
+    weight_modifier = {
+        factor = 0.25
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = society
+                has_trait = leader_trait_expertise_statecraft
+            }
+        }
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = society
+                has_trait = leader_trait_spark_of_genius
+            }
+        }
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = society
+                has_trait = leader_trait_curator
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = @federation_perk_factor
+            has_federation = yes
+            federation = {
+                has_federation_perk = rare_tech_boost
+                any_member = {
+                    has_technology = pw_tech_metaphysical_singularity
+                }
+            }
+        }
+        modifier = {
+            factor = 1.5
+            has_valid_civic = civic_hive_divided_attention
+        }
+        modifier = {
+            factor = 1.5
+            has_valid_civic = civic_hive_natural_neural_network
+        }
+        modifier = {
+            factor = 1.5
+            has_valid_civic = civic_hive_pooled_knowledge
+        }
+        modifier = {
+            factor = 1.5
+            has_valid_civic = civic_hive_memorialist
+        }
+        modifier = {
+            factor = 0.5
+            has_valid_civic = civic_hive_one_mind
+        }
+    }
+    ai_weight = {
+        factor = 10
+        modifier = {
+            factor = 2
+            research_leader = {
+                area = society
+                has_trait = leader_trait_expertise_statecraft
+            }
+        }
+    }
+}

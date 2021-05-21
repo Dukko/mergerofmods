@@ -1,0 +1,212 @@
+building_chemical_plant_at = {
+    base_buildtime = @b2_time
+    category = government
+    potential = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+        building_basic_income_check = yes
+        owner = {
+            has_civic = civic_tw_atlantis
+        }
+    }
+    allow = {
+        has_building = building_ancient_palace_at
+    }
+    destroy_trigger = {
+        free_building_slots = 0
+        exists = owner
+        owner = {
+            is_ai = yes
+            has_monthly_income = {
+                resource = volatile_motes
+                value > 9
+            }
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 2000
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_basic_industry
+                    NOR = {
+                        has_modifier = energy_deficit
+                        has_modifier = minerals_deficit
+                    }
+                }
+            }
+            volatile_motes = 2
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_alloys_1
+                    NOR = {
+                        has_modifier = energy_deficit
+                        has_modifier = minerals_deficit
+                    }
+                }
+                planet = {
+                    num_buildings = {
+                        type = building_adamant_1
+                        value >= 1
+                    }
+                }
+            }
+            volatile_motes = 2
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_alloys_2
+                    NOR = {
+                        has_modifier = energy_deficit
+                        has_modifier = minerals_deficit
+                    }
+                }
+                planet = {
+                    num_buildings = {
+                        type = building_adamant_1
+                        value >= 2
+                    }
+                }
+            }
+            volatile_motes = 2
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    has_technology = tech_mine_volatile_motes
+                    NOR = {
+                        has_modifier = energy_deficit
+                        has_modifier = minerals_deficit
+                    }
+                }
+            }
+            engineering_research = 10
+            minerals = 10
+            energy = 3
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    has_technology = tech_alloys_1
+                    NOR = {
+                        has_modifier = energy_deficit
+                        has_modifier = minerals_deficit
+                    }
+                }
+                planet = {
+                    num_buildings = {
+                        type = building_adamant_1
+                        value >= 1
+                    }
+                }
+            }
+            minerals = 10
+            energy = 3
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    has_technology = tech_alloys_2
+                    NOR = {
+                        has_modifier = energy_deficit
+                        has_modifier = minerals_deficit
+                    }
+                }
+                planet = {
+                    num_buildings = {
+                        type = building_adamant_1
+                        value >= 2
+                    }
+                }
+            }
+            minerals = 10
+            energy = 3
+        }
+    }
+    prerequisites = {
+        tech_volatile_motes
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 30
+            owner = {
+                has_monthly_income = {
+                    resource = volatile_motes
+                    value < 3
+                }
+                NOT = {
+                    has_country_flag = buildings_new_mote_plant
+                }
+            }
+            buildings_build_building = yes
+        }
+        modifier = {
+            weight = 200
+            owner = {
+                has_monthly_income = {
+                    resource = volatile_motes
+                    value < 0
+                }
+                NOT = {
+                    has_country_flag = buildings_new_mote_plant
+                }
+            }
+            buildings_build_building = yes
+        }
+    }
+    ai_resource_production = {
+        volatile_motes = 1
+        trigger = {
+            always = yes
+        }
+    }
+    on_queued = {
+        IF = {
+            limit = {
+                owner = {
+                    has_technology = tech_construction_templates
+                }
+            }
+            owner = {
+                set_timed_country_flag = {
+                    flag = buildings_new_mote_plant
+                    days = 270
+                }
+            }
+        }
+        ELSE_IF = {
+            limit = {
+                owner = {
+                    has_technology = tech_assembly_pattern
+                }
+            }
+            owner = {
+                set_timed_country_flag = {
+                    flag = buildings_new_mote_plant
+                    days = 390
+                }
+            }
+        }
+        ELSE = {
+            planet = {
+                owner = {
+                    set_timed_country_flag = {
+                        flag = buildings_new_mote_plant
+                        days = 510
+                    }
+                }
+            }
+        }
+    }
+}

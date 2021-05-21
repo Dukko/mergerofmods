@@ -1,0 +1,63 @@
+@tier4cost3 = 12000
+@tier4weight3 = 35
+tech_sensors_crystal = {
+    area = physics
+    cost = @tier4cost3
+    tier = 4
+    category = {
+        computing
+    }
+    ai_update_type = all
+    prerequisites = {
+        "tech_sensors_4"
+    }
+    weight = @tier4weight3
+    is_rare = yes
+    is_reverse_engineerable = no
+    start_tech = no
+    modifier = {
+        ship_tracking_add = 15
+        ship_sensor_range_add = 1
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            is_fallen_empire = yes
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = tr_discovery_adopt
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_deposit = d_crystal_guild
+                }
+            }
+        }
+    }
+    ai_weight = {
+        factor = 1.25
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+    prereqfor_desc = {
+        component = {
+            title = "TECH_UNLOCK_SENSOR_5_TITLE"
+            desc = "TECH_UNLOCK_SENSOR_5_DESC"
+        }
+    }
+}

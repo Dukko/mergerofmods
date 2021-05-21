@@ -1,0 +1,52 @@
+@tier3cost2 = 5000
+@tier3weight2 = 60
+tech_eutab_intel_office = {
+    cost = @tier3cost2
+    area = society
+    tier = 3
+    category = {
+        military_theory
+    }
+    is_rare = yes
+    prerequisites = {
+        "tech_starbase_3"
+        "tech_doctrine_navy_size_2"
+    }
+    weight = @tier3weight2
+    potential = {
+        eu_req_xpho = yes
+    }
+    gateway = eu_vision
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = ap_one_vision
+            }
+        }
+        modifier = {
+            factor = 0
+            calc_true_if = {
+                amount = 2
+                has_technology = tech_eutab_consol_power
+                has_technology = tech_eutab_universal_b_income
+                has_technology = tech_eutab_intel_office
+                has_technology = tech_eutab_lingusitic_intergration
+                has_technology = tech_eutab_innate_command
+                has_technology = tech_eutab_problem_policing
+                has_technology = tech_eutab_citizen_sci
+                has_technology = tech_eutab_right_self
+            }
+        }
+    }
+    ai_weight = {
+        factor = 3
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+    }
+}

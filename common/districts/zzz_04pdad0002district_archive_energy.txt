@@ -37,36 +37,11 @@ district_archive_energy = {
         potential = {
             exists = owner
             owner = {
-                is_gestalt = no
-                is_fallen_empire_spiritualist = no
-            }
-            has_building = building_energy_nexus
-        }
-        modifier = {
-            job_technician_add = 1
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
                 is_fallen_empire_spiritualist = yes
             }
         }
         modifier = {
             job_fe_acolyte_generator_add = 3
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_fallen_empire_spiritualist = yes
-            }
-            has_building = building_energy_nexus
-        }
-        modifier = {
-            job_fe_acolyte_generator_add = 1
         }
     }
     triggered_planet_modifier = {
@@ -86,18 +61,6 @@ district_archive_energy = {
             }
         }
         job_technician_drone_add = 4
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_gestalt = yes
-            }
-            has_building = building_energy_nexus
-        }
-        modifier = {
-            job_technician_drone_add = 1
-        }
     }
     triggered_desc = {
         trigger = {

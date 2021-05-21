@@ -19,8 +19,40 @@ artisan = {
         produces = {
             consumer_goods = 6
         }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_factory_2
+                }
+            }
+            consumer_goods = 1
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_factory_3
+                }
+            }
+            consumer_goods = 2
+        }
         upkeep = {
             minerals = 6
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    has_active_building = building_factory_2
+                }
+            }
+            minerals = 1
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    has_active_building = building_factory_3
+                }
+            }
+            minerals = 2
         }
         upkeep = {
             trigger = {
@@ -77,6 +109,23 @@ artisan = {
         modifier = {
             factor = 1.5
             has_trait = trait_necrophage
+        }
+        modifier = {
+            factor = 1.2
+            OR = {
+                is_unemployed = yes
+                has_job = "artisan"
+            }
+            exists = planet
+            planet = {
+                has_available_jobs = "artisan"
+            }
+            owner = {
+                has_monthly_income = {
+                    resource = consumer_goods
+                    value < 5
+                }
+            }
         }
         modifier = {
             factor = 1.2

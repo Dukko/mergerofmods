@@ -1,0 +1,33 @@
+GT_army_health = {
+    cost = @tier3cost2
+    area = engineering
+    tier = 3
+    category = {
+        materials
+    }
+    prerequisites = {
+        "tech_ship_armor_3"
+    }
+    weight = @tier4weight2
+    modifier = {
+        army_health = 0.2
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+building_resource_accelerate = {
+    base_buildtime = 720
+    base_cap_amount = 5
+    potential = {
+        exists = planet
+        NOT = {
+            has_modifier = slave_colony
+        }
+        has_modifier = harsh_shroud
+    }
+    country_modifier = {
+        stations_produces_mult = 0.05
+        planet_jobs_produces_mult = 0.05
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 500
+            energy = 500
+            sr_zro = 200
+            yin = 50
+        }
+        upkeep = {
+            energy = 40
+            sr_zro = 10
+            yin = 5
+        }
+    }
+    ai_weight = {
+        factor = 50
+    }
+}

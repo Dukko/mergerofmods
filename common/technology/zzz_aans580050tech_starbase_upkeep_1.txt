@@ -1,0 +1,33 @@
+tech_starbase_upkeep_1 = {
+    cost = @tier4cost3
+    area = engineering
+    tier = 3
+    category = {
+        voidcraft
+    }
+    prerequisites = {
+        "tech_starbase_4"
+    }
+    weight = @tier4weight2
+    modifier = {
+        starbases_upkeep_mult = -0.2
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+}

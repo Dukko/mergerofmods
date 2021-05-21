@@ -1,6 +1,6 @@
 tiyankicleanup = {
-    category = worker
-    condition_string = WORKER_JOB_TRIGGER
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
     building_icon = building_tinyanki_cleanup
     clothes_texture_index = 2
     possible = {

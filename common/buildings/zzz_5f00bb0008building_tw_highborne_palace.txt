@@ -1,0 +1,80 @@
+building_tw_highborne_palace = {
+    base_buildtime = 480
+    can_be_ruined = no
+    category = government
+    potential = {
+        owner = {
+            OR = {
+                has_valid_civic = civic_arcane_precursor
+            }
+        }
+    }
+    allow = {
+    }
+    destroy_trigger = {
+        NOT = {
+            owner = {
+                OR = {
+                    has_valid_civic = civic_kaldorei_castes
+                    has_valid_civic = civic_arcane_precursor
+                }
+            }
+        }
+    }
+    planet_modifier = {
+        job_highborne_lord_add = 4
+        planet_housing_add = 10
+        planet_amenities_add = 10
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 1000
+            arcane_power_tw = 100
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_ai = no
+                }
+            }
+            minerals = 500
+        }
+        upkeep = {
+            energy = 3
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_ai = no
+                }
+            }
+            energy = 3
+        }
+        produces = {
+            arcane_technology = 30
+            mana_crystals = 30
+        }
+    }
+    triggered_desc = {
+    }
+    upgrades = {
+    }
+    ai_weight = {
+        weight = 100
+        modifier = {
+            factor = 300000
+            free_amenities < 0
+        }
+        modifier = {
+            factor = 500000
+            free_housing < 1
+        }
+        modifier = {
+            factor = 0
+            free_housing > 1
+        }
+    }
+}

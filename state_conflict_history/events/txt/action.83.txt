@@ -7,16 +7,6 @@ country_event = {
     show_sound = event_super_explosion
     location = from
     is_triggered_only = yes
-    immediate = {
-        if = {
-            limit = {
-                has_ascension_perk = ap_become_the_crisis
-            }
-            country_event = {
-                id = crisis.5016
-            }
-        }
-    }
     option = {
         name = EXCELLENT
         custom_tooltip = bombed_to_tomb_world

@@ -1,0 +1,30 @@
+tech_esap_technological_ascendancy_bonus_1_laser = {
+    cost = @tier4cost3
+    area = physics
+    tier = 4
+    category = {
+        particles
+    }
+    prerequisites = {
+        "tech_lasers_5"
+    }
+    is_rare = yes
+    weight = @tier4weight3
+    is_reverse_engineerable = no
+    modifier = {
+        weapon_type_energy_weapon_damage_mult = 0.1
+        weapon_type_energy_weapon_fire_rate_mult = 0.1
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            Not = {
+                has_ascension_perk = ap_esap_technological_ascendancy_bonus_1
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+    }
+}

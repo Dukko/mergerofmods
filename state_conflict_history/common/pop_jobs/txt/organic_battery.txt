@@ -24,6 +24,22 @@ organic_battery = {
         }
         produces = {
             trigger = {
+                planet = {
+                    has_active_building = building_energy_grid
+                }
+            }
+            energy = 1
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_energy_nexus
+                }
+            }
+            energy = 2
+        }
+        produces = {
+            trigger = {
                 owner = {
                     has_swapped_tradition = tr_plentiful_biogenesis_machine_1
                 }

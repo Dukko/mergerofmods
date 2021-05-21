@@ -34,5 +34,13 @@ tech_ecological_adaptation = {
                 has_trait = "leader_trait_expertise_new_worlds"
             }
         }
+        modifier = {
+            factor = 2
+            is_xenophobe = yes
+        }
+        modifier = {
+            factor = 2
+            is_ai = no
+        }
     }
 }

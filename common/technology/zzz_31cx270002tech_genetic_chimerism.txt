@@ -1,0 +1,33 @@
+tech_genetic_chimerism = {
+    cost = @tier4cost1
+    area = society
+    category = {
+        biology
+    }
+    tier = 4
+    is_rare = yes
+    weight = 0
+    potential = {
+        NOT = {
+            has_authority = auth_machine_intelligence
+        }
+    }
+    ai_weight = {
+        factor = 3
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+    }
+}

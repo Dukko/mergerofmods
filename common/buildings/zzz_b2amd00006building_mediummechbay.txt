@@ -1,0 +1,45 @@
+building_mediummechbay = {
+    base_buildtime = 360
+    can_build = no
+    category = army
+    potential = {
+        exists = owner
+        owner = {
+            is_gestalt = no
+        }
+        has_building = building_lightmechbay
+    }
+    resources = {
+        category = planet_buildings_strongholds
+        cost = {
+            minerals = 750
+        }
+        upkeep = {
+            alloys = 2
+        }
+        produces = {
+            engineering_research = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_mechwarrior_add = 1
+            job_mechtech_add = 2
+        }
+    }
+    prerequisites = {
+        "tech_robotic_workers"
+    }
+    upgrades = {
+        building_heavymechbay
+    }
+    ai_weight = {
+        weight = 2
+    }
+}

@@ -1,0 +1,48 @@
+building_nanite_weapons_lab = {
+    base_buildtime = 360
+    base_cap_amount = 1
+    category = research
+    potential = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+        NOT = {
+            is_planet_class = pc_habitat
+        }
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    planet_modifier = {
+        job_nanite_researcher_add = 1
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 300
+            nanites = 100
+        }
+        upkeep = {
+            energy = 2
+        }
+    }
+    triggered_desc = {
+        text = job_nanite_researcher_effect_desc
+    }
+    prerequisites = {
+        "tech_nanite_weaponry"
+    }
+    ai_weight = {
+        weight = 1
+        modifier = {
+            factor = 0
+            has_monthly_income = {
+                resource = nanites
+                value <= 0
+            }
+        }
+    }
+}

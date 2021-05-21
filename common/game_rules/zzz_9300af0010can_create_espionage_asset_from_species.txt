@@ -1,0 +1,10 @@
+can_create_espionage_asset_from_species = {
+    OR = {
+        NOT = {
+            has_trait = "trait_mechanical"
+        }
+        root = {
+            has_technology = "tech_droid_workers"
+        }
+    }
+}

@@ -1,0 +1,34 @@
+tech_natural_living_metal = {
+    area = engineering
+    cost = @tier6cost1
+    tier = 6
+    category = {
+        materials
+    }
+    is_rare = no
+    weight = @tier6weight1
+    prerequisites = {
+        "tech_mine_living_metal"
+        "tech_standard_automation"
+    }
+    weight_modifier = {
+        factor = 5
+        modifier = {
+            factor = 5
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 7
+        modifier = {
+            factor = 5
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+}

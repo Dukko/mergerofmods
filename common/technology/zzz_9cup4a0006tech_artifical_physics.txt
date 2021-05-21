@@ -1,0 +1,37 @@
+tech_artifical_physics = {
+    area = physics
+    cost = @tier8cost1
+    tier = 8
+    category = {
+        field_manipulation
+    }
+    is_rare = no
+    weight = @tier8weight1
+    prerequisites = {
+        "tech_extreme_energies"
+        "tech_special_materials"
+    }
+    modifier = {
+        all_technology_research_speed = 0.1
+    }
+    weight_modifier = {
+        factor = 5
+        modifier = {
+            factor = 5
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 7
+        modifier = {
+            factor = 5
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+}

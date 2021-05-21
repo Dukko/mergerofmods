@@ -1,0 +1,103 @@
+building_tw_sanctum_upgrade_two = {
+    base_buildtime = 480
+    can_be_ruined = no
+    can_build = no
+    category = government
+    potential = {
+        owner = {
+            OR = {
+                has_valid_civic = civic_tw_arcane_society
+                has_valid_civic = civic_arcane_heritage
+                has_valid_civic = civic_tw_arcane_society_helf
+                has_valid_civic = civic_tw_sunwell_helf
+            }
+            OR = {
+                species_portrait = elven_02
+                species_portrait = belf_02
+                species_portrait = helf_02
+            }
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    destroy_trigger = {
+        NOT = {
+            owner = {
+                OR = {
+                    has_valid_civic = civic_tw_arcane_society
+                    has_valid_civic = civic_arcane_heritage
+                    has_valid_civic = civic_tw_arcane_society_helf
+                    has_valid_civic = civic_tw_sunwell_helf
+                }
+            }
+        }
+    }
+    planet_modifier = {
+        job_magister_add = 10
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_non_swapped_tradition = tr_domination_imperious_architecture
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_government = gov_bloodelf_regency
+                has_government = gov_highelf_regency
+            }
+        }
+        modifier = {
+            planet_housing_add = 10
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 2000
+        }
+        upkeep = {
+            energy = 15
+        }
+        produces = {
+            arcane_technology = 20
+            mana_crystals = 20
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_ai = yes
+                }
+            }
+            minerals = 50
+            energy = 50
+            food = 50
+            consumer_goods = 50
+            alloys = 50
+            engineering_research = 50
+            physics_research = 50
+            society_research = 50
+        }
+    }
+    prerequisites = {
+        "tech_galactic_administration"
+    }
+    triggered_desc = {
+        text = job_magister_effect_desc
+    }
+    ai_weight = {
+        weight = 10000
+    }
+}

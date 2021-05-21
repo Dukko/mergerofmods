@@ -1,0 +1,32 @@
+@tier5cost1 = 14000
+tech_eutab_m_adaptation_mastery = {
+    cost = @tier5cost1
+    area = engineering
+    tier = 5
+    category = {
+        industry
+    }
+    weight = 0
+    potential = {
+        has_authority = auth_machine_intelligence
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "TECH_UNLOCK_EUTAB_ADVANCED_ROBO_MODDING_TITLE"
+            desc = "TECH_UNLOCK_EUTAB_ADVANCED_ROBO_MODDING_DESC"
+        }
+        custom = {
+            title = "TECH_UNLOCK_EUTAB_ADVANCED_ROBO_TRAITS_TITLE"
+            desc = "TECH_UNLOCK_EUTAB_ADVANCED_ROBO_TRAITS_DESC"
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+@apsr_advanced_1_cost = 25000
+@apsr_advanced_1_weight = 5
+tech_apsr16_advanced_1 = {
+    cost = @apsr_advanced_1_cost
+    area = physics
+    tier = 3
+    category = {
+        field_manipulation
+    }
+    prerequisites = {
+        "tech_apsr16_building_part2"
+    }
+    weight = @apsr_advanced_1_weight
+    is_rare = yes
+    prereqfor_desc = {
+        custom = {
+            title = "TECH_APSR_ADVANCED_TITLE"
+            desc = "TECH_APSR_ADVANCED_DESC"
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            has_global_flag = apsr_advanced_set_off
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_deposit = apsr16_deposit
+                }
+            }
+        }
+        modifier = {
+            factor = 5
+            has_origin = apsr_origin_unique_capital
+        }
+        modifier = {
+            factor = 0.5
+            has_global_flag = apsr_advanced_factor_050
+        }
+        modifier = {
+            factor = 2
+            has_global_flag = apsr_advanced_factor_200
+        }
+    }
+    ai_weight = {
+        factor = 160
+    }
+}

@@ -1,0 +1,255 @@
+pw_building_space_elevator = {
+    base_buildtime = @pw_building_buildtime
+    position_priority = 50
+    base_cap_amount = 1
+    can_be_ruined = no
+    category = trade
+    potential = {
+        exists = owner
+        NOT = {
+            has_modifier = slave_colony
+        }
+        NOT = {
+            is_planet_class = pc_habitat
+        }
+        NOT = {
+            is_planet_class = pc_ringworld_habitable
+        }
+    }
+    destroy_trigger = {
+        has_modifier = slave_colony
+    }
+    allow = {
+        has_major_upgraded_capital = yes
+        free_district_slots > 0
+        pw_can_build_planetary_wonder = yes
+    }
+    planet_modifier = {
+        planet_max_districts_add = -1
+        pop_resettlement_cost_mult = -0.5
+        planet_amenities_mult = 0.1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_clerk_add = @pw_building_worker_jobs
+            job_merchant_per_pop = @pw_job_per_50_pop
+            job_enforcer_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+            has_modifier = resort_colony
+        }
+        modifier = {
+            job_pw_tourist_per_pop = @pw_job_per_25_pop
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_maintenance_drone_add = @pw_building_menial_jobs
+            job_synapse_drone_per_pop = @pw_job_per_50_pop
+            job_patrol_drone_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_maintenance_drone_add = @pw_building_menial_jobs
+            job_evaluator_per_pop = @pw_job_per_50_pop
+            job_patrol_drone_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_edict = pw_ambition_monumentality
+            }
+        }
+        modifier = {
+            planet_stability_add = @pw_stability_production
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @pw_building_cost
+        }
+        upkeep = {
+            energy = @pw_building_upkeep
+        }
+    }
+    prerequisites = {
+        pw_tech_space_elevator
+    }
+    triggered_desc = {
+        text = pw_planet_wonder_lb
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        text = job_clerk_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        text = job_merchant_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        text = job_enforcer_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_patrol_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_maintenance_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = job_synapse_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = job_evaluator_effect_desc
+    }
+    on_built = {
+        planet_event = {
+            id = pw_wonder.100
+        }
+    }
+    ai_weight = {
+        weight = 20
+        modifier = {
+            factor = 0
+            building_relaxed_basic_income_check = no
+        }
+        modifier = {
+            factor = 0.25
+            free_building_slots < 1
+            free_district_slots < 1
+        }
+        modifier = {
+            factor = 0.25
+            pw_has_any_planetary_wonder = yes
+            NOT = {
+                owner = {
+                    has_ascension_perk = pw_ap_planetary_wonders
+                }
+            }
+            NOT = {
+                has_active_building = pw_building_space_elevator
+            }
+            NOT = {
+                has_building_construction = pw_building_space_elevator
+            }
+        }
+        modifier = {
+            factor = 2
+            has_active_building = building_commercial_zone
+        }
+        modifier = {
+            factor = 2.5
+            has_active_building = building_commercial_megaplex
+        }
+        modifier = {
+            factor = 1.25
+            OR = {
+                has_active_building = building_holo_theatres
+                has_active_building = building_temple
+                has_active_building = building_temple_of_prosperity
+                has_active_building = building_sacrificial_temple_1
+            }
+        }
+        modifier = {
+            factor = 1.75
+            OR = {
+                has_active_building = building_hyper_entertainment_forum
+                has_active_building = building_holotemple
+                has_active_building = building_sacrificial_temple_2
+            }
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                has_active_building = building_sacred_nexus
+                has_active_building = building_sacrificial_temple_3
+            }
+        }
+        modifier = {
+            factor = 5
+            exists = owner
+            owner = {
+                is_megacorp = yes
+            }
+        }
+        modifier = {
+            factor = 2.5
+            num_pops > 60
+        }
+        modifier = {
+            factor = 0.75
+            planet_size < 15
+        }
+        modifier = {
+            factor = 1.5
+            planet_size > 20
+        }
+    }
+}

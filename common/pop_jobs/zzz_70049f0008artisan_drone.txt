@@ -17,8 +17,40 @@ artisan_drone = {
         produces = {
             consumer_goods = 10
         }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_factory_2
+                }
+            }
+            consumer_goods = 1
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_factory_3
+                }
+            }
+            consumer_goods = 2
+        }
         upkeep = {
             minerals = 10
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    has_active_building = building_factory_2
+                }
+            }
+            minerals = 2
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    has_active_building = building_factory_3
+                }
+            }
+            minerals = 4
         }
         upkeep = {
             trigger = {

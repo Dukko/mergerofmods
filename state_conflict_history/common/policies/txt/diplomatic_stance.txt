@@ -320,12 +320,14 @@ diplomatic_stance = {
                 has_ethic = ethic_capitalism
                 has_ethic = ethic_fanatic_capitalism
             }
+            is_gestalt = no
         }
         valid = {
             NOR = {
                 has_valid_civic = civic_inwards_perfection
                 has_valid_civic = civic_isolationism
             }
+            is_homicidal = no
             if = {
                 limit = {
                     has_megacorp = yes
@@ -385,11 +387,9 @@ diplomatic_stance = {
             NOR = {
                 has_valid_civic = civic_inwards_perfection
                 has_valid_civic = civic_isolationism
-            }
-            is_homicidal = no
-            NOT = {
                 has_modifier = humiliated
             }
+            is_homicidal = no
             custom_tooltip = {
                 fail_text = "requires_supremacy_traditions"
             OR = {

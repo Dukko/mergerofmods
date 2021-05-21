@@ -1,0 +1,24 @@
+tech_hb_decadence = {
+    cost = @guardiantechcost
+    area = society
+    tier = 1
+    is_reverse_engineerable = no
+    category = {
+        statecraft
+    }
+    ai_update_type = all
+    levels = 10
+    weight = 0
+    potential = {
+        has_country_flag = kaldoreiempire
+    }
+    modifier = {
+        pop_amenities_usage_mult = 0.5
+        planet_pops_consumer_goods_upkeep_mult = 0.5
+        planet_pops_food_upkeep_mult = 0.5
+        planet_buildings_cost_mult = 0.1
+    }
+    weight_modifier = {
+        factor = 0
+    }
+}

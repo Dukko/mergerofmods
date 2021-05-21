@@ -1,0 +1,275 @@
+building_adamant_1 = {
+    base_buildtime = @b1_time
+    category = government
+    potential = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+        building_relaxed_basic_income_check = yes
+        owner = {
+            has_civic = civic_tw_atlantis
+        }
+    }
+    allow = {
+        has_building = building_ancient_palace_at
+    }
+    destroy_trigger = {
+        OR = {
+            has_modifier = resort_colony
+            has_modifier = slave_colony
+            AND = {
+                exists = owner
+                owner = {
+                    is_ai = yes
+                    has_monthly_income = {
+                        resource = alloys
+                        value > 200
+                    }
+                }
+                is_planet_class = pc_city
+            }
+        }
+    }
+    resources = {
+        category = planet_metallurgists
+        cost = {
+            minerals = 1000
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_basic_industry
+                    NOR = {
+                        has_modifier = energy_deficit
+                        has_modifier = minerals_deficit
+                    }
+                }
+            }
+            alloys = 6
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_basic_industry
+                    NOR = {
+                        has_modifier = energy_deficit
+                        has_modifier = minerals_deficit
+                    }
+                }
+                planet = {
+                    has_deposit = d_atlantean_pits
+                }
+            }
+            alloys = 6
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_alloys_1
+                    NOR = {
+                        has_modifier = energy_deficit
+                        has_modifier = minerals_deficit
+                        has_modifier = volatile_motes_deficit
+                    }
+                }
+            }
+            alloys = 15
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_alloys_2
+                    NOR = {
+                        has_modifier = energy_deficit
+                        has_modifier = minerals_deficit
+                        has_modifier = volatile_motes_deficit
+                    }
+                }
+            }
+            alloys = 25
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    has_technology = tech_basic_industry
+                    NOR = {
+                        has_modifier = energy_deficit
+                        has_modifier = minerals_deficit
+                    }
+                }
+            }
+            energy = 2
+            minerals = 12
+            society_research = 10
+            engineering_research = 10
+            physics_research = 10
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    has_technology = tech_basic_industry
+                    NOR = {
+                        has_modifier = energy_deficit
+                        has_modifier = minerals_deficit
+                    }
+                }
+                planet = {
+                    has_deposit = d_atlantean_pits
+                }
+            }
+            minerals = 12
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    has_technology = tech_alloys_1
+                    NOR = {
+                        has_modifier = energy_deficit
+                        has_modifier = minerals_deficit
+                        has_modifier = volatile_motes_deficit
+                    }
+                }
+            }
+            energy = 3
+            volatile_motes = 1
+            minerals = 30
+            society_research = 20
+            engineering_research = 20
+            physics_research = 20
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    has_technology = tech_alloys_2
+                    NOR = {
+                        has_modifier = energy_deficit
+                        has_modifier = minerals_deficit
+                        has_modifier = volatile_motes_deficit
+                    }
+                }
+            }
+            energy = 3
+            volatile_motes = 1
+            minerals = 50
+            society_research = 30
+            engineering_research = 30
+            physics_research = 30
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    OR = {
+                        has_modifier = energy_deficit
+                        has_modifier = minerals_deficit
+                        has_modifier = volatile_motes_deficit
+                    }
+                }
+            }
+            alloys = -25
+        }
+    }
+    planet_modifier = {
+        planet_deposits_alloys_produces_mult = 0.1
+    }
+    upgrades = {
+    }
+    prerequisites = {
+        tech_basic_industry
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 10
+            OR = {
+                planet_crime < 15
+                has_building = building_hall_judgment
+            }
+            is_capital = no
+            free_amenities > 2
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value > 100
+                }
+                has_monthly_income = {
+                    resource = alloys
+                    value < 100
+                }
+                has_monthly_income = {
+                    resource = alloys
+                    value > 6
+                }
+            }
+        }
+        modifier = {
+            weight = 200
+            planet = {
+                is_capital = yes
+                NOR = {
+                    has_building = building_foundry_2
+                    has_building = building_foundry_3
+                }
+                num_buildings = {
+                    type = building_foundry_1
+                    value < 3
+                }
+                has_building_construction = no
+            }
+        }
+        modifier = {
+            weight = 400
+            OR = {
+                AND = {
+                    owner = {
+                        OR = {
+                            has_monthly_income = {
+                                resource = consumer_goods
+                                value > 0
+                            }
+                            country_uses_consumer_goods = no
+                        }
+                    }
+                    NOR = {
+                        num_buildings = {
+                            type = building_foundry_1
+                            value > 1
+                        }
+                        has_building = building_foundry_2
+                        has_building = building_foundry_3
+                    }
+                    owner = {
+                        has_ai_personality_behaviour = conqueror
+                        OR = {
+                            has_ai_personality_behaviour = opportunist
+                            has_ai_personality_behaviour = purger
+                            has_ai_personality_behaviour = propagator
+                        }
+                    }
+                }
+                NOR = {
+                    has_building = building_foundry_1
+                    has_building = building_foundry_2
+                    has_building = building_foundry_3
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            free_jobs > 3
+        }
+        modifier = {
+            weight = 500
+            has_building = building_foundry_1
+            free_building_slots = 0
+        }
+    }
+    ai_resource_production = {
+        alloys = 1
+        trigger = {
+            always = yes
+        }
+    }
+}

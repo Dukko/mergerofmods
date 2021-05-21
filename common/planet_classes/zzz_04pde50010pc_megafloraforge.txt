@@ -17,8 +17,8 @@ pc_megafloraforge = {
     starting_planet = no
     modifier = {
         planet_jobs_produces_mult = 0.2
-        pop_growth_speed = 0.5
         planet_max_buildings_add = 12
+        job_spawning_drone_add = 1
     }
     planet_size = {
         min = @habitable_planet_min_size

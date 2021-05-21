@@ -1,0 +1,102 @@
+building_est_mechanicum_5_guild_of_engineers_2 = {
+    base_buildtime = 360
+    can_build = no
+    category = research
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 720
+            rare_crystals = 50
+        }
+        upkeep = {
+            energy = 7
+            rare_crystals = 1
+        }
+    }
+    potential = {
+        owner = {
+            Or = {
+                has_non_swapped_tradition = tr_est_mechanicum_5
+                has_swapped_tradition = tr_est_mechanicum_5_robots
+            }
+        }
+        NOT = {
+            has_modifier = resort_colony
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+        NOT = {
+            is_planet_class = pc_habitat
+        }
+    }
+    planet_modifier = {
+        planet_jobs_engineering_research_produces_mult = 0.15
+    }
+    allow = {
+        has_fully_upgraded_capital = yes
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                Not = {
+                    est_uses_robots = yes
+                }
+            }
+        }
+        modifier = {
+            job_est_engineer_add = 5
+            job_technician_add = 5
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                est_uses_robots = yes
+            }
+        }
+        modifier = {
+            job_est_engineer_add = 4
+            job_technician_add = 4
+            job_roboticist_add = 1
+        }
+    }
+    prerequisites = {
+        "tech_basic_science_lab_3"
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = job_technician_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = job_est_engineer_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                est_uses_robots = yes
+            }
+        }
+        text = job_roboticist_effect_desc
+    }
+    ai_weight = {
+        weight = 3
+    }
+}

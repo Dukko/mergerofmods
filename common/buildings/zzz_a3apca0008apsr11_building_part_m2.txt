@@ -1,0 +1,101 @@
+@apsr11part2cost_energy = 0
+@apsr11part2cost_minerals = 5000
+@apsr11part2cost_time = 1000
+@apsr11part2mupkeep_energy = 10
+@apsr11part2mupkeep_minerals = 5
+@apsr11part2scijob = 5
+apsr11_building_part_m2 = {
+    base_buildtime = @apsr11part2cost_time
+    icon = apsr11_building_part_m2
+    is_capped_by_modifier = no
+    category = research
+    can_build = no
+    potential = {
+        has_modifier = "apsr11_planet_modifier"
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_apsr11_scientist_machine_add = @apsr11part2scijob
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                AND = {
+                    NOT = {
+                        is_hive_empire = yes
+                    }
+                    NOT = {
+                        is_lithoid_empire = yes
+                    }
+                }
+            }
+        }
+        modifier = {
+            job_apsr11_scientist_robot_normal_add = @apsr11part2scijob
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                AND = {
+                    NOT = {
+                        is_hive_empire = yes
+                    }
+                    is_lithoid_empire = yes
+                }
+            }
+        }
+        modifier = {
+            job_apsr11_scientist_lithoid_normal_add = @apsr11part2scijob
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                AND = {
+                    is_hive_empire = yes
+                    is_lithoid_empire = yes
+                }
+            }
+        }
+        modifier = {
+            job_apsr11_scientist_lithoid_hive_add = @apsr11part2scijob
+        }
+    }
+    resources = {
+        category = planet_apsr_buildings
+        cost = {
+            energy = @apsr11part2cost_energy
+            minerals = @apsr11part2cost_minerals
+        }
+        upkeep = {
+            energy = @apsr11part2mupkeep_energy
+            minerals = @apsr11part2mupkeep_minerals
+        }
+    }
+    country_modifier = {
+        country_society_tech_research_speed = 0.05
+    }
+    upgrades = {
+        "apsr11_building_part_m3"
+    }
+    prerequisites = {
+        "tech_apsr11_building_part_m2"
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    ai_weight = {
+        weight = 80000
+    }
+}

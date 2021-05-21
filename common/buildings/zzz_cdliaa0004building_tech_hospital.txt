@@ -1,0 +1,101 @@
+building_tech_hospital = {
+    base_buildtime = @b2_time
+    can_build = yes
+    base_cap_amount = 1
+    category = amenity
+    potential = {
+        owner = {
+            is_regular_empire = yes
+            resource_stockpile_compare = {
+                resource = techcaches
+                value > 1
+            }
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+    }
+    allow = {
+        NOR = {
+            has_building = building_clinic
+            has_building = building_hospital
+        }
+    }
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            owner = {
+                is_regular_empire = no
+            }
+            has_modifier = slave_colony
+            buildings_no_exotic_gases = yes
+            AND = {
+                buildings_stop_pop = yes
+                owner = {
+                    is_ai = yes
+                }
+            }
+        }
+    }
+    planet_modifier = {
+        job_healthcare_add = @b2_jobs
+        pop_environment_tolerance = 0.05
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b2_minerals
+            exotic_gases = @b2_rare_cost
+        }
+        upkeep = {
+            energy = @b2_upkeep
+            exotic_gases = @b2_rare_upkeep
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_ai = no
+                }
+            }
+            techcaches = 10
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_ai = no
+                }
+            }
+            energy = 2
+        }
+    }
+    prerequisites = {
+        "tech_frontier_hospital"
+    }
+    show_tech_unlock_if = {
+        is_regular_empire = yes
+    }
+    triggered_desc = {
+        text = job_healthcare_effect_desc
+    }
+    ai_weight = {
+        weight = 50
+        modifier = {
+            factor = 0
+            OR = {
+                is_planet_class = pc_habitat
+                buildings_stop_pop = yes
+            }
+        }
+        modifier = {
+            factor = 0
+            count_pops = {
+                limit = {
+                    is_sapient = yes
+                }
+                count > 75
+            }
+        }
+    }
+}

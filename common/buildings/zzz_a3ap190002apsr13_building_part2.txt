@@ -1,0 +1,73 @@
+@apsr13part2cost_minerals = 5000
+@apsr13part2cost_time = 1000
+@apsr13part2upkeep_energy = 12
+@apsr13part2upkeep_minerals = 7
+@apsr13part2job = 5
+apsr13_building_part2 = {
+    base_buildtime = @apsr13part2cost_time
+    icon = apsr13_building_part2
+    is_capped_by_modifier = no
+    category = trade
+    can_build = no
+    potential = {
+        has_modifier = "apsr13_planet_modifier"
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_apsr13_trader_hive_add = @apsr13part2job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_apsr13_trader_machine_add = @apsr13part2job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_apsr13_trader_normal_add = @apsr13part2job
+        }
+    }
+    resources = {
+        category = planet_apsr_buildings
+        cost = {
+            minerals = @apsr13part2cost_minerals
+        }
+        upkeep = {
+            energy = @apsr13part2upkeep_energy
+            minerals = @apsr13part2upkeep_minerals
+        }
+    }
+    country_modifier = {
+        country_trade_fee = -0.05
+    }
+    upgrades = {
+        "apsr13_building_part3"
+    }
+    prerequisites = {
+        "tech_apsr13_building_part2"
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    ai_weight = {
+        weight = 50000
+    }
+}

@@ -1,0 +1,17 @@
+tech_est_mechanical_knights = {
+    area = engineering
+    start_tech = no
+    category = {
+        materials
+    }
+    tier = 0
+    weight = 0
+    weight_modifier = {
+        modifier = {
+            factor = 0
+        }
+    }
+    ai_weight = {
+        factor = 0
+    }
+}

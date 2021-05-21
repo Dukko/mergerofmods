@@ -1,0 +1,88 @@
+eb_chemical_plant2 = {
+    base_buildtime = @b2_time
+    can_build = no
+    category = manufacturing
+    potential = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+        building_basic_income_check = yes
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    destroy_trigger = {
+        free_building_slots = 0
+        exists = owner
+        owner = {
+            is_ai = yes
+            has_monthly_income = {
+                resource = volatile_motes
+                value > 9
+            }
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_chemist_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_chemist_drone_add = 3
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 2500
+            sr_dark_matter = 25
+        }
+        upkeep = {
+            energy = 15
+            sr_dark_matter = 0.5
+        }
+    }
+    prerequisites = {
+        "eb_more_strategicresource_tech"
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        text = job_chemist_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_chemist_drone_effect_desc
+    }
+    ai_resource_production = {
+        volatile_motes = 3
+        trigger = {
+            always = yes
+        }
+    }
+}

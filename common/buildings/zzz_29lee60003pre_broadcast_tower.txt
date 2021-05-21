@@ -1,0 +1,78 @@
+pre_broadcast_tower = {
+    base_buildtime = 200
+    can_build = no
+    can_demolish = no
+    allow = {
+        always = no
+    }
+    planet_modifier = {
+        planet_max_districts_add = -3
+        planet_jobs_unity_produces_mult = 0.1
+        planet_jobs_society_research_produces_mult = 0.05
+        planet_jobs_engineering_research_produces_mult = 0.05
+    }
+    country_modifier = {
+        country_admin_cap_add = 5
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+        }
+        produces = {
+        }
+        upkeep = {
+            energy = 7
+            alloys = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_technician_add = 1
+            job_researcher_add = 1
+            job_enforcer_add = 1
+            job_administrator_add = 1
+            job_clerk_add = 2
+            job_culture_worker_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_technician_drone_add = 1
+            job_brain_drone_add = 1
+            job_synapse_drone_add = 2
+            job_maintenance_drone_add = 2
+            job_patrol_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_technician_drone_add = 1
+            job_calculator_add = 1
+            job_coordinator_add = 1
+            job_replicator_add = 1
+            job_patrol_drone_add = 1
+            job_maintenance_drone_add = 2
+        }
+    }
+    upgrades = {
+        broadcast_tower
+    }
+}

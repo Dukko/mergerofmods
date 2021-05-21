@@ -1,0 +1,77 @@
+@apsr14part1cost_energy = 0
+@apsr14part1cost_minerals = 2500
+@apsr14part1cost_time = 750
+@apsr14part1mupkeep_energy = 7
+@apsr14part1mupkeep_minerals = 3
+@apsr14part1repjob = 1
+apsr14_building_part_m1 = {
+    base_buildtime = @apsr14part1cost_time
+    icon = apsr14_building_part_m1
+    base_cap_amount = 1
+    is_capped_by_modifier = no
+    category = pop_assembly
+    potential = {
+        AND = {
+            has_modifier = "apsr14_planet_modifier"
+            NOT = {
+                OR = {
+                    has_building = apsr14_building_part_m2
+                    has_building = apsr14_building_part_m3
+                    has_building = apsr14_building_part_m1_fake
+                    has_building = apsr14_building_part_m2_fake
+                    has_building = apsr14_building_part_m3_fake
+                }
+            }
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_apsr14_replicator_machine_add = @apsr14part1repjob
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                NOT = {
+                    is_machine_empire = yes
+                }
+            }
+        }
+        modifier = {
+            job_apsr14_replicator_robot_normal_add = @apsr14part1repjob
+        }
+    }
+    resources = {
+        category = planet_apsr_buildings
+        cost = {
+            energy = @apsr14part1cost_energy
+            minerals = @apsr14part1cost_minerals
+        }
+        upkeep = {
+            energy = @apsr14part1mupkeep_energy
+            minerals = @apsr14part1mupkeep_minerals
+        }
+    }
+    country_modifier = {
+        planet_pop_assembly_mult = 0.02
+    }
+    upgrades = {
+        "apsr14_building_part_m2"
+    }
+    prerequisites = {
+        "tech_apsr14_building_part_m1"
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    ai_weight = {
+        weight = 80000
+    }
+}

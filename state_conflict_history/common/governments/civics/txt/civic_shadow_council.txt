@@ -30,6 +30,6 @@ civic_shadow_council = {
     modifier = {
         country_election_influence_cost_mult = -0.75
         planet_jobs_ruler_produces_mult = 0.1
-        spy_network_levels_add = 10
+        intel_decryption_add = 1
     }
 }

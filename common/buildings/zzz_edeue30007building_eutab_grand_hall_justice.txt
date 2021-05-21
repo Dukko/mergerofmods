@@ -1,0 +1,87 @@
+building_eutab_grand_hall_justice = {
+    base_buildtime = @b3_time
+    category = government
+    base_cap_amount = 1
+    potential = {
+        owner = {
+            is_regular_empire = yes
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+    }
+    potential = {
+        AND = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+            OR = {
+                is_planet_class = pc_city
+                is_planet_class = pc_ringworld_habitable
+                num_pops >= 80
+            }
+        }
+    }
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            buildings_no_exotic_gases = yes
+            NOT = {
+                owner = {
+                    is_regular_empire = yes
+                }
+            }
+        }
+    }
+    planet_modifier = {
+        job_eutab_judge_add = 6
+        job_bureaucrat_add = 4
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = "tech_telepathy"
+            }
+        }
+        modifier = {
+            job_telepath_add = 2
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b3_minerals
+            volatile_motes = @b3_rare_cost
+        }
+        upkeep = {
+            energy = @b3_upkeep
+            volatile_motes = @b3_rare_upkeep
+        }
+    }
+    prerequisites = {
+        "tech_eutab_street_judge"
+    }
+    triggered_desc = {
+        text = job_eutab_judge_effect_desc
+    }
+    triggered_desc = {
+        text = job_bureaucrat_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                has_technology = "tech_telepathy"
+            }
+        }
+        text = job_telepath_effect_desc
+    }
+    show_tech_unlock_if = {
+        is_regular_empire = yes
+    }
+    ai_weight = {
+        weight = 1
+    }
+}

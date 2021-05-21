@@ -1,0 +1,52 @@
+building_acid_maker = {
+    base_buildtime = 360
+    base_cap_amount = 1
+    category = resource
+    potential = {
+        NOT = {
+            is_planet_class = pc_acid
+        }
+        owner = {
+            has_trait = trait_pc_acid_preference
+        }
+    }
+    allow = {
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            planet_jobs_food_produces_mult = -0.25
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            planet_jobs_food_produces_mult = -0.25
+        }
+    }
+    planet_modifier = {
+        pop_environment_tolerance = 0.35
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 500
+        }
+        upkeep = {
+            energy = 2
+        }
+    }
+    ai_weight = {
+        weight = 1000
+    }
+}

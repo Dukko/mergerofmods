@@ -1,0 +1,37 @@
+building_giga_elysium_dust_sifter = {
+    base_buildtime = 350
+    base_cap_amount = 4
+    category = manufacturing
+    ai_weight = {
+        weight = 2
+    }
+    potential = {
+        planet = {
+            is_planet_class = pc_gigaorbital_ring
+        }
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    prerequisites = {
+        "giga_tech_orbital_elysium"
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 600
+        }
+        produces = {
+            volatile_motes = 1
+        }
+        upkeep = {
+            energy = 3.5
+        }
+    }
+    ai_resource_production = {
+        volatile_motes = 1
+        trigger = {
+            always = yes
+        }
+    }
+}

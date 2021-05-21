@@ -1,0 +1,34 @@
+GT_ship_emergency_ftl_min_days_add = {
+    cost = @tier1cost3
+    area = engineering
+    tier = 1
+    category = {
+        voidcraft
+    }
+    ai_update_type = all
+    prerequisites = {
+        "tech_automated_exploration"
+    }
+    weight = @tier2weight3
+    modifier = {
+        ship_emergency_ftl_min_days_add = -30
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+}

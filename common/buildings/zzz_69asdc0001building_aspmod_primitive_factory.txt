@@ -1,0 +1,22 @@
+building_aspmod_primitive_factory = {
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = no
+    icon = building_primitive_factory
+    resources = {
+        category = planet_buildings
+        produces = {
+            consumer_goods = 4
+        }
+    }
+    destroy_trigger = {
+        if = {
+            limit = {
+                exists = owner
+            }
+            owner = {
+                is_ai = yes
+            }
+        }
+    }
+}

@@ -1,0 +1,180 @@
+@apsr19part2cost_minerals = 5000
+@apsr19part2cost_time = 1000
+@apsr19part2mupkeep_energy = 15
+@apsr19part2mupkeep_minerals = 15
+@apsr19part2job = 5
+apsr19_building_part_m2 = {
+    base_buildtime = @apsr19part2cost_time
+    icon = apsr19_building_part_m2
+    is_capped_by_modifier = no
+    category = resource
+    can_build = no
+    potential = {
+        has_modifier = "apsr19_planet_modifier"
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_apsr19_power_engineer_machine_add = @apsr19part2job
+            district_generator_max = 7
+            planet_max_districts_add = 3
+            planet_jobs_energy_produces_mult = 0.1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                AND = {
+                    NOT = {
+                        is_hive_empire = yes
+                    }
+                    NOT = {
+                        is_lithoid_empire = yes
+                    }
+                }
+            }
+        }
+        modifier = {
+            job_apsr19_power_engineer_robot_normal_add = @apsr19part2job
+            district_generator_max = 7
+            planet_max_districts_add = 3
+            planet_jobs_energy_produces_mult = 0.1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                AND = {
+                    NOT = {
+                        is_hive_empire = yes
+                    }
+                    is_lithoid_empire = yes
+                }
+            }
+        }
+        modifier = {
+            job_apsr19_power_engineer_lithoid_normal_add = @apsr19part2job
+            district_generator_max = 7
+            planet_max_districts_add = 3
+            planet_jobs_energy_produces_mult = 0.1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                AND = {
+                    is_hive_empire = yes
+                    is_lithoid_empire = yes
+                }
+            }
+        }
+        modifier = {
+            job_apsr19_power_engineer_lithoid_hive_add = @apsr19part2job
+            district_generator_max = 7
+            planet_max_districts_add = 3
+            planet_jobs_energy_produces_mult = 0.1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_apsr17_advanced_1
+            }
+        }
+        modifier = {
+            district_generator_max = 3
+            planet_max_districts_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_apsr17_advanced_2
+            }
+        }
+        modifier = {
+            district_generator_max = 3
+            planet_max_districts_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_apsr17_advanced_3
+            }
+        }
+        modifier = {
+            district_generator_max = 3
+            planet_max_districts_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_apsr17_advanced_4
+            }
+        }
+        modifier = {
+            district_generator_max = 3
+            planet_max_districts_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_apsr17_advanced_5
+            }
+        }
+        modifier = {
+            district_generator_max = 3
+            planet_max_districts_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_deposit = apsr_relic_cube_deposit
+        }
+        modifier = {
+            district_generator_max = 10
+            planet_max_districts_add = 5
+        }
+    }
+    resources = {
+        category = planet_apsr_buildings
+        cost = {
+            minerals = @apsr19part2cost_minerals
+        }
+        upkeep = {
+            energy = @apsr19part2mupkeep_energy
+            minerals = @apsr19part2mupkeep_minerals
+        }
+        produces = {
+            apsr_knowledge = 0.3
+        }
+    }
+    upgrades = {
+        "apsr19_building_part_m3"
+    }
+    prerequisites = {
+        "tech_apsr19_building_part_m2"
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    ai_weight = {
+        weight = 80000
+    }
+}

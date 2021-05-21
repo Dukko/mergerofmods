@@ -1,0 +1,45 @@
+tech_graygoo_nanite_perdition_beam = {
+    area = physics
+    category = {
+        particles
+    }
+    tier = 5
+    is_rare = yes
+    is_reverse_engineerable = no
+    cost = @tier5cost1
+    weight = @tier5weight1
+    ai_update_type = military
+    potential = {
+        has_origin = origin_machine_nanites
+    }
+    prereqfor_desc = {
+        ship = {
+            title = "TECH_UNLOCK_GRAYGOO_NANITE_PERDITIONBEAM_TITLE"
+            desc = "TECH_GRAYGOO_NANITE_PERDITIONBEAM_DESC"
+        }
+    }
+    prerequisites = {
+        "tech_graygoo_nanite_energy_missiles"
+        "tech_graygoo_nanite_strike_craft"
+    }
+    weight_modifier = {
+        factor = 2
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+        modifier = {
+            factor = 3
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_maniacal"
+            }
+        }
+    }
+    ai_weight = {
+        weight = 1
+    }
+}

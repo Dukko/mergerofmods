@@ -1,0 +1,41 @@
+amaryllian_tech_army_1 = {
+    cost = @tier1cost1
+    area = society
+    tier = 1
+    category = {
+        statecraft
+    }
+    weight = @tier1weight1
+    potential = {
+        has_civic = civic_amaryllian_habitat
+        is_gestalt = no
+    }
+    modifier = {
+        description = amaryllian_tech_army_1_effect
+    }
+    weight_modifier = {
+        factor = 1.5
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = tr_prosperity_adopt
+        }
+    }
+    ai_weight = {
+        factor = 2
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+    ai_update_type = all
+}

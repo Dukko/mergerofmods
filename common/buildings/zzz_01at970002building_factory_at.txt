@@ -1,0 +1,200 @@
+building_factory_at = {
+    base_buildtime = @b1_time
+    category = government
+    potential = {
+        exists = owner
+        owner = {
+            OR = {
+                is_gestalt = no
+                has_valid_civic = civic_machine_servitor
+            }
+        }
+        NOT = {
+            has_modifier = resort_colony
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+        building_relaxed_basic_income_check = yes
+        owner = {
+            has_civic = civic_tw_atlantis
+        }
+    }
+    allow = {
+        has_building = building_ancient_palace_at
+    }
+    destroy_trigger = {
+        OR = {
+            has_modifier = resort_colony
+            has_modifier = slave_colony
+            AND = {
+                exists = owner
+                owner = {
+                    is_ai = yes
+                    is_gestalt = yes
+                    NOT = {
+                        has_valid_civic = civic_machine_servitor
+                    }
+                }
+            }
+        }
+    }
+    resources = {
+        category = planet_artisans
+        cost = {
+            minerals = 1000
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_basic_industry
+                    NOR = {
+                        has_modifier = energy_deficit
+                        has_modifier = minerals_deficit
+                    }
+                }
+            }
+            consumer_goods = 12
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_luxuries_1
+                    NOR = {
+                        has_modifier = energy_deficit
+                        has_modifier = minerals_deficit
+                        has_modifier = volatile_motes_deficit
+                    }
+                }
+            }
+            consumer_goods = 30
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_luxuries_2
+                    NOR = {
+                        has_modifier = energy_deficit
+                        has_modifier = minerals_deficit
+                        has_modifier = volatile_motes_deficit
+                    }
+                }
+            }
+            consumer_goods = 50
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    has_technology = tech_basic_industry
+                    NOR = {
+                        has_modifier = energy_deficit
+                        has_modifier = minerals_deficit
+                    }
+                }
+            }
+            energy = 2
+            minerals = 12
+            society_research = 10
+            engineering_research = 10
+            physics_research = 10
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    has_technology = tech_luxuries_1
+                    NOR = {
+                        has_modifier = energy_deficit
+                        has_modifier = minerals_deficit
+                        has_modifier = rare_crystals_deficit
+                    }
+                }
+            }
+            energy = 3
+            rare_crystals = 1
+            society_research = 20
+            engineering_research = 20
+            physics_research = 20
+            minerals = 30
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    has_technology = tech_luxuries_2
+                    NOR = {
+                        has_modifier = energy_deficit
+                        has_modifier = minerals_deficit
+                        has_modifier = rare_crystals_deficit
+                    }
+                }
+            }
+            energy = 3
+            rare_crystals = 1
+            minerals = 50
+            society_research = 30
+            engineering_research = 30
+            physics_research = 30
+        }
+    }
+    planet_modifier = {
+        pop_cat_precursor_at_happiness = 0.1
+        planet_deposits_consumer_goods_produces_mult = 0.1
+    }
+    prerequisites = {
+        tech_basic_industry
+    }
+    upgrades = {
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 25
+            NOR = {
+                has_building = building_factory_1
+                has_building = building_factory_2
+                has_building = building_factory_3
+            }
+            owner = {
+                OR = {
+                    is_gestalt = no
+                    has_valid_civic = civic_machine_servitor
+                }
+            }
+        }
+        modifier = {
+            weight = 100
+            jobs_work_minerals_goods = no
+            owner = {
+                OR = {
+                    is_gestalt = no
+                    has_valid_civic = civic_machine_servitor
+                }
+            }
+            owner = {
+                has_monthly_income = {
+                    resource = consumer_goods
+                    value < 30
+                }
+                OR = {
+                    has_monthly_income = {
+                        resource = food
+                        value >= 0
+                    }
+                    has_resource = {
+                        type = food
+                        amount > 0
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            free_jobs > 3
+        }
+    }
+    ai_resource_production = {
+        consumer_goods = 1
+        trigger = {
+            always = yes
+        }
+    }
+}

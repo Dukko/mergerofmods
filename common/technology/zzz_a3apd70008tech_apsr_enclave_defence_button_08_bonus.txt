@@ -1,0 +1,24 @@
+tech_apsr_enclave_defence_button_08_bonus = {
+    cost = 0
+    area = society
+    tier = 5
+    category = {
+        apsr_knowledge_tech
+    }
+    prerequisites = {
+        "tech_apsr_special"
+    }
+    weight = 0
+    prereqfor_desc = {
+        custom = {
+            title = "TECH_APSR_ENCLAVE_DEFENCE_TITLE"
+            desc = "TECH_APSR_ENCLAVE_DEFENCE_DESC"
+        }
+    }
+    ai_weight = {
+        factor = 0
+    }
+    modifier = {
+        army_defense_damage_mult = 0.2
+    }
+}

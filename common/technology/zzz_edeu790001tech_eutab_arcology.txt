@@ -1,0 +1,37 @@
+@tier3cost3 = 6000
+@tier3weight3 = 50
+tech_eutab_arcology = {
+    cost = @tier3cost3
+    area = engineering
+    tier = 3
+    category = {
+        industry
+    }
+    prerequisites = {
+        "tech_eutab_dev_district"
+    }
+    weight = @tier3weight3
+    is_rare = yes
+    potential = {
+        eu_req_mat = yes
+    }
+    gateway = eu_materialist
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+}

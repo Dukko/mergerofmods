@@ -1,0 +1,81 @@
+@apsr7cordoncost_minerals = 250
+@apsr7cordoncost_alloys = 300
+@apsr7cordoncost_time = 300
+@apsr7cordonupkeep_energy = 4
+@apsr7cordonupkeep_minerals = 3
+@apsr7cordonjob = 3
+apsr7_building_cordon = {
+    base_buildtime = @apsr7cordoncost_time
+    icon = apsr7_building_cordon
+    base_cap_amount = 1
+    is_capped_by_modifier = no
+    category = resource
+    potential = {
+        AND = {
+            has_modifier = "apsr7_planet_modifier"
+            NOT = {
+                OR = {
+                    has_building = apsr7_building_part1
+                    has_building = apsr7_building_part2
+                    has_building = apsr7_building_part3
+                    has_building = apsr7_building_part1_fake
+                    has_building = apsr7_building_part2_fake
+                    has_building = apsr7_building_part3_fake
+                }
+            }
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_apsr7_soldier_hive_add = @apsr7cordonjob
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_apsr7_soldier_machine_add = @apsr7cordonjob
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_apsr7_soldier_normal_add = @apsr7cordonjob
+        }
+    }
+    resources = {
+        category = planet_apsr_buildings
+        cost = {
+            minerals = @apsr7cordoncost_minerals
+            alloys = @apsr7cordoncost_alloys
+        }
+        upkeep = {
+            energy = @apsr7cordonupkeep_energy
+            minerals = @apsr7cordonupkeep_minerals
+        }
+    }
+    upgrades = {
+        "apsr7_building_part1"
+    }
+    prerequisites = {
+        "tech_apsr7_building_cordon"
+    }
+    ai_weight = {
+        weight = 50000
+    }
+}

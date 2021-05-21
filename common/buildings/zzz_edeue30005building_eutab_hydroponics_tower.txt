@@ -1,0 +1,54 @@
+building_eutab_hydroponics_tower = {
+    base_buildtime = @b1_time
+    can_build = no
+    category = resource
+    potential = {
+        AND = {
+            exists = Owner
+            Owner = {
+                is_regular_empire = yes
+            }
+            OR = {
+                is_planet_class = pc_city
+                is_planet_class = pc_habitat
+            }
+        }
+    }
+    planet_modifier = {
+        job_farmer_add = 5
+        planet_amenities_add = 5
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b2_minerals
+        }
+        upkeep = {
+            energy = @b2_upkeep
+        }
+    }
+    triggered_desc = {
+        text = job_farmer_effect_desc
+    }
+    prerequisites = {
+        "tech_eutab_sustainable_architecture"
+    }
+    ai_weight = {
+        weight = 2
+        modifier = {
+            factor = 5
+            owner = {
+                has_monthly_income = {
+                    resource = food
+                    value < 5
+                }
+            }
+        }
+    }
+    ai_resource_production = {
+        food = 3
+        trigger = {
+            always = yes
+        }
+    }
+}

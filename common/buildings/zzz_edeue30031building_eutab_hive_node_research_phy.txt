@@ -1,0 +1,55 @@
+building_eutab_hive_node_research_phy = {
+    base_buildtime = @b2_time
+    can_build = no
+    category = research
+    potential = {
+        AND = {
+            owner = {
+                has_authority = auth_hive_mind
+            }
+            has_building = building_eutab_hive_alpha_node
+        }
+    }
+    planet_modifier = {
+        job_eutab_caretaker_add = 2
+        job_brain_drone_add = 5
+        planet_researchers_produces_mult = 0.05
+    }
+    country_modifier = {
+        all_technology_research_speed = 0.01
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b2_minerals
+            food = 300
+        }
+        upkeep = {
+            exotic_gases = @b2_rare_upkeep
+            food = @b2_upkeep
+        }
+        produces = {
+            unity = 5
+        }
+    }
+    triggered_desc = {
+        text = job_eutab_caretaker_effect_desc
+    }
+    triggered_desc = {
+        text = job_brain_drone_effect_desc
+    }
+    prerequisites = {
+        "tech_eutab_hive_node_research"
+    }
+    destroy_trigger = {
+        exists = owner
+        owner = {
+            NOT = {
+                has_ascension_perk = ap_eutab_mind_matter
+            }
+        }
+    }
+    ai_weight = {
+        weight = 1000
+    }
+}

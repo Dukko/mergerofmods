@@ -1,0 +1,107 @@
+pw_tech_xeno_art_integration = {
+    area = society
+    category = {
+        statecraft
+    }
+    tier = 5
+    cost = @tier5cost1
+    prerequisites = {
+        pw_tech_great_art_exhibition
+    }
+    weight = @tier5weight1
+    is_rare = yes
+    potential = {
+        is_gestalt = no
+        is_xenophile = yes
+    }
+    prereqfor_desc = {
+        custom = {
+            title = pw_tech_great_art_exhibition_upgrade
+            desc = pw_tech_great_art_exhibition_integration_desc
+        }
+    }
+    weight_modifier = {
+        factor = 0.5
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = society
+                has_trait = leader_trait_expertise_statecraft
+            }
+        }
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = society
+                has_trait = leader_trait_spark_of_genius
+            }
+        }
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = society
+                has_trait = leader_trait_curator
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = @federation_perk_factor
+            has_federation = yes
+            federation = {
+                has_federation_perk = rare_tech_boost
+                any_member = {
+                    has_technology = pw_tech_xeno_art_integration
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            is_xenophile = no
+        }
+        modifier = {
+            factor = 2
+            has_ethic = ethic_fanatic_xenophile
+        }
+        modifier = {
+            factor = 0.05
+            NOT = {
+                has_country_flag = pw_pavilion_of_wonders_built
+            }
+        }
+        modifier = {
+            factor = 0.5
+            OR = {
+                has_ethic = ethic_militarist
+                has_ethic = ethic_fanatic_militarist
+            }
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                has_ethic = ethic_pacifist
+                has_ethic = ethic_fanatic_pacifist
+            }
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = pw_ap_planetary_wonders
+        }
+        modifier = {
+            factor = 5
+            has_ascension_perk = ap_one_vision
+        }
+    }
+    ai_weight = {
+        factor = 10
+        modifier = {
+            factor = 2
+            research_leader = {
+                area = society
+                has_trait = leader_trait_expertise_statecraft
+            }
+        }
+    }
+}

@@ -1,0 +1,79 @@
+@apsr15part3cost_energy = 10000
+@apsr15part3cost_minerals = 10000
+@apsr15part3cost_time = 1500
+@apsr15part3upkeep_minerals = 10
+@apsr15part34upkeep_energy = 14
+@apsr15part3job = 4
+apsr15_building_part34 = {
+    base_buildtime = @apsr15part3cost_time
+    icon = apsr15_building_part34
+    is_capped_by_modifier = no
+    category = research
+    can_build = no
+    potential = {
+        has_modifier = "apsr15_planet_modifier"
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_apsr15_servant_hive_add = @apsr15part3job
+            job_apsr15_scientist_hive_add = @apsr15part3job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_apsr15_servant_machine_add = @apsr15part3job
+            job_apsr15_scientist_machine_add = @apsr15part3job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_apsr15_servant_normal_add = @apsr15part3job
+            job_apsr15_scientist_normal_add = @apsr15part3job
+        }
+    }
+    resources = {
+        category = planet_apsr_buildings
+        cost = {
+            energy = @apsr15part3cost_energy
+            minerals = @apsr15part3cost_minerals
+        }
+        upkeep = {
+            energy = @apsr15part34upkeep_energy
+            minerals = @apsr15part3upkeep_minerals
+        }
+    }
+    upgrades = {
+        "apsr15_building_part41"
+        "apsr15_building_part42"
+        "apsr15_building_part43"
+        "apsr15_building_part44"
+        "apsr15_building_part45"
+    }
+    prerequisites = {
+        "tech_apsr15_building_part34"
+    }
+    allow = {
+        has_major_upgraded_capital = yes
+    }
+    ai_weight = {
+        weight = 50000
+    }
+}

@@ -1,0 +1,47 @@
+@tier3cost3 = 5000
+@tier3weight3 = 50
+tech_eutab_h_brain_caste = {
+    cost = @tier3cost3
+    area = society
+    tier = 3
+    category = {
+        biology
+    }
+    prerequisites = {
+        "tech_global_research_initiative"
+    }
+    weight = @tier3weight3
+    is_rare = yes
+    potential = {
+        has_authority = auth_hive_mind
+    }
+    modifier = {
+        planet_researchers_physics_research_produces_add = 1
+        planet_researchers_society_research_produces_add = 1
+        planet_researchers_engineering_research_produces_add = 1
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = ap_technological_ascendancy
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+}

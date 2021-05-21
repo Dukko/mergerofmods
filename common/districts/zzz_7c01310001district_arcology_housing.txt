@@ -92,7 +92,7 @@ district_arcology_housing = {
             }
         }
         modifier = {
-            job_clerk_add = 6
+            job_clerk_add = 3
         }
     }
     triggered_planet_modifier = {
@@ -103,7 +103,7 @@ district_arcology_housing = {
             }
         }
         modifier = {
-            job_clerk_add = 6
+            job_clerk_add = 3
         }
     }
     triggered_desc = {

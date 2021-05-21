@@ -1,0 +1,95 @@
+@ebh_min2 = 600
+@ebh_sr1 = 50
+@ebh_upkeep1 = 1
+@ebh_upkeep3 = 3
+ebh_luxury_residence = {
+    base_buildtime = @b1_time
+    can_build = no
+    category = amenity
+    potential = {
+        OR = {
+            NOT = {
+                is_planet_class = pc_habitat
+            }
+            has_planet_flag = advanced_habitat
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+        exists = owner
+        owner = {
+            is_regular_empire = yes
+            NOT = {
+                has_valid_civic = civic_shared_burden
+            }
+        }
+    }
+    allow = {
+        buildings_simple_allow = yes
+    }
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            AND = {
+                free_building_slots = 0
+                free_jobs < 1
+                free_housing > 10
+                owner = {
+                    is_ai = yes
+                }
+            }
+            owner = {
+                is_regular_empire = no
+            }
+            owner = {
+                has_valid_civic = civic_shared_burden
+            }
+            has_modifier = slave_colony
+        }
+    }
+    convert_to = {
+        ebh_drone_storage
+        ebh_hive_warren
+        ebh_communal_housing
+    }
+    planet_modifier = {
+        planet_housing_add = 6
+        planet_amenities_add = 10
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_non_swapped_tradition = tr_domination_imperious_architecture
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @ebh_min2
+            rare_crystals = @ebh_sr1
+        }
+        upkeep = {
+            energy = @ebh_upkeep3
+            rare_crystals = @ebh_upkeep1
+        }
+    }
+    prerequisites = {
+        "tech_housing_1"
+    }
+    upgrades = {
+        "ebh_luxury_residence2"
+    }
+    show_tech_unlock_if = {
+        owner = {
+            is_regular_empire = yes
+            NOT = {
+                has_valid_civic = civic_shared_burden
+            }
+        }
+    }
+}

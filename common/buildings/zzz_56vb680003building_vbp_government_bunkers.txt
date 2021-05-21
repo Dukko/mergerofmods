@@ -1,0 +1,23 @@
+building_vbp_government_bunkers = {
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = no
+    icon = building_ancient_cryo_chamber
+    potential = {
+        exists = owner
+        owner = {
+            is_country_type = primitive
+            has_country_flag = vbp_tomb_primitives
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 5
+        job_vbp_government_reminders_add = 1
+    }
+    destroy_trigger = {
+        exists = owner
+        owner = {
+            is_primitive = no
+        }
+    }
+}

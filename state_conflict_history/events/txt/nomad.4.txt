@@ -7,9 +7,9 @@ fleet_event = {
         owner = {
             is_country_type = nomad
             NOT = {
-                has_relation_flag = {
+                reverse_has_relation_flag = {
                     flag = nomad_relation_hate
-                    who = event_target:space_owner_target
+                    who = root.space_owner
                 }
             }
         }
@@ -21,11 +21,6 @@ fleet_event = {
         }
     }
     immediate = {
-        solar_system = {
-            space_owner = {
-                save_event_target_as = space_owner_target
-            }
-        }
         clear_fleet_actions = this
         owner = {
             save_event_target_as = nomad_country
@@ -89,11 +84,8 @@ fleet_event = {
                             any_planet_within_border = {
                                 is_colony = no
                                 OR = {
-                                    is_planet_class = pc_tundra
-                                    is_planet_class = pc_arid
-                                    is_planet_class = pc_desert
-                                    is_planet_class = pc_tropical
-                                    is_planet_class = pc_continental
+                                    is_wet = yes
+                                    is_dry = yes
                                     is_planet_class = pc_gaia
                                 }
                                 NOT = {

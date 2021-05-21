@@ -1,0 +1,37 @@
+tech_space_defense_station_3 = {
+    cost = @tier4cost3
+    area = engineering
+    tier = 4
+    category = {
+        voidcraft
+    }
+    prerequisites = {
+        "tech_starbase_3"
+        "tech_space_defense_station_2"
+    }
+    weight = @tier2weight3
+    prereqfor_desc = {
+        ship = {
+            title = "TECH_UNLOCK_DEFENSEFORTRESS_CONSTRUCTION_TITLE"
+            desc = "TECH_UNLOCK_DEFENSEFORTRESS_CONSTRUCTION_DESC"
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 10
+            any_neighbor_country = {
+                has_technology = tech_space_defense_station_3
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 50
+    }
+}

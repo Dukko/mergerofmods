@@ -1,0 +1,212 @@
+building_crystal_plant_at = {
+    base_buildtime = @b2_time
+    category = government
+    potential = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+        building_basic_income_check = yes
+        owner = {
+            has_civic = civic_tw_atlantis
+        }
+    }
+    allow = {
+        has_building = building_ancient_palace_at
+    }
+    destroy_trigger = {
+        free_building_slots = 0
+        exists = owner
+        owner = {
+            is_ai = yes
+            has_monthly_income = {
+                resource = rare_crystals
+                value > 9
+            }
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 2000
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_basic_industry
+                    NOR = {
+                        has_modifier = energy_deficit
+                        has_modifier = minerals_deficit
+                    }
+                }
+            }
+            rare_crystals = 2
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_luxuries_1
+                    NOR = {
+                        has_modifier = energy_deficit
+                        has_modifier = minerals_deficit
+                    }
+                }
+                planet = {
+                    num_buildings = {
+                        type = building_factory_at
+                        value >= 1
+                    }
+                }
+            }
+            rare_crystals = 2
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_luxuries_2
+                    NOR = {
+                        has_modifier = energy_deficit
+                        has_modifier = minerals_deficit
+                    }
+                }
+                planet = {
+                    num_buildings = {
+                        type = building_factory_at
+                        value >= 2
+                    }
+                }
+            }
+            rare_crystals = 2
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    has_technology = tech_rare_crystals
+                    NOR = {
+                        has_modifier = energy_deficit
+                        has_modifier = minerals_deficit
+                    }
+                }
+            }
+            physics_research = 10
+            minerals = 10
+            energy = 3
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    has_technology = tech_luxuries_1
+                    NOR = {
+                        has_modifier = energy_deficit
+                        has_modifier = minerals_deficit
+                    }
+                }
+                planet = {
+                    num_buildings = {
+                        type = building_factory_at
+                        value >= 1
+                    }
+                }
+            }
+            minerals = 10
+            energy = 3
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    has_technology = tech_luxuries_2
+                    NOR = {
+                        has_modifier = energy_deficit
+                        has_modifier = minerals_deficit
+                    }
+                }
+                planet = {
+                    num_buildings = {
+                        type = building_factory_at
+                        value >= 2
+                    }
+                }
+            }
+            minerals = 10
+            energy = 3
+        }
+    }
+    prerequisites = {
+        tech_rare_crystals
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 30
+            owner = {
+                has_monthly_income = {
+                    resource = rare_crystals
+                    value < 3
+                }
+                NOT = {
+                    has_country_flag = buildings_new_crystal_plant
+                }
+            }
+            buildings_build_building = yes
+        }
+        modifier = {
+            weight = 200
+            owner = {
+                has_monthly_income = {
+                    resource = rare_crystals
+                    value < 0
+                }
+                NOT = {
+                    has_country_flag = buildings_new_crystal_plant
+                }
+            }
+            buildings_build_building = yes
+        }
+    }
+    ai_resource_production = {
+        rare_crystals = 1
+        trigger = {
+            always = yes
+        }
+    }
+    on_queued = {
+        IF = {
+            limit = {
+                owner = {
+                    has_technology = tech_construction_templates
+                }
+            }
+            owner = {
+                set_timed_country_flag = {
+                    flag = buildings_new_crystal_plant
+                    days = 270
+                }
+            }
+        }
+        ELSE_IF = {
+            limit = {
+                owner = {
+                    has_technology = tech_assembly_pattern
+                }
+            }
+            owner = {
+                set_timed_country_flag = {
+                    flag = buildings_new_crystal_plant
+                    days = 390
+                }
+            }
+        }
+        ELSE = {
+            planet = {
+                owner = {
+                    set_timed_country_flag = {
+                        flag = buildings_new_crystal_plant
+                        days = 510
+                    }
+                }
+            }
+        }
+    }
+}

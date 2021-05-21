@@ -1,0 +1,10 @@
+action_offer_peace = {
+    icon = "GFX_diplomacy_status_truce"
+    is_listed = no
+    requires_actor_independence = no
+    requires_recipient_independence = no
+    should_notify_all_communications = yes
+    should_show_accept_message = no
+    should_remove_response_message_when_not_possible = yes
+    action_type = positive
+}

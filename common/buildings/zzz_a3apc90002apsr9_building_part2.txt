@@ -1,0 +1,452 @@
+@apsr9part2cost_minerals = 5000
+@apsr9part2cost_time = 1000
+@apsr9part2upkeep_energy = 25
+@apsr9part2upkeep_minerals = 25
+@apsr9part2job = 3
+@apsr9part2scijob = 1
+@apsr9part1r1job = 1
+@apsr9part2r1job = 1
+@apsr9part3r1job = 2
+@apsr9part4r1job = 2
+@apsr9part1scir1job = 0
+@apsr9part2scir1job = 0
+@apsr9part3scir1job = 1
+@apsr9part4scir1job = 1
+@apsr9part1r2job = 1
+@apsr9part2r2job = 2
+@apsr9part3r2job = 2
+@apsr9part4r2job = 4
+@apsr9part1scir2job = 0
+@apsr9part2scir2job = 1
+@apsr9part3scir2job = 1
+@apsr9part4scir2job = 1
+@apsr9gordonjob = 1
+apsr9_building_part2 = {
+    base_buildtime = @apsr9part2cost_time
+    icon = apsr9_building_part2
+    is_capped_by_modifier = no
+    category = research
+    can_build = no
+    potential = {
+        has_modifier = "apsr9_planet_modifier"
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_apsr9_scientist_hive_add = @apsr9part2job
+            job_apsr9_head_scientist_hive_add = @apsr9part2scijob
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_apsr9_scientist_machine_add = @apsr9part2job
+            job_apsr9_head_scientist_machine_add = @apsr9part2scijob
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_apsr9_scientist_normal_add = @apsr9part2job
+            job_apsr9_head_scientist_normal_add = @apsr9part2scijob
+            job_apsr9_gordon_freeman_normal_add = @apsr9gordonjob
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                AND = {
+                    is_hive_empire = yes
+                    has_country_flag = apsr9001_reward1
+                }
+            }
+        }
+        modifier = {
+            job_apsr9_scientist_hive_add = @apsr9part1r1job
+            job_apsr9_head_scientist_hive_add = @apsr9part1scir1job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                AND = {
+                    is_machine_empire = yes
+                    has_country_flag = apsr9001_reward1
+                }
+            }
+        }
+        modifier = {
+            job_apsr9_scientist_machine_add = @apsr9part1r1job
+            job_apsr9_head_scientist_machine_add = @apsr9part1scir1job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                AND = {
+                    is_gestalt = no
+                    has_country_flag = apsr9001_reward1
+                }
+            }
+        }
+        modifier = {
+            job_apsr9_scientist_normal_add = @apsr9part1r1job
+            job_apsr9_head_scientist_normal_add = @apsr9part1scir1job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                AND = {
+                    is_hive_empire = yes
+                    has_country_flag = apsr9001_reward2
+                }
+            }
+        }
+        modifier = {
+            job_apsr9_scientist_hive_add = @apsr9part1r2job
+            job_apsr9_head_scientist_hive_add = @apsr9part1scir2job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                AND = {
+                    is_machine_empire = yes
+                    has_country_flag = apsr9001_reward2
+                }
+            }
+        }
+        modifier = {
+            job_apsr9_scientist_machine_add = @apsr9part1r2job
+            job_apsr9_head_scientist_machine_add = @apsr9part1scir2job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                AND = {
+                    is_gestalt = no
+                    has_country_flag = apsr9001_reward2
+                }
+            }
+        }
+        modifier = {
+            job_apsr9_scientist_normal_add = @apsr9part1r2job
+            job_apsr9_head_scientist_normal_add = @apsr9part1scir2job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                AND = {
+                    is_hive_empire = yes
+                    has_country_flag = apsr9002_reward3
+                }
+            }
+        }
+        modifier = {
+            job_apsr9_scientist_hive_add = @apsr9part2r1job
+            job_apsr9_head_scientist_hive_add = @apsr9part2scir1job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                AND = {
+                    is_machine_empire = yes
+                    has_country_flag = apsr9002_reward3
+                }
+            }
+        }
+        modifier = {
+            job_apsr9_scientist_machine_add = @apsr9part2r1job
+            job_apsr9_head_scientist_machine_add = @apsr9part2scir1job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                AND = {
+                    is_gestalt = no
+                    has_country_flag = apsr9002_reward3
+                }
+            }
+        }
+        modifier = {
+            job_apsr9_scientist_normal_add = @apsr9part2r1job
+            job_apsr9_head_scientist_normal_add = @apsr9part2scir1job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                AND = {
+                    is_hive_empire = yes
+                    has_country_flag = apsr9002_reward5
+                }
+            }
+        }
+        modifier = {
+            job_apsr9_scientist_hive_add = @apsr9part2r2job
+            job_apsr9_head_scientist_hive_add = @apsr9part2scir2job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                AND = {
+                    is_machine_empire = yes
+                    has_country_flag = apsr9002_reward5
+                }
+            }
+        }
+        modifier = {
+            job_apsr9_scientist_machine_add = @apsr9part2r2job
+            job_apsr9_head_scientist_machine_add = @apsr9part2scir2job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                AND = {
+                    is_gestalt = no
+                    has_country_flag = apsr9002_reward5
+                }
+            }
+        }
+        modifier = {
+            job_apsr9_scientist_normal_add = @apsr9part2r2job
+            job_apsr9_head_scientist_normal_add = @apsr9part2scir2job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                AND = {
+                    is_hive_empire = yes
+                    has_country_flag = apsr9003_reward5
+                }
+            }
+        }
+        modifier = {
+            job_apsr9_scientist_hive_add = @apsr9part3r1job
+            job_apsr9_head_scientist_hive_add = @apsr9part3scir1job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                AND = {
+                    is_machine_empire = yes
+                    has_country_flag = apsr9003_reward5
+                }
+            }
+        }
+        modifier = {
+            job_apsr9_scientist_machine_add = @apsr9part3r1job
+            job_apsr9_head_scientist_machine_add = @apsr9part3scir1job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                AND = {
+                    is_gestalt = no
+                    has_country_flag = apsr9003_reward5
+                }
+            }
+        }
+        modifier = {
+            job_apsr9_scientist_normal_add = @apsr9part3r1job
+            job_apsr9_head_scientist_normal_add = @apsr9part3scir1job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                AND = {
+                    is_hive_empire = yes
+                    has_country_flag = apsr9003_reward8
+                }
+            }
+        }
+        modifier = {
+            job_apsr9_scientist_hive_add = @apsr9part3r2job
+            job_apsr9_head_scientist_hive_add = @apsr9part3scir2job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                AND = {
+                    is_machine_empire = yes
+                    has_country_flag = apsr9003_reward8
+                }
+            }
+        }
+        modifier = {
+            job_apsr9_scientist_machine_add = @apsr9part3r2job
+            job_apsr9_head_scientist_machine_add = @apsr9part3scir2job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                AND = {
+                    is_gestalt = no
+                    has_country_flag = apsr9003_reward8
+                }
+            }
+        }
+        modifier = {
+            job_apsr9_scientist_normal_add = @apsr9part3r2job
+            job_apsr9_head_scientist_normal_add = @apsr9part3scir2job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                AND = {
+                    is_hive_empire = yes
+                    has_country_flag = apsr9004_reward7
+                }
+            }
+        }
+        modifier = {
+            job_apsr9_scientist_hive_add = @apsr9part4r1job
+            job_apsr9_head_scientist_hive_add = @apsr9part4scir1job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                AND = {
+                    is_machine_empire = yes
+                    has_country_flag = apsr9004_reward7
+                }
+            }
+        }
+        modifier = {
+            job_apsr9_scientist_machine_add = @apsr9part4r1job
+            job_apsr9_head_scientist_machine_add = @apsr9part4scir1job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                AND = {
+                    is_gestalt = no
+                    has_country_flag = apsr9004_reward7
+                }
+            }
+        }
+        modifier = {
+            job_apsr9_scientist_normal_add = @apsr9part4r1job
+            job_apsr9_head_scientist_normal_add = @apsr9part4scir1job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                AND = {
+                    is_hive_empire = yes
+                    has_country_flag = apsr9004_reward11
+                }
+            }
+        }
+        modifier = {
+            job_apsr9_scientist_hive_add = @apsr9part4r2job
+            job_apsr9_head_scientist_hive_add = @apsr9part4scir2job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                AND = {
+                    is_machine_empire = yes
+                    has_country_flag = apsr9004_reward11
+                }
+            }
+        }
+        modifier = {
+            job_apsr9_scientist_machine_add = @apsr9part4r2job
+            job_apsr9_head_scientist_machine_add = @apsr9part4scir2job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                AND = {
+                    is_gestalt = no
+                    has_country_flag = apsr9004_reward11
+                }
+            }
+        }
+        modifier = {
+            job_apsr9_scientist_normal_add = @apsr9part4r2job
+            job_apsr9_head_scientist_normal_add = @apsr9part4scir2job
+        }
+    }
+    resources = {
+        category = planet_apsr_buildings
+        cost = {
+            minerals = @apsr9part2cost_minerals
+        }
+        upkeep = {
+            energy = @apsr9part2upkeep_energy
+            minerals = @apsr9part2upkeep_minerals
+        }
+    }
+    country_modifier = {
+        COUNTRY_PHYSICS_TECH_RESEARCH_SPEED = 0.2
+    }
+    prerequisites = {
+        "tech_apsr9_building_part2"
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    ai_weight = {
+        weight = 50000
+    }
+}

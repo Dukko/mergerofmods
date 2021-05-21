@@ -1,0 +1,84 @@
+@apsr12part1cost_minerals = 2500
+@apsr12part1cost_time = 750
+@apsr12part1upkeep_energy = 5
+@apsr12part1upkeep_minerals = 2
+@apsr12part1job = 1
+apsr12_building_part1 = {
+    base_buildtime = @apsr12part1cost_time
+    icon = apsr12_building_part1
+    base_cap_amount = 1
+    is_capped_by_modifier = no
+    category = government
+    potential = {
+        AND = {
+            has_modifier = "apsr12_planet_modifier"
+            NOT = {
+                OR = {
+                    has_building = apsr12_building_part2
+                    has_building = apsr12_building_part3
+                    has_building = apsr12_building_part1_fake
+                    has_building = apsr12_building_part2_fake
+                    has_building = apsr12_building_part3_fake
+                }
+            }
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_apsr12_manager_hive_add = @apsr12part1job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_apsr12_manager_machine_add = @apsr12part1job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_apsr12_manager_normal_add = @apsr12part1job
+        }
+    }
+    resources = {
+        category = planet_apsr_buildings
+        cost = {
+            minerals = @apsr12part1cost_minerals
+        }
+        upkeep = {
+            energy = @apsr12part1upkeep_energy
+            minerals = @apsr12part1upkeep_minerals
+        }
+    }
+    country_modifier = {
+        country_admin_cap_add = 10
+    }
+    upgrades = {
+        "apsr12_building_part2"
+    }
+    prerequisites = {
+        "tech_apsr12_building_part1"
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    ai_weight = {
+        weight = 50000
+    }
+}

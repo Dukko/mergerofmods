@@ -1,0 +1,35 @@
+tech_carrier_hull_1 = {
+    cost = @tier4cost3
+    area = engineering
+    tier = 4
+    category = {
+        voidcraft
+    }
+    prerequisites = {
+        "tech_Carrier_1"
+    }
+    weight = @tier4weight3
+    modifier = {
+        shipsize_Carrier_hull_add = 700
+        shipsize_escortcarrier_hull_add = 500
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 3
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+}

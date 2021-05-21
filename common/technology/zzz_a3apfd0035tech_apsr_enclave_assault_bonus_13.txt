@@ -1,0 +1,26 @@
+tech_apsr_enclave_assault_bonus_13 = {
+    cost = 0
+    area = engineering
+    tier = 5
+    category = {
+        apsr_knowledge_tech
+    }
+    prerequisites = {
+        "tech_apsr_special"
+    }
+    weight = 0
+    is_rare = yes
+    is_dangerous = yes
+    prereqfor_desc = {
+        custom = {
+            title = "TECH_APSR_ENCLAVE_ASSAULT_TITLE"
+            desc = "TECH_APSR_ENCLAVE_ASSAULT_DESC"
+        }
+    }
+    ai_weight = {
+        factor = 0
+    }
+    modifier = {
+        ship_hull_mult = 0.1
+    }
+}

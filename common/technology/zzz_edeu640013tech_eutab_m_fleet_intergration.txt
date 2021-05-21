@@ -1,0 +1,46 @@
+@tier4cost1 = 6000
+@tier4weight1 = 45
+tech_eutab_m_fleet_intergration = {
+    cost = @tier4cost1
+    area = physics
+    tier = 4
+    category = {
+        computing
+    }
+    prerequisites = {
+        "tech_doctrine_fleet_size_5"
+        "tech_interstellar_fleet_traditions"
+    }
+    weight = @tier4weight1
+    is_rare = yes
+    potential = {
+        has_authority = auth_machine_intelligence
+    }
+    modifier = {
+        admiral_skill_levels = 2
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = ap_grasp_the_void
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+}

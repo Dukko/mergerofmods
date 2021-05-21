@@ -18,12 +18,6 @@ planet_event = {
             }
         }
         habitable_planet = yes
-        NAND = {
-            exists = owner
-            owner = {
-                is_crisis_faction = yes
-            }
-        }
     }
     immediate = {
         owner = {
@@ -44,6 +38,7 @@ planet_event = {
         change_pc = pc_nuked
         set_planet_flag = nuked_planet_anomalies_disabled
         remove_all_buildings = yes
+        remove_all_districts = yes
         reroll_deposits = yes
         remove_modifier = "natural_beauty"
         remove_modifier = "atmospheric_aphrodisiac"

@@ -1,0 +1,62 @@
+@tier4cost3 = 12000
+@tier4weight3 = 35
+tech_eutab_innate_command = {
+    cost = @tier4cost3
+    area = society
+    tier = 4
+    category = {
+        military_theory
+    }
+    is_rare = yes
+    prerequisites = {
+        "tech_eutab_wargame"
+    }
+    weight = @tier4weight3
+    potential = {
+        eu_req_mil = yes
+    }
+    gateway = eu_vision
+    modifier = {
+        country_admin_cap_add = 15
+        leader_admirals_cost_mult = -0.33
+        leader_generals_cost_mult = -0.33
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = ap_one_vision
+            }
+        }
+        modifier = {
+            factor = 0
+            calc_true_if = {
+                amount = 2
+                has_technology = tech_eutab_consol_power
+                has_technology = tech_eutab_universal_b_income
+                has_technology = tech_eutab_intel_office
+                has_technology = tech_eutab_lingusitic_intergration
+                has_technology = tech_eutab_innate_command
+                has_technology = tech_eutab_problem_policing
+                has_technology = tech_eutab_citizen_sci
+                has_technology = tech_eutab_right_self
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+    }
+}

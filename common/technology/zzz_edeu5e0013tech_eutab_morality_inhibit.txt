@@ -1,0 +1,48 @@
+@tier3cost3 = 6000
+@tier3weight3 = 50
+tech_eutab_morality_inhibit = {
+    cost = @tier3cost3
+    area = physics
+    tier = 3
+    category = {
+        computing
+    }
+    prerequisites = {
+        "tech_artificial_moral_codes"
+    }
+    weight = @tier3weight3
+    is_rare = yes
+    potential = {
+        has_ethic = ethic_fanatic_xenophobe
+    }
+    gateway = eu_fanatic
+    modifier = {
+        pop_ethic_xenophobe_attraction_mult = 0.25
+        country_war_exhaustion_mult = -0.15
+        country_insult_efficiency = 0.1
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = ap_the_flesh_is_weak
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+}

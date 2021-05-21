@@ -1,0 +1,39 @@
+@tier3cost3 = 5000
+@tier3weight3 = 50
+tech_eutab_m_sentient_bunkers = {
+    cost = @tier3cost3
+    area = society
+    tier = 3
+    category = {
+        military_theory
+    }
+    prerequisites = {
+        "tech_biomechanics"
+    }
+    weight = @tier3weight3
+    potential = {
+        has_authority = auth_machine_intelligence
+    }
+    modifier = {
+        army_defense_damage_mult = 0.2
+        army_defense_health_mult = 0.35
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+    }
+}

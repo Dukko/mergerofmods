@@ -1,0 +1,16 @@
+namespace = ne
+event = {
+    id = ne.10
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        every_country = {
+            limit = {
+                is_country_type = ne_enclave
+            }
+            country_event = {
+                id = ne.11
+            }
+        }
+    }
+}

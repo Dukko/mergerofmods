@@ -12,7 +12,7 @@ warriorpriest = {
         complex_specialist_job_check_trigger = yes
     }
     country_modifier = {
-        country_naval_cap_add = 2
+        country_naval_cap_add = 3
     }
     triggered_country_modifier = {
         potential = {

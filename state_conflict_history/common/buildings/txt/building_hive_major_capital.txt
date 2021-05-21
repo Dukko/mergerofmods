@@ -28,7 +28,7 @@ building_hive_major_capital = {
         "building_imperial_hive_capital"
     }
     allow = {
-        num_pops >= 40
+        num_pops >= 25
     }
     prerequisites = {
         "tech_colonial_centralization"
@@ -54,21 +54,6 @@ building_hive_major_capital = {
         modifier = {
             planet_jobs_upkeep_mult = 0.1
             planet_jobs_produces_mult = 0.1
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                has_ascension_perk = ap_total_assimilation
-            }
-            OR = {
-                is_homeworld = yes
-                is_hive_world = yes
-            }
-        }
-        modifier = {
-            job_queen_add = 1
         }
     }
     triggered_planet_modifier = {

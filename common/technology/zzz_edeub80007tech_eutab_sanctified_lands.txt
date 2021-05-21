@@ -1,0 +1,65 @@
+@tier3cost2 = 5000
+tech_eutab_sanctified_lands = {
+    cost = @tier3cost2
+    area = society
+    tier = 3
+    category = {
+        statecraft
+    }
+    prerequisites = {
+        "tech_galactic_administration"
+    }
+    weight = @tier3cost2
+    is_rare = yes
+    potential = {
+        eu_req_xphi = yes
+    }
+    gateway = eu_consecrated
+    prereqfor_desc = {
+        custom = {
+            title = "TECH_UNLOCK_EUTAB_SANCT1_TITLE"
+            desc = "TECH_UNLOCK_EUTAB_SANCT1_DESC"
+        }
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "TECH_UNLOCK_EUTAB_SANCT2_TITLE"
+            desc = "TECH_UNLOCK_EUTAB_SANCT2_DESC"
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = ap_consecrated_worlds
+            }
+        }
+        modifier = {
+            factor = 0
+            calc_true_if = {
+                amount = 2
+                has_technology = tech_eutab_nat_romance
+                has_technology = tech_eutab_worlds_destiny
+                has_technology = tech_eutab_sanctified_lands
+                has_technology = tech_eutab_peace_temples
+                has_technology = tech_eutab_spiritual_primacy
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+tech_harvester_advanced_nanites = {
+    area = engineering
+    cost = 40000
+    tier = 2
+    is_rare = yes
+    category = {
+        industry
+    }
+    weight = 50
+    is_reverse_engineerable = no
+    modifier = {
+        ship_hull_regen_add_perc = 0.2
+    }
+    prerequisites = {
+        "tech_nanite_technology_mastery"
+    }
+    potential = {
+        OR = {
+            has_origin = civic_harvester_nanites
+            has_origin = civic_gateway_pursuer
+        }
+        has_authority = auth_machine_intelligence
+    }
+    prereqfor_desc = {
+        custom = {
+            title = tech_harvester_advanced_nanites_effect
+            desc = tech_harvester_advanced_nanites_effect_desc
+        }
+        custom = {
+            title = tech_advanced_nanite_factory_effect
+            desc = tech_advanced_nanite_factory_nanite_effect_desc
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 2
+            OR = {
+                has_origin = civic_harvester_nanites
+                has_origin = civic_gateway_pursuer
+            }
+        }
+    }
+}

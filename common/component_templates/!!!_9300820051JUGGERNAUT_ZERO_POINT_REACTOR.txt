@@ -1,4 +1,4 @@
-@juggernaut_power_5 = 3200
+@juggernaut_power_5 = 4550
 utility_component_template = {
     key = "JUGGERNAUT_ZERO_POINT_REACTOR"
     size = large

@@ -1,0 +1,61 @@
+@tier3cost1 = 4000
+@tier3weight1 = 65
+tech_eutab_lingusitic_intergration = {
+    cost = @tier3cost1
+    area = society
+    tier = 3
+    category = {
+        statecraft
+    }
+    prerequisites = {
+        "tech_cultural_heritage"
+    }
+    weight = @tier3weight1
+    is_rare = yes
+    potential = {
+        eu_req_xphi = yes
+    }
+    gateway = eu_vision
+    modifier = {
+        country_trade_attractiveness = 0.1
+        country_trade_fee = -0.05
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = ap_one_vision
+            }
+        }
+        modifier = {
+            factor = 0
+            calc_true_if = {
+                amount = 2
+                has_technology = tech_eutab_consol_power
+                has_technology = tech_eutab_universal_b_income
+                has_technology = tech_eutab_intel_office
+                has_technology = tech_eutab_lingusitic_intergration
+                has_technology = tech_eutab_innate_command
+                has_technology = tech_eutab_problem_policing
+                has_technology = tech_eutab_citizen_sci
+                has_technology = tech_eutab_right_self
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+}

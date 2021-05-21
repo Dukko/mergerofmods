@@ -1,0 +1,52 @@
+@tier3cost2 = 5000
+@tier3weight2 = 60
+tech_eutab_natural_fort = {
+    cost = @tier3cost2
+    area = society
+    tier = 3
+    category = {
+        new_worlds
+    }
+    prerequisites = {
+        "tech_climate_restoration"
+    }
+    weight = @tier3weight2
+    is_rare = yes
+    modifier = {
+        army_defense_health_mult = 0.35
+        army_defense_damage_mult = 0.25
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = ap_world_shaper
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                OR = {
+                    has_ascension_perk = ap_defender_of_the_galaxy
+                    has_ascension_perk = ap_galactic_contender
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+}

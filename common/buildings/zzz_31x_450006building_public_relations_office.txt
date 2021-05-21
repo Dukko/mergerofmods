@@ -1,0 +1,33 @@
+building_public_relations_office = {
+    base_buildtime = @b2_time
+    base_cap_amount = 1
+    branch_office_building = yes
+    potential = {
+        has_branch_office = yes
+        branch_office_owner = {
+            NOR = {
+                has_valid_civic = civic_mutualistic_behavior
+                has_valid_civic = civic_machine_trading
+            }
+            is_criminal_syndicate = no
+        }
+    }
+    planet_modifier = {
+        job_clerk_add = 2
+    }
+    resources = {
+        category = planet_branch_office_buildings
+        cost = {
+            minerals = @b3_minerals
+        }
+        produces = {
+            unity = 6
+        }
+        upkeep = {
+            energy = 3
+        }
+    }
+    ai_weight = {
+        weight = 2
+    }
+}

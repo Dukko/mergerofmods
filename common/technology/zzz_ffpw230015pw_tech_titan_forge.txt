@@ -1,0 +1,92 @@
+pw_tech_titan_forge = {
+    area = engineering
+    category = {
+        materials
+    }
+    tier = 5
+    cost = @tier5cost1
+    prerequisites = {
+        pw_tech_planetary_mantle_production
+    }
+    weight = @tier5weight1
+    is_rare = yes
+    prereqfor_desc = {
+        custom = {
+            title = pw_mantle_crucible_upgrade
+            desc = pw_mantle_crucible_upgrade_forge_desc
+        }
+    }
+    weight_modifier = {
+        factor = 0.25
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = engineering
+                has_trait = leader_trait_expertise_materials
+            }
+        }
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = engineering
+                has_trait = leader_trait_spark_of_genius
+            }
+        }
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = engineering
+                has_trait = leader_trait_curator
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = @federation_perk_factor
+            has_federation = yes
+            federation = {
+                has_federation_perk = rare_tech_boost
+                any_member = {
+                    has_technology = pw_tech_titan_forge
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            has_valid_civic = civic_environmentalist
+        }
+        modifier = {
+            factor = 2
+            has_valid_civic = civic_mining_guilds
+        }
+        modifier = {
+            factor = 2
+            has_valid_civic = civic_hive_devouring_swarm
+            is_lithoid = yes
+        }
+        modifier = {
+            factor = 1.25
+            is_lithoid = yes
+        }
+        modifier = {
+            factor = 2
+            has_valid_civic = civic_machine_rockbreakers
+        }
+        modifier = {
+            factor = 2
+            has_policy_flag = economic_policy_military
+        }
+    }
+    ai_weight = {
+        factor = 10
+        modifier = {
+            factor = 2
+            research_leader = {
+                area = engineering
+                has_trait = leader_trait_expertise_materials
+            }
+        }
+    }
+}

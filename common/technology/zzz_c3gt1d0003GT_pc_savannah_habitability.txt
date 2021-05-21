@@ -1,0 +1,140 @@
+GT_pc_savannah_habitability = {
+    cost = @tier1cost4
+    area = society
+    tier = 1
+    category = {
+        new_worlds
+    }
+    is_rare = yes
+    prerequisites = {
+        "tech_frontier_health"
+    }
+    weight = @tier2weight2
+    modifier = {
+        pc_savannah_habitability = 0.05
+        pc_prairie_habitability = 0.05
+        pc_steppe_habitability = 0.05
+        pc_med_habitability = 0.05
+        pc_veld_habitability = 0.05
+        pc_semiarid_habitability = 0.05
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            years_passed > 50
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                any_planet_within_border = {
+                    is_planet_class = pc_savannah
+                }
+                any_planet_within_border = {
+                    is_planet_class = pc_prairie
+                }
+                any_planet_within_border = {
+                    is_planet_class = pc_steppe
+                }
+                any_planet_within_border = {
+                    is_planet_class = pc_med
+                }
+                any_planet_within_border = {
+                    is_planet_class = pc_veld
+                }
+                any_planet_within_border = {
+                    is_planet_class = pc_semiarid
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                species = {
+                    has_trait = trait_pc_savannah_preference
+                }
+                species = {
+                    has_trait = trait_pc_prairie_preference
+                }
+                species = {
+                    has_trait = trait_pc_steppe_preference
+                }
+                species = {
+                    has_trait = trait_pc_med_preference
+                }
+                species = {
+                    has_trait = trait_pc_veld_preference
+                }
+                species = {
+                    has_trait = trait_pc_semiarid_preference
+                }
+            }
+        }
+        factor = 0.1
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOR = {
+                any_planet_within_border = {
+                    is_planet_class = pc_savannah
+                }
+                any_planet_within_border = {
+                    is_planet_class = pc_prairie
+                }
+                any_planet_within_border = {
+                    is_planet_class = pc_steppe
+                }
+                any_planet_within_border = {
+                    is_planet_class = pc_med
+                }
+                any_planet_within_border = {
+                    is_planet_class = pc_veld
+                }
+                any_planet_within_border = {
+                    is_planet_class = pc_semiarid
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                species = {
+                    has_trait = trait_pc_savannah_preference
+                }
+                species = {
+                    has_trait = trait_pc_prairie_preference
+                }
+                species = {
+                    has_trait = trait_pc_steppe_preference
+                }
+                species = {
+                    has_trait = trait_pc_med_preference
+                }
+                species = {
+                    has_trait = trait_pc_veld_preference
+                }
+                species = {
+                    has_trait = trait_pc_semiarid_preference
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+}

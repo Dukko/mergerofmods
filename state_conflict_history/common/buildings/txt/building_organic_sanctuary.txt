@@ -77,6 +77,7 @@ building_organic_sanctuary = {
     planet_modifier = {
         job_bio_trophy_add = 10
         job_artisan_drone_add = 1
+        planet_carry_cap_add = 10
     }
     resources = {
         category = planet_buildings

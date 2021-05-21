@@ -1,9 +1,0 @@
-namespace = veru
-country_event = {
-    id = veru.999
-    hide_window = yes
-    is_triggered_only = yes
-    immediate = {
-        set_global_flag = gf_vear_activated
-    }
-}

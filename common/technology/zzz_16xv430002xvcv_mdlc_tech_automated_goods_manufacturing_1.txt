@@ -1,0 +1,33 @@
+xvcv_mdlc_tech_automated_goods_manufacturing_1 = {
+    cost = @tier1cost3
+    area = engineering
+    tier = 1
+    category = {
+        materials
+    }
+    weight = @tier1weight3
+    potential = {
+        has_valid_civic = xvcv_mdlc_civic_emotion_emulator
+    }
+    modifier = {
+        custom_tooltip = xvcv_mdlc_tech_automated_goods_manufacturing_1_tooltip
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+}

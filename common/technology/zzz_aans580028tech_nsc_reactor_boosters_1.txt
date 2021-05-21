@@ -1,0 +1,33 @@
+tech_nsc_reactor_boosters_1 = {
+    area = physics
+    cost = @tier4cost1
+    tier = 4
+    category = {
+        particles
+    }
+    ai_update_type = military
+    prerequisites = {
+        "tech_reactor_boosters_3"
+        "tech_graviton_power"
+    }
+    weight = @tier4weight1
+    weight_modifier = {
+        factor = 1.5
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+GT_torpedo_weapon_damage_mult = {
+    cost = @tier3cost1
+    area = physics
+    tier = 3
+    category = {
+        field_manipulation
+    }
+    prerequisites = {
+        "tech_torpedoes_1"
+    }
+    weight = @tier4weight1
+    modifier = {
+        weapon_type_explosive_weapon_damage_mult = 0.15
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+}

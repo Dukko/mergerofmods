@@ -1,0 +1,60 @@
+building_est_nature_preservation = {
+    base_buildtime = 540
+    base_cap_amount = 1
+    destroy_trigger = {
+        owner = {
+            Nor = {
+                has_non_swapped_tradition = tr_est_natural_finish
+                has_swapped_tradition = tr_est_natural_5_GC
+            }
+        }
+    }
+    on_destroy = {
+        if = {
+            limit = {
+                owner = {
+                    Or = {
+                        has_non_swapped_tradition = tr_est_natural_finish
+                        has_swapped_tradition = tr_est_natural_5_GC
+                    }
+                }
+            }
+            add_modifier = {
+                modifier = mod_est_nature_5
+                years = 20
+            }
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 180
+        }
+        produces = {
+            unity = 12
+        }
+        upkeep = {
+            energy = 1
+        }
+    }
+    planet_modifier = {
+        planet_non_artificial_max_districts_add = -2
+        planet_jobs_minerals_produces_mult = -0.2
+        planet_jobs_society_research_produces_mult = 0.2
+    }
+    allow = {
+        free_district_slots > 0
+    }
+    potential = {
+        has_upgraded_capital = yes
+        owner = {
+            Or = {
+                has_non_swapped_tradition = tr_est_natural_finish
+                has_swapped_tradition = tr_est_natural_5_GC
+            }
+        }
+    }
+    ai_weight = {
+        factor = 0
+    }
+}

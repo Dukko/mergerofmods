@@ -20,6 +20,10 @@ megacorp_caravaneer_init = {
             factor = 0
             has_star_flag = empire_cluster
         }
+        modifier = {
+            factor = 0
+            is_bottleneck_system = yes
+        }
     }
     max_instances = 1
     spawn_chance = 9999
@@ -112,6 +116,11 @@ megacorp_caravaneer_init = {
                 class = random_non_machine
                 portrait = random
                 traits = random
+                effect = {
+                    modify_species = {
+                        ideal_planet_class = pc_habitat
+                    }
+                }
             }
             create_country = {
                 name = "NAME_Caravaneer_Home"

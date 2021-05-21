@@ -35,6 +35,31 @@ action_form_commercial_pact = {
                 }
             }
         }
+        if = {
+            limit = {
+                from = {
+                    has_valid_civic = civic_inwards_perfection
+                }
+            }
+            if = {
+                limit = {
+                    has_intel = {
+                        who = from
+                        intel = civics
+                    }
+                }
+                custom_tooltip = {
+                    fail_text = requires_recipient_not_inward_perfection
+                    always = no
+                }
+            }
+            else = {
+                custom_tooltip = {
+                    fail_text = diplo_action_no_low_intel
+                    always = no
+                }
+            }
+        }
         custom_tooltip = {
             fail_text = "requires_actor_not_inward_perfection"
             NOT = {
@@ -62,6 +87,31 @@ action_form_commercial_pact = {
         custom_tooltip = {
             fail_text = "requires_actor_not_criminal_heritage"
             is_criminal_syndicate = no
+        }
+        if = {
+            limit = {
+                from = {
+                    is_criminal_syndicate = yes
+                }
+            }
+            if = {
+                limit = {
+                    has_intel = {
+                        who = from
+                        intel = civics
+                    }
+                }
+                custom_tooltip = {
+                    fail_text = requires_recipient_not_criminal_heritage
+                    always = no
+                }
+            }
+            else = {
+                custom_tooltip = {
+                    fail_text = diplo_action_no_low_intel
+                    always = no
+                }
+            }
         }
         custom_tooltip = {
             fail_text = "requires_recipient_not_criminal_heritage"

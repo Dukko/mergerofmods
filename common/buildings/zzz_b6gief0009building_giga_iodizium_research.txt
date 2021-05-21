@@ -1,0 +1,59 @@
+building_giga_iodizium_research = {
+    base_buildtime = 350
+    base_cap_amount = 1
+    category = manufacturing
+    allow = {
+        has_upgraded_capital = yes
+    }
+    prerequisites = {
+        "giga_tech_fusion_suppressor"
+    }
+    potential = {
+        planet = {
+            owner = {
+                resource_stockpile_compare = {
+                    resource = sr_iodizium
+                    value >= 1
+                }
+            }
+            NOT = {
+                is_planet_class = pc_habitat
+            }
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 1000
+        }
+        upkeep = {
+            minerals = 5
+            sr_iodizium = 1
+        }
+        produces = {
+            physics_research = 75
+            engineering_research = 75
+            society_research = 75
+        }
+    }
+    ai_weight = {
+        weight = 1
+        modifier = {
+            factor = 0
+            owner = {
+                resource_stockpile_compare = {
+                    resource = sr_iodizium
+                    value >= 1
+                }
+            }
+        }
+    }
+    ai_resource_production = {
+        physics_research = 10
+        engineering_research = 10
+        society_research = 10
+        trigger = {
+            always = yes
+        }
+    }
+}

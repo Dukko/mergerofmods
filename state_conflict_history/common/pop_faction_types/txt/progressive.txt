@@ -118,7 +118,7 @@ progressive = {
         }
         trigger = {
             owner = {
-                NOR = {
+                NOT = {
                     is_autocracy = yes
                 }
             }
@@ -140,7 +140,9 @@ progressive = {
             owner = {
                 NOR = {
                     any_owned_pop = {
-                        has_migration_control = yes
+                        has_migration_control = {
+                            value = yes
+                        }
                         is_sapient = yes
                         is_enslaved = no
                         is_being_purged = no
@@ -148,43 +150,6 @@ progressive = {
                         is_robot_pop = no
                     }
                     has_policy_flag = resettlement_allowed
-                }
-            }
-        }
-    }
-    demand = {
-        title = "PROGRESSIVE_GUN_RIGHTS"
-        unfulfilled_title = "PROGRESSIVE_NO_GUN_RIGHTS"
-        desc = "PROGRESSIVE_GUN_RIGHTS_DESC"
-        fulfilled_effect = 7
-        unfulfilled_effect = -3
-        potential = {
-            exists = owner
-        }
-        trigger = {
-            owner = {
-                has_policy_flag = gun_rights_allowed
-            }
-        }
-    }
-    demand = {
-        title = "FEDERAL_STATE"
-        unfulfilled_title = "NO_FEDERAL_STATE"
-        desc = "FEDERAL_STATE_DESC"
-        fulfilled_effect = 5
-        unfulfilled_effect = -5
-        potential = {
-            exists = owner
-            owner = {
-                OR = {
-                    has_technology = tech_federal_state
-                }
-            }
-        }
-        trigger = {
-            owner = {
-                OR = {
-                    has_policy_flag = federal_state
                 }
             }
         }
@@ -218,9 +183,10 @@ progressive = {
         trigger = {
             owner = {
                 NOT = {
-                    any_owned_pop = {
+                    any_owned_species = {
                         has_living_standard = {
                             type = living_standard_stratified
+                            country = prev
                         }
                     }
                 }
@@ -326,6 +292,43 @@ progressive = {
         trigger = {
             owner = {
                 has_policy_flag = diplo_stance_cooperative
+            }
+        }
+    }
+    demand = {
+        title = "PROGRESSIVE_GUN_RIGHTS"
+        unfulfilled_title = "PROGRESSIVE_NO_GUN_RIGHTS"
+        desc = "PROGRESSIVE_GUN_RIGHTS_DESC"
+        fulfilled_effect = 7
+        unfulfilled_effect = -3
+        potential = {
+            exists = owner
+        }
+        trigger = {
+            owner = {
+                has_policy_flag = gun_rights_allowed
+            }
+        }
+    }
+    demand = {
+        title = "FEDERAL_STATE"
+        unfulfilled_title = "NO_FEDERAL_STATE"
+        desc = "FEDERAL_STATE_DESC"
+        fulfilled_effect = 5
+        unfulfilled_effect = -5
+        potential = {
+            exists = owner
+            owner = {
+                OR = {
+                    has_technology = tech_federal_state
+                }
+            }
+        }
+        trigger = {
+            owner = {
+                OR = {
+                    has_policy_flag = federal_state
+                }
             }
         }
     }

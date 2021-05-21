@@ -1,0 +1,82 @@
+@ebh_min5 = 1200
+@ebh_sr4 = 300
+@ebh_upkeep4 = 4
+@ebh_upkeep6 = 6
+ebh_paradise_dome = {
+    base_buildtime = @b1_time
+    can_build = no
+    category = amenity
+    potential = {
+        has_building = building_paradise_dome
+        OR = {
+            NOT = {
+                is_planet_class = pc_habitat
+            }
+            AND = {
+                has_planet_flag = advanced_habitat
+                exists = owner
+                owner = {
+                    has_ascension_perk = ap_voidborn
+                }
+            }
+        }
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            owner = {
+                is_regular_empire = no
+            }
+            owner = {
+                has_valid_civic = civic_shared_burden
+            }
+            buildings_no_crystals = yes
+            has_modifier = slave_colony
+        }
+    }
+    convert_to = {
+        ebh_drone_megastorage
+        ebh_expanded_warren
+        ebh_communal_housing_large
+    }
+    planet_modifier = {
+        planet_housing_add = 15
+        planet_amenities_add = 25
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_non_swapped_tradition = tr_domination_imperious_architecture
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @ebh_min5
+            rare_crystals = @ebh_sr4
+        }
+        upkeep = {
+            energy = @ebh_upkeep6
+            rare_crystals = @ebh_upkeep4
+        }
+    }
+    prerequisites = {
+        "ebh_tech_paradise_dome"
+    }
+    show_tech_unlock_if = {
+        owner = {
+            is_regular_empire = yes
+            NOT = {
+                has_valid_civic = civic_shared_burden
+            }
+        }
+    }
+}
