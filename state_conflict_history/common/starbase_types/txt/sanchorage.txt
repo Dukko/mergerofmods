@@ -170,6 +170,9 @@ sanchorage = {
             hydroponics_bay = {
                 base = 0.4
             }
+            trader_caravanserai = {
+                base = 0.03
+            }
         }
         modules = {
             anchorage = {

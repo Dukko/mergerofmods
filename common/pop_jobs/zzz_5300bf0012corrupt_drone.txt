@@ -16,6 +16,9 @@ corrupt_drone = {
     }
     resources = {
         category = planet_jobs
+        produces = {
+            unity = -1
+        }
         upkeep = {
             energy = 1
         }

@@ -86,6 +86,8 @@ d_massive_glacier = {
             OR = {
                 has_modifier = "glacial_world"
                 has_modifier = "ice_world"
+                is_planet_class = pc_glacial
+                is_planet_class = pc_snow
             }
         }
         modifier = {
@@ -93,13 +95,18 @@ d_massive_glacier = {
             OR = {
                 has_modifier = "melting_world"
                 has_modifier = "geothermal_world"
+                is_planet_class = pc_antarctic
+                is_planet_class = pc_geothermal
+                is_planet_class = pc_eyeball
             }
         }
         modifier = {
             factor = 0.5
             OR = {
+                has_modifier = "tempest_world"
                 has_modifier = "boreal_world"
                 is_planet_class = pc_tidallylocked
+                is_planet_class = pc_storm
             }
         }
         modifier = {

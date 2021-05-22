@@ -1,0 +1,169 @@
+nhsc_building_dragon_hatchery = {
+    base_buildtime = 720
+    icon = nhsc_building_dragon_hatchery
+    category = army
+    base_cap_amount = 1
+    potential = {
+        NOT = {
+            has_global_flag = ESC_ether_dragon_tech_forbidden
+        }
+    }
+    allow = {
+        exists = owner
+        owner = {
+            NOT = {
+                any_owned_planet = {
+                    has_building = nhsc_building_dragon_hatchery
+                }
+            }
+            NOT = {
+                has_country_flag = nhsc_building_dragon_hatchery_queued
+            }
+        }
+        has_upgraded_capital = yes
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            influence = 50
+        }
+        cost = {
+            trigger = {
+                owner = {
+                    country_uses_food = yes
+                }
+            }
+            minerals = 2500
+            food = 2500
+        }
+        cost = {
+            trigger = {
+                owner = {
+                    country_uses_food = no
+                }
+            }
+            minerals = 5000
+        }
+        cost = {
+            trigger = {
+                owner = {
+                    is_ai = no
+                }
+            }
+            exotic_gases = 200
+        }
+        upkeep = {
+            energy = 10
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    country_uses_food = yes
+                }
+            }
+            food = 45
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    country_uses_food = no
+                }
+            }
+            minerals = 45
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    is_ai = no
+                }
+            }
+            exotic_gases = 3
+        }
+    }
+    planet_modifier = {
+        planet_jobs_society_research_produces_mult = 0.2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        job_researcher_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        job_brain_drone_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        job_calculator_add = 2
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = job_researcher_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = job_brain_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = job_calculator_effect_desc
+    }
+    show_tech_unlock_if = {
+        NOT = {
+            has_global_flag = ESC_ether_dragon_tech_forbidden
+        }
+    }
+    on_queued = {
+        owner = {
+            set_country_flag = nhsc_building_dragon_hatchery_queued
+        }
+    }
+    on_unqueued = {
+        owner = {
+            remove_country_flag = nhsc_building_dragon_hatchery_queued
+        }
+    }
+    on_built = {
+        owner = {
+            remove_country_flag = nhsc_building_dragon_hatchery_queued
+        }
+    }
+    prerequisites = {
+        nhsc_tech_dragon_hatchery
+    }
+    ai_resource_production = {
+        trigger = {
+            always = yes
+        }
+        society_research = 20
+    }
+}

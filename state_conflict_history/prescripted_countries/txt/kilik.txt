@@ -28,8 +28,8 @@ kilik = {
     authority = "auth_democratic"
     government = "gov_communal_parity"
     civics = {
-        "civic_shared_burden"
-        "civic_meritocracy"
+        "civic_socialistic"
+        "civic_idealistic_foundation"
         "civic_efficient_bureaucracy"
     }
     origin = "origin_default"

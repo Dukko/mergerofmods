@@ -16,15 +16,14 @@ deviant_drone = {
     }
     resources = {
         category = planet_jobs
+        produces = {
+            unity = -1
+        }
         upkeep = {
             energy = 1
         }
     }
     weight = {
         weight = @criminal_job_weight
-        modifier = {
-            factor = 1.5
-            has_job = deviant_drone
-        }
     }
 }

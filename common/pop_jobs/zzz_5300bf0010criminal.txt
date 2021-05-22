@@ -20,9 +20,16 @@ criminal = {
             is_gestalt = no
         }
     }
+    resources = {
+        category = planet_jobs
+        produces = {
+            unity = -1
+        }
+    }
     planet_modifier = {
         trade_value_add = -5
         branch_office_criminal_syndicate_value_add = 5
+        pop_government_ethic_attraction = -0.05
     }
     weight = {
         weight = @criminal_job_weight

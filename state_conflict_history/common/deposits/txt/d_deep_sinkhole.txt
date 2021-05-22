@@ -14,6 +14,8 @@ d_deep_sinkhole = {
             has_modifier = "pangea_world"
             is_dry = yes
             is_planet_class = pc_tidallylocked
+            is_planet_class = pc_sterile
+            is_planet_class = pc_karst
         }
     }
     planet_modifier = {
@@ -79,16 +81,23 @@ d_deep_sinkhole = {
             OR = {
                 is_planet_class = pc_arid
                 is_planet_class = pc_savannah
+                is_planet_class = pc_prairie
+                is_planet_class = pc_veld
+                is_planet_class = pc_outback
                 is_planet_class = pc_sterile
             }
         }
         modifier = {
             factor = 5
-            has_modifier = "karstic_world"
+            OR = {
+                is_planet_class = pc_karst
+                has_modifier = "karstic_world"
+            }
         }
         modifier = {
             factor = 0.25
             OR = {
+                is_planet_class = pc_steppe
                 has_modifier = "steppe_world"
                 has_modifier = "prairie_world"
             }

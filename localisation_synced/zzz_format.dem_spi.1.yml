@@ -1,0 +1,2 @@
+﻿l_default:
+ format.dem_spi.1:1000 "<democratic_spi> of [This.Capital.System.GetName]"

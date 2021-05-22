@@ -165,6 +165,9 @@ strading_hub = {
             hydroponics_bay = {
                 base = 0.2
             }
+            trader_caravanserai = {
+                base = 0.03
+            }
         }
         modules = {
             trading_hub = {

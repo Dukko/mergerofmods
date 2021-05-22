@@ -81,6 +81,9 @@ d_noxious_swamp = {
         }
         modifier = {
             factor = 3
+            OR = {
+                is_planet_class = pc_swamp
+                is_planet_class = pc_wetswamp
             has_modifier = "swamp_world"
             has_modifier = "bog_world"
         }
@@ -114,5 +117,6 @@ d_noxious_swamp = {
     }
     prerequisites = {
         "tech_noxious_swamp"
+        }
     }
 }

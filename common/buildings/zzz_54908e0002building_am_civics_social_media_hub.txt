@@ -1,0 +1,123 @@
+building_am_civics_social_media_hub = {
+    base_buildtime = 360
+    base_cap_amount = 1
+    category = trade
+    potential = {
+        exists = owner
+        owner = {
+            has_valid_civic = civic_am_civics_social_media_giant
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+    }
+    destroy_trigger = {
+        OR = {
+            NOT = {
+                owner = {
+                    has_valid_civic = civic_am_civics_social_media_giant
+                }
+            }
+            has_modifier = slave_colony
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 300
+        }
+        produces = {
+            unity = 3
+        }
+        upkeep = {
+            energy = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_planet_flag = decision_am_civics_building_social_media_hub_1_flag
+        }
+        modifier = {
+            planet_jobs_society_research_produces_mult = 0.35
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_planet_flag = decision_am_civics_building_social_media_hub_2_flag
+        }
+        modifier = {
+            planet_stability_add = 5
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_planet_flag = decision_am_civics_building_social_media_hub_3_flag
+        }
+        modifier = {
+            trade_value_mult = 0.25
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_planet_flag = decision_am_civics_building_social_media_hub_4_flag
+        }
+        modifier = {
+            planet_jobs_worker_produces_mult = 0.05
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_planet_flag = decision_am_civics_building_social_media_hub_5_flag
+        }
+        modifier = {
+            job_entertainer_add = 2
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            NOT = {
+                has_building = building_am_civics_social_media_hub
+            }
+        }
+        text = building_am_civics_social_media_hub_triggered_desc
+    }
+    triggered_desc = {
+        trigger = {
+            has_building = building_am_civics_social_media_hub
+            OR = {
+                NOT = {
+                    has_planet_flag = decision_am_civics_building_social_media_hub_1_flag
+                }
+                NOT = {
+                    has_planet_flag = decision_am_civics_building_social_media_hub_2_flag
+                }
+                NOT = {
+                    has_planet_flag = decision_am_civics_building_social_media_hub_3_flag
+                }
+                NOT = {
+                    has_planet_flag = decision_am_civics_building_social_media_hub_4_flag
+                }
+                NOT = {
+                    has_planet_flag = decision_am_civics_building_social_media_hub_5_flag
+                }
+            }
+        }
+        text = building_am_civics_social_media_hub_triggered_desc_constructed
+    }
+    triggered_desc = {
+        trigger = {
+            has_building = building_am_civics_social_media_hub
+            AND = {
+                has_planet_flag = decision_am_civics_building_social_media_hub_1_flag
+                has_planet_flag = decision_am_civics_building_social_media_hub_2_flag
+                has_planet_flag = decision_am_civics_building_social_media_hub_3_flag
+                has_planet_flag = decision_am_civics_building_social_media_hub_4_flag
+                has_planet_flag = decision_am_civics_building_social_media_hub_5_flag
+            }
+        }
+        text = building_am_civics_social_media_hub_triggered_desc_maxed
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

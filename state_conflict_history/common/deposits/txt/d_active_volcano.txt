@@ -79,15 +79,34 @@ d_active_volcano = {
             has_modifier = "young_world"
         }
         modifier = {
+            factor = 3
+            is_planet_class = pc_ash
+        }
+        modifier = {
             factor = 2
             OR = {
                 has_modifier = "primal_world"
+                is_planet_class = pc_sterile
+                is_planet_class = pc_primal
                 has_modifier = "awakened_world"
             }
         }
         modifier = {
+            factor = 1.5
+            has_modifier = "unstable_tectonics"
+        }
+        modifier = {
+            factor = 1.5
+            is_planet_class = pc_geothermal
+        }
+        modifier = {
             factor = 0.5
-            is_planet_class = pc_alpine
+            OR = {
+                is_planet_class = pc_alpine
+                is_planet_class = pc_cascadian
+                is_planet_class = pc_hadesert
+                is_planet_class = pc_hajungle
+            }
         }
         modifier = {
             factor = 0.5
@@ -105,6 +124,7 @@ d_active_volcano = {
             OR = {
                 has_modifier = "cryokarst_world"
                 has_modifier = "steppe_world"
+                is_planet_class = pc_steppe
             }
         }
     }

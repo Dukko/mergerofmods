@@ -1,0 +1,2 @@
+﻿l_default:
+ format.dem_tech.1:1000 "<democratic_tech> of [This.Capital.System.GetName]"

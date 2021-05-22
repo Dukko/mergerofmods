@@ -9,6 +9,7 @@ ethic_fanatic_materialist = {
         ETHIC_ALLOWS_ACADEMIC_PRIVILEGE
         ETHIC_DISALLOW_BAN_AI
         ETHIC_DISALLOW_BAN_ROBOTS
+        ETHIC_MATERIALIST_ALLOWS_HEAD_RESEARCHERS
     }
     country_modifier = {
         country_physics_tech_research_speed = 0.15

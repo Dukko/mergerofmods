@@ -12,19 +12,57 @@ administrator = {
     }
     possible = {
         ruler_job_check_trigger = yes
-        OR = {
-            traits_restrict_specialist_jobs = no
-            has_pop_flag = allow_administrator_traits
-        }
     }
     resources = {
         category = planet_administrators
         produces = {
-            unity = 3
+            trigger = {
+                ROOT = {
+                    has_fanatic_governing_ethic = yes
+                }
+            }
+            unity = @pop_unity_fanatic
+        }
+        produces = {
+            trigger = {
+                ROOT = {
+                    has_governing_ethic = yes
+                }
+            }
+            unity = @pop_unity_same
+        }
+        produces = {
+            trigger = {
+                ROOT = {
+                    has_opposing_ethic = yes
+                }
+            }
+            unity = @pop_unity_opposing
+        }
+        produces = {
+            trigger = {
+                ROOT = {
+                    has_opposing_fanatic_ethic = yes
+                }
+            }
+            unity = @pop_unity_fanatic_opposing
         }
     }
     planet_modifier = {
         planet_amenities_add = 8
+        planet_pops_unity_produces_mult = 0.03
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_governing_ethos = yes
+        }
+        pop_government_ethic_attraction = 0.03
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_opposing_ethos = yes
+        }
+        pop_government_ethic_attraction = -0.03
     }
     triggered_planet_modifier = {
         potential = {
@@ -61,10 +99,6 @@ administrator = {
     }
     weight = {
         weight = @ruler_job_weight
-        modifier = {
-            factor = 4
-            has_trait = trait_living_architecture
-        }
         modifier = {
             factor = 0.1
             has_citizenship_rights = no
@@ -115,14 +149,6 @@ administrator = {
             has_trait = trait_necrophage
         }
         modifier = {
-            factor = 1.2
-            has_trait = trait_multihive_core
-        }
-        modifier = {
-            factor = 0.5
-            has_trait = trait_multihive_drone
-        }
-        modifier = {
             factor = 0.01
             exists = planet
             exists = planet.controller
@@ -132,11 +158,6 @@ administrator = {
                     is_country_type = ai_empire
                 }
             }
-        }
-        modifier = {
-            factor = 1.2
-            is_unemployed = yes
-            is_pop_category = ruler
         }
     }
 }

@@ -1,0 +1,2 @@
+﻿l_default:
+ format.dem_pac.1:1000 "<democratic_pac> of [This.Capital.System.GetName]"

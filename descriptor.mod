@@ -1,6 +1,7 @@
 dependencies={
 	"(Merged Dick 0.8.9) !Additional Traits AI Patch"
 	"(Merged Dick 0.8.9) !Lots of Traditions - PT, EST, and ST - 126 Ascension Perks"
+	"(Merged Dick 0.8.9) ! The Merger of Rules 3.0"
 	"(Merged Dick 0.8.9) Civics Expanded+ & More Authorities Compatibility Patch"
 	"(Merged Dick 0.8.9) Diverse New Frontiers"
 	"(Merged Dick 0.8.9) Dynamic Difficulty - Ultimate Customization"
@@ -73,8 +74,8 @@ dependencies={
 	"UI Overhaul Dynamic + Lots of Traditions - PT, EST, & ST"
 	"Sins of the Prophets: NSC Compatibility Patch"
 }
-path="D:/Documents/Paradox Interactive/Stellaris/mod/IronyModManager_Dick_0.8.9"
-name="IronyModManager_Dick_0.8.9"
+path="D:/Documents/Paradox Interactive/Stellaris/mod/IronyModManager_Dick_0.8.91"
+name="IronyModManager_Dick_0.8.91"
 tags={
 	"Fixes"
 }

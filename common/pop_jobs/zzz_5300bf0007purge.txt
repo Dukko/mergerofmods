@@ -13,6 +13,7 @@ purge = {
             }
             has_pop_flag = event_purge
         }
+        years_passed > 1
     }
     resources = {
         category = planet_jobs
@@ -219,6 +220,10 @@ purge = {
                     }
                 }
             }
+        }
+        modifier = {
+            factor = 0
+            years_passed < 1
         }
         modifier = {
             factor = 9999

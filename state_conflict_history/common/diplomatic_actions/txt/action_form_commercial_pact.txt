@@ -27,14 +27,6 @@ action_form_commercial_pact = {
                 }
             }
         }
-        custom_tooltip = {
-            fail_text = "requires_recipient_not_inward_perfection"
-            from = {
-                NOT = {
-                    has_valid_civic = civic_inwards_perfection
-                }
-            }
-        }
         if = {
             limit = {
                 from = {
@@ -111,12 +103,6 @@ action_form_commercial_pact = {
                     fail_text = diplo_action_no_low_intel
                     always = no
                 }
-            }
-        }
-        custom_tooltip = {
-            fail_text = "requires_recipient_not_criminal_heritage"
-            from = {
-                is_criminal_syndicate = no
             }
         }
         custom_tooltip = {

@@ -1,6 +1,6 @@
 !!Ariphaos Unofficial Patch (3.0)
 Community Flash Patch
-~ !AI Mini-mod: Make AI use Bombardment Stances
+Improved English Localisation
 Economic Flavor
 Better Ultimate Economic Plan
 Bypass Adjustments
@@ -23,6 +23,7 @@ Legendary Worlds 2.7.x
 Amazing Space Battles
 SpaceAmbient Music - Vol. II
 SpaceAmbient Music - Vol. I
+Music Pack
 War Name Variety | Redux
 Ultimate Eldar Namelist
 Shadowrun Name List
@@ -70,6 +71,7 @@ Animated Valbaran Species
 Animated Pardus Species
 Animated Budgie Species
 [3.0.*] New Enclaves
+3.0.2 | Xenonion News Enclave
 Additional Traits
 Void Dwellers Expanded 3+
 Subterranean Origin
@@ -78,13 +80,14 @@ Precursor Story Pack
 Origins of Civilization for 3.0.x
 Origins Extended
 Nanite Machines & Distant Stars Overhaul
-A Deadly Tempest (3.0b)
+A Deadly Tempest (3.0)
 Morbid Origin 3.0.2
 More Origins Mod
 More Origins - Planetary Diversity compat
 More Default Origins
 Machine & Robot Expansion
 Guillified Precursor Story Pack (Compat Patch)
+Fatal Foundations Story Pack [3.0]
 Grand Custodianship
 Feudal Origins
 Fatherland: Colonial Empires
@@ -111,6 +114,7 @@ Diverse Rooms
 Diverse Basics
 Weapon Research Menu
 Useful Heirs
+Trader Enclave Starbase Buildings
 Separate Peace Treaties
 Size 25 Homeworlds
 Shut Up, We Don't Care! (3.0)
@@ -172,6 +176,9 @@ Machine Shipset
 Kurogane Expanded (New)
 Formidable Star Eater - The Companion Cube
 Federation Builders: Ships and Cities
+Dark necroid ships [2.8]
+Dark Mammalian Ships
+Dark humanoid ships
 C&C: Scrin Ships
 Apocalypse Molluscoid Ships: 2.7
 [United Fleet]Mobile Shipyard
@@ -191,6 +198,7 @@ Gigastructural Engineering & More (3.0)
 Fallen Empire Megastructures
 EUTAB - Ethos Unique Techs and Buildings
 Extra Buildings - All in One
+Deprecated Humanoid Ship Sections Patch
 Compatibility - Guilli's Techs & Planetary Diversity
 Building Slot Technologies
 Building Adjustments
@@ -235,10 +243,14 @@ Immersive Galaxy - Planet Variety for Planetary Diversity
 Small fix for Immersive Galaxy - Planet Variety for PD
 Planetary Designations Adjustments
 UI Overhaul Dynamic + Planetary Diversity
+Amazing Civics - Megacorp
 Government Variety Pack
 Civics Expanded+
 More Authorities
 Ethics and Civics Alternative - Redux
+Relytor's Empire Governance - Redux
+Relytor's Empire United
+Relytor's Empire United - Ethics and Civics Alternative Redux (Patch)
 Ethics-Civics Alt and Guilli's Planet Modifiers Patch
 Ethics & Civics Overhaul/GVP Sanity Patch
 Galactic Community Expanded
@@ -284,6 +296,7 @@ Starborn Disable Normal Habitats
 Silent Galaxy-Ambient-Sound
 RLS + Dark UI Patch
 Ringworld lights fix
+Retextured Ships
 Reduce Aura Graphics
 Realistic Species Growth
 Psionic Synths / Planetary Diversity - Shroud Worlds Patch
@@ -293,6 +306,7 @@ Proactive and Mobilised AI
 Otter Editor's Dynamic Mod Menu Add-on
 NSC-IBS minipatch
 NSC - Dark UI Compatibility Patch
+Nemesis Frontend Recolor
 Nemesis: Menacing Shipset GFX patch
 MVG War Exhaustion - Updated + Tweaked
 More Authorities WRB Patch
@@ -302,6 +316,7 @@ More Authorities - EST Patch
 More Authorities - ESAP Patch
 More Authorities - ECA Patch
 More Authorities - DPE Patch
+MA-REG Patch
 Loyal Subjects Have Nothing to Fear (From the Colossus)[3.0]
 Longer Greetings Timer (3.0)
 Habitats Capped Dynamic
@@ -314,6 +329,7 @@ Galactic Market Foundation Tweak
 Galactic Community Expanded Defines
 Forgotten Queens+NSC2 compat patch
 Fishbowl Robot Head Fix
+Federations - No Hard Feelings for Declined Votes
 ECA - Espionage Operations
 Crimewave: Crime and Criminal Heritage AI Overhaul
 Civil Wars - More Authorities Patch
@@ -335,6 +351,7 @@ Magnum's Mods - Tradition Cost Scaling
 !Patch - EST & PT Duplicated Traditions Update
 !Patch - ECA - Real Space & Real Sol - No Name Empires
 !Patch - ECA - All in One - No Name Empires
+!Patch - Cubemap Fix
 All unique systems in [3.x]
 !Colossus Hiveworld Fix
 !Additional Traits AI Patch
@@ -343,4 +360,5 @@ All unique systems in [3.x]
 !!!Universal Resource Patch [2.4+]
 !! K !! - Realistic Asteroids
 ! The Merger of Rules 3.0
+! Camera & Galaxy Map Tweaks
 Absolutely no prescripted countries pls

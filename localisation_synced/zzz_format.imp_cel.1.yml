@@ -1,0 +1,2 @@
+﻿l_default:
+ format.imp_cel.1:1000 "<imperial_celestial> of [This.Capital.System.GetName]"

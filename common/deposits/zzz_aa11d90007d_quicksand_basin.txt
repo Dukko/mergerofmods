@@ -14,6 +14,7 @@ d_quicksand_basin = {
             is_planet_class = pc_continental
             is_dry = yes
             has_modifier = "pangea_world"
+            has_modifier = "young_world"
             has_modifier = "arid_tidally_locked"
         }
     }
@@ -89,17 +90,24 @@ d_quicksand_basin = {
         modifier = {
             factor = 0.25
             OR = {
+                is_planet_class = pc_steppe
                 has_modifier = "steppe_world"
                 has_modifier = "prairie_world"
             }
         }
         modifier = {
             factor = 0.5
-            has_modifier = "salt_world"
+            OR = {
+                is_planet_class = pc_salt
+                has_modifier = "salt_world"
+            }
         }
         modifier = {
             factor = 0.1
-            has_modifier = "dune_world"
+            OR = {
+                is_planet_class = pc_sandsea
+                has_modifier = "dune_world"
+            }
         }
         modifier = {
             factor = 0

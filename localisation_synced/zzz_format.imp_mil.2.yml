@@ -1,0 +1,2 @@
+﻿l_default:
+ format.imp_mil.2:1000 "<imperial_mil> of [This.Capital.GetName]"

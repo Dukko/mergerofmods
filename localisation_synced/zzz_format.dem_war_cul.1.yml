@@ -1,0 +1,2 @@
+﻿l_default:
+ format.dem_war_cul.1:1000 "<democratic_war_cul> of [This.Capital.System.GetName]"

@@ -38,7 +38,6 @@ organic_battery = {
             }
             energy = 2
         }
-        produces = {
             trigger = {
                 owner = {
                     has_swapped_tradition = tr_plentiful_biogenesis_machine_1
@@ -46,7 +45,6 @@ organic_battery = {
             }
             energy = 2
         }
-    }
     weight = {
         weight = @special_job_weight
     }

@@ -531,6 +531,7 @@ megacorp_caravaneer_init = {
                 ethos = {
                     ethic = ethic_fanatic_materialist
                     ethic = ethic_authoritarian
+                    ethic = ethic_capitalist
                 }
                 ignore_initial_colony_error = yes
                 effect = {

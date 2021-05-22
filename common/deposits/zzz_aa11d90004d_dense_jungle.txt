@@ -12,6 +12,7 @@ d_dense_jungle = {
     potential = {
         OR = {
             is_wet = yes
+            is_planet_class = pc_oasis
             has_modifier = "oasis_world"
             has_modifier = "geothermal_world"
         }
@@ -83,11 +84,18 @@ d_dense_jungle = {
         }
         modifier = {
             factor = 4
-            has_modifier = "jungle_world"
+            OR = {
+                has_modifier = "jungle_world"
+                is_planet_class = pc_hajungle
+            }
         }
         modifier = {
             factor = 2
-            has_modifier = "forest_world"
+            OR = {
+                has_modifier = "forest_world"
+                is_planet_class = pc_forest
+                is_planet_class = pc_mangrove
+            }
         }
         modifier = {
             factor = 0
@@ -107,6 +115,10 @@ d_dense_jungle = {
                 has_modifier = "boreal_world"
                 has_modifier = "young_world"
                 has_modifier = "storm_world"
+                is_planet_class = pc_mushroom
+                is_planet_class = pc_aquatic
+                is_planet_class = pc_boreal
+                is_planet_class = pc_storm
             }
         }
     }

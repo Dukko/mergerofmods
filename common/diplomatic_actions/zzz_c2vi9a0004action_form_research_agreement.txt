@@ -49,14 +49,6 @@ action_form_research_agreement = {
                 }
             }
         }
-        custom_tooltip = {
-            fail_text = "requires_recipient_not_inward_perfection"
-            from = {
-                NOT = {
-                    has_valid_civic = civic_inwards_perfection
-                }
-            }
-        }
         if = {
             limit = {
                 from = {

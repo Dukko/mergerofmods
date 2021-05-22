@@ -1,0 +1,66 @@
+nhsc_tech_dragon_hatchery = {
+    area = society
+    category = {
+        biology
+    }
+    tier = 5
+    cost = @tier5cost3
+    weight = @techTier6weight1
+    is_rare = yes
+    prerequisites = {
+        "tech_society_3"
+    }
+    potential = {
+        NOT = {
+            has_global_flag = ESC_ether_dragon_tech_forbidden
+        }
+        NOT = {
+            has_valid_civic = civic_machine_terminator
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = nhsc_killed_ether_drake
+            }
+        }
+        modifier = {
+            factor = 0
+            AND = {
+                OR = {
+                    is_machine_empire = no
+                    has_valid_civic = civic_machine_servitor
+                    has_valid_civic = civic_machine_assimilator
+                }
+                NAND = {
+                    has_technology = tech_cloning
+                    has_technology = tech_gene_tailoring
+                }
+            }
+        }
+    }
+    ai_weight = {
+        factor = @ESC_AI_tech_weight_multiplier
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = nhsc_killed_ether_drake
+            }
+        }
+        modifier = {
+            factor = 0
+            AND = {
+                OR = {
+                    is_machine_empire = no
+                    has_valid_civic = civic_machine_servitor
+                    has_valid_civic = civic_machine_assimilator
+                }
+                NAND = {
+                    has_technology = tech_cloning
+                    has_technology = tech_gene_tailoring
+                }
+            }
+        }
+    }
+}

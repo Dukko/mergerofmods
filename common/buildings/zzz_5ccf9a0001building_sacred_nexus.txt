@@ -69,15 +69,7 @@ building_sacred_nexus = {
     }
     triggered_planet_modifier = {
         potential = {
-            exists = owner
-            owner = {
-                or = {
-                    has_valid_civic = civic_imperial_cult
-                    has_valid_civic = civic_divine_council
-                    has_valid_civic = civic_spiritual_democracy
-                    has_valid_civic = civic_exalted_priesthood
-                }
-            }
+            is_theocracy = yes
         }
         modifier = {
             job_high_priest_add = 2
@@ -111,15 +103,7 @@ building_sacred_nexus = {
     }
     triggered_desc = {
         trigger = {
-            exists = owner
-            owner = {
-                or = {
-                    has_valid_civic = civic_imperial_cult
-                    has_valid_civic = civic_divine_council
-                    has_valid_civic = civic_spiritual_democracy
-                    has_valid_civic = civic_exalted_priesthood
-                }
-            }
+            is_theocracy = yes
         }
         text = job_high_priest_effect_desc
     }

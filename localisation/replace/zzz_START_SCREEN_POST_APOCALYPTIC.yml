@@ -1,0 +1,2 @@
+﻿l_english:
+ START_SCREEN_POST_APOCALYPTIC:1000 "But [GetSpeciesAdj] society was not always united toward a common goal. In centuries past, mounting tensions between competing nations came to an apocalyptic head in a global thermonuclear war that claimed the lives of billions, and forever marred the surface of [GetHomeWorldName].\n\nIn the decades to follow, surviving [GetSpeciesNamePlural] faced radiological contamination, mutations, famine and violent tribalism. It was in this grim crucible that the [GetName] was truly forged, and with it a new world order."

@@ -1,0 +1,2 @@
+﻿l_default:
+ format.imp_tech.2:1000 "<imperial_tech> of [This.Capital.GetName]"

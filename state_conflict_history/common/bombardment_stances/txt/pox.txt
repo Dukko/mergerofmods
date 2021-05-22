@@ -32,11 +32,6 @@ pox = {
         weight = 10
         modifier = {
             factor = 0.01
-            NOT = {
-                owner = {
-                    is_homicidal = yes
-                }
-            }
             exists = from
             from = {
                 owner = {

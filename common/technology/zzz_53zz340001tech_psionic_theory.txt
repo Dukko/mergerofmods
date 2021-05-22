@@ -92,8 +92,11 @@ tech_psionic_theory = {
                         has_trait = "leader_trait_expertise_psionics"
                     }
                     any_owned_species = {
+                        OR = {
                         has_trait = trait_psionic
                         has_trait = trait_latent_psionic
+                        }
+                    }
                 }
             }
         }

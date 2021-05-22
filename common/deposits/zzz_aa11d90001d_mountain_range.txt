@@ -71,7 +71,12 @@ d_mountain_range = {
         weight = @blocker_low
         modifier = {
             factor = 2
-            is_planet_class = pc_alpine
+            OR = {
+                is_planet_class = pc_alpine
+                is_planet_class = pc_cascadian
+                is_planet_class = pc_hadesert
+                is_planet_class = pc_hajungle
+            }
         }
         modifier = {
             factor = 0.5
@@ -98,8 +103,10 @@ d_mountain_range = {
         modifier = {
             factor = 0
             OR = {
+                is_planet_class = pc_aquatic
                 has_modifier = "panthalassic_world"
                 has_modifier = "underground_world"
+                has_modifier = "steppe_world"
                 has_modifier = "ocean_tidally_locked"
             }
         }

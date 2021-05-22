@@ -1,0 +1,2 @@
+﻿l_default:
+ format.dem_gen.2:1000 "<democratic_gen> of [This.Capital.GetName]"
