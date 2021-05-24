@@ -21,7 +21,17 @@ ap_nihilistic_acquisition = {
         is_xenophile = no
     }
     ai_weight = {
-        factor = 10
+        factor = 1
+        modifier = {
+            factor = 0
+            not = {
+                has_ascension_perk = ap_executive_vigor
+            }
+        }
+        modifier = {
+            factor = 0
+            turtler2 = no
+        }
         modifier = {
             factor = 0
             NOT = {

@@ -1,6 +1,6 @@
 pw_building_pavilion_of_wonders = {
     base_buildtime = @pw_building_buildtime
-    position_priority = 75
+    position_priority = 120
     category = unity
     base_cap_amount = 1
     can_be_ruined = no
@@ -35,9 +35,47 @@ pw_building_pavilion_of_wonders = {
             minerals = @pw_building_cost
             exotic_gases = @pw_building_cost_rare
         }
+        cost = {
+            trigger = {
+                planet = {
+                    pw_has_any_planetary_wonder = yes
+                }
+            }
+            minerals = @pw_building_cost_extra
+        }
+        cost = {
+            trigger = {
+                planet = {
+                    OR = {
+                        has_designation = col_resort
+                        has_designation = col_habitat_leisure
+                    }
+                }
+            }
+            minerals = @pw_building_cost_discount
+        }
         upkeep = {
             energy = @pw_building_upkeep
-            exotic_gases = @pw_building_upkeep_rare
+            exotic_gases = @pw_building_upkeep_rare_1
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    pw_has_any_additional_planetary_wonder = yes
+                }
+            }
+            energy = @pw_building_upkeep_extra
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    OR = {
+                        has_designation = col_resort
+                        has_designation = col_habitat_leisure
+                    }
+                }
+            }
+            energy = @pw_building_upkeep_discount
         }
     }
     destroy_trigger = {
@@ -65,7 +103,28 @@ pw_building_pavilion_of_wonders = {
     }
     planet_modifier = {
         planet_max_districts_add = -1
-        planet_jobs_unity_produces_mult = 0.1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_megacorp = no
+            }
+        }
+        modifier = {
+            job_administrator_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_megacorp = yes
+            }
+        }
+        modifier = {
+            job_merchant_add = 1
+        }
     }
     triggered_planet_modifier = {
         potential = {
@@ -93,98 +152,11 @@ pw_building_pavilion_of_wonders = {
         potential = {
             exists = owner
             owner = {
-                is_spiritualist = yes
-            }
-        }
-        modifier = {
-            job_priest_add = 2
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_megacorp = no
-            }
-            owner = {
-                is_spiritualist = no
-            }
-        }
-        modifier = {
-            job_culture_worker_add = 2
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_megacorp = yes
-            }
-            owner = {
-                is_spiritualist = no
-            }
-        }
-        modifier = {
-            job_manager_add = 2
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            OR = {
-                owner = {
-                    has_valid_civic = civic_death_cult
-                }
-                owner = {
-                    has_valid_civic = civic_death_cult_corporate
-                }
-            }
-        }
-        modifier = {
-            job_death_priest_add = 2
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_megacorp = no
-            }
-            NOT = {
-                owner = {
-                    has_valid_civic = civic_death_cult
-                }
-            }
-        }
-        modifier = {
-            job_culture_worker_add = 2
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_megacorp = yes
-            }
-            NOT = {
-                owner = {
-                    has_valid_civic = civic_death_cult_corporate
-                }
-            }
-        }
-        modifier = {
-            job_manager_add = 2
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
                 has_valid_civic = civic_memorialist
             }
         }
         modifier = {
-            job_death_chronicler_add = 2
+            job_death_chronicler_add = 1
         }
     }
     triggered_planet_modifier = {
@@ -200,7 +172,7 @@ pw_building_pavilion_of_wonders = {
             }
         }
         modifier = {
-            job_culture_worker_add = 2
+            job_culture_worker_add = 1
         }
     }
     triggered_planet_modifier = {
@@ -216,7 +188,7 @@ pw_building_pavilion_of_wonders = {
             }
         }
         modifier = {
-            job_manager_add = 2
+            job_manager_add = 1
         }
     }
     triggered_planet_modifier = {
@@ -231,41 +203,13 @@ pw_building_pavilion_of_wonders = {
         potential = {
             exists = owner
             owner = {
-                is_megacorp = no
-            }
-            NOT = {
-                has_modifier = resort_colony
-            }
-        }
-        modifier = {
-            job_culture_worker_add = 2
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_megacorp = yes
-            }
-            NOT = {
-                has_modifier = resort_colony
-            }
-        }
-        modifier = {
-            job_manager_add = 2
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
                 NOT = {
                     has_valid_civic = civic_warrior_culture
                 }
             }
         }
         modifier = {
-            job_entertainer_add = 3
+            job_entertainer_add = 2
         }
     }
     triggered_planet_modifier = {
@@ -276,7 +220,7 @@ pw_building_pavilion_of_wonders = {
             }
         }
         modifier = {
-            job_duelist_add = 3
+            job_duelist_add = 2
         }
     }
     triggered_planet_modifier = {
@@ -290,8 +234,54 @@ pw_building_pavilion_of_wonders = {
             planet_stability_add = @pw_stability_production
         }
     }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_megacorp = no
+            }
+            owner = {
+                has_edict = pw_ambition_wonders_beyond_ambition
+            }
+        }
+        modifier = {
+            planet_jobs_unity_produces_mult = 0.1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_megacorp = yes
+            }
+            owner = {
+                has_edict = pw_ambition_wonders_beyond_ambition
+            }
+        }
+        modifier = {
+            trade_value_mult = 0.1
+        }
+    }
     triggered_desc = {
         text = pw_planet_wonder_lb
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_megacorp = no
+            }
+        }
+        text = job_administrator_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_megacorp = yes
+            }
+        }
+        text = job_merchant_effect_desc
     }
     triggered_desc = {
         trigger = {
@@ -310,29 +300,6 @@ pw_building_pavilion_of_wonders = {
             }
         }
         text = job_manager_effect_desc
-    }
-    triggered_desc = {
-        trigger = {
-            exists = owner
-            owner = {
-                is_spiritualist = yes
-            }
-        }
-        text = job_priest_effect_desc
-    }
-    triggered_desc = {
-        trigger = {
-            exists = owner
-            OR = {
-                owner = {
-                    has_valid_civic = civic_death_cult
-                }
-                owner = {
-                    has_valid_civic = civic_death_cult_corporate
-                }
-            }
-        }
-        text = job_death_priest_effect_desc
     }
     triggered_desc = {
         trigger = {
@@ -375,7 +342,7 @@ pw_building_pavilion_of_wonders = {
         }
     }
     ai_weight = {
-        weight = 20
+        weight = 25
         modifier = {
             factor = 0
             buildings_has_exotic_gases = no

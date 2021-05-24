@@ -27,6 +27,7 @@ district_nexus = {
         NOT = {
             has_modifier = resort_colony
         }
+        str_nexus_district_allow = yes
     }
     conversion_ratio = 0.5
     convert_to = {

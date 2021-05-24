@@ -4,7 +4,7 @@ pw_tech_planetary_mantle_production = {
         materials
     }
     tier = 4
-    cost = @tier4cost3
+    cost = @pw_tech_cost_2
     prerequisites = {
         pw_tech_planetary_mega_engineering
         tech_advanced_metallurgy_2
@@ -13,7 +13,7 @@ pw_tech_planetary_mantle_production = {
     weight = @tier4weight3
     is_rare = yes
     weight_modifier = {
-        factor = 0.25
+        factor = @pw_tech_weight_mod
         modifier = {
             factor = 1.5
             research_leader = {
@@ -50,6 +50,14 @@ pw_tech_planetary_mantle_production = {
             }
         }
         modifier = {
+            factor = 2
+            OR = {
+                has_ascension_perk = ap_world_shaper
+                has_ascension_perk = ap_hive_worlds
+                has_ascension_perk = ap_machine_worlds
+            }
+        }
+        modifier = {
             factor = 0.5
             has_valid_civic = civic_environmentalist
         }
@@ -72,7 +80,7 @@ pw_tech_planetary_mantle_production = {
         }
     }
     ai_weight = {
-        factor = 10
+        factor = @pw_tech_ai_weight
         modifier = {
             factor = 2
             research_leader = {

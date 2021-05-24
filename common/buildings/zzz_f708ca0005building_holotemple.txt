@@ -6,6 +6,7 @@ building_holotemple = {
         exists = owner
         building_basic_income_check = yes
         owner = {
+            is_ai = no
             is_spiritualist = yes
             NOR = {
                 has_valid_civic = civic_death_cult
@@ -28,6 +29,7 @@ building_holotemple = {
                     has_valid_civic = civic_death_cult
                     has_valid_civic = civic_death_cult_corporate
                     is_spiritualist = no
+                    is_ai = yes
                 }
             }
             has_modifier = slave_colony

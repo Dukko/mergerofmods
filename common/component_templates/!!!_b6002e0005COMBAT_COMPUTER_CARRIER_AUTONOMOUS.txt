@@ -36,6 +36,6 @@ utility_component_template = {
         ship_engagement_range_mult = @engagement_range3
     }
     ai_weight = {
-        weight = 90
+        weight = 5
     }
 }

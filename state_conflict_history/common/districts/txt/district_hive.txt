@@ -27,6 +27,7 @@ district_hive = {
         NOT = {
             has_modifier = resort_colony
         }
+        str_city_district_allow = yes
     }
     conversion_ratio = 0.5
     convert_to = {
@@ -42,6 +43,19 @@ district_hive = {
         }
         upkeep = {
             energy = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            str_force_city_district = yes
+        }
+        modifier = {
+            job_starnet_spice_melange_farmer_add = 1
+            job_starnet_spice_melange_antifarmer_add = -1
         }
     }
     planet_modifier = {
@@ -90,6 +104,18 @@ district_hive = {
         }
         modifier = {
             planet_housing_add = 1
+        }
+    }
+    ai_resource_production = {
+        alloys = 10
+        trigger = {
+            str_force_city_district = yes
+        }
+    }
+    ai_resource_production = {
+        energy = 10
+        trigger = {
+            str_force_city_district = yes
         }
     }
 }

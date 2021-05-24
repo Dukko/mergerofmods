@@ -26,6 +26,15 @@ tech_artificial_moral_codes = {
         }
     }
     ai_weight = {
+        weight = 5
+        modifier = {
+            factor = 500
+            reroll_society = yes
+        }
+        modifier = {
+            factor = 500
+            has_technology = tech_energy_torpedoes_2
+        }
         modifier = {
             factor = 1.25
             research_leader = {

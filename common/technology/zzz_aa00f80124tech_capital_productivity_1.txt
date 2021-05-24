@@ -29,6 +29,8 @@ tech_capital_productivity_1 = {
         }
     }
     ai_weight = {
+        factor = 200
+        factor = 5
         modifier = {
             factor = 1.25
             research_leader = {

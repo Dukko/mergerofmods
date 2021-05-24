@@ -86,7 +86,8 @@ tech_telepathy = {
         }
     }
     ai_weight = {
-        factor = 5
+        weight = 50
+        factor = 25
         modifier = {
             factor = 1.5
             is_spiritualist = yes

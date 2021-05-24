@@ -1,6 +1,6 @@
 pw_building_martial_avenue = {
     base_buildtime = @pw_building_buildtime
-    position_priority = 125
+    position_priority = 75
     category = army
     base_cap_amount = 1
     can_be_ruined = no
@@ -35,9 +35,25 @@ pw_building_martial_avenue = {
             minerals = @pw_building_cost
             volatile_motes = @pw_building_cost_rare
         }
+        cost = {
+            trigger = {
+                planet = {
+                    pw_has_any_planetary_wonder = yes
+                }
+            }
+            minerals = @pw_building_cost_extra
+        }
         upkeep = {
-            energy = @pw_building_upkeep_expensive
-            volatile_motes = @pw_building_upkeep_rare
+            energy = @pw_building_upkeep
+            volatile_motes = @pw_building_upkeep_rare_1
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    pw_has_any_additional_planetary_wonder = yes
+                }
+            }
+            energy = @pw_building_upkeep_extra
         }
     }
     destroy_trigger = {
@@ -69,18 +85,7 @@ pw_building_martial_avenue = {
             }
         }
         modifier = {
-            pop_happiness = 0.25
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_militarist = yes
-            }
-        }
-        modifier = {
-            job_merchant_add = 1
+            pop_happiness = 0.15
         }
     }
     triggered_planet_modifier = {
@@ -124,7 +129,7 @@ pw_building_martial_avenue = {
             }
         }
         modifier = {
-            job_entertainer_add = 3
+            job_entertainer_add = 2
         }
     }
     triggered_planet_modifier = {
@@ -136,33 +141,7 @@ pw_building_martial_avenue = {
             }
         }
         modifier = {
-            job_duelist_add = 3
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_militarist = yes
-                NOT = {
-                    has_ascension_perk = ap_mind_over_matter
-                }
-            }
-        }
-        modifier = {
-            job_enforcer_add = 2
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_militarist = yes
-                has_ascension_perk = ap_mind_over_matter
-            }
-        }
-        modifier = {
-            job_telepath_add = 2
+            job_duelist_add = 2
         }
     }
     triggered_planet_modifier = {
@@ -203,20 +182,22 @@ pw_building_martial_avenue = {
             planet_stability_add = @pw_stability_production
         }
     }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_edict = pw_ambition_wonders_beyond_ambition
+            }
+        }
+        modifier = {
+            planet_amenities_mult = 0.1
+        }
+    }
     triggered_desc = {
         text = pw_planet_wonder_lb
     }
     triggered_desc = {
         text = pw_martial_avenue_tooltip
-    }
-    triggered_desc = {
-        trigger = {
-            exists = owner
-            owner = {
-                is_militarist = yes
-            }
-        }
-        text = job_merchant_effect_desc
     }
     triggered_desc = {
         trigger = {
@@ -267,32 +248,6 @@ pw_building_martial_avenue = {
             }
         }
         text = job_duelist_effect_desc
-    }
-    triggered_desc = {
-        trigger = {
-            exists = owner
-            owner = {
-                is_militarist = yes
-            }
-            NOT = {
-                owner = {
-                    has_ascension_perk = ap_mind_over_matter
-                }
-            }
-        }
-        text = job_enforcer_effect_desc
-    }
-    triggered_desc = {
-        trigger = {
-            exists = owner
-            owner = {
-                is_militarist = yes
-            }
-            owner = {
-                has_ascension_perk = ap_mind_over_matter
-            }
-        }
-        text = job_telepath_effect_desc
     }
     triggered_desc = {
         trigger = {

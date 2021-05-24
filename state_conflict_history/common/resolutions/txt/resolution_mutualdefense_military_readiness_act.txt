@@ -51,6 +51,36 @@ resolution_mutualdefense_military_readiness_act = {
     ai_weight = {
         weight = @resolution_weight_popular
         modifier = {
+            factor = 1.4
+            not = {
+                has_country_flag = str_has_bad_fleet_score
+            }
+        }
+        modifier = {
+            factor = 0.8
+            has_country_flag = str_has_bad_fleet_score
+        }
+        modifier = {
+            factor = 0.625
+            has_country_flag = str_has_terrible_fleet_score
+        }
+        modifier = {
+            factor = 0.9
+            turtler = yes
+        }
+        modifier = {
+            factor = 0.9
+            turtler2 = yes
+        }
+        modifier = {
+            factor = 1.1
+            rusher = yes
+        }
+        modifier = {
+            factor = 1.1
+            rusher2 = yes
+        }
+        modifier = {
             factor = 2
             is_militarist = yes
         }

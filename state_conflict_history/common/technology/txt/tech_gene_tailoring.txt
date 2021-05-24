@@ -55,6 +55,8 @@ tech_gene_tailoring = {
         }
     }
     ai_weight = {
+        weight = 6
+        factor = 25
         modifier = {
             factor = 1.25
             research_leader = {

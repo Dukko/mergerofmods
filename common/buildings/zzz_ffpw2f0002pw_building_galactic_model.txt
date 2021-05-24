@@ -1,9 +1,12 @@
 pw_building_galactic_model = {
     base_buildtime = @pw_building_buildtime
-    position_priority = 75
+    position_priority = 100
     base_cap_amount = 1
     can_be_ruined = no
     category = government
+    prerequisites = {
+        pw_tech_galactic_modeling
+    }
     potential = {
         exists = owner
         NOT = {
@@ -41,17 +44,58 @@ pw_building_galactic_model = {
             minerals = @pw_building_cost
             rare_crystals = @pw_building_cost_rare
         }
+        cost = {
+            trigger = {
+                planet = {
+                    pw_has_any_planetary_wonder = yes
+                }
+            }
+            minerals = @pw_building_cost_extra
+        }
+        cost = {
+            trigger = {
+                planet = {
+                    OR = {
+                        has_designation = col_bureau
+                        has_designation = col_capital
+                        has_designation = col_capital_hive
+                        has_designation = col_capital_machine
+                    }
+                }
+            }
+            minerals = @pw_building_cost_discount
+        }
         upkeep = {
             energy = @pw_building_upkeep
-            rare_crystals = @pw_building_upkeep_rare
+            rare_crystals = @pw_building_upkeep_rare_1
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    pw_has_any_additional_planetary_wonder = yes
+                }
+            }
+            energy = @pw_building_upkeep_extra
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    OR = {
+                        has_designation = col_bureau
+                        has_designation = col_capital
+                        has_designation = col_capital_hive
+                        has_designation = col_capital_machine
+                    }
+                }
+            }
+            energy = @pw_building_upkeep_discount
         }
     }
     planet_modifier = {
         planet_max_districts_add = -1
     }
     country_modifier = {
-        country_admin_cap_mult = 0.2
-        diplomacy_upkeep_mult = -0.2
+        country_admin_cap_mult = 0.1
     }
     triggered_planet_modifier = {
         potential = {
@@ -61,8 +105,8 @@ pw_building_galactic_model = {
             }
         }
         modifier = {
-            job_bureaucrat_add = @pw_building_specialist_jobs
-            job_administrator_add = @pw_building_ruler_jobs
+            job_administrator_add = 1
+            job_bureaucrat_add = 8
         }
     }
     triggered_planet_modifier = {
@@ -73,7 +117,7 @@ pw_building_galactic_model = {
             }
         }
         modifier = {
-            job_synapse_drone_add = @pw_building_complex_jobs
+            job_synapse_drone_add = 10
         }
     }
     triggered_planet_modifier = {
@@ -84,7 +128,8 @@ pw_building_galactic_model = {
             }
         }
         modifier = {
-            job_coordinator_add = @pw_building_complex_jobs
+            job_coordinator_add = 8
+            job_evaluator_add = 2
         }
     }
     triggered_planet_modifier = {
@@ -98,8 +143,17 @@ pw_building_galactic_model = {
             planet_stability_add = @pw_stability_production
         }
     }
-    prerequisites = {
-        pw_tech_galactic_modeling
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_edict = pw_ambition_wonders_beyond_ambition
+            }
+        }
+        modifier = {
+            diplomacy_upkeep_mult = -0.1
+            job_bureaucrat_per_pop = @pw_job_per_25_pop
+        }
     }
     triggered_desc = {
         text = pw_planet_wonder_lb
@@ -117,7 +171,7 @@ pw_building_galactic_model = {
                 is_regular_empire = yes
             }
         }
-        text = job_bureaucrat_effect_desc
+        text = job_administrator_effect_desc
     }
     triggered_desc = {
         trigger = {
@@ -126,7 +180,7 @@ pw_building_galactic_model = {
                 is_regular_empire = yes
             }
         }
-        text = job_administrator_effect_desc
+        text = job_bureaucrat_effect_desc
     }
     triggered_desc = {
         trigger = {
@@ -145,6 +199,15 @@ pw_building_galactic_model = {
             }
         }
         text = job_coordinator_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = job_evaluator_effect_desc
     }
     on_built = {
         planet_event = {

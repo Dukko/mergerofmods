@@ -1,11 +1,11 @@
 exterminators = {
     aggressiveness = 2
     trade_willingness = 1
-    bravery = 1
+    bravery = 1.5
     combat_bravery = 1.5
     military_spending = 1.2
     colony_spending = 1.2
-    advanced_start_chance = 100
+    advanced_start_chance = 40
     weapon_preferences = weapon_type_explosive
     armor_ratio = 0.4
     shields_ratio = 0.5

@@ -4,6 +4,9 @@ pw_building_panopticon = {
     base_cap_amount = 1
     can_be_ruined = no
     category = government
+    prerequisites = {
+        pw_tech_utilitarian_vigilance
+    }
     potential = {
         exists = owner
         owner = {
@@ -22,7 +25,7 @@ pw_building_panopticon = {
         NOR = {
             has_modifier = penal_colony
             owner = {
-                has_civic = civic_police_state
+                has_valid_civic = civic_police_state
             }
         }
     }
@@ -42,12 +45,64 @@ pw_building_panopticon = {
             }
         }
     }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @pw_building_cost
+        }
+        cost = {
+            trigger = {
+                planet = {
+                    pw_has_any_planetary_wonder = yes
+                }
+            }
+            minerals = @pw_building_cost_extra
+        }
+        cost = {
+            trigger = {
+                planet = {
+                    has_designation = col_penal
+                }
+            }
+            minerals = @pw_building_cost_discount
+        }
+        upkeep = {
+            energy = @pw_building_upkeep
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    pw_has_any_additional_planetary_wonder = yes
+                }
+            }
+            energy = @pw_building_upkeep_extra
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    has_designation = col_penal
+                }
+            }
+            energy = @pw_building_upkeep_discount
+        }
+    }
     planet_modifier = {
         planet_max_districts_add = -1
     }
     country_modifier = {
         planet_crime_mult = -0.2
         intel_encryption_add = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_administrator_add = 1
+        }
     }
     triggered_planet_modifier = {
         potential = {
@@ -62,7 +117,7 @@ pw_building_panopticon = {
             }
         }
         modifier = {
-            job_enforcer_add = @pw_building_specialist_jobs
+            job_enforcer_add = 8
         }
     }
     triggered_planet_modifier = {
@@ -76,7 +131,7 @@ pw_building_panopticon = {
             }
         }
         modifier = {
-            job_telepath_add = @pw_building_specialist_jobs
+            job_telepath_add = 8
         }
     }
     triggered_planet_modifier = {
@@ -90,7 +145,7 @@ pw_building_panopticon = {
             }
         }
         modifier = {
-            job_pw_big_brother_add = @pw_building_ruler_jobs
+            job_pw_big_brother_add = 1
         }
     }
     triggered_planet_modifier = {
@@ -101,7 +156,7 @@ pw_building_panopticon = {
             }
         }
         modifier = {
-            job_patrol_drone_add = @pw_building_complex_jobs
+            job_patrol_drone_add = 8
         }
     }
     triggered_planet_modifier = {
@@ -112,7 +167,7 @@ pw_building_panopticon = {
             }
         }
         modifier = {
-            job_patrol_drone_add = @pw_building_complex_jobs
+            job_patrol_drone_add = 8
         }
     }
     triggered_planet_modifier = {
@@ -126,20 +181,28 @@ pw_building_panopticon = {
             planet_stability_add = @pw_stability_production
         }
     }
-    resources = {
-        category = planet_buildings
-        cost = {
-            minerals = @pw_building_cost
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_edict = pw_ambition_wonders_beyond_ambition
+            }
         }
-        upkeep = {
-            energy = @pw_building_upkeep
+        modifier = {
+            planet_jobs_produces_mult = 0.05
         }
-    }
-    prerequisites = {
-        pw_tech_utilitarian_vigilance
     }
     triggered_desc = {
         text = pw_planet_wonder_lb
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        text = job_administrator_effect_desc
     }
     triggered_desc = {
         trigger = {

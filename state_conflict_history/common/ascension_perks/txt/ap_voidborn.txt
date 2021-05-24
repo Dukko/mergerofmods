@@ -43,11 +43,22 @@ ap_voidborn = {
     ai_weight = {
         factor = 10
         modifier = {
+            factor = 0
+            not = {
+                has_ascension_perk = ap_executive_vigor
+            }
+            OR = {
+                has_ethic = ethic_pacifist
+                has_ethic = ethic_fanatic_pacifist
+                has_origin = origin_void_dwellers
+            }
+        }
+        modifier = {
             factor = 2
             has_ethic = ethic_pacifist
         }
         modifier = {
-            factor = 3
+            factor = 100
             OR = {
                 has_ethic = ethic_fanatic_pacifist
                 has_origin = origin_void_dwellers

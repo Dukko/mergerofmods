@@ -1,0 +1,3 @@
+NAI = {
+    WAR_ATTACK_JUMP_DRIVE_FLEET_PRIO = 5
+}

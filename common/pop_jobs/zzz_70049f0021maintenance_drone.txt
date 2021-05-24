@@ -59,6 +59,29 @@ maintenance_drone = {
             }
         }
         modifier = {
+            factor = 0
+            planet = {
+                habitability = {
+                    who = root
+                    value < 0.4
+                }
+            }
+            planet = {
+                num_pops > 1
+                num_pops < 8
+            }
+            owner = {
+                num_pops < 100
+            }
+        }
+        modifier = {
+            factor = 10000
+            years_passed > 2
+            owner = {
+                is_ai = yes
+            }
+        }
+        modifier = {
             factor = 0.5
             OR = {
                 has_trait = trait_robot_uncanny

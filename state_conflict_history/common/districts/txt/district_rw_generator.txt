@@ -128,99 +128,37 @@ district_rw_generator = {
         potential = {
             exists = owner
             owner = {
-                has_global_flag = SPBM_enabled
-                is_machine_empire = yes
+                is_gestalt = yes
             }
-            planet = {
-                OR = {
-                    has_deposit = d_shattered_ring_superblocker
-                    has_deposit = d_shattered_ring_superblocker2
-                }
-            }
+            has_active_building = building_energy_nexus
         }
         modifier = {
-            job_technician_drone_add = -5
-            planet_housing_add = -5
+            job_technician_drone_add = 5
         }
     }
     triggered_planet_modifier = {
         potential = {
             exists = owner
-            owner = {
-                has_global_flag = SPBM_enabled
-                is_hive_empire = yes
-            }
-            planet = {
-                OR = {
-                    has_deposit = d_shattered_ring_superblocker
-                    has_deposit = d_shattered_ring_superblocker2
-                }
-            }
-        }
-        modifier = {
-            job_technician_drone_add = -7
-            planet_housing_add = -7
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                has_tradition = tr_plentiful_kleptocracy_finish
-            }
-            owner = {
-                is_hive_empire = yes
-            }
-        }
-        modifier = {
-            planet_housing_add = 1
-            job_technician_drone_add = 1
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                has_tradition = tr_plentiful_kleptocracy_finish
-            }
-            owner = {
-                is_machine_empire = yes
-            }
-        }
-        modifier = {
-            planet_housing_add = 1
-            job_technician_drone_add = 1
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                has_tradition = tr_plentiful_kleptocracy_finish
-            }
             owner = {
                 is_gestalt = no
                 is_fallen_empire_spiritualist = no
             }
+            has_active_building = building_energy_nexus
         }
         modifier = {
-            planet_housing_add = 1
-            job_technician_add = 1
+            job_technician_add = 5
         }
     }
     triggered_planet_modifier = {
         potential = {
             exists = owner
             owner = {
-                has_tradition = tr_plentiful_kleptocracy_finish
-            }
-            owner = {
                 is_fallen_empire_spiritualist = yes
             }
+            has_active_building = building_energy_nexus
         }
         modifier = {
-            planet_housing_add = 1
-            job_fe_acolyte_generator_add = 1
+            job_fe_acolyte_generator_add = 5
         }
     }
     triggered_planet_modifier = {
@@ -289,21 +227,6 @@ district_rw_generator = {
     }
     triggered_desc = {
         trigger = {
-            exists = owner
-            owner = {
-                has_global_flag = SPBM_enabled
-            }
-            planet = {
-                OR = {
-                    has_deposit = d_shattered_ring_superblocker
-                    has_deposit = d_shattered_ring_superblocker2
-                }
-            }
-        }
-        text = shattered_ring_superblocker_desc
-    }
-    triggered_desc = {
-        trigger = {
             planet = {
                 has_deposit = d_arcane_generator
                 NOT = {
@@ -311,7 +234,7 @@ district_rw_generator = {
                 }
             }
         }
-        text = arcane_generator_upkeep_desc
+        text = "arcane_generator_upkeep_desc"
     }
     triggered_desc = {
         trigger = {
@@ -320,7 +243,7 @@ district_rw_generator = {
                 is_gestalt = yes
             }
         }
-        text = job_technician_drone_effect_desc
+        text = "job_technician_drone_effect_desc"
     }
     triggered_desc = {
         trigger = {
@@ -330,7 +253,7 @@ district_rw_generator = {
                 is_fallen_empire_spiritualist = no
             }
         }
-        text = job_technician_effect_desc
+        text = "job_technician_effect_desc"
     }
     triggered_desc = {
         trigger = {
@@ -339,7 +262,106 @@ district_rw_generator = {
                 is_fallen_empire_spiritualist = yes
             }
         }
-        text = job_fe_acolyte_generator_effect_desc
+        text = "job_fe_acolyte_generator_effect_desc"
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 250
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 200
+                }
+            }
+        }
+        modifier = {
+            factor = 0.01
+            OR = {
+                planet = {
+                    has_district = district_rw_mining
+                }
+                planet = {
+                    has_district = district_rw_science
+                }
+                planet = {
+                    has_district = district_rw_farming
+                }
+                planet = {
+                    has_district = district_rw_consumer
+                }
+                planet = {
+                    has_district = district_rw_alloys
+                }
+                planet = {
+                    has_district = district_rw_leisure
+                }
+                planet = {
+                    has_district = district_rw_quberine
+                }
+            }
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_tradition = tr_plentiful_kleptocracy_finish
+            }
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+            job_technician_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_tradition = tr_plentiful_kleptocracy_finish
+            }
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+            job_technician_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_tradition = tr_plentiful_kleptocracy_finish
+            }
+            owner = {
+                is_gestalt = no
+                is_fallen_empire_spiritualist = no
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+            job_technician_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_tradition = tr_plentiful_kleptocracy_finish
+            }
+            owner = {
+                is_fallen_empire_spiritualist = yes
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+            job_fe_acolyte_generator_add = 1
+        }
     }
     ai_resource_production = {
         energy = 10

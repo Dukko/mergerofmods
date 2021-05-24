@@ -8,6 +8,10 @@ nebula_refinery = {
         }
     }
     possible = {
+        exists = owner
+        owner = {
+            has_technology = tech_space_mining_1
+        }
         custom_tooltip = {
             fail_text = "requires_starport"
             has_starbase_size >= starbase_starport

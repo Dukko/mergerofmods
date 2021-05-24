@@ -14,6 +14,7 @@ building_amusement_megaplex = {
     }
     planet_modifier = {
         planet_amenities_add = 10
+        job_entertainer_add = 1
     }
     resources = {
         category = planet_branch_office_buildings
@@ -25,15 +26,6 @@ building_amusement_megaplex = {
         }
     }
     ai_weight = {
-        weight = 2
-        modifier = {
-            weight = 0.5
-            branch_office_owner = {
-                has_monthly_income = {
-                    resource = energy
-                    value > 50
-                }
-            }
-        }
+        weight = 0
     }
 }

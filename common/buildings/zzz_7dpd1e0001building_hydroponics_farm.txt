@@ -37,6 +37,7 @@ building_hydroponics_farm = {
     destroy_trigger = {
         exists = owner
         OR = {
+            str_hydroponics_destroy = yes
             owner = {
                 is_ai = yes
                 country_uses_food = no

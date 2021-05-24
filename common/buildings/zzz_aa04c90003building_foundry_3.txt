@@ -5,6 +5,7 @@ building_foundry_3 = {
     allow = {
         has_major_upgraded_capital = yes
         buildings_upgrade_allow = yes
+        buildings_has_motes = yes
     }
     destroy_trigger = {
         OR = {
@@ -29,6 +30,23 @@ building_foundry_3 = {
     }
     prerequisites = {
         tech_alloys_2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            str_force_building_foundry_upgrade = yes
+            num_buildings = {
+                type = building_foundry_3
+                value = 0
+            }
+        }
+        modifier = {
+            job_starnet_spice_melange_farmer_add = 1
+            job_starnet_spice_melange_antifarmer_add = -1
+        }
     }
     triggered_planet_modifier = {
         potential = {

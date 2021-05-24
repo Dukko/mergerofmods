@@ -22,11 +22,7 @@ maintenance_drone = {
         }
     }
     possible = {
-        simple_drone_job_check_trigger = yes
-        OR = {
-            traits_restrict_worker_jobs = no
-            has_pop_flag = allow_clerk_traits
-        }
+        drone_job_check_trigger = yes
     }
     planet_modifier = {
         planet_amenities_no_happiness_add = 4
@@ -56,14 +52,33 @@ maintenance_drone = {
     weight = {
         weight = @clerk_job_weight
         modifier = {
-            factor = 4
-            has_trait = trait_living_architecture
-        }
-        modifier = {
             factor = 2
             OR = {
                 has_trait = trait_robot_emotion_emulators
                 has_trait = trait_charismatic
+            }
+        }
+        modifier = {
+            factor = 0
+            planet = {
+                habitability = {
+                    who = root
+                    value < 0.4
+                }
+            }
+            planet = {
+                num_pops > 1
+                num_pops < 8
+            }
+            owner = {
+                num_pops < 100
+            }
+        }
+        modifier = {
+            factor = 10000
+            years_passed > 2
+            owner = {
+                is_ai = yes
             }
         }
         modifier = {

@@ -1,0 +1,43 @@
+tech_decryption_2 = {
+    area = physics
+    tier = 2
+    cost = @tier2cost2
+    category = {
+        computing
+    }
+    prerequisites = {
+        "tech_decryption_1"
+        "tech_physics_2"
+    }
+    weight = @tier2weight3
+    gateway = espionage
+    modifier = {
+        intel_decryption_add = 2
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+        modifier = {
+            factor = 0.1
+            NOR = {
+                is_ai = yes
+                has_country_flag = first_spynetwork
+            }
+        }
+    }
+    ai_weight = {
+        weight = 3
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+}

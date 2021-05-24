@@ -40,7 +40,11 @@ tech_society_1 = {
         }
     }
     ai_weight = {
-        weight = 10
+        weight = 20
+        modifier = {
+            factor = 3000
+            reroll_society = yes
+        }
         modifier = {
             factor = 1.25
             research_leader = {

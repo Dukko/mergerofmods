@@ -48,13 +48,6 @@ ap_mind_over_matter = {
         is_mechanical_empire = no
     }
     ai_weight = {
-        factor = 10
-        modifier = {
-            factor = 0.1
-            NOR = {
-                has_ethic = ethic_spiritualist
-                has_ethic = ethic_fanatic_spiritualist
-            }
-        }
+        factor = 1000
     }
 }

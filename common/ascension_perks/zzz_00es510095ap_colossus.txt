@@ -22,9 +22,9 @@ ap_colossus = {
         }
     }
     ai_weight = {
-        factor = 10
+        factor = 20
         modifier = {
-            factor = 10
+            factor = 0
             OR = {
                 has_valid_civic = civic_fanatic_purifiers
                 has_valid_civic = civic_machine_terminator

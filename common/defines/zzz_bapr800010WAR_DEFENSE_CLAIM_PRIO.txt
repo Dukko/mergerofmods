@@ -1,0 +1,3 @@
+NAI = {
+    WAR_DEFENSE_CLAIM_PRIO = 2
+}

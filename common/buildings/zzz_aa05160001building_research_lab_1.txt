@@ -8,16 +8,17 @@ building_research_lab_1 = {
         NOT = {
             has_modifier = slave_colony
         }
-        building_relaxed_basic_income_check = yes
     }
     destroy_trigger = {
         OR = {
             has_modifier = slave_colony
             has_modifier = resort_colony
+            str_research_destroy = yes
         }
     }
     allow = {
         has_upgraded_capital = yes
+        str_research_allow = yes
     }
     triggered_planet_modifier = {
         potential = {
@@ -93,5 +94,13 @@ building_research_lab_1 = {
             }
         }
         text = job_calculator_effect_desc
+    }
+    ai_resource_production = {
+        trigger = {
+            always = yes
+        }
+        physics_research = 1
+        society_research = 1
+        engineering_research = 1
     }
 }

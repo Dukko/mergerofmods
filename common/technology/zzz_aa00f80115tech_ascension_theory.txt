@@ -53,6 +53,6 @@ tech_ascension_theory = {
         }
     }
     ai_weight = {
-        weight = 9999
+        weight = 999999
     }
 }

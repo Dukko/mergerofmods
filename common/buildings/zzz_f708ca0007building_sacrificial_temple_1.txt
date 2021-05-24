@@ -19,7 +19,15 @@ building_sacrificial_temple_1 = {
             owner = {
                 is_ai = no
             }
-            free_building_slots > 0
+            and = {
+                free_building_slots > 0
+                nor = {
+                    has_building = building_sacrificial_temple_1
+                    has_building = building_sacrificial_temple_2
+                    has_building = building_sacrificial_temple_3
+                }
+                free_district_slots = 0
+            }
         }
     }
     destroy_trigger = {
@@ -37,6 +45,15 @@ building_sacrificial_temple_1 = {
                 }
             }
             has_modifier = slave_colony
+            and = {
+                owner = {
+                    is_ai = no
+                }
+                num_buildings = {
+                    type = building_sacrificial_temple_1
+                    value > 1
+                }
+            }
         }
     }
     convert_to = {

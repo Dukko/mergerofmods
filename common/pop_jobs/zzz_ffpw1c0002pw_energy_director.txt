@@ -20,6 +20,9 @@ pw_energy_director = {
             energy = @pw_job_director_resource_base
         }
         upkeep = {
+            consumer_goods = @pw_job_director_resource_upkeep
+        }
+        upkeep = {
             trigger = {
                 exists = owner
                 owner = {
@@ -31,6 +34,26 @@ pw_energy_director = {
     }
     planet_modifier = {
         planet_jobs_energy_produces_mult = @pw_job_director_resource_mult
+        planet_amenities_add = @pw_job_director_resource_amenities
+    }
+    triggered_planet_modifier = {
+        potential = {
+            OR = {
+                has_trait = trait_robot_domestic_protocols
+                has_trait = trait_charismatic
+            }
+        }
+        modifier = {
+            planet_amenities_add = 0.4
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_trait = trait_repugnant
+        }
+        modifier = {
+            planet_amenities_add = -0.4
+        }
     }
     weight = {
         weight = @ruler_job_weight
@@ -42,14 +65,21 @@ pw_energy_director = {
             }
         }
         modifier = {
-            factor = 3
-            has_trait = trait_erudite
-        }
-        modifier = {
             factor = 2
             OR = {
                 has_trait = trait_ingenious
             }
+        }
+        modifier = {
+            factor = 1.25
+            OR = {
+                has_trait = trait_robot_domestic_protocols
+                has_trait = trait_charismatic
+            }
+        }
+        modifier = {
+            factor = 0.75
+            has_trait = trait_repugnant
         }
         modifier = {
             factor = 5
@@ -66,6 +96,16 @@ pw_energy_director = {
         modifier = {
             factor = 1.5
             has_trait = trait_necrophage
+        }
+        modifier = {
+            factor = 2
+            planet = {
+                OR = {
+                    has_designation = col_generator
+                    has_designation = col_habitat_energy
+                    has_designation = col_ring_generator
+                }
+            }
         }
         modifier = {
             factor = 0.01

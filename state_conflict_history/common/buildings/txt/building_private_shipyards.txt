@@ -23,13 +23,13 @@ building_private_shipyards = {
             minerals = 500
         }
         produces = {
-            alloys = 6
+            alloys = 3
         }
         upkeep = {
             energy = 2
         }
     }
     ai_weight = {
-        weight = 1
+        weight = 100
     }
 }

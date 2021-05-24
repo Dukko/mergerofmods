@@ -15,6 +15,7 @@ d_toxic_kelp = {
             is_planet_class = pc_oasis
             is_planet_class = pc_antarctic
             has_modifier = "oasis_world"
+            has_modifier = "subglacial_world"
             has_modifier = "cryokarst_world"
             has_modifier = "melting_world"
             has_modifier = "ocean_tidally_locked"

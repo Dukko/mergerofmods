@@ -1,5 +1,7 @@
-@cost3 = 20
-@power3 = -25
+@cost4 = 20
+@power3 = -20
+@tracking1 = 10
+@engagement_range2 = 0.75
 utility_component_template = {
     key = "COMBAT_COMPUTER_CARRIER_PRECOG"
     size = small
@@ -9,7 +11,7 @@ utility_component_template = {
     resources = {
         category = ship_components
         cost = {
-            alloys = @cost3
+            alloys = @cost4
         }
     }
     class_restriction = {
@@ -21,6 +23,10 @@ utility_component_template = {
         cruiser
         battleship
         juggernaut
+        Carrier
+        escortcarrier
+        Flagship
+        explorationship
         titan
         scavenger_bot
         star_eater
@@ -31,17 +37,10 @@ utility_component_template = {
         "tech_precognition_interface"
     }
     ship_modifier = {
-        ship_engagement_range_mult = 0.75
-        ship_tracking_add = 10
+        ship_engagement_range_mult = @engagement_range2
+        ship_tracking_add = @tracking1
     }
     ai_weight = {
         weight = 4
-        modifier = {
-            factor = 0
-            is_country_type = default
-            NOT = {
-                has_ascension_perk = ap_transcendence
-            }
-        }
     }
 }

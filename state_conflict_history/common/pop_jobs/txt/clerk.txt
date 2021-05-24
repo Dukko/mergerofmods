@@ -89,8 +89,30 @@ clerk = {
             }
         }
         modifier = {
+            factor = 0
+            owner = {
+                is_ai = yes
+            }
+            years_passed > 30
+            owner = {
+                not = {
+                    has_country_flag = str_has_room_to_grow
+                }
+            }
+        }
+        modifier = {
             factor = 0.1
             can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 200
+            OR = {
+                is_non_sapient_robot = yes
+                is_shackled_robot = yes
+            }
+            owner = {
+                is_ai = yes
+            }
         }
         modifier = {
             factor = 1.5

@@ -32,7 +32,6 @@ Lithoid Namelist
 Just Star Names
 Just Name Lists
 Elf Names
-Cybrxkhan's Assortment of Namelists for Stellaris
 Enhanced - Plavalaguna Portraits
 Enhanced - Vulcan Portraits
 Benjaseth's Species Names
@@ -78,6 +77,7 @@ Subterranean Origin
 Starborn: Improved Voidtouched
 Precursor Story Pack
 Origins of Civilization for 3.0.x
+Origins Expanded
 Origins Extended
 Nanite Machines & Distant Stars Overhaul
 A Deadly Tempest (3.0)
@@ -153,6 +153,7 @@ Dynamic Difficulty : More Modifiers
 Dynamic Difficulty - Ultimate Customization
 Diplomacy Adjustments
 Claims Decay - Dynamic Diplomacy [3.0]
+Choosable Shroud (Compatible with the Decadence of Sanity)
 Civil Wars
 Change Shipset
 Biopsionic Mastery (Patch Edition)
@@ -253,6 +254,7 @@ Relytor's Empire United
 Relytor's Empire United - Ethics and Civics Alternative Redux (Patch)
 Ethics-Civics Alt and Guilli's Planet Modifiers Patch
 Ethics & Civics Overhaul/GVP Sanity Patch
+StarTech AI
 Galactic Community Expanded
 UI Overhaul Dynamic + Ethics and Civics Alternative
 SpeedDial
@@ -340,7 +342,7 @@ Caravaneers and Nomads coexist
 More Civic Points [S-02]
 Stellaris Enhanced Sound Project
 Magnum's Mods - Tradition Cost Scaling
-!Yet Another Districts Patch for Vanilla AI
+!Yet Another Districts Patch for Starnet AI
 !Tweak - MNLG Personal Tweaks
 !Stellaris Enhanced Sound Project - Unofficial ESC Patch
 !StartPopsPatch
@@ -352,6 +354,8 @@ Magnum's Mods - Tradition Cost Scaling
 !Patch - ECA - Real Space & Real Sol - No Name Empires
 !Patch - ECA - All in One - No Name Empires
 !Patch - Cubemap Fix
+! Starnet for NSC2
+Starnet for ESC
 All unique systems in [3.x]
 !Colossus Hiveworld Fix
 !Additional Traits AI Patch

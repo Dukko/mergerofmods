@@ -1,0 +1,56 @@
+@section_cost = 40
+ship_section_template = {
+    key = "CRUISER_BOW_M1S2"
+    ship_size = cruiser
+    fits_on_slot = bow
+    should_draw_components = yes
+    entity = "cruiser_bow_M1S2_entity"
+    icon = "GFX_ship_part_core_bow"
+    ai_weight = {
+        weight = 0
+        modifier = {
+            factor = 9
+            has_technology = tech_missiles_4
+            not = {
+                has_technology = tech_lasers_4
+                has_technology = tech_plasma_2
+            }
+        }
+        modifier = {
+            factor = 6
+            has_technology = tech_missiles_3
+            not = {
+                has_technology = tech_lasers_4
+                has_technology = tech_plasma_2
+            }
+        }
+        modifier = {
+            factor = 10
+            not = {
+                has_technology = tech_combat_computers_1
+            }
+        }
+    }
+    component_slot = {
+        name = "TORPEDO_01"
+        template = "medium_missile_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "SMALL_GUN_01"
+        template = "small_turret"
+        locatorname = "small_gun_01"
+    }
+    component_slot = {
+        name = "SMALL_GUN_02"
+        template = "small_turret"
+        locatorname = "small_gun_02"
+    }
+    medium_utility_slots = 4
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @section_cost
+        }
+    }
+}

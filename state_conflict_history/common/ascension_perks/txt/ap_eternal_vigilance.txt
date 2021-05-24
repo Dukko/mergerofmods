@@ -18,14 +18,6 @@ ap_eternal_vigilance = {
         }
     }
     ai_weight = {
-        factor = 10
-        modifier = {
-            factor = 4
-            has_civic = civic_inwards_perfection
-        }
-        modifier = {
-            factor = 1.5
-            is_xenophobe = yes
-        }
+        factor = 0
     }
 }

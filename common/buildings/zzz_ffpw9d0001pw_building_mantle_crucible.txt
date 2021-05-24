@@ -1,6 +1,6 @@
 pw_building_mantle_crucible = {
     base_buildtime = @pw_building_buildtime
-    position_priority = 75
+    position_priority = 120
     category = manufacturing
     base_cap_amount = 1
     can_be_ruined = no
@@ -26,19 +26,27 @@ pw_building_mantle_crucible = {
         cost = {
             minerals = @pw_building_cost
         }
+        cost = {
+            trigger = {
+                planet = {
+                    pw_has_any_planetary_wonder = yes
+                }
+            }
+            minerals = @pw_building_cost_extra
+        }
         upkeep = {
             trigger = {
                 has_modifier = pw_mod_mantle_crucible_alloys
             }
             energy = @pw_building_upkeep
-            volatile_motes = @pw_building_upkeep_rare
+            volatile_motes = @pw_building_upkeep_rare_1
         }
         upkeep = {
             trigger = {
                 has_modifier = pw_mod_mantle_crucible_consumer_goods
             }
             energy = @pw_building_upkeep
-            rare_crystals = @pw_building_upkeep_rare
+            rare_crystals = @pw_building_upkeep_rare_1
         }
         upkeep = {
             trigger = {
@@ -48,7 +56,7 @@ pw_building_mantle_crucible = {
                 }
             }
             energy = @pw_building_upkeep
-            volatile_motes = @pw_building_upkeep_rare
+            volatile_motes = @pw_building_upkeep_rare_1
         }
         upkeep = {
             trigger = {
@@ -64,6 +72,14 @@ pw_building_mantle_crucible = {
                 }
             }
             energy = @pw_building_upkeep
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    pw_has_any_additional_planetary_wonder = yes
+                }
+            }
+            energy = @pw_building_upkeep_extra
         }
     }
     destroy_trigger = {
@@ -82,14 +98,12 @@ pw_building_mantle_crucible = {
     }
     planet_modifier = {
         planet_max_districts_add = -1
-        planet_metallurgists_produces_mult = 0.1
-        planet_artisans_produces_mult = 0.1
     }
     triggered_planet_modifier = {
         potential = {
             pw_is_planet_ideal = no
         }
-        pop_environment_tolerance = -0.25
+        pop_environment_tolerance = -0.2
     }
     triggered_planet_modifier = {
         potential = {
@@ -99,7 +113,7 @@ pw_building_mantle_crucible = {
             }
         }
         modifier = {
-            job_foundry_add = 6
+            job_foundry_add = 4
         }
     }
     triggered_planet_modifier = {
@@ -113,7 +127,7 @@ pw_building_mantle_crucible = {
             }
         }
         modifier = {
-            job_artisan_add = 6
+            job_artisan_add = 4
         }
     }
     triggered_planet_modifier = {
@@ -127,8 +141,8 @@ pw_building_mantle_crucible = {
             }
         }
         modifier = {
-            job_foundry_add = 3
-            job_miner_add = 3
+            job_foundry_add = 2
+            job_miner_add = 2
         }
     }
     triggered_planet_modifier = {
@@ -139,8 +153,8 @@ pw_building_mantle_crucible = {
             }
         }
         modifier = {
-            job_alloy_drone_add = 9
-            job_mining_drone_add = 3
+            job_alloy_drone_add = 6
+            job_mining_drone_add = 2
         }
     }
     triggered_planet_modifier = {
@@ -151,7 +165,7 @@ pw_building_mantle_crucible = {
             }
         }
         modifier = {
-            job_fabricator_add = 6
+            job_fabricator_add = 4
         }
     }
     triggered_planet_modifier = {
@@ -165,7 +179,7 @@ pw_building_mantle_crucible = {
             }
         }
         modifier = {
-            job_artisan_drone_add = 6
+            job_artisan_drone_add = 4
         }
     }
     triggered_planet_modifier = {
@@ -179,8 +193,8 @@ pw_building_mantle_crucible = {
             }
         }
         modifier = {
-            job_fabricator_add = 3
-            job_mining_drone_add = 3
+            job_fabricator_add = 2
+            job_mining_drone_add = 2
         }
     }
     triggered_planet_modifier = {
@@ -262,8 +276,8 @@ pw_building_mantle_crucible = {
             has_modifier = pw_mod_mantle_crucible_alloys
         }
         modifier = {
-            job_foundry_add = 3
-            job_artisan_add = -3
+            job_foundry_add = 2
+            job_artisan_add = -2
         }
     }
     triggered_planet_modifier = {
@@ -275,8 +289,8 @@ pw_building_mantle_crucible = {
             has_modifier = pw_mod_mantle_crucible_consumer_goods
         }
         modifier = {
-            job_foundry_add = -3
-            job_artisan_add = 3
+            job_foundry_add = -2
+            job_artisan_add = 2
         }
     }
     triggered_planet_modifier = {
@@ -288,8 +302,8 @@ pw_building_mantle_crucible = {
             has_modifier = pw_mod_mantle_crucible_alloys
         }
         modifier = {
-            job_fabricator_add = -3
-            job_artisan_drone_add = 3
+            job_fabricator_add = -2
+            job_artisan_drone_add = 2
         }
     }
     triggered_planet_modifier = {
@@ -301,8 +315,8 @@ pw_building_mantle_crucible = {
             has_modifier = pw_mod_mantle_crucible_consumer_goods
         }
         modifier = {
-            job_fabricator_add = -3
-            job_artisan_drone_add = 3
+            job_fabricator_add = -2
+            job_artisan_drone_add = 2
         }
     }
     triggered_planet_modifier = {
@@ -314,6 +328,30 @@ pw_building_mantle_crucible = {
         }
         modifier = {
             planet_stability_add = @pw_stability_production
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_edict = pw_ambition_wonders_beyond_ambition
+                has_modifier = pw_mod_mantle_crucible_alloys
+            }
+        }
+        modifier = {
+            planet_metallurgists_produces_mult = 0.1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_edict = pw_ambition_wonders_beyond_ambition
+                has_modifier = pw_mod_mantle_crucible_consumer_goods
+            }
+        }
+        modifier = {
+            planet_artisans_produces_mult = 0.1
         }
     }
     triggered_desc = {

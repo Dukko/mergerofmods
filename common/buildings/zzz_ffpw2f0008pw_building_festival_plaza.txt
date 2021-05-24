@@ -1,6 +1,6 @@
 pw_building_festival_plaza = {
     base_buildtime = @pw_building_buildtime
-    position_priority = 75
+    position_priority = 120
     category = amenity
     base_cap_amount = 1
     can_be_ruined = no
@@ -35,9 +35,25 @@ pw_building_festival_plaza = {
             minerals = @pw_building_cost
             rare_crystals = @pw_building_cost_rare
         }
+        cost = {
+            trigger = {
+                planet = {
+                    pw_has_any_planetary_wonder = yes
+                }
+            }
+            minerals = @pw_building_cost_extra
+        }
         upkeep = {
-            energy = @pw_building_upkeep_expensive
-            rare_crystals = @pw_building_upkeep_rare
+            energy = @pw_building_upkeep
+            rare_crystals = @pw_building_upkeep_rare_1
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    pw_has_any_additional_planetary_wonder = yes
+                }
+            }
+            energy = @pw_building_upkeep_extra
         }
     }
     destroy_trigger = {
@@ -68,19 +84,7 @@ pw_building_festival_plaza = {
             }
         }
         modifier = {
-            pop_happiness = 0.25
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_pacifist = yes
-            }
-        }
-        modifier = {
-            job_merchant_add = 1
-            job_clerk_add = 2
+            pop_happiness = 0.1
         }
     }
     triggered_planet_modifier = {
@@ -95,7 +99,7 @@ pw_building_festival_plaza = {
         }
         modifier = {
             job_administrator_add = 1
-            job_culture_worker_add = 2
+            job_culture_worker_add = 3
         }
     }
     triggered_planet_modifier = {
@@ -110,7 +114,7 @@ pw_building_festival_plaza = {
         }
         modifier = {
             job_executive_add = 1
-            job_manager_add = 2
+            job_manager_add = 3
         }
     }
     triggered_planet_modifier = {
@@ -124,7 +128,7 @@ pw_building_festival_plaza = {
             }
         }
         modifier = {
-            job_entertainer_add = 4
+            job_entertainer_add = 3
         }
     }
     triggered_planet_modifier = {
@@ -136,33 +140,7 @@ pw_building_festival_plaza = {
             }
         }
         modifier = {
-            job_duelist_add = 4
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_pacifist = yes
-                NOT = {
-                    has_ascension_perk = ap_mind_over_matter
-                }
-            }
-        }
-        modifier = {
-            job_enforcer_add = 1
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_pacifist = yes
-                has_ascension_perk = ap_mind_over_matter
-            }
-        }
-        modifier = {
-            job_telepath_add = 1
+            job_duelist_add = 3
         }
     }
     triggered_planet_modifier = {
@@ -176,20 +154,22 @@ pw_building_festival_plaza = {
             planet_stability_add = @pw_stability_production
         }
     }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_edict = pw_ambition_wonders_beyond_ambition
+            }
+        }
+        modifier = {
+            planet_amenities_mult = 0.1
+        }
+    }
     triggered_desc = {
         text = pw_planet_wonder_lb
     }
     triggered_desc = {
         text = pw_festival_plaza_tooltip
-    }
-    triggered_desc = {
-        trigger = {
-            exists = owner
-            owner = {
-                is_pacifist = yes
-            }
-        }
-        text = job_merchant_effect_desc
     }
     triggered_desc = {
         trigger = {
@@ -247,32 +227,6 @@ pw_building_festival_plaza = {
             owner = {
                 is_pacifist = yes
             }
-            NOT = {
-                owner = {
-                    has_ascension_perk = ap_mind_over_matter
-                }
-            }
-        }
-        text = job_enforcer_effect_desc
-    }
-    triggered_desc = {
-        trigger = {
-            exists = owner
-            owner = {
-                is_pacifist = yes
-            }
-            owner = {
-                has_ascension_perk = ap_mind_over_matter
-            }
-        }
-        text = job_telepath_effect_desc
-    }
-    triggered_desc = {
-        trigger = {
-            exists = owner
-            owner = {
-                is_pacifist = yes
-            }
             owner = {
                 is_megacorp = no
             }
@@ -290,15 +244,6 @@ pw_building_festival_plaza = {
             }
         }
         text = job_manager_effect_desc
-    }
-    triggered_desc = {
-        trigger = {
-            exists = owner
-            owner = {
-                is_pacifist = yes
-            }
-        }
-        text = job_clerk_effect_desc
     }
     on_built = {
         planet_event = {

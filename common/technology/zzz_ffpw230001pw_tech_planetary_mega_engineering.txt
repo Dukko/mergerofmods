@@ -3,11 +3,11 @@ pw_tech_planetary_mega_engineering = {
     category = {
         industry
     }
-    cost = @tier4cost2
+    cost = @pw_tech_cost_0
     tier = 4
     prerequisites = {
         tech_housing_1
-        tech_construction_templates
+        tech_starbase_4
         tech_galactic_administration
     }
     weight = @tier4weight2
@@ -19,8 +19,8 @@ pw_tech_planetary_mega_engineering = {
         }
     }
     modifier = {
-        country_resource_max_add = 5000
-        planet_building_build_speed_mult = 0.5
+        country_resource_max_add = 10000
+        planet_building_build_speed_mult = 0.25
     }
     weight_modifier = {
         factor = 0.5
@@ -79,15 +79,19 @@ pw_tech_planetary_mega_engineering = {
         }
         modifier = {
             factor = 2
-            has_civic = civic_functional_architecture
+            has_valid_civic = civic_functional_architecture
         }
         modifier = {
             factor = 2
-            has_civic = civic_machine_builder
+            has_valid_civic = civic_machine_builder
+        }
+        modifier = {
+            factor = 5
+            has_edict = pw_ambition_monumentality
         }
     }
     ai_weight = {
-        factor = 10
+        factor = @pw_tech_ai_weight
         modifier = {
             factor = 1.25
             research_leader = {

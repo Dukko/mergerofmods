@@ -38,6 +38,7 @@ tech_crystal_armor_2 = {
         }
     }
     ai_weight = {
-        factor = 100
+        weight = 70
+        factor = 125
     }
 }

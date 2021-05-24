@@ -41,6 +41,36 @@ resolution_industry_repeal_1 = {
     ai_weight = {
         weight = @resolution_weight_unpopular
         modifier = {
+            factor = 0.625
+            not = {
+                has_country_flag = str_has_bad_economy_score
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_country_flag = str_has_bad_economy_score
+        }
+        modifier = {
+            factor = 1.4
+            has_country_flag = str_has_terrible_economy_score
+        }
+        modifier = {
+            factor = 1.1
+            turtler = yes
+        }
+        modifier = {
+            factor = 1.1
+            turtler2 = yes
+        }
+        modifier = {
+            factor = 0.9
+            rusher = yes
+        }
+        modifier = {
+            factor = 0.9
+            rusher2 = yes
+        }
+        modifier = {
             factor = 0.8
             is_authoritarian = yes
         }

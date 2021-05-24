@@ -140,7 +140,11 @@ diplomatic_stance = {
             operations_upkeep_mult = 0.25
         }
         ai_weight = {
-            weight = 10
+            weight = 2
+            modifier = {
+                factor = 5
+                is_pacifist = yes
+            }
             modifier = {
                 factor = 0.01
                 has_ascension_perk = ap_become_the_crisis
@@ -236,7 +240,11 @@ diplomatic_stance = {
         on_enabled = {
         }
         ai_weight = {
-            weight = 10
+            weight = 2
+            modifier = {
+                factor = 2
+                is_pacifist = yes
+            }
             modifier = {
                 factor = 0.01
                 has_ascension_perk = ap_become_the_crisis
@@ -296,6 +304,13 @@ diplomatic_stance = {
         ai_weight = {
             weight = 10
             modifier = {
+                factor = 5
+                or = {
+                    used_naval_capacity_percent < 0.7
+                    years_passed < 21
+                }
+            }
+            modifier = {
                 factor = 2
                 NOT = {
                     has_country_flag = has_encountered_other_empire
@@ -351,7 +366,7 @@ diplomatic_stance = {
             local_trade_protection_add = 5
         }
         ai_weight = {
-            weight = 10
+            weight = 1
             modifier = {
                 factor = 0.01
                 has_ascension_perk = ap_become_the_crisis
@@ -390,6 +405,11 @@ diplomatic_stance = {
                 has_modifier = humiliated
             }
             is_homicidal = no
+        }
+        valid = {
+            NOT = {
+                has_modifier = humiliated
+            }
             custom_tooltip = {
                 fail_text = "requires_supremacy_traditions"
             OR = {
@@ -413,7 +433,23 @@ diplomatic_stance = {
         on_enabled = {
         }
         ai_weight = {
-            weight = 10
+            weight = 7
+            modifier = {
+                factor = 30
+                years_passed > 60
+                or = {
+                    used_naval_capacity_percent > 0.95
+                    and = {
+                        used_naval_capacity_percent > 0.5
+                        has_policy_flag = diplo_stance_supremacist
+                    }
+                }
+                nor = {
+                    has_country_flag = str_has_bad_economy_score
+                    has_country_flag = str_has_bad_fleet_score
+                    has_country_flag = str_has_bad_tech_score
+                }
+            }
             modifier = {
                 factor = 0
                 NOT = {
@@ -432,23 +468,23 @@ diplomatic_stance = {
                 }
             }
             modifier = {
-                factor = 5
+                factor = 2
                 has_ethic = ethic_fanatic_militarist
             }
             modifier = {
-                factor = 2
+                factor = 1.5
                 has_ethic = ethic_militarist
             }
             modifier = {
-                factor = 2
+                factor = 1.5
                 has_ethic = ethic_fanatic_authoritarian
             }
             modifier = {
-                factor = 1.5
+                factor = 1.25
                 has_ethic = ethic_authoritarian
             }
             modifier = {
-                factor = 1.5
+                factor = 1.25
                 is_slaver = yes
             }
             modifier = {

@@ -29,6 +29,8 @@ tech_climate_restoration = {
         }
     }
     ai_weight = {
+        factor = 10000
+        factor = 125
         modifier = {
             factor = 1.25
             research_leader = {

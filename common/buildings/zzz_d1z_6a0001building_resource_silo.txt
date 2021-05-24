@@ -9,6 +9,9 @@ building_resource_silo = {
     }
     allow = {
         exists = owner
+        owner = {
+            is_ai = no
+        }
         hidden_trigger = {
             OR = {
                 owner = {

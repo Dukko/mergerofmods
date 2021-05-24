@@ -1,6 +1,6 @@
 pw_tech_metaphysical_singularity = {
     area = physics
-    cost = @tier5cost3
+    cost = @pw_tech_cost_5
     tier = 5
     category = {
         computing
@@ -22,7 +22,7 @@ pw_tech_metaphysical_singularity = {
         }
     }
     weight_modifier = {
-        factor = 0.25
+        factor = @pw_tech_weight_mod
         modifier = {
             factor = 1.5
             research_leader = {
@@ -72,7 +72,7 @@ pw_tech_metaphysical_singularity = {
         }
     }
     ai_weight = {
-        factor = 10
+        factor = @pw_tech_ai_weight
         modifier = {
             factor = 2
             research_leader = {

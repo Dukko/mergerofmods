@@ -158,7 +158,13 @@ building_artist_patron = {
     }
     on_destroy = {
         owner = {
-            remove_country_flag = built_one_ministry
+            if = {
+                limit = {
+                    has_country_flag = built_one_ministry
+                }
+                remove_country_flag = built_one_ministry
+                set_country_flag = artist_building_patron
+            }
         }
     }
 }

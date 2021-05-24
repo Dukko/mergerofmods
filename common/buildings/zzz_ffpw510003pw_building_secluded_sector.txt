@@ -1,6 +1,6 @@
 pw_building_secluded_sector = {
     base_buildtime = @pw_building_buildtime
-    position_priority = 75
+    position_priority = 100
     base_cap_amount = 1
     can_be_ruined = no
     icon = pw_building_domed_city
@@ -10,6 +10,9 @@ pw_building_secluded_sector = {
         }
     }
     category = research
+    prerequisites = {
+        pw_tech_domed_city
+    }
     potential = {
         exists = owner
         is_planet_class = pc_habitat
@@ -21,10 +24,72 @@ pw_building_secluded_sector = {
         has_major_upgraded_capital = yes
         free_district_slots > 0
         pw_can_build_planetary_wonder = yes
+        OR = {
+            pw_is_wonder_empire_unique = {
+                WONDER = pw_building_domed_city
+            }
+            hidden_trigger = {
+                pw_is_wonder_empire_unique = {
+                    WONDER = pw_building_secluded_sector
+                }
+            }
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @pw_building_cost
+            exotic_gases = @pw_building_cost_rare
+        }
+        cost = {
+            trigger = {
+                planet = {
+                    pw_has_any_planetary_wonder = yes
+                }
+            }
+            minerals = @pw_building_cost_extra
+        }
+        cost = {
+            trigger = {
+                planet = {
+                    OR = {
+                        has_designation = col_research
+                        has_designation = col_ecu_research
+                        has_designation = col_ring_research
+                        has_designation = col_habitat_research
+                    }
+                }
+            }
+            minerals = @pw_building_cost_discount
+        }
+        upkeep = {
+            energy = @pw_building_upkeep
+            exotic_gases = @pw_building_upkeep_rare_1
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    pw_has_any_additional_planetary_wonder = yes
+                }
+            }
+            energy = @pw_building_upkeep_extra
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    OR = {
+                        has_designation = col_research
+                        has_designation = col_ecu_research
+                        has_designation = col_ring_research
+                        has_designation = col_habitat_research
+                    }
+                }
+            }
+            energy = @pw_building_upkeep_discount
+        }
     }
     planet_modifier = {
         planet_max_districts_add = -1
-        planet_researchers_society_research_produces_mult = @pw_building_research_mod
     }
     triggered_planet_modifier = {
         potential = {
@@ -34,8 +99,9 @@ pw_building_secluded_sector = {
             }
         }
         modifier = {
-            job_researcher_add = @pw_building_specialist_jobs
-            job_head_researcher_add = @pw_building_ruler_jobs
+            job_head_researcher_add = 1
+            job_researcher_add = 4
+            job_pw_researcher_domed_city_add = 4
             job_pw_domed_city_test_subject_add = 1
         }
     }
@@ -47,7 +113,9 @@ pw_building_secluded_sector = {
             }
         }
         modifier = {
-            job_brain_drone_add = @pw_building_complex_jobs
+            job_brain_drone_add = 4
+            job_pw_brain_drone_domed_city_add = 4
+            job_pw_domed_city_subject_drone_add = 1
         }
     }
     triggered_planet_modifier = {
@@ -58,17 +126,10 @@ pw_building_secluded_sector = {
             }
         }
         modifier = {
-            job_calculator_add = @pw_building_complex_jobs
+            job_calculator_add = 4
+            job_pw_calculator_domed_city_add = 4
+            job_pw_domed_city_subject_drone_add = 1
         }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_gestalt = yes
-            }
-        }
-        job_pw_domed_city_subject_drone_add = 1
     }
     triggered_planet_modifier = {
         potential = {
@@ -81,37 +142,28 @@ pw_building_secluded_sector = {
             planet_stability_add = @pw_stability_production
         }
     }
-    resources = {
-        category = planet_buildings
-        cost = {
-            minerals = @pw_building_cost
-            exotic_gases = @pw_building_cost_rare
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_edict = pw_ambition_wonders_beyond_ambition
+            }
         }
-        upkeep = {
-            energy = @pw_building_upkeep
-            exotic_gases = @pw_building_upkeep_rare
+        modifier = {
+            planet_researchers_society_research_produces_mult = @pw_building_research_mod
         }
-    }
-    prerequisites = {
-        pw_tech_domed_city
     }
     triggered_desc = {
         text = pw_planet_wonder_lb
     }
     triggered_desc = {
-        trigger = {
-            exists = owner
-            owner = {
-                is_gestalt = no
-            }
-        }
-        text = job_researcher_effect_desc
+        text = pw_empire_unique_lb
     }
     triggered_desc = {
         trigger = {
             exists = owner
             owner = {
-                is_gestalt = no
+                is_regular_empire = yes
             }
         }
         text = job_head_researcher_effect_desc
@@ -120,7 +172,25 @@ pw_building_secluded_sector = {
         trigger = {
             exists = owner
             owner = {
-                is_gestalt = no
+                is_regular_empire = yes
+            }
+        }
+        text = job_researcher_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = job_pw_researcher_domed_city_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
             }
         }
         text = job_pw_domed_city_test_subject_effect_desc
@@ -138,10 +208,28 @@ pw_building_secluded_sector = {
         trigger = {
             exists = owner
             owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = job_pw_brain_drone_domed_city_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
                 is_machine_empire = yes
             }
         }
         text = job_calculator_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = job_pw_calculator_domed_city_effect_desc
     }
     triggered_desc = {
         trigger = {
@@ -158,7 +246,7 @@ pw_building_secluded_sector = {
         }
     }
     ai_weight = {
-        weight = 50
+        weight = 60
         modifier = {
             factor = 0
             buildings_has_exotic_gases = no
@@ -214,6 +302,27 @@ pw_building_secluded_sector = {
                 has_district = district_hab_science
                 has_district = district_rw_science
                 jobs_any_research = yes
+            }
+        }
+        modifier = {
+            factor = 2.5
+            OR = {
+                has_designation = col_research
+                has_designation = col_ecu_research
+                has_designation = col_ring_research
+                has_designation = col_habitat_research
+            }
+        }
+        modifier = {
+            factor = 1.25
+            owner = {
+                any_owned_planet = {
+                    OR = {
+                        has_active_building = pw_building_particle_supercollider
+                        has_active_building = pw_building_abyssal_crater_test_site
+                        has_active_building = pw_building_abyssal_crater_test_site_habitat
+                    }
+                }
             }
         }
         modifier = {

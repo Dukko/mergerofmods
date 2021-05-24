@@ -7,7 +7,6 @@ trait_pc_technoorganic_preference = {
         LITHOID
     }
     sorting_priority = 30
-    custom_tooltip = TRAIT_TECHNOORGANIC_PREFERENCE_EFFECT
     modifier = {
         pc_technoorganic_habitability = 0.8
         pc_boreal_habitability = 0.6

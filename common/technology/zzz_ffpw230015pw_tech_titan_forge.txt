@@ -4,11 +4,12 @@ pw_tech_titan_forge = {
         materials
     }
     tier = 5
-    cost = @tier5cost1
+    cost = @pw_tech_cost_4
     prerequisites = {
         pw_tech_planetary_mantle_production
+        tech_alloys_2
     }
-    weight = @tier5weight1
+    weight = @tier5weight2
     is_rare = yes
     prereqfor_desc = {
         custom = {
@@ -17,7 +18,7 @@ pw_tech_titan_forge = {
         }
     }
     weight_modifier = {
-        factor = 0.25
+        factor = @pw_tech_weight_mod
         modifier = {
             factor = 1.5
             research_leader = {
@@ -80,7 +81,7 @@ pw_tech_titan_forge = {
         }
     }
     ai_weight = {
-        factor = 10
+        factor = @pw_tech_ai_weight
         modifier = {
             factor = 2
             research_leader = {

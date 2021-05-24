@@ -36,6 +36,10 @@ tech_alien_life_studies = {
     }
     ai_weight = {
         modifier = {
+            factor = 3000
+            reroll_society = yes
+        }
+        modifier = {
             factor = 1.25
             has_ethic = ethic_xenophile
         }

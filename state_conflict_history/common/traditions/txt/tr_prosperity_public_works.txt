@@ -43,5 +43,24 @@ tr_prosperity_public_works = {
     }
     ai_weight = {
         factor = 5000
+        modifier = {
+            factor = 0
+            AND = {
+                has_tradition = tr_diplomacy_adopt
+                NOT = {
+                    has_tradition = tr_diplomacy_the_federation
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            nor = {
+                has_ethic = ethic_pacifist
+                has_ethic = ethic_fanatic_pacifist
+            }
+            not = {
+                has_tradition = tr_supremacy_finish
+            }
+        }
     }
 }

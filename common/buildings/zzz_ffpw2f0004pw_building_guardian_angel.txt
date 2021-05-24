@@ -1,16 +1,24 @@
 pw_building_guardian_angel = {
     base_buildtime = @pw_building_buildtime
-    position_priority = 150
+    position_priority = 50
     planetary_ftl_inhibitor = yes
     base_cap_amount = 1
     category = army
+    prerequisites = {
+        pw_tech_guardian_angel
+    }
     potential = {
         exists = owner
         NOT = {
             has_modifier = resort_colony
         }
-        NOT = {
-            is_planet_class = pc_habitat
+        OR = {
+            NOT = {
+                is_planet_class = pc_habitat
+            }
+            owner = {
+                has_ascension_perk = ap_voidborn
+            }
         }
     }
     destroy_trigger = {
@@ -26,9 +34,57 @@ pw_building_guardian_angel = {
         free_district_slots > 0
         pw_can_build_planetary_wonder = yes
     }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @pw_building_cost
+            volatile_motes = @pw_building_cost_rare
+        }
+        cost = {
+            trigger = {
+                planet = {
+                    pw_has_any_planetary_wonder = yes
+                }
+            }
+            minerals = @pw_building_cost_extra
+        }
+        cost = {
+            trigger = {
+                planet = {
+                    OR = {
+                        has_designation = col_fortress
+                        has_designation = col_habitat_fortress
+                    }
+                }
+            }
+            minerals = @pw_building_cost_discount
+        }
+        upkeep = {
+            energy = @pw_building_upkeep
+            volatile_motes = @pw_building_upkeep_rare_1
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    pw_has_any_additional_planetary_wonder = yes
+                }
+            }
+            energy = @pw_building_upkeep_extra
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    OR = {
+                        has_designation = col_fortress
+                        has_designation = col_habitat_fortress
+                    }
+                }
+            }
+            energy = @pw_building_upkeep_discount
+        }
+    }
     planet_modifier = {
         planet_max_districts_add = -1
-        planet_orbital_bombardment_damage = -0.1
     }
     army_modifier = {
         army_starting_experience_add = 200
@@ -37,18 +93,18 @@ pw_building_guardian_angel = {
         potential = {
             exists = owner
             owner = {
-                is_gestalt = no
+                is_regular_empire = yes
             }
         }
         modifier = {
-            job_soldier_add = 5
+            job_soldier_add = 4
         }
     }
     triggered_planet_modifier = {
         potential = {
             exists = owner
             owner = {
-                is_gestalt = no
+                is_regular_empire = yes
             }
             owner = {
                 NOT = {
@@ -57,14 +113,14 @@ pw_building_guardian_angel = {
             }
         }
         modifier = {
-            job_soldier_add = 2
+            job_soldier_add = 1
         }
     }
     triggered_planet_modifier = {
         potential = {
             exists = owner
             owner = {
-                is_gestalt = no
+                is_regular_empire = yes
             }
             owner = {
                 has_valid_civic = civic_reanimated_armies
@@ -78,7 +134,7 @@ pw_building_guardian_angel = {
         potential = {
             exists = owner
             owner = {
-                is_gestalt = no
+                is_regular_empire = yes
             }
             owner = {
                 NOT = {
@@ -87,21 +143,21 @@ pw_building_guardian_angel = {
             }
         }
         modifier = {
-            job_enforcer_add = 3
+            job_enforcer_add = 2
         }
     }
     triggered_planet_modifier = {
         potential = {
             exists = owner
             owner = {
-                is_gestalt = no
+                is_regular_empire = yes
             }
             owner = {
                 has_ascension_perk = ap_mind_over_matter
             }
         }
         modifier = {
-            job_telepath_add = 2
+            job_telepath_add = 1
         }
     }
     triggered_planet_modifier = {
@@ -112,18 +168,8 @@ pw_building_guardian_angel = {
             }
         }
         modifier = {
-            job_warrior_drone_add = 7
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_gestalt = yes
-            }
-        }
-        modifier = {
-            job_patrol_drone_add = 3
+            job_warrior_drone_add = 5
+            job_patrol_drone_add = 2
         }
     }
     triggered_planet_modifier = {
@@ -137,19 +183,16 @@ pw_building_guardian_angel = {
             planet_stability_add = @pw_stability_production
         }
     }
-    resources = {
-        category = planet_buildings
-        cost = {
-            minerals = @pw_building_cost
-            volatile_motes = @pw_building_cost_rare
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_edict = pw_ambition_wonders_beyond_ambition
+            }
         }
-        upkeep = {
-            energy = @pw_building_upkeep
-            volatile_motes = @pw_building_upkeep_rare
+        modifier = {
+            planet_orbital_bombardment_damage = -0.1
         }
-    }
-    prerequisites = {
-        pw_tech_guardian_angel
     }
     triggered_desc = {
         text = pw_planet_wonder_lb

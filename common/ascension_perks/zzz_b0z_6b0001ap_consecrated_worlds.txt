@@ -15,6 +15,6 @@ ap_consecrated_worlds = {
         }
     }
     ai_weight = {
-        factor = 10
+        factor = 0
     }
 }

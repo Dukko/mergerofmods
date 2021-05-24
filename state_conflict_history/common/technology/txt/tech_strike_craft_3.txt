@@ -22,6 +22,10 @@ tech_strike_craft_3 = {
     ai_weight = {
         weight = 0.1
         modifier = {
+            factor = 50000
+            uses_carriers = yes
+        }
+        modifier = {
             factor = 1.25
             research_leader = {
                 area = engineering

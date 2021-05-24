@@ -22,7 +22,29 @@ building_noble_estates = {
     }
     allow = {
         has_upgraded_capital = yes
-        buildings_simple_allow = yes
+        exists = owner
+        or = {
+            num_pops > 40
+            owner = {
+                is_ai = no
+            }
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            num_buildings = {
+                type = building_noble_estates
+                value = 0
+            }
+        }
+        modifier = {
+            job_starnet_spice_melange_farmer_add = 1
+            job_starnet_spice_melange_antifarmer_add = -1
+        }
     }
     destroy_trigger = {
         exists = owner
@@ -47,5 +69,13 @@ building_noble_estates = {
     }
     triggered_desc = {
         text = job_noble_effect_desc
+    }
+    ai_resource_production = {
+        trigger = {
+            num_pops > 40
+        }
+        alloys = 15
+        energy = 10
+        minerals = 15
     }
 }

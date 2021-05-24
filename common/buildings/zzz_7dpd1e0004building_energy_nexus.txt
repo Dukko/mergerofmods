@@ -4,6 +4,7 @@ building_energy_nexus = {
     category = resource
     allow = {
         has_upgraded_capital = yes
+        buildings_has_exotic_gases = yes
     }
     destroy_trigger = {
         OR = {
@@ -143,7 +144,7 @@ building_energy_nexus = {
         }
     }
     ai_resource_production = {
-        energy = 6
+        energy = 10
         trigger = {
             planet_resource_compare = {
                 resource = energy
@@ -153,7 +154,7 @@ building_energy_nexus = {
         }
     }
     ai_resource_production = {
-        energy = 6
+        energy = 20
         trigger = {
             planet_resource_compare = {
                 resource = energy

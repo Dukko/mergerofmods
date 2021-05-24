@@ -78,6 +78,36 @@ resolution_galacticstudies_advanced_xenostudies = {
     ai_weight = {
         weight = @resolution_weight_normal
         modifier = {
+            factor = 2
+            not = {
+                has_country_flag = str_has_bad_tech_score
+            }
+        }
+        modifier = {
+            factor = 0.8
+            has_country_flag = str_has_bad_tech_score
+        }
+        modifier = {
+            factor = 0.5
+            has_country_flag = str_has_terrible_tech_score
+        }
+        modifier = {
+            factor = 0.9
+            turtler = yes
+        }
+        modifier = {
+            factor = 0.9
+            turtler2 = yes
+        }
+        modifier = {
+            factor = 1.1
+            rusher = yes
+        }
+        modifier = {
+            factor = 1.1
+            rusher2 = yes
+        }
+        modifier = {
             factor = 1.5
             is_materialist = yes
             is_xenophile = no

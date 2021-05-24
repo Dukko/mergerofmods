@@ -89,7 +89,7 @@ col_research = {
             has_designation = col_research
         }
         modifier = {
-            add = 20
+            add = 7
             OR = {
                 has_modifier = wild_storms
                 has_modifier = titanic_life
@@ -137,14 +137,14 @@ col_research = {
             }
         }
         modifier = {
-            add = 2
+            add = 4
             num_buildings = {
                 type = building_research_lab_1
                 value >= 2
             }
         }
         modifier = {
-            add = 3
+            add = 4
             num_buildings = {
                 type = building_research_lab_1
                 value >= 3
@@ -158,31 +158,46 @@ col_research = {
             }
         }
         modifier = {
-            add = 5
+            add = 4
             num_buildings = {
                 type = building_research_lab_1
                 value >= 5
             }
         }
         modifier = {
-            add = 4
+            add = 8
             num_buildings = {
                 type = building_research_lab_2
                 value >= 1
             }
         }
         modifier = {
-            add = 5
+            add = 8
             num_buildings = {
                 type = building_research_lab_2
                 value >= 2
             }
         }
         modifier = {
-            add = 10
+            add = 8
             num_buildings = {
                 type = building_research_lab_3
                 value >= 1
+            }
+        }
+        modifier = {
+            factor = 0
+            num_buildings = {
+                type = building_research_lab_1
+                value = 0
+            }
+            num_buildings = {
+                type = building_research_lab_2
+                value = 0
+            }
+            num_buildings = {
+                type = building_research_lab_3
+                value = 0
             }
         }
     }

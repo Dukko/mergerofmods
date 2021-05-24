@@ -65,5 +65,9 @@ ap_engineered_evolution = {
     }
     ai_weight = {
         factor = 10
+        modifier = {
+            factor = 0
+            num_owned_planets < 10
+        }
     }
 }

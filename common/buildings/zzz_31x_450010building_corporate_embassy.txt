@@ -45,12 +45,6 @@ building_corporate_embassy = {
         }
     }
     ai_weight = {
-        weight = 50
-        modifier = {
-            factor = 10
-            branch_office_owner = {
-                is_galactic_community_member = yes
-            }
-        }
+        weight = 0
     }
 }

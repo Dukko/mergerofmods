@@ -7,6 +7,16 @@ building_bureaucratic_3 = {
     }
     allow = {
         has_upgraded_capital = yes
+        or = {
+            owner = {
+                is_ai = no
+            }
+            and = {
+                free_building_slots = 0
+                free_district_slots < 3
+                has_designation = col_bureau
+            }
+        }
     }
     destroy_trigger = {
         exists = owner

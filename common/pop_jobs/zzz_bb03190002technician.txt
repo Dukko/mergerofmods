@@ -65,7 +65,7 @@ technician = {
             }
         }
         modifier = {
-            factor = 8
+            factor = 5
             is_enslaved = yes
             can_take_servant_job = no
             OR = {
@@ -82,6 +82,16 @@ technician = {
                 is_shackled_robot = yes
             }
             can_take_servant_job = no
+        }
+        modifier = {
+            factor = 200
+            OR = {
+                is_non_sapient_robot = yes
+                is_shackled_robot = yes
+            }
+            owner = {
+                is_ai = yes
+            }
         }
         modifier = {
             factor = 0.25

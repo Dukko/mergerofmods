@@ -4,7 +4,7 @@ pw_tech_titan_forge_crystals = {
         materials
     }
     tier = 5
-    cost = @tier5cost2
+    cost = @pw_tech_cost_5
     prerequisites = {
         pw_tech_titan_forge
     }
@@ -16,6 +16,6 @@ pw_tech_titan_forge_crystals = {
         country_rare_crystals_produces_mult = 0.1
     }
     ai_weight = {
-        factor = 20
+        factor = 10
     }
 }

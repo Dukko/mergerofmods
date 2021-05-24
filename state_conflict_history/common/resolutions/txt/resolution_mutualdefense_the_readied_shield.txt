@@ -1,4 +1,4 @@
-@resolution_weight_hated = 3
+@resolution_weight_loved = 7
 @resolution_cost_t1 = 100
 @resolution_flag_timer = 360
 resolution_mutualdefense_the_readied_shield = {
@@ -53,7 +53,37 @@ resolution_mutualdefense_the_readied_shield = {
         }
     }
     ai_weight = {
-        weight = @resolution_weight_hated
+        weight = @resolution_weight_loved
+        modifier = {
+            factor = 1.4
+            not = {
+                has_country_flag = str_has_bad_fleet_score
+            }
+        }
+        modifier = {
+            factor = 0.8
+            has_country_flag = str_has_bad_fleet_score
+        }
+        modifier = {
+            factor = 0.625
+            has_country_flag = str_has_terrible_fleet_score
+        }
+        modifier = {
+            factor = 0.9
+            turtler = yes
+        }
+        modifier = {
+            factor = 0.9
+            turtler2 = yes
+        }
+        modifier = {
+            factor = 1.1
+            rusher = yes
+        }
+        modifier = {
+            factor = 1.1
+            rusher2 = yes
+        }
         modifier = {
             factor = 2
             is_militarist = yes

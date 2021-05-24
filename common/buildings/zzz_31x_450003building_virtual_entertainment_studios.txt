@@ -27,22 +27,13 @@ building_virtual_entertainment_studios = {
         }
     }
     ai_weight = {
-        weight = 3
+        weight = 50
         modifier = {
-            factor = 5
-            branch_office_owner = {
-                has_monthly_income = {
+            factor = 0
+            owner = {
+                resource_income_compare = {
                     resource = consumer_goods
-                    value < 0
-                }
-            }
-        }
-        modifier = {
-            factor = 0.5
-            branch_office_owner = {
-                has_monthly_income = {
-                    resource = consumer_goods
-                    value >= 10
+                    value > 15
                 }
             }
         }

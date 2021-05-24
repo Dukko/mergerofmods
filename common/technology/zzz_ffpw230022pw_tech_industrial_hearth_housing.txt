@@ -4,7 +4,7 @@ pw_tech_industrial_hearth_housing = {
         industry
     }
     tier = 5
-    cost = @tier5cost2
+    cost = @pw_tech_cost_5
     prerequisites = {
         pw_tech_industrial_hearth
     }
@@ -13,7 +13,7 @@ pw_tech_industrial_hearth_housing = {
         has_country_flag = pw_industrial_hearth_built
     }
     modifier = {
-        planet_housing_mult = 0.25
+        planet_housing_mult = 0.1
     }
     ai_weight = {
         factor = 20

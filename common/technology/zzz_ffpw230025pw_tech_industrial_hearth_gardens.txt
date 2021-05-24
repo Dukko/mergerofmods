@@ -4,7 +4,7 @@ pw_tech_industrial_hearth_gardens = {
         new_worlds
     }
     tier = 5
-    cost = @tier5cost2
+    cost = @pw_tech_cost_5
     prerequisites = {
         pw_tech_industrial_hearth
     }
@@ -13,7 +13,7 @@ pw_tech_industrial_hearth_gardens = {
         has_country_flag = pw_industrial_hearth_built
     }
     modifier = {
-        pop_environment_tolerance = 0.05
+        pop_environment_tolerance = 0.1
     }
     ai_weight = {
         factor = 20

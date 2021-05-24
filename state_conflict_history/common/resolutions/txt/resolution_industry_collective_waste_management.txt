@@ -45,6 +45,36 @@ resolution_industry_collective_waste_management = {
     ai_weight = {
         weight = @resolution_weight_popular
         modifier = {
+            factor = 1.4
+            not = {
+                has_country_flag = str_has_bad_economy_score
+            }
+        }
+        modifier = {
+            factor = 0.8
+            has_country_flag = str_has_bad_economy_score
+        }
+        modifier = {
+            factor = 0.625
+            has_country_flag = str_has_terrible_economy_score
+        }
+        modifier = {
+            factor = 0.9
+            turtler = yes
+        }
+        modifier = {
+            factor = 0.9
+            turtler2 = yes
+        }
+        modifier = {
+            factor = 1.1
+            rusher = yes
+        }
+        modifier = {
+            factor = 1.1
+            rusher2 = yes
+        }
+        modifier = {
             factor = 1.2
             is_authoritarian = yes
         }

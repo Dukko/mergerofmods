@@ -52,7 +52,8 @@ strading_hub = {
     }
     ai_design = {
         min = {
-            base = 0
+            base = 1
+            factor = 1
         }
         ratio = {
             base = 0.3
@@ -72,15 +73,6 @@ strading_hub = {
             }
         }
         buildings = {
-            crew_quarters = {
-                base = 1
-            }
-            listening_post = {
-                base = 1
-            }
-            sensor_station = {
-                base = 0.8
-            }
             reinforced_defenses = {
                 base = 0.8
             }
@@ -93,43 +85,25 @@ strading_hub = {
             adv_starbase = {
                 base = 0.4
             }
+            asteroid_mining = {
+                base = 2
+            }
+            space_foundry = {
+                base = 1
+            }
             administration_office = {
                 base = 0.4
             }
             starbase_optimal_systems = {
                 base = 0.4
             }
-            administration_computers = {
-                base = 0.6
-            }
-            market_computers = {
-                base = 0.6
-            }
-            research_computers = {
-                base = 0.6
-            }
-            tile_blocker_cleaner = {
-                base = 0.6
-            }
-            customs_office = {
-                base = 0.6
-            }
             curator_think_tank = {
-                base = 0.6
-            }
-            art_college = {
                 base = 0.6
             }
             trader_proxy_office = {
                 base = 0.8
             }
-            orbital_assembly = {
-                base = 0.4
-            }
             chain_manufacturing = {
-                base = 0.4
-            }
-            construction_planificator = {
                 base = 0.4
             }
             offworld_trading_company = {
@@ -141,35 +115,32 @@ strading_hub = {
             resource_silo = {
                 base = 0.8
             }
-            mining_base = {
-                base = 0.8
-            }
-            power_station = {
-                base = 0.8
-            }
-            farming_base = {
-                base = 0.8
-            }
-            solar_panel_01 = {
-                base = 0.6
-            }
-            solar_panel_02 = {
-                base = 0.6
-            }
-            solar_panel_03 = {
-                base = 0.6
-            }
             solar_panel_04 = {
                 base = 0.6
             }
             hydroponics_bay = {
-                base = 0.2
+                base = 1
+            }
+        }
+        modules = {
+            asteroid_mining = {
+                base = 2
+            }
+            space_foundry = {
+                base = 1
+            }
+            shipyard = {
+                base = 0.5
             }
             trader_caravanserai = {
                 base = 0.03
             }
-        }
-        modules = {
+            anchorage = {
+                base = 0.5
+            }
+            orbital_lab = {
+                base = 1
+            }
             trading_hub = {
                 base = 1
             }

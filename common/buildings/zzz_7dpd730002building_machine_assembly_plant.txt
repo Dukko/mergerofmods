@@ -13,6 +13,7 @@ building_machine_assembly_plant = {
         building_robot_assembly_plant
     }
     allow = {
+        hidden_trigger = {
         OR = {
             owner = {
                 is_ai = no
@@ -51,6 +52,7 @@ building_machine_assembly_plant = {
                 }
             }
         }
+    }
     }
     destroy_trigger = {
         exists = owner
@@ -100,26 +102,5 @@ building_machine_assembly_plant = {
     }
     triggered_desc = {
         text = job_replicator_effect_desc
-    }
-    ai_weight = {
-        weight = 50000
-        modifier = {
-            factor = 0
-            OR = {
-                is_planet_class = pc_habitat
-                is_planet_class = pc_pd_barren_cold_hab
-                is_planet_class = pc_pd_barren_hab
-                is_planet_class = pc_pd_frozen_hab
-                is_planet_class = pc_pd_gas_giant_hab
-                is_planet_class = pc_pd_hothouse_hab
-                is_planet_class = pc_pd_toxic_hab
-                is_planet_class = pc_pd_molten_hab
-                num_buildings = {
-                    type = any
-                    value >= 14
-                }
-                is_planet_class = pc_gd_hydrocarbon_hab
-            }
-        }
     }
 }

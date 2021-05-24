@@ -5,6 +5,7 @@ building_factory_3 = {
     allow = {
         has_major_upgraded_capital = yes
         buildings_upgrade_allow = yes
+        buildings_has_crystals = yes
     }
     potential = {
         exists = owner
@@ -36,22 +37,39 @@ building_factory_3 = {
         potential = {
             exists = owner
             owner = {
-                is_regular_empire = yes
+                is_ai = yes
+            }
+            str_force_building_factory_upgrade = yes
+            num_buildings = {
+                type = building_factory_2
+                value = 0
             }
         }
         modifier = {
-            job_artisan_add = @b1_jobs
+            job_starnet_spice_melange_farmer_add = 1
+            job_starnet_spice_melange_antifarmer_add = -1
         }
     }
     triggered_planet_modifier = {
         potential = {
             exists = owner
             owner = {
-                is_machine_empire = yes
+                is_regular_empire = yes
             }
         }
         modifier = {
-            job_artisan_drone_add = @b1_jobs
+            job_artisan_add = @b3_jobs
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_artisan_drone_add = @b3_jobs
         }
     }
     triggered_planet_modifier = {
@@ -80,7 +98,102 @@ building_factory_3 = {
         tech_luxuries_2
     }
     triggered_desc = {
+        trigger = {
+            uses_district_industrial = yes
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
         text = building_factory_3_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            uses_district_industrial = yes
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = building_factory_3_machine_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            uses_district_set = city_world
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = building_factory_3_arcology_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            uses_district_set = city_world
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = building_factory_3_arcology_machine_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            uses_district_set = habitat
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = building_factory_3_habitat_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            uses_district_set = habitat
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = building_factory_3_habitat_machine_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            uses_district_set = ring_world
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = building_factory_3_ring_world_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            uses_district_set = ring_world
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = building_factory_3_ring_world_machine_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = job_artisan_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_artisan_drone_effect_desc
     }
     ai_resource_production = {
         consumer_goods = 24

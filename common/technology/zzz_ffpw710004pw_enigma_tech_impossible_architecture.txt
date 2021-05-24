@@ -3,7 +3,7 @@ pw_enigma_tech_impossible_architecture = {
     category = {
         industry
     }
-    cost = @pw_enigma_tech_cost_extra
+    cost = @pw_enigma_tech_cost_2
     tier = 5
     prerequisites = {
         pw_tech_metaphysical_singularity
@@ -59,7 +59,7 @@ pw_enigma_tech_impossible_architecture = {
         }
     }
     ai_weight = {
-        factor = 15
+        factor = @pw_tech_ai_weight
         modifier = {
             factor = 1.25
             research_leader = {

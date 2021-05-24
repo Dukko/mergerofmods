@@ -30,10 +30,7 @@ col_fortress = {
         planet_buildings_volatile_motes_upkeep_mult = -0.2
     }
     weight_modifier = {
-        modifier = {
-            add = 5
-            has_designation = col_fortress
-        }
+        base = 0
         modifier = {
             add = 20
             OR = {
@@ -41,41 +38,6 @@ col_fortress = {
                 has_modifier = gpm_precursor_bunker_grid
                 has_modifier = gpm_precursor_planetary_shield
                 has_modifier = gpm_precursor_eternal_fortress
-            }
-        }
-        modifier = {
-            add = 3
-            num_buildings = {
-                type = building_stronghold
-                value >= 2
-            }
-        }
-        modifier = {
-            add = 4
-            num_buildings = {
-                type = building_stronghold
-                value >= 3
-            }
-        }
-        modifier = {
-            add = 5
-            num_buildings = {
-                type = building_stronghold
-                value >= 4
-            }
-        }
-        modifier = {
-            add = 3
-            num_buildings = {
-                type = building_fortress
-                value >= 1
-            }
-        }
-        modifier = {
-            add = 5
-            num_buildings = {
-                type = building_fortress
-                value >= 2
             }
         }
     }

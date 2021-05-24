@@ -12,7 +12,7 @@ tech_reactor_boosters_2 = {
     }
     weight = @tier1weight3
     weight_modifier = {
-        factor = 1
+        factor = 1.5
         modifier = {
             factor = 1.25
             research_leader = {

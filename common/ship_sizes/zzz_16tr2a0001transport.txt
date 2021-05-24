@@ -24,6 +24,7 @@ transport = {
     enable_default_design = yes
     is_designable = yes
     components_add_to_cost = no
+    auto_upgrade = yes
     class = shipclass_transport
     required_component_set = "power_core"
     required_component_set = "ftl_components"

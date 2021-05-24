@@ -1,6 +1,6 @@
 pw_building_industrial_hearth = {
     base_buildtime = @pw_building_buildtime
-    position_priority = 75
+    position_priority = 100
     category = manufacturing
     can_be_ruined = no
     can_build = no
@@ -31,9 +31,51 @@ pw_building_industrial_hearth = {
             minerals = @pw_building_cost
             rare_crystals = @pw_building_cost_rare
         }
+        cost = {
+            trigger = {
+                planet = {
+                    pw_has_any_additional_planetary_wonder = yes
+                }
+            }
+            minerals = @pw_building_cost_extra
+        }
+        cost = {
+            trigger = {
+                planet = {
+                    OR = {
+                        has_designation = col_factory
+                        has_designation = col_ecu_factory
+                        has_designation = col_mac_factory
+                        has_designation = col_habitat_factory
+                    }
+                }
+            }
+            minerals = @pw_building_cost_discount
+        }
         upkeep = {
             energy = @pw_building_upkeep_expensive
-            rare_crystals = @pw_building_upkeep_rare
+            rare_crystals = @pw_building_upkeep_rare_1
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    pw_has_any_additional_planetary_wonder = yes
+                }
+            }
+            energy = @pw_building_upkeep_extra
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    OR = {
+                        has_designation = col_factory
+                        has_designation = col_ecu_factory
+                        has_designation = col_mac_factory
+                        has_designation = col_habitat_factory
+                    }
+                }
+            }
+            energy = @pw_building_upkeep_discount
         }
     }
     destroy_trigger = {
@@ -70,9 +112,9 @@ pw_building_industrial_hearth = {
             }
         }
         modifier = {
-            job_pw_poly_artisan_add = 12
+            job_merchant_add = 1
+            job_pw_poly_artisan_add = 6
             job_pw_poly_artisan_per_pop = @pw_job_per_25_pop
-            job_merchant_add = @pw_building_ruler_jobs
         }
     }
     triggered_planet_modifier = {
@@ -80,11 +122,13 @@ pw_building_industrial_hearth = {
             exists = owner
             owner = {
                 is_machine_empire = yes
+                country_uses_consumer_goods = yes
             }
         }
         modifier = {
-            job_pw_poly_artisan_drone_add = 15
             job_replicator_add = 1
+            job_pw_poly_artisan_drone_add = 6
+            job_pw_poly_artisan_drone_per_pop = @pw_job_per_25_pop
         }
     }
     triggered_planet_modifier = {
@@ -96,6 +140,18 @@ pw_building_industrial_hearth = {
         }
         modifier = {
             planet_stability_add = @pw_stability_production
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_edict = pw_ambition_wonders_beyond_ambition
+            }
+        }
+        modifier = {
+            planet_artisans_produces_mult = 0.15
+            planet_artisans_upkeep_mult = 0.1
         }
     }
     triggered_desc = {

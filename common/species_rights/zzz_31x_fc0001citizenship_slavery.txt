@@ -144,6 +144,15 @@ citizenship_slavery = {
     ai_will_do = {
         factor = 15
         modifier = {
+            factor = 10
+            from = {
+                not = {
+                    is_country_type = default
+                }
+                has_ethic = ethic_fanatic_xenophobe
+            }
+        }
+        modifier = {
             factor = 0
             from = {
                 has_valid_ai_personality = yes

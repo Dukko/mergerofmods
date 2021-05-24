@@ -101,7 +101,7 @@ col_farming = {
             }
         }
         modifier = {
-            add = 3
+            add = 2
             num_free_districts = {
                 type = district_mining
                 value < @free_districts_low_threshold
@@ -128,7 +128,7 @@ col_farming = {
             }
         }
         modifier = {
-            add = 2
+            add = 3
             has_designation = col_farming
         }
         modifier = {
@@ -153,10 +153,39 @@ col_farming = {
             }
         }
         modifier = {
+            add = 5
+            has_modifier = lush_planet
+        }
+        modifier = {
+            factor = 0.1
+            has_modifier = bleak_planet
+        }
+        modifier = {
+            add = 3
+            num_districts = {
+                type = district_farming
+                value >= 1
+            }
+        }
+        modifier = {
+            add = 3
+            num_districts = {
+                type = district_farming
+                value >= 2
+            }
+        }
+        modifier = {
             add = 40
             OR = {
                 has_modifier = gpm_precursor_harbor_ruins
                 has_modifier = gpm_mushroom_forest
+            }
+        }
+        modifier = {
+            add = 3
+            num_districts = {
+                type = district_farming
+                value >= 3
             }
         }
         modifier = {
@@ -177,10 +206,17 @@ col_farming = {
             }
         }
         modifier = {
-            add = 5
+            add = 6
             num_districts = {
                 type = district_farming
-                value >= @built_districts_medium_threshold
+                value >= 4
+            }
+        }
+        modifier = {
+            add = 6
+            num_districts = {
+                type = district_farming
+                value >= 6
             }
         }
         modifier = {
@@ -189,6 +225,10 @@ col_farming = {
                 type = district_farming
                 value = 0
             }
+        }
+        modifier = {
+            factor = 1.5
+            has_planet_flag = str_acceptable_habitability
         }
     }
 }

@@ -8,6 +8,7 @@ pw_enigma_decipher = {
         is_enslaved = no
         is_being_purged = no
         is_being_assimilated = no
+        is_sapient = yes
     }
     possible = {
         drone_job_check_trigger = yes
@@ -23,13 +24,22 @@ pw_enigma_decipher = {
         upkeep = {
             energy = 15
         }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_edict = research_subsidies
+                }
+            }
+            energy = 2
+        }
     }
     planet_modifier = {
-        planet_crime_no_happiness_add = -10
+        planet_crime_no_happiness_add = -5
         planet_amenities_no_happiness_add = 2
     }
     weight = {
-        weight = @complex_drone_job_weight
+        weight = 50
         modifier = {
             factor = 3
             has_trait = trait_erudite
@@ -66,36 +76,10 @@ pw_enigma_decipher = {
             }
         }
         modifier = {
-            factor = 50
+            factor = 5
             planet = {
                 planet_crime > 22
             }
-        }
-        modifier = {
-            factor = 3
-            has_trait = trait_resilient
-        }
-        modifier = {
-            factor = 3
-            planet = {
-                planet_crime > 0
-            }
-            has_trait = trait_very_strong
-        }
-        modifier = {
-            factor = 2
-            planet = {
-                planet_crime > 0
-            }
-            has_trait = trait_strong
-        }
-        modifier = {
-            factor = 0.5
-            has_trait = trait_weak
-        }
-        modifier = {
-            factor = 2
-            has_trait = trait_lithoid
         }
     }
 }

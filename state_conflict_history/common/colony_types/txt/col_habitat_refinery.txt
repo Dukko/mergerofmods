@@ -4,8 +4,8 @@ col_habitat_refinery = {
         OR = {
             uses_district_set = habitat
             uses_district_set = pdarchive
+        is_capital = no
         }
-                is_capital = no
     }
     planet_modifier = {
         planet_building_chemical_plant_build_speed_mult = 0.25

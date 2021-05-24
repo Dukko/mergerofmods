@@ -1,0 +1,44 @@
+appropriation = {
+    potential = {
+        has_comms_with_alien_empire = yes
+    }
+    option = {
+        name = "appropriation_not_allowed"
+        policy_flags = {
+            appropriation_not_allowed
+        }
+        AI_weight = {
+            modifier = {
+                factor = 10
+                has_ai_personality_behaviour = multispecies
+            }
+            modifier = {
+                factor = 15
+                is_pacifist = no
+                or = {
+                    has_civic = civic_slaver_guilds
+                    has_civic = civic_indentured_assets
+                }
+            }
+        }
+    }
+    option = {
+        name = "appropriation_allowed"
+        policy_flags = {
+            appropriation_allowed
+        }
+        modifier = {
+        }
+        AI_weight = {
+            modifier = {
+                factor = 10
+                NOT = {
+                    has_ai_personality_behaviour = multispecies
+                }
+                or = {
+                    is_pacifist = yes
+                }
+            }
+        }
+    }
+}

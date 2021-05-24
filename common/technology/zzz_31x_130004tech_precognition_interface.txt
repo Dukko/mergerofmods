@@ -76,7 +76,12 @@ tech_precognition_interface = {
         }
     }
     ai_weight = {
-        factor = 5
+        weight = 70
+        factor = 25
+        modifier = {
+            factor = 500
+            has_technology = tech_energy_torpedoes_2
+        }
         modifier = {
             factor = 2
             is_militarist = yes

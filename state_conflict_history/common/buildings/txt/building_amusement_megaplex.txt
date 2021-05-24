@@ -26,15 +26,6 @@ building_amusement_megaplex = {
         }
     }
     ai_weight = {
-        weight = 2
-        modifier = {
-            weight = 0.5
-            branch_office_owner = {
-                has_monthly_income = {
-                    resource = energy
-                    value > 50
-                }
-            }
-        }
+        weight = 0
     }
 }

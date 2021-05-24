@@ -1,0 +1,3 @@
+NAI = {
+    NUM_TRADITIONS_FOR_EDICTS = 21
+}

@@ -30,6 +30,22 @@ building_gas_extractors = {
             job_gas_extraction_drone_add = 1
         }
     }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            free_building_slots > 0
+            not = {
+                has_building = building_gas_extractors
+            }
+        }
+        modifier = {
+            job_starnet_spice_melange_farmer_add = 1
+            job_starnet_spice_melange_antifarmer_add = -1
+        }
+    }
     resources = {
         category = planet_buildings
         cost = {

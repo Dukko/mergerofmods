@@ -125,6 +125,7 @@ d_active_volcano = {
                 has_modifier = "cryokarst_world"
                 has_modifier = "steppe_world"
                 is_planet_class = pc_steppe
+                is_planet_class = pc_hollow
             }
         }
     }

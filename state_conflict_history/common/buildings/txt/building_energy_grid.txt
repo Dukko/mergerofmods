@@ -3,7 +3,10 @@ building_energy_grid = {
     base_cap_amount = 1
     category = resource
     destroy_trigger = {
-        has_modifier = resort_colony
+        or = {
+            has_modifier = resort_colony
+            str_energy_grid_destroy = yes
+        }
     }
     potential = {
         NOT = {
@@ -46,10 +49,23 @@ building_energy_grid = {
         }
     }
     allow = {
-        buildings_simple_allow = yes
+        str_energy_grid_allow = yes
     }
     triggered_desc = {
         text = building_energy_grid_effect_desc
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            str_force_energy_grid = yes
+        }
+        modifier = {
+            job_starnet_spice_melange_farmer_add = 1
+            job_starnet_spice_melange_antifarmer_add = -1
+        }
     }
     triggered_planet_modifier = {
         potential = {
@@ -173,7 +189,7 @@ building_energy_grid = {
         }
     }
     ai_resource_production = {
-        energy = 3
+        energy = 15
         trigger = {
             planet_resource_compare = {
                 resource = energy
@@ -183,7 +199,7 @@ building_energy_grid = {
         }
     }
     ai_resource_production = {
-        energy = 3
+        energy = 30
         trigger = {
             planet_resource_compare = {
                 resource = energy

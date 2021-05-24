@@ -11,6 +11,7 @@ building_corporate_monument = {
         owner = {
             is_megacorp = yes
             is_spiritualist = no
+            is_ai = no
         }
     }
     destroy_trigger = {
@@ -19,6 +20,7 @@ building_corporate_monument = {
             has_modifier = slave_colony
             owner = {
                 OR = {
+                    is_ai = yes
                     is_megacorp = no
                     is_spiritualist = yes
                 }

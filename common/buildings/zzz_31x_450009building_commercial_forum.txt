@@ -27,5 +27,16 @@ building_commercial_forum = {
     }
     ai_weight = {
         weight = 50
+        modifier = {
+            factor = 0
+            planet_crime > 40
+        }
+        modifier = {
+            factor = 0
+            branch_office_value = {
+                who = THIS
+                value < 30
+            }
+        }
     }
 }

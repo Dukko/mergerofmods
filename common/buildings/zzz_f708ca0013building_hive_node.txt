@@ -6,6 +6,7 @@ building_hive_node = {
         building_relaxed_basic_income_check = yes
         owner = {
             is_hive_empire = yes
+            is_ai = no
         }
     }
     destroy_trigger = {
@@ -13,6 +14,9 @@ building_hive_node = {
         OR = {
             owner = {
                 is_hive_empire = no
+            }
+            owner = {
+                is_ai = yes
             }
         }
     }

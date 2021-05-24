@@ -1,10 +1,7 @@
 col_habitat_factory = {
     icon = 26
     potential = {
-        OR = {
-            uses_district_set = habitat
-            uses_district_set = pdarchive
-        }
+        uses_district_set = habitat
         exists = owner
         is_capital = no
         owner = {

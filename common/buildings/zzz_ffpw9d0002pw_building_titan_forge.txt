@@ -1,6 +1,6 @@
 pw_building_titan_forge = {
     base_buildtime = @pw_building_buildtime
-    position_priority = 75
+    position_priority = 100
     category = manufacturing
     can_be_ruined = no
     can_build = no
@@ -28,9 +28,53 @@ pw_building_titan_forge = {
             minerals = @pw_building_cost
             volatile_motes = @pw_building_cost_rare
         }
+        cost = {
+            trigger = {
+                planet = {
+                    pw_has_any_additional_planetary_wonder = yes
+                }
+            }
+            minerals = @pw_building_cost_extra
+        }
+        cost = {
+            trigger = {
+                planet = {
+                    OR = {
+                        has_designation = col_foundry
+                        has_designation = col_ecu_foundry
+                        has_designation = col_hiv_foundry
+                        has_designation = col_mac_foundry
+                        has_designation = col_habitat_foundry
+                    }
+                }
+            }
+            minerals = @pw_building_cost_discount
+        }
         upkeep = {
             energy = @pw_building_upkeep_expensive
-            volatile_motes = @pw_building_upkeep_rare
+            volatile_motes = @pw_building_upkeep_rare_1
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    pw_has_any_additional_planetary_wonder = yes
+                }
+            }
+            energy = @pw_building_upkeep_extra
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    OR = {
+                        has_designation = col_foundry
+                        has_designation = col_ecu_foundry
+                        has_designation = col_hiv_foundry
+                        has_designation = col_mac_foundry
+                        has_designation = col_habitat_foundry
+                    }
+                }
+            }
+            energy = @pw_building_upkeep_discount
         }
     }
     destroy_trigger = {
@@ -44,7 +88,6 @@ pw_building_titan_forge = {
     }
     planet_modifier = {
         planet_max_districts_add = -1
-        planet_metallurgists_produces_mult = 0.15
     }
     triggered_planet_modifier = {
         potential = {
@@ -60,8 +103,8 @@ pw_building_titan_forge = {
             }
         }
         modifier = {
-            job_foundry_add = 15
             job_administrator_add = 1
+            job_foundry_add = 7
         }
     }
     triggered_planet_modifier = {
@@ -72,7 +115,7 @@ pw_building_titan_forge = {
             }
         }
         modifier = {
-            job_alloy_drone_add = 15
+            job_alloy_drone_add = 8
         }
     }
     triggered_planet_modifier = {
@@ -83,7 +126,7 @@ pw_building_titan_forge = {
             }
         }
         modifier = {
-            job_fabricator_add = 15
+            job_fabricator_add = 7
             job_replicator_add = 1
         }
     }
@@ -96,6 +139,18 @@ pw_building_titan_forge = {
         }
         modifier = {
             planet_stability_add = @pw_stability_production
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_edict = pw_ambition_wonders_beyond_ambition
+            }
+        }
+        modifier = {
+            planet_metallurgists_produces_mult = 0.15
+            planet_metallurgists_upkeep_mult = 0.1
         }
     }
     triggered_desc = {

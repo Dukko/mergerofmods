@@ -22,7 +22,6 @@ col_rural_gestalt = {
             uses_district_set = pdfloraforge
             uses_district_set = pdbiofort
             uses_district_set = pdmachinefort
-            uses_district_set = pdcorpoarc
         }
         exists = owner
         owner = {
@@ -156,6 +155,115 @@ col_rural_gestalt = {
                 type = district_hive
                 value <= @built_districts_high_threshold
             }
+        }
+        modifier = {
+            add = 1.5
+            num_districts = {
+                type = district_mining
+                value >= 1
+            }
+        }
+        modifier = {
+            add = 1.5
+            num_districts = {
+                type = district_mining
+                value >= 2
+            }
+        }
+        modifier = {
+            add = 1.5
+            num_districts = {
+                type = district_mining
+                value >= 3
+            }
+        }
+        modifier = {
+            add = 3
+            num_districts = {
+                type = district_mining
+                value >= 4
+            }
+        }
+        modifier = {
+            add = 3
+            num_districts = {
+                type = district_mining
+                value >= 6
+            }
+        }
+        modifier = {
+            add = 1.5
+            num_districts = {
+                type = district_farming
+                value >= 1
+            }
+        }
+        modifier = {
+            add = 1.5
+            num_districts = {
+                type = district_farming
+                value >= 2
+            }
+        }
+        modifier = {
+            add = 1.5
+            num_districts = {
+                type = district_farming
+                value >= 3
+            }
+        }
+        modifier = {
+            add = 3
+            num_districts = {
+                type = district_farming
+                value >= 4
+            }
+        }
+        modifier = {
+            add = 3
+            num_districts = {
+                type = district_farming
+                value >= 6
+            }
+        }
+        modifier = {
+            add = 1.5
+            num_districts = {
+                type = district_generator
+                value >= 1
+            }
+        }
+        modifier = {
+            add = 1.5
+            num_districts = {
+                type = district_generator
+                value >= 2
+            }
+        }
+        modifier = {
+            add = 1.5
+            num_districts = {
+                type = district_generator
+                value >= 3
+            }
+        }
+        modifier = {
+            add = 3
+            num_districts = {
+                type = district_generator
+                value >= 4
+            }
+        }
+        modifier = {
+            add = 3
+            num_districts = {
+                type = district_generator
+                value >= 6
+            }
+        }
+        modifier = {
+            factor = 1.5
+            has_planet_flag = str_acceptable_habitability
         }
         modifier = {
             add = 1

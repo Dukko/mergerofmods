@@ -24,23 +24,6 @@ ap_galactic_contender = {
         }
     }
     ai_weight = {
-        factor = 10
-        modifier = {
-            factor = 0
-            NOR = {
-                any_neighbor_country = {
-                    is_country_type = awakened_fallen_empire
-                }
-                any_country = {
-                    is_country_type = fallen_empire
-                }
-            }
-        }
-        modifier = {
-            factor = 2
-            any_country = {
-                is_country_type = awakened_fallen_empire
-            }
-        }
+        factor = 0
     }
 }

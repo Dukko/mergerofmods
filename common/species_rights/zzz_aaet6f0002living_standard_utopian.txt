@@ -82,7 +82,7 @@ living_standard_utopian = {
         }
     }
     ai_will_do = {
-        factor = 15
+        factor = 0
         modifier = {
             factor = 0
             NOT = {

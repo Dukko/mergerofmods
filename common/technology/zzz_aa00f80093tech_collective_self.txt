@@ -51,6 +51,8 @@ tech_collective_self = {
         }
     }
     ai_weight = {
+        weight = 4
+        factor = 25
         modifier = {
             factor = 1.25
             research_leader = {

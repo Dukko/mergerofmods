@@ -24,6 +24,10 @@ tech_centralized_command = {
     }
     ai_weight = {
         modifier = {
+            factor = 500
+            reroll_society = yes
+        }
+        modifier = {
             factor = 2
             is_militarist = yes
         }

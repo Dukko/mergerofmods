@@ -9,14 +9,21 @@ building_foundry_1 = {
         NOT = {
             has_modifier = slave_colony
         }
-        OR = {
-            building_relaxed_basic_income_check = yes
-        }
+    }
+    allow = {
+        str_foundry_allow = yes
     }
     destroy_trigger = {
         OR = {
             has_modifier = resort_colony
             has_modifier = slave_colony
+            and = {
+                is_capital = yes
+                owner = {
+                    is_ai = yes
+                }
+                years_passed > 20
+            }
         }
     }
     triggered_planet_modifier = {
@@ -61,6 +68,19 @@ building_foundry_1 = {
             energy = @b1_upkeep
         }
     }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            str_force_building_foundry = yes
+        }
+        modifier = {
+            job_starnet_spice_melange_farmer_add = 1
+            job_starnet_spice_melange_antifarmer_add = -1
+        }
+    }
     upgrades = {
         building_foundry_2
     }
@@ -95,37 +115,46 @@ building_foundry_1 = {
         text = job_fabricator_effect_desc
     }
     ai_resource_production = {
-        alloys = 4
+        alloys = 3
         trigger = {
             always = yes
         }
     }
     ai_resource_production = {
-        alloys = 4
+        alloys = 10
         trigger = {
+            is_capital = yes
+        }
+    }
+    ai_resource_production = {
+        alloys = 3
+        trigger = {
+            has_designation = col_foundry
             planet_resource_compare = {
                 resource = alloys
-                value >= 8
+                value >= 20
                 type = produces
             }
         }
     }
     ai_resource_production = {
-        alloys = 4
+        alloys = 3
         trigger = {
+            has_designation = col_foundry
             planet_resource_compare = {
                 resource = alloys
-                value >= 16
+                value >= 40
                 type = produces
             }
         }
     }
     ai_resource_production = {
-        alloys = 4
+        alloys = 3
         trigger = {
+            has_designation = col_foundry
             planet_resource_compare = {
                 resource = alloys
-                value >= 24
+                value >= 50
                 type = produces
             }
         }

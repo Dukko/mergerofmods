@@ -1,9 +1,12 @@
 pw_building_space_elevator = {
     base_buildtime = @pw_building_buildtime
-    position_priority = 50
+    position_priority = 85
     base_cap_amount = 1
     can_be_ruined = no
     category = trade
+    prerequisites = {
+        pw_tech_space_elevator
+    }
     potential = {
         exists = owner
         NOT = {
@@ -16,18 +19,83 @@ pw_building_space_elevator = {
             is_planet_class = pc_ringworld_habitable
         }
     }
-    destroy_trigger = {
-        has_modifier = slave_colony
-    }
     allow = {
         has_major_upgraded_capital = yes
         free_district_slots > 0
         pw_can_build_planetary_wonder = yes
     }
+    destroy_trigger = {
+        has_modifier = slave_colony
+    }
+    convert_to = {
+        building_commercial_zone
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @pw_building_cost
+        }
+        cost = {
+            trigger = {
+                planet = {
+                    pw_has_any_planetary_wonder = yes
+                }
+            }
+            minerals = @pw_building_cost_extra
+        }
+        cost = {
+            trigger = {
+                planet = {
+                    OR = {
+                        has_designation = col_capital
+                        has_designation = col_capital_hive
+                        has_designation = col_capital_machine
+                        has_designation = col_city
+                        has_designation = col_hive
+                        has_designation = col_nexus
+                        has_designation = col_ring_trade
+                        has_designation = col_habitat_trade
+                        has_designation = col_ecu_mix
+                        has_designation = col_resort
+                    }
+                }
+            }
+            minerals = @pw_building_cost_discount
+        }
+        upkeep = {
+            energy = @pw_building_upkeep
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    pw_has_any_additional_planetary_wonder = yes
+                }
+            }
+            energy = @pw_building_upkeep_extra
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    OR = {
+                        has_designation = col_capital
+                        has_designation = col_capital_hive
+                        has_designation = col_capital_machine
+                        has_designation = col_city
+                        has_designation = col_hive
+                        has_designation = col_nexus
+                        has_designation = col_ring_trade
+                        has_designation = col_habitat_trade
+                        has_designation = col_ecu_mix
+                        has_designation = col_resort
+                    }
+                }
+            }
+            energy = @pw_building_upkeep_discount
+        }
+    }
     planet_modifier = {
         planet_max_districts_add = -1
         pop_resettlement_cost_mult = -0.5
-        planet_amenities_mult = 0.1
     }
     triggered_planet_modifier = {
         potential = {
@@ -37,8 +105,9 @@ pw_building_space_elevator = {
             }
         }
         modifier = {
-            job_clerk_add = @pw_building_worker_jobs
-            job_merchant_per_pop = @pw_job_per_50_pop
+            trade_value_mult = 0.15
+            job_merchant_add = 1
+            job_clerk_add = 10
             job_enforcer_add = 1
         }
     }
@@ -62,8 +131,7 @@ pw_building_space_elevator = {
             }
         }
         modifier = {
-            job_maintenance_drone_add = @pw_building_menial_jobs
-            job_synapse_drone_per_pop = @pw_job_per_50_pop
+            job_maintenance_drone_add = 10
             job_patrol_drone_add = 2
         }
     }
@@ -75,8 +143,7 @@ pw_building_space_elevator = {
             }
         }
         modifier = {
-            job_maintenance_drone_add = @pw_building_menial_jobs
-            job_evaluator_per_pop = @pw_job_per_50_pop
+            job_maintenance_drone_add = 10
             job_patrol_drone_add = 2
         }
     }
@@ -91,17 +158,50 @@ pw_building_space_elevator = {
             planet_stability_add = @pw_stability_production
         }
     }
-    resources = {
-        category = planet_buildings
-        cost = {
-            minerals = @pw_building_cost
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+            owner = {
+                has_edict = pw_ambition_wonders_beyond_ambition
+            }
         }
-        upkeep = {
-            energy = @pw_building_upkeep
+        modifier = {
+            planet_amenities_mult = 0.15
+            job_merchant_per_pop = @pw_job_per_50_pop
         }
     }
-    prerequisites = {
-        pw_tech_space_elevator
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+            owner = {
+                has_edict = pw_ambition_wonders_beyond_ambition
+            }
+        }
+        modifier = {
+            planet_amenities_no_happiness_mult = 0.15
+            job_synapse_drone_per_pop = @pw_job_per_50_pop
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+            owner = {
+                has_edict = pw_ambition_wonders_beyond_ambition
+            }
+        }
+        modifier = {
+            planet_amenities_no_happiness_mult = 0.15
+            job_coordinator_per_pop = @pw_job_per_50_pop
+        }
     }
     triggered_desc = {
         text = pw_planet_wonder_lb
@@ -110,16 +210,10 @@ pw_building_space_elevator = {
         trigger = {
             exists = owner
             owner = {
-                is_gestalt = no
+                is_regular_empire = no
             }
-        }
-        text = job_clerk_effect_desc
-    }
-    triggered_desc = {
-        trigger = {
-            exists = owner
             owner = {
-                is_gestalt = no
+                has_edict = pw_ambition_wonders_beyond_ambition
             }
         }
         text = job_merchant_effect_desc
@@ -128,7 +222,16 @@ pw_building_space_elevator = {
         trigger = {
             exists = owner
             owner = {
-                is_gestalt = no
+                is_regular_empire = no
+            }
+        }
+        text = job_clerk_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = no
             }
         }
         text = job_enforcer_effect_desc
@@ -137,10 +240,37 @@ pw_building_space_elevator = {
         trigger = {
             exists = owner
             owner = {
-                is_gestalt = yes
+                is_regular_empire = no
+            }
+            planet = {
+                has_designation = col_resort
             }
         }
-        text = job_patrol_drone_effect_desc
+        text = job_pw_tourist_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+            owner = {
+                has_edict = pw_ambition_wonders_beyond_ambition
+            }
+        }
+        text = job_synapse_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+            owner = {
+                has_edict = pw_ambition_wonders_beyond_ambition
+            }
+        }
+        text = job_evaluator_effect_desc
     }
     triggered_desc = {
         trigger = {
@@ -155,19 +285,10 @@ pw_building_space_elevator = {
         trigger = {
             exists = owner
             owner = {
-                is_hive_empire = yes
+                is_gestalt = yes
             }
         }
-        text = job_synapse_drone_effect_desc
-    }
-    triggered_desc = {
-        trigger = {
-            exists = owner
-            owner = {
-                is_machine_empire = yes
-            }
-        }
-        text = job_evaluator_effect_desc
+        text = job_patrol_drone_effect_desc
     }
     on_built = {
         planet_event = {
@@ -175,7 +296,7 @@ pw_building_space_elevator = {
         }
     }
     ai_weight = {
-        weight = 20
+        weight = 25
         modifier = {
             factor = 0
             building_relaxed_basic_income_check = no

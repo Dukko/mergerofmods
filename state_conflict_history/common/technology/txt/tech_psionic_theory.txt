@@ -106,7 +106,12 @@ tech_psionic_theory = {
         }
     }
     ai_weight = {
-        factor = 5
+        weight = 50
+        factor = 25
+        modifier = {
+            factor = 500
+            has_technology = tech_energy_torpedoes_2
+        }
         modifier = {
             factor = 1.5
             OR = {
@@ -120,10 +125,6 @@ tech_psionic_theory = {
                 area = society
                 has_trait = "leader_trait_expertise_psionics"
             }
-        }
-        modifier = {
-            factor = 2
-            is_ai = no
         }
     }
 }

@@ -31,6 +31,19 @@ trade_policy = {
         }
         AI_weight = {
             factor = 1
+            modifier = {
+                factor = 10
+                lategame = yes
+                or = {
+                    resource_income_compare = {
+                        resource = consumer_goods
+                        value > 50
+                    }
+                    not = {
+                        has_policy_flag = trade_conversion_consumer_goods
+                    }
+                }
+            }
         }
     }
     option = {
@@ -58,7 +71,24 @@ trade_policy = {
             }
         }
         AI_weight = {
-            factor = 0
+            factor = 0.5
+            modifier = {
+                factor = 3
+                or = {
+                    has_policy_flag = trade_conversion_consumer_goods
+                    and = {
+                        years_passed > 8
+                        resource_income_compare = {
+                            resource = energy
+                            value > 5
+                        }
+                        resource_stockpile_compare = {
+                            resource = energy
+                            value > 200
+                        }
+                    }
+                }
+            }
         }
     }
     option = {

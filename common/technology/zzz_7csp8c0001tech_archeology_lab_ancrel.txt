@@ -23,6 +23,16 @@ tech_archeology_lab_ancrel = {
             has_ascension_perk = ap_technological_ascendancy
         }
         modifier = {
+            factor = @federation_perk_factor
+            has_federation = yes
+            federation = {
+                has_federation_perk = rare_tech_boost
+                any_member = {
+                    has_technology = tech_archeology_lab_ancrel
+                }
+            }
+        }
+        modifier = {
             factor = 3
             research_leader = {
                 area = physics
@@ -48,5 +58,25 @@ tech_archeology_lab_ancrel = {
     }
     potential = {
         has_ancrel = yes
+    }
+    ai_weight = {
+        weight = 1
+        factor = 5
+        modifier = {
+            factor = 100
+            NOT = {
+                has_tech_option = tech_lasers_4
+            }
+            NOT = {
+                has_technology = tech_lasers_4
+            }
+        }
+        modifier = {
+            factor = 500
+            OR = {
+                has_tech_option = tech_energy_torpedoes_1
+                has_tech_option = tech_energy_torpedoes_2
+            }
+        }
     }
 }

@@ -51,6 +51,40 @@ resolution_ecology_paradise_initiative = {
     ai_weight = {
         weight = @resolution_weight_disliked
         modifier = {
+            factor = 0.5
+            not = {
+                has_country_flag = str_has_bad_economy_score
+            }
+        }
+        modifier = {
+            factor = 1.2
+            has_country_flag = str_has_bad_economy_score
+        }
+        modifier = {
+            factor = 2
+            has_country_flag = str_has_terrible_economy_score
+        }
+        modifier = {
+            factor = 1.1
+            turtler = yes
+        }
+        modifier = {
+            factor = 1.1
+            turtler2 = yes
+        }
+        modifier = {
+            factor = 0.9
+            rusher = yes
+        }
+        modifier = {
+            factor = 0.9
+            rusher2 = yes
+        }
+        modifier = {
+            factor = 2
+            has_valid_civic = civic_environmentalist
+        }
+        modifier = {
             factor = 2
             OR = {
                 has_valid_civic = civic_environmentalist

@@ -3,9 +3,9 @@ col_habitat_fortress = {
     potential = {
         OR = {
             uses_district_set = habitat
+        is_capital = no
             uses_district_set = pdarchive
         }
-        is_capital = no
     }
     planet_modifier = {
         custom_tooltip = fortress_desig_tooltip

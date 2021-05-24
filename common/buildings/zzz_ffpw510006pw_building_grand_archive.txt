@@ -1,9 +1,9 @@
 pw_building_grand_archive = {
     base_buildtime = @pw_building_buildtime
-    position_priority = 85
-    category = unity
+    position_priority = 95
     base_cap_amount = 1
     can_be_ruined = no
+    category = research
     prerequisites = {
         pw_tech_materialist_archiving
     }
@@ -44,9 +44,25 @@ pw_building_grand_archive = {
             minerals = @pw_building_cost
             exotic_gases = @pw_building_cost_rare
         }
+        cost = {
+            trigger = {
+                planet = {
+                    pw_has_any_planetary_wonder = yes
+                }
+            }
+            minerals = @pw_building_cost_extra
+        }
         upkeep = {
             energy = @pw_building_upkeep_expensive
-            exotic_gases = @pw_building_upkeep_rare
+            exotic_gases = @pw_building_upkeep_rare_1
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    pw_has_any_additional_planetary_wonder = yes
+                }
+            }
+            energy = @pw_building_upkeep_extra
         }
     }
     destroy_trigger = {
@@ -101,6 +117,17 @@ pw_building_grand_archive = {
             planet_stability_add = @pw_stability_production
         }
     }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_edict = pw_ambition_wonders_beyond_ambition
+            }
+        }
+        modifier = {
+            planet_researchers_upkeep_mult = -0.2
+        }
+    }
     triggered_desc = {
         text = pw_planet_wonder_lb
     }
@@ -111,13 +138,16 @@ pw_building_grand_archive = {
         text = pw_building_grand_archive_tooltip
     }
     triggered_desc = {
+        text = job_pw_grand_archivist_effect_desc
+    }
+    triggered_desc = {
         trigger = {
             exists = owner
             owner = {
-                is_spiritualist = yes
+                has_country_flag = pw_grand_archive_holoarchive_master_archivist_appointed
             }
         }
-        text = job_priest_effect_desc
+        text = job_pw_master_archivist_effect_desc
     }
     on_built = {
         planet_event = {

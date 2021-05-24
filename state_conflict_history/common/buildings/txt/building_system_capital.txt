@@ -92,6 +92,66 @@ building_system_capital = {
         potential = {
             exists = owner
             owner = {
+                is_ai = yes
+            }
+            num_districts = {
+                type = district_city
+                value > 0
+            }
+            str_force_city_district = yes
+        }
+        job_starnet_spice_melange_farmer_add = -2
+        job_starnet_spice_melange_antifarmer_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            num_districts = {
+                type = district_city
+                value > 2
+            }
+            str_force_city_district = yes
+        }
+        job_starnet_spice_melange_farmer_add = -2
+        job_starnet_spice_melange_antifarmer_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            num_districts = {
+                type = district_city
+                value > 4
+            }
+            str_force_city_district = yes
+        }
+        job_starnet_spice_melange_farmer_add = -2
+        job_starnet_spice_melange_antifarmer_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            num_districts = {
+                type = district_city
+                value > 6
+            }
+            str_force_city_district = yes
+        }
+        job_starnet_spice_melange_farmer_add = -2
+        job_starnet_spice_melange_antifarmer_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
                 is_mechanical_empire = yes
             }
         }

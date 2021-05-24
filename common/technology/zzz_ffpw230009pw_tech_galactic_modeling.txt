@@ -1,7 +1,7 @@
 pw_tech_galactic_modeling = {
     area = society
-    cost = @pw_tier4cost4
-    tier = 4
+    cost = @pw_tech_cost_3
+    tier = 5
     category = {
         statecraft
     }
@@ -9,7 +9,7 @@ pw_tech_galactic_modeling = {
         pw_tech_planetary_mega_engineering
         tech_galactic_bureaucracy
     }
-    weight = @tier4weight2
+    weight = @tier5weight1
     is_rare = yes
     prereqfor_desc = {
         custom = {
@@ -18,7 +18,7 @@ pw_tech_galactic_modeling = {
         }
     }
     weight_modifier = {
-        factor = 0.25
+        factor = @pw_tech_weight_mod
         modifier = {
             factor = 1.5
             research_leader = {
@@ -72,15 +72,15 @@ pw_tech_galactic_modeling = {
         }
         modifier = {
             factor = 1.25
-            num_owned_planets > 6
+            num_owned_planets > 8
         }
         modifier = {
             factor = 1.25
-            num_owned_planets > 7
+            num_owned_planets > 12
         }
     }
     ai_weight = {
-        factor = 10
+        factor = @pw_tech_ai_weight
         modifier = {
             factor = 1.25
             research_leader = {

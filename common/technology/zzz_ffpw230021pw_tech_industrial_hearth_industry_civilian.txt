@@ -4,7 +4,7 @@ pw_tech_industrial_hearth_industry_civilian = {
         industry
     }
     tier = 5
-    cost = @tier5cost2
+    cost = @pw_tech_cost_5
     prerequisites = {
         pw_tech_industrial_hearth
     }

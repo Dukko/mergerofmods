@@ -20,9 +20,11 @@ building_institute = {
             has_modifier = resort_colony
             has_modifier = slave_colony
             owner = {
+                is_gestalt = no
                 is_regular_empire = no
             }
             buildings_no_exotic_gases = yes
+            str_research_destroy = yes
         }
     }
     convert_to = {

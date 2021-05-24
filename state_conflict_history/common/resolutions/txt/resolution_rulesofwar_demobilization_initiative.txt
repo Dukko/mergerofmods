@@ -64,24 +64,42 @@ resolution_rulesofwar_demobilization_initiative = {
     ai_weight = {
         weight = @resolution_weight_disliked
         modifier = {
+            factor = 0.625
+            not = {
+                has_country_flag = str_has_bad_fleet_score
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_country_flag = str_has_bad_fleet_score
+        }
+        modifier = {
+            factor = 1.4
+            has_country_flag = str_has_terrible_fleet_score
+        }
+        modifier = {
+            factor = 1.1
+            turtler = yes
+        }
+        modifier = {
+            factor = 1.1
+            turtler2 = yes
+        }
+        modifier = {
+            factor = 0.9
+            rusher = yes
+        }
+        modifier = {
+            factor = 0.9
+            rusher2 = yes
+        }
+        modifier = {
             factor = 0
             OR = {
                 is_militarist = yes
                 has_ai_personality_behaviour = conqueror
                 has_policy_flag = economic_policy_military
             }
-        }
-        modifier = {
-            factor = 0
-            has_ai_personality_behaviour = purger
-            NOT = {
-                has_valid_civic = civic_machine_servitor
-            }
-        }
-        modifier = {
-            factor = 0.5
-            is_xenophobe = yes
-            is_pacifist = no
         }
         modifier = {
             factor = 0

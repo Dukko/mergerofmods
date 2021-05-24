@@ -251,4 +251,10 @@ building_capital = {
     triggered_desc = {
         text = job_enforcer_effect_desc
     }
+    ai_resource_production = {
+        alloys = 11
+        trigger = {
+            num_pops > 6
+        }
+    }
 }

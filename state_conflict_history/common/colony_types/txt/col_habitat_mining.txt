@@ -1,10 +1,7 @@
 col_habitat_mining = {
     icon = 23
     potential = {
-        OR = {
-            uses_district_set = habitat
-            uses_district_set = pdarchive
-        }
+        uses_district_set = habitat
         has_planet_flag = mining_habitat
         is_capital = no
     }

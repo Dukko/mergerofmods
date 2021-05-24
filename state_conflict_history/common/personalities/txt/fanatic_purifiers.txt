@@ -1,14 +1,14 @@
 fanatic_purifiers = {
     aggressiveness = 2
     trade_willingness = 0.5
-    bravery = 1
+    bravery = 1.5
     combat_bravery = 1.25
     military_spending = 1.2
     colony_spending = 1.2
     federation_acceptance = -1000
     migration_pact_acceptance = -1000
-    advanced_start_chance = 100
-    weapon_preferences = weapon_type_kinetic
+    advanced_start_chance = 400
+    weapon_preferences = weapon_type_explosive
     armor_ratio = 0.4
     shields_ratio = 0.5
     hull_ratio = 0.1

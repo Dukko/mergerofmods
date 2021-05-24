@@ -14,9 +14,17 @@ apsr19_building_part_m1 = {
             has_modifier = "apsr19_planet_modifier"
             NOT = {
                 OR = {
+                    has_building = apsr19_building_part_m2
+                    has_building = apsr19_building_part_m3
                     has_building = apsr19_building_part_m1_fake
                     has_building = apsr19_building_part_m2_fake
                     has_building = apsr19_building_part_m3_fake
+                    has_building = apsr19_building_part_b1
+                    has_building = apsr19_building_part_b2
+                    has_building = apsr19_building_part_b3
+                    has_building = apsr19_building_part_b1_fake
+                    has_building = apsr19_building_part_b2_fake
+                    has_building = apsr19_building_part_b3_fake
                 }
             }
         }

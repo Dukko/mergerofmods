@@ -12,7 +12,7 @@ tech_reactor_boosters_2 = {
     }
     weight = @tier1weight3
     weight_modifier = {
-        factor = 1
+        factor = 1.5
         modifier = {
             factor = 1.25
             research_leader = {
@@ -22,6 +22,13 @@ tech_reactor_boosters_2 = {
         }
     }
     ai_weight = {
+        modifier = {
+            factor = 500
+            OR = {
+                has_tech_option = tech_energy_torpedoes_1
+                has_tech_option = tech_energy_torpedoes_2
+            }
+        }
         modifier = {
             factor = 1.25
             research_leader = {

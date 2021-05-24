@@ -13,7 +13,7 @@ building_public_relations_office = {
         }
     }
     planet_modifier = {
-        job_clerk_add = 2
+        job_manager_add = 1
     }
     resources = {
         category = planet_branch_office_buildings
@@ -28,6 +28,6 @@ building_public_relations_office = {
         }
     }
     ai_weight = {
-        weight = 2
+        weight = 0
     }
 }

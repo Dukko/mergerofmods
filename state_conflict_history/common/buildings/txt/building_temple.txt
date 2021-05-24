@@ -14,11 +14,8 @@ building_temple = {
         NOT = {
             has_modifier = slave_colony
         }
-        OR = {
-            owner = {
-                is_ai = no
-            }
-            free_building_slots > 0
+        owner = {
+            is_ai = no
         }
     }
     destroy_trigger = {
@@ -29,6 +26,7 @@ building_temple = {
                     has_valid_civic = civic_death_cult
                     has_valid_civic = civic_death_cult_corporate
                     is_spiritualist = no
+                    is_ai = yes
                 }
             }
             has_modifier = slave_colony

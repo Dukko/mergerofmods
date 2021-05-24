@@ -48,7 +48,20 @@ building_mineral_purification_plant = {
         }
     }
     allow = {
-        buildings_simple_allow = yes
+        str_mineral_purification_allow = yes
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            str_force_mineral_purification = yes
+        }
+        modifier = {
+            job_starnet_spice_melange_farmer_add = 1
+            job_starnet_spice_melange_antifarmer_add = -1
+        }
     }
     triggered_planet_modifier = {
         potential = {
@@ -171,7 +184,7 @@ building_mineral_purification_plant = {
         }
     }
     ai_resource_production = {
-        minerals = 3
+        minerals = 10
         trigger = {
             planet_resource_compare = {
                 resource = minerals
@@ -181,7 +194,7 @@ building_mineral_purification_plant = {
         }
     }
     ai_resource_production = {
-        minerals = 3
+        minerals = 20
         trigger = {
             planet_resource_compare = {
                 resource = minerals

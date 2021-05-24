@@ -70,7 +70,7 @@ col_generator = {
     }
     weight_modifier = {
         modifier = {
-            add = 1
+            add = 3
             num_free_districts = {
                 type = district_mining
                 value < @free_districts_low_threshold
@@ -94,10 +94,10 @@ col_generator = {
             num_free_districts = {
                 type = district_hive
                 value <= @small_planet_threshold
-        }
+            }
         }
         modifier = {
-            add = 3
+            add = 5
             num_free_districts = {
                 type = district_mining
                 value < @free_districts_low_threshold
@@ -124,7 +124,7 @@ col_generator = {
             }
         }
         modifier = {
-            add = 2
+            add = 3
             has_designation = col_generator
         }
         modifier = {
@@ -142,7 +142,7 @@ col_generator = {
                 has_modifier = gpm_dunes
                 has_modifier = gpm_tidally_active
             }
-            }
+        }
         modifier = {
             add = 40
             OR = {
@@ -151,14 +151,49 @@ col_generator = {
             }
         }
         modifier = {
+            add = 8
+            OR = {
+                has_modifier = hazardous_weather
+                has_modifier = strong_magnetic_field
+            }
+        }
+        modifier = {
+            add = 3
+            num_districts = {
+                type = district_generator
+                value >= 1
+            }
+        }
+        modifier = {
             factor = 0.1
             has_modifier = gpm_weak_magnetic_field_2
         }
         modifier = {
-            add = 5
+            add = 3
             num_districts = {
                 type = district_generator
-                value >= @built_districts_medium_threshold
+                value >= 2
+            }
+        }
+        modifier = {
+            add = 3
+            num_districts = {
+                type = district_generator
+                value >= 3
+            }
+        }
+        modifier = {
+            add = 6
+            num_districts = {
+                type = district_generator
+                value >= 4
+            }
+        }
+        modifier = {
+            add = 6
+            num_districts = {
+                type = district_generator
+                value >= 6
             }
         }
         modifier = {
@@ -167,6 +202,10 @@ col_generator = {
                 type = district_generator
                 value = 0
             }
+        }
+        modifier = {
+            factor = 1.5
+            has_planet_flag = str_acceptable_habitability
         }
     }
 }

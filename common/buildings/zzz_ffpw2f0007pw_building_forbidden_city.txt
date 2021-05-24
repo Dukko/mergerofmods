@@ -1,9 +1,9 @@
 pw_building_forbidden_city = {
     base_buildtime = @pw_building_buildtime
-    position_priority = 75
-    category = government
+    position_priority = 85
     base_cap_amount = 1
     can_be_ruined = no
+    category = government
     prerequisites = {
         pw_tech_elitist_urbanism
     }
@@ -35,9 +35,25 @@ pw_building_forbidden_city = {
             minerals = @pw_building_cost
             exotic_gases = @pw_building_cost_rare
         }
+        cost = {
+            trigger = {
+                planet = {
+                    pw_has_any_planetary_wonder = yes
+                }
+            }
+            minerals = @pw_building_cost_extra
+        }
         upkeep = {
             energy = @pw_building_upkeep_expensive
-            exotic_gases = @pw_building_upkeep_rare
+            exotic_gases = @pw_building_upkeep_rare_1
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    pw_has_any_additional_planetary_wonder = yes
+                }
+            }
+            energy = @pw_building_upkeep_extra
         }
     }
     destroy_trigger = {
@@ -59,48 +75,6 @@ pw_building_forbidden_city = {
     }
     planet_modifier = {
         planet_max_districts_add = -1
-        planet_housing_add = 3
-        planet_amenities_mult = 0.1
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_authoritarian = yes
-            }
-        }
-        modifier = {
-            job_bureaucrat_add = 2
-            job_clerk_add = 4
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_authoritarian = yes
-            }
-            owner = {
-                is_megacorp = no
-            }
-        }
-        modifier = {
-            job_administrator_add = 1
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_authoritarian = yes
-            }
-            owner = {
-                is_megacorp = yes
-            }
-        }
-        modifier = {
-            job_executive_add = 2
-        }
     }
     triggered_planet_modifier = {
         potential = {
@@ -133,7 +107,26 @@ pw_building_forbidden_city = {
                 is_authoritarian = yes
             }
             owner = {
-                has_valid_civic = civic_merchant_guilds
+                is_megacorp = yes
+            }
+        }
+        modifier = {
+            job_executive_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_authoritarian = yes
+            }
+            OR = {
+                owner = {
+                    has_valid_civic = civic_merchant_guilds
+                }
+                owner = {
+                    has_valid_civic = civic_corporate_dominion
+                }
             }
         }
         modifier = {
@@ -187,25 +180,10 @@ pw_building_forbidden_city = {
             exists = owner
             owner = {
                 is_authoritarian = yes
-                NOT = {
-                    has_valid_civic = civic_warrior_culture
-                }
             }
         }
         modifier = {
-            job_entertainer_add = 1
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_authoritarian = yes
-                has_valid_civic = civic_warrior_culture
-            }
-        }
-        modifier = {
-            job_duelist_add = 1
+            job_clerk_add = 4
         }
     }
     triggered_planet_modifier = {
@@ -245,6 +223,17 @@ pw_building_forbidden_city = {
             planet_stability_add = @pw_stability_production
         }
     }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_edict = pw_ambition_wonders_beyond_ambition
+            }
+        }
+        modifier = {
+            planet_housing_mult = 0.05
+        }
+    }
     triggered_desc = {
         text = pw_planet_wonder_lb
     }
@@ -256,9 +245,19 @@ pw_building_forbidden_city = {
             exists = owner
             owner = {
                 is_authoritarian = yes
-            }
-            owner = {
                 is_megacorp = no
+                NOT = {
+                    has_valid_civic = civic_merchant_guilds
+                }
+                NOT = {
+                    has_valid_civic = civic_aristocratic_elite
+                }
+                NOT = {
+                    has_valid_civic = civic_technocracy
+                }
+                NOT = {
+                    has_valid_civic = civic_merchant_guilds
+                }
             }
         }
         text = job_administrator_effect_desc
@@ -281,8 +280,13 @@ pw_building_forbidden_city = {
             owner = {
                 is_authoritarian = yes
             }
-            owner = {
-                has_valid_civic = civic_merchant_guilds
+            OR = {
+                owner = {
+                    has_valid_civic = civic_merchant_guilds
+                }
+                owner = {
+                    has_valid_civic = civic_corporate_dominion
+                }
             }
         }
         text = job_merchant_effect_desc
@@ -331,32 +335,6 @@ pw_building_forbidden_city = {
             }
             NOT = {
                 owner = {
-                    has_valid_civic = civic_warrior_culture
-                }
-            }
-        }
-        text = job_entertainer_effect_desc
-    }
-    triggered_desc = {
-        trigger = {
-            exists = owner
-            owner = {
-                is_authoritarian = yes
-            }
-            owner = {
-                has_valid_civic = civic_warrior_culture
-            }
-        }
-        text = job_duelist_effect_desc
-    }
-    triggered_desc = {
-        trigger = {
-            exists = owner
-            owner = {
-                is_authoritarian = yes
-            }
-            NOT = {
-                owner = {
                     has_ascension_perk = ap_mind_over_matter
                 }
             }
@@ -382,15 +360,6 @@ pw_building_forbidden_city = {
                 is_authoritarian = yes
             }
         }
-        text = job_bureaucrat_effect_desc
-    }
-    triggered_desc = {
-        trigger = {
-            exists = owner
-            owner = {
-                is_authoritarian = yes
-            }
-        }
         text = job_clerk_effect_desc
     }
     on_built = {
@@ -399,7 +368,7 @@ pw_building_forbidden_city = {
         }
     }
     ai_weight = {
-        weight = 50
+        weight = 55
         modifier = {
             factor = 0
             buildings_has_exotic_gases = no

@@ -27,6 +27,8 @@ tech_ecological_adaptation = {
         }
     }
     ai_weight = {
+        factor = 10000
+        factor = 25
         modifier = {
             factor = 1.25
             research_leader = {

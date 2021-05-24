@@ -1,6 +1,6 @@
 pw_tech_guardian_angel = {
     area = society
-    cost = @tier4cost3
+    cost = @pw_tech_cost_2
     tier = 4
     category = {
         military_theory
@@ -13,7 +13,7 @@ pw_tech_guardian_angel = {
     weight = @tier4weight3
     is_rare = yes
     weight_modifier = {
-        factor = 0.25
+        factor = @pw_tech_weight_mod
         modifier = {
             factor = 1.5
             research_leader = {
@@ -85,9 +85,13 @@ pw_tech_guardian_angel = {
             factor = 0.5
             is_pacifist = yes
         }
+        modifier = {
+            factor = 2
+            is_at_war = yes
+        }
     }
     ai_weight = {
-        factor = 10
+        factor = @pw_tech_ai_weight
         modifier = {
             factor = 2
             research_leader = {

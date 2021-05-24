@@ -57,7 +57,7 @@ col_factory = {
     }
     weight_modifier = {
         modifier = {
-            add = 2
+            add = 4
             owner = {
                 has_monthly_income = {
                     resource = consumer_goods
@@ -80,14 +80,196 @@ col_factory = {
             }
         }
         modifier = {
+            add = 100
+            or = {
+                has_designation = col_factory
+                has_designation = col_foundry
+            }
+            owner = {
+                resource_income_compare = {
+                    resource = consumer_goods
+                    value < 0
+                }
+                resource_stockpile_compare = {
+                    resource = consumer_goods
+                    value < 10
+                }
+            }
+        }
+        modifier = {
+            add = 7
+            has_designation = col_factory
+        }
+        modifier = {
+            add = 5
+            str_factory_to_foundry_switcher = yes
+        }
+        modifier = {
+            add = 50
+            has_designation = col_foundry
+            str_foundry_to_factory_switcher = yes
+            or = {
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = consumer_goods
+                        value < 110
+                    }
+                    resource_income_compare = {
+                        resource = consumer_goods
+                        value < 0
+                    }
+                }
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = consumer_goods
+                        value < 190
+                    }
+                    resource_income_compare = {
+                        resource = consumer_goods
+                        value < -20
+                    }
+                }
+            }
+        }
+        modifier = {
+            add = 50
+            has_designation = col_foundry
+            str_factory_to_foundry_switcher = yes
+            or = {
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = consumer_goods
+                        value < 160
+                    }
+                    resource_income_compare = {
+                        resource = consumer_goods
+                        value < 0
+                    }
+                }
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = consumer_goods
+                        value < 250
+                    }
+                    resource_income_compare = {
+                        resource = consumer_goods
+                        value < -20
+                    }
+                }
+            }
+        }
+        modifier = {
+            add = 50
+            has_designation = col_foundry
+            str_extra_switcher = yes
+            or = {
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = consumer_goods
+                        value < 210
+                    }
+                    resource_income_compare = {
+                        resource = consumer_goods
+                        value < 0
+                    }
+                }
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = consumer_goods
+                        value < 300
+                    }
+                    resource_income_compare = {
+                        resource = consumer_goods
+                        value < -20
+                    }
+                }
+            }
+        }
+        modifier = {
+            add = 2
+            owner = {
+                used_naval_capacity_percent > 0.9
+                resource_income_compare = {
+                    resource = alloys
+                    value > 700
+                }
+                resource_stockpile_compare = {
+                    resource = alloys
+                    value > 7000
+                }
+            }
+            num_buildings = {
+                type = building_factory_1
+                value = 0
+            }
+            num_buildings = {
+                type = building_factory_2
+                value = 0
+            }
+        }
+        modifier = {
+            add = 2
+            owner = {
+                used_naval_capacity_percent > 0.9
+                resource_income_compare = {
+                    resource = alloys
+                    value > 700
+                }
+                resource_stockpile_compare = {
+                    resource = alloys
+                    value > 7000
+                }
+            }
+        }
+        modifier = {
             add = 5
             has_designation = col_factory
+            owner = {
+                or = {
+                    resource_income_compare = {
+                        resource = consumer_goods
+                        value < 20
+                    }
+                    resource_stockpile_compare = {
+                        resource = consumer_goods
+                        value < 250
+                    }
+                }
+            }
         }
         modifier = {
             add = 5
             num_districts = {
                 type = district_industrial
-                value >= @built_districts_medium_threshold
+                value >= 1
+            }
+        }
+        modifier = {
+            add = 5
+            num_districts = {
+                type = district_industrial
+                value >= 2
+            }
+        }
+        modifier = {
+            add = 5
+            num_districts = {
+                type = district_industrial
+                value >= 3
+            }
+        }
+        modifier = {
+            add = 10
+            num_districts = {
+                type = district_industrial
+                value >= 4
+            }
+        }
+        modifier = {
+            add = 10
+            num_districts = {
+                type = district_industrial
+                value >= 6
             }
         }
         modifier = {
@@ -95,6 +277,26 @@ col_factory = {
             num_districts = {
                 type = district_industrial
                 value = 0
+            }
+        }
+        modifier = {
+            add = 6
+            has_building = building_factory_1
+        }
+        modifier = {
+            add = 10
+            has_building = building_factory_2
+        }
+        modifier = {
+            add = 2
+            owner = {
+                resource_income_compare = {
+                    resource = consumer_goods
+                    value < 0
+                }
+            }
+            not = {
+                has_designation = col_foundry
             }
         }
         modifier = {
@@ -113,24 +315,21 @@ col_factory = {
         }
         modifier = {
             add = 2
-            has_building = building_factory_1
-        }
-        modifier = {
-            add = 4
-            has_building = building_factory_2
-        }
-        modifier = {
-            factor = 0
+            owner = {
+                resource_income_compare = {
+                    resource = consumer_goods
+                    value < 0
+                }
+            }
+            not = {
+                has_designation = col_foundry
+            }
             num_buildings = {
-                type = building_factory_1
+                type = building_foundry_1
                 value = 0
             }
             num_buildings = {
-                type = building_factory_2
-                value = 0
-            }
-            num_buildings = {
-                type = building_factory_3
+                type = building_foundry_2
                 value = 0
             }
         }

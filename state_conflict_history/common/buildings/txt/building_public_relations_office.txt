@@ -21,13 +21,13 @@ building_public_relations_office = {
             minerals = @b3_minerals
         }
         produces = {
-            unity = 12
+            unity = 6
         }
         upkeep = {
             energy = 3
         }
     }
     ai_weight = {
-        weight = 2
+        weight = 0
     }
 }

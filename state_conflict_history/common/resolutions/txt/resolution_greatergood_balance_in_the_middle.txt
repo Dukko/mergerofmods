@@ -133,6 +133,10 @@ resolution_greatergood_balance_in_the_middle = {
             is_socialism = yes
         }
         modifier = {
+            factor = 0.75
+            is_authoritarian = yes
+        }
+        modifier = {
             factor = 0
             in_breach_of = resolution_greatergood_balance_in_the_middle
         }

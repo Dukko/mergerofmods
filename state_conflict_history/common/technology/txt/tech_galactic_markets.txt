@@ -59,17 +59,9 @@ tech_galactic_markets = {
         }
         modifier = {
             factor = 0
-            num_communications < 2
-        }
-        modifier = {
-            factor = 0
             OR = {
                 has_ethic = ethic_fanatic_socialism
             }
-        }
-        modifier = {
-            factor = 2
-            has_valid_civic = civic_bancorp
         }
         modifier = {
             factor = 0

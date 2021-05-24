@@ -1,6 +1,6 @@
 pw_building_holy_reliquary = {
     base_buildtime = @pw_building_buildtime
-    position_priority = 85
+    position_priority = 95
     category = unity
     base_cap_amount = 1
     can_be_ruined = no
@@ -44,9 +44,25 @@ pw_building_holy_reliquary = {
             minerals = @pw_building_cost
             rare_crystals = @pw_building_cost_rare
         }
+        cost = {
+            trigger = {
+                planet = {
+                    pw_has_any_planetary_wonder = yes
+                }
+            }
+            minerals = @pw_building_cost_extra
+        }
         upkeep = {
             energy = @pw_building_upkeep_expensive
-            rare_crystals = @pw_building_upkeep_rare
+            rare_crystals = @pw_building_upkeep_rare_1
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    pw_has_any_additional_planetary_wonder = yes
+                }
+            }
+            energy = @pw_building_upkeep_extra
         }
     }
     destroy_trigger = {
@@ -77,7 +93,6 @@ pw_building_holy_reliquary = {
     }
     planet_modifier = {
         planet_max_districts_add = -1
-        planet_priests_produces_mult = 0.2
     }
     triggered_planet_modifier = {
         potential = {
@@ -101,8 +116,8 @@ pw_building_holy_reliquary = {
             }
         }
         modifier = {
-            job_high_priest_add = @pw_building_ruler_jobs
-            job_priest_add = 6
+            job_high_priest_add = 1
+            job_priest_add = 4
         }
     }
     triggered_planet_modifier = {
@@ -165,23 +180,10 @@ pw_building_holy_reliquary = {
     triggered_planet_modifier = {
         potential = {
             exists = owner
-            owner = {
-                is_megacorp = no
-            }
+            has_active_building = building_temple_of_prosperity
         }
         modifier = {
-            job_culture_worker_add = 2
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_megacorp = yes
-            }
-        }
-        modifier = {
-            job_manager_add = 2
+            job_preacher_add = 2
         }
     }
     triggered_planet_modifier = {
@@ -195,6 +197,20 @@ pw_building_holy_reliquary = {
             planet_stability_add = @pw_stability_production
         }
     }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_megacorp = no
+            }
+            owner = {
+                has_edict = pw_ambition_wonders_beyond_ambition
+            }
+        }
+        modifier = {
+            planet_priests_produces_mult = 0.5
+        }
+    }
     triggered_desc = {
         text = pw_planet_wonder_lb
     }
@@ -203,6 +219,24 @@ pw_building_holy_reliquary = {
     }
     triggered_desc = {
         text = pw_building_holy_reliquary_tooltip
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                has_country_flag = pw_holy_reliquary_relic_keeper_appointed
+            }
+        }
+        text = job_pw_relic_keeper_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_spiritualist = yes
+            }
+        }
+        text = job_high_priest_effect_desc
     }
     triggered_desc = {
         trigger = {
@@ -253,20 +287,9 @@ pw_building_holy_reliquary = {
     triggered_desc = {
         trigger = {
             exists = owner
-            owner = {
-                is_megacorp = no
-            }
+            has_active_building = building_temple_of_prosperity
         }
-        text = job_culture_worker_effect_desc
-    }
-    triggered_desc = {
-        trigger = {
-            exists = owner
-            owner = {
-                is_megacorp = yes
-            }
-        }
-        text = job_manager_effect_desc
+        text = job_preacher_effect_desc
     }
     on_built = {
         planet_event = {

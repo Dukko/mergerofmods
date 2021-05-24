@@ -14,6 +14,7 @@ d_massive_glacier = {
             is_cold = yes
             is_planet_class = pc_tidallylocked
             has_modifier = "boreal_world"
+            has_modifier = "subglacial_world"
         }
     }
     planet_modifier = {

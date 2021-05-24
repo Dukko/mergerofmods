@@ -3,33 +3,10 @@ building_stronghold = {
     position_priority = 100
     category = army
     potential = {
-        buildings_simple_allow = yes
-        owner = {
-            or = {
-                is_ai = no
-                used_naval_capacity_percent > 0.95
-            }
-        }
+        str_stronghold_potential = yes
     }
     destroy_trigger = {
-        exists = owner
-        owner = {
-            is_ai = yes
-        }
-        AND = {
-            OR = {
-                num_buildings = {
-                    type = building_stronghold
-                    value > 1
-                }
-                has_building = building_fortress
-            }
-            free_building_slots = 0
-            owner = {
-                used_naval_capacity_percent < 0.6
-                is_at_war = no
-            }
-        }
+        str_stronghold_destroy = yes
     }
     triggered_planet_modifier = {
         potential = {
@@ -67,6 +44,19 @@ building_stronghold = {
         modifier = {
             job_soldier_add = 1
             job_mercenary_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            str_force_stronghold = yes
+        }
+        modifier = {
+            job_starnet_spice_melange_farmer_add = 1
+            job_starnet_spice_melange_antifarmer_add = -1
         }
     }
     triggered_planet_modifier = {
@@ -130,5 +120,145 @@ building_stronghold = {
             }
         }
         text = job_noble_effect_desc
+    }
+    ai_resource_production = {
+        energy = 10
+        minerals = 10
+        food = 10
+        alloys = 10
+        physics_research = 15
+        trigger = {
+            nor = {
+                has_designation = col_bureau
+                has_designation = col_research
+            }
+            years_passed > 80
+            owner = {
+                used_naval_capacity_percent > 0.97
+                resource_stockpile_compare = {
+                    resource = alloys
+                    value > 1500
+                }
+                resource_stockpile_compare = {
+                    resource = minerals
+                    value > 1500
+                }
+                resource_income_compare = {
+                    resource = minerals
+                    value > 40
+                }
+                resource_income_compare = {
+                    resource = energy
+                    value > -5
+                }
+            }
+        }
+    }
+    ai_resource_production = {
+        alloys = 6
+        trigger = {
+            nor = {
+                has_designation = col_bureau
+                has_designation = col_research
+            }
+            years_passed > 80
+            owner = {
+                used_naval_capacity_percent > 0.97
+                resource_stockpile_compare = {
+                    resource = alloys
+                    value > 3500
+                }
+                resource_income_compare = {
+                    resource = energy
+                    value > 5
+                }
+            }
+        }
+    }
+    ai_resource_production = {
+        alloys = 8
+        trigger = {
+            or = {
+                has_planet_flag = str_acceptable_habitability
+                has_planet_flag = str_bad_habitability
+            }
+            nor = {
+                has_designation = col_bureau
+                has_designation = col_research
+            }
+            years_passed > 80
+            owner = {
+                used_naval_capacity_percent > 0.97
+                resource_stockpile_compare = {
+                    resource = alloys
+                    value > 3500
+                }
+                resource_income_compare = {
+                    resource = energy
+                    value > 5
+                }
+            }
+        }
+    }
+    ai_resource_production = {
+        energy = 10
+        trigger = {
+            or = {
+                has_planet_flag = str_acceptable_habitability
+                has_planet_flag = str_bad_habitability
+            }
+            nor = {
+                has_designation = col_bureau
+                has_designation = col_research
+            }
+            years_passed > 80
+            owner = {
+                used_naval_capacity_percent > 0.97
+                resource_stockpile_compare = {
+                    resource = alloys
+                    value > 1500
+                }
+                resource_income_compare = {
+                    resource = energy
+                    value > 5
+                }
+            }
+        }
+    }
+    ai_resource_production = {
+        energy = 6
+        trigger = {
+            owner = {
+                lategame = yes
+                used_naval_capacity_percent > 0.8
+                resource_stockpile_compare = {
+                    resource = alloys
+                    value > 1000
+                }
+                resource_income_compare = {
+                    resource = energy
+                    value > 5
+                }
+            }
+            free_amenities > -6
+        }
+    }
+    ai_resource_production = {
+        alloys = 6
+        trigger = {
+            owner = {
+                lategame = yes
+                used_naval_capacity_percent > 0.8
+                resource_stockpile_compare = {
+                    resource = alloys
+                    value > 2000
+                }
+                resource_income_compare = {
+                    resource = energy
+                    value > 5
+                }
+            }
+            free_amenities > -6
+        }
     }
 }

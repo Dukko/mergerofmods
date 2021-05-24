@@ -15,6 +15,7 @@ pc_eyeball = {
     city_color_lut = "gfx/portraits/misc/colorcorrection_arctic.dds"
     colonizable = yes
     initial = yes
+    starting_planet = no
     enable_tilt = no
     can_be_moon = no
     planet_size = {

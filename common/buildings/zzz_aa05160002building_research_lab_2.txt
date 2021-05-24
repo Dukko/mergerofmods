@@ -4,12 +4,24 @@ building_research_lab_2 = {
     category = research
     allow = {
         has_upgraded_capital = yes
+        buildings_has_exotic_gases = yes
+        or = {
+            owner = {
+                is_ai = no
+            }
+            and = {
+                free_building_slots = 0
+                free_district_slots < 3
+                has_designation = col_research
+            }
+        }
     }
     destroy_trigger = {
         OR = {
             has_modifier = slave_colony
             has_modifier = resort_colony
             buildings_no_exotic_gases = yes
+            str_research_destroy = yes
         }
     }
     triggered_planet_modifier = {

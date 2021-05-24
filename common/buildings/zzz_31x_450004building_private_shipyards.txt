@@ -30,6 +30,6 @@ building_private_shipyards = {
         }
     }
     ai_weight = {
-        weight = 1
+        weight = 100
     }
 }

@@ -14,11 +14,11 @@ pw_poly_artisan = {
     resources = {
         category = planet_artisans
         produces = {
-            consumer_goods = 10
+            consumer_goods = 8
             unity = 2
         }
         upkeep = {
-            minerals = 10
+            minerals = 12
         }
         upkeep = {
             trigger = {

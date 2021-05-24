@@ -10,7 +10,15 @@ building_holo_theatres = {
         }
     }
     allow = {
-        buildings_simple_allow = yes
+        or = {
+            owner = {
+                is_ai = no
+            }
+            and = {
+                free_amenities < -8
+                num_pops > 11
+            }
+        }
     }
     destroy_trigger = {
         exists = owner
@@ -73,6 +81,19 @@ building_holo_theatres = {
         potential = {
             exists = owner
             owner = {
+                is_ai = yes
+            }
+            str_force_holotheatre = yes
+        }
+        modifier = {
+            job_starnet_spice_melange_farmer_add = 3
+            job_starnet_spice_melange_antifarmer_add = -3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
                 has_valid_civic = civic_warrior_culture
             }
         }
@@ -114,5 +135,18 @@ building_holo_theatres = {
             }
         }
         text = job_duelist_effect_desc
+    }
+    ai_resource_production = {
+        alloys = 10
+        trigger = {
+            free_amenities < -11
+        }
+    }
+    ai_resource_production = {
+        energy = 10
+        physics_research = 15
+        trigger = {
+            free_amenities < -11
+        }
     }
 }

@@ -43,6 +43,6 @@ utility_component_template = {
         ship_tracking_add = @tracking1
     }
     ai_weight = {
-        weight = 100
+        weight = 4
     }
 }

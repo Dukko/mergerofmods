@@ -2,6 +2,7 @@ building_dimensional_fabricator = {
     base_buildtime = @b2_time
     can_build = yes
     can_demolish = yes
+    icon = building_nanite_transmuter
     potential = {
         custom_tooltip = {
             exists = owner

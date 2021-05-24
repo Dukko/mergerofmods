@@ -1,6 +1,6 @@
 pw_tech_utilitarian_vigilance = {
     area = society
-    cost = @tier4cost3
+    cost = @pw_tech_cost_1
     tier = 4
     category = {
         statecraft
@@ -17,7 +17,7 @@ pw_tech_utilitarian_vigilance = {
         }
     }
     weight_modifier = {
-        factor = 0.25
+        factor = @pw_tech_weight_mod
         modifier = {
             factor = 1.5
             research_leader = {
@@ -54,7 +54,7 @@ pw_tech_utilitarian_vigilance = {
             }
         }
         modifier = {
-            factor = 2
+            factor = 1.25
             is_authoritarian = yes
         }
         modifier = {
@@ -72,6 +72,10 @@ pw_tech_utilitarian_vigilance = {
             has_valid_civic = civic_police_state
         }
         modifier = {
+            factor = 1.5
+            has_valid_civic = civic_cutthroat_politics
+        }
+        modifier = {
             factor = 0
             has_valid_civic = civic_criminal_heritage
         }
@@ -81,7 +85,7 @@ pw_tech_utilitarian_vigilance = {
         }
     }
     ai_weight = {
-        factor = 10
+        factor = @pw_tech_ai_weight
         modifier = {
             factor = 2
             research_leader = {

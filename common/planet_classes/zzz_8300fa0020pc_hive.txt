@@ -17,6 +17,7 @@ pc_hive = {
     modifier = {
         planet_jobs_produces_mult = 0.1
         planet_max_buildings_add = 12
+        job_spawning_drone_add = 1
     }
     spawn_odds = 0
     extra_orbit_size = 1

@@ -33,9 +33,25 @@ tr_prosperity_adopt = {
         }
     }
     ai_weight = {
-        factor = 10
+        factor = 20
         modifier = {
-            factor = 5
+            factor = 100
+            has_tradition = tr_expansion_finish
+            is_difficulty < 3
+        }
+        modifier = {
+            factor = 0
+            not = {
+                has_tradition = tr_expansion_colonization_fever
+            }
+        }
+        modifier = {
+            factor = 100
+            has_tradition = tr_expansion_finish
+            has_tradition = tr_supremacy_finish
+        }
+        modifier = {
+            factor = 10
             years_passed < 10
         }
         modifier = {
@@ -70,7 +86,7 @@ tr_prosperity_adopt = {
                 AND = {
                     has_tradition = tr_expansion_adopt
                     NOT = {
-                        has_tradition = tr_expansion_finish
+                        has_tradition = tr_expansion_colonization_fever
                     }
                 }
                 AND = {

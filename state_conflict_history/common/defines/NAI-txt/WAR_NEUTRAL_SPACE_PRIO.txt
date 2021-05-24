@@ -1,0 +1,3 @@
+NAI = {
+    WAR_NEUTRAL_SPACE_PRIO = 0.1
+}

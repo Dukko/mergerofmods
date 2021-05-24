@@ -101,7 +101,8 @@ tech_synthetic_workers = {
         }
     }
     ai_weight = {
-        weight = 2
+        weight = 600
+        factor = 125
         modifier = {
             factor = 2
             OR = {

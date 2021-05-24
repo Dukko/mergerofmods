@@ -1,9 +1,9 @@
 pw_building_transhabitat_logistics_network = {
     base_buildtime = @pw_building_buildtime
-    position_priority = 75
-    category = amenity
+    position_priority = 120
     base_cap_amount = 1
     can_be_ruined = no
+    category = amenity
     icon = pw_building_transplanetary_logistics_network
     prerequisites = {
         pw_tech_transplanetary_logistics
@@ -44,9 +44,25 @@ pw_building_transhabitat_logistics_network = {
             minerals = @pw_building_cost
             exotic_gases = @pw_building_cost_rare
         }
+        cost = {
+            trigger = {
+                planet = {
+                    pw_has_any_planetary_wonder = yes
+                }
+            }
+            minerals = @pw_building_cost_extra
+        }
         upkeep = {
             energy = @pw_building_upkeep_expensive
-            exotic_gases = @pw_building_upkeep_rare
+            exotic_gases = @pw_building_upkeep_rare_1
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    pw_has_any_additional_planetary_wonder = yes
+                }
+            }
+            energy = @pw_building_upkeep_extra
         }
     }
     destroy_trigger = {
@@ -83,19 +99,6 @@ pw_building_transhabitat_logistics_network = {
             owner = {
                 is_egalitarian = yes
             }
-        }
-        modifier = {
-            job_merchant_add = 1
-            job_bureaucrat_add = 3
-            job_clerk_add = 5
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_egalitarian = yes
-            }
             owner = {
                 is_megacorp = no
             }
@@ -122,11 +125,34 @@ pw_building_transhabitat_logistics_network = {
         potential = {
             exists = owner
             owner = {
+                is_egalitarian = yes
+            }
+        }
+        modifier = {
+            job_bureaucrat_add = 1
+            job_clerk_add = 4
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
                 has_edict = pw_ambition_monumentality
             }
         }
         modifier = {
             planet_stability_add = @pw_stability_production
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_edict = pw_ambition_wonders_beyond_ambition
+            }
+        }
+        modifier = {
+            planet_housing_mult = 0.05
         }
     }
     triggered_desc = {
@@ -166,15 +192,6 @@ pw_building_transhabitat_logistics_network = {
                 is_egalitarian = yes
             }
         }
-        text = job_merchant_effect_desc
-    }
-    triggered_desc = {
-        trigger = {
-            exists = owner
-            owner = {
-                is_egalitarian = yes
-            }
-        }
         text = job_bureaucrat_effect_desc
     }
     triggered_desc = {
@@ -192,7 +209,7 @@ pw_building_transhabitat_logistics_network = {
         }
     }
     ai_weight = {
-        weight = 50
+        weight = 55
         modifier = {
             factor = 0
             buildings_has_exotic_gases = no

@@ -63,7 +63,8 @@ tech_droid_workers = {
         }
     }
     ai_weight = {
-        weight = 2
+        weight = 100
+        factor = 5
         modifier = {
             factor = 2
             OR = {

@@ -15,6 +15,11 @@ auth_strict_democratic = {
             }
         }
     }
+    random_weight = {
+        modifier = {
+            factor = 0.2
+        }
+    }
     country_modifier = {
         planet_stability_add = 10
         pop_cat_worker_political_power = 3

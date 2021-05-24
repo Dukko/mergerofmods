@@ -30,15 +30,33 @@ tech_planetary_shield_generator = {
                 }
             }
         }
-    }
-    ai_weight = {
-        factor = 2
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = @federation_perk_factor
+            has_federation = yes
+            federation = {
+                has_federation_perk = rare_tech_boost
+                any_member = {
+                    has_technology = tech_planetary_shield_generator
+                }
+            }
+        }
         modifier = {
             factor = 1.25
             research_leader = {
                 area = physics
                 has_trait = "leader_trait_expertise_field_manipulation"
             }
+        }
+    }
+    ai_weight = {
+        factor = 25
+        modifier = {
+            factor = 1000
+            has_technology = tech_energy_torpedoes_2
         }
     }
 }

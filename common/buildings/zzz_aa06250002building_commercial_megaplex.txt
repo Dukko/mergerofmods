@@ -6,6 +6,7 @@ building_commercial_megaplex = {
         exists = owner
         owner = {
             is_regular_empire = yes
+            is_ai = no
         }
         NOT = {
             has_modifier = slave_colony
@@ -23,11 +24,17 @@ building_commercial_megaplex = {
             }
             has_modifier = slave_colony
             buildings_no_crystals = yes
+            and = {
+                owner = {
+                    is_ai = yes
+                }
+                years_passed > 2
+            }
         }
     }
     planet_modifier = {
         job_merchant_add = 3
-        job_clerk_add = 6
+        job_clerk_add = 7
     }
     resources = {
         category = planet_buildings
@@ -48,7 +55,7 @@ building_commercial_megaplex = {
             }
         }
         modifier = {
-            job_clerk_add = 2
+            job_clerk_add = 3
         }
     }
     prerequisites = {

@@ -1,17 +1,18 @@
 pw_tech_particle_supercollider = {
     area = physics
-    cost = @tier4cost3
+    cost = @pw_tech_cost_1
     tier = 4
     category = {
         particles
     }
     prerequisites = {
         pw_tech_planetary_mega_engineering
+        tech_engineering_3
     }
-    weight = @tier4weight2
+    weight = @tier4weight3
     is_rare = yes
     weight_modifier = {
-        factor = 0.25
+        factor = @pw_tech_weight_mod
         modifier = {
             factor = 1.5
             research_leader = {
@@ -58,7 +59,7 @@ pw_tech_particle_supercollider = {
         }
     }
     ai_weight = {
-        factor = 10
+        factor = @pw_tech_ai_weight
         modifier = {
             factor = 1.25
             research_leader = {

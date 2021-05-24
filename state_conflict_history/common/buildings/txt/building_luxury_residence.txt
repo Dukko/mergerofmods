@@ -32,15 +32,36 @@ building_luxury_residence = {
         }
     }
     allow = {
-        buildings_simple_allow = yes
+        or = {
+            owner = {
+                is_ai = no
+            }
+            and = {
+                free_jobs > 0
+                free_amenities < -5
+                or = {
+                    free_district_slots < 3
+                    num_pops < 16
+                    num_pops > 11
+                }
+                free_amenities > -10
+            }
+            and = {
+                free_jobs > 4
+                free_building_slots > 1
+                free_amenities < -10
+                num_pops > 11
+            }
+        }
     }
     destroy_trigger = {
         exists = owner
         OR = {
             AND = {
                 free_building_slots = 0
-                free_jobs < 1
+                free_jobs < -2
                 free_housing > 10
+                free_district_slots = 0
                 owner = {
                     is_ai = yes
                 }

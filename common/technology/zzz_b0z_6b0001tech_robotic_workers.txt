@@ -51,7 +51,11 @@ tech_robotic_workers = {
         }
     }
     ai_weight = {
-        weight = 2
+        weight = 10000
+        modifier = {
+            factor = 50
+            has_technology = tech_energy_torpedoes_2
+        }
         modifier = {
             factor = 2
             OR = {

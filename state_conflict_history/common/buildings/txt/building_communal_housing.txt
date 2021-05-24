@@ -32,6 +32,21 @@ building_communal_housing = {
     }
     allow = {
         buildings_simple_allow = yes
+        or = {
+            owner = {
+                is_ai = no
+            }
+            and = {
+                free_jobs > 0
+                free_amenities < -5
+                or = {
+                    free_district_slots < 3
+                    num_pops < 16
+                    num_pops > 11
+                }
+                free_amenities > -10
+            }
+        }
     }
     destroy_trigger = {
         exists = owner
@@ -41,8 +56,9 @@ building_communal_housing = {
                     is_ai = yes
                 }
                 free_building_slots = 0
-                free_jobs < 1
+                free_jobs < -3
                 free_housing > 10
+                free_district_slots = 0
             }
             AND = {
                 is_planet_class = pc_habitat

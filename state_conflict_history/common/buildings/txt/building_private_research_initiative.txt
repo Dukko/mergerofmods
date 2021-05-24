@@ -21,9 +21,9 @@ building_private_research_initiative = {
             minerals = @b3_minerals
         }
         produces = {
-            physics_research = 10
-            engineering_research = 10
-            society_research = 10
+            physics_research = 6
+            engineering_research = 6
+            society_research = 6
         }
         upkeep = {
             energy = 3
@@ -31,5 +31,11 @@ building_private_research_initiative = {
     }
     ai_weight = {
         weight = 10
+        modifier = {
+            factor = 0
+            branch_office_owner = {
+                lategame = yes
+            }
+        }
     }
 }

@@ -108,6 +108,7 @@ d_mountain_range = {
                 has_modifier = "underground_world"
                 has_modifier = "steppe_world"
                 has_modifier = "ocean_tidally_locked"
+                is_planet_class = pc_hollow
             }
         }
     }

@@ -50,6 +50,44 @@ resolution_galacticstudies_repeal_5 = {
     ai_weight = {
         weight = @resolution_weight_unpopular
         modifier = {
+            factor = 0.5
+            not = {
+                has_country_flag = str_has_bad_tech_score
+            }
+        }
+        modifier = {
+            factor = 1.2
+            has_country_flag = str_has_bad_tech_score
+        }
+        modifier = {
+            factor = 2
+            has_country_flag = str_has_terrible_tech_score
+        }
+        modifier = {
+            factor = 1.1
+            turtler = yes
+        }
+        modifier = {
+            factor = 1.1
+            turtler2 = yes
+        }
+        modifier = {
+            factor = 0.9
+            rusher = yes
+        }
+        modifier = {
+            factor = 0.9
+            rusher2 = yes
+        }
+        modifier = {
+            factor = 0
+            is_materialist = yes
+        }
+        modifier = {
+            factor = 1.5
+            is_spiritualist = yes
+        }
+        modifier = {
             factor = 0
             is_materialist = yes
             is_xenophile = no

@@ -1,4 +1,4 @@
-@resolution_weight_unpopular = 5
+@resolution_weight_normal = 6
 @resolution_cost_t1 = 100
 @resolution_flag_timer = 360
 resolution_galactic_focus_war_in_heaven_support_side_2 = {
@@ -40,11 +40,11 @@ resolution_galactic_focus_war_in_heaven_support_side_2 = {
     }
     potential = {
         has_global_flag = war_in_heaven_ongoing
+        has_galactic_emperor = no
         NOT = {
             has_global_flag = galactic_focus_war_in_heaven
         }
         exists = event_target:FirstSleeper
-        has_galactic_emperor = no
     }
     active = {
         has_global_flag = war_in_heaven_ongoing
@@ -58,23 +58,14 @@ resolution_galactic_focus_war_in_heaven_support_side_2 = {
         }
     }
     ai_weight = {
-        base = @resolution_weight_unpopular
+        base = @resolution_weight_normal
         modifier = {
             factor = 0
             exists = overlord
-            NOT = {
-                has_overlord = event_target:SecondAwakened
-            }
+            has_overlord = event_target:FirstSleeper
         }
         modifier = {
-            factor = 0
-            has_federation = yes
-            alliance = {
-                has_federation_flag = non_aligned_league
-            }
-        }
-        modifier = {
-            factor = 10
+            factor = 2
             exists = overlord
             has_overlord = event_target:SecondSleeper
         }

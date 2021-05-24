@@ -7,7 +7,7 @@ building_commercial_zone = {
             is_regular_empire = yes
             or = {
                 is_ai = no
-                years_passed < 10
+                years_passed < 3
             }
         }
         NOT = {
@@ -25,7 +25,7 @@ building_commercial_zone = {
                 owner = {
                     is_ai = yes
                 }
-                years_passed > 10
+                years_passed > 5
             }
         }
     }
@@ -78,7 +78,7 @@ building_commercial_zone = {
         }
     }
     ai_resource_production = {
-        energy = 3
+        energy = 0
         trigger = {
             OR = {
                 num_unemployed >= 10

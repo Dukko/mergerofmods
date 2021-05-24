@@ -50,7 +50,10 @@ listening_post = {
         }
         modifier = {
             factor = 0
-            country_uses_food = yes
+            exists = owner
+            owner = {
+                country_uses_food = yes
+            }
             not = {
                 has_starbase_building = hydroponics_bay
             }

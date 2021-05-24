@@ -32,6 +32,11 @@ ap_world_shaper = {
         }
     }
     ai_weight = {
-        factor = 5
+        factor = 10000
+        modifier = {
+            factor = 0
+            has_ascension_perk = ap_machine_worlds
+            has_ascension_perk = ap_hive_worlds
+        }
     }
 }

@@ -33,6 +33,7 @@ tech_paradise_dome = {
         }
     }
     ai_weight = {
+        factor = 25
         modifier = {
             factor = 1.25
             research_leader = {

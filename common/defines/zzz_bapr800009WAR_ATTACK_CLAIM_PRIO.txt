@@ -1,0 +1,3 @@
+NAI = {
+    WAR_ATTACK_CLAIM_PRIO = 16.5
+}

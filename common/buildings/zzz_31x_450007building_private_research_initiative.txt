@@ -13,7 +13,7 @@ building_private_research_initiative = {
         }
     }
     planet_modifier = {
-        job_clerk_add = 2
+        job_researcher_add = 1
     }
     resources = {
         category = planet_branch_office_buildings
@@ -31,5 +31,11 @@ building_private_research_initiative = {
     }
     ai_weight = {
         weight = 10
+        modifier = {
+            factor = 0
+            branch_office_owner = {
+                lategame = yes
+            }
+        }
     }
 }

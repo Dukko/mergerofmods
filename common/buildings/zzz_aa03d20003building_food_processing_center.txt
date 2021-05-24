@@ -4,6 +4,7 @@ building_food_processing_center = {
     category = resource
     allow = {
         exists = owner
+        buildings_has_motes = yes
         has_upgraded_capital = yes
     }
     destroy_trigger = {
@@ -106,7 +107,7 @@ building_food_processing_center = {
         }
     }
     ai_resource_production = {
-        food = 6
+        food = 15
         trigger = {
             planet_resource_compare = {
                 resource = food
@@ -116,7 +117,7 @@ building_food_processing_center = {
         }
     }
     ai_resource_production = {
-        food = 6
+        food = 30
         trigger = {
             planet_resource_compare = {
                 resource = food

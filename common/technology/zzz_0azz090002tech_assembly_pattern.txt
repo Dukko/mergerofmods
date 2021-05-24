@@ -30,6 +30,7 @@ tech_assembly_pattern = {
         }
     }
     ai_weight = {
+        factor = 8
         modifier = {
             factor = 1.25
             research_leader = {

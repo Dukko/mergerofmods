@@ -4,11 +4,11 @@ pw_tech_industrial_hearth = {
         industry
     }
     tier = 5
-    cost = @tier5cost1
+    cost = @pw_tech_cost_4
     prerequisites = {
         pw_tech_planetary_mantle_production
     }
-    weight = @tier5weight1
+    weight = @tier5weight2
     is_rare = yes
     potential = {
         country_uses_consumer_goods = yes
@@ -20,7 +20,7 @@ pw_tech_industrial_hearth = {
         }
     }
     weight_modifier = {
-        factor = 0.25
+        factor = @pw_tech_weight_mod
         modifier = {
             factor = 1.5
             research_leader = {
@@ -68,7 +68,7 @@ pw_tech_industrial_hearth = {
         }
     }
     ai_weight = {
-        factor = 10
+        factor = @pw_tech_ai_weight
         modifier = {
             factor = 2
             research_leader = {

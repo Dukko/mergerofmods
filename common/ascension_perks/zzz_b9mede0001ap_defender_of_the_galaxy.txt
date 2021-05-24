@@ -28,12 +28,51 @@ ap_defender_of_the_galaxy = {
         }
     }
     ai_weight = {
-        factor = 20
+        factor = 5
+        modifier = {
+            factor = 5
+            has_global_flag = galactic_crisis_happened
+        }
         modifier = {
             factor = 0
             NOR = {
                 has_global_flag = galactic_crisis_happened
                 has_global_flag = gray_goo_crisis_active
+                any_country = {
+                    relative_power = {
+                        who = prev
+                        value > equivalent
+                    }
+                    has_ascension_perk = ap_become_the_crisis
+                }
+            }
+        }
+        modifier = {
+            factor = 100
+            has_global_flag = galactic_crisis_happened
+            fleet_power < 200000
+        }
+        modifier = {
+            factor = 100
+            any_country = {
+                has_ascension_perk = ap_become_the_crisis
+                or = {
+                    relative_power = {
+                        who = prev
+                        category = technology
+                        value > equivalent
+                    }
+                    relative_power = {
+                        who = prev
+                        category = economy
+                        value > equivalent
+                    }
+                    relative_power = {
+                        who = prev
+                        category = fleet
+                        value > equivalent
+                    }
+                }
             }
         }
     }

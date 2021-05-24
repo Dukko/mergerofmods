@@ -1,8 +1,8 @@
 opinion_forced_subjectized = {
     opinion = {
-        base = -30
+        base = -100
     }
     decay = {
-        base = 5
+        base = 1
     }
 }

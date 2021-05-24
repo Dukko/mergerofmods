@@ -7,6 +7,7 @@ building_factory_1 = {
         owner = {
             country_uses_consumer_goods = yes
         }
+        str_factory_allow = yes
         NOT = {
             has_modifier = resort_colony
         }
@@ -68,6 +69,19 @@ building_factory_1 = {
         }
         upkeep = {
             energy = @b1_upkeep
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            str_force_building_factory = yes
+        }
+        modifier = {
+            job_starnet_spice_melange_farmer_add = 1
+            job_starnet_spice_melange_antifarmer_add = -1
         }
     }
     prerequisites = {

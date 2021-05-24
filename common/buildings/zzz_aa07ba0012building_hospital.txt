@@ -4,6 +4,9 @@ building_hospital = {
     category = amenity
     potential = {
         has_building = building_clinic
+        owner = {
+            is_ai = no
+        }
     }
     allow = {
         has_upgraded_capital = yes

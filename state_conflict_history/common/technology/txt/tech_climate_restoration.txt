@@ -27,10 +27,6 @@ tech_climate_restoration = {
                 has_trait = "leader_trait_expertise_new_worlds"
             }
         }
-        modifier = {
-            factor = 2
-            has_valid_civic = civic_reclamation
-        }
     }
     ai_weight = {
         factor = 10000

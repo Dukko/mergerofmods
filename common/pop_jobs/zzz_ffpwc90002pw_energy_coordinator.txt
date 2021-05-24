@@ -8,6 +8,7 @@ pw_energy_coordinator = {
         is_enslaved = no
         is_being_purged = no
         is_being_assimilated = no
+        is_sapient = yes
     }
     possible = {
         drone_job_check_trigger = yes
@@ -29,6 +30,23 @@ pw_energy_coordinator = {
     }
     planet_modifier = {
         planet_jobs_energy_produces_mult = @pw_job_director_resource_mult
+        planet_amenities_no_happiness_add = @pw_job_director_resource_amenities
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_trait = trait_charismatic
+        }
+        modifier = {
+            planet_amenities_no_happiness_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_trait = trait_repugnant
+        }
+        modifier = {
+            planet_amenities_no_happiness_add = -1
+        }
     }
     weight = {
         weight = @synapse_drone_job_weight
@@ -40,6 +58,16 @@ pw_energy_coordinator = {
                 has_valid_civic = civic_machine_assimilator
             }
             has_trait = trait_cybernetic
+        }
+        modifier = {
+            factor = 2
+            planet = {
+                OR = {
+                    has_designation = col_generator
+                    has_designation = col_habitat_energy
+                    has_designation = col_ring_generator
+                }
+            }
         }
     }
 }

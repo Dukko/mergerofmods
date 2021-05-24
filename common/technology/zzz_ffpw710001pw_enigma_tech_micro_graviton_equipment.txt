@@ -3,7 +3,7 @@ pw_enigma_tech_micro_graviton_equipment = {
     category = {
         industry
     }
-    cost = @pw_enigma_tech_cost
+    cost = @pw_enigma_tech_cost_1
     tier = 5
     prerequisites = {
         pw_tech_metaphysical_singularity
@@ -58,7 +58,7 @@ pw_enigma_tech_micro_graviton_equipment = {
         }
     }
     ai_weight = {
-        factor = 10
+        factor = @pw_tech_ai_weight
         modifier = {
             factor = 1.25
             research_leader = {

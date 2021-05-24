@@ -16,7 +16,15 @@ resource_silo = {
         weight = 10
         modifier = {
             factor = 0
-            years_passed < 10
+            owner = {
+                not = {
+                    has_technology = tech_interstellar_fleet_traditions
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            years_passed < 40
         }
         modifier = {
             factor = 5

@@ -4,6 +4,17 @@ building_clone_vats = {
     base_cap_amount = 1
     potential = {
         exists = owner
+        OR = {
+            owner = {
+                is_ai = no
+            }
+            and = {
+                free_building_slots > 0
+                owner = {
+                    num_pops < 400
+                }
+            }
+        }
         owner = {
             has_ascension_perk = ap_engineered_evolution
         }
@@ -34,6 +45,12 @@ building_clone_vats = {
             NOT = {
                 owner = {
                     has_ascension_perk = ap_engineered_evolution
+                }
+            }
+            and = {
+                owner = {
+                    is_ai = yes
+                    num_pops > 450
                 }
             }
         }

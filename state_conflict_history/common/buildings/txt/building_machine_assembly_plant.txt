@@ -103,14 +103,4 @@ building_machine_assembly_plant = {
     triggered_desc = {
         text = job_replicator_effect_desc
     }
-    ai_resource_production = {
-        trigger = {
-            always = yes
-        }
-        alloys = 8
-        consumer_goods = 8
-        society_research = 10
-        engineering_research = 10
-        physics_research = 10
-    }
 }

@@ -1,0 +1,3 @@
+NAI = {
+    WAR_DEFEND_STARBASE_PRIO = 0.9
+}

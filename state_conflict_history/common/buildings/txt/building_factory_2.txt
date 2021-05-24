@@ -4,6 +4,8 @@ building_factory_2 = {
     category = manufacturing
     allow = {
         has_upgraded_capital = yes
+        buildings_upgrade_allow = yes
+        buildings_has_crystals = yes
     }
     potential = {
         exists = owner
@@ -29,6 +31,23 @@ building_factory_2 = {
                 }
             }
             buildings_no_crystals = yes
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            str_force_building_factory_upgrade = yes
+            num_buildings = {
+                type = building_factory_2
+                value = 0
+            }
+        }
+        modifier = {
+            job_starnet_spice_melange_farmer_add = 1
+            job_starnet_spice_melange_antifarmer_add = -1
         }
     }
     triggered_planet_modifier = {

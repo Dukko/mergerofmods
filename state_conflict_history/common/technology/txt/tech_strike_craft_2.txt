@@ -20,7 +20,16 @@ tech_strike_craft_2 = {
         }
     }
     ai_weight = {
-        weight = 0.1
+        weight = 400
+        factor = 5
+        modifier = {
+            factor = 0.01
+            has_technology = tech_mass_drivers_4
+        }
+        modifier = {
+            factor = 0.01
+            has_technology = tech_energy_torpedoes_1
+        }
         modifier = {
             factor = 1.25
             research_leader = {

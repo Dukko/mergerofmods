@@ -7,7 +7,6 @@ trait_pc_graveyard_preference = {
         LITHOID
     }
     sorting_priority = 30
-    custom_tooltip = TRAIT_GRAVEYARD_PREFERENCE_EFFECT
     modifier = {
         pc_graveyard_habitability = 0.8
         pc_arid_habitability = 0.6

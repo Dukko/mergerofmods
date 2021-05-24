@@ -10,7 +10,7 @@ tech_space_mining_5 = {
     }
     weight = @tier3weight1
     modifier = {
-        station_gatherers_produces_mult = 0.15
+        station_gatherers_produces_mult = 0.3
     }
     weight_modifier = {
         modifier = {

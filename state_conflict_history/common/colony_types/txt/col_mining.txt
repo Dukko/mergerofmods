@@ -97,7 +97,7 @@ col_mining = {
             }
         }
         modifier = {
-            add = 3
+            add = 2
             num_free_districts = {
                 type = district_mining
                 value > @free_districts_medium_threshold
@@ -124,8 +124,42 @@ col_mining = {
             }
         }
         modifier = {
-            add = 2
+            add = 3
             has_designation = col_mining
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+                has_modifier = asteroid_belt
+                has_modifier = mineral_rich
+                has_modifier = ultra_rich
+                has_modifier = extensive_moon_system
+                has_modifier = asteroid_impacts
+            }
+        }
+        modifier = {
+            add = 3
+            OR = {
+                has_modifier = asteroid_belt
+                has_modifier = mineral_rich
+                has_modifier = ultra_rich
+                has_modifier = extensive_moon_system
+                has_modifier = asteroid_impacts
+            }
+        }
+        modifier = {
+            add = 3
+            num_districts = {
+                type = district_mining
+                value >= 1
+            }
+        }
+        modifier = {
+            add = 3
+            num_districts = {
+                type = district_mining
+                value >= 2
+            }
         }
         modifier = {
             add = 20
@@ -145,14 +179,28 @@ col_mining = {
             }
         }
         modifier = {
+            add = 3
+            num_districts = {
+                type = district_mining
+                value >= 3
+            }
+        }
+        modifier = {
             add = 40
             has_modifier = gpm_precursor_mines
         }
         modifier = {
-            add = 5
+            add = 6
             num_districts = {
                 type = district_mining
-                value >= @built_districts_medium_threshold
+                value >= 4
+            }
+        }
+        modifier = {
+            add = 6
+            num_districts = {
+                type = district_mining
+                value >= 6
             }
         }
         modifier = {
@@ -161,6 +209,10 @@ col_mining = {
                 type = district_mining
                 value = 0
             }
+        }
+        modifier = {
+            factor = 1.5
+            has_planet_flag = str_acceptable_habitability
         }
     }
 }

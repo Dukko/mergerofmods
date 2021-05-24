@@ -39,6 +39,15 @@ tech_cloning = {
         }
     }
     ai_weight = {
+        factor = 40
+        modifier = {
+            factor = 500
+            has_technology = tech_energy_torpedoes_2
+        }
+        modifier = {
+            factor = 500
+            reroll_society = yes
+        }
         modifier = {
             factor = 1.25
             research_leader = {

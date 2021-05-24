@@ -1,7 +1,7 @@
 miner = {
     category = worker
     condition_string = WORKER_JOB_TRIGGER
-    building_icon = building_mine_generic
+    building_icon = building_mineral_purification_plant
     clothes_texture_index = 2
     possible_pre_triggers = {
         has_owner = yes
@@ -17,15 +17,27 @@ miner = {
         owner = {
             is_gestalt = no
         }
-        OR = {
-            traits_restrict_worker_jobs = no
-            has_pop_flag = allow_miner_traits
-        }
     }
     resources = {
         category = planet_miners
         produces = {
             minerals = 4
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_mineral_purification_plant
+                }
+            }
+            minerals = 1
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_mineral_purification_hub
+                }
+            }
+            minerals = 2
         }
         produces = {
             trigger = {
@@ -47,9 +59,6 @@ miner = {
     }
     weight = {
         weight = @worker_job_weight
-        modifier = {
-            factor = 2
-        }
         modifier = {
             factor = 3
             OR = {
@@ -87,6 +96,16 @@ miner = {
             }
         }
         modifier = {
+            factor = 200
+            OR = {
+                is_non_sapient_robot = yes
+                is_shackled_robot = yes
+            }
+            owner = {
+                is_ai = yes
+            }
+        }
+        modifier = {
             factor = 0.25
             can_take_servant_job = yes
         }
@@ -95,10 +114,6 @@ miner = {
             species = {
                 has_species_flag = racket_species_flag
             }
-        }
-        modifier = {
-            factor = 1.5
-            has_job = miner
         }
         modifier = {
             factor = 1.2
@@ -111,38 +126,6 @@ miner = {
         modifier = {
             factor = 0.9
             has_trait = trait_weak
-        }
-        modifier = {
-            factor = 1.2
-            has_trait = trait_huge
-        }
-        modifier = {
-            factor = 1.1
-            has_trait = trait_big
-        }
-        modifier = {
-            factor = 0.9
-            has_trait = trait_small
-        }
-        modifier = {
-            factor = 0.8
-            has_trait = trait_tiny
-        }
-        modifier = {
-            factor = 1.2
-            has_trait = trait_huge_lithoid
-        }
-        modifier = {
-            factor = 1.1
-            has_trait = trait_big_lithoid
-        }
-        modifier = {
-            factor = 0.9
-            has_trait = trait_small_lithoid
-        }
-        modifier = {
-            factor = 0.8
-            has_trait = trait_tiny_lithoid
         }
         modifier = {
             factor = 1.5
@@ -168,23 +151,6 @@ miner = {
             has_trait = trait_void_dweller_1
         }
         modifier = {
-            factor = 0.25
-            has_trait = trait_limbless
-        }
-        modifier = {
-            factor = 0.25
-            has_trait = trait_delicate
-            is_enslaved = yes
-        }
-        modifier = {
-            factor = 0.25
-            has_trait = trait_sessile
-        }
-        modifier = {
-            factor = 0.4
-            has_trait = trait_limbless
-        }
-        modifier = {
             factor = 1.1
             OR = {
                 is_unemployed = yes
@@ -197,7 +163,7 @@ miner = {
             owner = {
                 has_monthly_income = {
                     resource = minerals
-                    value < 30
+                    value < 0
                 }
             }
         }

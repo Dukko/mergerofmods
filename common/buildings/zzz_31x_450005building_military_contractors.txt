@@ -33,6 +33,6 @@ building_military_contractors = {
         }
     }
     ai_weight = {
-        factor = 10
+        weight = 150
     }
 }

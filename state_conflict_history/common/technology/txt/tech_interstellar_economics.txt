@@ -33,10 +33,6 @@ tech_interstellar_economics = {
             factor = 1.25
             has_tradition = tr_prosperity_adopt
         }
-        modifier = {
-            factor = 2
-            has_valid_civic = civic_bancorp
-        }
     }
     ai_weight = {
         weight = 2

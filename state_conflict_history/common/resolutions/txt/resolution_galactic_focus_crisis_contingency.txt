@@ -55,7 +55,7 @@ resolution_galactic_focus_crisis_contingency = {
     ai_weight = {
         base = @resolution_weight_normal
         modifier = {
-            factor = 5
+            factor = 2
             any_neighbor_country = {
                 is_country_type = ai_empire
             }

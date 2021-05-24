@@ -14,7 +14,7 @@ building_drone_storage = {
         OR = {
             AND = {
                 free_building_slots = 0
-                free_jobs < 1
+                free_jobs < -2
                 free_housing > 10
                 owner = {
                     is_ai = yes
@@ -29,6 +29,9 @@ building_drone_storage = {
     }
     allow = {
         buildings_simple_allow = yes
+        owner = {
+            is_ai = no
+        }
     }
     convert_to = {
         building_luxury_residence

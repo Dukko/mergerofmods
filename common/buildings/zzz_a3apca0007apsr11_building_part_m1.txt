@@ -20,6 +20,12 @@ apsr11_building_part_m1 = {
                     has_building = apsr11_building_part_m1_fake
                     has_building = apsr11_building_part_m2_fake
                     has_building = apsr11_building_part_m3_fake
+                    has_building = apsr11_building_part_b1
+                    has_building = apsr11_building_part_b2
+                    has_building = apsr11_building_part_b3
+                    has_building = apsr11_building_part_b1_fake
+                    has_building = apsr11_building_part_b2_fake
+                    has_building = apsr11_building_part_b3_fake
                 }
             }
         }

@@ -48,7 +48,7 @@ building_organic_sanctuary = {
                 }
                 num_buildings = {
                     type = building_organic_sanctuary
-                    value > 2
+                    value > 3
                 }
             }
             AND = {
@@ -65,7 +65,7 @@ building_organic_sanctuary = {
                 }
                 num_buildings = {
                     type = building_organic_paradise
-                    value > 3
+                    value > 5
                 }
             }
         }
@@ -79,6 +79,28 @@ building_organic_sanctuary = {
         job_artisan_drone_add = 1
         planet_carry_cap_add = 10
     }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            count_owned_pop = {
+                limit = {
+                    has_citizenship_type = {
+                        type = citizenship_organic_trophy
+                    }
+                    is_unemployed = yes
+                }
+                count > 0
+            }
+            free_building_slots > 0
+        }
+        modifier = {
+            job_starnet_spice_melange_farmer_add = 1
+            job_starnet_spice_melange_antifarmer_add = -1
+        }
+    }
     resources = {
         category = planet_buildings
         cost = {
@@ -90,5 +112,19 @@ building_organic_sanctuary = {
     }
     upgrades = {
         "building_organic_paradise"
+    }
+    ai_resource_production = {
+        alloys = 10
+        trigger = {
+            count_owned_pop = {
+                limit = {
+                    has_citizenship_type = {
+                        type = citizenship_organic_trophy
+                    }
+                }
+                count > 0
+            }
+            free_building_slots > 0
+        }
     }
 }

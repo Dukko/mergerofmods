@@ -67,7 +67,7 @@ pw_relic_keeper = {
             factor = 2
             exists = owner
             owner = {
-                has_civic = civic_exalted_priesthood
+                has_valid_civic = civic_exalted_priesthood
             }
         }
         modifier = {

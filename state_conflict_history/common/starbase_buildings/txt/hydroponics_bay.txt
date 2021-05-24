@@ -7,6 +7,12 @@ hydroponics_bay = {
             has_technology = "tech_hydroponics"
         }
     }
+    possible = {
+        exists = owner
+        owner = {
+            has_technology = "tech_hydroponics"
+        }
+    }
     resources = {
         category = starbase_buildings
         cost = {

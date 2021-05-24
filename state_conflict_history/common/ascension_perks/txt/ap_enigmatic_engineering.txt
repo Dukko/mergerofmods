@@ -20,7 +20,13 @@ ap_enigmatic_engineering = {
         ship_hyperlane_range_add = 4
     }
     ai_weight = {
-        factor = 10
+        factor = 1
+        modifier = {
+            factor = 0
+            not = {
+                has_ascension_perk = ap_executive_vigor
+            }
+        }
         modifier = {
             factor = 2
             has_ethic = ethic_materialist

@@ -50,6 +50,6 @@ utility_component_template = {
         ship_weapon_range_mult = @weapon_range3
     }
     ai_weight = {
-        weight = 40
+        weight = 5
     }
 }

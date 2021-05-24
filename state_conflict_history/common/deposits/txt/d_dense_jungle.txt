@@ -80,6 +80,7 @@ d_dense_jungle = {
             OR = {
                 is_planet_class = pc_continental
                 is_planet_class = pc_tropical
+                is_planet_class = pc_hollow
             }
         }
         modifier = {
@@ -115,6 +116,8 @@ d_dense_jungle = {
                 has_modifier = "boreal_world"
                 has_modifier = "young_world"
                 has_modifier = "storm_world"
+                has_modifier = "infernal_world"
+                has_modifier = "subglacial_world"
                 is_planet_class = pc_mushroom
                 is_planet_class = pc_aquatic
                 is_planet_class = pc_boreal

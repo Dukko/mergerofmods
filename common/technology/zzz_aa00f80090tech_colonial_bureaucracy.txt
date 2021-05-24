@@ -40,6 +40,12 @@ tech_colonial_bureaucracy = {
         }
     }
     ai_weight = {
+        weight = 500
+        factor = 5
+        modifier = {
+            factor = 500
+            reroll_society = yes
+        }
         modifier = {
             factor = 1.25
             research_leader = {

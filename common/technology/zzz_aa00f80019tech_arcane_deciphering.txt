@@ -39,7 +39,7 @@ tech_arcane_deciphering = {
         }
     }
     ai_weight = {
-        factor = 5
+        factor = 500
         modifier = {
             factor = 1.25
             research_leader = {

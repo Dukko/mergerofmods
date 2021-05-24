@@ -69,7 +69,4 @@ building_hospital = {
     triggered_desc = {
         text = job_healthcare_effect_desc
     }
-    upgrades = {
-        "building_avb_clinic_3"
-    }
 }

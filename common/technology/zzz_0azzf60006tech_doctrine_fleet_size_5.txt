@@ -13,7 +13,7 @@ tech_doctrine_fleet_size_5 = {
         country_command_limit_add = 20
     }
     weight_modifier = {
-        factor = 1.5
+        factor = 3
         modifier = {
             factor = 2
             is_militarist = yes
@@ -27,9 +27,10 @@ tech_doctrine_fleet_size_5 = {
         }
     }
     ai_weight = {
-        factor = 2
+        weight = 20
+        factor = 125
         modifier = {
-            factor = 1.25
+            factor = 2
             is_militarist = yes
         }
         modifier = {

@@ -2,6 +2,7 @@ building_nourishment_center = {
     base_buildtime = @b2_time
     can_build = yes
     can_demolish = yes
+    icon = building_food_processing_center
     potential = {
         custom_tooltip = {
             exists = owner
