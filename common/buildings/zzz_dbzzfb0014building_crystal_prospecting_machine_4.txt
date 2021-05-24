@@ -1,0 +1,47 @@
+building_crystal_prospecting_machine_4 = {
+    base_buildtime = @b2_time
+    can_build = no
+    category = resource
+    potential = {
+        exists = planet
+        planet = {
+            is_capital = yes
+        }
+        owner = {
+            is_regular_empire = yes
+            has_valid_civic = civic_crystalline_energy_grid
+        }
+    }
+    allow = {
+        exists = owner
+        has_upgraded_capital = yes
+    }
+    planet_modifier = {
+        planet_jobs_rare_crystals_produces_mult = 0.15
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 200
+        }
+        upkeep = {
+            energy = 2
+            minerals = 40
+        }
+        produces = {
+            rare_crystals = 20
+        }
+    }
+    upgrades = {
+        building_crystal_prospecting_machine_5
+    }
+    prerequisites = {
+        tech_crystal_prospecting_3_and_4
+    }
+    ai_resource_production = {
+        rare_crystals = 4
+        trigger = {
+            always = yes
+        }
+    }
+}

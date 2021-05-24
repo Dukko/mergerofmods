@@ -1,86 +1,10 @@
 ap_mastery_of_nature = {
     on_enabled = {
-        custom_tooltip = "worthy_ap_mastery_of_nature"
         custom_tooltip = "allow_decision_mastery_of_nature"
         custom_tooltip = "describe_decision_mastery_of_nature"
-        hidden_effect = {
-            if = {
-                limit = {
-                    NOT = {
-                        has_technology = tech_volcano
-                    }
-                }
-                add_research_option = tech_volcano
-            }
-            if = {
-                limit = {
-                    NOT = {
-                        has_technology = tech_dangerous_wildlife
-                    }
-                }
-                add_research_option = tech_dangerous_wildlife
-            }
-            if = {
-                limit = {
-                    NOT = {
-                        has_technology = tech_deep_sinkhole
-                    }
-                }
-                add_research_option = tech_deep_sinkhole
-            }
-            if = {
-                limit = {
-                    NOT = {
-                        has_technology = tech_dense_jungle
-                    }
-                }
-                add_research_option = tech_dense_jungle
-            }
-            if = {
-                limit = {
-                    NOT = {
-                        has_technology = tech_massive_glacier
-                    }
-                }
-                add_research_option = tech_massive_glacier
-            }
-            if = {
-                limit = {
-                    NOT = {
-                        has_technology = tech_mountain_range
-                    }
-                }
-                add_research_option = tech_mountain_range
-            }
-            if = {
-                limit = {
-                    NOT = {
-                        has_technology = tech_noxious_swamp
-                    }
-                }
-                add_research_option = tech_noxious_swamp
-            }
-            if = {
-                limit = {
-                    NOT = {
-                        has_technology = tech_quicksand_basin
-                    }
-                }
-                add_research_option = tech_quicksand_basin
-            }
-            if = {
-                limit = {
-                    NOT = {
-                        has_technology = tech_toxic_kelp
-                    }
-                }
-                add_research_option = tech_toxic_kelp
-            }
-        }
     }
     modifier = {
-        deposit_blockers_cost_mult = -0.5
-        planet_clear_blocker_time_mult = -0.5
+        deposit_blockers_cost_mult = -0.33
     }
     potential = {
         NOT = {

@@ -124,6 +124,10 @@ economic_policy = {
                     has_policy_flag = economic_policy_military
                 }
             }
+            modifier = {
+                factor = 20
+                is_ai = yes
+            }
         }
     }
 }

@@ -1,4 +1,4 @@
-@buildings_t2 = 2
+ @buildings_t2 = 2
 building_capital = {
     base_buildtime = @b2_time
     capital = yes
@@ -50,33 +50,25 @@ building_capital = {
         potential = {
             exists = owner
             owner = {
-                has_ethic = ethic_authoritarian
-            }
-        }
-        modifier = {
-            job_enforcer_add = 1
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                has_ethic = ethic_fanatic_authoritarian
-            }
-        }
-        modifier = {
-            job_enforcer_add = 2
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
                 has_non_swapped_tradition = tr_domination_imperious_architecture
             }
         }
         modifier = {
             planet_housing_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            has_building = building_colony_shelter
+            num_pops > 9
+        }
+        modifier = {
+            job_starnet_spice_melange_farmer_add = 3
+            job_starnet_spice_melange_antifarmer_add = -3
         }
     }
     triggered_planet_modifier = {
@@ -96,6 +88,28 @@ building_capital = {
         }
         modifier = {
             job_administrator_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ethic = ethic_authoritarian
+            }
+        }
+        modifier = {
+            job_enforcer_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ethic = ethic_fanatic_authoritarian
+            }
+        }
+        modifier = {
+            job_enforcer_add = 2
         }
     }
     triggered_planet_modifier = {
@@ -181,6 +195,66 @@ building_capital = {
             planet_jobs_upkeep_mult = 0.1
             planet_jobs_produces_mult = 0.1
         }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            num_districts = {
+                type = district_city
+                value > 0
+            }
+            str_force_city_district = yes
+        }
+        job_starnet_spice_melange_farmer_add = -2
+        job_starnet_spice_melange_antifarmer_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            num_districts = {
+                type = district_city
+                value > 2
+            }
+            str_force_city_district = yes
+        }
+        job_starnet_spice_melange_farmer_add = -2
+        job_starnet_spice_melange_antifarmer_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            num_districts = {
+                type = district_city
+                value > 4
+            }
+            str_force_city_district = yes
+        }
+        job_starnet_spice_melange_farmer_add = -2
+        job_starnet_spice_melange_antifarmer_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            num_districts = {
+                type = district_city
+                value > 6
+            }
+            str_force_city_district = yes
+        }
+        job_starnet_spice_melange_farmer_add = -2
+        job_starnet_spice_melange_antifarmer_add = 2
     }
     resources = {
         category = planet_buildings

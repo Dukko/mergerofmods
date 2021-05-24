@@ -356,6 +356,8 @@ Magnum's Mods - Tradition Cost Scaling
 !Patch - Cubemap Fix
 ! Starnet for NSC2
 Starnet for ESC
+!Civics Expanded+ - Starnet AI patch
+Consistency Patch for Starnet AI
 All unique systems in [3.x]
 !Colossus Hiveworld Fix
 !Additional Traits AI Patch

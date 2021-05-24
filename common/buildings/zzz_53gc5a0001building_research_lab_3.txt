@@ -12,7 +12,10 @@ building_research_lab_3 = {
             and = {
                 free_building_slots = 0
                 free_district_slots < 3
-                has_designation = col_research
+                or = {
+                    has_designation = col_research
+                    num_unemployed > 2
+                }
             }
         }
     }
@@ -20,7 +23,10 @@ building_research_lab_3 = {
         OR = {
             has_modifier = slave_colony
             has_modifier = resort_colony
-            buildings_no_exotic_gases = yes
+            and = {
+                buildings_no_exotic_gases = yes
+                has_planet_flag = str_supervisor
+            }
             str_research_destroy = yes
         }
     }

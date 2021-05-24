@@ -5,7 +5,14 @@ building_fortress = {
     position_priority = 100
     category = army
     allow = {
+        exists = owner
         has_upgraded_capital = yes
+        buildings_upgrade_allow = yes
+        buildings_has_motes = yes
+        or = {
+            is_ai = no
+            has_planet_flag = str_supervisor
+        }
     }
     destroy_trigger = {
         exists = owner
@@ -23,7 +30,9 @@ building_fortress = {
                     used_naval_capacity_percent < 0.4
                 }
             }
+            and = {
             buildings_no_motes = yes
+                has_planet_flag = str_supervisor
         }
         NOT = {
             owner = {

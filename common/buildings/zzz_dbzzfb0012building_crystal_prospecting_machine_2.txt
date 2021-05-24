@@ -1,0 +1,40 @@
+building_crystal_prospecting_machine_2 = {
+    base_buildtime = @b1_time
+    can_build = no
+    category = resource
+    potential = {
+        exists = planet
+        planet = {
+            is_capital = yes
+        }
+        owner = {
+            is_regular_empire = yes
+            has_valid_civic = civic_crystalline_energy_grid
+        }
+    }
+    allow = {
+        buildings_simple_allow = yes
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 200
+        }
+        upkeep = {
+            energy = 1
+            minerals = 16
+        }
+        produces = {
+            rare_crystals = 8
+        }
+    }
+    upgrades = {
+        building_crystal_prospecting_machine_3
+    }
+    ai_resource_production = {
+        rare_crystals = 2
+        trigger = {
+            always = yes
+        }
+    }
+}
