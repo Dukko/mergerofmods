@@ -7,6 +7,7 @@ col_ecu_research = {
             uses_district_set = pdecocity
             uses_district_set = pdpalacearc
             uses_district_set = pdmilarc
+            uses_district_set = pdcorpoarc
         }
     }
     planet_modifier = {

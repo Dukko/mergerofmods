@@ -15,25 +15,66 @@ death_priest = {
     }
     resources = {
         category = planet_priests
+        upkeep = {
+            consumer_goods = 3
+        }
         produces = {
-            unity = 6
             society_research = 2
         }
         produces = {
             trigger = {
-                exists = owner
-                owner = {
-                    has_valid_civic = civic_exalted_priesthood
-                }
+                is_theocracy = yes
             }
             unity = 1
         }
-        upkeep = {
-            consumer_goods = 3
+        produces = {
+            trigger = {
+                ROOT = {
+                    has_fanatic_governing_ethic = yes
+                }
+            }
+            unity = @pop_unity_fanatic
+        }
+        produces = {
+            trigger = {
+                ROOT = {
+                    has_governing_ethic = yes
+                }
+            }
+            unity = @pop_unity_same
+        }
+        produces = {
+            trigger = {
+                ROOT = {
+                    has_opposing_ethic = yes
+                }
+            }
+            unity = @pop_unity_opposing
+        }
+        produces = {
+            trigger = {
+                ROOT = {
+                    has_opposing_fanatic_ethic = yes
+                }
+            }
+            unity = @pop_unity_fanatic_opposing
         }
     }
     planet_modifier = {
         planet_amenities_add = 5
+        planet_pops_unity_produces_mult = 0.03
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_governing_ethos = yes
+        }
+        pop_government_ethic_attraction = 0.03
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_opposing_ethos = yes
+        }
+        pop_government_ethic_attraction = -0.03
     }
     triggered_planet_modifier = {
         potential = {
@@ -65,10 +106,7 @@ death_priest = {
         }
         modifier = {
             factor = 2
-            exists = owner
-            owner = {
-                has_civic = civic_exalted_priesthood
-            }
+            is_theocracy = yes
         }
         modifier = {
             factor = 2
@@ -107,13 +145,17 @@ death_priest = {
         modifier = {
             factor = 0.1
             has_ethic = ethic_materialist
-            NOT = {
+            NOR = {
                 has_job = priest
+                has_job = death_priest
             }
         }
         modifier = {
             factor = 1.5
-            has_job = priest
+            OR = {
+                has_job = priest
+                has_job = death_priest
+            }
         }
         modifier = {
             factor = 1.5
@@ -170,6 +212,11 @@ death_priest = {
         modifier = {
             factor = 1.5
             has_trait = trait_necrophage
+        }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = specialist
         }
     }
 }

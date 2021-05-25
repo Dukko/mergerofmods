@@ -21,7 +21,60 @@ healthcare = {
     resources = {
         category = planet_doctors
         upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    not = {
+                        has_policy_flag = public_healthcare
+                    }
+                }
+            }
             consumer_goods = 1
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_policy_flag = public_healthcare
+                }
+            }
+            consumer_goods = -0.5
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_policy_flag = public_healthcare
+                }
+            }
+            unity = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_policy_flag = public_healthcare
+            }
+            OR = {
+                has_trait = trait_robot_domestic_protocols
+                has_trait = trait_charismatic
+            }
+        }
+        modifier = {
+            planet_amenities_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_policy_flag = private_healthcare
+            }
+        }
+        modifier = {
+            trade_value_add = 2
+            pop_growth_speed = -0.01
         }
     }
     triggered_planet_modifier = {
@@ -77,6 +130,11 @@ healthcare = {
             has_slavery_type = {
                 type = slavery_indentured
             }
+        }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = specialist
         }
     }
 }

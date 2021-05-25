@@ -10,9 +10,8 @@ foundry = {
     }
     possible = {
         specialist_job_check_trigger = yes
-        OR = {
-            traits_restrict_specialist_jobs = no
-            has_pop_flag = allow_foundry_traits
+        owner = {
+            is_gestalt = no
         }
     }
     resources = {
@@ -20,8 +19,40 @@ foundry = {
         produces = {
             alloys = 3
         }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_foundry_2
+                }
+            }
+            alloys = 1
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_foundry_3
+                }
+            }
+            alloys = 2
+        }
         upkeep = {
             minerals = 6
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    has_active_building = building_foundry_2
+                }
+            }
+            minerals = 2
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    has_active_building = building_foundry_3
+                }
+            }
+            minerals = 4
         }
         upkeep = {
             trigger = {
@@ -50,9 +81,6 @@ foundry = {
         modifier = {
             factor = 0.2
             has_citizenship_rights = no
-            NOT = {
-                has_trait = trait_mechanical
-            }
         }
         modifier = {
             factor = 0.1
@@ -62,10 +90,6 @@ foundry = {
             factor = 2
             is_enslaved = yes
             can_take_servant_job = no
-        }
-        modifier = {
-            factor = 4
-            has_trait = trait_living_architecture
         }
         modifier = {
             factor = 2
@@ -86,41 +110,24 @@ foundry = {
             }
         }
         modifier = {
-            factor = 1.5
-            has_trait = trait_void_dweller_1
-        }
-        modifier = {
-            factor = 1.2
-            has_trait = trait_extreme_thermophile
-        }
-        modifier = {
-            factor = 1.1
-            has_trait = trait_thermophile
-        }
-        modifier = {
-            factor = 0.9
-            has_trait = trait_clumsy
-        }
-        modifier = {
-            factor = 0.1
-            has_trait = trait_limbless
-        }
-        modifier = {
-            factor = 0.1
-            has_trait = trait_delicate
-            is_enslaved = yes
-        }
-        modifier = {
-            factor = 1.2
-            is_unemployed = yes
-            is_pop_category = specialist
-        }
-        modifier = {
             factor = 1.2
             is_enslaved = yes
             has_slavery_type = {
                 type = slavery_indentured
             }
+        }
+        modifier = {
+            factor = 1.5
+            has_trait = trait_void_dweller_1
+        }
+        modifier = {
+            factor = 1.5
+            has_trait = trait_necrophage
+        }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = specialist
         }
     }
 }

@@ -11,10 +11,6 @@ researcher = {
     }
     possible = {
         complex_specialist_job_check_trigger = yes
-        OR = {
-            traits_restrict_specialist_jobs = no
-            has_pop_flag = allow_researcher_traits
-        }
     }
     resources = {
         category = planet_researchers
@@ -27,12 +23,7 @@ researcher = {
             trigger = {
                 exists = owner
                 owner = {
-                    or = {
-                        has_valid_civic = civic_technocracy
-                        has_valid_civic = civic_cyber_dictatorship
-                        has_valid_civic = civic_science_directorate
-                        has_valid_civic = civic_cyber_demos_cratos
-                    }
+                    is_technocracy = yes
                 }
             }
             unity = 1
@@ -52,10 +43,6 @@ researcher = {
     }
     weight = {
         weight = @specialist_job_weight
-        modifier = {
-            factor = 4
-            has_trait = trait_living_architecture
-        }
         modifier = {
             factor = 0.2
             has_citizenship_rights = no
@@ -156,11 +143,6 @@ researcher = {
             factor = 1.2
             is_unemployed = yes
             is_pop_category = specialist
-        }
-        modifier = {
-            factor = 0.1
-            has_trait = trait_delicate
-            is_enslaved = yes
         }
     }
 }

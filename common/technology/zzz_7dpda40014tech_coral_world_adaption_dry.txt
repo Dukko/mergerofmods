@@ -15,6 +15,7 @@ tech_coral_world_adaption_dry = {
         pc_mesa_habitability = 0.4
         pc_hadesert_habitability = 0.4
         pc_med_habitability = 0.4
+        pc_badlands_habitability = 0.4
         pc_coral_habitability = 0.4
         pc_primal_habitability = 0.4
         pc_desert_habitability = 0.2

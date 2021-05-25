@@ -11,37 +11,69 @@ priest = {
     }
     possible = {
         complex_specialist_job_check_trigger = yes
-        OR = {
-            traits_restrict_specialist_jobs = no
-            has_pop_flag = allow_priest_traits
-        }
     }
     resources = {
         category = planet_priests
+        upkeep = {
+            consumer_goods = 2
+        }
         produces = {
-            unity = 3
             society_research = 2
         }
         produces = {
             trigger = {
-                exists = owner
-                owner = {
-                    or = {
-                        has_valid_civic = civic_exalted_priesthood
-                        has_valid_civic = civic_imperial_cult
-                        has_valid_civic = civic_divine_council
-                        has_valid_civic = civic_spiritual_democracy
-                    }
-                }
+                is_theocracy = yes
             }
             unity = 1
         }
-        upkeep = {
-            consumer_goods = 2
+        produces = {
+            trigger = {
+                ROOT = {
+                    has_fanatic_governing_ethic = yes
+                }
+            }
+            unity = @pop_unity_fanatic
+        }
+        produces = {
+            trigger = {
+                ROOT = {
+                    has_governing_ethic = yes
+                }
+            }
+            unity = @pop_unity_same
+        }
+        produces = {
+            trigger = {
+                ROOT = {
+                    has_opposing_ethic = yes
+                }
+            }
+            unity = @pop_unity_opposing
+        }
+        produces = {
+            trigger = {
+                ROOT = {
+                    has_opposing_fanatic_ethic = yes
+                }
+            }
+            unity = @pop_unity_fanatic_opposing
         }
     }
     planet_modifier = {
         planet_amenities_add = 5
+        planet_pops_unity_produces_mult = 0.03
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_governing_ethos = yes
+        }
+        pop_government_ethic_attraction = 0.03
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_opposing_ethos = yes
+        }
+        pop_government_ethic_attraction = -0.03
     }
     triggered_planet_modifier = {
         potential = {
@@ -65,10 +97,6 @@ priest = {
     weight = {
         weight = @specialist_job_weight
         modifier = {
-            factor = 4
-            has_trait = trait_living_architecture
-        }
-        modifier = {
             factor = 0.2
             has_citizenship_rights = no
             NOT = {
@@ -77,15 +105,7 @@ priest = {
         }
         modifier = {
             factor = 2
-            exists = owner
-            owner = {
-                or = {
-                    has_valid_civic = civic_exalted_priesthood
-                    has_valid_civic = civic_imperial_cult
-                    has_valid_civic = civic_divine_council
-                    has_valid_civic = civic_spiritual_democracy
-                }
-            }
+            is_theocracy = yes
         }
         modifier = {
             factor = 2
@@ -196,11 +216,6 @@ priest = {
             factor = 1.2
             is_unemployed = yes
             is_pop_category = specialist
-        }
-        modifier = {
-            factor = 0.1
-            has_trait = trait_delicate
-            is_enslaved = yes
         }
     }
 }

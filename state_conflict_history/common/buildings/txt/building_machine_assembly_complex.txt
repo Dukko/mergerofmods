@@ -12,41 +12,19 @@ building_machine_assembly_complex = {
         building_robot_assembly_plant
     }
     allow = {
-        OR = {
-            owner = {
-                is_ai = no
-            }
-            AND = {
-                num_buildings = {
-                    type = any
-                    value <= 14
+        hidden_trigger = {
+            OR = {
+                owner = {
+                    is_ai = no
                 }
-                NOT = {
-                    is_planet_class = pc_habitat
-                }
-                NOT = {
-                    is_planet_class = pc_pd_barren_cold_hab
-                }
-                NOT = {
-                    is_planet_class = pc_pd_barren_hab
-                }
-                NOT = {
-                    is_planet_class = pc_pd_frozen_hab
-                }
-                NOT = {
-                    is_planet_class = pc_pd_gas_giant_hab
-                }
-                NOT = {
-                    is_planet_class = pc_pd_hothouse_hab
-                }
-                NOT = {
-                    is_planet_class = pc_pd_toxic_hab
-                }
-                NOT = {
-                    is_planet_class = pc_pd_molten_hab
-                }
-                NOT = {
-                    is_planet_class = pc_gd_hydrocarbon_hab
+                AND = {
+                    num_buildings = {
+                        type = any
+                        value <= 14
+                    }
+                    NOT = {
+                        is_planet_class = pc_habitat
+                    }
                 }
             }
         }
@@ -69,14 +47,6 @@ building_machine_assembly_complex = {
                         value = 16
                     }
                     is_planet_class = pc_habitat
-                    is_planet_class = pc_pd_barren_cold_hab
-                    is_planet_class = pc_pd_barren_hab
-                    is_planet_class = pc_pd_frozen_hab
-                    is_planet_class = pc_pd_gas_giant_hab
-                    is_planet_class = pc_pd_hothouse_hab
-                    is_planet_class = pc_pd_toxic_hab
-                    is_planet_class = pc_pd_molten_hab
-                    is_planet_class = pc_gd_hydrocarbon_hab
                 }
             }
         }
@@ -104,26 +74,5 @@ building_machine_assembly_complex = {
     }
     triggered_desc = {
         text = job_replicator_effect_desc
-    }
-    ai_weight = {
-        weight = 50000
-        modifier = {
-            factor = 0
-            OR = {
-                is_planet_class = pc_habitat
-                is_planet_class = pc_pd_barren_cold_hab
-                is_planet_class = pc_pd_barren_hab
-                is_planet_class = pc_pd_frozen_hab
-                is_planet_class = pc_pd_gas_giant_hab
-                is_planet_class = pc_pd_hothouse_hab
-                is_planet_class = pc_pd_toxic_hab
-                is_planet_class = pc_pd_molten_hab
-                num_buildings = {
-                    type = any
-                    value >= 14
-                }
-                is_planet_class = pc_gd_hydrocarbon_hab
-            }
-        }
     }
 }

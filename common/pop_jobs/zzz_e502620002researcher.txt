@@ -23,7 +23,7 @@ researcher = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_valid_civic = civic_technocracy
+                    is_technocracy = yes
                 }
             }
             unity = 1
@@ -85,7 +85,10 @@ researcher = {
         }
         modifier = {
             factor = 0.65
-            has_trait = trait_presapient_proles
+            OR = {
+                has_trait = trait_syncretic_proles
+                has_trait = trait_presapient_proles
+            }
         }
         modifier = {
             factor = 1.5
@@ -135,6 +138,11 @@ researcher = {
         modifier = {
             factor = 1.5
             has_trait = trait_necrophage
+        }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = specialist
         }
     }
 }

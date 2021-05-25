@@ -70,9 +70,10 @@ Animated Valbaran Species
 Animated Pardus Species
 Animated Budgie Species
 [3.0.*] New Enclaves
-3.0.2 | Xenonion News Enclave
+3.0.x | Xenonion News Enclave
 Additional Traits
 Void Dwellers Expanded 3+
+The Caretaker SE (3.0)
 Subterranean Origin
 Starborn: Improved Voidtouched
 Precursor Story Pack
@@ -119,6 +120,7 @@ Separate Peace Treaties
 Size 25 Homeworlds
 Shut Up, We Don't Care! (3.0)
 【3.0.2】Shroud Expanded【虚境扩展】The Decadance of Sanity--理智的终末癫狂
+Shadowgate
 Robot Rights
 Resettle Colony
 resettlement_mod
@@ -261,7 +263,7 @@ SpeedDial
 UI Overhaul Dynamic + SpeedDial
 Tiny Fleets for UI Overhaul Dynamic
 Tiny Megastructures
-Tiny Outliner v2
+folk's Tiny Outliner
 Kaityo`s Tiny Planet Buildings for UI Overhaul Dynamic
 Tiny Ship Components
 Tiny Starbase Modules and Buildings
@@ -333,6 +335,7 @@ Forgotten Queens+NSC2 compat patch
 Fishbowl Robot Head Fix
 Federations - No Hard Feelings for Declined Votes
 ECA - Espionage Operations
+Crisis Manager - Mid-Game Edition (3.0.¢)
 Crimewave: Crime and Criminal Heritage AI Overhaul
 Civil Wars - More Authorities Patch
 Civics Expanded+ & More Authorities Compatibility Patch

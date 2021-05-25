@@ -11,16 +11,6 @@ roboticist = {
     }
     possible = {
         specialist_job_check_trigger = yes
-        OR = {
-            NOT = {
-                has_ethic = ethic_spiritualist
-            }
-            is_enslaved = yes
-        }
-        OR = {
-            traits_restrict_specialist_jobs = no
-            has_pop_flag = allow_roboticist_traits
-        }
     }
     planet_modifier = {
         planet_pop_assembly_add = 2
@@ -42,17 +32,13 @@ roboticist = {
     weight = {
         weight = 500
         modifier = {
-            factor = 1.4
+            factor = 1.5
             has_job = roboticist
         }
         modifier = {
             factor = 1.2
             is_unemployed = yes
             is_pop_category = specialist
-        }
-        modifier = {
-            factor = 4
-            has_trait = trait_living_architecture
         }
     }
 }

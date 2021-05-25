@@ -11,18 +11,46 @@ artisan_drone = {
     }
     possible = {
         drone_job_check_trigger = yes
-        OR = {
-            traits_restrict_specialist_jobs = no
-            has_pop_flag = allow_artisan_traits
-        }
     }
     resources = {
         category = planet_artisans
         produces = {
             consumer_goods = 10
         }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_factory_2
+                }
+            }
+            consumer_goods = 1
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_factory_3
+                }
+            }
+            consumer_goods = 2
+        }
         upkeep = {
             minerals = 10
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    has_active_building = building_factory_2
+                }
+            }
+            minerals = 2
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    has_active_building = building_factory_3
+                }
+            }
+            minerals = 4
         }
         upkeep = {
             trigger = {
@@ -36,10 +64,6 @@ artisan_drone = {
     }
     weight = {
         weight = 5000
-        modifier = {
-            factor = 4
-            has_trait = trait_living_architecture
-        }
         modifier = {
             factor = 0.9
             exists = owner

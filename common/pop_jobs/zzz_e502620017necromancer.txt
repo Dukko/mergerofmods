@@ -40,6 +40,38 @@ necromancer = {
             physics_research = 4
             society_research = 4
         }
+        produces = {
+            trigger = {
+                ROOT = {
+                    has_fanatic_governing_ethic = yes
+                }
+            }
+            unity = @pop_unity_fanatic
+        }
+        produces = {
+            trigger = {
+                ROOT = {
+                    has_governing_ethic = yes
+                }
+            }
+            unity = @pop_unity_same
+        }
+        produces = {
+            trigger = {
+                ROOT = {
+                    has_opposing_ethic = yes
+                }
+            }
+            unity = @pop_unity_opposing
+        }
+        produces = {
+            trigger = {
+                ROOT = {
+                    has_opposing_fanatic_ethic = yes
+                }
+            }
+            unity = @pop_unity_fanatic_opposing
+        }
         upkeep = {
             consumer_goods = 2
         }
@@ -125,6 +157,15 @@ necromancer = {
         modifier = {
             factor = 2
             has_trait = trait_lithoid
+        }
+        modifier = {
+            factor = 1.5
+            has_job = necromancer
+        }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = specialist
         }
     }
 }

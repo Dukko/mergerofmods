@@ -11,13 +11,22 @@ manager = {
     }
     possible = {
         specialist_job_check_trigger = yes
-        OR = {
-            traits_restrict_specialist_jobs = no
-            has_pop_flag = allow_manager_traits
-        }
     }
     planet_modifier = {
         trade_value_add = 3
+        planet_pops_unity_produces_mult = 0.03
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_governing_ethos = yes
+        }
+        pop_government_ethic_attraction = 0.03
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_opposing_ethos = yes
+        }
+        pop_government_ethic_attraction = -0.03
     }
     triggered_planet_modifier = {
         potential = {
@@ -33,77 +42,51 @@ manager = {
         }
         modifier = {
             trade_value_add = 0.75
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            has_trait = trait_spendthrifts
-        }
-        modifier = {
-            trade_value_add = -1.5
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                has_valid_civic = civic_efficiency_expert
-            }
-        }
-        modifier = {
-            trade_value_add = 2
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            has_trait = trait_thrifty
-            exists = owner
-            owner = {
-                has_valid_civic = civic_efficiency_expert
-            }
-        }
-        modifier = {
-            trade_value_add = 0.5
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            has_trait = trait_nuumismatic_administration
-            exists = owner
-            owner = {
-                has_valid_civic = civic_efficiency_expert
-            }
-        }
-        modifier = {
-            trade_value_add = 0.5
         }
     }
     resources = {
         category = planet_managers
         produces = {
-            unity = 3
             society_research = 2
-        }
-        produces = {
-            trigger = {
-                exists = owner
-                owner = {
-                    has_valid_civic = civic_efficiency_expert
-                }
-            }
-            unity = 1
-            society_research = -2
         }
         upkeep = {
             consumer_goods = 2
         }
+        produces = {
+            trigger = {
+                ROOT = {
+                    has_fanatic_governing_ethic = yes
+                }
+            }
+            unity = @pop_unity_fanatic
+        }
+        produces = {
+            trigger = {
+                ROOT = {
+                    has_governing_ethic = yes
+                }
+            }
+            unity = @pop_unity_same
+        }
+        produces = {
+            trigger = {
+                ROOT = {
+                    has_opposing_ethic = yes
+                }
+            }
+            unity = @pop_unity_opposing
+        }
+        produces = {
+            trigger = {
+                ROOT = {
+                    has_opposing_fanatic_ethic = yes
+                }
+            }
+            unity = @pop_unity_fanatic_opposing
+        }
     }
     weight = {
         weight = @specialist_job_weight
-        modifier = {
-            factor = 4
-            has_trait = trait_living_architecture
-        }
         modifier = {
             factor = 0.2
             has_citizenship_rights = no
@@ -141,10 +124,6 @@ manager = {
         modifier = {
             factor = 1.5
             has_trait = trait_thrifty
-        }
-        modifier = {
-            factor = 0.5
-            has_trait = trait_spendthrifts
         }
         modifier = {
             factor = 1.5
@@ -218,11 +197,6 @@ manager = {
             factor = 1.2
             is_unemployed = yes
             is_pop_category = specialist
-        }
-        modifier = {
-            factor = 0.1
-            has_trait = trait_delicate
-            is_enslaved = yes
         }
     }
 }

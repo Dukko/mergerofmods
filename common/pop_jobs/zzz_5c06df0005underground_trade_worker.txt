@@ -39,8 +39,10 @@ underground_trade_worker = {
     triggered_planet_modifier = {
         potential = {
             has_trait = trait_repugnant
-            has_ethic = ethic_xenophile
-            has_ethic = ethic_fanatic_xenophile
+            OR = {
+                has_ethic = ethic_xenophobe
+                has_ethic = ethic_fanatic_xenophobe
+            }
         }
         modifier = {
             planet_amenities_add = -1

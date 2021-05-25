@@ -4,6 +4,7 @@ col_ecu_factory = {
         OR = {
             uses_district_set = city_world
             uses_district_set = pdshroudarc
+            uses_district_set = pdcorpoarc
         }
         exists = owner
         OR = {

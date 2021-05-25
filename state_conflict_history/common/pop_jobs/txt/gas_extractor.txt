@@ -11,10 +11,6 @@ gas_extractor = {
     }
     possible = {
         worker_job_check_trigger = yes
-        OR = {
-            traits_restrict_worker_jobs = no
-            has_pop_flag = allow_gas_extractor_traits
-        }
     }
     resources = {
         category = planet_miners
@@ -77,10 +73,6 @@ gas_extractor = {
             }
         }
         modifier = {
-            factor = 1.5
-            has_job = gas_extractor
-        }
-        modifier = {
             factor = 3
             has_trait = trait_very_strong
         }
@@ -91,38 +83,6 @@ gas_extractor = {
         modifier = {
             factor = 0.1
             has_trait = trait_weak
-        }
-        modifier = {
-            factor = 2
-            has_trait = trait_huge
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_big
-        }
-        modifier = {
-            factor = 0.5
-            has_trait = trait_small
-        }
-        modifier = {
-            factor = 0.25
-            has_trait = trait_tiny
-        }
-        modifier = {
-            factor = 2
-            has_trait = trait_huge_lithoid
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_big_lithoid
-        }
-        modifier = {
-            factor = 0.5
-            has_trait = trait_small_lithoid
-        }
-        modifier = {
-            factor = 0.25
-            has_trait = trait_tiny_lithoid
         }
         modifier = {
             factor = 3
@@ -142,15 +102,6 @@ gas_extractor = {
         modifier = {
             factor = 0.75
             has_trait = trait_necrophage
-        }
-        modifier = {
-            factor = 0.2
-            has_trait = trait_limbless
-        }
-        modifier = {
-            factor = 0.25
-            has_trait = trait_delicate
-            is_enslaved = yes
         }
     }
 }

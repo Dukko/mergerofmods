@@ -81,6 +81,14 @@ soldier = {
             }
         }
         modifier = {
+            factor = 20
+            has_trait = trait_pandora
+        }
+        modifier = {
+            factor = 2
+            has_trait = trait_natural_warriors
+        }
+        modifier = {
             factor = 2
             has_trait = trait_resilient
         }

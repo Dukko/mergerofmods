@@ -1,0 +1,23 @@
+trait_robot_caretaker_directives = {
+    cost = 1
+    initial = no
+    randomized = no
+    allowed_archetypes = {
+        ROBOT
+        MACHINE
+    }
+    species_potential_add = {
+        exists = from
+        from = {
+            has_origin = origin_caretaker
+        }
+    }
+    modifier = {
+        pop_assembly_speed = -0.2
+        planet_pops_robotics_upkeep_mult = -0.25
+        species_empire_size_mult = 0.1
+    }
+    ai_weight = {
+        factor = 0
+    }
+}

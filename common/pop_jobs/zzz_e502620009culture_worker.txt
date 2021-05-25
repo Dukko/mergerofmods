@@ -15,12 +15,58 @@ culture_worker = {
     resources = {
         category = planet_culture_workers
         produces = {
-            unity = 3
             society_research = 3
         }
         upkeep = {
             consumer_goods = 2
         }
+        produces = {
+            trigger = {
+                ROOT = {
+                    has_fanatic_governing_ethic = yes
+                }
+            }
+            unity = @pop_unity_fanatic
+        }
+        produces = {
+            trigger = {
+                ROOT = {
+                    has_governing_ethic = yes
+                }
+            }
+            unity = @pop_unity_same
+        }
+        produces = {
+            trigger = {
+                ROOT = {
+                    has_opposing_ethic = yes
+                }
+            }
+            unity = @pop_unity_opposing
+        }
+        produces = {
+            trigger = {
+                ROOT = {
+                    has_opposing_fanatic_ethic = yes
+                }
+            }
+            unity = @pop_unity_fanatic_opposing
+        }
+    }
+    planet_modifier = {
+        planet_pops_unity_produces_mult = 0.03
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_governing_ethos = yes
+        }
+        pop_government_ethic_attraction = 0.03
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_opposing_ethos = yes
+        }
+        pop_government_ethic_attraction = -0.03
     }
     weight = {
         weight = @specialist_job_weight
@@ -118,6 +164,11 @@ culture_worker = {
         modifier = {
             factor = 1.5
             has_trait = trait_necrophage
+        }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = specialist
         }
     }
 }

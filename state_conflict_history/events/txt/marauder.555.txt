@@ -3,13 +3,10 @@ country_event = {
     id = marauder.555
     hide_window = yes
     trigger = {
-        has_been_declared_crisis = no
-        has_global_flag = marauder_crisis_started
-        NOT = {
-            has_global_flag = great_khan_dead
-        }
+        has_global_flag = marauder_crisis_ongoing
         exists = event_target:raider_khanate
-        is_country_type = default
+        CmtTriggerExistKhanCountry = yes
+        CmtTriggerIsPlayableEmpire = yes
         is_subject = no
         is_ai = yes
         NOR = {
@@ -44,19 +41,11 @@ country_event = {
             }
         }
         modifier = {
-            factor = 0.5
-            has_ai_personality = peaceful_traders
-        }
-        modifier = {
             factor = 0.1
             check_variable = {
                 which = "planets_lost_to_marauder"
                 value > 20
             }
-        }
-        modifier = {
-            factor = 0.1
-            has_ai_personality = fanatic_befrienders
         }
         modifier = {
             factor = 3
@@ -65,6 +54,14 @@ country_event = {
         modifier = {
             factor = 2
             has_ai_personality = xenophobic_isolationists
+        }
+        modifier = {
+            factor = 0.5
+            has_ai_personality = peaceful_traders
+        }
+        modifier = {
+            factor = 0.1
+            has_ai_personality = fanatic_befrienders
         }
     }
     immediate = {
@@ -118,9 +115,6 @@ country_event = {
                 set_friendly = yes
             }
         }
-        observer_event = {
-            id = observer.19
-        }
         every_country = {
             limit = {
                 is_ai = no
@@ -129,6 +123,9 @@ country_event = {
             country_event = {
                 id = marauder.552
             }
+        }
+        observer_event = {
+            id = observer.19
         }
     }
 }

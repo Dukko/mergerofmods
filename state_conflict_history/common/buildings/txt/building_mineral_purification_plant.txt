@@ -20,31 +20,7 @@ building_mineral_purification_plant = {
             NOT = {
                 is_planet_class = pc_habitat
             }
-            NOT = {
-                is_planet_class = pc_pd_barren_cold_hab
-            }
-            NOT = {
-                is_planet_class = pc_pd_barren_hab
-            }
-            NOT = {
-                is_planet_class = pc_pd_frozen_hab
-            }
-            NOT = {
-                is_planet_class = pc_pd_gas_giant_hab
-            }
-            NOT = {
-                is_planet_class = pc_pd_hothouse_hab
-            }
-            NOT = {
-                is_planet_class = pc_pd_toxic_hab
-            }
-            NOT = {
-                is_planet_class = pc_pd_molten_hab
-            }
             has_planet_flag = mining_habitat
-            NOT = {
-                is_planet_class = pc_gd_hydrocarbon_hab
-            }
         }
     }
     allow = {
@@ -105,17 +81,9 @@ building_mineral_purification_plant = {
             }
             NOR = {
                 is_planet_class = pc_habitat
-                is_planet_class = pc_pd_barren_cold_hab
-                is_planet_class = pc_pd_barren_hab
-                is_planet_class = pc_pd_frozen_hab
-                is_planet_class = pc_pd_gas_giant_hab
-                is_planet_class = pc_pd_hothouse_hab
-                is_planet_class = pc_pd_toxic_hab
-                is_planet_class = pc_pd_molten_hab
                 is_planet_class = pc_machine
                 is_planet_class = pc_hive
                 is_planet_class = pc_city
-                is_planet_class = pc_gd_hydrocarbon_hab
             }
         }
         modifier = {
@@ -176,7 +144,7 @@ building_mineral_purification_plant = {
             }
         }
         text = job_fe_acolyte_mine_effect_desc
-                }
+    }
     ai_resource_production = {
         minerals = 3
         trigger = {

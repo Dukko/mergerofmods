@@ -31,6 +31,7 @@ col_factory = {
             uses_district_set = pdmilarc
             uses_district_set = pdbiofort
             uses_district_set = pdmachinefort
+            uses_district_set = pdcorpoarc
         }
         is_special_colony_type = no
     }

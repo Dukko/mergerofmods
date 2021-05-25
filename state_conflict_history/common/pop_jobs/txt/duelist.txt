@@ -11,50 +11,63 @@ duelist = {
     }
     possible = {
         battle_thrall_job_check_trigger = yes
-        OR = {
-            NOT = {
-                has_ethic = ethic_pacifist
-            }
-            is_enslaved = yes
-        }
-        OR = {
-            traits_restrict_specialist_jobs = no
-            has_pop_flag = allow_duelist_traits
-        }
     }
     resources = {
         category = planet_entertainers
-        produces = {
-            unity = 3
-        }
         upkeep = {
             alloys = 1
+        }
+        produces = {
+            trigger = {
+                ROOT = {
+                    has_fanatic_governing_ethic = yes
+                }
+            }
+            unity = @pop_unity_fanatic
+        }
+        produces = {
+            trigger = {
+                ROOT = {
+                    has_governing_ethic = yes
+                }
+            }
+            unity = @pop_unity_same
+        }
+        produces = {
+            trigger = {
+                ROOT = {
+                    has_opposing_ethic = yes
+                }
+            }
+            unity = @pop_unity_opposing
+        }
+        produces = {
+            trigger = {
+                ROOT = {
+                    has_opposing_fanatic_ethic = yes
+                }
+            }
+            unity = @pop_unity_fanatic_opposing
         }
     }
     planet_modifier = {
         planet_amenities_add = 12
+        planet_pops_unity_produces_mult = 0.03
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_governing_ethos = yes
+        }
+        pop_government_ethic_attraction = 0.03
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_opposing_ethos = yes
+        }
+        pop_government_ethic_attraction = -0.03
     }
     country_modifier = {
         country_naval_cap_add = 2
-    }
-    triggered_country_modifier = {
-        potential = {
-            OR = {
-                has_trait = trait_zero_g_adapted
-                has_trait = trait_robot_astro
-            }
-        }
-        modifier = {
-            country_naval_cap_add = 1
-        }
-    }
-    triggered_country_modifier = {
-        potential = {
-            has_trait = trait_starship_integration
-        }
-        modifier = {
-            country_naval_cap_add = 1
-        }
     }
     triggered_planet_modifier = {
         potential = {
@@ -75,23 +88,8 @@ duelist = {
             planet_amenities_add = -2
         }
     }
-    triggered_country_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                has_ascension_perk = ap_galactic_force_projection
-            }
-        }
-        modifier = {
-            country_naval_cap_add = 2
-        }
-    }
     weight = {
         weight = @specialist_job_weight
-        modifier = {
-            factor = 4
-            has_trait = trait_living_architecture
-        }
         modifier = {
             factor = 0.1
             has_ethic = ethic_pacifist
@@ -173,22 +171,6 @@ duelist = {
             factor = 1.2
             is_unemployed = yes
             is_pop_category = specialist
-        }
-        modifier = {
-            factor = 0.1
-            has_trait = trait_delicate
-            is_enslaved = yes
-        }
-        modifier = {
-            factor = 1.2
-            OR = {
-                has_trait = trait_zero_g_adapted
-                has_trait = trait_robot_astro
-            }
-        }
-        modifier = {
-            factor = 1.2
-            has_trait = trait_starship_integration
         }
     }
 }

@@ -40,6 +40,38 @@ necromancer = {
             physics_research = 4
             society_research = 4
         }
+        produces = {
+            trigger = {
+                ROOT = {
+                    has_fanatic_governing_ethic = yes
+                }
+            }
+            unity = @pop_unity_fanatic
+        }
+        produces = {
+            trigger = {
+                ROOT = {
+                    has_governing_ethic = yes
+                }
+            }
+            unity = @pop_unity_same
+        }
+        produces = {
+            trigger = {
+                ROOT = {
+                    has_opposing_ethic = yes
+                }
+            }
+            unity = @pop_unity_opposing
+        }
+        produces = {
+            trigger = {
+                ROOT = {
+                    has_opposing_fanatic_ethic = yes
+                }
+            }
+            unity = @pop_unity_fanatic_opposing
+        }
         upkeep = {
             consumer_goods = 2
         }
@@ -52,23 +84,9 @@ necromancer = {
     }
     possible = {
         battle_thrall_job_check_trigger = yes
-        OR = {
-            NOT = {
-                has_ethic = ethic_pacifist
-            }
-            is_enslaved = yes
-        }
-        OR = {
-            traits_restrict_specialist_jobs = no
-            has_pop_flag = allow_necromancer_traits
-        }
     }
     weight = {
         weight = @specialist_job_weight
-        modifier = {
-            factor = 4
-            has_trait = trait_living_architecture
-        }
         modifier = {
             factor = 10
             exists = planet
@@ -141,62 +159,13 @@ necromancer = {
             has_trait = trait_lithoid
         }
         modifier = {
-            factor = 2
-            has_trait = trait_huge
-        }
-        modifier = {
             factor = 1.5
-            has_trait = trait_big
-        }
-        modifier = {
-            factor = 0.5
-            has_trait = trait_small
-        }
-        modifier = {
-            factor = 0.25
-            has_trait = trait_tiny
-        }
-        modifier = {
-            factor = 2
-            has_trait = trait_huge_lithoid
-        }
-        modifier = {
-            factor = 1.3
             has_job = necromancer
         }
         modifier = {
             factor = 1.2
             is_unemployed = yes
             is_pop_category = specialist
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_big_lithoid
-        }
-        modifier = {
-            factor = 0.5
-            has_trait = trait_small_lithoid
-        }
-        modifier = {
-            factor = 0.25
-            has_trait = trait_tiny_lithoid
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_aggressive
-        }
-        modifier = {
-            factor = 0.5
-            has_trait = trait_timid
-        }
-        modifier = {
-            factor = 0.25
-            has_trait = trait_sessile
-        }
-        modifier = {
-            factor = 0.1
-            has_trait = trait_delicate
-            is_enslaved = yes
         }
     }
 }

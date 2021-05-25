@@ -10,7 +10,7 @@ colonist = {
         is_sapient = yes
     }
     possible = {
-        specialist_job_check_trigger = yes
+        complex_specialist_job_check_trigger = yes
     }
     pop_modifier = {
         pop_defense_armies_add = 1
@@ -38,18 +38,40 @@ colonist = {
         }
     }
     resources = {
-        category = planet_jobs
+        category = planet_administrators
+        produces = {
+            trigger = {
+                owner = {
+                    has_valid_civic = civic_star_settlers
+                }
+            }
+            unity = 5
+        }
         produces = {
             trigger = {
                 is_lithoid = no
+                owner = {
+                    is_robot_empire = no
+                }
             }
             food = 1
         }
         produces = {
             trigger = {
                 is_lithoid = yes
+                owner = {
+                    is_robot_empire = no
+                }
             }
             minerals = 1
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    is_robot_empire = yes
+                }
+            }
+            energy = 1
         }
     }
     weight = {
@@ -104,6 +126,11 @@ colonist = {
         modifier = {
             factor = 1.5
             has_trait = trait_void_dweller_1
+        }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = specialist
         }
     }
 }

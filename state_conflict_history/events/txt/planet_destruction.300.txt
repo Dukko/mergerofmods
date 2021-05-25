@@ -333,6 +333,9 @@ planet_event = {
                 pc_hajungle = {
                     change_pc = pc_hajungle
                 }
+                pc_cenote = {
+                    change_pc = pc_cenote
+                }
                 pc_cascadian = {
                     change_pc = pc_cascadian
                 }
@@ -356,6 +359,9 @@ planet_event = {
                 }
                 pc_mesa = {
                     change_pc = pc_mesa
+                }
+                pc_badlands = {
+                    change_pc = pc_badlands
                 }
                 pc_outback = {
                     change_pc = pc_outback
@@ -416,6 +422,9 @@ planet_event = {
                 }
                 pc_ecocity = {
                     change_pc = pc_ecocity
+                }
+                pc_corpoarc = {
+                    change_pc = pc_corpoarc
                 }
                 pc_palacearc = {
                     change_pc = pc_palacearc

@@ -17,6 +17,7 @@ col_research = {
             uses_district_set = pdmachinefactory
             uses_district_set = pdmachinecapital
             uses_district_set = pdmilarc
+            uses_district_set = pdcorpoarc
         }
         is_special_colony_type = no
     }

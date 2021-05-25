@@ -12,15 +12,27 @@ bluelotus_technician = {
     }
     possible = {
         worker_job_check_trigger = yes
-        OR = {
-            traits_restrict_specialist_jobs = no
-            has_pop_flag = allow_bluelotus_technician_traits
-        }
     }
     resources = {
         category = planet_metallurgists
         produces = {
             alloys = 4
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_foundry_2
+                }
+            }
+            alloys = 1
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_foundry_3
+                }
+            }
+            alloys = 2
         }
         upkeep = {
             trigger = {
@@ -89,34 +101,13 @@ bluelotus_technician = {
             has_trait = trait_necrophage
         }
         modifier = {
-            factor = 1.25
-            has_trait = trait_extreme_thermophile
-        }
-        modifier = {
-            factor = 1.125
-            has_trait = trait_thermophile
-        }
-        modifier = {
-            factor = 0.875
-            has_trait = trait_clumsy
-        }
-        modifier = {
-            factor = 1.3
+            factor = 1.5
             has_job = bluelotus_technician
-        }
-        modifier = {
-            factor = 0.08
-            has_trait = trait_limbless
         }
         modifier = {
             factor = 1.2
             is_unemployed = yes
             is_pop_category = specialist
-        }
-        modifier = {
-            factor = 0.1
-            has_trait = trait_delicate
-            is_enslaved = yes
         }
     }
 }

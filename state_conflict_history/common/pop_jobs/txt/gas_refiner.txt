@@ -11,24 +11,11 @@ gas_refiner = {
     }
     possible = {
         specialist_job_check_trigger = yes
-        OR = {
-            traits_restrict_specialist_jobs = no
-            has_pop_flag = allow_gas_refiner_traits
-        }
     }
     resources = {
         category = planet_refiners
         produces = {
             exotic_gases = 2
-        }
-        produces = {
-            trigger = {
-                exists = owner
-                owner = {
-                    has_valid_civic = civic_refining_consortium
-                }
-            }
-            exotic_gases = 1
         }
         upkeep = {
             minerals = 10
@@ -36,10 +23,6 @@ gas_refiner = {
     }
     weight = {
         weight = @specialist_job_weight
-        modifier = {
-            factor = 4
-            has_trait = trait_living_architecture
-        }
         modifier = {
             factor = 0.2
             has_citizenship_rights = no
@@ -88,15 +71,6 @@ gas_refiner = {
             factor = 1.2
             is_unemployed = yes
             is_pop_category = specialist
-        }
-        modifier = {
-            factor = 0.1
-            has_trait = trait_limbless
-        }
-        modifier = {
-            factor = 0.1
-            has_trait = trait_delicate
-            is_enslaved = yes
         }
     }
 }

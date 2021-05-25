@@ -3,6 +3,7 @@ col_ecu_foundry = {
     potential = {
         OR = {
             uses_district_set = city_world
+            uses_district_set = pdcorpoarc
             uses_district_set = pdshroudarc
         }
     }

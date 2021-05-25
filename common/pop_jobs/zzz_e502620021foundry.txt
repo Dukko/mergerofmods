@@ -54,9 +54,38 @@ foundry = {
             }
             minerals = 4
         }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_edict = forge_subsidies
+                }
+            }
+            energy = 1
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    or = {
+                        has_valid_civic = civic_environmentalist
+                        has_valid_civic = civic_keepers_harmony
+                    }
+                }
+            }
+            minerals = -0.5
+        }
     }
     weight = {
         weight = @specialist_job_weight
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
         modifier = {
             factor = 2
             is_enslaved = yes
@@ -81,8 +110,24 @@ foundry = {
             }
         }
         modifier = {
+            factor = 1.2
+            is_enslaved = yes
+            has_slavery_type = {
+                type = slavery_indentured
+            }
+        }
+        modifier = {
             factor = 1.5
             has_trait = trait_void_dweller_1
+        }
+        modifier = {
+            factor = 1.5
+            has_trait = trait_necrophage
+        }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = specialist
         }
     }
 }

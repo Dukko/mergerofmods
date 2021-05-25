@@ -10,9 +10,8 @@ artisan = {
     }
     possible = {
         specialist_job_check_trigger = yes
-        OR = {
-            traits_restrict_specialist_jobs = no
-            has_pop_flag = allow_artisan_traits
+        owner = {
+            is_gestalt = no
         }
     }
     resources = {
@@ -20,8 +19,40 @@ artisan = {
         produces = {
             consumer_goods = 6
         }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_factory_2
+                }
+            }
+            consumer_goods = 1
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_factory_3
+                }
+            }
+            consumer_goods = 2
+        }
         upkeep = {
             minerals = 6
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    has_active_building = building_factory_2
+                }
+            }
+            minerals = 1
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    has_active_building = building_factory_3
+                }
+            }
+            minerals = 2
         }
         upkeep = {
             trigger = {
@@ -48,13 +79,17 @@ artisan = {
     weight = {
         weight = @specialist_job_weight
         modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+        modifier = {
             factor = 2
             is_enslaved = yes
             can_take_servant_job = no
-        }
-        modifier = {
-            factor = 4
-            has_trait = trait_living_architecture
         }
         modifier = {
             factor = 5
@@ -67,31 +102,6 @@ artisan = {
                 has_trait = trait_robust
                 has_trait = trait_robot_efficient_processors
             }
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_void_dweller_1
-        }
-        modifier = {
-            factor = 1.2
-            has_trait = trait_extremely_dextrous
-        }
-        modifier = {
-            factor = 1.1
-            has_trait = trait_dextrous
-        }
-        modifier = {
-            factor = 0.9
-            has_trait = trait_clumsy
-        }
-        modifier = {
-            factor = 0.1
-            has_trait = trait_limbless
-        }
-        modifier = {
-            factor = 0.1
-            has_trait = trait_delicate
-            is_enslaved = yes
         }
         modifier = {
             factor = 1.2
@@ -107,6 +117,23 @@ artisan = {
         modifier = {
             factor = 1.5
             has_trait = trait_necrophage
+        }
+        modifier = {
+            factor = 1.2
+            OR = {
+                is_unemployed = yes
+                has_job = "artisan"
+            }
+            exists = planet
+            planet = {
+                has_available_jobs = "artisan"
+            }
+            owner = {
+                has_monthly_income = {
+                    resource = consumer_goods
+                    value < 5
+                }
+            }
         }
         modifier = {
             factor = 1.2

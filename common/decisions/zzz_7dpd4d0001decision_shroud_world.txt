@@ -10,6 +10,7 @@ decision_shroud_world = {
         }
     }
     potential = {
+        has_global_flag = planetarydiversityshroud
         OR = {
         owner = {
             has_ascension_perk = ap_transcendence
@@ -114,6 +115,9 @@ decision_shroud_world = {
         }
         NOT = {
             is_planet_class = pc_pd_asteroid_hab
+        }
+        NOT = {
+            is_planet_class = pc_gd_hydrocarbon_hab
         }
     }
     effect = {

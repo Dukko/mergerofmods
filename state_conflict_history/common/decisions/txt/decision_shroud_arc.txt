@@ -13,11 +13,11 @@ decision_shroud_arc = {
         OR = {
         owner = {
             has_ascension_perk = ap_transcendence
-        }
-            owner = {
+            }
+        owner = {
                 has_ascension_perk = ap_synthetic_transcendence
             }
-            owner = {
+        owner = {
                 has_ascension_perk = ap_machine_transcendence
             }
         }
@@ -25,6 +25,7 @@ decision_shroud_arc = {
         OR = {
             is_planet_class = pc_city
             is_planet_class = pc_ecocity
+            is_planet_class = pc_necropolis
             is_planet_class = pc_corpoarc
             is_planet_class = pc_palacearc
             is_planet_class = pc_capitalarc

@@ -1,0 +1,126 @@
+caretaker_ward = {
+    category = worker
+    clothes_texture_index = 1
+    building_icon = building_monitor_station_1
+    can_set_priority = no
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        NOT = {
+            has_trait = trait_mechanical
+        }
+        NOR = {
+            has_job = monitor
+            has_job = high_monitor
+        }
+        or = {
+            is_same_species = owner_species
+            and = {
+                not = {
+                    is_same_species = owner_species
+                }
+                or = {
+                    planet = {
+                        has_planet_flag = caretaker_allow_xenos_wards_flag
+                    }
+                    owner = {
+                        has_valid_civic = civic_love_the_alien
+                    }
+                }
+            }
+        }
+    }
+    resources = {
+        category = planet_jobs
+        produces = {
+            unity = 1
+        }
+        upkeep = {
+            consumer_goods = 0.5
+            food = 0.5
+        }
+    }
+    triggered_pop_modifier = {
+        pop_housing_usage_add = -0.5
+        pop_happiness = 0.1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            pop = {
+                is_same_species = owner_species
+            }
+            owner = {
+                has_valid_civic = civic_one_big_family
+            }
+        }
+        modifier = {
+            pop_growth_speed = 0.01
+        }
+    }
+    planet_modifier = {
+        planet_amenities_add = -1
+    }
+    weight = {
+        weight = 500
+        modifier = {
+            factor = 0.01
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 1.6
+            has_job = caretaker_ward
+        }
+        modifier = {
+            factor = 1.1
+            is_same_species = owner_species
+        }
+        modifier = {
+            factor = 1.3
+            is_same_species = owner_species
+            owner = {
+                has_valid_civic = civic_one_big_family
+            }
+        }
+        modifier = {
+            factor = 1.3
+            planet = {
+                or = {
+                    has_designation = col_wardworld
+                    has_designation = col_habitat_caretakerward
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            is_enslaved = yes
+        }
+        modifier = {
+            factor = 0.7
+            owner = {
+                not = {
+                    has_valid_civic = civic_love_the_alien
+                }
+            }
+            not = {
+                is_same_species = owner_species
+            }
+        }
+        modifier = {
+            factor = 1.2
+            owner = {
+                has_valid_civic = civic_love_the_alien
+            }
+            not = {
+                is_same_species = owner_species
+            }
+        }
+        modifier = {
+            factor = 1.5
+            has_pop_flag = pop_caretaker_naturalborn
+        }
+    }
+}

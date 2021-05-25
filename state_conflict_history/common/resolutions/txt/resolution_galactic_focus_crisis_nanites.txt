@@ -86,32 +86,28 @@ resolution_galactic_focus_crisis_nanites = {
             factor = 1.1
             event_target:graygoo_country = {
                 fleet_power > 300000
-                fleet_power <= 500000
+            }
+        }
+        modifier = {
+            factor = 1.37
+            event_target:graygoo_country = {
+                fleet_power > 500000
+            }
+        }
+        modifier = {
+            factor = 1.33
+            event_target:graygoo_country = {
+                fleet_power > 750000
             }
         }
         modifier = {
             factor = 1.5
             event_target:graygoo_country = {
-                fleet_power > 500000
-                fleet_power <= 750000
-            }
-        }
-        modifier = {
-            factor = 2
-            event_target:graygoo_country = {
-                fleet_power > 750000
-                fleet_power <= 1100000
-            }
-        }
-        modifier = {
-            factor = 3
-            event_target:graygoo_country = {
                 fleet_power > 1100000
-                fleet_power <= 1600000
             }
         }
         modifier = {
-            factor = 10
+            factor = 3.33
             event_target:graygoo_country = {
                 fleet_power > 1600000
             }

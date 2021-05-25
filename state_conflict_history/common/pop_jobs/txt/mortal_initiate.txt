@@ -36,18 +36,7 @@ mortal_initiate = {
         }
         modifier = {
             factor = 2
-            owner = {
-                or = {
-                    has_valid_civic = civic_exalted_priesthood
-                    has_valid_civic = civic_imperial_cult
-                    has_valid_civic = civic_divine_council
-                    has_valid_civic = civic_spiritual_democracy
-            }
-        }
-        }
-        modifier = {
-            factor = 1.5
-            has_job = mortal_initiate
+            is_theocracy = yes
         }
         modifier = {
             factor = 1.5
@@ -55,10 +44,6 @@ mortal_initiate = {
                 has_trait = trait_thrifty
                 has_trait = trait_nuumismatic_administration
             }
-        }
-        modifier = {
-            factor = 0.5
-            has_trait = trait_spendthrifts
         }
         modifier = {
             factor = 1.5

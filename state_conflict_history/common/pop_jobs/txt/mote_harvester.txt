@@ -11,10 +11,6 @@ mote_harvester = {
     }
     possible = {
         worker_job_check_trigger = yes
-        OR = {
-            traits_restrict_worker_jobs = no
-            has_pop_flag = allow_mote_harvester_traits
-        }
     }
     resources = {
         category = planet_miners
@@ -67,10 +63,6 @@ mote_harvester = {
             can_take_servant_job = yes
         }
         modifier = {
-            factor = 1.5
-            has_job = mote_harvester
-        }
-        modifier = {
             factor = 5
             has_trait = trait_syncretic_proles
         }
@@ -93,38 +85,6 @@ mote_harvester = {
             has_trait = trait_weak
         }
         modifier = {
-            factor = 2
-            has_trait = trait_huge
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_big
-        }
-        modifier = {
-            factor = 0.5
-            has_trait = trait_small
-        }
-        modifier = {
-            factor = 0.25
-            has_trait = trait_tiny
-        }
-        modifier = {
-            factor = 2
-            has_trait = trait_huge_lithoid
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = trait_big_lithoid
-        }
-        modifier = {
-            factor = 0.5
-            has_trait = trait_small_lithoid
-        }
-        modifier = {
-            factor = 0.25
-            has_trait = trait_tiny_lithoid
-        }
-        modifier = {
             factor = 3
             OR = {
                 has_trait = trait_robust
@@ -142,23 +102,6 @@ mote_harvester = {
         modifier = {
             factor = 0.75
             has_trait = trait_necrophage
-        }
-        modifier = {
-            factor = 0.2
-            has_trait = trait_limbless
-        }
-        modifier = {
-            factor = 0.25
-            has_trait = trait_delicate
-            is_enslaved = yes
-        }
-        modifier = {
-            factor = 0.25
-            has_trait = trait_sessile
-        }
-        modifier = {
-            factor = 0.4
-            has_trait = trait_limbless
         }
     }
 }

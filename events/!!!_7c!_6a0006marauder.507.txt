@@ -1,0 +1,22 @@
+namespace = marauder
+country_event = {
+    id = marauder.507
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        event_target:marauder_rally_point = {
+            CmtEffectCreateAdmiralty_Khan2ndFleetSet = yes
+        }
+        every_country = {
+            limit = {
+                is_ai = no
+            }
+            country_event = {
+                id = marauder.508
+            }
+        }
+        observer_event = {
+            id = observer.15
+        }
+    }
+}

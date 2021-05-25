@@ -17,22 +17,8 @@ building_hydroponics_farm = {
         }
     }
     allow = {
-        OR = {
-            owner = {
-                is_ai = no
-            }
-            AND = {
-                owner = {
-                    is_ai = yes
-                    has_monthly_income = {
-                        resource = food
-                        value < 30
-                    }
-                }
-                free_district_slots = 0
-            }
-        }
         buildings_simple_allow = yes
+        str_hydroponics_allow = yes
     }
     destroy_trigger = {
         exists = owner
@@ -46,46 +32,12 @@ building_hydroponics_farm = {
                 NOT = {
                     is_planet_class = pc_habitat
                 }
-                NOT = {
-                    is_planet_class = pc_pd_barren_cold_hab
-                }
-                NOT = {
-                    is_planet_class = pc_pd_barren_hab
-                }
-                NOT = {
-                    is_planet_class = pc_pd_frozen_hab
-                }
-                NOT = {
-                    is_planet_class = pc_pd_gas_giant_hab
-                }
-                NOT = {
-                    is_planet_class = pc_pd_hothouse_hab
-                }
-                NOT = {
-                    is_planet_class = pc_pd_toxic_hab
-                }
-                NOT = {
-                    is_planet_class = pc_pd_molten_hab
-                }
-                NOT = {
-                    is_planet_class = pc_gd_hydrocarbon_hab
-                }
                 free_building_slots = 0
                 owner = {
                     is_ai = yes
                     has_monthly_income = {
                         resource = food
                         value > 100
-                    }
-                }
-            }
-            planet = {
-                free_building_slots = 0
-                owner = {
-                    is_ai = yes
-                    has_monthly_income = {
-                        resource = food
-                        value > 250
                     }
                 }
             }
@@ -145,6 +97,10 @@ building_hydroponics_farm = {
             energy = 2
         }
     }
+    upgrades = {
+        building_eutab_hydroponics_tower
+                "eb_hydrofarm2"
+    }
     triggered_desc = {
         trigger = {
             exists = owner
@@ -175,10 +131,6 @@ building_hydroponics_farm = {
     }
     prerequisites = {
         "tech_hydroponics"
-    }
-    upgrades = {
-        "eb_hydrofarm2"
-        building_eutab_hydroponics_tower
     }
     ai_resource_production = {
         food = 1

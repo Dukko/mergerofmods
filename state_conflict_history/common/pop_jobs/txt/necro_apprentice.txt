@@ -22,7 +22,44 @@ necro_apprentice = {
     resources = {
         category = planet_necro_apprentices
         produces = {
-            unity = 2
+        }
+        produces = {
+            trigger = {
+                is_theocracy = yes
+            }
+            unity = 1
+        }
+        produces = {
+            trigger = {
+                ROOT = {
+                    has_fanatic_governing_ethic = yes
+                }
+            }
+            unity = @pop_unity_fanatic
+        }
+        produces = {
+            trigger = {
+                ROOT = {
+                    has_governing_ethic = yes
+                }
+            }
+            unity = @pop_unity_same
+        }
+        produces = {
+            trigger = {
+                ROOT = {
+                    has_opposing_ethic = yes
+                }
+            }
+            unity = @pop_unity_opposing
+        }
+        produces = {
+            trigger = {
+                ROOT = {
+                    has_opposing_fanatic_ethic = yes
+                }
+            }
+            unity = @pop_unity_fanatic_opposing
         }
         upkeep = {
             trigger = {
@@ -42,6 +79,19 @@ necro_apprentice = {
     }
     planet_modifier = {
         planet_amenities_add = 5
+        planet_pops_unity_produces_mult = 0.03
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_governing_ethos = yes
+        }
+        pop_government_ethic_attraction = 0.03
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_opposing_ethos = yes
+        }
+        pop_government_ethic_attraction = -0.03
     }
     triggered_planet_modifier = {
         potential = {
@@ -101,7 +151,7 @@ necro_apprentice = {
             }
         }
         modifier = {
-            factor = 1.3
+            factor = 1.5
             has_job = necro_apprentice
         }
         modifier = {

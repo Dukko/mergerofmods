@@ -11,15 +11,12 @@ healthcare = {
     }
     possible = {
         specialist_job_check_trigger = yes
-        OR = {
-            traits_restrict_specialist_jobs = no
-            has_pop_flag = allow_healthcare_traits
-        }
     }
     planet_modifier = {
         planet_amenities_add = 5
         pop_growth_speed = 0.05
-        pop_environment_tolerance = 0.01
+        planet_pop_assembly_organic_mult = 0.05
+        pop_environment_tolerance = 0.025
     }
     resources = {
         category = planet_doctors
@@ -101,10 +98,6 @@ healthcare = {
     }
     weight = {
         weight = @spawner_drone_job_weight
-        modifier = {
-            factor = 4
-            has_trait = trait_living_architecture
-        }
         modifier = {
             factor = 0.2
             has_citizenship_rights = no

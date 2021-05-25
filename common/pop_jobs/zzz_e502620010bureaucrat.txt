@@ -24,7 +24,7 @@ bureaucrat = {
             unity = 1
         }
         upkeep = {
-            consumer_goods = 2
+            consumer_goods = 1
         }
     }
     triggered_planet_modifier = {
@@ -120,6 +120,11 @@ bureaucrat = {
         modifier = {
             factor = 0.5
             has_trait = trait_enigmatic_intelligence_failed
+        }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = specialist
         }
     }
 }

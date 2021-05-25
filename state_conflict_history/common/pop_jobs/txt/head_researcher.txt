@@ -13,10 +13,6 @@ head_researcher = {
     }
     possible = {
         ruler_job_check_trigger = yes
-        OR = {
-            traits_restrict_specialist_jobs = no
-            has_pop_flag = allow_researcher_traits
-        }
     }
     resources = {
         category = planet_researchers
@@ -60,10 +56,6 @@ head_researcher = {
     weight = {
         weight = @ruler_job_weight
         modifier = {
-            factor = 4
-            has_trait = trait_living_architecture
-        }
-        modifier = {
             factor = 0.2
             has_citizenship_rights = no
             NOT = {
@@ -74,6 +66,12 @@ head_researcher = {
             factor = 2
             has_living_standard = {
                 type = living_standard_academic_privilege
+            }
+        }
+        modifier = {
+            factor = 0
+            has_living_standard = {
+                type = living_standard_chemical_bliss
             }
         }
         modifier = {
@@ -150,14 +148,6 @@ head_researcher = {
             has_trait = trait_necrophage
         }
         modifier = {
-            factor = 1.2
-            has_trait = trait_multihive_core
-        }
-        modifier = {
-            factor = 0.5
-            has_trait = trait_multihive_drone
-        }
-        modifier = {
             factor = 0.01
             exists = planet
             exists = planet.controller
@@ -167,11 +157,6 @@ head_researcher = {
                     is_country_type = ai_empire
                 }
             }
-        }
-        modifier = {
-            factor = 1.2
-            is_unemployed = yes
-            is_pop_category = ruler
         }
     }
 }

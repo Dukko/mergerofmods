@@ -1,0 +1,123 @@
+building_robot_assembly_plant = {
+    base_buildtime = @b1_time
+    base_cap_amount = 1
+    category = pop_assembly
+    potential = {
+        exists = owner
+        OR = {
+            owner = {
+                is_ai = no
+            }
+            and = {
+                free_building_slots > 0
+                owner = {
+                    num_pops < 900
+                }
+                or = {
+                    nor = {
+                        has_designation = col_factory
+                        has_designation = col_foundry
+                    }
+                    owner = {
+                        has_technology = tech_droid_workers
+                    }
+                }
+            }
+        }
+        owner = {
+            is_regular_empire = yes
+            NOT = {
+                has_policy_flag = robots_outlawed
+            }
+            OR = {
+                is_ai = no
+                NOT = {
+                    has_ascension_perk = ap_engineered_evolution
+                }
+                is_materialist = yes
+            }
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+    }
+    convert_to = {
+        building_machine_assembly_plant
+    }
+    allow = {
+        hidden_trigger = {
+            OR = {
+                owner = {
+                    is_ai = no
+                }
+                AND = {
+                    num_buildings = {
+                        type = any
+                        value <= 14
+                    }
+                    NOT = {
+                        is_planet_class = pc_habitat
+                    }
+                }
+            }
+        }
+    }
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            owner = {
+                OR = {
+                    is_regular_empire = no
+                    has_policy_flag = robots_outlawed
+                }
+            }
+            has_modifier = slave_colony
+            AND = {
+                owner = {
+                    is_ai = yes
+                }
+                free_jobs < 1
+                OR = {
+                    num_buildings = {
+                        type = any
+                        value = 16
+                    }
+                    is_planet_class = pc_habitat
+                }
+            }
+            owner = {
+                is_ai = yes
+                has_ascension_perk = ap_engineered_evolution
+                is_materialist = no
+            }
+            owner = {
+                is_ai = yes
+                num_pops > 950
+            }
+        }
+    }
+    planet_modifier = {
+        job_roboticist_add = 1
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b2_minerals
+        }
+        upkeep = {
+            energy = @b2_upkeep
+        }
+    }
+    triggered_desc = {
+        text = job_roboticist_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            has_building = building_clone_vats
+        }
+        text = tooltip_organic_and_artificial_assembly_warning
+    }
+    prerequisites = {
+        "tech_robotic_workers"
+    }
+}

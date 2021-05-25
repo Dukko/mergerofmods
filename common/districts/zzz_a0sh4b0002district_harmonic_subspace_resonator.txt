@@ -1,0 +1,59 @@
+district_harmonic_subspace_resonator = {
+    base_buildtime = 3600
+    is_capped_by_modifier = yes
+    can_demolish = no
+    show_on_uncolonized = {
+        uses_district_set = shadowgate
+    }
+    potential = {
+        uses_district_set = shadowgate
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            sr_dark_matter = @shadowgate_district_cost_dm
+            sr_living_metal = @shadowgate_district_cost_lm
+        }
+        upkeep = {
+            trigger = {
+                root = {
+                    NOT = {
+                        shadowgate_is_disabled = yes
+                    }
+                    OR = {
+                        NOT = {
+                            exists = owner
+                        }
+                        AND = {
+                            exists = owner
+                            NOT = {
+                                owner = {
+                                    is_ai = yes
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            exotic_gases = 1
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            always = yes
+        }
+        text = harmonic_subspace_resonator_effect
+    }
+    triggered_desc = {
+        trigger = {
+            always = yes
+        }
+        text = shadowgate_district_demolish
+    }
+    planet_modifier = {
+        job_shadowgate_researcher_add = 2
+    }
+    ai_weight = {
+        weight = 100000
+    }
+}
