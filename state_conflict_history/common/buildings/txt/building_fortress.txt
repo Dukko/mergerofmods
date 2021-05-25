@@ -37,6 +37,7 @@ building_fortress = {
         NOT = {
             owner = {
                 has_tradition = tr_plentiful_defence_5
+                }
             }
         }
     }

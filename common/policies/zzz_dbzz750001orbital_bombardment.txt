@@ -96,6 +96,7 @@ orbital_bombardment = {
             modifier = {
                 factor = 10
                 has_ascension_perk = ap_become_the_crisis
+            }
         }
     }
     option = {

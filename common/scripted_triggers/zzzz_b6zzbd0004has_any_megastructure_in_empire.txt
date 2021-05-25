@@ -404,5 +404,6 @@ has_any_megastructure_in_empire = {
         has_megastructure = r_square_world_hub_powered
         has_megastructure = r_square_world_restored
         has_megastructure = r_square_world_ruined
+        }
     }
 }
