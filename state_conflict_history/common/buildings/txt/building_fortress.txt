@@ -10,7 +10,9 @@ building_fortress = {
         buildings_upgrade_allow = yes
         buildings_has_motes = yes
         or = {
-            is_ai = no
+            owner = {
+                is_ai = no
+            }
             has_planet_flag = str_supervisor
         }
     }

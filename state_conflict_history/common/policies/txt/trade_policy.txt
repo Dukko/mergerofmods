@@ -77,7 +77,7 @@ trade_policy = {
                 or = {
                     has_policy_flag = trade_conversion_consumer_goods
                     and = {
-                        years_passed > 10
+                        years_passed > 8
                         resource_income_compare = {
                             resource = energy
                             value > 5
@@ -148,26 +148,6 @@ trade_policy = {
                 has_policy_flag = "economic_stance_market"
                 has_ethic = "ethic_fanatic_capitalism"
             }
-        }
-        modifier = {
-        }
-        AI_weight = {
-            factor = 0
-        }
-    }
-    option = {
-        name = "trade_policy_science"
-        potential = {
-            has_valid_civic = civic_science_syndicate
-            OR = {
-                has_federation = no
-                AND = {
-                    has_federation = yes
-                }
-            }
-        }
-        policy_flags = {
-            trade_conversion_science
         }
         modifier = {
         }

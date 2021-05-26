@@ -27,6 +27,6 @@ pc_sterile = {
     starting_planet = no
     colonizable = yes
     district_set = standard
-    uses_alternative_skies_for_moons = yes
+    uses_alternative_skies_for_moons = no
     carry_cap_per_free_district = @carry_cap_normal
 }

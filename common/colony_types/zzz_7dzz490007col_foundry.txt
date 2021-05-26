@@ -6,7 +6,6 @@ col_foundry = {
         exists = owner
         NOR = {
             uses_district_set = city_world
-            uses_district_set = pdshroudarc
             uses_district_set = ring_world
             uses_district_set = habitat
             uses_district_set = machine_world
@@ -347,10 +346,6 @@ col_foundry = {
                     value > 1000
                 }
             }
-        }
-        modifier = {
-            factor = 0.9
-            years_passed < @str_ai_prioritise_research_until
         }
     }
 }

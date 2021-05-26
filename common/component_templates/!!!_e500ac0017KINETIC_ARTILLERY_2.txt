@@ -1,0 +1,52 @@
+weapon_component_template = {
+    type = instant
+    key = "KINETIC_ARTILLERY_2"
+    size = large
+    icon = "GFX_ship_part_kinetic_artillery_2"
+    icon_frame = 1
+    prerequisites = {
+        "tech_kinetic_artillery_2"
+    }
+    component_set = "KINETIC_ARTILLERY_2"
+    projectile_gfx = "adv_kinetic_artillery"
+    upgrades_to = "NHSC_ARTILLERY_3"
+    tags = {
+        weapon_type_kinetic
+    }
+    ai_tags = {
+        weapon_role_artillery
+    }
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @l_t6_cost
+            volatile_motes = @l_t6_rare
+        }
+        upkeep = {
+            energy = @l_t6_upkeep_energy
+            alloys = @l_t6_upkeep_alloys
+        }
+    }
+    ai_weight = {
+        weight = 1.2
+        modifier = {
+            factor = 2
+            has_technology = tech_cruisers
+        }
+        modifier = {
+            factor = 1200
+            has_global_flag = extradimensional_invasion_happened
+            NOT = {
+                has_global_flag = extradimensional_invasion_defeated
+            }
+        }
+        modifier = {
+            factor = 0
+            is_country_type = default
+            resource_stockpile_compare = {
+                resource = volatile_motes
+                value < 10
+            }
+        }
+    }
+}

@@ -15,13 +15,6 @@ ship_section_template = {
             }
         }
         modifier = {
-            factor = 10
-            large_size = no
-            not = {
-                has_technology = tech_combat_computers_2
-            }
-        }
-        modifier = {
             factor = 9
             has_technology = tech_missiles_4
             not = {

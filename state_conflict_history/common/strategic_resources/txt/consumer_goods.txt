@@ -30,6 +30,24 @@ consumer_goods = {
     ai_wants = {
         base = 1
         modifier = {
+            add = 5000
+            resource_income_compare = {
+                resource = consumer_goods
+                value < 10
+            }
+            resource_stockpile_compare = {
+                resource = consumer_goods
+                value < 150
+            }
+            resource_stockpile_compare = {
+                resource = energy
+                value > 1000
+            }
+            years_passed < 35
+            is_at_war = no
+            ai_colonize_plans > 0
+        }
+        modifier = {
             add = @target_consumer_goods_value
             NOR = {
                 AND = {
