@@ -319,8 +319,8 @@ diplomatic_stance = {
             modifier = {
                 factor = 0.01
                 has_ascension_perk = ap_become_the_crisis
+            }
         }
-    }
     }
     option = {
         name = "diplo_stance_mercantile"

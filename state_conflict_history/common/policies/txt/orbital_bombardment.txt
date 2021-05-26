@@ -2,6 +2,7 @@ orbital_bombardment = {
     potential = {
         OR = {
             ehof_default_country = yes
+            is_country_type = default
             is_country_type = vol
         }
     }

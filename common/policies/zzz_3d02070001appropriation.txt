@@ -20,6 +20,13 @@ appropriation = {
                     has_civic = civic_indentured_assets
                 }
             }
+            modifier = {
+                factor = 10
+                OR = {
+                    has_valid_civic = civic_machine_servitor
+                    has_valid_civic = civic_machine_assimilator
+                }
+            }
         }
     }
     option = {
@@ -30,6 +37,41 @@ appropriation = {
         modifier = {
         }
         AI_weight = {
+            modifier = {
+                factor = 10
+                is_gestalt = yes
+                NOR = {
+                    has_valid_civic = civic_machine_servitor
+                    has_valid_civic = civic_machine_assimilator
+                }
+            }
+            modifier = {
+                factor = 0.5
+                has_global_flag = str_enabled_flag
+            }
+            modifier = {
+                factor = 40
+                has_global_flag = str_enabled_flag
+                or = {
+                    has_civic = civic_fanatic_purifiers
+                    is_gestalt = yes
+                }
+                NOR = {
+                    has_valid_civic = civic_machine_servitor
+                    has_valid_civic = civic_machine_assimilator
+                }
+            }
+            modifier = {
+                factor = 10
+                OR = {
+                    is_fallen_empire_xenophobe = yes
+                    is_fallen_empire_spiritualist = yes
+                }
+            }
+            modifier = {
+                factor = 0
+                is_fallen_empire_xenophile = yes
+            }
             modifier = {
                 factor = 10
                 NOT = {

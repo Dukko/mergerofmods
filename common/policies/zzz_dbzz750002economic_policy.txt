@@ -6,8 +6,10 @@ economic_policy = {
     }
     option = {
         name = "economic_policy_civilian"
-        policy_flags = {
-            economic_policy_civilian
+        modifier = {
+            country_consumer_goods_produces_mult = 0.15
+            country_alloys_produces_mult = -0.25
+            pop_ethic_pacifist_attraction_mult = 0.2
         }
         valid = {
             NOR = {
@@ -15,10 +17,8 @@ economic_policy = {
                 has_valid_civic = "civic_war_economy"
             }
         }
-        modifier = {
-            country_consumer_goods_produces_mult = 0.15
-            country_alloys_produces_mult = -0.25
-            pop_ethic_pacifist_attraction_mult = 0.2
+        policy_flags = {
+            economic_policy_civilian
         }
         AI_weight = {
             factor = 0.1
@@ -46,21 +46,7 @@ economic_policy = {
         modifier = {
         }
         AI_weight = {
-            factor = 5
-            modifier = {
-                factor = 200
-                years_passed > 20
-                resource_income_compare = {
-                    resource = society_research
-                    value > 150
-                }
-                is_megacorp = no
-                NAND = {
-                    has_technology = tech_battleships
-                    has_technology = tech_energy_torpedoes_2
-                    has_technology = tech_mass_accelerator_1
-                }
-            }
+            factor = 1
             modifier = {
                 factor = 10
                 has_valid_ai_personality = yes
@@ -77,37 +63,22 @@ economic_policy = {
                 key = resolution_rulesofwar_demobilization_initiative
             }
         }
+        modifier = {
+            country_consumer_goods_produces_mult = -0.25
+            country_alloys_produces_mult = 0.15
+            pop_ethic_militarist_attraction_mult = 0.2
+        }
         valid = {
             NOR = {
                 has_valid_civic = "civic_peaceful_republic"
                 has_valid_civic = "civic_peaceful_society"
             }
         }
-        modifier = {
-            country_consumer_goods_produces_mult = -0.25
-            country_alloys_produces_mult = 0.15
-            pop_ethic_militarist_attraction_mult = 0.2
-        }
         policy_flags = {
             economic_policy_military
         }
         AI_weight = {
             factor = 2
-            modifier = {
-                factor = 10
-                resource_income_compare = {
-                    resource = physics_research
-                    value < 90
-                }
-                is_ai = yes
-            }
-            modifier = {
-                factor = 20
-                is_ai = yes
-                has_technology = tech_battleships
-                has_technology = tech_energy_torpedoes_2
-                has_technology = tech_mass_accelerator_1
-            }
             modifier = {
                 factor = 30
                 lategame = yes
@@ -123,6 +94,10 @@ economic_policy = {
                     }
                     has_policy_flag = economic_policy_military
                 }
+            }
+            modifier = {
+                factor = 20
+                is_ai = yes
             }
         }
     }

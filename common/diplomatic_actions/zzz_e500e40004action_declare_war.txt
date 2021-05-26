@@ -10,4 +10,10 @@ action_declare_war = {
     should_open_auto_accept_message_recipient = yes
     should_notify_all_communications = yes
     action_type = aggressive
+    potential = {
+        or = {
+            is_ai = no
+            years_passed > @str_ai_will_not_declare_war_until
+        }
+    }
 }

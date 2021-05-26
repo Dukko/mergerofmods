@@ -1,7 +1,7 @@
 ship_design = {
     name = "NAME_Gatebuilder_Starbase"
     ship_size = starbase_gatebuilders
-    is_event_design = yes
+    is_event_design = no
     is_special_buildable = yes
     section = {
         template = "gatebuilder_starbase_key"
@@ -29,10 +29,6 @@ ship_design = {
         component = {
             slot = "TORPEDO_05"
             template = "NHSC_NANITE_TORPEDO_2"
-        }
-        component = {
-            slot = "TORPEDO_06"
-            template = "GG_ENERGY_MISSILE"
         }
         component = {
             slot = "STRIKE_CRAFT_01"

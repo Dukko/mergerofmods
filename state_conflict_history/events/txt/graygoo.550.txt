@@ -15,8 +15,7 @@ ship_event = {
     location = THIS
     is_triggered_only = yes
     trigger = {
-        NOR = {
-            has_global_flag = gray_goo_crisis_set
+        NOT = {
             has_global_flag = gray_goo_empire_set
         }
         from = {

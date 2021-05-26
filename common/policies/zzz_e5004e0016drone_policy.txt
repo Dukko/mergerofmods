@@ -1,0 +1,48 @@
+drone_policy = {
+    potential = {
+        has_ethic = ethic_gestalt_consciousness
+    }
+    option = {
+        name = "drone_policy_balanced"
+        modifier = {
+        }
+        AI_weight = {
+            factor = 0
+        }
+    }
+    option = {
+        name = "drone_policy_worker"
+        modifier = {
+            planet_jobs_simple_drone_produces_mult = 0.2
+            planet_jobs_complex_drone_produces_mult = -0.2
+        }
+        AI_weight = {
+            factor = 10
+            modifier = {
+                factor = 0
+                is_ai = yes
+                years_passed > 5
+                or = {
+                    resource_income_compare = {
+                        resource = minerals
+                        value > 40
+                    }
+                }
+                has_policy_flag = gestalt_economic_thinker
+            }
+        }
+    }
+    option = {
+        name = "drone_policy_thinker"
+        modifier = {
+            planet_jobs_simple_drone_produces_mult = -0.2
+            planet_jobs_complex_drone_produces_mult = 0.2
+        }
+        policy_flags = {
+            gestalt_economic_thinker
+        }
+        AI_weight = {
+            factor = 5
+        }
+    }
+}

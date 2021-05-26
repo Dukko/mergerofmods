@@ -121,16 +121,6 @@ war_philosophy = {
                     has_ai_personality_behaviour = liberator
                 }
             }
-            modifier = {
-                factor = 10
-                has_valid_ai_personality = yes
-                is_ai = yes
-                is_galactic_community_member = yes
-                OR = {
-                    is_active_resolution = "resolution_rulesofwar_last_resort_doctrine"
-                    is_active_resolution = "resolution_rulesofwar_demobilization_initiative"
-                }
-            }
         }
     }
     option = {

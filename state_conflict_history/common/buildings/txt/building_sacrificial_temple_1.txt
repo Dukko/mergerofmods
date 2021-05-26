@@ -47,7 +47,7 @@ building_sacrificial_temple_1 = {
             has_modifier = slave_colony
             and = {
                 owner = {
-                    is_ai = no
+                    is_ai = yes
                 }
                 num_buildings = {
                     type = building_sacrificial_temple_1
