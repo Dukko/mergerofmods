@@ -1,9 +1,11 @@
 col_habitat_factory = {
     icon = 26
     potential = {
-        uses_district_set = habitat
+        OR = {
+            uses_district_set = habitat
+            uses_district_set = pdarchive
+        }
         exists = owner
-        is_capital = no
         owner = {
             OR = {
                 is_regular_empire = yes

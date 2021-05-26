@@ -6,7 +6,6 @@ col_habitat_leisure = {
             uses_district_set = pdarchive
         }
         exists = owner
-        is_capital = no
         owner = {
             OR = {
                 is_gestalt = no

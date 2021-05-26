@@ -37,7 +37,6 @@ dependencies={
 	"!Lots of Traditions - PT, EST, and ST - 126 Ascension Perks"
 	"UI Overhaul Dynamic + Lots of Traditions - PT, EST, & ST"
 	"Starnet for ESC"
-	"3.0.x | Xenonion News Enclave"
 	"Sins of the Prophets: NSC Compatibility Patch"
 }
 path="D:/Documents/Paradox Interactive/Stellaris/mod/IronyModManager_Dick_1.0"

@@ -9,7 +9,6 @@ col_habitat_trade = {
         owner = {
             is_gestalt = no
         }
-        is_capital = no
     }
     planet_modifier = {
         planet_district_hab_trade_build_speed_mult = 0.25

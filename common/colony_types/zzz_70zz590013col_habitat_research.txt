@@ -2,10 +2,9 @@ col_habitat_research = {
     icon = 22
     potential = {
         OR = {
-        uses_district_set = habitat
+            uses_district_set = habitat
             uses_district_set = pdarchive
-        is_capital = no
-                }
+        }
     }
     planet_modifier = {
         planet_district_hab_research_build_speed_mult = 0.25

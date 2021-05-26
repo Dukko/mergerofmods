@@ -3,7 +3,6 @@ col_habitat_mining = {
     potential = {
         uses_district_set = habitat
         has_planet_flag = mining_habitat
-        is_capital = no
     }
     planet_modifier = {
         planet_district_hab_mining_build_speed_mult = 0.25

@@ -70,7 +70,6 @@ Animated Valbaran Species
 Animated Pardus Species
 Animated Budgie Species
 [3.0.*] New Enclaves
-3.0.x | Xenonion News Enclave
 Additional Traits
 Void Dwellers Expanded 3+
 The Caretaker SE (3.0)
