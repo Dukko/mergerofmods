@@ -12,3 +12,6 @@ How to apply the collection:
 
 Issues with the collection?
 See the Issues tab for known issues/bugs.
+
+More info needed?
+Check the wiki here: https://github.com/Dukko/mergerofmods/wiki
