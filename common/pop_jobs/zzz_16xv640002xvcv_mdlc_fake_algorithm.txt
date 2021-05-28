@@ -6,12 +6,16 @@ xvcv_mdlc_fake_algorithm = {
     contributes_to_diplo_weight = no
     building_icon = building_machine_capital
     possible_pre_triggers = {
-        has_planet = yes
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
     }
     possible = {
         planet = {
             has_modifier = xvcv_mdlc_rogue_network
         }
+        drone_job_check_trigger = yes
     }
     resources = {
         category = planet_jobs

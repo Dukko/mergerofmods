@@ -5,7 +5,6 @@ xvcv_mdlc_bio_robot_clone_technician = {
     icon = xvcv_mdlc_bio_robot_clone_drone
     possible_pre_triggers = {
         has_owner = yes
-        is_enslaved = no
         is_being_purged = no
         is_being_assimilated = no
     }

@@ -10,13 +10,7 @@ xvcv_mdlc_installation_dismantler = {
         is_being_assimilated = no
     }
     possible = {
-        hidden_trigger = {
-            exists = owner
-        }
         worker_job_check_trigger = yes
-        owner = {
-            is_gestalt = no
-        }
     }
     resources = {
         category = planet_miners

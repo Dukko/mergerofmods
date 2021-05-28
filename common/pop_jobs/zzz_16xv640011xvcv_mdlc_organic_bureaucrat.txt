@@ -6,8 +6,6 @@ xvcv_mdlc_organic_bureaucrat = {
     icon = bureaucrat
     possible_pre_triggers = {
         has_owner = yes
-        is_being_purged = no
-        is_being_assimilated = no
     }
     possible = {
         has_citizenship_type = {

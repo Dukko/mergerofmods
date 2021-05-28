@@ -46,7 +46,6 @@ V-Mods Species - Ascellian Free Traders
 V-Mods Species - Shemei Covenant
 Zro Lithoid Trait
 Young Leaders
-Ruler Agenda and Traits
 Merged Leader Levels
 Leader Overhaul - Full Edition
 Just More Traits 3.0.x
@@ -350,7 +349,6 @@ Magnum's Mods - Tradition Cost Scaling
 !Tweak - MNLG Personal Tweaks
 !Stellaris Enhanced Sound Project - Unofficial ESC Patch
 !StartPopsPatch
-¡Compatibility - Ruler Agenda and Traits & More Origins Mod
 !patch PD: More Arcologies - Universal Authorities patch
 !Patch - Shader merge for ACoT, Gigastructures, Jump Gates and Real Space 3.7
 !Patch - Fix PT Slave Armies
