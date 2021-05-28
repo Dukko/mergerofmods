@@ -115,6 +115,7 @@ Diverse Basics
 Weapon Research Menu
 Useful Heirs
 Trader Enclave Starbase Buildings
+Tass Monster Wave
 Separate Peace Treaties
 Size 25 Homeworlds
 Shut Up, We Don't Care! (3.0)
@@ -368,6 +369,7 @@ All unique systems in [3.x]
 !!!Unofficial Hive DLC: Forgotten Queens + Just More Traits 3.0.x
 !!!Universal Resource Patch [2.4+]
 !! K !! - Realistic Asteroids
+The Zenith of Fallen Empires: Defines
 ! The Merger of Rules 3.0
 ! Camera & Galaxy Map Tweaks
 Absolutely no prescripted countries pls
