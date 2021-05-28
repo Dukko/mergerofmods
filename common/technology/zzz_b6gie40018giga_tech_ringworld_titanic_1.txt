@@ -45,6 +45,7 @@ giga_tech_ringworld_titanic_1 = {
         }
     }
     ai_weight = {
+        factor = @giga_aiweight_multiplier
         modifier = {
             factor = 0
             has_galactic_wonders = no

@@ -1,0 +1,32 @@
+@Edict2Cost = 200
+@EdictPerpetual = -1
+land_of_opportunity = {
+    length = @EdictPerpetual
+    icon = "GFX_edict_type_policy"
+    edict_cap_usage = 1
+    resources = {
+        category = edicts
+        cost = {
+            influence = @Edict2Cost
+        }
+    }
+    modifier = {
+        planet_immigration_pull_mult = 1
+        pop_growth_from_immigration = 0.25
+    }
+    potential = {
+        is_xenophile = yes
+        has_comms_with_alien_empire = yes
+        or = {
+            is_ai = no
+            years_passed < 70
+        }
+    }
+    ai_weight = {
+        weight = @EdictHighPrio
+        modifier = {
+            factor = 5
+            years_passed < 40
+        }
+    }
+}

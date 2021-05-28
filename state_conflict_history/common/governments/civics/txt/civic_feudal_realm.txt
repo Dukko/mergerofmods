@@ -22,6 +22,11 @@ civic_feudal_realm = {
     }
     description = "civic_tooltip_feudal_realm_effects"
     modifier = {
+        country_subject_acceptance_add = 50
         country_subject_power_penalty_mult = -0.5
+        country_subject_integration_speed_add = -1800
+        country_integration_cooldown_mult = -0.5
+        subject_integration_influence_cost_mult = 0.5
+        country_insult_efficiency = 0.2
     }
 }

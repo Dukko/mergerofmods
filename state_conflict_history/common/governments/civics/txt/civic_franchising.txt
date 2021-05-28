@@ -8,6 +8,14 @@ civic_franchising = {
             }
             civics = {
                 value = civic_galactic_sovereign_megacorp
+                }
+            }
+        }
+    }
+    possible = {
+        civics = {
+            NOT = {
+                value = civic_criminal_heritage
             }
         }
     }
@@ -18,5 +26,6 @@ civic_franchising = {
     modifier = {
         country_subject_power_penalty_mult = -0.33
         empire_size_branch_office_mult = -0.25
+        planet_branch_offices_cost_mult = -0.15
     }
 }

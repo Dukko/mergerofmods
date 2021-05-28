@@ -40,6 +40,7 @@ tech_qnm_sensors = {
         }
     }
     ai_weight = {
+        factor = @giga_aiweight_multiplier
         factor = @ehof_t1_weight
         modifier = {
             factor = 1.25

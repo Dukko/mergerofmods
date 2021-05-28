@@ -54,6 +54,7 @@ giga_tech_disco_moon = {
         }
     }
     ai_weight = {
+        factor = @giga_aiweight_multiplier
         modifier = {
             factor = 1.25
             research_leader = {

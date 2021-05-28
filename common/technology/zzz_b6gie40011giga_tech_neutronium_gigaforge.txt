@@ -54,6 +54,7 @@ giga_tech_neutronium_gigaforge = {
         }
     }
     ai_weight = {
+        factor = @giga_aiweight_multiplier
         modifier = {
             factor = 0
             has_galactic_wonders = no

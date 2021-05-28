@@ -8,6 +8,7 @@ civic_indentured_assets = {
             }
             civics = {
                 value = civic_galactic_sovereign_megacorp
+                }
             }
         }
     }
@@ -16,7 +17,8 @@ civic_indentured_assets = {
     }
     possible = {
         civics = {
-            NOT = {
+            NOR = {
+                value = civic_private_militaries
                 value = civic_reeducated_labor
             }
         }
@@ -24,6 +26,5 @@ civic_indentured_assets = {
     modifier = {
         planet_jobs_slave_produces_mult = 0.1
         slave_market_cost_mult = -0.25
-        country_pop_enslaved_mult = 0.4
     }
 }

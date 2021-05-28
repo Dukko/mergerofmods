@@ -19,19 +19,6 @@ civic_military_junta = {
         authority = {
             value = auth_oligarchic
         }
-        civics = {
-            NOR = {
-                value = civic_divine_council
-                value = civic_science_directorate
-                value = civic_aristocratic_elite
-                value = civic_merchant_guilds
-                value = civic_state_monopoly
-                value = civic_exalted_priesthood
-                value = civic_technocracy
-                value = civic_bureaucracy
-                value = civic_stratocracy
-            }
-        }
     }
     random_weight = {
         base = 5

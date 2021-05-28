@@ -31,9 +31,9 @@ civic_defenders_faith = {
         }
     }
     modifier = {
-        rivalries_influence_produces_mult = 0.15
-        army_attack_morale_mult = 0.15
-        army_attack_damage_mult = 0.2
+        rivalries_influence_produces_mult = 0.25
+        army_attack_morale_mult = 0.25
+        army_attack_damage_mult = 0.25
         army_attack_health_mult = 0.25
     }
     random_weight = {

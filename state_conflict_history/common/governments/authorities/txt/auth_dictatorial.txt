@@ -11,16 +11,11 @@ auth_dictatorial = {
             }
         }
     }
-    random_weight = {
-        modifier = {
-            factor = 0.85
-        }
-    }
     country_modifier = {
-        country_edict_cap_add = 1
-        pop_cat_worker_political_power = 1
-        pop_cat_specialist_political_power = 3
-        pop_cat_ruler_political_power = 6
+        empire_size_penalty_mult = -0.1
+        pop_cat_worker_political_power = 2
+        pop_cat_specialist_political_power = 4
+        pop_cat_ruler_political_power = 9
     }
     tags = {
         AUTHORITY_ELECTION_ON_RULER_DEATH

@@ -1,0 +1,39 @@
+civic_spiritual_seekers = {
+    potential = {
+        ethics = {
+            NOT = {
+                value = ethic_gestalt_consciousness
+            }
+        }
+        authority = {
+            NOR = {
+                value = auth_corporate
+                value = auth_corporate_imperial
+            }
+        }
+    }
+    possible = {
+        ethics = {
+            OR = {
+                text = civic_tooltip_spiritualist
+                value = ethic_spiritualist
+                value = ethic_fanatic_spiritualist
+            }
+            OR = {
+                text = civic_tooltip_pacifist
+                value = ethic_pacifist
+                value = ethic_fanatic_pacifist
+            }
+        }
+    }
+    modifier = {
+        biological_pop_happiness = 0.05
+        lithoid_pop_happiness = 0.05
+        category_psionics_research_speed_mult = 1
+        job_transcend_per_pop = 0.04
+        max_rivalries = -2
+    }
+    random_weight = {
+        base = 5
+    }
+}

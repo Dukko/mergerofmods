@@ -18,18 +18,15 @@ auth_direct_democratic = {
             }
         }
     }
-    random_weight = {
-        modifier = {
-            factor = 0.4
-        }
-    }
     country_modifier = {
-        edicts_cost_mult = -0.2
-        pop_cat_worker_political_power = 4
-        pop_cat_specialist_political_power = 4
-        pop_cat_ruler_political_power = 2
+        planet_resettlement_unemployed_mult = 0.5
+        decisions_cost_mult = -0.15
+        PLANET_DECISION_ENACT_SPEED_MULT = 0.5
+        pop_cat_worker_political_power = 3
+        pop_cat_specialist_political_power = 5
+        pop_cat_ruler_political_power = 6
     }
     tags = {
-        AUTHORITY_ELECTION_DEMOCRATIC
+        AUTHORITY_ELECTION_DIRECT_DEMOCRATIC
     }
 }

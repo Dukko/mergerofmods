@@ -25,19 +25,6 @@ civic_cyber_demos_cratos = {
                 value = auth_dem_dict_dummy
             }
         }
-        civics = {
-            NOR = {
-                value = civic_citizen_service
-                value = civic_peaceful_republic
-                value = civic_aristocratic_elite
-                value = civic_merchant_guilds
-                value = civic_state_monopoly
-                value = civic_exalted_priesthood
-                value = civic_technocracy
-                value = civic_bureaucracy
-                value = civic_stratocracy
-            }
-        }
     }
     random_weight = {
         base = 5
@@ -47,5 +34,6 @@ civic_cyber_demos_cratos = {
         category_computing_research_speed_mult = 0.2
         category_statecraft_research_speed_mult = 0.2
         planet_crime_mult = 0.2
+        planet_pops_consumer_goods_upkeep_mult = 0.15
     }
 }

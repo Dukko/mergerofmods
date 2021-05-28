@@ -15,16 +15,11 @@ auth_oligarchic = {
             }
         }
     }
-    random_weight = {
-        modifier = {
-            factor = 0.33
-        }
-    }
     country_modifier = {
-        governor_skill_levels = 2
+        pop_factions_produces_mult = 0.15
         pop_cat_worker_political_power = 2
-        pop_cat_specialist_political_power = 3
-        pop_cat_ruler_political_power = 5
+        pop_cat_specialist_political_power = 4
+        pop_cat_ruler_political_power = 8
     }
     tags = {
         AUTHORITY_ELECTION_OLIGARCHIC

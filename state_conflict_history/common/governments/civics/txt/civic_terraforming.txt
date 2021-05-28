@@ -5,6 +5,12 @@ civic_terraforming = {
                 value = ethic_gestalt_consciousness
             }
         }
+        authority = {
+            NOR = {
+                value = auth_corporate
+                value = auth_corporate_imperial
+            }
+        }
     }
     possible = {
         ethics = {
@@ -17,6 +23,8 @@ civic_terraforming = {
         civics = {
             NOR = {
                 value = civic_industrial_economy
+                value = civic_environmentalist
+                value = civic_keepers_harmony
             }
         }
     }

@@ -15,7 +15,7 @@ building_holo_theatres = {
                 is_ai = no
             }
             and = {
-                free_amenities < -8
+                free_amenities < -7
                 num_pops > 11
             }
         }
@@ -81,6 +81,17 @@ building_holo_theatres = {
         potential = {
             exists = owner
             owner = {
+                has_valid_civic = civic_warrior_culture
+            }
+        }
+        modifier = {
+            job_duelist_add = @b1_jobs
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
                 is_ai = yes
             }
             str_force_holotheatre = yes
@@ -88,17 +99,6 @@ building_holo_theatres = {
         modifier = {
             job_starnet_spice_melange_farmer_add = 3
             job_starnet_spice_melange_antifarmer_add = -3
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                has_valid_civic = civic_warrior_culture
-            }
-        }
-        modifier = {
-            job_duelist_add = @b1_jobs
         }
     }
     resources = {

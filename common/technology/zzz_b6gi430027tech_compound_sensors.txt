@@ -21,6 +21,7 @@ tech_compound_sensors = {
         }
     }
     ai_weight = {
+        factor = @giga_aiweight_multiplier
         factor = @ehof_t2_weight
         modifier = {
             factor = 1.25

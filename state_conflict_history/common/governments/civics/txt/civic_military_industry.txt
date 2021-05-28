@@ -1,0 +1,39 @@
+civic_military_industry = {
+    potential = {
+        ethics = {
+            NOT = {
+                value = ethic_gestalt_consciousness
+            }
+        }
+        authority = {
+            NOR = {
+                value = auth_corporate
+                value = auth_corporate_imperial
+            }
+        }
+    }
+    possible = {
+        ethics = {
+            OR = {
+                text = civic_tooltip_militarist
+                value = ethic_militarist
+                value = ethic_fanatic_militarist
+            }
+            OR = {
+                text = civic_tooltip_materialist
+                value = ethic_materialist
+                value = ethic_fanatic_materialist
+            }
+        }
+    }
+    random_weight = {
+        base = 5
+    }
+    modifier = {
+        ship_weapon_damage = 0.05
+        ship_armor_mult = 0.1
+        ship_speed_mult = 0.15
+        category_propulsion_research_speed_mult = 0.15
+        starbase_shipyard_build_cost_mult = 0.2
+    }
+}

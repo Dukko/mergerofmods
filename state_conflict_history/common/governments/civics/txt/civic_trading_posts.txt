@@ -13,9 +13,11 @@ civic_trading_posts = {
         }
     }
     random_weight = {
-        base = 5
+        base = 0
     }
     modifier = {
         country_starbase_capacity_add = 4
+        station_gatherers_produces_mult = 0.1
+        station_researchers_produces_mult = 0.1
     }
 }

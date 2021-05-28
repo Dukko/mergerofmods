@@ -1,4 +1,5 @@
 civic_agrarian_idyll = {
+    description = "civic_tooltip_agrarian_idyll_effects"
     potential = {
         ethics = {
             NOT = {
@@ -13,13 +14,6 @@ civic_agrarian_idyll = {
         }
     }
     possible = {
-        ethics = {
-            OR = {
-                text = civic_tooltip_pacifist
-                value = ethic_pacifist
-                value = ethic_fanatic_pacifist
-            }
-        }
         civics = {
             NOR = {
                 value = civic_industrial_economy
@@ -35,6 +29,15 @@ civic_agrarian_idyll = {
                 value = origin_irradiated_evolution
             }
         }
+    }
+    swap_type = {
+        name = civic_agrarian_idyll_lithoid
+        description = "civic_tooltip_agrarian_idyll_lithoid_effects"
+        trigger = {
+            local_human_species_class = LITHOID
+        }
+    }
+    modifier = {
     }
     random_weight = {
         base = 5

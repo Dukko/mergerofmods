@@ -54,6 +54,7 @@ tech_grav_control = {
         }
     }
     ai_weight = {
+        factor = @giga_aiweight_multiplier
         factor = @ehof_t1_weight
         modifier = {
             factor = 1.5

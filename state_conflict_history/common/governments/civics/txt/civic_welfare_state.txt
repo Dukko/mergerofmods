@@ -15,6 +15,7 @@ civic_welfare_state = {
     possible = {
         ethics = {
             NOR = {
+                text = civic_tooltip_not_capitalism
                 value = ethic_capitalism
                 value = ethic_fanatic_capitalism
             }

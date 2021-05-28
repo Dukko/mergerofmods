@@ -1,0 +1,31 @@
+civic_imperial_cult = {
+    potential = {
+        ethics = {
+            NOT = {
+                value = ethic_gestalt_consciousness
+            }
+        }
+        authority = {
+            NOT = {
+                value = auth_corporate
+            }
+        }
+    }
+    possible = {
+        authority = {
+            value = auth_imperial
+        }
+        ethics = {
+            value = ethic_fanatic_spiritualist
+        }
+    }
+    random_weight = {
+        base = 5
+    }
+    modifier = {
+        pop_government_ethic_attraction = 0.1
+        edict_length_mult = 0.25
+        country_edict_cap_add = 1
+        edicts_cost_mult = -0.25
+    }
+}

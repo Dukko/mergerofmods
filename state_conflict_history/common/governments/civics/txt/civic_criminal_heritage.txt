@@ -11,11 +11,19 @@ civic_criminal_heritage = {
             }
         }
     }
+    possible = {
+        civics = {
+            NOT = {
+                value = civic_franchising
+            }
+        }
+    }
     random_weight = {
         base = 5
     }
     modifier = {
         spy_network_daily_value_mult = 0.2
+        planet_branch_offices_cost_mult = -0.15
         intel_decryption_add = 1
     }
     description = "civic_tooltip_criminal_heritage_effects"

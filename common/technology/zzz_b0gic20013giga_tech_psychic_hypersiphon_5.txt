@@ -55,6 +55,7 @@ giga_tech_psychic_hypersiphon_5 = {
         }
     }
     ai_weight = {
+        factor = @giga_aiweight_multiplier
         modifier = {
             factor = 1.25
             research_leader = {

@@ -13,11 +13,11 @@ ap_interstellar_dominion = {
         modifier = {
             factor = 10
             rusher = yes
-            num_ascension_perks < 3
+            num_ascension_perks < 2
         }
         modifier = {
-            factor = 0.1
-            num_ascension_perks > 2
+            factor = 0.001
+            num_ascension_perks > 1
         }
         modifier = {
             factor = 0

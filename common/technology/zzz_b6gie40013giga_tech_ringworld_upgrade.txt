@@ -51,6 +51,7 @@ giga_tech_ringworld_upgrade = {
         }
     }
     ai_weight = {
+        factor = @giga_aiweight_multiplier
         modifier = {
             factor = 0
             has_utopia = no

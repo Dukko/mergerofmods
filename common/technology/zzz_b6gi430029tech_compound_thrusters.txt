@@ -22,6 +22,7 @@ tech_compound_thrusters = {
         }
     }
     ai_weight = {
+        factor = @giga_aiweight_multiplier
         factor = @ehof_t2_weight
         modifier = {
             factor = 1.25

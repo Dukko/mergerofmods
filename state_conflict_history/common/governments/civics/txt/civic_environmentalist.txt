@@ -14,6 +14,8 @@ civic_environmentalist = {
     possible = {
         ethics = {
             NOR = {
+                text = civic_tooltip_not_capitalism
+                value = ethic_capitalism
                 value = ethic_fanatic_capitalism
             }
         }
@@ -22,6 +24,11 @@ civic_environmentalist = {
                 value = civic_industrial_economy
                 value = civic_consumerism
                 value = civic_keepers_harmony
+            }
+        }
+        origin = {
+            NOT = {
+                value = origin_post_apocalyptic
             }
         }
     }

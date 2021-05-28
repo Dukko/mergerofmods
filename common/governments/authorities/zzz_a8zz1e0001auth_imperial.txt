@@ -1,0 +1,25 @@
+auth_imperial = {
+    has_heir = yes
+    has_agendas = yes
+    possible = {
+        ethics = {
+            NOT = {
+                value = ethic_gestalt_consciousness
+            }
+            OR = {
+                value = ethic_authoritarian
+                value = ethic_fanatic_authoritarian
+                value = ethic_focused
+            }
+        }
+    }
+    country_modifier = {
+        country_edict_cap_add = 1
+        pop_cat_worker_political_power = 2
+        pop_cat_specialist_political_power = 3
+        pop_cat_ruler_political_power = 9
+    }
+    tags = {
+        AUTHORITY_HAS_HEIR
+    }
+}

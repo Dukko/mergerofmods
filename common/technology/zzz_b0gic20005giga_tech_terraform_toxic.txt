@@ -47,6 +47,7 @@ giga_tech_terraform_toxic = {
         }
     }
     ai_weight = {
+        factor = @giga_aiweight_multiplier
         modifier = {
             factor = 1.25
             research_leader = {

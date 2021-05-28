@@ -20,20 +20,21 @@ civic_byzantine_bureaucracy = {
     }
     possible = {
         ethics = {
-            NOR = {
+            NOT = {
                 value = ethic_fanatic_egalitarian
             }
         }
         civics = {
-            NOR = {
+            NOT = {
                 value = civic_efficient_bureaucracy
             }
         }
     }
     modifier = {
+        pop_amenities_usage_mult = -0.1
     }
     random_weight = {
-        base = 2
+        base = 3
     }
     description = "civic_tooltip_byzantine_bureaucracy_effects"
 }

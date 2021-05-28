@@ -19,25 +19,12 @@ civic_divine_council = {
         authority = {
             value = auth_oligarchic
         }
-        civics = {
-            NOR = {
-                value = civic_military_junta
-                value = civic_executive_committee
-                value = civic_aristocratic_elite
-                value = civic_merchant_guilds
-                value = civic_state_monopoly
-                value = civic_exalted_priesthood
-                value = civic_technocracy
-                value = civic_bureaucracy
-                value = civic_stratocracy
-            }
-        }
     }
     random_weight = {
         base = 5
     }
     modifier = {
-        planet_stability_add = 10
+        planet_stability_add = 7.5
         job_high_priest_per_pop = 0.03
         country_physics_tech_research_speed = -0.05
     }

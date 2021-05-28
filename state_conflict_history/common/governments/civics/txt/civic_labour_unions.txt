@@ -18,13 +18,17 @@ civic_labour_unions = {
     possible = {
         ethics = {
             NOR = {
-                text = civic_tooltip_not_capitalism
-                value = ethic_capitalism
                 value = ethic_fanatic_capitalism
+                value = ethic_fanatic_authoritarian
+            }
+            OR = {
+                value = ethic_socialism
+                value = ethic_fanatic_socialism
             }
         }
         civics = {
-            NOT = {
+            NOR = {
+                value = civic_slaver_guilds
                 value = civic_indentured_assets
             }
         }

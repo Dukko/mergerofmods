@@ -262,7 +262,7 @@ SpeedDial
 UI Overhaul Dynamic + SpeedDial
 Tiny Fleets for UI Overhaul Dynamic
 Tiny Megastructures
-folk's Tiny Outliner
+Tiny Outliner v2
 Kaityo`s Tiny Planet Buildings for UI Overhaul Dynamic
 Tiny Ship Components
 Tiny Starbase Modules and Buildings
@@ -319,6 +319,7 @@ More Authorities - EST Patch
 More Authorities - ESAP Patch
 More Authorities - ECA Patch
 More Authorities - DPE Patch
+More Authorities - Amazing Civics Patch
 MA-REG Patch
 Loyal Subjects Have Nothing to Fear (From the Colossus)[3.0]
 Longer Greetings Timer (3.0)
@@ -337,8 +338,8 @@ ECA - Espionage Operations
 Crisis Manager - Mid-Game Edition (3.0.¢)
 Crimewave: Crime and Criminal Heritage AI Overhaul
 Civil Wars - More Authorities Patch
-Civics Expanded+ & More Authorities Compatibility Patch
 Civics Expanded+ & E&C Alternative Compatibility Patch
+Civics Expanded+ & More Authorities Compatibility Patch
 Caravaneers and Nomads coexist
 3.0 Growth and Conquest Rebalancing
 More Civic Points [S-02]

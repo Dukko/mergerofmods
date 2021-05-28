@@ -64,6 +64,7 @@ giga_tech_war_system_hull_booster = {
         }
     }
     ai_weight = {
+        factor = @giga_aiweight_multiplier
         modifier = {
             factor = 1.25
             research_leader = {

@@ -8,6 +8,7 @@ civic_private_prospectors = {
             }
             civics = {
                 value = civic_galactic_sovereign_megacorp
+                }
             }
         }
     }
@@ -15,7 +16,8 @@ civic_private_prospectors = {
         base = 5
     }
     modifier = {
-        country_admin_cap_add = 20
+        empire_size_colonies_mult = -0.33
+        empire_size_systems_mult = -0.33
     }
     description = "civic_tooltip_private_prospectors_effects"
 }

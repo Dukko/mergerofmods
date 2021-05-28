@@ -37,7 +37,7 @@ civic_barbaric_despoilers = {
             }
         }
         civics = {
-            NOR = {
+            NOT = {
                 value = civic_fanatic_purifiers
             }
         }
@@ -46,6 +46,9 @@ civic_barbaric_despoilers = {
                 value = origin_common_ground
             }
         }
+    }
+    modifier = {
+        starbase_shipyard_build_cost_mult = -0.1
     }
     modification = no
     random_weight = {

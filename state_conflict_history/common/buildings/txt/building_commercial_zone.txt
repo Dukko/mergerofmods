@@ -31,9 +31,12 @@ building_commercial_zone = {
     }
     allow = {
         buildings_simple_allow = yes
+        owner = {
+            is_ai = no
+        }
     }
     planet_modifier = {
-        job_clerk_add = 4
+        job_clerk_add = 3
         job_merchant_add = 1
     }
     resources = {
@@ -53,7 +56,7 @@ building_commercial_zone = {
             }
         }
         modifier = {
-            job_clerk_add = 2
+            job_clerk_add = 1
         }
     }
     prerequisites = {

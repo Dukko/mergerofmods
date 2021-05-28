@@ -6,8 +6,9 @@ civic_peacekeepers = {
             }
         }
         authority = {
-            NOT = {
+            NOR = {
                 value = auth_corporate
+                value = auth_corporate_imperial
             }
         }
     }
