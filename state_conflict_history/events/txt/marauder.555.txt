@@ -3,6 +3,7 @@ country_event = {
     id = marauder.555
     hide_window = yes
     trigger = {
+        has_been_declared_crisis = no
         has_global_flag = marauder_crisis_ongoing
         exists = event_target:raider_khanate
         CmtTriggerExistKhanCountry = yes

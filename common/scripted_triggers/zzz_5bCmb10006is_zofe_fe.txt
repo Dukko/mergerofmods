@@ -1,0 +1,3 @@
+is_zofe_fe = {
+    is_country_type = fallen_empire
+}

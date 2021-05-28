@@ -1,0 +1,3 @@
+is_zofe_ae = {
+    is_country_type = awakened_fallen_empire
+}

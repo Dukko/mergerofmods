@@ -10,6 +10,10 @@ action_demand_protectorate = {
     action_type = aggressive
     potential = {
         is_megacorp = no
+        or = {
+            is_ai = no
+            years_passed = @str_years_of_twilight
+        }
     }
     possible = {
         custom_tooltip = {

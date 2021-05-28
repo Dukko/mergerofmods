@@ -255,7 +255,7 @@ country_event = {
                 limit = {
                     is_country_type = dormant_marauders
                     NOT = {
-                        is_same_value = root
+                        is_same_empire = root
                     }
                 }
                 every_owned_fleet = {
@@ -515,7 +515,7 @@ country_event = {
             }
             every_country = {
                 limit = {
-                    is_ai = no
+                    CmtTriggerIsPlayableEmpire = yes
                 }
                 establish_communications_no_message = root
                 country_event = {
@@ -529,7 +529,7 @@ country_event = {
         else = {
             every_country = {
                 limit = {
-                    is_ai = no
+                    CmtTriggerIsPlayableEmpire = yes
                 }
                 establish_communications_no_message = root
                 country_event = {
@@ -539,13 +539,6 @@ country_event = {
                     id = observer.13
                 }
             }
-        }
-        every_country = {
-            limit = {
-                is_ai = yes
-                is_country_type = default
-            }
-            establish_communications_no_message = root
         }
         if = {
             limit = {

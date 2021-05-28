@@ -1,0 +1,3 @@
+is_zofe_country = {
+    always = no
+}

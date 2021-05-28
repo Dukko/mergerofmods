@@ -11,9 +11,25 @@ action_declare_war = {
     should_notify_all_communications = yes
     action_type = aggressive
     potential = {
-        or = {
-            is_ai = no
-            years_passed > @str_ai_will_not_declare_war_until
+        hidden_trigger = {
+            or = {
+                is_ai = no
+                and = {
+                    years_passed > @str_ai_will_not_declare_war_until
+                    or = {
+                        rusher3 = yes
+                        years_passed > @str_ai_will_not_declare_war_until_aggressive
+                    }
+                    or = {
+                        turtler = no
+                        years_passed > @str_ai_will_not_declare_war_until_normal
+                    }
+                    or = {
+                        turtler2 = no
+                        years_passed > @str_ai_will_not_declare_war_until_turtles
+                    }
+                }
+            }
         }
     }
 }
