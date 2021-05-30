@@ -1,0 +1,12 @@
+energy_upkeep_fleetbuilding = {
+    resource = energy
+    type = upkeep
+    category = country
+    potential = {
+        years_passed > @str_years_of_guaranteed_truce
+        used_naval_capacity_percent < 0.6
+    }
+    fraction = {
+        weight = 0.15
+    }
+}

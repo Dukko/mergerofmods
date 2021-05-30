@@ -9,9 +9,7 @@ distantstars_init_06 = {
     usage_odds = {
         base = 0
         modifier = {
-            no_scope = {
-                has_distar = yes
-            }
+            has_distar = yes
             add = 99999
         }
         modifier = {

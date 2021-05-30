@@ -1,0 +1,3 @@
+NCombat = {
+    COMBAT_DETECT_RANGE_MIN = 30
+}

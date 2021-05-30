@@ -382,6 +382,20 @@ action_invite_to_federation = {
             }
         }
         custom_tooltip = {
+            fail_text = "requires_recipient_not_shadow_state"
+            from = {
+                NOT = {
+                    has_valid_civic = civic_shadow_state
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_actor_not_shadow_state"
+            NOT = {
+                has_valid_civic = civic_shadow_state
+            }
+        }
+        custom_tooltip = {
             fail_text = "ACTION_RECIPIENT_NOT_YOURS"
             FROM = {
                 NOT = {

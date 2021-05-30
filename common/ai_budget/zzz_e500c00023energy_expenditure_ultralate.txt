@@ -1,0 +1,23 @@
+energy_expenditure_ultralate = {
+    resource = energy
+    type = upkeep
+    category = country
+    potential = {
+        years_passed > 150
+        resource_stockpile_compare = {
+            resource = energy
+            value > 5000
+        }
+        resource_stockpile_compare = {
+            resource = alloys
+            value > 1500
+        }
+        resource_stockpile_compare = {
+            resource = food
+            value > 3000
+        }
+    }
+    fraction = {
+        weight = 0.5
+    }
+}

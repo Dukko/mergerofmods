@@ -36,6 +36,14 @@ action_guarantee_independence = {
     }
     possible = {
         custom_tooltip = {
+            fail_text = "requires_recipient_not_shadow_state"
+            from = {
+                NOT = {
+                    has_valid_civic = civic_shadow_state
+                }
+            }
+        }
+        custom_tooltip = {
             fail_text = "ACTION_ACTOR_MUST_BE_INDEPENDENT"
             OR = {
                 is_subject = no

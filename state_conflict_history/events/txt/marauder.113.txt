@@ -16,7 +16,7 @@ event = {
                             has_fleet_flag = raid_accomplished
                         }
                         is_in_combat = no
-                        fleet_power < 1500
+                        num_ships <= 3
                     }
                     AND = {
                         has_fleet_flag = marauder_raider_fleet_2
@@ -24,7 +24,7 @@ event = {
                             has_fleet_flag = raid_accomplished
                         }
                         is_in_combat = no
-                        fleet_power < 2500
+                        num_ships <= 6
                     }
                     AND = {
                         has_fleet_flag = marauder_raider_fleet_3
@@ -32,7 +32,7 @@ event = {
                             has_fleet_flag = raid_accomplished
                         }
                         is_in_combat = no
-                        fleet_power < 3500
+                        num_ships <= 9
                     }
                     AND = {
                         has_fleet_flag = marauder_raider_fleet_4
@@ -40,7 +40,7 @@ event = {
                             has_fleet_flag = raid_accomplished
                         }
                         is_in_combat = no
-                        fleet_power < 6500
+                        num_ships <= 12
                     }
                 }
             }
@@ -57,22 +57,22 @@ event = {
                         AND = {
                             has_fleet_flag = marauder_raider_fleet_1
                             is_in_combat = no
-                            fleet_power < 1500
+                            num_ships <= 3
                         }
                         AND = {
                             has_fleet_flag = marauder_raider_fleet_2
                             is_in_combat = no
-                            fleet_power < 2500
+                            num_ships <= 6
                         }
                         AND = {
                             has_fleet_flag = marauder_raider_fleet_3
                             is_in_combat = no
-                            fleet_power < 3500
+                            num_ships <= 9
                         }
                         AND = {
                             has_fleet_flag = marauder_raider_fleet_4
                             is_in_combat = no
-                            fleet_power < 6500
+                            num_ships <= 12
                         }
                     }
                 }

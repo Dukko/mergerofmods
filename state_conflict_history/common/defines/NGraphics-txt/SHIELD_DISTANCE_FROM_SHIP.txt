@@ -1,0 +1,7 @@
+NGraphics = {
+    SHIELD_DISTANCE_FROM_SHIP = {
+        2
+        1
+        5
+    }
+}

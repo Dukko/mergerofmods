@@ -7,7 +7,8 @@ leader_trait_army_logistician = {
         leaders_upkeep_mult = -0.5
     }
     modifier = {
-        armies_upkeep_mult = -0.2
+        armies_upkeep_mult = -0.25
+        planet_building_build_speed_mult = 0.1
     }
     leader_potential_add = {
         NOT = {
@@ -18,9 +19,11 @@ leader_trait_army_logistician = {
     }
     leader_trait = {
         general
+        governor
     }
     leader_class = {
         general
+        governor
     }
     opposites = {
         "general_flaw_failed_quartermaster"

@@ -8,9 +8,7 @@ distantstars_init_00 = {
     usage_odds = {
         base = 0
         modifier = {
-            no_scope = {
-                has_distar = yes
-            }
+            has_distar = yes
             add = 2
         }
         modifier = {
@@ -29,12 +27,6 @@ distantstars_init_00 = {
                     has_megastructure = lgate_base
                     has_megastructure = gateway_ruined
                 }
-            }
-        }
-        modifier = {
-            factor = 0
-            any_neighbor_system = {
-                has_megastructure = gateway_ruined
             }
         }
     }

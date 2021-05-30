@@ -1,0 +1,3 @@
+NCombat = {
+    SHIP_SMOOTH_ROTATION_THRESHOLD = 7.141
+}

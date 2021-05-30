@@ -1,0 +1,3 @@
+NCombat = {
+    COMBAT_TARGET_STICKYNESS_FACTOR = 0.8
+}

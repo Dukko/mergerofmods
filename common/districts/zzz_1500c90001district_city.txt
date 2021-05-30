@@ -125,18 +125,6 @@ district_city = {
         potential = {
             exists = owner
             owner = {
-                has_non_swapped_tradition = tr_prosperity_interstellar_franchising
-            }
-            str_enable_clerks = yes
-        }
-        modifier = {
-            job_clerk_add = 1
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
                 OR = {
                     has_valid_civic = civic_consumerism
                 }

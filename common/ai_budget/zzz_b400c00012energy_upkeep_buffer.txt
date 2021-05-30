@@ -1,0 +1,11 @@
+energy_upkeep_buffer = {
+    resource = energy
+    type = upkeep
+    category = buffer
+    potential = {
+        always = yes
+    }
+    fraction = {
+        weight = 0.01
+    }
+}

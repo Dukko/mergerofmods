@@ -1,0 +1,3 @@
+NCombat = {
+    COMBAT_BACK_OFF_RATE = 0.24
+}

@@ -1,0 +1,11 @@
+energy_upkeep_warprep = {
+    resource = energy
+    type = upkeep
+    category = country
+    potential = {
+        prepare_for_war = yes
+    }
+    fraction = {
+        weight = 0.2
+    }
+}

@@ -1,0 +1,18 @@
+energy_upkeep_country_insane = {
+    resource = energy
+    type = upkeep
+    category = country
+    potential = {
+        resource_income_compare = {
+            resource = energy
+            value > 50
+        }
+        resource_stockpile_compare = {
+            resource = energy
+            value > 8000
+        }
+    }
+    fraction = {
+        weight = 0.2
+    }
+}

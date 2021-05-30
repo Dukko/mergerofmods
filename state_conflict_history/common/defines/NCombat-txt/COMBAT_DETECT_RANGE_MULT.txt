@@ -1,0 +1,3 @@
+NCombat = {
+    COMBAT_DETECT_RANGE_MULT = 1.05
+}

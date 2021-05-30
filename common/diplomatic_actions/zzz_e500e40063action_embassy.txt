@@ -8,6 +8,20 @@ action_embassy = {
     action_type = positive
     possible = {
         custom_tooltip = {
+            fail_text = "requires_recipient_not_shadow_state"
+            from = {
+                NOT = {
+                    has_valid_civic = civic_shadow_state
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_actor_not_shadow_state"
+            NOT = {
+                has_valid_civic = civic_shadow_state
+            }
+        }
+        custom_tooltip = {
             fail_text = "DIPLOMACY_STATUS_WAR"
             NOT = {
                 is_at_war_with = from
@@ -52,10 +66,10 @@ action_embassy = {
             OR = {
                 is_same_species = from
                 NOT = {
-                    has_civic = civic_machine_terminator
+                    has_valid_civic = civic_machine_terminator
                 }
                 AND = {
-                    has_civic = civic_machine_terminator
+                    has_valid_civic = civic_machine_terminator
                     from = {
                         OR = {
                             has_country_flag = synthetic_empire
@@ -71,12 +85,12 @@ action_embassy = {
                 is_same_species = from
                 from = {
                     NOT = {
-                        has_civic = civic_machine_terminator
+                        has_valid_civic = civic_machine_terminator
                     }
                 }
                 AND = {
                     from = {
-                        has_civic = civic_machine_terminator
+                        has_valid_civic = civic_machine_terminator
                     }
                     OR = {
                         has_country_flag = synthetic_empire

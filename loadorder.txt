@@ -120,6 +120,7 @@ Size 25 Homeworlds
 Shut Up, We Don't Care! (3.0)
 【3.0.2】Shroud Expanded【虚境扩展】The Decadance of Sanity--理智的终末癫狂
 Shadowgate
+Scientist AI Assistant Upgrader
 Robot Rights
 Resettle Colony
 resettlement_mod
@@ -147,6 +148,7 @@ Gateway Policy Federation
 Experienced Leaders
 Experience Adjustments
 Expanded Mandates
+Espionage Extended <English ver.>
 Espionage Operation: Influence Ethics 
 Hypertraversal Manipulation
 Dynamic Mod Menu (3.0.*)
@@ -190,6 +192,8 @@ Upper Limits V3.0+
 Start with AutoExplore
 Sins of the Prophets: NSC Compatibility Patch
 Technology Ascendant
+Tech Ascendant and NSC2 Compatibility Patch
+Tech Ascendant and NSC2 Compatibility Patch - Update
 Ship Component Adjustments
 Magnum's Mods - Resource Storage Research
 Magnum's Mods - More Influence Research
@@ -230,6 +234,7 @@ Plentiful Traditions 3.x
 Simple Traditions
 Expanded Stellaris Ascension Perks
 Advanced Ascension(No extra slot)
+Prosperity Tradition Rebalance for 3.0.3
 !Lots of Traditions - PT, EST, and ST - 126 Ascension Perks
 UI Overhaul Dynamic + Lots of Traditions - PT, EST, & ST
 Planetary Diversity
@@ -244,6 +249,7 @@ Planetary Diversity - Unique Worlds
 Immersive Galaxy - Planet Variety for Planetary Diversity
 Small fix for Immersive Galaxy - Planet Variety for PD
 Planetary Designations Adjustments
+Planetary Modifiers Enhancements
 UI Overhaul Dynamic + Planetary Diversity
 Amazing Civics - Megacorp
 Government Variety Pack
@@ -367,7 +373,7 @@ All unique systems in [3.x]
 !!!Unofficial Hive DLC: Forgotten Queens + Just More Traits 3.0.x
 !!!Universal Resource Patch [2.4+]
 !! K !! - Realistic Asteroids
-The Zenith of Fallen Empires: Defines
 ! The Merger of Rules 3.0
+Ancient Cache of Technologies: Extra Defines and Changes
 ! Camera & Galaxy Map Tweaks
 Absolutely no prescripted countries pls

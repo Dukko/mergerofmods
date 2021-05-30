@@ -1,0 +1,13 @@
+energy_upkeep_country_early = {
+    resource = energy
+    type = upkeep
+    category = country
+    potential = {
+        years_passed < 30
+        years_passed > 9
+        has_technology = tech_hydroponics
+    }
+    fraction = {
+        weight = 0.25
+    }
+}

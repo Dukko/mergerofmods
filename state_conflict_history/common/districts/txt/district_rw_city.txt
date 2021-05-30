@@ -69,7 +69,7 @@ district_rw_city = {
             }
         }
         modifier = {
-            job_clerk_add = 5
+            job_clerk_add = 3
         }
     }
     triggered_planet_modifier = {
@@ -106,17 +106,6 @@ district_rw_city = {
         }
         modifier = {
             planet_housing_add = 5
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                has_non_swapped_tradition = tr_prosperity_interstellar_franchising
-            }
-        }
-        modifier = {
-            job_clerk_add = 5
         }
     }
     triggered_planet_modifier = {

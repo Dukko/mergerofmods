@@ -1,0 +1,11 @@
+energy_upkeep_country_a = {
+    resource = energy
+    type = upkeep
+    category = country
+    potential = {
+        has_country_flag = acceptable_raw_economy
+    }
+    fraction = {
+        weight = 0.05
+    }
+}

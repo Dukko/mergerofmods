@@ -9,6 +9,7 @@ leader_trait_glory_seeker = {
     modifier = {
         army_morale = 0.25
         army_damage_mult = 0.25
+        planet_crime_add = -25
     }
     leader_potential_add = {
         NOT = {
@@ -19,9 +20,11 @@ leader_trait_glory_seeker = {
     }
     leader_trait = {
         general
+        governor
     }
     leader_class = {
         general
+        governor
     }
     opposites = {
         "leader_trait_armchair_commander"

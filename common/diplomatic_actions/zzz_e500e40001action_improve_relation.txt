@@ -16,6 +16,14 @@ action_improve_relation = {
     }
     possible = {
         custom_tooltip = {
+            fail_text = "requires_recipient_not_shadow_state"
+            from = {
+                NOT = {
+                    has_valid_civic = civic_shadow_state
+                }
+            }
+        }
+        custom_tooltip = {
             fail_text = "DIPLOMACY_STATUS_WAR"
             NOT = {
                 is_at_war_with = from

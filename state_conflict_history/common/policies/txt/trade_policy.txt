@@ -127,6 +127,13 @@ trade_policy = {
                     num_ascension_perks > 0
                     is_ai = no
                 }
+            modifier = {
+                factor = 0
+                num_ascension_perks > 0
+                or = {
+                    has_tradition = tr_supremacy_adopt
+                    has_tradition = tr_prosperity_administrative_operations
+                }
             }
         }
     }
