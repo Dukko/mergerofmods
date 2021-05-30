@@ -71,54 +71,6 @@ district_giga_alderson_consumer = {
         }
         text = "job_artisan_effect_desc"
     }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_regular_empire = yes
-            }
-            has_active_building = building_factory_2
-        }
-        modifier = {
-            job_artisan_add = 45
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_regular_empire = yes
-            }
-            has_active_building = building_factory_3
-        }
-        modifier = {
-            job_artisan_add = 90
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_machine_empire = yes
-            }
-            has_active_building = building_factory_2
-        }
-        modifier = {
-            job_artisan_drone_add = 45
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_machine_empire = yes
-            }
-            has_active_building = building_factory_3
-        }
-        modifier = {
-            job_artisan_drone_add = 90
-        }
-    }
     ai_weight = {
         weight = 0
         modifier = {

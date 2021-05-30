@@ -1,6 +1,8 @@
 pc_gigaorbital_ring = {
     is_artificial_planet = yes
     entity = "giga_orbital_habitat_entity"
+    ringworld = yes
+    preview_entity = "ringworld_01_damaged_full_entity"
     picture = pc_orbital_elysium
     tile_set = pc_continental
     icon_frame = 21

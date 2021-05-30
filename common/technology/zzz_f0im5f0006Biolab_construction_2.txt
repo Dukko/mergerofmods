@@ -16,5 +16,5 @@ Biolab_construction_2 = {
     }
     is_rare = yes
     is_dangerous = yes
-    weight = 0
+    weight = 5
 }

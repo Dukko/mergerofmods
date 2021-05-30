@@ -32,10 +32,12 @@ building_bureaucratic_2 = {
             and = {
                 free_building_slots = 0
                 free_district_slots < 3
+                free_jobs < 3
                 or = {
                     has_designation = col_bureau
                     num_unemployed > 2
                 }
+                free_housing > 5
             }
         }
     }

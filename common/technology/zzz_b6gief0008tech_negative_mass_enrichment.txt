@@ -39,7 +39,6 @@ tech_negative_mass_enrichment = {
         }
     }
     ai_weight = {
-        factor = @giga_aiweight_multiplier
         factor = @ehof_t1_weight
         modifier = {
             factor = 1.25

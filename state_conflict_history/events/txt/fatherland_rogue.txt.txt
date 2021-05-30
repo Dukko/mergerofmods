@@ -354,48 +354,48 @@ country_event = {
 ######################### RANDOMLY SELECTS TYPE OF ROGUE COLONY BASED ON WEIGHTED MODIFIERS            
         random_list = {    
             ###################################################### NORMAL EMPIRE ROGUES
-            # 10 = { ### Plucky Explorers
-            #     modifier = { ### NO ROBO
-            #         factor = 0
-            #         has_ethic = ethic_gestalt_consciousness    
-            #         #has_authority = auth_machine_intelligence
-            #     }
-            #     modifier = { ### NO Corporations
-            #         factor = 0
-            #         is_megacorp = yes
-            #     }                
-            #     modifier = {
-            #         factor = 0.5
-            #         has_ethic = ethic_authoritarian
-            #     }
-            #     modifier = {
-            #         factor = 0
-            #         has_ethic = ethic_fanatic_authoritarian
-            #     }                
-            #     modifier = {
-            #         factor = 0
-            #         has_civic = civic_police_state        
-            #     }    
-            #     modifier = {
-            #         factor = 2.5            
-            #         has_policy_flag = promote_settlers
-            #     }    
-            #     set_country_flag = fatherland_roguesetup_explorers            
-            # }
-            # 15 = { ### Persecuted Minority
-            #     set_country_flag = fatherland_roguesetup_minority
-            #     modifier = { ### NO ROBO
-            #         factor = 0
-            #         OR = {
-            #             has_ethic = ethic_gestalt_consciousness    
-            #             has_ethic = ethic_fanatic_egalitarian
-            #         }
-            #     }            
-            #     modifier = {
-            #         factor = 0.5
-            #         has_ethic = ethic_egalitarian
-            #     }
-            # }
+            10 = { ### Plucky Explorers
+                modifier = { ### NO ROBO
+                    factor = 0
+                    has_ethic = ethic_gestalt_consciousness    
+                    #has_authority = auth_machine_intelligence
+                }
+                modifier = { ### NO Corporations
+                    factor = 0
+                    is_megacorp = yes
+                }                
+                modifier = {
+                    factor = 0.5
+                    has_ethic = ethic_authoritarian
+                }
+                modifier = {
+                    factor = 0
+                    has_ethic = ethic_fanatic_authoritarian
+                }                
+                modifier = {
+                    factor = 0
+                    has_civic = civic_police_state        
+                }    
+                modifier = {
+                    factor = 2.5            
+                    has_policy_flag = promote_settlers
+                }    
+                set_country_flag = fatherland_roguesetup_explorers            
+            }
+            15 = { ### Persecuted Minority
+                set_country_flag = fatherland_roguesetup_minority
+                modifier = { ### NO ROBO
+                    factor = 0
+                    OR = {
+                        has_ethic = ethic_gestalt_consciousness    
+                        has_ethic = ethic_fanatic_egalitarian
+                    }
+                }            
+                modifier = {
+                    factor = 0.5
+                    has_ethic = ethic_egalitarian
+                }
+            }
             20 = { ### Ideological Dissidents
                 set_country_flag = fatherland_roguesetup_dissidents
                 modifier = { ### NO ROBO
@@ -428,173 +428,173 @@ country_event = {
             #         }                    
             #     }
             # }    
-            # 5 = { ### Rogue AI (For normal empires)
-            #     set_country_flag = fatherland_roguesetup_ai            
-            #     modifier = {  ### DECREASED IF YOU OUTLAW ROBOTS
-            #         factor = 0.50
-            #         has_policy_flag = robots_outlawed
-            #     }
-            #     modifier = {  ### DECREASED IF YOU OUTLAW AI 
-            #         factor = 0.50
-            #         has_policy_flag = ai_outlawed
-            #     }                
-            #     modifier = { ## INCREASED IF YOU HAVE DANGEROUS TECHS
-            #         factor = 1.5
+            5 = { ### Rogue AI (For normal empires)
+                set_country_flag = fatherland_roguesetup_ai            
+                modifier = {  ### DECREASED IF YOU OUTLAW ROBOTS
+                    factor = 0.50
+                    has_policy_flag = robots_outlawed
+                }
+                modifier = {  ### DECREASED IF YOU OUTLAW AI 
+                    factor = 0.50
+                    has_policy_flag = ai_outlawed
+                }                
+                modifier = { ## INCREASED IF YOU HAVE DANGEROUS TECHS
+                    factor = 1.5
+                    OR = {
+                        has_technology = tech_combat_computers_3
+                        has_technology = tech_synthetic_workers
+                    }
+                }
+                modifier = { ## EVEN MORE IF YOU HAVE THE MOST DANGEROUS TECH
+                    factor = 2
+                    has_technology = tech_sapient_ai
+                }
+                modifier = { ### NO AI FOR THOSE WITHOUT SAPIENT AI TECH(S)
+                    factor = 0
+                    NOR = {
+                        has_technology = tech_positronic_implants
+                        has_technology = tech_sapient_ai
+                        has_technology = tech_droid_workers
+                    }
+                    #has_authority = auth_machine_intelligence
+                }    
+                modifier = { ### NO ROBOT EMPIRES (They get their own thing)
+                    factor = 0                
+                    has_ethic = ethic_gestalt_consciousness    
+                }                    
+            }    
+            ##################################################### CIVIC SPECIFIC TYPES
+            20 = { ### Banished House // Feudal Society 
+                set_country_flag = fatherland_roguesetup_banished
+                modifier = {
+                    factor = 0
+                        NOT = { has_civic = civic_feudal_realm }
+                }            
+                modifier = {
+                    factor = 1.5
+                        has_civic = civic_feudal_realm
+                        has_civic = civic_aristocratic_elite
+                }
+            }
+            20 = { ### Crusader State // Fanatic Spiritualist - Militarist
+                set_country_flag = fatherland_roguesetup_crusaders
+                modifier = { ### NO ROBO
+                    factor = 0
+                    has_ethic = ethic_gestalt_consciousness    
+                    #has_authority = auth_machine_intelligence
+                }                
+                modifier = {
+                    factor = 0
+                        OR = {
+                            NOR = { 
+                                has_ethic = ethic_spiritualist
+                                has_ethic = ethic_fanatic_spiritualist
+                            }
+                            OR = {
+                                has_ethic = ethic_pacifist
+                                has_ethic = ethic_fanatic_pacifist
+                            }
+                    }
+                }            
+                modifier = {
+                    factor = 1.5
+                    has_ethic = ethic_militarist
+                    has_ethic = ethic_fanatic_spiritualist
+                }            
+            }            
+            20 = { ### Slave Revolt    - Nation with slaves
+                set_country_flag = fatherland_roguesetup_slaves
+                modifier = {
+                    factor = 0
+                        any_owned_pop = {
+                            is_enslaved = no
+                        }
+                }    
+                modifier = {
+                    factor = 5
+                        has_country_flag = slave_revolt_chain_active
+                }
+            }
+            10 = { ### Syncretic Servile Prole Revolt - Syncretic Evolution Origin
+                set_country_flag = fatherland_roguesetup_proles
+                modifier = {
+                    factor = 0
+                        NOT = {
+                            any_owned_pop = {
+                                pop_has_trait = trait_syncretic_proles
+                        }
+                    }                    
+                }
+                modifier = {
+                    factor = 0.5
+                    has_edict = increased_syncretic_prole_repression
+                }
+            }    
+            ###################################################### MACHINE INTELLIGENCE    
+            20 = { ### Machine Intelligence 
+                modifier = { ### ROBO ONLY
+                    factor = 0
+                    NOT = { has_authority = auth_machine_intelligence }
+                }
+                set_country_flag = fatherland_roguesetup_machineintelligence                
+            }
+            20 = { ### Synth Revolt
+                modifier = { ### NO ROBO (can they even have synths?)
+                    factor = 0
+                    has_authority = auth_machine_intelligence
+                }
+                modifier = { ### Must have synth tech and applicable synth POP
+                    factor = 0
+                    NAND = { has_technology = tech_synthetic_workers
+                             any_owned_pop = { is_robot_pop = yes }
+                    }
+                }    
+                #modifier = { ### NO ROBO (can they even have synths?)
+                #    factor = 0
+                #    
+                #}                
+                set_country_flag = fatherland_roguesetup_synthrevolt            
+            }                        
+            20 = { ### Liberated Biotrophy - Rogue Servitors
+                set_country_flag = fatherland_roguesetup_biotrophy
+                modifier = {
+                    factor = 0
+                    NOT = { 
+                        any_owned_pop = {
+                            has_living_standard = { type = living_standard_organic_trophy }
+                        }
+                    }                
+                }
+                modifier = {
+                    factor = 0.5
+                    root = {
+                        has_edict = increased_biotrophy_security
+                    }
+                }
+                modifier = {
+                    factor = 0.1
+                    root = {
+                        has_edict = extreme_biotrophy_security
+                    }
+                }                
+            }
+            ##################################################### SPECIAL
+            # 10 = { ### Old Nations of Earth - UNE or human_1 flagged start. (TBD, not yet implented)
+            #     set_country_flag = fatherland_roguesetup_earth_nation
+            #     modifier = {
+            #         factor = 0
             #         OR = {
-            #             has_technology = tech_combat_computers_3
-            #             has_technology = tech_synthetic_workers
-            #         }
+            #             NOR = { has_country_flag = human_1 
+            #                     has_country_flag = fatherland_human_rogues_enabled
+            #             }    
+            #             has_country_flag = fatherland_human_rogues_finished    
+            #         }        
             #     }
-            #     modifier = { ## EVEN MORE IF YOU HAVE THE MOST DANGEROUS TECH
-            #         factor = 2
-            #         has_technology = tech_sapient_ai
-            #     }
-            #     modifier = { ### NO AI FOR THOSE WITHOUT SAPIENT AI TECH(S)
-            #         factor = 0
-            #         NOR = {
-            #             has_technology = tech_positronic_implants
-            #             has_technology = tech_sapient_ai
-            #             has_technology = tech_droid_workers
-            #         }
-            #         #has_authority = auth_machine_intelligence
-            #     }    
-            #     modifier = { ### NO ROBOT EMPIRES (They get their own thing)
-            #         factor = 0                
-            #         has_ethic = ethic_gestalt_consciousness    
-            #     }                    
-            # }    
-            ###################################################### CIVIC SPECIFIC TYPES
-            # 20 = { ### Banished House // Feudal Society 
-            #     set_country_flag = fatherland_roguesetup_banished
-            #     modifier = {
-            #         factor = 0
-            #             NOT = { has_civic = civic_feudal_realm }
-            #     }            
-            #     modifier = {
-            #         factor = 1.5
-            #             has_civic = civic_feudal_realm
-            #             has_civic = civic_aristocratic_elite
-            #     }
-            # }
-            # 20 = { ### Crusader State // Fanatic Spiritualist - Militarist
-            #     set_country_flag = fatherland_roguesetup_crusaders
-            #     modifier = { ### NO ROBO
-            #         factor = 0
-            #         has_ethic = ethic_gestalt_consciousness    
-            #         #has_authority = auth_machine_intelligence
-            #     }                
-            #     modifier = {
-            #         factor = 0
-            #             OR = {
-            #                 NOR = { 
-            #                     has_ethic = ethic_spiritualist
-            #                     has_ethic = ethic_fanatic_spiritualist
-            #                 }
-            #                 OR = {
-            #                     has_ethic = ethic_pacifist
-            #                     has_ethic = ethic_fanatic_pacifist
-            #                 }
-            #         }
-            #     }            
-            #     modifier = {
-            #         factor = 1.5
-            #         has_ethic = ethic_militarist
-            #         has_ethic = ethic_fanatic_spiritualist
-            #     }            
+            #     modifier = { ### Player can force human nations to go first, once setlist is completed 
+            #         factor = 10 
+            #             has_country_flag = fatherland_human_rogues_boost                
+            #     }                                    
             # }            
-            # 20 = { ### Slave Revolt    - Nation with slaves
-            #     set_country_flag = fatherland_roguesetup_slaves
-            #     modifier = {
-            #         factor = 0
-            #             any_owned_pop = {
-            #                 is_enslaved = no
-            #             }
-            #     }    
-            #     modifier = {
-            #         factor = 5
-            #             has_country_flag = slave_revolt_chain_active
-            #     }
-            # }
-            # 10 = { ### Syncretic Servile Prole Revolt - Syncretic Evolution Origin
-            #     set_country_flag = fatherland_roguesetup_proles
-            #     modifier = {
-            #         factor = 0
-            #             NOT = {
-            #                 any_owned_pop = {
-            #                     pop_has_trait = trait_syncretic_proles
-            #             }
-            #         }                    
-            #     }
-            #     modifier = {
-            #         factor = 0.5
-            #         has_edict = increased_syncretic_prole_repression
-            #     }
-            # }    
-            # ###################################################### MACHINE INTELLIGENCE    
-            # 20 = { ### Machine Intelligence 
-            #     modifier = { ### ROBO ONLY
-            #         factor = 0
-            #         NOT = { has_authority = auth_machine_intelligence }
-            #     }
-            #     set_country_flag = fatherland_roguesetup_machineintelligence                
-            # }
-            # 20 = { ### Synth Revolt
-            #     modifier = { ### NO ROBO (can they even have synths?)
-            #         factor = 0
-            #         has_authority = auth_machine_intelligence
-            #     }
-            #     modifier = { ### Must have synth tech and applicable synth POP
-            #         factor = 0
-            #         NAND = { has_technology = tech_synthetic_workers
-            #                  any_owned_pop = { is_robot_pop = yes }
-            #         }
-            #     }    
-            #     #modifier = { ### NO ROBO (can they even have synths?)
-            #     #    factor = 0
-            #     #    
-            #     #}                
-            #     set_country_flag = fatherland_roguesetup_synthrevolt            
-            # }                        
-            # 20 = { ### Liberated Biotrophy - Rogue Servitors
-            #     set_country_flag = fatherland_roguesetup_biotrophy
-            #     modifier = {
-            #         factor = 0
-            #         NOT = { 
-            #             any_owned_pop = {
-            #                 has_living_standard = { type = living_standard_organic_trophy }
-            #             }
-            #         }                
-            #     }
-            #     modifier = {
-            #         factor = 0.5
-            #         root = {
-            #             has_edict = increased_biotrophy_security
-            #         }
-            #     }
-            #     modifier = {
-            #         factor = 0.1
-            #         root = {
-            #             has_edict = extreme_biotrophy_security
-            #         }
-            #     }                
-            # }
-            ###################################################### SPECIAL
-            #10 = { ### Old Nations of Earth - UNE or human_1 flagged start. (TBD, not yet implented)
-            #    set_country_flag = fatherland_roguesetup_earth_nation
-            #    modifier = {
-            #        factor = 0
-            #        OR = {
-            #            NOR = { has_country_flag = human_1 
-            #                    has_country_flag = fatherland_human_rogues_enabled
-            #            }    
-            #            has_country_flag = fatherland_human_rogues_finished    
-            #        }        
-            #    }
-            #    modifier = { ### Player can force human nations to go first, once setlist is completed 
-            #        factor = 10 
-            #            has_country_flag = fatherland_human_rogues_boost                
-            #    }                                    
-            #}            
         }
         ###################################################### HIVE MINDS
         # Hive Split (New Hive Mind)

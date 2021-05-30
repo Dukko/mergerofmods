@@ -2,6 +2,7 @@ pc_squareworld_habitable = {
     is_artificial_planet = yes
     ringworld = yes
     entity = "square_world_habitable_planet"
+    preview_entity = "squareworld_preview_entity"
     picture = pc_squareworld_habitable
     icon_frame = 21
     entity_scale = 1

@@ -1,6 +1,7 @@
 pc_equatorial_shipyard = {
     is_artificial_planet = yes
     ringworld = yes
+    preview_entity = "shipyard_preview_entity"
     entity = "planetary_ring_game"
     icon_frame = 21
     atmosphere_color = hsv {

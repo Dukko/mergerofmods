@@ -121,18 +121,6 @@ district_giga_alderson_generator = {
         potential = {
             exists = owner
             owner = {
-                is_gestalt = yes
-            }
-            has_active_building = building_energy_nexus
-        }
-        modifier = {
-            job_technician_drone_add = 45
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
                 is_gestalt = no
                 is_fallen_empire_spiritualist = no
             }

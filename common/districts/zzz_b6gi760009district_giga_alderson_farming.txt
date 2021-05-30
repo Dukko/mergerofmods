@@ -142,31 +142,6 @@ district_giga_alderson_farming = {
         }
         text = "job_fe_acolyte_farm_effect_desc"
     }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_gestalt = yes
-            }
-            has_active_building = building_food_processing_center
-        }
-        modifier = {
-            job_agri_drone_add = 60
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_gestalt = no
-                is_fallen_empire_spiritualist = no
-            }
-            has_active_building = building_food_processing_center
-        }
-        modifier = {
-            job_farmer_add = 60
-        }
-    }
     ai_weight = {
         weight = 0
         modifier = {
