@@ -1,3 +1,0 @@
-NGameplay = {
-    OCCUPATION_STARBASE_VALUE = 25
-}

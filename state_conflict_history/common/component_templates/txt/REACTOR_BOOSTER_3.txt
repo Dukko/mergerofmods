@@ -1,15 +1,13 @@
-@power_add0 = 100
-@cost0 = 15
 utility_component_template = {
     key = "REACTOR_BOOSTER_3"
     size = aux
     icon = "GFX_ship_part_reactor_booster_3"
     icon_frame = 1
-    power = @power_add0
+    power = 100
     resources = {
         category = ship_components
         cost = {
-            alloys = @cost0
+            alloys = 15
         }
     }
     prerequisites = {

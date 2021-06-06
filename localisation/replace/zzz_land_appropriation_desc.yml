@@ -1,2 +1,0 @@
-﻿l_english:
- land_appropriation_desc:1000 "Land was seized from the native population of this [This.GetPlanetMoon] to make room for citizen settlers.\n\n§YWhile this modifier is in effect, non-citizen species are not allowed to grow their population on this [This.GetPlanetMoon].§!"

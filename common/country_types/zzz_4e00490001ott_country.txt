@@ -1,0 +1,27 @@
+ott_country = {
+    share_communications = no
+    default_ships = no
+    government = no
+    show_in_contacts_list = no
+    has_complete_sensor = yes
+    observable = no
+    ai = {
+        enabled = no
+        construction = no
+        colonizer = no
+    }
+    faction = {
+        hostile = no
+        needs_border_access = no
+        generate_borders = no
+        needs_colony = no
+        auto_delete = no
+    }
+    modules = {
+        standard_event_module = {
+        }
+        exclusive_diplomacy_module = {
+            contact_rule = never
+        }
+    }
+}

@@ -26,7 +26,7 @@ nhsc_building_psionic_containment = {
         }
         upkeep = {
             energy = 5
-            sr_zro = 1
+            sr_zro = 2
         }
     }
     triggered_planet_modifier = {

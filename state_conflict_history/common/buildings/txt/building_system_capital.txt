@@ -29,7 +29,7 @@ building_system_capital = {
         building_ancient_palace
     }
     allow = {
-        num_pops >= 40
+        num_pops >= 50
     }
     prerequisites = {
         "tech_galactic_administration"
@@ -43,6 +43,26 @@ building_system_capital = {
         planet_amenities_add = 12
         planet_max_buildings_add = @buildings_t4
         planet_max_branch_office_buildings_add = 3
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_non_swapped_tradition = tr_domination_imperious_architecture
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_mechanical_empire = yes
+            }
+        }
+        job_roboticist_add = 3
     }
     triggered_planet_modifier = {
         potential = {
@@ -64,28 +84,6 @@ building_system_capital = {
         }
         modifier = {
             job_enforcer_add = 1
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                has_ethic = ethic_fanatic_authoritarian
-            }
-        }
-        modifier = {
-            job_enforcer_add = 2
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                has_non_swapped_tradition = tr_domination_imperious_architecture
-            }
-        }
-        modifier = {
-            planet_housing_add = 1
         }
     }
     triggered_planet_modifier = {
@@ -152,12 +150,12 @@ building_system_capital = {
         potential = {
             exists = owner
             owner = {
-                is_mechanical_empire = yes
+                has_ethic = ethic_fanatic_authoritarian
             }
         }
-        job_roboticist_add = 1
-        planet_pop_assembly_add = 2
-        pop_growth_speed_reduction = 0.5
+        modifier = {
+            job_enforcer_add = 2
+        }
     }
     triggered_planet_modifier = {
         potential = {

@@ -2,34 +2,7 @@ namespace = primitive
 country_event = {
     id = primitive.16
     hide_window = yes
-    trigger = {
-        is_country_type = primitive
-        has_country_flag = early_space_age
-        OR = {
-            AND = {
-                exists = from
-                from = {
-                    OR = {
-                        is_country_type = default
-                        is_country_type = awakened_fallen_empire
-                    }
-                }
-            }
-            AND = {
-                NOT = {
-                    has_country_flag = recently_advanced
-                }
-                years_passed > 25
-            }
-        }
-    }
-    mean_time_to_happen = {
-        years = 100
-        modifier = {
-            factor = 0.6
-            has_country_flag = acquired_tech
-        }
-    }
+    is_triggered_only = yes
     immediate = {
         remove_country_flag = early_space_age
         set_country_flag = primitives_can_into_space

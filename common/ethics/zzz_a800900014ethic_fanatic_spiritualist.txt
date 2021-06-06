@@ -1,0 +1,21 @@
+ethic_fanatic_spiritualist = {
+    cost = 2
+    category = "spi"
+    category_value = 0
+    regular_variant = ethic_spiritualist
+    use_for_pops = no
+    tags = {
+        ETHIC_ALLOWS_TEMPLE
+        ETHIC_DISALLOW_AI
+        ETHIC_SPIRITUALIST_ALLOWS_HIGH_PRIESTS
+    }
+    country_modifier = {
+        country_unity_produces_mult = 0.2
+        pop_government_ethic_attraction = 0.2
+        pop_amenities_usage_mult = -0.2
+        country_physics_tech_research_speed = -0.1
+    }
+    random_weight = {
+        value = 150
+    }
+}

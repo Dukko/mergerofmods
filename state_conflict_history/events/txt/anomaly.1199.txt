@@ -247,15 +247,15 @@ country_event = {
                             species = last_created_species
                         }
                     }
-                    add_district = district_city
-                    add_district = district_city
-                    add_district = district_industrial
-                    add_district = district_industrial
                     add_building = building_research_lab_1
+                    add_building = building_foundry_1
+                    add_building = building_factory_1
                     add_district = district_generator
                     add_district = district_generator
                     add_district = district_mining
                     add_district = district_mining
+                    add_district = district_city
+                    add_district = district_city
                     create_army = {
                         name = "NAME_Awoken_Army"
                         owner = event_target:awoken_country

@@ -32,11 +32,7 @@ fleet_event = {
                     event_target:nomad_contact_country = {
                         NOR = {
                             any_owned_planet = {
-                                OR = {
-                                    is_planet_class = pc_desert
-                                    is_planet_class = pc_arid
-                                    is_planet_class = pc_savannah
-                                }
+                                is_dry = yes
                             }
                             has_authority = auth_hive_mind
                         }

@@ -30,8 +30,8 @@ district_virtual_hive = {
         }
     }
     planet_modifier = {
-        planet_housing_add = 60
-        job_maintenance_drone_add = 36
+        planet_housing_add = 30
+        job_maintenance_drone_add = 18
     }
     triggered_planet_modifier = {
         potential = {
@@ -41,7 +41,7 @@ district_virtual_hive = {
             }
         }
         modifier = {
-            planet_housing_add = 10
+            planet_housing_add = 5
         }
     }
     triggered_planet_modifier = {
@@ -52,7 +52,7 @@ district_virtual_hive = {
             }
         }
         modifier = {
-            planet_housing_add = 10
+            planet_housing_add = 5
         }
     }
     triggered_planet_modifier = {
@@ -63,7 +63,7 @@ district_virtual_hive = {
             }
         }
         modifier = {
-            job_maintenance_drone_add = 12
+            job_maintenance_drone_add = 6
         }
     }
     triggered_planet_modifier = {
@@ -74,7 +74,7 @@ district_virtual_hive = {
             }
         }
         modifier = {
-            planet_housing_add = 10
+            planet_housing_add = 5
         }
     }
     triggered_desc = {

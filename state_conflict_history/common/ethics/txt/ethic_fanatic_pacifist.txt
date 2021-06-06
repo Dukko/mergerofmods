@@ -8,6 +8,7 @@ ethic_fanatic_pacifist = {
     tags = {
         ETHIC_DISALLOW_OFFENSIVE_WARS
         ETHIC_DISALLOW_FULL_BOMBARDMENT
+        ETHIC_PACIFIST_ALLOWS_SUPERVISORS
     }
     country_modifier = {
         planet_stability_add = 10

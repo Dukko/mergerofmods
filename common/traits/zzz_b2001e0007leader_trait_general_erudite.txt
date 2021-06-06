@@ -9,11 +9,9 @@ leader_trait_general_erudite = {
     }
     leader_trait = {
         general
-        governor
     }
     leader_class = {
         general
-        governor
     }
     initial = no
     randomized = no

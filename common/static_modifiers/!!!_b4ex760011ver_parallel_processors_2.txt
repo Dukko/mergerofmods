@@ -1,3 +1,0 @@
-ver_parallel_processors_2 = {
-    all_technology_research_speed = 0.1
-}

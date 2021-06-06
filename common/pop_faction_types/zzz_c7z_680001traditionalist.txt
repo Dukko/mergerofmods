@@ -320,11 +320,9 @@ traditionalist = {
             owner = {
                 has_surveyed_class = pc_gaia
                 has_ascension_perk = ap_consecrated_worlds
-                owner = {
-                    has_valid_civic = civic_keepers_harmony
+                has_valid_civic = civic_keepers_harmony
                 NOR = {
                     has_valid_civic = civic_physics_cult
-                }
                 }
             }
         }
@@ -444,8 +442,8 @@ traditionalist = {
             exists = owner
             owner = {
                 has_valid_civic = civic_keepers_harmony
-                    }
-                }
+            }
+        }
         trigger = {
             owner = {
                 any_owned_planet = {

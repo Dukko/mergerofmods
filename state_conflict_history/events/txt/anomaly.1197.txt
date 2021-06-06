@@ -56,6 +56,7 @@ country_event = {
                     limit = {
                         habitable_planet = yes
                         has_owner = no
+                        has_anomaly = no
                         is_capital = no
                         NOT = {
                             has_modifier = holy_planet
@@ -197,15 +198,15 @@ country_event = {
                             species = last_created_species
                         }
                     }
-                    add_district = district_city
-                    add_district = district_city
-                    add_district = district_industrial
-                    add_district = district_industrial
                     add_building = building_research_lab_1
+                    add_building = building_foundry_1
+                    add_building = building_factory_1
                     add_district = district_generator
                     add_district = district_generator
                     add_district = district_mining
                     add_district = district_mining
+                    add_district = district_city
+                    add_district = district_city
                     root = {
                         country_event = {
                             id = anomaly.1196

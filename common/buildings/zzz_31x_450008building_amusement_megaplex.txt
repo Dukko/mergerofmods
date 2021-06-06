@@ -14,7 +14,6 @@ building_amusement_megaplex = {
     }
     planet_modifier = {
         planet_amenities_add = 10
-        job_entertainer_add = 1
     }
     resources = {
         category = planet_branch_office_buildings

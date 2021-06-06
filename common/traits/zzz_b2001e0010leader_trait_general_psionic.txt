@@ -12,6 +12,10 @@ leader_trait_general_psionic = {
     leader_class = {
         general
     }
+    opposites = {
+        "leader_trait_general_cyborg"
+        "leader_trait_general_synthetic"
+    }
     initial = no
     randomized = no
 }

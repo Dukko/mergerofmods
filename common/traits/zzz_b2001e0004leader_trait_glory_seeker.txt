@@ -20,11 +20,9 @@ leader_trait_glory_seeker = {
     }
     leader_trait = {
         general
-        governor
     }
     leader_class = {
         general
-        governor
     }
     opposites = {
         "leader_trait_armchair_commander"

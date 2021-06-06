@@ -29,6 +29,10 @@ first_contact_protocol = {
                 factor = 2
                 has_valid_civic = civic_machine_servitor
             }
+            modifier = {
+                factor = 10
+                years_passed > 40
+            }
         }
     }
     option = {
@@ -49,6 +53,10 @@ first_contact_protocol = {
                 factor = 1.5
                 always = yes
             }
+            modifier = {
+                factor = 10
+                years_passed > 40
+            }
         }
     }
     option = {
@@ -68,11 +76,7 @@ first_contact_protocol = {
         AI_weight = {
             modifier = {
                 factor = 2
-                is_militarist = yes
-            }
-            modifier = {
-                factor = 2
-                is_xenophobe = yes
+                is_homicidal = yes
             }
             modifier = {
                 factor = 2

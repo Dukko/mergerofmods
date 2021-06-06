@@ -39,7 +39,7 @@ nhsc_building_watcher = {
         }
         upkeep = {
             energy = 10
-            sr_dark_matter = 1
+            sr_dark_matter = 2
         }
     }
     country_modifier = {

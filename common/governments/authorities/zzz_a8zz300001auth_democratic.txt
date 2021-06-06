@@ -2,7 +2,6 @@ auth_democratic = {
     election_term_years = 10
     re_election_allowed = yes
     election_type = democratic
-    max_election_candidates = 8
     uses_mandates = yes
     possible = {
         ethics = {
@@ -13,11 +12,16 @@ auth_democratic = {
             }
         }
     }
+    random_weight = {
+        modifier = {
+            factor = 0.4
+        }
+    }
     country_modifier = {
         planet_resettlement_unemployed_mult = 0.5
         pop_cat_worker_political_power = 3
         pop_cat_specialist_political_power = 4
-        pop_cat_ruler_political_power = 7
+        pop_cat_ruler_political_power = 3
     }
     tags = {
         AUTHORITY_ELECTION_DEMOCRATIC

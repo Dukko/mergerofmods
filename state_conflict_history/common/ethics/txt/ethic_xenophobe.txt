@@ -12,12 +12,38 @@ ethic_xenophobe = {
         ETHIC_NO_REFUGEES
     }
     country_modifier = {
-        tradition_cost_empire_size_mult = -0.15
-        ship_home_territory_fire_rate_mult = 0.2
+        tradition_cost_empire_size_mult = -0.1
+        ship_home_territory_fire_rate_mult = 0.1
         pop_growth_speed = 0.1
     }
     random_weight = {
         value = 100
+    }
+    pop_attraction_tag = {
+        desc = POP_ATTRACTION_SLAVERY_POS
+        trigger = {
+            any_enslaved_species = {
+                is_same_species = root
+                is_robotic = no
+            }
+        }
+    }
+    pop_attraction_tag = {
+        desc = POP_ATTRACTION_XENO_SLAVES_POS
+        trigger = {
+            any_enslaved_species = {
+                not = {
+                    is_same_species = root
+                }
+                is_robotic = no
+            }
+            NOT = {
+                any_enslaved_species = {
+                    is_same_species = root
+                    is_robotic = no
+                }
+            }
+        }
     }
     pop_attraction_tag = {
         desc = POP_ATTRACTION_XENOPHOBE_POS
@@ -62,14 +88,6 @@ ethic_xenophobe = {
                     leader_of_faction = supremacist
                     leader_of_faction = isolationist
                 }
-            }
-        }
-    }
-    pop_attraction_tag = {
-        desc = POP_ATTRACTION_SLAVERY_POS
-        trigger = {
-            any_enslaved_species = {
-                is_robotic = no
             }
         }
     }
@@ -335,6 +353,34 @@ ethic_xenophobe = {
             }
         }
         modifier = {
+            factor = 1.5
+            is_enslaved = no
+            from = {
+                any_enslaved_species = {
+                    is_same_species = root
+                    is_robotic = no
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            is_enslaved = no
+            from = {
+                any_enslaved_species = {
+                    NOT = {
+                        is_same_species = root
+                    }
+                    is_robotic = no
+                }
+                NOT = {
+                    any_enslaved_species = {
+                        is_same_species = root
+                        is_robotic = no
+                    }
+                }
+            }
+        }
+        modifier = {
             factor = 0.5
             is_enslaved = no
             is_being_purged = no
@@ -358,26 +404,6 @@ ethic_xenophobe = {
                         is_same_species = root
                     }
                     has_trait = "trait_repugnant"
-                }
-            }
-        }
-        modifier = {
-            factor = 1.5
-            is_enslaved = no
-            from = {
-                any_enslaved_species = {
-                    is_same_species = root
-                    is_robotic = no
-                }
-            }
-        }
-        modifier = {
-            factor = 1.25
-            is_enslaved = no
-            from = {
-                any_enslaved_species = {
-                    is_same_species = root
-                    is_robotic = no
                 }
             }
         }

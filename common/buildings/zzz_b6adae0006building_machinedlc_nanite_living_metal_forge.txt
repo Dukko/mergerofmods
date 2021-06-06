@@ -23,6 +23,9 @@ building_machinedlc_nanite_living_metal_forge = {
             has_modifier = slave_colony
         }
     }
+    show_tech_unlock_if = {
+        always = no
+    }
     destroy_trigger = {
         owner = {
             NOR = {

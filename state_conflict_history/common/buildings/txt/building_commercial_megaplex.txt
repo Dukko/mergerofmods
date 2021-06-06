@@ -34,7 +34,7 @@ building_commercial_megaplex = {
     }
     planet_modifier = {
         job_merchant_add = 3
-        job_clerk_add = 7
+        job_clerk_add = 6
     }
     resources = {
         category = planet_buildings
@@ -55,7 +55,7 @@ building_commercial_megaplex = {
             }
         }
         modifier = {
-            job_clerk_add = 3
+            job_clerk_add = 2
         }
     }
     prerequisites = {

@@ -1,3 +1,0 @@
-ver_heavy_overlord_taxes = {
-    trade_value_mult = -0.2
-}

@@ -25,9 +25,12 @@ building_foundry_1 = {
                         resource = alloys
                         value > 45
                     }
-                    resource_stockpile_compare = {
-                        resource = alloys
-                        value > 3500
+                    or = {
+                        resource_stockpile_compare = {
+                            resource = alloys
+                            value > 3500
+                        }
+                        used_naval_capacity_percent > 0.95
                     }
                     owner = {
                         num_owned_planets > 3

@@ -1,3 +1,4 @@
+namespace = utopia
 namespace = akx
 planet_event = {
     id = akx.10020

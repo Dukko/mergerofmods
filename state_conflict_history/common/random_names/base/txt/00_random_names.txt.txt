@@ -1,13 +1,13 @@
-species_modification_prefix = { 
-    Neo- 
-    Post- 
-    Super- 
-    Ultra- 
-    Meta- 
-    Trans- 
-    "High " 
+species_modification_prefix = {
+    Neo-
+    Post-
+    Super-
+    Ultra-
+    Meta-
+    Trans-
+    High_
 }
-species_modification_postfix = { 
+species_modification_postfix = {
     Superior
     Variatus
     Mutatis
@@ -420,14 +420,14 @@ black_hole_names = {
     "Mupliv_Abyss"
 }
 asteroid_prefix = {
-    TFL- 
-    TD-1- 
-    LM- 
+    TFL-
+    TD-1-
+    LM-
     RX2-
     A1-
     BT-
-    425-
-    18-
+    -425
+    -18
     THX-
     LR-9-
     B12-
@@ -455,8 +455,8 @@ asteroid_prefix = {
     UT-9-
     VTR-
     V4-XN-
-    234-
-    6467-
+    -234
+    -6467
     88D2-
     14-S-
     DSS-
@@ -486,10 +486,10 @@ asteroid_prefix = {
     133-D-
     49-F-
     377D-
-    1337-
-    4-
-    39-
-    47-
+    -1337
+    -4
+    -39
+    -47
     91F-
     P1-
     32-PX-
@@ -499,7 +499,7 @@ asteroid_prefix = {
     D-9-
     M4-
     EUD-
-    9965-
+    -9965
     TE9-
     1ES-
     8FV-
@@ -525,7 +525,7 @@ asteroid_prefix = {
     RF-
     J999-
     QT1-
-    9192-
+    -9192
     B4-3-
     ONA-
     VA99-
@@ -534,7 +534,7 @@ asteroid_prefix = {
     LA4-
     WT9-
     IU11-
-    944-
+    -944
     8Y-I-
     VK1-
     MF-
@@ -543,8 +543,8 @@ asteroid_prefix = {
     B1R-
     E44-
     AR-2-
-    2940-
-    2195-
+    -2940
+    -2195
     YU-5-
     TR44-
     AKU-9-
@@ -560,9 +560,9 @@ asteroid_prefix = {
     W112-
 }
 asteroid_postfix = {
-    413 
-    3254 
-    233-D 
+    413
+    3254
+    233-D
     001B
     1138
     426
@@ -580,7 +580,7 @@ asteroid_postfix = {
     35-D
     11B1
     112
-    0909
+    909
     DX-1
     354-F
     76-1
@@ -594,13 +594,13 @@ asteroid_postfix = {
     742
     09-L
     411
-    012
+    12
     85-8
     399
     866
     757
-    044
-    076
+    44
+    76
     99
     845
     811
@@ -642,14 +642,14 @@ asteroid_postfix = {
     728
     328
     906
-    038
+    38
     3547
     109-D
     3427
     5498
     U-46
-    094
-    0935
+    94
+    935
     6759
     78
     981
@@ -660,13 +660,13 @@ asteroid_postfix = {
     63
     6498
     984
-    009
+    9
     LT-47
-    002
+    2
     K14
     997
     72
-    0004
+    4
     32-X
     55987
     572
@@ -691,7 +691,6 @@ asteroid_postfix = {
     717
 }
 star_names = {
-    ### REAL ###
     "Epsilon_Eridani"
     "Epsilon_Indi"
     "Tau_Ceti"
@@ -887,7 +886,6 @@ star_names = {
     Zaurak
     Zosma
     Zuben
-    ### FICTIONAL ###
     Rantor
     Nuranka
     Zempek
@@ -964,7 +962,7 @@ star_names = {
     Raxum
     Bax
     Stenlar
-    Minokh 
+    Minokh
     Guram
     "Tar_Valemm"
     Tiralam

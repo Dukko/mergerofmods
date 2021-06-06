@@ -1,5 +1,4 @@
 @free_districts_high_threshold = 15
-@built_districts_medium_threshold = 4
 col_factory = {
     icon = 6
     potential = {
@@ -14,7 +13,6 @@ col_factory = {
         }
         NOR = {
             uses_district_set = city_world
-            uses_district_set = pdshroudarc
             uses_district_set = ring_world
             uses_district_set = habitat
             uses_district_set = machine_world
@@ -94,6 +92,27 @@ col_factory = {
                 resource_stockpile_compare = {
                     resource = consumer_goods
                     value < 10
+                }
+            }
+            not = {
+                owner = {
+                    has_deficit = consumer_goods
+                    resource_stockpile_compare = {
+                        resource = food
+                        value < 300
+                    }
+                    resource_income_compare = {
+                        resource = food
+                        value < -12
+                    }
+                    resource_income_compare = {
+                        resource = energy
+                        value < 10
+                    }
+                    resource_stockpile_compare = {
+                        resource = energy
+                        value < 1000
+                    }
                 }
             }
         }
@@ -267,6 +286,20 @@ col_factory = {
             }
         }
         modifier = {
+            add = 20
+            OR = {
+                has_modifier = gpm_exotic_spices
+                has_modifier = gpm_delicious_ingredients
+            }
+        }
+        modifier = {
+            add = 40
+            OR = {
+                has_modifier = gpm_precursor_manufactorium
+                has_modifier = gpm_relic_factories
+            }
+        }
+        modifier = {
             add = 10
             num_districts = {
                 type = district_industrial
@@ -298,20 +331,6 @@ col_factory = {
             }
             not = {
                 has_designation = col_foundry
-            }
-        }
-        modifier = {
-            add = 20
-            OR = {
-                has_modifier = gpm_exotic_spices
-                has_modifier = gpm_delicious_ingredients
-            }
-        }
-        modifier = {
-            add = 40
-            OR = {
-                has_modifier = gpm_precursor_manufactorium
-                has_modifier = gpm_relic_factories
             }
         }
         modifier = {

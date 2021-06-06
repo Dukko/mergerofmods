@@ -1,3 +1,0 @@
-NAI = {
-    WAR_OCCUPIED_BORDER_PRIO = 10
-}

@@ -68,17 +68,14 @@ country_event = {
     option = {
         name = crisis.211.f
         trigger = {
-            OR = {
-                has_generic_government = yes
-                has_government = gov_enlightened_monarchy
-                has_government = gov_elective_monarchy
-                has_government = gov_hive_mind
-                has_government = gov_successor_khanate
-                has_government = gov_diadochi
-                is_fallen_empire = yes
-                has_authority = auth_machine_intelligence
-            }
             NOR = {
+                has_spiritualist_government = yes
+                has_militarist_government = yes
+                has_materialist_government = yes
+                has_pacifist_government = yes
+                is_megacorp = yes
+                has_government = gov_megacorporation
+                has_government = gov_trade_league
                 has_ethic = "ethic_fanatic_xenophile"
                 has_ethic = "ethic_fanatic_xenophobe"
             }

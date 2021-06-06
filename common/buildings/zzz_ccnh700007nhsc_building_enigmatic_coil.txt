@@ -30,7 +30,7 @@ nhsc_building_enigmatic_coil = {
             energy = 5
             rare_crystals = 2
             exotic_gases = 2
-            sr_dark_matter = 1
+            sr_dark_matter = 2
         }
     }
     triggered_planet_modifier = {

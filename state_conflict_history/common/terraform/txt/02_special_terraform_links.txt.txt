@@ -231,14 +231,24 @@ terraform_link = {
     ai_weight = {
         weight = 5
         modifier = {
-            factor = 0    
-            resource_stockpile_compare = { resource = energy value < 8000 }
+            factor = 10
+            from = {
+                num_pops > 10
+            }
         }
-        # TODO: Fix
-        #modifier = {
-        #    factor = 0        
-        #    from = { sector_controlled = yes }
-        #}
+        modifier = {
+            factor = 2
+            from = {
+                num_pops > 25
+            }
+        }
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = energy
+                value < 6000
+            }
+        }
     }
 }
 terraform_link = {
@@ -255,14 +265,24 @@ terraform_link = {
     ai_weight = {
         weight = 5
         modifier = {
-            factor = 0    
-            resource_stockpile_compare = { resource = energy value < 10000 }
+            factor = 10
+            from = {
+                num_pops > 10
+            }
         }
-        # TODO: Fix
-        #modifier = {
-        #    factor = 0        
-        #    from = { sector_controlled = yes }
-        #}
+        modifier = {
+            factor = 2
+            from = {
+                num_pops > 25
+            }
+        }
+        modifier = {
+            factor = 0    
+            resource_stockpile_compare = {
+                resource = energy
+                value < 6000
+            }
+        }
     }
 }
 terraform_link = {
@@ -279,8 +299,23 @@ terraform_link = {
     ai_weight = {
         weight = 5
         modifier = {
-            factor = 0    
-            resource_stockpile_compare = { resource = energy value < 8000 }
+            factor = 10
+            from = {
+                num_pops > 10
+            }
+        }
+        modifier = {
+            factor = 2
+            from = {
+                num_pops > 25
+            }
+        }
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = energy
+                value < 6000
+            }
         }
     }
 }
@@ -298,14 +333,24 @@ terraform_link = {
     ai_weight = {
         weight = 5
         modifier = {
-            factor = 0    
-            resource_stockpile_compare = { resource = energy value < 10000 }
+            factor = 10
+            from = {
+                num_pops > 10
+            }
         }
-        # TODO: Fix
-        #modifier = {
-        #    factor = 0        
-        #    from = { sector_controlled = yes }
-        #}
+        modifier = {
+            factor = 2
+            from = {
+                num_pops > 25
+            }
+        }
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = energy
+                value < 6000
+            }
+        }
     }
 }
 terraform_link = {
@@ -322,8 +367,23 @@ terraform_link = {
     ai_weight = {
         weight = 5
         modifier = {
-            factor = 0    
-            resource_stockpile_compare = { resource = energy value < 8000 }
+            factor = 10
+            from = {
+                num_pops > 10
+            }
+        }
+        modifier = {
+            factor = 2
+            from = {
+                num_pops > 25
+            }
+        }
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = energy
+                value < 6000
+            }
         }
     }
 }
@@ -341,8 +401,23 @@ terraform_link = {
     ai_weight = {
         weight = 5
         modifier = {
-            factor = 0    
-            resource_stockpile_compare = { resource = energy value < 8000 }
+            factor = 10
+            from = {
+                num_pops > 10
+            }
+        }
+        modifier = {
+            factor = 2
+            from = {
+                num_pops > 25
+            }
+        }
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = energy
+                value < 6000
+            }
         }
     }
 }
@@ -360,8 +435,23 @@ terraform_link = {
     ai_weight = {
         weight = 5
         modifier = {
-            factor = 0    
-            resource_stockpile_compare = { resource = energy value < 8000 }
+            factor = 10
+            from = {
+                num_pops > 10
+            }
+        }
+        modifier = {
+            factor = 2
+            from = {
+                num_pops > 25
+            }
+        }
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = energy
+                value < 6000
+            }
         }
     }
 }
@@ -379,8 +469,23 @@ terraform_link = {
     ai_weight = {
         weight = 5
         modifier = {
-            factor = 0    
-            resource_stockpile_compare = { resource = energy value < 8000 }
+            factor = 10
+            from = {
+                num_pops > 10
+            }
+        }
+        modifier = {
+            factor = 2
+            from = {
+                num_pops > 25
+            }
+        }
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = energy
+                value < 6000
+            }
         }
     }
 }
@@ -398,8 +503,23 @@ terraform_link = {
     ai_weight = {
         weight = 5
         modifier = {
-            factor = 0    
-            resource_stockpile_compare = { resource = energy value < 8000 }
+            factor = 10
+            from = {
+                num_pops > 10
+            }
+        }
+        modifier = {
+            factor = 2
+            from = {
+                num_pops > 25
+            }
+        }
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = energy
+                value < 6000
+            }
         }
     }
 }
@@ -421,8 +541,23 @@ terraform_link = {
     ai_weight = {
         weight = 5
         modifier = {
-            factor = 0    
-            resource_stockpile_compare = { resource = energy value < 8000 }
+            factor = 10
+            from = {
+                num_pops > 10
+            }
+        }
+        modifier = {
+            factor = 2
+            from = {
+                num_pops > 25
+            }
+        }
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = energy
+                value < 6000
+            }
         }
     }
 }
@@ -433,19 +568,38 @@ terraform_link = {
     duration = @gaiaTime
     potential = {
         has_ascension_perk = "ap_world_shaper"
-        from = { has_modifier = terraforming_candidate }
+        from = {
+            has_modifier = terraforming_candidate
+        }
     }
     condition = {
         has_technology = "tech_climate_restoration"
     }
     effect = {
-        from = { remove_modifier = terraforming_candidate }
+        from = {
+            remove_modifier = terraforming_candidate
+        }
     }
     ai_weight = {
         weight = 5
         modifier = {
-            factor = 0    
-            resource_stockpile_compare = { resource = energy value < 8000 }
+            factor = 10
+            from = {
+                num_pops > 10
+            }
+        }
+        modifier = {
+            factor = 2
+            from = {
+                num_pops > 25
+            }
+        }
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = energy
+                value < 6000
+            }
         }
     }
 }
@@ -908,6 +1062,18 @@ terraform_link = {
     }
     ai_weight = {
         weight = 10
+        modifier = {
+            factor = 10
+            from = {
+                num_pops > 10
+            }
+        }
+        modifier = {
+            factor = 2
+            from = {
+                num_pops > 25
+            }
+        }
         modifier = {
             factor = 0
             from = {
@@ -2026,81 +2192,171 @@ terraform_link = {
 terraform_link = {
     from = pc_gray_goo
                                                                 to = pc_desert
-    condition = { has_technology = "tech_climate_restoration" }
+    condition = {
+        has_technology = "tech_climate_restoration"
+    }
     energy = 1000
     duration = 360
-    potential = { from = { has_modifier = terraforming_candidate } }
-    effect = { from = { remove_modifier = terraforming_candidate } }
+    potential = {
+        from = {
+            has_modifier = terraforming_candidate
+        }
+    }
+    effect = {
+        from = {
+            remove_modifier = terraforming_candidate
+        }
+    }
 }
 terraform_link = {
     from = pc_gray_goo
-                                                                to = pc_arid
-    condition = { has_technology = "tech_climate_restoration" }
+    to = pc_arid
+    condition = {
+        has_technology = "tech_climate_restoration"
+    }
     energy = 1000
     duration = 360
-    potential = { from = { has_modifier = terraforming_candidate } }
-    effect = { from = { remove_modifier = terraforming_candidate } }
+    potential = {
+        from = {
+            has_modifier = terraforming_candidate
+        }
+    }
+    effect = {
+        from = {
+            remove_modifier = terraforming_candidate
+        }
+    }
 }
 terraform_link = {
     from = pc_gray_goo
-                                                                to = pc_savannah
-    condition = { has_technology = "tech_climate_restoration" }
+    to = pc_savannah
+    condition = {
+        has_technology = "tech_climate_restoration"
+    }
     energy = 1000
     duration = 360
-    potential = { from = { has_modifier = terraforming_candidate } }
-    effect = { from = { remove_modifier = terraforming_candidate } }
+    potential = {
+        from = {
+            has_modifier = terraforming_candidate
+        }
+    }
+    effect = {
+        from = {
+            remove_modifier = terraforming_candidate
+        }
+    }
 }
 terraform_link = {
     from = pc_gray_goo
-                                                                to = pc_ocean
-    condition = { has_technology = "tech_climate_restoration" }
+    to = pc_ocean
+    condition = {
+        has_technology = "tech_climate_restoration"
+    }
     energy = 1000
     duration = 360
-    potential = { from = { has_modifier = terraforming_candidate } }
-    effect = { from = { remove_modifier = terraforming_candidate } }
+    potential = {
+        from = {
+            has_modifier = terraforming_candidate
+        }
+    }
+    effect = {
+        from = {
+            remove_modifier = terraforming_candidate
+        }
+    }
 }
 terraform_link = {
     from = pc_gray_goo
-                                                                to = pc_continental
-    condition = { has_technology = "tech_climate_restoration" }
+    to = pc_continental
+    condition = {
+        has_technology = "tech_climate_restoration"
+    }
     energy = 1000
     duration = 360
-    potential = { from = { has_modifier = terraforming_candidate } }
-    effect = { from = { remove_modifier = terraforming_candidate } }
+    potential = {
+        from = {
+            has_modifier = terraforming_candidate
+        }
+    }
+    effect = {
+        from = {
+            remove_modifier = terraforming_candidate
+        }
+    }
 }
 terraform_link = {
     from = pc_gray_goo
-                                                                to = pc_tropical
-    condition = { has_technology = "tech_climate_restoration" }
+    to = pc_tropical
+    condition = {
+        has_technology = "tech_climate_restoration"
+    }
     energy = 1000
     duration = 360
-    potential = { from = { has_modifier = terraforming_candidate } }
-    effect = { from = { remove_modifier = terraforming_candidate } }
+    potential = {
+        from = {
+            has_modifier = terraforming_candidate
+        }
+    }
+    effect = {
+        from = {
+            remove_modifier = terraforming_candidate
+        }
+    }
 }
 terraform_link = {
     from = pc_gray_goo
-                                                                to = pc_arctic
-    condition = { has_technology = "tech_climate_restoration" }
+    to = pc_arctic
+    condition = {
+        has_technology = "tech_climate_restoration"
+    }
     energy = 1000
     duration = 360
-    potential = { from = { has_modifier = terraforming_candidate } }
-    effect = { from = { remove_modifier = terraforming_candidate } }
+    potential = {
+        from = {
+            has_modifier = terraforming_candidate
+        }
+    }
+    effect = {
+        from = {
+            remove_modifier = terraforming_candidate
+        }
+    }
 }
 terraform_link = {
     from = pc_gray_goo
-                                                                to = pc_alpine
-    condition = { has_technology = "tech_climate_restoration" }
+    to = pc_alpine
+    condition = {
+        has_technology = "tech_climate_restoration"
+    }
     energy = 1000
     duration = 360
-    potential = { from = { has_modifier = terraforming_candidate } }
-    effect = { from = { remove_modifier = terraforming_candidate } }
+    potential = {
+        from = {
+            has_modifier = terraforming_candidate
+        }
+    }
+    effect = {
+        from = {
+            remove_modifier = terraforming_candidate
+        }
+    }
 }
 terraform_link = {
     from = pc_gray_goo
-                                                                to = pc_tundra
-    condition = { has_technology = "tech_climate_restoration" }
+    to = pc_tundra
+    condition = {
+        has_technology = "tech_climate_restoration"
+    }
     energy = 1000
     duration = 360
-    potential = { from = { has_modifier = terraforming_candidate } }
-    effect = { from = { remove_modifier = terraforming_candidate } }
+    potential = {
+        from = {
+            has_modifier = terraforming_candidate
+        }
+    }
+    effect = {
+        from = {
+            remove_modifier = terraforming_candidate
+        }
+    }
 }

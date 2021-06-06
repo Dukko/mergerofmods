@@ -7,23 +7,6 @@ building_organic_sanctuary = {
             has_valid_civic = civic_machine_servitor
         }
     }
-    allow = {
-        exists = owner
-        OR = {
-            owner = {
-                is_ai = no
-            }
-            AND = {
-                num_buildings = {
-                    type = building_organic_sanctuary
-                    value < 2
-                }
-                NOT = {
-                    has_building = building_organic_paradise
-                }
-            }
-        }
-    }
     destroy_trigger = {
         exists = owner
         OR = {

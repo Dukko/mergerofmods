@@ -1,5 +1,4 @@
 @free_districts_high_threshold = 15
-@built_districts_medium_threshold = 4
 col_foundry = {
     icon = 5
     potential = {
@@ -227,6 +226,28 @@ col_foundry = {
             str_foundry_to_factory_switcher = yes
         }
         modifier = {
+            add = 50
+            owner = {
+                has_deficit = consumer_goods
+                resource_stockpile_compare = {
+                    resource = food
+                    value < 300
+                }
+                resource_income_compare = {
+                    resource = food
+                    value < -12
+                }
+                resource_income_compare = {
+                    resource = energy
+                    value < 10
+                }
+                resource_stockpile_compare = {
+                    resource = energy
+                    value < 1000
+                }
+            }
+        }
+        modifier = {
             add = 5
             num_districts = {
                 type = district_industrial
@@ -252,6 +273,20 @@ col_foundry = {
             num_districts = {
                 type = district_industrial
                 value >= 4
+            }
+        }
+        modifier = {
+            add = 20
+            OR = {
+                has_modifier = gpm_spaceship_graveyard
+                has_modifier = gpm_radioactive_mantle
+            }
+        }
+        modifier = {
+            add = 40
+            OR = {
+                has_modifier = gpm_precursor_manufactorium
+                has_modifier = gpm_relic_factories
             }
         }
         modifier = {
@@ -299,6 +334,27 @@ col_foundry = {
         }
         modifier = {
             factor = 0
+            not = {
+                owner = {
+                    has_deficit = consumer_goods
+                    resource_stockpile_compare = {
+                        resource = food
+                        value < 300
+                    }
+                    resource_income_compare = {
+                        resource = food
+                        value < -12
+                    }
+                    resource_income_compare = {
+                        resource = energy
+                        value < 10
+                    }
+                    resource_stockpile_compare = {
+                        resource = energy
+                        value < 1000
+                    }
+                }
+            }
             owner = {
                 or = {
                     and = {

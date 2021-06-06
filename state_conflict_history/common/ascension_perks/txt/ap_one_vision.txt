@@ -11,6 +11,22 @@ ap_one_vision = {
         }
     }
     ai_weight = {
-        factor = 0
+        factor = 10
+        modifier = {
+            factor = 2
+            has_ethic = ethic_authoritarian
+        }
+        modifier = {
+            factor = 3
+            has_ethic = ethic_fanatic_authoritarian
+        }
+        modifier = {
+            factor = 2
+            has_ethic = ethic_spiritualist
+        }
+        modifier = {
+            factor = 3
+            has_ethic = ethic_fanatic_spiritualist
+        }
     }
 }

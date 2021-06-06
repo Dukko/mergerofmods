@@ -25,7 +25,7 @@ building_machine_major_capital = {
         building_ancient_palace
     }
     allow = {
-        num_pops >= 20
+        num_pops >= 25
     }
     prerequisites = {
         "tech_colonial_centralization"

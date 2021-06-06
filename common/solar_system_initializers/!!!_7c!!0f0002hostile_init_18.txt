@@ -7,7 +7,7 @@ hostile_init_18 = {
     }
     usage = misc_system_init
     usage_odds = {
-        base = 100
+        base = 0
         modifier = {
             factor = 0
             NOT = {
@@ -18,11 +18,21 @@ hostile_init_18 = {
             factor = 0
             OR = {
                 has_star_flag = empire_cluster
+                is_fe_cluster = yes
             }
         }
         modifier = {
             factor = 0
             is_bottleneck_system = yes
+        }
+        modifier = {
+            add = 90000
+            is_inside_nebula = yes
+            any_neighbor_system = {
+                NOT = {
+                    is_star_class = sc_dn
+                }
+            }
         }
     }
     max_instances = 1

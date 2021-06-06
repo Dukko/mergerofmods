@@ -1,0 +1,10 @@
+random_list = {
+    name = "rl_cool_moist_planets"
+    planets = {
+        "pc_continental"
+        "pc_ocean"
+        "pc_tundra"
+        "pc_alpine"
+        "pc_gaia"
+    }
+}

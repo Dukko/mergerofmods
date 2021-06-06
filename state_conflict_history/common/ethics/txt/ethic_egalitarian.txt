@@ -44,6 +44,26 @@ ethic_egalitarian = {
         }
     }
     pop_attraction_tag = {
+        desc = POP_ATTRACTION_CONSUMER_GOODS_POS
+        trigger = {
+            any_owned_planet = {
+                any_owned_pop = {
+                    OR = {
+                        has_living_standard = {
+                            type = living_standard_utopian
+                        }
+                        has_living_standard = {
+                            type = living_standard_good
+                        }
+                        has_living_standard = {
+                            type = living_standard_shared_burden
+                        }
+                    }
+                }
+            }
+        }
+    }
+    pop_attraction_tag = {
         desc = POP_ATTRACTION_EGALITARIAN_DIPLOMACY_POS
         trigger = {
             any_relation = {
@@ -60,6 +80,14 @@ ethic_egalitarian = {
                     has_ethic = ethic_egalitarian
                     has_ethic = ethic_fanatic_egalitarian
                 }
+            }
+        }
+    }
+    pop_attraction_tag = {
+        desc = POP_ATTRACTION_ENSLAVED_POS
+        trigger = {
+            any_enslaved_species = {
+                is_robotic = no
             }
         }
     }
@@ -208,6 +236,25 @@ ethic_egalitarian = {
             NOT = {
                 has_citizenship_type = {
                     type = citizenship_full
+                }
+            }
+        }
+        modifier = {
+            factor = 1.5
+            is_enslaved = yes
+            is_robot_pop = no
+        }
+        modifier = {
+            factor = 1.25
+            OR = {
+                has_living_standard = {
+                    type = living_standard_utopian
+                }
+                has_living_standard = {
+                    type = living_standard_good
+                }
+                has_living_standard = {
+                    type = living_standard_shared_burden
                 }
             }
         }

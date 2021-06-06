@@ -1,3 +1,0 @@
-NGameplay = {
-    SPAWN_SYSTEM_BUFFER_DISTANCE = 4
-}

@@ -16,7 +16,7 @@ country_event = {
         }
     }
     desc = {
-        text = "action.11.abandoned.desc"
+        text = action.11.abandoned.desc
         trigger = {
             fromfrom = {
                 has_relation_flag = {

@@ -39,7 +39,7 @@ building_hab_major_capital = {
             minerals = @b2_minerals
         }
         upkeep = {
-            energy = @b2_upkeep
+            energy = 3
             alloys = 5
         }
         upkeep = {
@@ -117,9 +117,7 @@ building_hab_major_capital = {
                 is_mechanical_empire = yes
             }
         }
-        job_roboticist_add = 1
-        planet_pop_assembly_add = 1
-        pop_growth_speed_reduction = 0.5
+        job_roboticist_add = 2
     }
     triggered_planet_modifier = {
         potential = {

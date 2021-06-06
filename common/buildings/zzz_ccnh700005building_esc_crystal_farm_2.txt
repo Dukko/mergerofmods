@@ -36,7 +36,7 @@ building_esc_crystal_farm_2 = {
             }
         }
         modifier = {
-            job_esc_crystal_farmer_add = 5
+            job_esc_crystal_farmer_add = 4
         }
     }
     triggered_planet_modifier = {
@@ -47,7 +47,7 @@ building_esc_crystal_farm_2 = {
             }
         }
         modifier = {
-            job_esc_crystal_farmer_drone_add = 5
+            job_esc_crystal_farmer_drone_add = 4
         }
     }
     triggered_planet_modifier = {
@@ -58,7 +58,7 @@ building_esc_crystal_farm_2 = {
             }
         }
         modifier = {
-            job_esc_crystal_farmer_unit_add = 5
+            job_esc_crystal_farmer_unit_add = 4
         }
     }
     prerequisites = {

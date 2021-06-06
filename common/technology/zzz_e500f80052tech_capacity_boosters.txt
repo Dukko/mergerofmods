@@ -36,11 +36,11 @@ tech_capacity_boosters = {
         }
         modifier = {
             factor = 0.5
-            is_egalitarian = yes
+            is_socialism = yes
         }
         modifier = {
             factor = 2
-            is_authoritarian = yes
+            is_capitalism = yes
         }
         modifier = {
             factor = @ap_technological_ascendancy_rare_tech

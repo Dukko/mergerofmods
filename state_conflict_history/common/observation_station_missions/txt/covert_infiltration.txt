@@ -39,7 +39,6 @@ covert_infiltration = {
     valid = {
         OR = {
             has_technology = tech_gene_tailoring
-            has_origin = origin_infiltrators
         }
         OR = {
             has_policy_flag = interference_active

@@ -44,6 +44,26 @@ ethic_authoritarian = {
         }
     }
     pop_attraction_tag = {
+        desc = POP_ATTRACTION_CONSUMER_GOODS_NEG
+        trigger = {
+            any_owned_planet = {
+                any_owned_pop = {
+                    OR = {
+                        has_living_standard = {
+                            type = living_standard_utopian
+                        }
+                        has_living_standard = {
+                            type = living_standard_good
+                        }
+                        has_living_standard = {
+                            type = living_standard_shared_burden
+                        }
+                    }
+                }
+            }
+        }
+    }
+    pop_attraction_tag = {
         desc = POP_ATTRACTION_AUTOCRATIC_GOV_POS
         trigger = {
             has_election_type = none
@@ -162,6 +182,20 @@ ethic_authoritarian = {
         modifier = {
             factor = 1.25
             has_trait = "trait_decadent"
+        }
+        modifier = {
+            factor = 0.75
+            OR = {
+                has_living_standard = {
+                    type = living_standard_utopian
+                }
+                has_living_standard = {
+                    type = living_standard_good
+                }
+                has_living_standard = {
+                    type = living_standard_shared_burden
+                }
+            }
         }
     }
 }

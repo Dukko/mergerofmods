@@ -8,7 +8,6 @@ decision_shroud_world_nocolony = {
         }
     }
     potential = {
-        has_global_flag = planetarydiversityshroud
         exists = space_owner
         space_owner = {
             is_same_value = from

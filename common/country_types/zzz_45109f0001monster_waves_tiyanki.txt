@@ -1,0 +1,24 @@
+monster_waves_tiyanki = {
+    attack_unarmed_orbital_stations = yes
+    scaled_difficulty_bonuses = 0.5
+    is_space_critter = yes
+    government = no
+    enforces_borders = no
+    ai = {
+        enabled = no
+    }
+    faction = {
+        hostile = no
+        needs_border_access = no
+        generate_borders = no
+        needs_colony = no
+        space_creatures = yes
+    }
+    modules = {
+        exclusive_diplomacy_module = {
+            contact_rule = always
+        }
+        basic_technology_module = {
+        }
+    }
+}

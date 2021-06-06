@@ -3,7 +3,7 @@ tech_space_trading = {
     area = society
     tier = 1
     category = {
-        statecraft
+        good_trading
     }
     prerequisites = {
         "tech_interplanetary_commerce"
@@ -17,12 +17,16 @@ tech_space_trading = {
             factor = 1.25
             research_leader = {
                 area = society
-                has_trait = "leader_trait_expertise_statecraft"
+                has_trait = "leader_trait_expertise_good_trading"
             }
         }
         modifier = {
             factor = 1.25
             has_tradition = tr_prosperity_adopt
+        }
+        modifier = {
+            factor = 2
+            has_policy_flag = economic_stance_market
         }
     }
     ai_weight = {
@@ -35,7 +39,7 @@ tech_space_trading = {
             factor = 1.25
             research_leader = {
                 area = society
-                has_trait = "leader_trait_expertise_statecraft"
+                has_trait = "leader_trait_expertise_good_trading"
             }
         }
     }

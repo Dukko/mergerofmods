@@ -1,3 +1,0 @@
-NGameplay = {
-    HYPERLANE_GEN_REMOVE_TOO_MANY_EDGES = 5
-}

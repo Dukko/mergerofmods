@@ -1,0 +1,38 @@
+utility_component_template = {
+    key = "LARGE_PSI_SHIELD"
+    size = large
+    icon = "GFX_ship_part_psi_shield"
+    icon_frame = 1
+    power = @power_L7
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @shield_l_t7_cost
+            sr_zro = 0.333
+        }
+        upkeep = {
+            energy = @shield_l_t7_upkeep_energy
+            alloys = @shield_l_t7_upkeep_alloys
+        }
+    }
+    modifier = {
+        ship_shield_add = @shield_L7
+        ship_shield_regen_add_static = @regen_L7
+    }
+    prerequisites = {
+        "tech_psionic_shield"
+    }
+    component_set = "PSI_SHIELD"
+    upgrades_to = "LARGE_NHSC_PSI_SHIELD_2"
+    ai_weight = {
+        weight = 1
+        modifier = {
+            factor = 0
+            is_country_type = default
+            resource_stockpile_compare = {
+                resource = sr_zro
+                value <= 50
+            }
+        }
+    }
+}

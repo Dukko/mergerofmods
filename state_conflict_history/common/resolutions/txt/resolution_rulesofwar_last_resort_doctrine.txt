@@ -104,6 +104,11 @@ resolution_rulesofwar_last_resort_doctrine = {
             in_breach_of = resolution_rulesofwar_last_resort_doctrine
         }
         modifier = {
+            factor = 0.5
+            is_xenophobe = yes
+            is_pacifist = no
+        }
+        modifier = {
             factor = 0.2
             has_ai_personality_behaviour = conqueror
         }

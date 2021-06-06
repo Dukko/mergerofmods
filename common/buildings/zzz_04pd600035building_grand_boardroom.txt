@@ -20,6 +20,11 @@ building_grand_boardroom = {
     convert_to = {
         building_senate_building
     }
+    destroy_trigger = {
+        planet = {
+            is_capital = no
+        }
+    }
     allow = {
         planet = {
             is_capital = yes
@@ -39,6 +44,10 @@ building_grand_boardroom = {
         planet_amenities_add = 18
         planet_stability_add = 10
         trade_value_mult = 0.1
+    }
+    country_modifier = {
+        country_admin_cap_mult = 0.1
+        planet_stability_add = 5
     }
     triggered_planet_modifier = {
         potential = {

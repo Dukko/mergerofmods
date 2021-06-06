@@ -8,6 +8,10 @@ black_hole_observatory = {
         }
     }
     possible = {
+        exists = owner
+        owner = {
+            has_technology = tech_sensors_3
+        }
         custom_tooltip = {
             fail_text = "requires_starport"
             has_starbase_size >= starbase_starport

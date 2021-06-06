@@ -1,16 +1,9 @@
-@ebh_min4 = 1000
-@ebh_sr3 = 200
-@ebh_upkeep3 = 3
-@ebh_upkeep5 = 5
 building_paradise_dome = {
-    base_buildtime = @b1_time
+    base_buildtime = @b2_time
     can_build = no
     category = amenity
     potential = {
-        OR = {
-            has_building = ebh_luxury_residence2
-            has_building = building_luxury_residence
-        }
+        has_building = building_luxury_residence
         OR = {
             NOT = {
                 OR = {
@@ -63,8 +56,8 @@ building_paradise_dome = {
         building_communal_housing_large
     }
     planet_modifier = {
-        planet_housing_add = 12
-        planet_amenities_add = 20
+        planet_housing_add = 6
+        planet_amenities_add = 10
     }
     triggered_planet_modifier = {
         potential = {
@@ -75,17 +68,6 @@ building_paradise_dome = {
         }
         modifier = {
             planet_housing_add = 1
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                has_technology = tech_eutab_habitation_studies
-            }
-        }
-        modifier = {
-            planet_housing_add = 3
         }
     }
     triggered_planet_modifier = {
@@ -103,17 +85,17 @@ building_paradise_dome = {
     resources = {
         category = planet_buildings
         cost = {
-            minerals = @ebh_min4
-            rare_crystals = @ebh_sr3
+            minerals = @b2_minerals
+            rare_crystals = @b2_rare_cost
         }
         upkeep = {
-            energy = @ebh_upkeep5
-            rare_crystals = @ebh_upkeep3
+            energy = 3
+            rare_crystals = @b2_rare_upkeep
         }
     }
     upgrades = {
         "ebh_paradise_dome"
-        building_eutab_gaia_district
+                building_eutab_gaia_district
     }
     prerequisites = {
         "tech_paradise_dome"

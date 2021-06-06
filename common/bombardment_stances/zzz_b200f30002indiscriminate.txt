@@ -36,12 +36,6 @@ indiscriminate = {
     army_damage = 10
     kill_pop_chance = {
         base = 0.75
-        modifier = {
-            factor = 0.1
-            owner = {
-                is_country_type = gray_goo
-            }
-        }
     }
     min_pops_to_kill_pop = 2
     ai_weight = {

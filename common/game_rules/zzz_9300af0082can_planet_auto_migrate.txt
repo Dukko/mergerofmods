@@ -1,9 +1,0 @@
-can_planet_auto_migrate = {
-    NOT = {
-        has_modifier = planet_culture_shock
-    }
-    OR = {
-        colony_age > 60
-        is_capital = yes
-    }
-}

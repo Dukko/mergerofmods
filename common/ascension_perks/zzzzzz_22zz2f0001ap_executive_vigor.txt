@@ -1,5 +1,0 @@
-ap_executive_vigor = {
-    potential = {
-        always = no
-    }
-}

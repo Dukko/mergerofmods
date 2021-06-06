@@ -5,7 +5,7 @@ pc_shadowgate = {
     picture = pc_shadowgate
     district_set = shadowgate
     modifier = {
-        planet_housing_add = 16
+        planet_housing_add = 20
         job_shadowgate_researcher_add = 2
     }
     atmosphere_color = hsv {

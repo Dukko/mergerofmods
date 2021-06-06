@@ -51,7 +51,7 @@ tr_expansion_adopt = {
         }
     }
     ai_weight = {
-        factor = 10
+        factor = 10000
         modifier = {
             factor = 5
             years_passed < 10

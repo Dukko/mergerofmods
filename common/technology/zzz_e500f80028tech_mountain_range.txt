@@ -74,5 +74,9 @@ tech_mountain_range = {
             factor = 0
             num_owned_planets < 2
         }
+        modifier = {
+            factor = 0.2
+            has_valid_civic = civic_keepers_harmony
+        }
     }
 }

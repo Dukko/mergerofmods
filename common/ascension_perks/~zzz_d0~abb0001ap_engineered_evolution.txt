@@ -55,10 +55,8 @@ ap_engineered_evolution = {
     potential = {
         host_has_dlc = "Utopia"
         NOT = {
-            has_ascension_perk = ap_purity
-        }
-        NOR = {
             has_ascension_perk = ap_engineered_evolution
+            has_ascension_perk = ap_purity
             has_authority = "auth_machine_intelligence"
         }
         is_mechanical_empire = no

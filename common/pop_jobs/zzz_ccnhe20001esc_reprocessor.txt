@@ -3,6 +3,12 @@ esc_reprocessor = {
     condition_string = SPECIALIST_JOB_TRIGGER
     building_icon = nhsc_building_reprocessing_plant
     clothes_texture_index = 2
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
     possible = {
         complex_specialist_job_check_trigger = yes
     }
@@ -18,10 +24,7 @@ esc_reprocessor = {
                 owner = {
                     is_galactic_community_member = yes
                 }
-                OR = {
-                    is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
-                    is_active_resolution = "resolution_industry_project_cornucopia"
-                }
+                esc_enviroment_ordinance_waivers_active = yes
             }
             consumer_goods = 0.075
             alloys = 0.075

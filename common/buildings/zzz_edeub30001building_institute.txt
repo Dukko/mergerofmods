@@ -32,6 +32,17 @@ building_institute = {
     }
     allow = {
         has_major_upgraded_capital = yes
+        exists = owner
+        or = {
+            owner = {
+                is_ai = no
+            }
+            planet_resource_compare = {
+                resource = physics_research
+                value > 60
+            }
+            has_designation = col_research
+        }
     }
     resources = {
         category = planet_buildings

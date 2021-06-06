@@ -24,6 +24,7 @@ tech_nanite_living_metal = {
         }
     }
     prereqfor_desc = {
+        hide_prereq_for_desc = custom
         component = {
             title = "TECH_UNLOCK_NANITE_HULL_2_TITLE"
             desc = "TECH_UNLOCK_NANITE_HULL_2_DESC"
@@ -31,10 +32,6 @@ tech_nanite_living_metal = {
         custom = {
             title = "tech_nanite_mega_construction"
             desc = "tech_nanite_mega_construction_desc"
-        }
-        custom = {
-            title = "building_machinedlc_nanite_living_metal_forge"
-            desc = "mod_country_resource_max_sr_living_metal_add"
         }
     }
     modifier = {

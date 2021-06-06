@@ -76,7 +76,7 @@ building_military_academy = {
                 owner = {
                     has_valid_civic = civic_martial_brotherhood
                 }
-    }
+            }
             unity = 5
         }
     }

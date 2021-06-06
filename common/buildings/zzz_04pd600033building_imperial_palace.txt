@@ -19,6 +19,11 @@ building_imperial_palace = {
             is_capital = yes
         }
     }
+    destroy_trigger = {
+        planet = {
+            is_capital = no
+        }
+    }
     prerequisites = {
     }
     resources = {
@@ -33,6 +38,10 @@ building_imperial_palace = {
         planet_amenities_add = 18
         planet_stability_add = 10
         pop_government_ethic_attraction = 1
+    }
+    country_modifier = {
+        country_admin_cap_mult = 0.1
+        planet_stability_add = 5
     }
     triggered_planet_modifier = {
         potential = {

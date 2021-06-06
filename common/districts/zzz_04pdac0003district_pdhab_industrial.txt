@@ -9,6 +9,10 @@ district_pdhab_industrial = {
     potential = {
         uses_district_set = pdplanethab
     }
+    conversion_ratio = 1
+    convert_to = {
+        district_industrial
+    }
     resources = {
         category = planet_districts_hab_industrial
         cost = {

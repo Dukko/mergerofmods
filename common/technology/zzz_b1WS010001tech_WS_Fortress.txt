@@ -1,0 +1,44 @@
+tech_WS_Fortress = {
+    cost = @tier4cost3
+    tier = 3
+    area = engineering
+    category = {
+        voidcraft
+    }
+    prerequisites = {
+        "tech_starbase_4"
+        "tech_ftl_inhibitor"
+    }
+    weight = @tier4cost3
+    weight_modifier = {
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                has_ethic = ethic_militarist
+                has_ethic = ethic_fanatic_militarist
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "tech_WS_Fortress_title"
+            desc = "tech_WS_Fortress_desc"
+        }
+    }
+}

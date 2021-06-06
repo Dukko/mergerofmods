@@ -3,6 +3,12 @@ esc_nanite_breeder = {
     condition_string = SPECIALIST_JOB_TRIGGER
     building_icon = nhsc_building_nanite_foundry
     clothes_texture_index = 2
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
     possible = {
         specialist_job_check_trigger = yes
         owner = {
@@ -12,7 +18,7 @@ esc_nanite_breeder = {
     resources = {
         category = planet_jobs
         produces = {
-            nanites = 2
+            nanites = @ESC_job_primary_resource_base_production
         }
         produces = {
             trigger = {
@@ -20,16 +26,13 @@ esc_nanite_breeder = {
                 owner = {
                     is_galactic_community_member = yes
                 }
-                OR = {
-                    is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
-                    is_active_resolution = "resolution_industry_project_cornucopia"
-                }
+                esc_enviroment_ordinance_waivers_active = yes
             }
-            nanites = 0.1
+            nanites = @ESC_job_primary_resource_cornucopia_bonus
         }
         upkeep = {
-            alloys = 4
-            consumer_goods = 1
+            alloys = @ESC_job_upkeep_primary_resource
+            consumer_goods = @ESC_job_upkeep_secondary_resource
         }
         upkeep = {
             trigger = {
@@ -37,8 +40,8 @@ esc_nanite_breeder = {
                     colony_type = col_refinery
                 }
             }
-            alloys = -0.4
-            consumer_goods = -0.1
+            alloys = @ESC_job_upkeep_primary_resource_discount
+            consumer_goods = @ESC_job_upkeep_secondary_resource_discount
         }
         upkeep = {
             trigger = {
@@ -46,8 +49,8 @@ esc_nanite_breeder = {
                     colony_type = col_habitat_refinery
                 }
             }
-            alloys = -0.8
-            consumer_goods = -0.2
+            alloys = @ESC_job_upkeep_primary_resource_discount_hab
+            consumer_goods = @ESC_job_upkeep_secondary_resource_discount_hab
         }
     }
     weight = {
@@ -68,7 +71,7 @@ esc_nanite_breeder = {
             has_trait = trait_nerve_stapled
         }
         modifier = {
-            factor = 1.5
+            factor = 5
             has_job = esc_nanite_breeder
         }
     }

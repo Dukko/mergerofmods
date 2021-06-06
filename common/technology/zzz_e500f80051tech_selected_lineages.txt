@@ -36,11 +36,11 @@ tech_selected_lineages = {
         }
         modifier = {
             factor = 0.5
-            is_egalitarian = yes
+            is_socialism = yes
         }
         modifier = {
             factor = 2
-            is_authoritarian = yes
+            is_capitalism = yes
         }
         modifier = {
             factor = @ap_technological_ascendancy_rare_tech
@@ -69,7 +69,7 @@ tech_selected_lineages = {
         factor = 25
         modifier = {
             factor = 1.5
-            has_ethic = ethic_fanatic_egalitarian
+            has_ethic = ethic_fanatic_socialism
         }
         modifier = {
             factor = 1.25

@@ -6,6 +6,7 @@ ethic_fanatic_militarist = {
     regular_variant = ethic_militarist
     tags = {
         ETHIC_ALLOW_NO_RETREAT
+        ETHIC_MILITARISTIC_ALLOWS_COMMANDERS
     }
     country_modifier = {
         country_claim_influence_cost_mult = -0.3

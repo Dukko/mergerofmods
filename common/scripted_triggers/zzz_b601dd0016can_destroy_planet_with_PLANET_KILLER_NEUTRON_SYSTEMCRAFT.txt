@@ -1,3 +1,0 @@
-can_destroy_planet_with_PLANET_KILLER_NEUTRON_SYSTEMCRAFT = {
-    can_destroy_planet_with_PLANET_KILLER_NEUTRON = yes
-}

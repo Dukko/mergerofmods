@@ -16,11 +16,9 @@ ap_enigmatic_engineering = {
     }
     modifier = {
         intel_encryption_add = 2
-        ship_sensor_range_add = 2
-        ship_hyperlane_range_add = 4
     }
     ai_weight = {
-        factor = 1
+        factor = 0.05
         modifier = {
             factor = 0
             not = {

@@ -12,13 +12,15 @@ planet_event = {
         has_owner = yes
         is_homeworld = no
         original_owner = yes
-        is_ai = no
         has_ground_combat = no
         is_capital = no
         is_occupied_flag = no
     }
     trigger = {
         num_pops > 0
+        owner = {
+            is_ai = no
+        }
         habitable_planet = yes
         uses_district_set = standard
         NOR = {
@@ -48,6 +50,7 @@ planet_event = {
             is_planet_class = pc_geothermal
             is_planet_class = pc_biolumen
             is_planet_class = pc_ecocity
+            is_planet_class = pc_corpoarc
             is_planet_class = pc_palacearc
             is_planet_class = pc_capitalarc
             is_planet_class = pc_necropolis
@@ -191,6 +194,12 @@ planet_event = {
             }
             AND = {
                 owner = {
+                    ideal_planet_class = pc_cenote
+                }
+                is_planet_class = pc_cenote
+            }
+            AND = {
+                owner = {
                     ideal_planet_class = pc_cascadian
                 }
                 is_planet_class = pc_cascadian
@@ -230,6 +239,12 @@ planet_event = {
                     ideal_planet_class = pc_mesa
                 }
                 is_planet_class = pc_mesa
+            }
+            AND = {
+                owner = {
+                    ideal_planet_class = pc_badlands
+                }
+                is_planet_class = pc_badlands
             }
             AND = {
                 owner = {

@@ -3,6 +3,12 @@ esc_crystal_farmer = {
     condition_string = SPECIALIST_JOB_TRIGGER
     building_icon = nhsc_building_crystal_farm_1
     clothes_texture_index = 2
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
     possible = {
         specialist_job_check_trigger = yes
         owner = {
@@ -12,8 +18,8 @@ esc_crystal_farmer = {
     resources = {
         category = planet_jobs
         produces = {
-            esc_living_crystal = 2
-            alloys = 1
+            esc_living_crystal = @ESC_job_primary_resource_base_production
+            alloys = @ESC_job_secondary_resource_base_production
         }
         produces = {
             trigger = {
@@ -21,13 +27,10 @@ esc_crystal_farmer = {
                 owner = {
                     is_galactic_community_member = yes
                 }
-                OR = {
-                    is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
-                    is_active_resolution = "resolution_industry_project_cornucopia"
-                }
+                esc_enviroment_ordinance_waivers_active = yes
             }
-            esc_living_crystal = 0.1
-            alloys = 0.05
+            esc_living_crystal = @ESC_job_primary_resource_cornucopia_bonus
+            alloys = @ESC_job_secondary_resource_cornucopia_bonus
         }
         produces = {
             trigger = {
@@ -37,23 +40,9 @@ esc_crystal_farmer = {
             }
             rare_crystals = 0.5
         }
-        produces = {
-            trigger = {
-                exists = owner
-                owner = {
-                    has_technology = nhsc_tech_rare_crystals_cultivation
-                    is_galactic_community_member = yes
-                }
-                OR = {
-                    is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
-                    is_active_resolution = "resolution_industry_project_cornucopia"
-                }
-            }
-            rare_crystals = 0.025
-        }
         upkeep = {
-            consumer_goods = 1
-            minerals = 4
+            minerals = @ESC_job_upkeep_primary_resource
+            consumer_goods = @ESC_job_upkeep_tertiary_resource
         }
         upkeep = {
             trigger = {
@@ -61,8 +50,8 @@ esc_crystal_farmer = {
                     colony_type = col_refinery
                 }
             }
-            consumer_goods = -0.1
-            minerals = -0.4
+            minerals = @ESC_job_upkeep_primary_resource_discount
+            consumer_goods = @ESC_job_upkeep_tertiary_resource_discount
         }
         upkeep = {
             trigger = {
@@ -70,8 +59,8 @@ esc_crystal_farmer = {
                     colony_type = col_habitat_refinery
                 }
             }
-            consumer_goods = -0.2
-            minerals = -0.8
+            minerals = @ESC_job_upkeep_primary_resource_discount_hab
+            consumer_goods = @ESC_job_upkeep_tertiary_resource_discount_hab
         }
     }
     triggered_planet_modifier = {
@@ -106,7 +95,7 @@ esc_crystal_farmer = {
             has_trait = trait_weak
         }
         modifier = {
-            factor = 1.5
+            factor = 5
             has_job = esc_crystal_farmer
         }
     }

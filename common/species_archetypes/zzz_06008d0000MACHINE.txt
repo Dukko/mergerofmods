@@ -1,0 +1,6 @@
+@machine_trait_points = 1
+@machine_max_traits = 5
+MACHINE = {
+    species_trait_points = @machine_trait_points
+    species_max_traits = @machine_max_traits
+}

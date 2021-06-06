@@ -1,4 +1,4 @@
- @buildings_t2 = 2
+@buildings_t2 = 2
 building_capital = {
     base_buildtime = @b2_time
     capital = yes
@@ -61,6 +61,17 @@ building_capital = {
         potential = {
             exists = owner
             owner = {
+                has_ethic = ethic_authoritarian
+            }
+        }
+        modifier = {
+            job_enforcer_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
                 is_ai = yes
             }
             has_building = building_colony_shelter
@@ -79,27 +90,6 @@ building_capital = {
             }
         }
         job_roboticist_add = 1
-        planet_pop_assembly_add = 2
-        pop_growth_speed_reduction = 0.5
-    }
-    triggered_planet_modifier = {
-        potential = {
-            has_administrators = yes
-        }
-        modifier = {
-            job_administrator_add = 1
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                has_ethic = ethic_authoritarian
-            }
-        }
-        modifier = {
-            job_enforcer_add = 1
-        }
     }
     triggered_planet_modifier = {
         potential = {
@@ -110,6 +100,14 @@ building_capital = {
         }
         modifier = {
             job_enforcer_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_administrators = yes
+        }
+        modifier = {
+            job_administrator_add = 1
         }
     }
     triggered_planet_modifier = {

@@ -20,7 +20,7 @@ building_major_capital = {
         }
     }
     allow = {
-        num_pops >= 20
+        num_pops >= 25
     }
     convert_to = {
         building_hive_major_capital
@@ -143,9 +143,7 @@ building_major_capital = {
                 is_mechanical_empire = yes
             }
         }
-        job_roboticist_add = 1
-        planet_pop_assembly_add = 2
-        pop_growth_speed_reduction = 0.5
+        job_roboticist_add = 2
     }
     triggered_planet_modifier = {
         potential = {

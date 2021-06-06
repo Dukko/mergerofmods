@@ -21,25 +21,11 @@ planet_event = {
                 }
             }
         }
-        if = {
-            limit = {
-                has_global_flag = MasterNature_active
-            }
-            hidden_effect = {
-                planet_event = {
-                    id = MasterNature.1000
-                }
-            }
-        }
-        if = {
-            limit = {
-                has_global_flag = guillis_planet_modifiers_active
-            }
-            hidden_effect = {
-                planet_event = {
-                    id = gpm_terraform.78871
-                }
-            }
+        remove_modifier = engineered_environment
+        remove_modifier = engineered_environment_gaia
+        set_planet_flag = gpm_is_new_ecumenopolis
+        planet_event = {
+            id = gpm_terraform.78871
         }
     }
     option = {

@@ -23,28 +23,20 @@ building_fortress = {
         }
         OR = {
             AND = {
-        num_buildings = {
-            type = building_fortress
-            value > 1
-        }
+                num_buildings = {
+                    type = building_fortress
+                    value > 1
+                }
                 free_building_slots = 0
                 owner = {
                     used_naval_capacity_percent < 0.4
                 }
             }
             and = {
-            buildings_no_motes = yes
+                buildings_no_motes = yes
                 has_planet_flag = str_supervisor
-        }
-        NOT = {
-            owner = {
-                has_tradition = tr_plentiful_defence_5
-                }
             }
         }
-    }
-    planet_modifier = {
-        planet_housing_add = 3
     }
     triggered_planet_modifier = {
         potential = {
@@ -117,7 +109,7 @@ building_fortress = {
         }
         text = job_soldier_effect_desc
     }
-     triggered_desc = {
+    triggered_desc = {
         trigger = {
             exists = owner
             owner = {

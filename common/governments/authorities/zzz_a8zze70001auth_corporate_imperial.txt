@@ -7,7 +7,7 @@ auth_corporate_imperial = {
     }
     random_weight = {
         modifier = {
-            factor = 0.3
+            factor = 0.1
         }
         modifier = {
             factor = 0

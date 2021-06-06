@@ -12,6 +12,9 @@ purge = {
         policy_flags = {
             purge_not_allowed
         }
+        AI_weight = {
+            factor = 1
+        }
     }
     option = {
         name = "purge_displacement_only"
@@ -70,6 +73,10 @@ purge = {
                 NOT = {
                     has_valid_civic = civic_hive_empath
                 }
+            }
+            modifier = {
+                factor = 0
+                is_homicidal = no
             }
             modifier = {
                 factor = 0

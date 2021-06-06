@@ -2,10 +2,12 @@ district_virtual_shipyard = {
     base_buildtime = @giga_rw_district_buildtime
     is_capped_by_modifier = yes
     show_on_uncolonized = {
+        always = no
         uses_district_set = virtual_ring
         has_planet_flag = giga_virtual_stellar_industry
     }
     potential = {
+        always = no
         uses_district_set = virtual_ring
         has_planet_flag = giga_virtual_stellar_industry
     }

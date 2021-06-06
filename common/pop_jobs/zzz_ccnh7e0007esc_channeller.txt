@@ -3,13 +3,19 @@ esc_channeller = {
     condition_string = SPECIALIST_JOB_TRIGGER
     building_icon = nhsc_building_psionic_containment
     clothes_texture_index = 2
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
     possible = {
         specialist_job_check_trigger = yes
     }
     resources = {
         category = planet_jobs
         produces = {
-            esc_psionic_charge = 2
+            esc_psionic_charge = @ESC_job_primary_resource_base_production
         }
         produces = {
             trigger = {
@@ -17,12 +23,9 @@ esc_channeller = {
                 owner = {
                     is_galactic_community_member = yes
                 }
-                OR = {
-                    is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
-                    is_active_resolution = "resolution_industry_project_cornucopia"
-                }
+                esc_enviroment_ordinance_waivers_active = yes
             }
-            esc_psionic_charge = 0.1
+            esc_psionic_charge = @ESC_job_primary_resource_cornucopia_bonus
         }
         upkeep = {
             trigger = {
@@ -32,15 +35,15 @@ esc_channeller = {
                     has_trait = trait_machine_unit
                 }
             }
-            energy = 4
-            food = 2
+            energy = @ESC_job_upkeep_primary_resource
+            food = @ESC_job_upkeep_secondary_resource
         }
         upkeep = {
             trigger = {
                 has_trait = trait_lithoid
             }
-            energy = 4
-            minerals = 2
+            energy = @ESC_job_upkeep_primary_resource
+            minerals = @ESC_job_upkeep_secondary_resource
         }
         upkeep = {
             trigger = {
@@ -49,7 +52,7 @@ esc_channeller = {
                     has_trait = trait_machine_unit
                 }
             }
-            energy = 6
+            energy = @ESC_job_upkeep_single_resource
         }
         upkeep = {
             trigger = {
@@ -62,8 +65,30 @@ esc_channeller = {
                     colony_type = col_refinery
                 }
             }
-            energy = -0.4
-            food = -0.2
+            energy = @ESC_job_upkeep_primary_resource_discount
+            food = @ESC_job_upkeep_secondary_resource_discount
+        }
+        upkeep = {
+            trigger = {
+                has_trait = trait_lithoid
+                planet = {
+                    colony_type = col_refinery
+                }
+            }
+            energy = @ESC_job_upkeep_primary_resource_discount
+            minerals = @ESC_job_upkeep_secondary_resource_discount
+        }
+        upkeep = {
+            trigger = {
+                OR = {
+                    has_trait = trait_mechanical
+                    has_trait = trait_machine_unit
+                }
+                planet = {
+                    colony_type = col_refinery
+                }
+            }
+            energy = @ESC_job_upkeep_single_resource_discount
         }
         upkeep = {
             trigger = {
@@ -76,18 +101,8 @@ esc_channeller = {
                     colony_type = col_habitat_refinery
                 }
             }
-            energy = -0.8
-            food = -0.4
-        }
-        upkeep = {
-            trigger = {
-                has_trait = trait_lithoid
-                planet = {
-                    colony_type = col_refinery
-                }
-            }
-            energy = -0.4
-            minerals = -0.2
+            energy = @ESC_job_upkeep_primary_resource_discount_hab
+            food = @ESC_job_upkeep_secondary_resource_discount_hab
         }
         upkeep = {
             trigger = {
@@ -96,20 +111,8 @@ esc_channeller = {
                     colony_type = col_habitat_refinery
                 }
             }
-            energy = -0.8
-            minerals = -0.4
-        }
-        upkeep = {
-            trigger = {
-                OR = {
-                    has_trait = trait_mechanical
-                    has_trait = trait_machine_unit
-                }
-                planet = {
-                    colony_type = col_refinery
-                }
-            }
-            energy = -0.6
+            energy = @ESC_job_upkeep_primary_resource_discount_hab
+            minerals = @ESC_job_upkeep_secondary_resource_discount_hab
         }
         upkeep = {
             trigger = {
@@ -121,16 +124,25 @@ esc_channeller = {
                     colony_type = col_habitat_refinery
                 }
             }
-            energy = -1.2
+            energy = @ESC_job_upkeep_single_resource_discount_hab
         }
     }
     weight = {
         weight = @specialist_job_weight
         modifier = {
+            factor = 0
+            has_citizenship_rights = no
+            OR = {
+                has_trait = trait_mechanical
+                has_trait = trait_machine_unit
+            }
+        }
+        modifier = {
             factor = 0.2
             has_citizenship_rights = no
-            NOT = {
+            NOR = {
                 has_trait = trait_mechanical
+                has_trait = trait_machine_unit
             }
         }
         modifier = {
@@ -159,7 +171,7 @@ esc_channeller = {
             has_trait = trait_cybernetic
         }
         modifier = {
-            factor = 1.5
+            factor = 5
             has_job = esc_channeller
         }
     }

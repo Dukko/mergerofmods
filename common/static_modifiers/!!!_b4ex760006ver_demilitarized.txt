@@ -1,3 +1,0 @@
-ver_demilitarized = {
-    country_naval_cap_mult = -0.5
-}

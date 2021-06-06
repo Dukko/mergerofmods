@@ -254,8 +254,7 @@ planet_event = {
                     gpm_is_planet_class_habitat = yes
                 }
             }
-            destroy_colony = yes
-            reset_planet = yes
+            ariphaos_patch_remove_habitat = yes
         }
     }
 }

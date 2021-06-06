@@ -1,3 +1,0 @@
-ver_military_subsidies = {
-    country_naval_cap_mult = 0.25
-}

@@ -118,6 +118,24 @@ wg_subjugation = {
             }
         }
     }
+    on_wargoal_set = {
+        random_war = {
+            limit = {
+                using_war_goal = {
+                    type = wg_end_threat
+                    owner = root
+                }
+            }
+            every_war_participant = {
+                limit = {
+                    has_country_flag = empire_fed_no_war_subject
+                }
+                prev = {
+                    remove_war_participant = prev
+                }
+            }
+        }
+    }
     ai_weight = {
         weight = 10
         modifier = {

@@ -12,7 +12,7 @@ nhsc_building_graviton_condenser = {
         }
         upkeep = {
             energy = 5
-            sr_dark_matter = 1
+            sr_dark_matter = 2
         }
     }
     potential = {

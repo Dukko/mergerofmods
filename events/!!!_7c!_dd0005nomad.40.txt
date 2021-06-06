@@ -60,13 +60,10 @@ fleet_event = {
                         }
                         effect = {
                             id = nomad.40.orbit_colony_planet
-                            event_target:nomad_contact_country = {
-                                country_event = {
-                                    id = nomad.41
+                            root = {
+                                fleet_event = {
+                                    id = nomad.50
                                 }
-                            }
-                            solar_system = {
-                                remove_star_flag = nomad_mission_waypoint
                             }
                         }
                     }

@@ -28,6 +28,7 @@ War Name Variety | Redux
 Ultimate Eldar Namelist
 Shadowrun Name List
 Random Species Names - Updated
+More Federation Names
 Lithoid Namelist
 Just Star Names
 Just Name Lists
@@ -49,6 +50,7 @@ Young Leaders
 Merged Leader Levels
 Leader Overhaul - Full Edition
 Just More Traits 3.0.x
+Hands of State (3.0)
 Decadence Unlimited
 Trace's Better Necroids
 Trace's Better Lithoids
@@ -60,8 +62,8 @@ PSO: EPSI x2
 Spaceborne Civs Expanded
 Silfae's Portraits with updated city sets - organics
 Primitive Worlds for 3.x
+Mass Effect Civilizations - Asari
 LLX's Mods - Compiled Dimorphism (3.0 'Dick')
-Honorary Species
 Extra Fallen Empires
 Another Animated Avali
 Animated Ascellian Portraits (2.2.6 Le Guin +)
@@ -101,8 +103,9 @@ Distant Origin
 Basic Ordinary Origins
 AutoFabs Origin
 Auto Gene Assimilation
-At War: Carrier Improvements 2.8.1 update
-At War: Better Admiral Experience 2.8.1 update
+At War: Better Admiral Experience (3.0.3)
+At War: Carrier Improvements (3.0.3)
+At War: Defense Platform Longevity(3.0.3)
 Archaeology Story Pack
 Ancient Juggernaut Origin
 akeean_s2020mj_originmod
@@ -124,6 +127,7 @@ Scientist AI Assistant Upgrader
 Robot Rights
 Resettle Colony
 resettlement_mod
+Repeatable Trade Technology
 Psionic Synths
 Psionic Species Expansion
 Planet Raider
@@ -187,6 +191,7 @@ C&C: Scrin Ships
 Apocalypse Molluscoid Ships: 2.7
 [United Fleet]Mobile Shipyard
 (-NSC2 Season 6-)
+Asari and NSC Patch
 Wormhole Generation (3.0)
 Upper Limits V3.0+
 Start with AutoExplore
@@ -217,6 +222,7 @@ Real Sol Textures
 Real Space 3.8
 Real Space - New Frontiers
 Real Space Nebulae
+Wild Space 3
 Real Machine Worlds (Now v3.0.* Compatible)
 Sol System Expanded (Real Space)
 Sol System Expanded - Real Sol Textures Patch
@@ -247,6 +253,7 @@ Planetary Diversity - Shroud Worlds
 Planetary Diversity - Space Habitats
 Planetary Diversity - Unique Worlds
 Immersive Galaxy - Planet Variety for Planetary Diversity
+Better Ecumenopoli
 Small fix for Immersive Galaxy - Planet Variety for PD
 Planetary Designations Adjustments
 Planetary Modifiers Enhancements
@@ -294,7 +301,6 @@ Animated Synthetics Portraits Expanded: Reborn
 Additional Humanoid Portraits
 Ketaros Clothes Base
 Stellerotica - Human Hair v2
-Wide Fleet Formation
 Void Dwellers traits: Ring World & modded habitats fix
 Viable Feudalism WRB Patch
 VF EF - Feudal Origins Patch
@@ -311,7 +317,6 @@ Realistic Species Growth
 Psionic Synths / Planetary Diversity - Shroud Worlds Patch
 Psionic Synths - Gigastructures Compatibility Patch
 Psionic Species Expansion - Gigastructural Engineering
-Proactive and Mobilised AI
 Otter Editor's Dynamic Mod Menu Add-on
 NSC-IBS minipatch
 NSC - Dark UI Compatibility Patch
@@ -347,7 +352,6 @@ Civil Wars - More Authorities Patch
 Civics Expanded+ & E&C Alternative Compatibility Patch
 Civics Expanded+ & More Authorities Compatibility Patch
 Caravaneers and Nomads coexist
-3.0 Growth and Conquest Rebalancing
 More Civic Points [S-02]
 Stellaris Enhanced Sound Project
 Magnum's Mods - Tradition Cost Scaling
@@ -364,8 +368,8 @@ Magnum's Mods - Tradition Cost Scaling
 !Patch - Cubemap Fix
 ! Starnet for NSC2
 Starnet for ESC
-!Civics Expanded+ - Starnet AI patch
 Consistency Patch for Starnet AI
+!Civics Expanded+ - Starnet AI patch
 All unique systems in [3.x]
 !Colossus Hiveworld Fix
 !Additional Traits AI Patch

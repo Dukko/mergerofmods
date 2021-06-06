@@ -1,5 +1,0 @@
-ver_subjects_taxes_42 = {
-    icon = "gfx/interface/icons/planet_modifiers/pm_luxuries.dds"
-    icon_frame = 1
-    trade_value_add = 6500
-}

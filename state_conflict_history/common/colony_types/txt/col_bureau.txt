@@ -23,13 +23,13 @@ col_bureau = {
     weight_modifier = {
         base = 10
         modifier = {
-            add = 5
+            add = 3
             owner = {
                 empire_sprawl_over_cap > 20
             }
         }
         modifier = {
-            add = 5
+            add = 3
             has_designation = col_bureau
         }
         modifier = {
@@ -51,58 +51,44 @@ col_bureau = {
             }
         }
         modifier = {
-            add = 3
+            add = 2
             num_buildings = {
                 type = building_bureaucratic_1
                 value >= 2
             }
         }
         modifier = {
-            add = 4
+            add = 2
             num_buildings = {
                 type = building_bureaucratic_1
                 value >= 3
             }
         }
         modifier = {
-            add = 5
+            add = 2
             num_buildings = {
                 type = building_bureaucratic_1
                 value >= 4
             }
         }
         modifier = {
-            add = 6
+            add = 2
             num_buildings = {
                 type = building_bureaucratic_1
                 value >= 5
             }
         }
         modifier = {
-            add = 5
+            add = 4
             num_buildings = {
                 type = building_bureaucratic_2
                 value >= 1
             }
         }
         modifier = {
-            add = 6
+            add = 4
             num_buildings = {
                 type = building_bureaucratic_2
-                value >= 2
-            }
-        }
-        modifier = {
-            add = 5
-            num_buildings = {
-                type = building_bureaucratic_3
-                value >= 1
-            }
-        }
-        modifier = {
-            add = 6
-            num_buildings = {
-                type = building_bureaucratic_3
                 value >= 2
             }
         }
@@ -116,14 +102,10 @@ col_bureau = {
                 type = building_bureaucratic_2
                 value = 0
             }
-            num_buildings = {
-                type = building_bureaucratic_3
-                value = 0
-            }
+        }
         modifier = {
             factor = 1.3
             has_planet_flag = str_acceptable_habitability
-            }
         }
     }
 }

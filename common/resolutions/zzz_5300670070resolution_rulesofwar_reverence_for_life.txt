@@ -107,6 +107,11 @@ resolution_rulesofwar_reverence_for_life = {
             }
         }
         modifier = {
+            factor = 0.5
+            is_xenophobe = yes
+            is_pacifist = no
+        }
+        modifier = {
             factor = 2
             has_valid_civic = civic_machine_servitor
         }

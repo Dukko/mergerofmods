@@ -1,79 +1,24 @@
 simple_drone = {
     rank = 0
     clothes_texture_index = 2
-    change_job_threshold = 1.15
     assign_to_pop = {
-        OR = {
-            AND = {
-                exists = owner
-                owner = {
-                    is_gestalt = yes
-                }
-            }
-            AND = {
-                has_trait = trait_multihive_drone
-                OR = {
-                    is_unemployed = yes
-                    has_job = clerk
-                    has_job = technician
-                    has_job = miner
-                    has_job = farmer
-                    has_job = soldier
-                    has_job = mortal_initiate
-                    has_job = hunter_gatherer
-                    has_job = peasant
-                    has_job = primitive_laborer
-                    has_job = primitive_miner
-                    has_job = primitive_technician
-                    has_job = primitive_farmer
-                }
-            }
+        exists = owner
+        owner = {
+            is_gestalt = yes
         }
     }
     weight = {
         weight = 1
-        modifier = {
-            factor = 3
-            has_trait = trait_multihive_drone
-        }
     }
     pop_modifier = {
         pop_housing_usage_base = 1
         pop_amenities_usage_no_happiness_base = 1
-    }
-    triggered_planet_modifier = {
-        potential = {
-            has_trait = trait_robot_poor_security_machine
-        }
-        planet_crime_no_happiness_add = 0.5
-    }
-    triggered_pop_modifier = {
-        potential = {
-            has_trait = trait_exotic_gas_dependency
-            exists = owner
-            owner = {
-                has_deficit = exotic_gases
-            }
-        }
-        planet_pops_produces_mult = -0.4
-        pop_decline_speed = 2
     }
     allow_resettlement = {
         always = yes
     }
     resettlement_cost = {
         energy = 100
-    }
-    resettlement_cost = {
-        trigger = {
-            owner = {
-                NOR = {
-                    has_valid_civic = civic_machine_ota_updates
-                    has_valid_civic = civic_hive_subsumed_will
-                }
-            }
-        }
-        influence = 10
     }
     unemployment_resources = {
         category = unemployment_resources
@@ -84,17 +29,6 @@ simple_drone = {
                 }
             }
             minerals = 1
-        }
-        produces = {
-            trigger = {
-                owner = {
-                    is_hive_empire = yes
-                    has_civic = civic_hive_natural_neural_network
-                }
-            }
-            physics_research = 1
-            engineering_research = 1
-            society_research = 1.5
         }
         upkeep = {
         }
@@ -134,12 +68,6 @@ simple_drone = {
                 is_unemployed = yes
             }
             energy = @living_standard_energy_unemployed
-        }
-        upkeep = {
-            trigger = {
-                has_trait = trait_exotic_gas_dependency
-            }
-            exotic_gases = 0.01
         }
         produces = {
             trigger = {

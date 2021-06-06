@@ -103,6 +103,18 @@ resolution_rulesofwar_demobilization_initiative = {
         }
         modifier = {
             factor = 0
+            has_ai_personality_behaviour = purger
+            NOT = {
+                has_valid_civic = civic_machine_servitor
+            }
+        }
+        modifier = {
+            factor = 0.5
+            is_xenophobe = yes
+            is_pacifist = no
+        }
+        modifier = {
+            factor = 0
             in_breach_of = resolution_rulesofwar_demobilization_initiative
         }
         modifier = {

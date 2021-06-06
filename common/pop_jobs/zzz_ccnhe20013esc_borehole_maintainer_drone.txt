@@ -2,6 +2,13 @@ esc_borehole_maintainer_drone = {
     category = complex_drone
     condition_string = DRONE_JOB_TRIGGER
     building_icon = nhsc_building_dark_matter_facility
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
     possible = {
         drone_job_check_trigger = yes
         hidden_trigger = {

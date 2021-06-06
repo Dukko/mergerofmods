@@ -238,6 +238,25 @@ decision_shroud_world = {
             remove_deposit = d_eyeball_site
             remove_modifier = pdsulfur
             remove_deposit = d_sulfur_pool
+            remove_modifier = lifeless_torrid
+            remove_modifier = lifeless_temperate
+            remove_modifier = lifeless_foggy
+            if = {
+                limit = {
+                    has_modifier = katzenland_planet
+                }
+                remove_modifier = katzenland_planet
+                add_modifier = {
+                    modifier = "katzenland_planet_terraformed"
+                    days = -1
+                }
+            }
+            if = {
+                limit = {
+                    has_modifier = irradiated_desert_planet
+                }
+                remove_modifier = irradiated_desert_planet
+            }
             IF = {
                 limit = {
                     has_planet_flag = planet_earth

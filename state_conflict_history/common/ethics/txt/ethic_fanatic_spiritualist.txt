@@ -7,6 +7,7 @@ ethic_fanatic_spiritualist = {
     tags = {
         ETHIC_ALLOWS_TEMPLE
         ETHIC_DISALLOW_AI
+        ETHIC_SPIRITUALIST_ALLOWS_HIGH_PRIESTS
     }
     country_modifier = {
         country_unity_produces_mult = 0.2

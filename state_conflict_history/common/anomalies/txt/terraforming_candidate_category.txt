@@ -31,7 +31,7 @@ terraforming_candidate_category = {
     on_success = {
         1 = {
             anomaly_event = anomaly.2575
-            max_once = no
+            max_once = yes
         }
     }
 }

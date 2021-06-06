@@ -28,6 +28,7 @@ utility_component_template = {
         Flagship
         explorationship
         titan
+        dreadnought
         scavenger_bot
         star_eater
     }

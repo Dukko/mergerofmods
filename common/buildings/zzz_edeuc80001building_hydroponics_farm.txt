@@ -97,10 +97,6 @@ building_hydroponics_farm = {
             energy = 2
         }
     }
-    upgrades = {
-        building_eutab_hydroponics_tower
-                "eb_hydrofarm2"
-    }
     triggered_desc = {
         trigger = {
             exists = owner
@@ -131,6 +127,10 @@ building_hydroponics_farm = {
     }
     prerequisites = {
         "tech_hydroponics"
+    }
+    upgrades = {
+        "eb_hydrofarm2"
+                building_eutab_hydroponics_tower
     }
     ai_resource_production = {
         food = 1

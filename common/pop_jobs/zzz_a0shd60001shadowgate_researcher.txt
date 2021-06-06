@@ -3,6 +3,9 @@ shadowgate_researcher = {
     condition_string = SPECIALIST_JOB_TRIGGER
     building_icon = building_shadowgate_none
     clothes_texture_index = 3
+    pop_modifier = {
+        pop_housing_usage_base = @shadowgate_researcher_housing
+    }
     possible_pre_triggers = {
         has_owner = yes
         is_being_purged = no
