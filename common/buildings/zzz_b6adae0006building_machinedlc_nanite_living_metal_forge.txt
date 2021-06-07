@@ -1,0 +1,58 @@
+building_machinedlc_nanite_living_metal_forge = {
+    base_buildtime = 600
+    category = manufacturing
+    prerequisites = {
+        "tech_nanite_living_metal"
+        "tech_alloys_2"
+    }
+    potential = {
+        exists = owner
+        owner = {
+            OR = {
+                has_civic = civic_machine_nanites_culture
+                has_ascension_perk = ap_machinedlc_micro_machine_project
+                check_variable = {
+                    which = nano_forge_build_count
+                    value >= 1
+                }
+                is_fallen_empire = yes
+            }
+        }
+        NOR = {
+            has_modifier = resort_colony
+            has_modifier = slave_colony
+        }
+    }
+    show_tech_unlock_if = {
+        always = no
+    }
+    destroy_trigger = {
+        owner = {
+            NOR = {
+                has_civic = civic_machine_nanites_culture
+                has_ascension_perk = ap_machinedlc_micro_machine_project
+            }
+        }
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 800
+            nanites = 100
+        }
+        produces = {
+            sr_living_metal = 2
+        }
+        upkeep = {
+            energy = 4
+            minerals = 4
+            nanites = 2
+        }
+    }
+    ai_weight = {
+        weight = 0.5
+    }
+}

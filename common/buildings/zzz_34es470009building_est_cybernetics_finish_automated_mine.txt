@@ -1,0 +1,40 @@
+building_est_cybernetics_finish_automated_mine = {
+    icon = "building_est_cybernetics_finish_automated_mine"
+    base_buildtime = 360
+    base_cap_amount = 3
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 240
+        }
+        produces = {
+            minerals = 6
+        }
+        upkeep = {
+            energy = 2
+        }
+    }
+    planet_modifier = {
+        district_mining_max = -1
+    }
+    allow = {
+        has_upgraded_capital = yes
+        num_free_districts = {
+            type = district_mining
+            value > 0
+        }
+    }
+    potential = {
+        planet = {
+            NOT = {
+                is_planet_class = pc_habitat
+            }
+        }
+        owner = {
+            has_non_swapped_tradition = tr_est_cybernetics_finish
+        }
+    }
+    ai_weight = {
+        factor = 0
+    }
+}

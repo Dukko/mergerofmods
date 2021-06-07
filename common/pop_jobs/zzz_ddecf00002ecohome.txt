@@ -1,0 +1,60 @@
+ecohome = {
+    category = worker
+    is_capped_by_modifier = no
+    icon = eco_artisan
+    building_icon = building_eco_consumer_III
+    possible = {
+        hidden_trigger = {
+            exists = owner
+        }
+        owner = {
+            OR = {
+                has_valid_civic = civic_eden_manifest
+            }
+        }
+        NOR = {
+            has_trait = trait_mechanical
+        }
+    }
+    resources = {
+        category = planet_jobs
+        upkeep = {
+            food = 1
+        }
+        produces = {
+            unity = 1
+        }
+        produces = {
+            trigger = {
+                has_utopian_living_standard_type = yes
+            }
+            physics_research = 2
+            society_research = 2
+            engineering_research = 2
+            unity = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                has_building = building_eco_former
+            }
+        }
+        pop_environment_tolerance = 0.01
+    }
+    planet_modifier = {
+        trade_value_add = 1
+        planet_amenities_add = 1
+    }
+    pop_modifier = {
+    }
+    weight = {
+        weight = 0.01
+        modifier = {
+            factor = 0
+            planet = {
+                free_jobs > 0
+            }
+        }
+    }
+}

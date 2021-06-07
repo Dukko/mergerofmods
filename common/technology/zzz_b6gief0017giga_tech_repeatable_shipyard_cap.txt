@@ -1,0 +1,53 @@
+@megastructure_repeatable_tech_weight = 10
+@megastructure_base_tech_cost = 48000
+@megastructure_per_level_cost = 144000
+giga_tech_repeatable_shipyard_cap = {
+    area = engineering
+    category = {
+        industry
+    }
+    tier = 5
+    weight = @megastructure_repeatable_tech_weight
+    cost = @megastructure_base_tech_cost
+    cost_per_level = @megastructure_per_level_cost
+    levels = 40
+    prerequisites = {
+        "giga_tech_equatorial_shipyard"
+    }
+    weight_groups = {
+        repeatable
+    }
+    mod_weight_if_group_picked = {
+        repeatable = 0.1
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "giga_shipyard_capacity_increase_title"
+            desc = "giga_shipyard_capacity_increase_desc"
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_global_flag = shipyard_capped_r
+            }
+        }
+        modifier = {
+            factor = 0
+            has_global_flag = shipyard_disabled
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_global_flag = shipyard_capped_r
+            }
+        }
+        modifier = {
+            factor = 0
+            has_global_flag = shipyard_disabled
+        }
+    }
+}

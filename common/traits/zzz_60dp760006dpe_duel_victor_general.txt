@@ -1,0 +1,17 @@
+dpe_duel_victor_general = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/leader_trait_glory_seeker.dds"
+    modifier = {
+        army_morale = 0.1
+        army_morale_damage_mult = 0.1
+    }
+    leader_class = {
+        general
+    }
+    leader_trait = {
+        general
+    }
+    initial = no
+    randomized = no
+}

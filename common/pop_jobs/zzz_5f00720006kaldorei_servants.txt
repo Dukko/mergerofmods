@@ -1,0 +1,37 @@
+kaldorei_servants = {
+    category = worker
+    is_capped_by_modifier = no
+    icon = servant
+    building_icon = building_tw_academy
+    possible = {
+        exists = owner
+        owner = {
+            has_valid_civic = civic_kaldorei_castes
+        }
+        has_trait = trait_kaldorei_tw
+    }
+    resources = {
+        category = planet_jobs
+    }
+    planet_modifier = {
+        planet_amenities_add = 6
+    }
+    triggered_pop_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_hb_decadence
+            }
+        }
+        modifier = {
+            pop_amenities_usage_base = -0.85
+        }
+    }
+    weight = {
+        weight = 0.1
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+        }
+    }
+}

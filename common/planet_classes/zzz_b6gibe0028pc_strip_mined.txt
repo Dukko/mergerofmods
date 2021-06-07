@@ -1,0 +1,28 @@
+pc_strip_mined = {
+    entity = "strip_mined_planet"
+    entity_scale = @planet_standard_scale
+    picture = pc_stripmined
+    icon_frame = 12
+    atmosphere_color = hsv {
+        0.05
+        0.65
+        1.4
+    }
+    atmosphere_intensity = 0.05
+    atmosphere_width = 1
+    min_distance_from_sun = @habitable_min_distance
+    max_distance_from_sun = @habitable_max_distance
+    spawn_odds = 0
+    city_color_lut = "gfx/portraits/misc/colorcorrection_arid.dds"
+    chance_of_ring = 0.2
+    planet_size = {
+        min = 16
+        max = 25
+    }
+    moon_size = {
+        min = 12
+        max = 16
+    }
+    colonizable = no
+    orbit_lines = yes
+}

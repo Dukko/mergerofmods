@@ -1,0 +1,35 @@
+gov_military_corp = {
+    ruler_title = RT_HCOM
+    ruler_title_female = RT_HCOM
+    election_candidates = {
+        modifier = {
+            add = 100
+            leader_class = ruler
+        }
+        modifier = {
+            add = 10
+            OR = {
+                leader_class = admiral
+                leader_class = general
+                leader_class = governor
+            }
+        }
+        modifier = {
+            factor = 0
+            leader_class = scientist
+        }
+    }
+    possible = {
+        has_ethic = ethic_fanatic_militarist
+        or = {
+            has_valid_civic = civic_military_industry
+            has_valid_civic = civic_private_militaries
+            has_valid_civic = civic_naval_contractors
+        }
+        has_authority = auth_corporate
+    }
+    should_force_rename = yes
+    weight = {
+        base = 5000
+    }
+}

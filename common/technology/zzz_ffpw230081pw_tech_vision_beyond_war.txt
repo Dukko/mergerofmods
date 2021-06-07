@@ -1,0 +1,77 @@
+pw_tech_vision_beyond_war = {
+    area = society
+    category = {
+        military_theory
+    }
+    tier = 5
+    cost = @pw_tech_cost_3
+    prerequisites = {
+        pw_tech_parades_of_supremacy
+    }
+    weight = @tier5weight1
+    potential = {
+        is_gestalt = no
+        is_militarist = yes
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = society
+                has_trait = leader_trait_expertise_military_theory
+            }
+        }
+        modifier = {
+            factor = 0
+            is_militarist = no
+        }
+        modifier = {
+            factor = 2
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.75
+            has_valid_civic = civic_nationalistic_zeal
+        }
+        modifier = {
+            factor = 1.75
+            has_valid_civic = civic_warrior_culture
+        }
+        modifier = {
+            factor = 1.75
+            has_valid_civic = civic_distinguished_admiralty
+        }
+        modifier = {
+            factor = 1.75
+            has_valid_civic = civic_private_military_companies
+        }
+        modifier = {
+            factor = 1.75
+            has_valid_civic = civic_naval_contractors
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = pw_ap_planetary_wonders
+        }
+        modifier = {
+            factor = 2
+            any_owned_planet = {
+                has_active_building = pw_building_martial_avenue
+            }
+        }
+        modifier = {
+            factor = 5
+            is_at_war = yes
+        }
+    }
+    ai_weight = {
+        factor = @pw_tech_ai_weight
+        modifier = {
+            factor = 2
+            research_leader = {
+                area = society
+                has_trait = leader_trait_expertise_military_theory
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+criminal = {
+    category = criminal
+    is_capped_by_modifier = yes
+    can_set_priority = no
+    clothes_texture_index = 2
+    building_icon = building_residence
+    contributes_to_diplo_weight = no
+    possible_pre_triggers = {
+        has_owner = yes
+        is_sapient = yes
+    }
+    possible = {
+        NOT = {
+            has_citizenship_type = {
+                country = owner
+                type = citizenship_robot_servitude
+            }
+        }
+        owner = {
+            is_gestalt = no
+        }
+    }
+    resources = {
+        category = planet_jobs
+        produces = {
+            unity = -1
+        }
+    }
+    planet_modifier = {
+        trade_value_add = -5
+        branch_office_criminal_syndicate_value_add = 5
+        pop_government_ethic_attraction = -0.05
+    }
+    weight = {
+        weight = @criminal_job_weight
+    }
+}

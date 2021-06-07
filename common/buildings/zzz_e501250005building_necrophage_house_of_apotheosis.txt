@@ -1,0 +1,80 @@
+building_necrophage_house_of_apotheosis = {
+    icon = building_chamber_of_elevation_2
+    base_buildtime = @b3_time
+    can_build = no
+    position_priority = 100
+    category = pop_assembly
+    potential = {
+        exists = owner
+        owner = {
+            has_origin = origin_necrophage
+            has_trait = trait_necrophage
+            NOT = {
+                has_valid_civic = civic_fanatic_purifiers
+            }
+            is_ai = no
+        }
+    }
+    allow = {
+        hidden_trigger = {
+            if = {
+                limit = {
+                    owner = {
+                        is_ai = yes
+                    }
+                }
+                any_owned_species = {
+                    species_can_be_necrophaged = yes
+                }
+            }
+        }
+    }
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            owner = {
+                NOT = {
+                    has_origin = origin_necrophage
+                }
+            }
+            AND = {
+                owner = {
+                    is_ai = yes
+                }
+                OR = {
+                    buildings_no_exotic_gases = yes
+                    NOT = {
+                        any_owned_species = {
+                            species_can_be_necrophaged = yes
+                        }
+                    }
+                }
+            }
+        }
+    }
+    planet_modifier = {
+        planet_stability_add = 10
+        job_necro_apprentice_add = 6
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b2_minerals
+            exotic_gases = @b2_rare_cost
+        }
+        upkeep = {
+            energy = @b2_upkeep
+            exotic_gases = @b2_rare_upkeep
+        }
+    }
+    prerequisites = {
+        tech_glandular_acclimation
+    }
+    show_tech_unlock_if = {
+        has_origin = origin_necrophage
+        has_trait = trait_necrophage
+    }
+    triggered_desc = {
+        text = job_necro_apprentice_effect_desc
+    }
+}

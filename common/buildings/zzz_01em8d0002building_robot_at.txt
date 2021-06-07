@@ -1,0 +1,64 @@
+building_robot_at = {
+    base_buildtime = 240
+    base_cap_amount = 1
+    add_to_first_building_slot = yes
+    category = pop_assembly
+    potential = {
+        exists = owner
+        owner = {
+            has_civic = civic_tw_atlantis
+            has_civic = civic_tw_titans
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+    }
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            owner = {
+                is_spiritualist = no
+            }
+            has_modifier = slave_colony
+        }
+    }
+    convert_to = {
+        building_hive_node
+        building_uplink_node
+        building_autochthon_monument
+        building_corporate_monument
+    }
+    planet_modifier = {
+        planet_pop_assembly_add = 2
+    }
+    country_modifier = {
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 600
+        }
+        upkeep = {
+            energy = 6
+            alloys = 2
+        }
+    }
+    upgrades = {
+    }
+    prerequisites = {
+    }
+    show_tech_unlock_if = {
+    }
+    ai_weight = {
+        weight = 35
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = consumer_goods
+                    value < 8
+                }
+            }
+        }
+    }
+}

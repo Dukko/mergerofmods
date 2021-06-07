@@ -1,0 +1,20 @@
+ethic_fanatic_authoritarian = {
+    cost = 2
+    category = "col"
+    category_value = 0
+    use_for_pops = no
+    regular_variant = ethic_authoritarian
+    country_modifier = {
+        country_base_influence_produces_add = 1.5
+        job_enforcer_per_pop = 0.02
+        ruler_skill_levels = 2
+        country_energy_produces_mult = -0.05
+    }
+    tags = {
+        MORE_ENFORCER_JOBS
+        ETHIC_ONLY_AUTOCRACY
+    }
+    random_weight = {
+        value = 150
+    }
+}

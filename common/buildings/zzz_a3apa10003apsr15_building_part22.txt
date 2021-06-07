@@ -1,0 +1,78 @@
+@apsr15part2cost_energy = 5000
+@apsr15part2cost_minerals = 5000
+@apsr15part2cost_time = 1000
+@apsr15part22upkeep_energy = 4
+@apsr15part2upkeep_minerals = 2
+@apsr15part2job = 1
+apsr15_building_part22 = {
+    base_buildtime = @apsr15part2cost_time
+    icon = apsr15_building_part22
+    is_capped_by_modifier = no
+    category = research
+    can_build = no
+    potential = {
+        has_modifier = "apsr15_planet_modifier"
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_apsr15_servant_hive_add = @apsr15part2job
+            job_apsr15_scientist_hive_add = @apsr15part2job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_apsr15_servant_machine_add = @apsr15part2job
+            job_apsr15_scientist_machine_add = @apsr15part2job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_apsr15_servant_normal_add = @apsr15part2job
+            job_apsr15_scientist_normal_add = @apsr15part2job
+        }
+    }
+    resources = {
+        category = planet_apsr_buildings
+        cost = {
+            energy = @apsr15part2cost_energy
+            minerals = @apsr15part2cost_minerals
+        }
+        upkeep = {
+            energy = @apsr15part22upkeep_energy
+            minerals = @apsr15part2upkeep_minerals
+        }
+    }
+    upgrades = {
+        "apsr15_building_part31"
+        "apsr15_building_part32"
+        "apsr15_building_part33"
+        "apsr15_building_part34"
+    }
+    prerequisites = {
+        "tech_apsr15_building_part22"
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    ai_weight = {
+        weight = 50000
+    }
+}

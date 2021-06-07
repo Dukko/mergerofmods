@@ -1,0 +1,19 @@
+trait_additrait_rusty_antiquities = {
+    cost = -1
+    allowed_archetypes = {
+        ROBOT
+    }
+    opposites = {
+        "trait_robot_propaganda_machines"
+    }
+    modifier = {
+        planet_jobs_unity_produces_mult = -0.05
+    }
+    ai_weight = {
+        weight = 1
+        modifier = {
+            factor = 0
+            years_passed > 5
+        }
+    }
+}

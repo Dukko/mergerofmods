@@ -1,0 +1,60 @@
+building_eutab_hive_node_support = {
+    base_buildtime = @b2_time
+    base_cap_amount = 2
+    category = unity
+    potential = {
+        AND = {
+            owner = {
+                has_authority = auth_hive_mind
+            }
+            has_building = building_eutab_hive_alpha_node
+        }
+    }
+    planet_modifier = {
+        job_eutab_caretaker_add = 10
+    }
+    country_modifier = {
+        country_admin_cap_add = 10
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b2_minerals
+            energy = 300
+            food = 300
+        }
+        upkeep = {
+            energy = @b2_upkeep
+            food = 3
+        }
+        produces = {
+            unity = 10
+            physics_research = 4
+            society_research = 4
+            engineering_research = 4
+        }
+    }
+    triggered_desc = {
+        text = job_eutab_caretaker_effect_desc
+    }
+    prerequisites = {
+        "tech_eutab_hive_alpha_node"
+    }
+    destroy_trigger = {
+        exists = owner
+        owner = {
+            NOT = {
+                has_ascension_perk = ap_eutab_mind_matter
+            }
+        }
+    }
+    upgrades = {
+        building_eutab_hive_node_research_phy
+        building_eutab_hive_node_stars
+        building_eutab_hive_node_manage
+        building_eutab_hive_node_mega
+    }
+    ai_weight = {
+        weight = 1000
+    }
+}

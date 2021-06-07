@@ -1,0 +1,131 @@
+@blocker_high = 10
+d_dense_jungle = {
+    time = 180
+    is_for_colonizeable = yes
+    category = deposit_cat_blockers
+    resources = {
+        category = deposit_blockers
+        cost = {
+            energy = 500
+        }
+    }
+    potential = {
+        OR = {
+            is_wet = yes
+            is_planet_class = pc_oasis
+            has_modifier = "oasis_world"
+            has_modifier = "geothermal_world"
+        }
+    }
+    planet_modifier = {
+        planet_max_districts_add = -1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_keepers_harmony
+            }
+        }
+        modifier = {
+            planet_amenities_add = 5
+            planet_housing_add = 1
+            job_druid_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_terraforming
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+            job_xenobiologist_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_environmentalist
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+            job_farmer_add = 2
+        }
+    }
+    on_cleared = {
+        if = {
+            limit = {
+                exists = owner
+                owner = {
+                    has_valid_civic = civic_terraforming
+                }
+            }
+            owner = {
+                add_resource = {
+                    food = 200
+                }
+            }
+        }
+    }
+    all_blocker_swap_types = yes
+    drop_weight = {
+        weight = @blocker_high
+        modifier = {
+            factor = 2
+            OR = {
+                is_planet_class = pc_continental
+                is_planet_class = pc_tropical
+                is_planet_class = pc_hollow
+            }
+        }
+        modifier = {
+            factor = 4
+            OR = {
+                has_modifier = "jungle_world"
+                is_planet_class = pc_hajungle
+            }
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                has_modifier = "forest_world"
+                is_planet_class = pc_forest
+                is_planet_class = pc_mangrove
+            }
+        }
+        modifier = {
+            factor = 0
+            num_free_districts = {
+                type = district_city
+                value < 2
+            }
+        }
+        modifier = {
+            factor = 0.25
+            has_modifier = "geothermal_world"
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_modifier = "panthalassic_world"
+                has_modifier = "boreal_world"
+                has_modifier = "young_world"
+                has_modifier = "storm_world"
+                has_modifier = "infernal_world"
+                has_modifier = "subglacial_world"
+                is_planet_class = pc_mushroom
+                is_planet_class = pc_aquatic
+                is_planet_class = pc_boreal
+                is_planet_class = pc_storm
+            }
+        }
+    }
+    prerequisites = {
+        "tech_dense_jungle"
+    }
+}

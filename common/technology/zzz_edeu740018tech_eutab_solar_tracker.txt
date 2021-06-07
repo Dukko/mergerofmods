@@ -1,0 +1,37 @@
+@tier1cost3 = 1000
+@tier1weight3 = 90
+tech_eutab_solar_tracker = {
+    cost = @tier1cost3
+    area = physics
+    tier = 1
+    category = {
+        computing
+    }
+    is_rare = yes
+    prerequisites = {
+        "tech_mineral_purification_1"
+        "tech_power_plant_2"
+    }
+    weight = @tier1weight3
+    potential = {
+        has_ethic = ethic_gestalt_consciousness
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+}

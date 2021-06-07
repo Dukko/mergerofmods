@@ -1,0 +1,53 @@
+@tier2cost3 = 2500
+tech_eutab_failsafe_alert = {
+    cost = @tier2cost3
+    area = engineering
+    tier = 2
+    category = {
+        materials
+    }
+    prerequisites = {
+        "tech_galactic_ambitions"
+    }
+    weight = @tier2cost3
+    is_rare = yes
+    potential = {
+        eu_req_pac = yes
+    }
+    modifier = {
+        planet_sensor_range_add = 2
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = ap_galactic_contender
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                OR = {
+                    has_ascension_perk = ap_defender_of_the_galaxy
+                    has_ascension_perk = ap_galactic_force_projection
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+}

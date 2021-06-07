@@ -1,0 +1,24 @@
+giga_tech_alderson_disk = {
+    cost = 250000
+    area = engineering
+    tier = 5
+    category = {
+        voidcraft
+    }
+    is_rare = yes
+    weight = 0
+    prereqfor_desc = {
+        hide_prereq_for_desc = ship
+        hide_prereq_for_desc = component
+        hide_prereq_for_desc = feature
+        hide_prereq_for_desc = resource
+        custom = {
+            title = "header_03_insane"
+            desc = "header_03_insane_desc"
+        }
+        custom = {
+            title = "allow_alderson"
+            desc = "desc_alderson"
+        }
+    }
+}

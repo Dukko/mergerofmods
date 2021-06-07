@@ -1,0 +1,47 @@
+tech_basic_science_lab_3 = {
+    area = physics
+    category = {
+        computing
+    }
+    tier = 3
+    cost = @tier3cost1
+    prerequisites = {
+        "tech_basic_science_lab_2"
+        "tech_colonial_centralization"
+    }
+    weight = @tier3weight1
+    weight_modifier = {
+        factor = 2
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+    ai_weight = {
+        weight = 3
+        factor = 25
+        modifier = {
+            factor = 100
+            has_technology = tech_lasers_4
+        }
+        modifier = {
+            factor = 100
+            NOT = {
+                has_tech_option = tech_lasers_4
+            }
+            NOT = {
+                has_technology = tech_lasers_4
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+}

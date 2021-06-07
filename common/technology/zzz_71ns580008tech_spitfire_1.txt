@@ -1,0 +1,44 @@
+tech_spitfire_1 = {
+    cost = @tier4cost1
+    area = engineering
+    tier = 4
+    category = {
+        voidcraft
+    }
+    prerequisites = {
+        "tech_battleships"
+    }
+    weight = @tier3weight1
+    gateway = ship
+    prereqfor_desc = {
+        ship = {
+            title = "TECH_UNLOCK_SPITFIRE_CONSTRUCTION_TITLE"
+            desc = "TECH_UNLOCK_SPITFIRE_CONSTRUCTION_DESC"
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 10
+            any_neighbor_country = {
+                has_technology = tech_spitfire_1
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 100
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+}

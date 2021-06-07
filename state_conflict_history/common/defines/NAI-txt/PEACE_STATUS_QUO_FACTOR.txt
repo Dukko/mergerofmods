@@ -1,0 +1,3 @@
+NAI = {
+    PEACE_STATUS_QUO_FACTOR = -150
+}

@@ -1,0 +1,24 @@
+ruler_trait_keen_diplomat = {
+    cost = 1
+    modification = no
+    icon = "gfx/interface/icons/traits/ruler_trait_keen_diplomat.dds"
+    modifier = {
+        country_trust_growth = 0.25
+        country_trust_cap_add = 50
+        max_rivalries = 1
+        country_trade_attractiveness = 0.1
+    }
+    leader_potential_add = {
+        NOT = {
+            from = {
+                has_ethic = "ethic_gestalt_consciousness"
+            }
+        }
+    }
+    leader_trait = {
+        ruler
+    }
+    leader_class = {
+        ruler
+    }
+}

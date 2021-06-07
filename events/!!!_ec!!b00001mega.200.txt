@@ -1,0 +1,34 @@
+namespace = mega
+planet_event = {
+    id = mega.200
+    title = mega.200.name
+    desc = mega.200.desc
+    picture = GFX_evt_city_planet
+    show_sound = event_cityscape
+    location = root
+    is_triggered_only = yes
+    trigger = {
+        gpm_is_planet_class_city = yes
+    }
+    immediate = {
+        if = {
+            limit = {
+                has_global_flag = TechAscendant_active
+            }
+            hidden_effect = {
+                planet_event = {
+                    id = Breakthrough.88
+                }
+            }
+        }
+        remove_modifier = engineered_environment
+        remove_modifier = engineered_environment_gaia
+        set_planet_flag = gpm_is_new_ecumenopolis
+        planet_event = {
+            id = gpm_terraform.78871
+        }
+    }
+    option = {
+        name = mega.200.a
+    }
+}

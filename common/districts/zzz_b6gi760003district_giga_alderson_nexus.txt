@@ -1,0 +1,149 @@
+district_giga_alderson_nexus = {
+    base_buildtime = @giga_alderson_district_buildtime
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        exists = from
+        from = {
+            is_machine_empire = yes
+        }
+        uses_district_set = giga_alderson
+    }
+    potential = {
+        exists = owner
+        owner = {
+            is_machine_empire = yes
+        }
+        uses_district_set = giga_alderson
+    }
+    conversion_ratio = 0.5
+    convert_to = {
+        district_giga_alderson_hive
+        district_giga_alderson_city
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @giga_alderson_cost
+        }
+        upkeep = {
+            energy = @giga_alderson_maintenance
+        }
+    }
+    triggered_planet_modifier = {
+        modifier = {
+            planet_housing_add = 300
+            job_maintenance_drone_add = 180
+            job_technician_drone_add = 60
+            job_patrol_drone_add = 12
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_housing_1
+            }
+        }
+        modifier = {
+            planet_housing_add = 60
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_housing_2
+            }
+        }
+        modifier = {
+            planet_housing_add = 60
+            job_maintenance_drone_add = 60
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_swapped_tradition = tr_prosperity_optimized_nexus
+            }
+        }
+        modifier = {
+            planet_housing_add = 60
+        }
+    }
+    triggered_desc = {
+        text = "job_maintenance_drone_effect_desc"
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_planet_flag = giga_alderson_ecu
+        }
+        modifier = {
+            planet_housing_add = 450
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_planet_flag = giga_alderson_ecu
+        }
+        modifier = {
+            job_maintenance_drone_add = 270
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_planet_flag = giga_alderson_ecu
+        }
+        modifier = {
+            job_technician_drone_add = 90
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_planet_flag = giga_alderson_hive
+        }
+        modifier = {
+            planet_housing_add = 450
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_planet_flag = giga_alderson_hive
+        }
+        modifier = {
+            job_maintenance_drone_add = 270
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_planet_flag = giga_alderson_hive
+        }
+        modifier = {
+            job_technician_drone_add = 90
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_planet_flag = giga_alderson_machine
+        }
+        modifier = {
+            planet_housing_add = 450
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_planet_flag = giga_alderson_machine
+        }
+        modifier = {
+            job_maintenance_drone_add = 270
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_planet_flag = giga_alderson_machine
+        }
+        modifier = {
+            job_technician_drone_add = 90
+        }
+    }
+}

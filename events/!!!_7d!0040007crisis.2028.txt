@@ -1,0 +1,114 @@
+namespace = crisis
+planet_event = {
+    id = crisis.2028
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        random_country = {
+            limit = {
+                is_country_type = ai_empire
+            }
+            save_event_target_as = AI_crisis
+        }
+        change_pc = pc_ai
+        reset_planet = yes
+        gpm_purge_all_planetary_modifiers = yes
+        gpm_purge_all_core_modifiers = yes
+        gpm_roll_machine_world_modifiers = yes
+        gpm_remove_planetary_features = yes
+        gpm_roll_planetary_features = yes
+        set_name = "NAME_Sterilization_Hub_4"
+        set_owner = event_target:AI_crisis
+        set_controller = event_target:AI_crisis
+        create_ai_planet_defense = yes
+        create_ai_fleet = yes
+        create_ai_fleet = yes
+        random_country = {
+            observer_event = {
+                id = observer.48
+            }
+        }
+        event_target:AI_crisis = {
+            save_event_target_as = crisis_country
+        }
+        if = {
+            limit = {
+                has_galactic_custodian = yes
+            }
+            random_playable_country = {
+                limit = {
+                    is_galactic_custodian = yes
+                }
+                country_event = {
+                    id = custodian.50
+                    days = 30
+                }
+            }
+        }
+        if = {
+            limit = {
+                has_galactic_emperor = yes
+            }
+            random_playable_country = {
+                limit = {
+                    is_galactic_emperor = yes
+                }
+                country_event = {
+                    id = emperor.90
+                    days = 30
+                }
+            }
+        }
+        every_country = {
+            limit = {
+                is_ai = no
+            }
+            country_event = {
+                id = crisis.2033
+            }
+        }
+        planet_event = {
+            id = crisis.2050
+        }
+        planet_event = {
+            id = crisis.2052
+        }
+        every_country = {
+            limit = {
+                has_event_chain = "ai_crisis_chain"
+            }
+            add_event_chain_counter = {
+                event_chain = "ai_crisis_chain"
+                counter = "active_machine_worlds"
+                amount = 1
+            }
+        }
+        solar_system = {
+            if = {
+                limit = {
+                    exists = starbase
+                }
+                starbase = {
+                    fleet = {
+                        destroy_fleet = this
+                    }
+                }
+            }
+            create_contingency_starbase = yes
+            star = {
+                create_ambient_object = {
+                    type = "contingency_1"
+                    location = this
+                }
+                last_created_ambient_object = {
+                    set_ambient_object_flag = contingency_system_effect
+                    set_location = {
+                        target = prev
+                        distance = 0
+                        angle = random
+                    }
+                }
+            }
+        }
+    }
+}

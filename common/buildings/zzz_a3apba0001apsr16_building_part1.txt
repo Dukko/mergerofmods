@@ -1,0 +1,84 @@
+@apsr16part1cost_minerals = 500
+@apsr16part1cost_time = 300
+@apsr16part1upkeep_energy = 3
+@apsr16part1upkeep_minerals = 2
+@apsr16part1job = 1
+apsr16_building_part1 = {
+    base_buildtime = @apsr16part1cost_time
+    icon = apsr16_building_part1
+    base_cap_amount = 6
+    is_capped_by_modifier = no
+    category = research
+    potential = {
+        AND = {
+            has_modifier = "apsr16_planet_modifier"
+            NOT = {
+                OR = {
+                    has_building = apsr16_building_part1_fake
+                    has_building = apsr16_building_part2_fake
+                    has_building = apsr16_building_part3_fake
+                }
+            }
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_apsr16_scientist_hive_add = @apsr16part1job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_apsr16_scientist_machine_add = @apsr16part1job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_apsr16_scientist_normal_add = @apsr16part1job
+        }
+    }
+    resources = {
+        category = planet_apsr_buildings
+        cost = {
+            minerals = @apsr16part1cost_minerals
+        }
+        upkeep = {
+            energy = @apsr16part1upkeep_energy
+            minerals = @apsr16part1upkeep_minerals
+        }
+    }
+    planet_modifier = {
+        planet_jobs_society_research_produces_mult = 0.01
+        planet_jobs_engineering_research_produces_mult = 0.01
+        planet_jobs_physics_research_produces_mult = 0.01
+    }
+    upgrades = {
+        "apsr16_building_part2"
+    }
+    prerequisites = {
+        "tech_apsr16_building_part1"
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    ai_weight = {
+        weight = 50000
+    }
+}

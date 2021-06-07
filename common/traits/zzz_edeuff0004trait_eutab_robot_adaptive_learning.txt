@@ -1,0 +1,20 @@
+trait_eutab_robot_adaptive_learning = {
+    cost = 2
+    initial = no
+    randomized = no
+    prerequisites = {
+        "tech_eutab_m_adaptation_mastery"
+    }
+    allowed_archetypes = {
+        MACHINE
+    }
+    species_potential_add = {
+        exists = from
+        from = {
+            has_authority = auth_machine_intelligence
+        }
+    }
+    modifier = {
+        planet_jobs_produces_mult = 0.1
+    }
+}

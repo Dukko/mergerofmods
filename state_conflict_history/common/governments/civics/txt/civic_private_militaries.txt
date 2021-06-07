@@ -1,0 +1,41 @@
+civic_private_militaries = {
+    potential = {
+        ethics = {
+            NOT = {
+                value = ethic_gestalt_consciousness
+            }
+        }
+        authority = {
+            NOR = {
+                value = auth_corporate
+                value = auth_corporate_imperial
+            }
+        }
+    }
+    possible = {
+        ethics = {
+            OR = {
+                text = civic_tooltip_capitalism
+                value = ethic_capitalism
+                value = ethic_fanatic_capitalism
+            }
+            OR = {
+                text = civic_tooltip_militarist
+                value = ethic_militarist
+                value = ethic_fanatic_militarist
+            }
+        }
+    }
+    random_weight = {
+        base = 5
+    }
+    modifier = {
+        job_mercenary_per_pop = 0.03
+        ARMY_STARTING_EXPERIENCE_ADD = 200
+        SHIP_STARTING_EXPERIENCE_ADD = 200
+        armies_upkeep_mult = 0.05
+        ships_upkeep_mult = 0.05
+        army_attack_damage_mult = 0.3
+        army_attack_health_mult = 0.3
+    }
+}

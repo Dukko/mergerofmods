@@ -1,0 +1,2 @@
+﻿l_default:
+ format.monopolistic_trade_crime_fam.3:1000 "<criminal_league> of [This.Capital.GetName]"

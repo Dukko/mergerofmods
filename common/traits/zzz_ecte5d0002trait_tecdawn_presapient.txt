@@ -1,0 +1,21 @@
+trait_tecdawn_presapient = {
+    cost = 1
+    initial = no
+    sapient = no
+    modification = yes
+    icon = "gfx/interface/icons/traits/trait_primitive.dds"
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+        LITHOID
+    }
+    modifier = {
+        planet_jobs_engineering_research_produces_mult = 0.05
+        pop_environment_tolerance = 0.25
+        pop_growth_speed = -50
+        pop_assembly_speed = -50
+    }
+    species_potential_add = {
+        always = no
+    }
+}

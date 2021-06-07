@@ -1,0 +1,37 @@
+GT_starbase_defense_platform_capacity_add = {
+    cost = @tier3cost2
+    area = physics
+    tier = 3
+    category = {
+        computing
+    }
+    prerequisites = {
+        "tech_starbase_3"
+    }
+    weight = @tier4weight2
+    modifier = {
+        starbase_defense_platform_capacity_add = 5
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 2
+            is_at_war = yes
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+}

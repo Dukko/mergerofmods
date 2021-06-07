@@ -1,0 +1,20 @@
+trait_ruler_hobby_edict_expert = {
+    cost = 0
+    leader_trait = {
+        ruler
+    }
+    leader_class = {
+        ruler
+    }
+    self_modifier = {
+    }
+    modifier = {
+        edicts_cost_mult = -0.2
+        decisions_cost_mult = -0.2
+        diplomacy_upkeep_mult = -0.25
+        edict_length_mult = 0.33
+    }
+    initial = no
+    modification = no
+    randomized = no
+}

@@ -1,0 +1,59 @@
+namespace = action
+pop_event = {
+    id = action.121
+    title = OK
+    desc = OK
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        create_message = {
+            type = MESSAGE_TYPE_POP_ABDUCTED
+            localization = MESSAGE_POP_ABDUCTED
+            days = 30
+            target = from
+            variable = {
+                type = name
+                localization = SPECIES
+                scope = root.species
+            }
+            variable = {
+                type = name
+                localization = TARGET_PLANET
+                scope = root.planet
+            }
+            variable = {
+                type = name
+                localization = PLANET
+                scope = from
+            }
+        }
+        if = {
+            limit = {
+                exists = from.owner
+            }
+            from.owner = {
+                create_message = {
+                    type = MESSAGE_TYPE_POP_ABDUCTED_FROM_US
+                    localization = MESSAGE_POP_ABDUCTED_FROM_US
+                    days = 30
+                    target = from
+                    variable = {
+                        type = name
+                        localization = SPECIES
+                        scope = root.species
+                    }
+                    variable = {
+                        type = name
+                        localization = ABDUCTER
+                        scope = root.planet.owner
+                    }
+                    variable = {
+                        type = name
+                        localization = PLANET
+                        scope = from
+                    }
+                }
+            }
+        }
+    }
+}

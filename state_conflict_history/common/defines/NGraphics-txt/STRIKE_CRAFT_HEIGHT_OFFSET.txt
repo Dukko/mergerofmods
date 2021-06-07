@@ -1,0 +1,3 @@
+NGraphics = {
+    STRIKE_CRAFT_HEIGHT_OFFSET = 40
+}

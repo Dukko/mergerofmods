@@ -1,0 +1,28 @@
+building_whisper = {
+    base_buildtime = 1800
+    base_cap_amount = 1
+    category = resource
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 1000
+            energy = 1000
+            food = 1000
+            influence = 50
+        }
+        produces = {
+            minor_artifacts = 1
+        }
+        upkeep = {
+            energy = 10
+        }
+    }
+    potential = {
+        owner = {
+            has_country_flag = whispers_in_the_void
+        }
+    }
+    ai_weight = {
+        factor = 50
+    }
+}

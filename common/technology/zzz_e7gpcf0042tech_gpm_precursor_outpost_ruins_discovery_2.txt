@@ -1,0 +1,17 @@
+tech_gpm_precursor_outpost_ruins_discovery_2 = {
+    area = society
+    cost = @tier2cost1
+    category = {
+        military_theory
+    }
+    tier = 2
+    is_rare = yes
+    ai_update_type = all
+    weight = 1
+    modifier = {
+        country_naval_cap_add = 50
+    }
+    weight_modifier = {
+        factor = 0
+    }
+}

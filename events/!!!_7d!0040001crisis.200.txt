@@ -1,0 +1,38 @@
+namespace = crisis
+planet_event = {
+    id = crisis.200
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        OR = {
+            planet_devastation >= 100
+            NOT = {
+                exists = owner
+            }
+        }
+        is_planet_class = pc_infested
+    }
+    immediate = {
+        set_planet_flag = previously_infested
+        destroy_colony = yes
+        random_list = {
+            50 = {
+                change_pc = pc_barren
+            }
+            50 = {
+                change_pc = pc_barren_cold
+            }
+        }
+        reset_planet = yes
+        add_modifier = {
+            modifier = "terraforming_candidate"
+            days = -1
+        }
+        planet_event = {
+            id = crisis.216
+        }
+        planet_event = {
+            id = gpm_crisis.1
+        }
+    }
+}

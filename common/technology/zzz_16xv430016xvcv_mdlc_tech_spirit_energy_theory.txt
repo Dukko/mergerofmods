@@ -1,0 +1,40 @@
+xvcv_mdlc_tech_spirit_energy_theory = {
+    cost = @tier3cost1
+    area = physics
+    tier = 3
+    category = {
+        field_manipulation
+    }
+    prerequisites = {
+        "tech_physics_2"
+    }
+    weight = @tier3weight1
+    potential = {
+        OR = {
+            xvcv_mdlc_synth_empire_trigger = yes
+            has_authority = auth_machine_intelligence
+        }
+    }
+    modifier = {
+        planet_researchers_physics_research_produces_mult = 0.05
+        category_field_manipulation_research_speed_mult = 0.2
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+}

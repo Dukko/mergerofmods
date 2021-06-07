@@ -1,0 +1,2 @@
+﻿l_default:
+ format.dem_war_cul.6:1000 "<democratic_mil_desc> [This.GetAdj] <democratic_mil>"

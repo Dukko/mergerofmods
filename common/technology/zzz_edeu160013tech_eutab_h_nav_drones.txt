@@ -1,0 +1,47 @@
+@tier4cost3 = 10000
+@tier4weight3 = 35
+tech_eutab_h_nav_drones = {
+    cost = @tier4cost3
+    area = engineering
+    tier = 4
+    category = {
+        voidcraft
+    }
+    prerequisites = {
+        "tech_jump_drive_1"
+    }
+    weight = @tier4weight3
+    is_rare = yes
+    potential = {
+        has_authority = auth_hive_mind
+    }
+    modifier = {
+        ship_windup_mult = -0.25
+        ship_ftl_jumpdrive_range_mult = 0.2
+        ship_emergency_ftl_mult = -0.2
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                eu_has_wonders = yes
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+}

@@ -1,0 +1,179 @@
+@base_moon_distance = 6
+intercepting_history_system_initializer_02 = {
+    class = "rl_standard_stars"
+    usage = misc_system_init
+    usage_odds = 0
+    max_instances = 1
+    planet = {
+        count = 1
+        class = star
+        orbit_distance = 0
+        orbit_angle = 1
+        size = {
+            min = @standard_min
+            max = @standard_max
+        }
+        has_ring = no
+    }
+    change_orbit = {
+        min = 40
+        max = 60
+    }
+    planet = {
+        count = 1
+        orbit_angle = {
+            min = 90
+            max = 270
+        }
+        change_orbit = @base_moon_distance
+        moon = {
+            count = {
+                min = 0
+                max = 1
+            }
+            orbit_angle = {
+                min = 90
+                max = 270
+            }
+            orbit_distance = 5
+        }
+    }
+    planet = {
+        count = {
+            min = 0
+            max = 1
+        }
+        orbit_distance = {
+            min = 15
+            max = 20
+        }
+        orbit_angle = {
+            min = 90
+            max = 270
+        }
+        change_orbit = @base_moon_distance
+        moon = {
+            count = {
+                min = 0
+                max = 1
+            }
+            orbit_angle = {
+                min = 90
+                max = 270
+            }
+            orbit_distance = 5
+        }
+    }
+    planet = {
+        class = "pc_continental"
+        orbit_distance = {
+            min = 20
+            max = 25
+        }
+        orbit_angle = {
+            min = 90
+            max = 270
+        }
+        size = 25
+        change_orbit = @base_moon_distance
+        modifiers = none
+        deposit_blockers = none
+        init_effect = {
+            prevent_anomaly = yes
+            create_species = {
+                name = "NAME_ThwaaPhyr"
+                plural = "NAME_ThwaaPhyr"
+                class = random_non_machine
+                portrait = random
+                homeworld = THIS
+                traits = {
+                    trait = "trait_adaptive"
+                    trait = "trait_nomadic"
+                }
+                effect = {
+                }
+            }
+            create_early_primitive_empire = yes
+            setup_primitive_planet = yes
+            last_created_country = {
+                set_country_flag = benefactor_empire
+            }
+            save_global_event_target_as = benefactor_planet
+        }
+    }
+    planet = {
+        count = 1
+        orbit_distance = {
+            min = 25
+            max = 30
+        }
+        orbit_angle = {
+            min = 90
+            max = 270
+        }
+        change_orbit = @base_moon_distance
+        moon = {
+            count = {
+                min = 0
+                max = 1
+            }
+            orbit_angle = {
+                min = 90
+                max = 270
+            }
+            orbit_distance = 5
+        }
+    }
+    planet = {
+        count = 1
+        orbit_distance = {
+            min = 30
+            max = 35
+        }
+        orbit_angle = {
+            min = 90
+            max = 270
+        }
+        change_orbit = @base_moon_distance
+        moon = {
+            count = {
+                min = 0
+                max = 1
+            }
+            orbit_angle = {
+                min = 90
+                max = 270
+            }
+            orbit_distance = 5
+        }
+    }
+    planet = {
+        count = {
+            min = 0
+            max = 1
+        }
+        orbit_distance = {
+            min = 35
+            max = 40
+        }
+        orbit_angle = {
+            min = 90
+            max = 270
+        }
+        change_orbit = @base_moon_distance
+        moon = {
+            count = {
+                min = 0
+                max = 1
+            }
+            orbit_angle = {
+                min = 90
+                max = 270
+            }
+            orbit_distance = 5
+        }
+    }
+    init_effect = {
+        save_global_event_target_as = benefactor_homeworld
+    }
+}

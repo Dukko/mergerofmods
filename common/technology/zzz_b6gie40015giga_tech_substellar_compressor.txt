@@ -1,0 +1,66 @@
+giga_tech_substellar_compressor = {
+    cost = 20000
+    area = physics
+    tier = 4
+    category = {
+        particles
+    }
+    is_rare = yes
+    prerequisites = {
+        "giga_tech_particle_accelerator"
+        "tech_zero_point_power"
+        "giga_tech_engineering_test_site"
+        "tech_mega_engineering"
+    }
+    weight = @tier3weight3
+    prereqfor_desc = {
+        custom = {
+            title = "allow_sub_compressor"
+            desc = "desc_sub_compressor"
+        }
+    }
+    modifier = {
+        planet_jobs_energy_produces_mult = 0.05
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+        modifier = {
+            factor = 0
+            has_utopia = no
+        }
+        modifier = {
+            factor = 1.5
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = 2
+            has_federation = yes
+            federation = {
+                has_federation_perk = rare_tech_boost
+                any_member = {
+                    has_technology = giga_tech_substellar_compressor
+                }
+            }
+        }
+    }
+    ai_weight = {
+        factor = @giga_aiweight_multiplier
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+        modifier = {
+            factor = 0
+            has_utopia = no
+        }
+    }
+}

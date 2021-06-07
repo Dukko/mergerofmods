@@ -1,0 +1,72 @@
+"Deneb Star Corps" = {
+    key = "Deneb Star Corps"
+    ship_prefix = "DSC"
+    species = {
+        class = "HUM"
+        portrait = "human"
+        name = "Human"
+        plural = "Humans"
+        adjective = "Human"
+        species_bio = "Arriving in the Deneb System as the only survivors of a perilous journey through an unstable wormhole, the ancestors of these Humans set down upon a world teeming with extremely hostile life. The veterans among them quickly rose to positions of colonial leadership. As their burgeoning society fought for its very existence, a military survivalist mindset came to dominate their approach to everything. In time, this philosophy ensured the successful colonization of Eurotas and underwrote the foundation of the Deneb Star Corps. Eurotasians almost universally enlist at the age of ten for a twenty year term of service with the Corps, after which they are granted the full rights of a veteran, including the power to vote and own property."
+        name_list = "just-name-lists_human5"
+        trait = "trait_quick_learners"
+        trait = "trait_resilient"
+    }
+    name = "Deneb Star Corps"
+    adjective = "Deneb"
+    authority = "auth_direct_democratic"
+    flags = {
+        "deneb_star_corps"
+        "custom_start_screen"
+        "deneb_star_corps"
+        "custom_start_screen"
+    }
+    government = "gov_citizen_republic"
+    advisor_voice_type = "l_the_soldier"
+    planet_name = "Eurotas"
+    planet_class = "pc_continental"
+    system_name = "Deneb"
+    initializer = "deneb_system"
+    graphical_culture = "humanoid_01"
+    city_graphical_culture = "humanoid_01"
+    empire_flag = {
+        icon = {
+            category = "just-more-flags"
+            file = "flag_deneb_star_corps.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "fabric_circle.dds"
+        }
+        colors = {
+            "dark_grey"
+            "red"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = female
+        name = "Renata Vasquez"
+        portrait = "human_female_03"
+        texture = 0
+        hair = 7
+        clothes = 6
+        ruler_title = "Commandant"
+        ruler_title_female = "Commandant"
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "command1_room"
+    spawn_enabled = yes
+    ethic = "ethic_fanatic_egalitarian"
+    ethic = "ethic_fanatic_militarist"
+    ethic = "ethic_capitalism"
+    civics = {
+        "civic_citizen_service"
+        "civic_warrior_culture"
+        "civic_naval_traditions"
+    }
+    origin = "origin_mom_wormhole_junction"
+}

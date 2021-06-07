@@ -1,0 +1,50 @@
+tech_nanite_hull = {
+    cost = @tier5cost3
+    area = engineering
+    tier = 5
+    category = {
+        voidcraft
+    }
+    ai_update_type = military
+    prerequisites = {
+        "tech_nanite_ships"
+    }
+    weight = @tier5weight3
+    is_reverse_engineerable = yes
+    is_rare = yes
+    potential = {
+        has_global_flag = l_cluster_opened
+        has_resource = {
+            type = nanites
+            amount > 0
+        }
+        NOT = {
+            has_global_flag = ESC_weapons_nanite_forbidden
+        }
+        OR = {
+            NOT = {
+                has_global_flag = distar_overhaul_mod_active
+            }
+            has_technology = tech_orbital_nanite_shipyard
+        }
+    }
+    modifier = {
+        ship_hull_mult = 0.2
+        ship_armor_mult = 0.2
+        ship_hull_regen_add_static = 0.5
+        ship_armor_regen_add_static = 1
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            has_monthly_income = {
+                resource = nanites
+                value < 1
+            }
+            resource_stockpile_compare = {
+                resource = nanites
+                value < 300
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+trait_exoskeleton = {
+    cost = 0
+    sorting_priority = 19
+    initial = no
+    randomized = no
+    modification = no
+    modifier = {
+        planet_jobs_minerals_produces_mult = 0.1
+        planet_jobs_food_produces_mult = 0.1
+    }
+    potential_crossbreeding_chance = 1
+    icon = "gfx/interface/icons/traits/trait_exoskeleton.dds"
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+}

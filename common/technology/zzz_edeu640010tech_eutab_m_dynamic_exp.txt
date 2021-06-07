@@ -1,0 +1,46 @@
+@tier4cost1 = 6000
+@tier4weight1 = 45
+tech_eutab_m_dynamic_exp = {
+    cost = @tier4cost1
+    area = society
+    tier = 4
+    category = {
+        statecraft
+    }
+    prerequisites = {
+        "tech_autonomous_agents"
+    }
+    weight = @tier4weight1
+    is_rare = yes
+    potential = {
+        has_authority = auth_machine_intelligence
+    }
+    modifier = {
+        planet_max_districts_mult = 0.1
+        planet_max_buildings_add = 1
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = ap_imperial_prerogative
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+}

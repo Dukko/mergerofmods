@@ -1,0 +1,7 @@
+random_list = {
+    name = "rl_habitable_special"
+    planets = {
+        "pc_gaia"
+        "pc_nuked"
+    }
+}

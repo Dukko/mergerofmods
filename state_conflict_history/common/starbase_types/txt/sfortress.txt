@@ -1,0 +1,264 @@
+sfortress = {
+    potential = {
+        has_starbase_size > starbase_outpost
+        OR = {
+            has_starbase_module = gun_battery
+            has_starbase_module = missile_battery
+            has_starbase_module = hangar_bay
+        }
+    }
+    weight_modifier = {
+        base = 75
+        modifier = {
+            add = 75
+            count_starbase_modules = {
+                type = gun_battery
+                count > 0
+            }
+        }
+        modifier = {
+            add = 75
+            count_starbase_modules = {
+                type = gun_battery
+                count > 1
+            }
+        }
+        modifier = {
+            add = 75
+            count_starbase_modules = {
+                type = gun_battery
+                count > 2
+            }
+        }
+        modifier = {
+            add = 75
+            count_starbase_modules = {
+                type = gun_battery
+                count > 3
+            }
+        }
+        modifier = {
+            add = 75
+            count_starbase_modules = {
+                type = gun_battery
+                count > 4
+            }
+        }
+        modifier = {
+            add = 75
+            count_starbase_modules = {
+                type = gun_battery
+                count > 5
+            }
+        }
+        modifier = {
+            add = 75
+            count_starbase_modules = {
+                type = missile_battery
+                count > 0
+            }
+        }
+        modifier = {
+            add = 75
+            count_starbase_modules = {
+                type = missile_battery
+                count > 1
+            }
+        }
+        modifier = {
+            add = 75
+            count_starbase_modules = {
+                type = missile_battery
+                count > 2
+            }
+        }
+        modifier = {
+            add = 75
+            count_starbase_modules = {
+                type = missile_battery
+                count > 3
+            }
+        }
+        modifier = {
+            add = 75
+            count_starbase_modules = {
+                type = missile_battery
+                count > 4
+            }
+        }
+        modifier = {
+            add = 75
+            count_starbase_modules = {
+                type = missile_battery
+                count > 5
+            }
+        }
+        modifier = {
+            add = 75
+            count_starbase_modules = {
+                type = hangar_bay
+                count > 0
+            }
+        }
+        modifier = {
+            add = 75
+            count_starbase_modules = {
+                type = hangar_bay
+                count > 1
+            }
+        }
+        modifier = {
+            add = 75
+            count_starbase_modules = {
+                type = hangar_bay
+                count > 2
+            }
+        }
+        modifier = {
+            add = 75
+            count_starbase_modules = {
+                type = hangar_bay
+                count > 3
+            }
+        }
+        modifier = {
+            add = 75
+            count_starbase_modules = {
+                type = hangar_bay
+                count > 4
+            }
+        }
+        modifier = {
+            add = 75
+            count_starbase_modules = {
+                type = hangar_bay
+                count > 5
+            }
+        }
+    }
+    ai_design = {
+        min = {
+            base = 0
+        }
+        ratio = {
+            base = 0.25
+            modifier = {
+                add = 0.1
+                exists = owner
+                owner = {
+                    has_ethic = ethic_militarist
+                }
+            }
+            modifier = {
+                add = 0.1
+                exists = owner
+                owner = {
+                    has_ethic = ethic_fanatic_militarist
+                }
+            }
+        }
+        buildings = {
+            crew_quarters = {
+                base = 1
+            }
+            drydock = {
+                base = 0.6
+            }
+            fleet_academy = {
+                base = 0.6
+            }
+            naval_logistics_office = {
+                base = 0.6
+            }
+            titan_yards = {
+                base = 0.6
+            }
+            colossus_yards = {
+                base = 0.6
+            }
+            listening_post = {
+                base = 1
+            }
+            sensor_station = {
+                base = 0.8
+            }
+            reinforced_defenses = {
+                base = 0.8
+            }
+            strategic_defenses = {
+                base = 0.8
+            }
+            emergency_portal = {
+                base = 0.2
+            }
+            target_uplink_computer = {
+                base = 1
+            }
+            command_center = {
+                base = 1
+            }
+            defense_grid = {
+                base = 1
+            }
+            communications_jammer = {
+                base = 1
+            }
+            disruption_field = {
+                base = 1
+            }
+            warp_fluctuator = {
+                base = 1
+            }
+            deep_space_black_site = {
+                base = 1
+            }
+            orbital_assembly = {
+                base = 0.6
+            }
+            chain_manufacturing = {
+                base = 0.6
+            }
+            construction_planificator = {
+                base = 0.6
+            }
+            mining_base = {
+                base = 0.6
+            }
+            power_station = {
+                base = 0.6
+            }
+            farming_base = {
+                base = 0.6
+            }
+        }
+        modules = {
+            hangar_bay = {
+                base = 0.2
+            }
+            gun_battery = {
+                base = 0.8
+            }
+            missile_battery = {
+                base = 0.8
+            }
+            large_battery = {
+                base = 0.8
+            }
+            pd_battery = {
+                base = 0.6
+            }
+            xl_battery = {
+                base = 1
+            }
+            titanic_battery = {
+                base = 1
+            }
+            shield_module = {
+                base = 1
+            }
+            armor_module = {
+                base = 1
+            }
+        }
+    }
+}

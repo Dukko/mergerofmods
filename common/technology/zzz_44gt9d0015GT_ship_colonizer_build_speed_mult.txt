@@ -1,0 +1,36 @@
+GT_ship_colonizer_build_speed_mult = {
+    cost = @tier2cost3
+    area = society
+    tier = 2
+    category = {
+        new_worlds
+    }
+    prerequisites = {
+        "tech_colonial_centralization"
+    }
+    weight = @tier3weight3
+    potential = {
+        is_ai = no
+    }
+    modifier = {
+        shipsize_colonizer_build_speed_mult = 0.33
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+}

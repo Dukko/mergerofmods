@@ -1,0 +1,67 @@
+@apsr1part3cost_minerals = 10000
+@apsr1part3cost_time = 1500
+@apsr1part3upkeep_energy = 25
+@apsr1part3upkeep_minerals = 15
+@apsr1part3job = 10
+apsr1_building_part3 = {
+    base_buildtime = @apsr1part3cost_time
+    icon = apsr1_building_part3
+    is_capped_by_modifier = no
+    category = government
+    can_build = no
+    potential = {
+        has_modifier = "apsr1_planet_modifier"
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_apsr1_custodian_hive_add = @apsr1part3job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_apsr1_custodian_machine_add = @apsr1part3job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_apsr1_custodian_normal_add = @apsr1part3job
+        }
+    }
+    resources = {
+        category = planet_apsr_buildings
+        cost = {
+            minerals = @apsr1part3cost_minerals
+        }
+        upkeep = {
+            energy = @apsr1part3upkeep_energy
+            minerals = @apsr1part3upkeep_minerals
+        }
+    }
+    prerequisites = {
+        "tech_apsr1_building_part3"
+    }
+    allow = {
+        has_major_upgraded_capital = yes
+    }
+    ai_weight = {
+        weight = 50000
+    }
+}

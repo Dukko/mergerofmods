@@ -1,0 +1,302 @@
+pw_building_living_spire_1 = {
+    base_buildtime = @pw_building_buildtime
+    position_priority = 85
+    category = amenity
+    can_be_ruined = no
+    can_build = no
+    prerequisites = {
+        pw_tech_living_spire
+    }
+    show_tech_unlock_if = {
+        always = no
+    }
+    potential = {
+        exists = owner
+        owner = {
+            is_gestalt = no
+        }
+        OR = {
+            NOT = {
+                is_planet_class = pc_habitat
+            }
+            owner = {
+                has_ascension_perk = ap_voidborn
+            }
+        }
+    }
+    allow = {
+        owner = {
+            has_ascension_perk = pw_ap_planetary_wonders
+        }
+        has_major_upgraded_capital = yes
+    }
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            owner = {
+                is_gestalt = yes
+            }
+            owner = {
+                NOT = {
+                    has_technology = pw_tech_living_spire
+                }
+            }
+        }
+    }
+    convert_to = {
+        building_communal_housing_large
+        building_paradise_dome
+        building_expanded_warren
+        building_drone_megastorage
+    }
+    upgrades = {
+        pw_building_living_spire_2
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @pw_building_cost_half
+            alloys = @pw_building_cost_rare
+            volatile_motes = @pw_building_cost_rare
+        }
+        cost = {
+            trigger = {
+                planet = {
+                    pw_has_any_planetary_wonder = yes
+                }
+            }
+            minerals = @pw_building_cost_extra_half
+        }
+        upkeep = {
+            energy = @pw_building_upkeep_half
+            volatile_motes = @pw_building_upkeep_rare_1
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    pw_has_any_additional_planetary_wonder = yes
+                }
+            }
+            energy = @pw_building_upkeep_extra_half
+        }
+    }
+    planet_modifier = {
+        planet_max_districts_add = -1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            NOR = {
+                is_planet_class = pc_ringworld_habitable
+                is_planet_class = pc_habitat
+                is_planet_class = pc_city
+            }
+        }
+        modifier = {
+            planet_housing_add = 5
+            job_clerk_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            is_planet_class = pc_habitat
+        }
+        modifier = {
+            planet_housing_add = 4
+            job_clerk_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            is_planet_class = pc_city
+        }
+        modifier = {
+            planet_housing_add = 10
+            job_clerk_add = 4
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            is_planet_class = pc_ringworld_habitable
+        }
+        modifier = {
+            planet_housing_add = 20
+            job_clerk_add = 8
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_megacorp = no
+            }
+        }
+        modifier = {
+            job_administrator_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_megacorp = yes
+            }
+        }
+        modifier = {
+            job_executive_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            NOT = {
+                owner = {
+                    has_ascension_perk = ap_synthetic_evolution
+                }
+            }
+        }
+        modifier = {
+            job_healthcare_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ascension_perk = ap_synthetic_evolution
+            }
+        }
+        modifier = {
+            job_roboticist_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_edict = pw_ambition_monumentality
+            }
+        }
+        modifier = {
+            planet_stability_add = @pw_stability_production
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_edict = pw_ambition_wonders_beyond_ambition
+            }
+        }
+        modifier = {
+            planet_housing_mult = 0.05
+        }
+    }
+    triggered_desc = {
+        text = pw_planet_wonder_lb
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_megacorp = no
+            }
+        }
+        text = job_administrator_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_megacorp = yes
+            }
+        }
+        text = job_executive_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            NOT = {
+                owner = {
+                    has_ascension_perk = ap_synthetic_evolution
+                }
+            }
+        }
+        text = job_healthcare_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                has_ascension_perk = ap_synthetic_evolution
+            }
+        }
+        text = job_roboticist_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+        }
+        text = job_clerk_effect_desc
+    }
+    ai_weight = {
+        weight = 60
+        modifier = {
+            factor = 0
+            OR = {
+                buildings_has_exotic_gases = no
+                buildings_has_crystals = no
+                buildings_has_motes = no
+            }
+            building_relaxed_basic_income_check = no
+        }
+        modifier = {
+            factor = 0.25
+            free_building_slots < 1
+            free_district_slots < 1
+        }
+        modifier = {
+            factor = 0.25
+            pw_has_any_planetary_wonder = yes
+            exists = owner
+            NOT = {
+                owner = {
+                    has_ascension_perk = pw_ap_planetary_wonders
+                }
+            }
+            NOT = {
+                has_active_building = pw_building_living_spire_1
+            }
+            NOT = {
+                has_building_construction = pw_building_living_spire_1
+            }
+        }
+        modifier = {
+            factor = 2
+            is_sector_capital = yes
+        }
+        modifier = {
+            factor = 4
+            is_capital = yes
+        }
+        modifier = {
+            factor = 2
+            free_housing < 5
+        }
+        modifier = {
+            factor = 2
+            free_housing < 1
+        }
+        modifier = {
+            factor = 2
+            num_pops > 50
+        }
+        modifier = {
+            factor = 1.5
+            num_pops < 100
+        }
+        modifier = {
+            factor = 1.5
+            num_pops < 150
+        }
+    }
+}

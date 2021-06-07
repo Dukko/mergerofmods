@@ -1,0 +1,71 @@
+@hab_cost = 500
+district_starborn_starting_solar = {
+    base_buildtime = 240
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        is_planet_class = pc_starborn_habitat_start
+        has_retile = no
+    }
+    potential = {
+        is_planet_class = pc_starborn_habitat_start
+        has_retile = no
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @hab_cost
+        }
+        upkeep = {
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_starborn_solar_technician_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        job_technician_drone_add = 3
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        job_technician_drone_add = 4
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        text = job_starborn_solar_technician_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_technician_drone_effect_desc
+    }
+}

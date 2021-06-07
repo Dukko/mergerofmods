@@ -1,0 +1,75 @@
+namespace = action
+planet_event = {
+    id = action.21
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        FROMFROM = {
+            is_robot_pop = no
+            is_sapient = yes
+            NOT = {
+                has_trait = "trait_hive_mind"
+            }
+            NAND = {
+                    has_citizenship_type = {
+                        country = from
+                        type = citizenship_purge
+                    }
+                has_purge_type = {
+                    country = from
+                    type = purge_neutering
+                }
+                }
+                NOT = {
+                    has_purge_type = {
+                        country = from
+                    type = purge_necrophage
+                    }
+                }
+            }
+        is_controlled_by = FROM
+    }
+    immediate = {
+        every_country = {
+            limit = {
+                has_communications = FROM
+                NOR = {
+                    is_country = FROM
+                    is_same_species = FROMFROM
+                    has_ai_personality_behaviour = purger
+                }
+                OR = {
+                    is_country_type = default
+                    has_ai_personality = awakened_fallen_empire_xenophile
+                }
+                has_intel_level = {
+                    who = FROM
+                    category = economy
+                    level >= 1
+                }
+            }
+            add_opinion_modifier = {
+                who = FROM
+                modifier = opinion_genocidal
+            }
+        }
+        every_country = {
+            limit = {
+                has_communications = FROM
+                NOT = {
+                    is_country = FROM
+                }
+                is_same_species = FROMFROM
+                has_intel_level = {
+                    who = FROM
+                    category = economy
+                    level >= 1
+                }
+            }
+            add_opinion_modifier = {
+                who = FROM
+                modifier = opinion_genocidal_our_species
+            }
+        }
+    }
+}

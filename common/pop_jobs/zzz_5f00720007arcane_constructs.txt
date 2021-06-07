@@ -1,0 +1,38 @@
+arcane_constructs = {
+    category = worker
+    is_capped_by_modifier = no
+    icon = servant
+    building_icon = building_tw_academy
+    possible = {
+        hidden_trigger = {
+            exists = owner
+        }
+        owner = {
+            OR = {
+                has_valid_civic = civic_kaldorei_castes
+            }
+        }
+        NOR = {
+            has_trait = trait_highborne
+            has_trait = trait_kaldorei_tw
+        }
+        OR = {
+            has_trait = trait_mechanical
+        }
+    }
+    resources = {
+        category = planet_jobs
+        produces = {
+            unity = 1
+        }
+    }
+    planet_modifier = {
+        planet_amenities_add = 5
+        planet_crime_add = -5
+    }
+    pop_modifier = {
+    }
+    weight = {
+        weight = 0.1
+    }
+}

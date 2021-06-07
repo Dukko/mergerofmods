@@ -1,0 +1,33 @@
+tech_thermal_borehole = {
+    cost = @tier3cost1
+    area = engineering
+    tier = 3
+    category = {
+        industry
+    }
+    prerequisites = {
+        "tech_mining_3"
+    }
+    weight = @tier3weight1
+    potential = {
+        has_valid_civic = civic_industrial_economy
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+}

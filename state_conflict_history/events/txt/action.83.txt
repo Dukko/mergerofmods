@@ -1,0 +1,14 @@
+namespace = action
+country_event = {
+    id = action.83
+    title = "action.82.name"
+    picture = GFX_evt_nuclear_explosion
+    desc = action.83.desc
+    show_sound = event_super_explosion
+    location = from
+    is_triggered_only = yes
+    option = {
+        name = EXCELLENT
+        custom_tooltip = bombed_to_tomb_world
+    }
+}

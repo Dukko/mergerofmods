@@ -1,0 +1,33 @@
+tech_nanites_assembler_factory = {
+    area = engineering
+    cost = 20000
+    tier = 2
+    is_rare = yes
+    category = {
+        industry
+    }
+    weight = 50
+    is_reverse_engineerable = no
+    prerequisites = {
+        "tech_nanite_clouds"
+    }
+    ai_weight = {
+        factor = 0.5
+        modifier = {
+            factor = 0
+            NOR = {
+                has_authority = auth_hive_mind
+                has_ethic = ethic_spiritualist
+                has_ethic = ethic_fanatic_spiritualist
+            }
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                has_authority = auth_machine_intelligence
+                has_ethic = ethic_materialists
+                has_ethic = ethic_fanatic_materialists
+            }
+        }
+    }
+}

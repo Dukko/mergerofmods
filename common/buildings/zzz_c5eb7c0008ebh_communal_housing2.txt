@@ -1,0 +1,97 @@
+@ebh_min3 = 800
+@ebh_sr2 = 100
+@ebh_upkeep2 = 2
+@ebh_upkeep4 = 4
+ebh_communal_housing2 = {
+    base_buildtime = @b1_time
+    can_build = no
+    category = amenity
+    potential = {
+        OR = {
+            NOT = {
+                is_planet_class = pc_habitat
+            }
+            has_planet_flag = advanced_habitat
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+        exists = owner
+        owner = {
+            is_regular_empire = yes
+            has_valid_civic = civic_shared_burden
+        }
+    }
+    allow = {
+        buildings_simple_allow = yes
+    }
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            AND = {
+                owner = {
+                    is_ai = yes
+                }
+                free_building_slots = 0
+                free_jobs < 1
+                free_housing > 10
+            }
+            AND = {
+                is_planet_class = pc_habitat
+                NOT = {
+                    has_planet_flag = advanced_habitat
+                }
+            }
+            has_modifier = slave_colony
+            NOT = {
+                owner = {
+                    is_regular_empire = yes
+                    has_valid_civic = civic_shared_burden
+                }
+            }
+        }
+    }
+    convert_to = {
+        ebh_drone_storage2
+        ebh_hive_warren2
+        ebh_luxury_residence2
+    }
+    planet_modifier = {
+        planet_housing_add = 15
+        planet_amenities_add = 9
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_non_swapped_tradition = tr_domination_imperious_architecture
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @ebh_min3
+            rare_crystals = @ebh_sr2
+        }
+        upkeep = {
+            energy = @ebh_upkeep4
+            rare_crystals = @ebh_upkeep2
+        }
+    }
+    prerequisites = {
+        "tech_housing_2"
+    }
+    upgrades = {
+        "building_communal_housing_large"
+    }
+    show_tech_unlock_if = {
+        owner = {
+            is_regular_empire = yes
+            has_valid_civic = civic_shared_burden
+        }
+    }
+}

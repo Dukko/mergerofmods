@@ -1,0 +1,13 @@
+tech_starbase_capacity = {
+    cost = 10000
+    area = society
+    category = {
+        new_worlds
+    }
+    tier = 2
+    is_rare = yes
+    weight = 0
+    modifier = {
+        country_starbase_capacity_add = 10
+    }
+}

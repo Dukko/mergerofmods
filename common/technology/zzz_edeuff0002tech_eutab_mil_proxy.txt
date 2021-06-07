@@ -1,0 +1,58 @@
+@tier3cost2 = 5000
+@tier3weight2 = 60
+tech_eutab_mil_proxy = {
+    cost = @tier3cost2
+    area = society
+    tier = 3
+    prerequisites = {
+        "tech_galactic_bureaucracy"
+        "tech_combat_training"
+    }
+    category = {
+        military_theory
+    }
+    weight = @tier3weight2
+    is_rare = yes
+    potential = {
+        eu_req_mil = yes
+    }
+    gateway = eu_dominion
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = ap_interstellar_dominion
+            }
+        }
+        modifier = {
+            factor = 0
+            calc_true_if = {
+                amount = 2
+                has_technology = tech_eutab_blood_soil
+                has_technology = tech_eutab_psychohistory
+                has_technology = tech_eutab_terra_viruses
+                has_technology = tech_eutab_cultural_exchanges
+                has_technology = tech_eutab_mil_proxy
+                has_technology = tech_eutab_peace_envoy
+                has_technology = tech_eutab_self_sus_fleets
+                has_technology = tech_eutab_power_societies
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+    }
+}

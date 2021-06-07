@@ -1,0 +1,144 @@
+deep_miner = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_crystal_mines
+    clothes_texture_index = 3
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible = {
+        complex_specialist_job_check_trigger = yes
+    }
+    resources = {
+        category = planet_miners
+        produces = {
+            trigger = {
+                owner = {
+                    is_gestalt = no
+                }
+            }
+            minerals = 3
+            energy = 2
+            engineering_research = 1
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    is_gestalt = yes
+                }
+            }
+            exotic_gases = 1
+            volatile_motes = 1
+            rare_crystals = 1
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_mineral_purification_plant
+                }
+            }
+            minerals = 1
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_mineral_purification_hub
+                }
+            }
+            minerals = 2
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    is_gestalt = no
+                }
+            }
+            consumer_goods = 2
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    is_gestalt = yes
+                }
+            }
+            energy = 1
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_edict = mining_subsidies
+                }
+            }
+            energy = 0.5
+        }
+    }
+    weight = {
+        weight = @specialist_job_weight
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+                has_trait = trait_industrious
+                has_trait = trait_robot_power_drills
+                has_trait = trait_natural_engineers
+            }
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                is_non_sapient_robot = yes
+                is_shackled_robot = yes
+            }
+            can_take_servant_job = no
+            owner = {
+                has_technology = tech_droid_workers
+            }
+        }
+        modifier = {
+            factor = 10
+            OR = {
+                is_non_sapient_robot = yes
+                is_shackled_robot = yes
+            }
+            can_take_servant_job = no
+            owner = {
+                NOT = {
+                    has_technology = tech_droid_workers
+                }
+            }
+        }
+        modifier = {
+            factor = 0.25
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 1.5
+            has_job = deep_miner
+        }
+        modifier = {
+            factor = 1.2
+            has_trait = trait_very_strong
+        }
+        modifier = {
+            factor = 1.1
+            has_trait = trait_strong
+        }
+        modifier = {
+            factor = 0.9
+            has_trait = trait_weak
+        }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = specialist
+        }
+    }
+}

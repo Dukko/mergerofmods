@@ -1,0 +1,30 @@
+mem_primitive_warrior_2 = {
+    category = specialist
+    is_capped_by_modifier = yes
+    building_icon = building_residence
+    clothes_texture_index = 2
+    icon = primitive_warrior_2
+    possible = {
+        hidden_trigger = {
+            exists = owner
+        }
+        owner = {
+            is_primitive = yes
+            has_country_flag = mem_use_custom_primitive_buildings
+        }
+    }
+    pop_modifier = {
+        pop_defense_armies_add = 3
+    }
+    weight = {
+        weight = 2
+        modifier = {
+            factor = 6
+            is_militarist = yes
+        }
+        modifier = {
+            factor = 0
+            is_pacifist = yes
+        }
+    }
+}

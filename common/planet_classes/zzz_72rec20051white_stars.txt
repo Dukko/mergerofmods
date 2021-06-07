@@ -1,0 +1,7 @@
+random_list = {
+    name = "white_stars"
+    planets = {
+        "pc_a_star"
+        "pc_f_star"
+    }
+}

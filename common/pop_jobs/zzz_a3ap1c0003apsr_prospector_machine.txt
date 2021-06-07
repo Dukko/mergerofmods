@@ -1,0 +1,23 @@
+apsr_prospector_machine = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_machine_capital
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        drone_job_check_trigger = yes
+    }
+    resources = {
+        category = apsr_planet_prospector_machine
+        produces = {
+            apsr_knowledge = 2
+        }
+    }
+    weight = {
+        weight = 200
+    }
+}

@@ -1,0 +1,67 @@
+"Vul Straag Brethren Council" = {
+    key = "Vul Straag Brethren Council"
+    ship_prefix = ""
+    species = {
+        class = "MAM"
+        portrait = "mam8"
+        name = "Vul Straag"
+        plural = "Vul Straags"
+        adjective = "Vul Straagan"
+        species_bio = "Metal."
+        name_list = "just-name-lists_mammalian2"
+        trait = "trait_industrious"
+        trait = "trait_strong"
+        trait = "trait_quarrelsome"
+        trait = "trait_deviants"
+        trait = "trait_resilient"
+    }
+    name = "Vul Straag Brethren Council"
+    adjective = "Vul Straagan"
+    authority = "auth_democratic"
+    government = "gov_assembly_of_clans"
+    planet_name = "Dezt"
+    planet_class = "pc_tidallylocked"
+    system_name = "Urloche"
+    initializer = ""
+    graphical_culture = "mammalian_01"
+    city_graphical_culture = "mammalian_01"
+    empire_flag = {
+        icon = {
+            category = "just-more-flags"
+            file = "flag_militarist7.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "fabric_rising.dds"
+        }
+        colors = {
+            "dark_grey"
+            "black"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = male
+        name = "Regolid had'Marn"
+        portrait = "mam8"
+        texture = 0
+        hair = 0
+        clothes = 4
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "stargate1_room"
+    spawn_enabled = yes
+    ethic = "ethic_xenophobe"
+    ethic = "ethic_fanatic_militarist"
+    ethic = "ethic_materialist"
+    ethic = "ethic_capitalism"
+    civics = {
+        "civic_warrior_culture"
+        "civic_mining_guilds"
+        "civic_military_industry"
+    }
+    origin = "origin_mechanists"
+}

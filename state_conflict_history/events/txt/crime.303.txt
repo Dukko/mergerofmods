@@ -1,0 +1,40 @@
+namespace = crime
+planet_event = {
+    id = crime.303
+    title = crime.303.name
+    desc = crime.303.desc
+    picture = GFX_evt_dark_alley
+    show_sound = event_criminal_activity
+    location = root
+    pre_triggers = {
+        has_owner = yes
+    }
+    trigger = {
+        has_modifier = mob_rule
+        exists = sector
+        sector = {
+            exists = leader
+        }
+    }
+    is_triggered_only = yes
+    immediate = {
+        sector = {
+            leader = {
+                save_event_target_as = governor_target
+            }
+        }
+        owner = {
+            set_country_flag = gangsters_killed_governor
+        }
+    }
+    option = {
+        name = crime.303.a
+        sector = {
+            leader = {
+                kill_leader = {
+                    show_notification = no
+                }
+            }
+        }
+    }
+}

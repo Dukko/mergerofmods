@@ -1,0 +1,37 @@
+civic_peaceful_republic = {
+    potential = {
+        ethics = {
+            NOT = {
+                value = ethic_gestalt_consciousness
+            }
+        }
+        authority = {
+            NOR = {
+                value = auth_corporate
+                value = auth_corporate_imperial
+            }
+        }
+    }
+    possible = {
+        ethics = {
+            value = ethic_fanatic_pacifist
+        }
+        authority = {
+            OR = {
+                value = auth_democratic
+                value = auth_direct_democratic
+                value = auth_strict_democratic
+                value = auth_democratic_dictatorship
+                value = auth_dem_dict_dummy
+            }
+        }
+    }
+    random_weight = {
+        base = 5
+    }
+    modifier = {
+        pop_factions_produces_mult = 0.2
+        planet_crime_add = -15
+        country_war_exhaustion_mult = 0.25
+    }
+}

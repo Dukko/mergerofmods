@@ -1,0 +1,47 @@
+@ebh_min5 = 1200
+@ebh_sr4 = 300
+@ebh_upkeep4 = 4
+@ebh_upkeep6 = 6
+ebh_drone_megastorage = {
+    base_buildtime = @b1_time
+    can_build = no
+    category = amenity
+    allow = {
+        has_upgraded_capital = yes
+    }
+    potential = {
+        has_building = building_drone_megastorage
+    }
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            owner = {
+                is_machine_empire = no
+            }
+            buildings_no_crystals = yes
+        }
+    }
+    convert_to = {
+        ebh_paradise_dome
+        ebh_expanded_warren
+        ebh_communal_housing_large
+    }
+    planet_modifier = {
+        planet_housing_add = 20
+        planet_amenities_add = 15
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @ebh_min5
+            rare_crystals = @ebh_sr4
+        }
+        upkeep = {
+            energy = @ebh_upkeep6
+            rare_crystals = @ebh_upkeep4
+        }
+    }
+    prerequisites = {
+        "ebh_machine_housing_2"
+    }
+}

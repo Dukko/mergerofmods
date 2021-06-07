@@ -1,0 +1,34 @@
+building_rare_processing = {
+    base_buildtime = 720
+    potential = {
+        exists = planet
+        NOT = {
+            has_modifier = slave_colony
+        }
+        has_modifier = harsh_shroud
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 500
+            energy = 500
+            sr_zro = 200
+            yin = 50
+        }
+        produces = {
+            rare_crystals = 4
+            exotic_gases = 4
+            volatile_motes = 4
+            alloys = 20
+            consumer_goods = 20
+        }
+        upkeep = {
+            energy = 40
+            sr_zro = 10
+            yin = 5
+        }
+    }
+    ai_weight = {
+        factor = 50
+    }
+}

@@ -1,0 +1,37 @@
+osom_tech_speleology_3 = {
+    cost = @tier3cost1
+    area = engineering
+    tier = 3
+    category = {
+        industry
+    }
+    prerequisites = {
+        "osom_tech_speleology_2"
+    }
+    weight = @tier3weight1
+    modifier = {
+        description = osom_tech_speleology_3_effect
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 10
+            has_origin = osom_origin_subterranean
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+}

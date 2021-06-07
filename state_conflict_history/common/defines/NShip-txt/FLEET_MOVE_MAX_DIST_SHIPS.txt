@@ -1,0 +1,3 @@
+NShip = {
+    FLEET_MOVE_MAX_DIST_SHIPS = 30
+}

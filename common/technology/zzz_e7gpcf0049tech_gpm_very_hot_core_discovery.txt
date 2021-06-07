@@ -1,0 +1,17 @@
+tech_gpm_very_hot_core_discovery = {
+    area = physics
+    cost = @tier2cost1
+    category = {
+        particles
+    }
+    tier = 2
+    is_rare = no
+    ai_update_type = all
+    weight = 1
+    modifier = {
+        terraform_speed_mult = 0.25
+    }
+    weight_modifier = {
+        factor = 0
+    }
+}

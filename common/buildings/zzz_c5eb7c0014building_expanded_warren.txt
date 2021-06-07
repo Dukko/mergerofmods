@@ -1,0 +1,64 @@
+@ebh_min4 = 1000
+@ebh_sr3 = 200
+@ebh_upkeep3 = 3
+@ebh_upkeep5 = 5
+building_expanded_warren = {
+    base_buildtime = @b1_time
+    can_build = no
+    category = amenity
+    potential = {
+        has_building = ebh_hive_warren2
+    }
+    allow = {
+        has_upgraded_capital = yes
+        owner = {
+            is_ai = no
+        }
+    }
+    show_tech_unlock_if = {
+        owner = {
+            is_hive_empire = yes
+        }
+    }
+    destroy_trigger = {
+        exists = owner
+        buildings_no_crystals = yes
+    }
+    convert_to = {
+        building_paradise_dome
+        building_drone_megastorage
+        building_communal_housing_large
+    }
+    planet_modifier = {
+        planet_housing_add = 12
+        planet_amenities_add = 20
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_non_swapped_tradition = tr_domination_imperious_architecture
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @ebh_min4
+            rare_crystals = @ebh_sr3
+        }
+        upkeep = {
+            energy = @ebh_upkeep5
+            rare_crystals = @ebh_upkeep3
+        }
+    }
+    prerequisites = {
+        "ebh_hive_housing_1"
+    }
+    upgrades = {
+        "ebh_expanded_warren"
+    }
+}

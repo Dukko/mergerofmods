@@ -1,0 +1,165 @@
+eb_mineral_hab = {
+    base_buildtime = 360
+    category = resource
+    potential = {
+        OR = {
+            is_planet_class = pc_habitat
+            is_planet_class = pc_ringworld_habitable
+            is_planet_class = pc_cybrex
+        }
+        NOT = {
+            has_modifier = resort_colony
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_miner_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+            has_active_building = building_mineral_purification_plant
+        }
+        modifier = {
+            job_miner_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+            planet = {
+                OR = {
+                    AND = {
+                        has_planet_flag = mining_habitat
+                        is_planet_class = pc_habitat
+                    }
+                    is_planet_class = pc_ringworld_habitable
+                    is_planet_class = pc_cybrex
+                }
+            }
+        }
+        modifier = {
+            job_miner_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_mining_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+            has_active_building = building_mineral_purification_plant
+        }
+        modifier = {
+            job_mining_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+            planet = {
+                OR = {
+                    AND = {
+                        has_planet_flag = mining_habitat
+                        is_planet_class = pc_habitat
+                    }
+                    is_planet_class = pc_ringworld_habitable
+                    is_planet_class = pc_cybrex
+                }
+            }
+        }
+        modifier = {
+            job_mining_drone_add = 1
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 300
+        }
+        upkeep = {
+            energy = 2
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                OR = {
+                    is_gestalt = yes
+                    is_regular_empire = yes
+                }
+            }
+            planet = {
+                NOT = {
+                    has_planet_flag = mining_habitat
+                }
+                is_planet_class = pc_habitat
+                NOT = {
+                    is_planet_class = pc_ringworld_habitable
+                }
+                NOT = {
+                    is_planet_class = pc_cybrex
+                }
+            }
+        }
+        text = eb_mineral_hab_bad
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_mining_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        text = job_miner_effect_desc
+    }
+    prerequisites = {
+        tech_mineral_purification_1
+    }
+    upgrades = {
+        "eb_mineral_hab2"
+    }
+    ai_resource_production = {
+        minerals = 1
+        trigger = {
+            always = yes
+        }
+    }
+}

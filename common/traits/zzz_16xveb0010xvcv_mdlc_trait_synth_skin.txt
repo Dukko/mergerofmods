@@ -1,0 +1,23 @@
+xvcv_mdlc_trait_synth_skin = {
+    cost = 0
+    allowed_archetypes = {
+        MACHINE
+        ROBOT
+    }
+    sorting_priority = 20
+    initial = no
+    randomized = no
+    modification = no
+    custom_tooltip = xvcv_mdlc_trait_synth_skin_tooltip
+    modifier = {
+        pop_category_drones_energy_upkeep_add = -1
+        pop_category_workers_energy_upkeep_add = -1
+        pop_category_specialists_energy_upkeep_add = -1
+        pop_category_rulers_energy_upkeep_add = -1
+        pop_category_drones_food_upkeep_add = 1
+        pop_category_workers_food_upkeep_add = 1
+        pop_category_specialists_food_upkeep_add = 1
+        pop_category_rulers_food_upkeep_add = 1
+        planet_pops_upkeep_mult = -0.15
+    }
+}

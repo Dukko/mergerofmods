@@ -1,0 +1,64 @@
+"Atlantean Empire" = {
+    key = "Atlantean Empire"
+    ship_prefix = ""
+    species = {
+        class = "Atlantis"
+        portrait = "humanb"
+        name = "Atlantean"
+        plural = "Atlanteans"
+        adjective = "Atlantean"
+        name_list = "Greek"
+        trait = "trait_tw_gift_titan"
+        trait = "trait_tw_gift_body"
+        trait = "trait_tw_gift_be"
+        trait = "trait_tw_backdraw_atlas"
+    }
+    name = "Atlantean Empire"
+    adjective = "Atlanteans"
+    authority = "auth_oligarchic"
+    government = "gov_atlantis"
+    advisor_voice_type = "l_spiritualist"
+    planet_name = "Atlantis"
+    planet_class = "pc_ocean"
+    system_name = "Chaos"
+    initializer = "atlantis_start_1ee"
+    graphical_culture = "atlantistw"
+    city_graphical_culture = "atlantistw"
+    empire_flag = {
+        icon = {
+            category = "atlantis"
+            file = "d.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "pattern_01.dds"
+        }
+        colors = {
+            "dark_blue"
+            "turquoise"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = male
+        name = "Atlas"
+        portrait = "humanb_male_01"
+        texture = 3
+        hair = 80
+        clothes = 22
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "atlantis_room"
+    spawn_enabled = yes
+    ethic = "ethic_authoritarian"
+    ethic = "ethic_militarist"
+    ethic = "ethic_spiritualist"
+    civics = {
+        "civic_tw_atlantis"
+        "civic_tw_titans"
+    }
+    origin = "origin_tw_titans"
+}

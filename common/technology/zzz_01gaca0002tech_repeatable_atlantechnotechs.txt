@@ -1,0 +1,36 @@
+tech_repeatable_atlantechnotechs = {
+    area = society
+    is_rare = yes
+    cost = @repeatableTechBaseCost
+    cost_per_level = @repeatableTechLevelCost
+    tier = @repeatableTechTier
+    category = {
+        statecraft
+    }
+    levels = -1
+    prerequisites = {
+        "tech_galactic_ambitions"
+    }
+    weight = @repeatableTechWeight
+    potential = {
+        has_civic = civic_tw_atlantis
+        NOT = {
+            is_fallen_empire = yes
+        }
+    }
+    weight_modifier = {
+        factor = @repatableTechFactor
+    }
+    ai_weight = {
+        factor = 1
+    }
+    weight_groups = {
+        repeatable
+    }
+    mod_weight_if_group_picked = {
+        repeatable = 0.01
+    }
+    modifier = {
+        planet_deposits_produces_mult = 0.025
+    }
+}

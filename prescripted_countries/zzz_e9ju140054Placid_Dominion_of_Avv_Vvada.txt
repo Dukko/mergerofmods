@@ -1,0 +1,65 @@
+"Placid Dominion of Avv Vvada" = {
+    key = "Placid Dominion of Avv Vvada"
+    ship_prefix = "AVV"
+    species = {
+        class = "FUN"
+        portrait = "fun10"
+        name = "Tafri"
+        plural = "Tafrim"
+        adjective = "Tafrin"
+        species_bio = "The House of Qamvs, whose members ruled their homeworld of Avv Vvada for two centuries before discovering the hyperlane network, remains the trusted guide and protector of the Tafrin species. The Tafrim place great faith in the power of technology to overcome the challenges in front of them. Facing a population crisis in their late Modern Age, the ruling family invested heavily in spaceflight, opening the planets and stars for exploration and expansion by their ever-wandering and ever-multiplying subjects."
+        name_list = "just-name-lists_humanoid9"
+        trait = "trait_nomadic"
+        trait = "trait_rapid_breeders"
+        trait = "trait_just-more-traits_idle"
+    }
+    name = "Placid Dominion of Avv Vvada"
+    adjective = "Avv Vvadan"
+    authority = "auth_imperial"
+    government = "gov_aristocratic_monarchy"
+    planet_name = "Avv Vvada"
+    planet_class = "pc_biolumen"
+    system_name = "Lavvyl"
+    initializer = ""
+    graphical_culture = "fungoid_01"
+    city_graphical_culture = "fungoid_01"
+    empire_flag = {
+        icon = {
+            category = "just-more-flags"
+            file = "flag_materialist6.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "fabric_x120.dds"
+        }
+        colors = {
+            "light_green"
+            "blue"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = female
+        name = "Zavabb Qamvs"
+        portrait = "fun10"
+        texture = 6
+        hair = 0
+        clothes = 2
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "tech12_room"
+    spawn_enabled = yes
+    ethic = "ethic_authoritarian"
+    ethic = "ethic_xenophile"
+    ethic = "ethic_pacifist"
+    ethic = "ethic_fanatic_materialist"
+    civics = {
+        "civic_aristocratic_elite"
+        "civic_star_settlers"
+        "civic_exploration"
+    }
+    origin = "origin_mechanists"
+}

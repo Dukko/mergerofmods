@@ -1,0 +1,114 @@
+@EarlyRepeatableTechCost = 12000
+@EarlyRepeatableTechLevelCost = 6000
+@EarlyRepatableTechFactor = 0.65
+@RepeatableCategoryFactor = 0.25
+@RepeatableDifferntFactor = 0.5
+@EarlyRepeatableWeight = 13
+@EarlyRepeatableTier = 3
+tech_repeatable_improved_titan = {
+    area = engineering
+    cost = @EarlyRepeatableTechCost
+    cost_per_level = @EarlyRepeatableTechLevelCost
+    tier = @EarlyRepeatableTier
+    category = {
+        voidcraft
+    }
+    levels = -1
+    prerequisites = {
+        "tech_titans"
+    }
+    weight = @EarlyRepeatableWeight
+    weight_modifier = {
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_titan_hull
+                value > 0
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_titan_hull
+                value > 1
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_titan_hull
+                value > 2
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_titan_hull
+                value > 3
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_titan_hull
+                value > 4
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_titan_hull
+                value > 5
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_titan_hull
+                value > 6
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_titan_hull
+                value > 7
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_titan_hull
+                value > 8
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_titan_hull
+                value > 9
+            }
+        }
+    }
+    potential = {
+        NOT = {
+            is_country_type = fallen_empire
+        }
+    }
+    ai_weight = {
+        factor = 1
+    }
+    weight_groups = {
+        ship_repeatable
+    }
+    mod_weight_if_group_picked = {
+        ship_repeatable = @RepeatableCategoryFactor
+    }
+    mod_weight_if_group_picked = {
+        production_repeatable = @RepeatableDifferntFactor
+        job_repeatable = @RepeatableDifferntFactor
+    }
+    modifier = {
+        shipsize_titan_hull_add = 1000
+    }
+}

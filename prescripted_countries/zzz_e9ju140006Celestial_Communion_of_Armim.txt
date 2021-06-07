@@ -1,0 +1,65 @@
+"Celestial Communion of Armim" = {
+    key = "Celestial Communion of Armim"
+    ship_prefix = ""
+    species = {
+        class = "AVI"
+        portrait = "avi6"
+        name = "Z'chel"
+        plural = "Z'cheli"
+        adjective = "Z'chelian"
+        species_bio = "Minor differences in the rituals observed to venerate any one of their tens of thousands of gods once justified brutal wars and atrocities between the ancient Z'chelian empires on the desert world Armim. Five centuries before their first spaceflight, the arrival of a prophet set the foundation for that internecine strife to end. C'Thraan the Starhatched brought a new message of community and tolerance that echoed from the dusty slopes of Mount Yarakatancha to the shores of the Sour Seas. Various Z'chelian national leaders seized on his message in the years after his fabled ascension to the Astral Plane, promoting progressive reforms and ultimately giving birth to the Celestial Communion and the Armim Parliament at the core of its political system. Once riven with internal conflict, as it enters the Interstellar Age, Z'chelian civilization is remarkably united in its spiritual diversity."
+        name_list = "just-name-lists_avian3"
+        trait = "trait_agrarian"
+        trait = "trait_just-more-traits_ritualists"
+        trait = "trait_just-more-traits_sensitive"
+        trait = "trait_slow_learners"
+    }
+    name = "Celestial Communion of Armim"
+    adjective = "Armimic"
+    authority = "auth_democratic"
+    government = "gov_liberal_democracy"
+    planet_name = "Armim"
+    planet_class = "pc_oasis"
+    system_name = "Z'hoan Mazr"
+    initializer = ""
+    graphical_culture = "avian_01"
+    city_graphical_culture = "avian_01"
+    empire_flag = {
+        icon = {
+            category = "just-more-flags"
+            file = "flag_spiritualist7.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "fabric_circle.dds"
+        }
+        colors = {
+            "orange"
+            "brown"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = female
+        name = "T'Maku"
+        portrait = "avi6_f"
+        texture = 1
+        hair = 0
+        clothes = 0
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "desert2_room"
+    spawn_enabled = yes
+    ethic = "ethic_fanatic_egalitarian"
+    ethic = "ethic_fanatic_spiritualist"
+    ethic = "ethic_capitalism"
+    civics = {
+        "civic_beacon_of_liberty"
+        "civic_parliamentary_system"
+        "civic_spiritual_democracy"
+    }
+    origin = "origin_default"
+}

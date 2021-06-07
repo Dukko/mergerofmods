@@ -1,0 +1,21 @@
+trait_strong_immune_system = {
+    cost = 2
+    icon = "gfx/interface/icons/traits/trait_strong_immune_system.dds"
+    initial = no
+    modification = no
+    randomized = no
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    sorting_priority = 15
+    potential_crossbreeding_chance = 0.05
+    modifier = {
+        pop_environment_tolerance = 0.1
+        leader_age = 10
+        pop_growth_speed = 0.05
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

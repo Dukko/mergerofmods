@@ -1,0 +1,46 @@
+action_ask_to_leave_federation = {
+    icon = "GFX_diplomacy_status_federation"
+    auto_accepted = no
+    requires_actor_independence = no
+    requires_actor_peace = yes
+    show_to_alliance_members = yes
+    should_notify_all_communications = no
+    action_type = negative
+    potential = {
+        hidden_trigger = {
+            has_federation = yes
+            federation = {
+                OR = {
+                    has_federation_type = hegemony_federation
+                    has_federation_type = vf_ef_federation
+                }
+                }
+            }
+        }
+    proposable = {
+        custom_tooltip = {
+            fail_text = "requires_actor_not_already_asked"
+            NOT = {
+                has_country_flag = asked_to_leave_hegemony
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_actor_not_rebelled"
+            NOT = {
+                has_country_flag = failed_hegemony_rebellion
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_actor_not_already_asked_empire"
+            NOT = {
+                has_country_flag = asked_to_leave_empire
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_actor_not_rebelled_empire"
+            NOT = {
+                has_country_flag = failed_empire_rebellion
+            }
+        }
+    }
+}

@@ -1,0 +1,64 @@
+"Janagman Anocratic Marketplace" = {
+    key = "Janagman Anocratic Marketplace"
+    ship_prefix = ""
+    species = {
+        class = "MOL"
+        portrait = "mol3"
+        name = "Ghex"
+        plural = "Ghexi"
+        adjective = "Ghexoid"
+        species_bio = "Having emerged on a planet defined by vast seas that isolated pockets of dry resources, Ghexoid society naturally revolves around business and long-range trade. Tribal and familial alliances traditionally controlled the various regions and market sectors, and the Interstellar Age is no different. Individual family enclaves follow their own internal models of administration. Nearly all, however, recognize the fundamental value of personal liberty and free enterprise. What passes for a planetary government on their homeworld Teiso is the Marketplace. First conceived in the Ghexoid Machine Age, the Marketplace formalized and updated numerous conventional rules regarding the fair conduct of commerce (and the perpetual practice of espionage that underlies it). Consensus on Marketplace policy is achieved via plebiscite with a franchise that extends to all adult citizens."
+        name_list = "just-name-lists_molluscoid3"
+        trait = "trait_just-more-traits_migratory"
+        trait = "trait_thrifty"
+        trait = "trait_just-more-traits_fractious"
+    }
+    name = "Janagman Anocratic Marketplace"
+    adjective = "Janagman"
+    authority = "auth_democratic"
+    government = "gov_minarchy"
+    planet_name = "Teiso"
+    planet_class = "pc_desertislands"
+    system_name = "Janagma"
+    initializer = ""
+    graphical_culture = "molluscoid_01"
+    city_graphical_culture = "molluscoid_01"
+    empire_flag = {
+        icon = {
+            category = "just-more-flags"
+            file = "flag_authoritarian11.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "fabric_ring.dds"
+        }
+        colors = {
+            "burgundy"
+            "yellow"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = male
+        name = "Kers Styuso"
+        portrait = "mol3"
+        texture = 2
+        hair = 0
+        clothes = 2
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "cityscape1_room"
+    spawn_enabled = yes
+    ethic = "ethic_egalitarian"
+    ethic = "ethic_fanatic_materialist"
+    ethic = "ethic_fanatic_capitalism"
+    civics = {
+        "civic_idealistic_foundation"
+        "civic_merchant_guilds"
+        "civic_beacon_of_liberty"
+    }
+    origin = "origin_default"
+}

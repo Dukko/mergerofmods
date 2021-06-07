@@ -1,0 +1,61 @@
+namespace = galcom
+country_event = {
+    id = galcom.64
+    title = galcom.64.name
+    desc = galcom.64.desc
+    picture = GFX_evt_financial_instruments
+    show_sound = event_galactic_market
+    is_triggered_only = yes
+    immediate = {
+        set_global_flag = ongoing_market_relocation_nomination
+        set_country_flag = market_nomination_eligible
+        event_target:global_event_country = {
+            country_event = {
+                id = galcom.66
+                days = 1800
+            }
+        }
+        begin_event_chain = {
+            event_chain = market_relocation_chain
+            target = this
+        }
+        every_playable_country = {
+            limit = {
+                NOT = {
+                    is_same_value = root
+                }
+                is_galactic_community_member = yes
+            }
+            begin_event_chain = {
+                event_chain = market_relocation_chain
+                target = this
+            }
+            country_event = {
+                id = galcom.65
+            }
+        }
+    }
+    after = {
+        custom_tooltip = enable_decision_market_nomination
+        tooltip = {
+            begin_event_chain = {
+                event_chain = market_relocation_chain
+                target = this
+            }
+        }
+    }
+    option = {
+        name = action.96.a
+        trigger = {
+            is_megacorp = yes
+        }
+    }
+    option = {
+        name = action.96.b
+        trigger = {
+            NOT = {
+                is_megacorp = yes
+            }
+        }
+    }
+}

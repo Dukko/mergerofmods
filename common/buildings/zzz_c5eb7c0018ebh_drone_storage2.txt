@@ -1,0 +1,62 @@
+@ebh_min3 = 800
+@ebh_sr2 = 100
+@ebh_upkeep2 = 2
+@ebh_upkeep4 = 4
+ebh_drone_storage2 = {
+    base_buildtime = @b1_time
+    can_build = no
+    category = amenity
+    potential = {
+        exists = owner
+        owner = {
+            is_machine_empire = yes
+        }
+    }
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            AND = {
+                free_building_slots = 0
+                free_jobs < 1
+                free_housing > 10
+                owner = {
+                    is_ai = yes
+                }
+            }
+            NOR = {
+                owner = {
+                    is_machine_empire = yes
+                }
+            }
+        }
+    }
+    allow = {
+        buildings_simple_allow = yes
+    }
+    convert_to = {
+        ebh_luxury_residence2
+        ebh_communal_housing2
+        ebh_hive_warren2
+    }
+    planet_modifier = {
+        planet_housing_add = 12
+        planet_amenities_add = 9
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @ebh_min3
+            rare_crystals = @ebh_sr2
+        }
+        upkeep = {
+            energy = @ebh_upkeep4
+            rare_crystals = @ebh_upkeep2
+        }
+    }
+    prerequisites = {
+        "tech_self_assembling_components"
+    }
+    upgrades = {
+        "building_drone_megastorage"
+    }
+}

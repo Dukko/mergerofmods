@@ -1,0 +1,19 @@
+leader_trait_ruler_anasterian = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/trait_tw_helf.dds"
+    immortal_leaders = yes
+    modifier = {
+        country_organic_trust_cap_add = 50
+        country_trust_growth = 0.25
+        faction_approval = 0.1
+    }
+    leader_trait = {
+        ruler
+    }
+    leader_class = {
+        ruler
+    }
+    initial = no
+    randomized = no
+}

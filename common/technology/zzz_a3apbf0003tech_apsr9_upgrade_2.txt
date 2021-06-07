@@ -1,0 +1,26 @@
+@apsr9cost3 = 20000
+tech_apsr9_upgrade_2 = {
+    cost = @apsr9cost3
+    area = physics
+    tier = 2
+    category = {
+        field_manipulation
+    }
+    prerequisites = {
+        "tech_fission_power"
+    }
+    weight = 0
+    is_rare = yes
+    prereqfor_desc = {
+        custom = {
+            title = "TECH_APSR9_EXPERIMENT2_TITLE"
+            desc = "TECH_APSR9_EXPERIMENT2_DESC"
+        }
+    }
+    modifier = {
+        planet_jobs_physics_research_produces_mult = 0.1
+    }
+    ai_weight = {
+        factor = 0
+    }
+}

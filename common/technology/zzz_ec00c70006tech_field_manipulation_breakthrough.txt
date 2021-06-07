@@ -1,0 +1,465 @@
+@ethics_boost1 = 2
+@ethics_boost2 = 3
+@scientist_level = 1.5
+@scientist_maniacal = 1.5
+@scientist_genius = 2
+@scientist_specialist = 3.5
+@tradition_boost = 1.75
+@perk_boost = 2
+@hiverobot_boost = 1.5
+@hostile_neighbor = 2
+@friendly_neighbor = 8
+@specialization_penalty1 = 0.45
+@hiverobot_cumulative_penalty = 0.55
+@cumulative_penalty = 0.85
+tech_field_manipulation_breakthrough = {
+    cost = @tier3cost3
+    area = physics
+    category = {
+        field_manipulation
+    }
+    is_rare = yes
+    weight = 1
+    tier = 2
+    modifier = {
+        country_physics_tech_research_speed = 0.3
+        ship_shield_mult = 0.2
+        ship_shield_regen_add_perc = 5
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            OR = {
+                is_researching_technology = tech_materials_breakthrough
+                is_researching_technology = tech_industry_breakthrough
+                is_researching_technology = tech_voidcraft_breakthrough
+                is_researching_technology = tech_rocketry_breakthrough
+                is_researching_technology = tech_particles_breakthrough
+                is_researching_technology = tech_computing_breakthrough
+                is_researching_technology = tech_psionics_breakthrough
+                is_researching_technology = tech_biology_breakthrough
+                is_researching_technology = tech_statecraft_breakthrough
+                is_researching_technology = tech_new_worlds_breakthrough
+                is_researching_technology = tech_military_theory_breakthrough
+                last_increased_tech = tech_materials_breakthrough
+                last_increased_tech = tech_industry_breakthrough
+                last_increased_tech = tech_voidcraft_breakthrough
+                last_increased_tech = tech_rocketry_breakthrough
+                last_increased_tech = tech_particles_breakthrough
+                last_increased_tech = tech_field_manipulation_breakthrough
+                last_increased_tech = tech_computing_breakthrough
+                last_increased_tech = tech_psionics_breakthrough
+                last_increased_tech = tech_biology_breakthrough
+                last_increased_tech = tech_statecraft_breakthrough
+                last_increased_tech = tech_new_worlds_breakthrough
+                last_increased_tech = tech_military_theory_breakthrough
+            }
+        }
+        modifier = {
+            factor = 0
+            AND = {
+                NOR = {
+                    has_country_flag = "field_manipulation_breakthrough_spread_friendly"
+                    has_country_flag = "field_manipulation_breakthrough_spread_hostile"
+                    has_ascension_perk = ap_technological_ascendancy
+                }
+                calc_true_if = {
+                    amount = 15
+                    has_technology = tech_materials_breakthrough
+                    has_technology = tech_industry_breakthrough
+                    has_technology = tech_voidcraft_breakthrough
+                    has_technology = tech_rocketry_breakthrough
+                    has_technology = tech_particles_breakthrough
+                    has_technology = tech_field_manipulation_breakthrough
+                    has_technology = tech_computing_breakthrough
+                    has_technology = tech_psionics_breakthrough
+                    has_technology = tech_biology_breakthrough
+                    has_technology = tech_statecraft_breakthrough
+                    has_technology = tech_new_worlds_breakthrough
+                    has_technology = tech_military_theory_breakthrough
+                    NOT = {
+                        has_country_flag = "materials_from_spread"
+                    }
+                    NOT = {
+                        has_country_flag = "industry_from_spread"
+                    }
+                    NOT = {
+                        has_country_flag = "voidcraft_from_spread"
+                    }
+                    NOT = {
+                        has_country_flag = "rocketry_from_spread"
+                    }
+                    NOT = {
+                        has_country_flag = "particles_from_spread"
+                    }
+                    NOT = {
+                        has_country_flag = "field_manipulation_from_spread"
+                    }
+                    NOT = {
+                        has_country_flag = "computing_from_spread"
+                    }
+                    NOT = {
+                        has_country_flag = "psionics_from_spread"
+                    }
+                    NOT = {
+                        has_country_flag = "biology_from_spread"
+                    }
+                    NOT = {
+                        has_country_flag = "statecraft_from_spread"
+                    }
+                    NOT = {
+                        has_country_flag = "new_worlds_from_spread"
+                    }
+                    NOT = {
+                        has_country_flag = "military_theory_from_spread"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            AND = {
+                NOR = {
+                    has_country_flag = "field_manipulation_breakthrough_spread_friendly"
+                    has_country_flag = "field_manipulation_breakthrough_spread_hostile"
+                }
+                calc_true_if = {
+                    amount = 18
+                    has_technology = tech_materials_breakthrough
+                    has_technology = tech_industry_breakthrough
+                    has_technology = tech_voidcraft_breakthrough
+                    has_technology = tech_rocketry_breakthrough
+                    has_technology = tech_particles_breakthrough
+                    has_technology = tech_field_manipulation_breakthrough
+                    has_technology = tech_computing_breakthrough
+                    has_technology = tech_psionics_breakthrough
+                    has_technology = tech_biology_breakthrough
+                    has_technology = tech_statecraft_breakthrough
+                    has_technology = tech_new_worlds_breakthrough
+                    has_technology = tech_military_theory_breakthrough
+                    NOT = {
+                        has_country_flag = "materials_from_spread"
+                    }
+                    NOT = {
+                        has_country_flag = "industry_from_spread"
+                    }
+                    NOT = {
+                        has_country_flag = "voidcraft_from_spread"
+                    }
+                    NOT = {
+                        has_country_flag = "rocketry_from_spread"
+                    }
+                    NOT = {
+                        has_country_flag = "particles_from_spread"
+                    }
+                    NOT = {
+                        has_country_flag = "field_manipulation_from_spread"
+                    }
+                    NOT = {
+                        has_country_flag = "computing_from_spread"
+                    }
+                    NOT = {
+                        has_country_flag = "psionics_from_spread"
+                    }
+                    NOT = {
+                        has_country_flag = "biology_from_spread"
+                    }
+                    NOT = {
+                        has_country_flag = "statecraft_from_spread"
+                    }
+                    NOT = {
+                        has_country_flag = "new_worlds_from_spread"
+                    }
+                    NOT = {
+                        has_country_flag = "military_theory_from_spread"
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = @hiverobot_cumulative_penalty
+            AND = {
+                has_technology = tech_materials_breakthrough
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            factor = @hiverobot_cumulative_penalty
+            AND = {
+                has_technology = tech_industry_breakthrough
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            factor = @hiverobot_cumulative_penalty
+            AND = {
+                has_technology = tech_voidcraft_breakthrough
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            factor = @hiverobot_cumulative_penalty
+            AND = {
+                has_technology = tech_rocketry_breakthrough
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            factor = @hiverobot_cumulative_penalty
+            AND = {
+                has_technology = tech_computing_breakthrough
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            factor = @hiverobot_cumulative_penalty
+            AND = {
+                has_technology = tech_field_manipulation_breakthrough
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            factor = @hiverobot_cumulative_penalty
+            AND = {
+                has_technology = tech_particles_breakthrough
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            factor = @hiverobot_cumulative_penalty
+            AND = {
+                has_technology = tech_psionics_breakthrough
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            factor = @hiverobot_cumulative_penalty
+            AND = {
+                has_technology = tech_new_worlds_breakthrough
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            factor = @hiverobot_cumulative_penalty
+            AND = {
+                has_technology = tech_biology_breakthrough
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            factor = @hiverobot_cumulative_penalty
+            AND = {
+                has_technology = tech_statecraft_breakthrough
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            factor = @hiverobot_cumulative_penalty
+            AND = {
+                has_technology = tech_military_theory_breakthrough
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            factor = @ethics_boost1
+            has_ethic = ethic_pacifist
+        }
+        modifier = {
+            factor = @ethics_boost2
+            has_ethic = ethic_fanatic_pacifist
+        }
+        modifier = {
+            factor = @hiverobot_boost
+            OR = {
+                has_authority = auth_machine_intelligence
+                has_authority = auth_hive_mind
+            }
+        }
+        modifier = {
+            factor = @tradition_boost
+            has_tradition = tr_prosperity_adopt
+        }
+        modifier = {
+            factor = @tradition_boost
+            has_tradition = tr_prosperity_finish
+        }
+        modifier = {
+            factor = @perk_boost
+            has_ascension_perk = ap_grasp_the_void
+        }
+        modifier = {
+            factor = @perk_boost
+            has_ascension_perk = ap_transcendent_learning
+        }
+        modifier = {
+            factor = @scientist_specialist
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+        modifier = {
+            factor = @scientist_genius
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_spark_of_genius"
+            }
+        }
+        modifier = {
+            factor = @scientist_maniacal
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_maniacal"
+                NOT = {
+                    has_trait = "leader_trait_spark_of_genius"
+                }
+            }
+        }
+        modifier = {
+            factor = @scientist_level
+            research_leader = {
+                area = physics
+                has_level > 4
+            }
+        }
+        modifier = {
+            factor = @friendly_neighbor
+            has_country_flag = "field_manipulation_breakthrough_spread_friendly"
+        }
+        modifier = {
+            factor = @hostile_neighbor
+            has_country_flag = "field_manipulation_breakthrough_spread_hostile"
+        }
+        modifier = {
+            factor = @specialization_penalty1
+            AND = {
+                has_country_flag = "materials_breakthrough"
+                NOR = {
+                    has_authority = auth_machine_intelligence
+                    has_authority = auth_hive_mind
+                }
+            }
+        }
+        modifier = {
+            factor = @specialization_penalty1
+            AND = {
+                has_country_flag = "industry_breakthrough"
+                NOR = {
+                    has_authority = auth_machine_intelligence
+                    has_authority = auth_hive_mind
+                }
+            }
+        }
+        modifier = {
+            factor = @specialization_penalty1
+            AND = {
+                has_country_flag = "voidcraft_breakthrough"
+                NOR = {
+                    has_authority = auth_machine_intelligence
+                    has_authority = auth_hive_mind
+                }
+            }
+        }
+        modifier = {
+            factor = @specialization_penalty1
+            AND = {
+                has_country_flag = "rocketry_breakthrough"
+                NOR = {
+                    has_authority = auth_machine_intelligence
+                    has_authority = auth_hive_mind
+                }
+            }
+        }
+        modifier = {
+            factor = @specialization_penalty1
+            AND = {
+                has_country_flag = "biology_breakthrough"
+                NOR = {
+                    has_authority = auth_machine_intelligence
+                    has_authority = auth_hive_mind
+                }
+            }
+        }
+        modifier = {
+            factor = @specialization_penalty1
+            AND = {
+                has_country_flag = "new_worlds_breakthrough"
+                NOR = {
+                    has_authority = auth_machine_intelligence
+                    has_authority = auth_hive_mind
+                }
+            }
+        }
+        modifier = {
+            factor = @specialization_penalty1
+            AND = {
+                has_country_flag = "statecraft_breakthrough"
+                NOR = {
+                    has_authority = auth_machine_intelligence
+                    has_authority = auth_hive_mind
+                }
+            }
+        }
+        modifier = {
+            factor = @specialization_penalty1
+            AND = {
+                has_country_flag = "military_theory_breakthrough"
+                NOR = {
+                    has_authority = auth_machine_intelligence
+                    has_authority = auth_hive_mind
+                }
+            }
+        }
+        modifier = {
+            factor = @cumulative_penalty
+            has_technology = tech_materials_breakthrough
+        }
+        modifier = {
+            factor = @cumulative_penalty
+            has_technology = tech_industry_breakthrough
+        }
+        modifier = {
+            factor = @cumulative_penalty
+            has_technology = tech_voidcraft_breakthrough
+        }
+        modifier = {
+            factor = @cumulative_penalty
+            has_technology = tech_rocketry_breakthrough
+        }
+        modifier = {
+            factor = @cumulative_penalty
+            has_technology = tech_computing_breakthrough
+        }
+        modifier = {
+            factor = @cumulative_penalty
+            has_technology = tech_field_manipulation_breakthrough
+        }
+        modifier = {
+            factor = @cumulative_penalty
+            has_technology = tech_particles_breakthrough
+        }
+        modifier = {
+            factor = @cumulative_penalty
+            has_technology = tech_psionics_breakthrough
+        }
+        modifier = {
+            factor = @cumulative_penalty
+            has_technology = tech_new_worlds_breakthrough
+        }
+        modifier = {
+            factor = @cumulative_penalty
+            has_technology = tech_biology_breakthrough
+        }
+        modifier = {
+            factor = @cumulative_penalty
+            has_technology = tech_statecraft_breakthrough
+        }
+        modifier = {
+            factor = @cumulative_penalty
+            has_technology = tech_military_theory_breakthrough
+        }
+    }
+    ai_weight = {
+        factor = 100
+    }
+}

@@ -1,0 +1,38 @@
+tech_coral_world_adaption_dry = {
+    cost = @tier2cost1
+    area = society
+    tier = 2
+    category = {
+        new_worlds
+    }
+    weight = @tier2weight1
+    is_rare = yes
+    is_reverse_engineerable = no
+    modifier = {
+        show_only_custom_tooltip = yes
+        custom_tooltip = CORAL_ADAPT_DRY
+        pc_arid_habitability = 0.4
+        pc_mesa_habitability = 0.4
+        pc_hadesert_habitability = 0.4
+        pc_med_habitability = 0.4
+        pc_badlands_habitability = 0.4
+        pc_coral_habitability = 0.4
+        pc_primal_habitability = 0.4
+        pc_desert_habitability = 0.2
+        pc_sandsea_habitability = 0.2
+        pc_oasis_habitability = 0.2
+        pc_outback_habitability = 0.2
+        pc_salt_habitability = 0.2
+        pc_aquifer_habitability = 0.2
+        pc_savannah_habitability = 0.2
+        pc_steppe_habitability = 0.2
+        pc_prairie_habitability = 0.2
+        pc_veld_habitability = 0.2
+        pc_semiarid_habitability = 0.2
+        pc_tidallylocked_habitability = 0.2
+        pc_supercon_habitability = 0.2
+    }
+    weight_modifier = {
+        factor = 0
+    }
+}

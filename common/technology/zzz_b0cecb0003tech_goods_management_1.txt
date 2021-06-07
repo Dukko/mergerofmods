@@ -1,0 +1,30 @@
+tech_goods_management_1 = {
+    cost = @tier2cost3
+    area = engineering
+    tier = 2
+    category = {
+        materials
+    }
+    prerequisites = {
+        "tech_consumer_good_refinement_1"
+    }
+    weight = @tier2weight3
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+}

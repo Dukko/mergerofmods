@@ -1,0 +1,129 @@
+can_be_sold_on_slave_market = {
+    exists = owner
+    OR = {
+        and = {
+            ROOT = { is_ai = no }
+            OR = {
+                is_enslaved = yes
+                is_non_sapient_robot = yes
+                is_shackled_robot = yes
+                is_being_purged = yes
+            }
+        }
+        AND = {
+            ROOT = { allows_slavery = yes }
+            has_job = servant_noble
+        }
+        and = {
+            ROOT = { 
+                is_ai = yes 
+                resource_stockpile_compare = { resource = energy value < 500 }
+            }
+            planet = {
+                not = { num_pops < 6 }
+                not = { num_pops = 10 }
+                not = { num_pops = 15 }
+                not = { num_pops = 20 }
+                not = { num_pops = 25 }
+                not = { num_pops = 30 }
+                not = { num_pops = 35 }
+                not = { num_pops = 40 }
+                not = { num_pops = 45 }
+                not = { num_pops = 50 }
+                not = { num_pops = 55 }
+                not = { num_pops = 60 }
+                not = { num_pops = 65 }
+                not = { num_pops = 70 }
+                not = { num_pops = 75 }
+                not = { num_pops = 80 }
+                not = { num_pops = 85 }
+                num_pops > 70
+            }
+            or = {
+                is_enslaved = yes
+                is_non_sapient_robot = yes
+                is_shackled_robot = yes
+                is_being_purged = yes
+            }
+        }
+    }
+    ROOT = {
+        NOR = { 
+            has_authority = auth_warshipgirls
+            has_authority = auth_shenhai
+        }
+    }
+    NOR = {
+        has_trait = wsg_trait_warshipgirls
+        has_trait = wsg_trait_warshipgirls1
+        has_trait = wsg_trait_warshipgirls2
+        has_trait = sh_trait_shenhai
+        has_trait = sh_trait_shenhai1
+        has_trait = sh_trait_shenhai2
+        has_trait = sh_trait_shenhai3
+        has_trait = trait_plentiful_traditions_cocoon
+    }
+    OR = {
+        ROOT = { is_ai = no }
+        AND = {
+            OR = { is_unemployed = yes has_job = servant_noble }
+            planet = {
+                count_owned_pop = {
+                    count > 2
+                    limit = {
+                        OR = { is_unemployed = yes has_job = servant_noble }
+                        NOR = {
+                            is_pop_category = specialist
+                            is_pop_category = ruler
+                        }
+                    }
+                }
+            }
+        }
+        AND = {
+            OR = { has_job = servant has_job = servant_noble }
+            planet = {
+                free_amenities > 20
+            }
+        }
+    }
+    OR ={
+        ROOT = { is_ai = no }
+        has_citizenship_rights = no
+        AND = {
+            is_unemployed = yes
+            is_being_assimilated = no
+            planet = {
+                count_owned_pop = {
+                    count > 2
+                    limit = { is_unemployed = yes }
+                }
+            }
+            OR = {
+                NOT = { has_trait = trait_syncretic_proles }
+                ROOT = { NOT = { has_origin = origin_syncretic_evolution } }
+            }
+        }
+    }
+    if = {
+        limit = {
+            has_global_flag = organic_slave_trade_banned_flag
+        }
+        is_organic_species = no
+    }
+    if = {
+        limit = {
+            has_global_flag = sentient_slave_trade_banned_flag
+        }
+        is_sapient = no
+    }
+    if = {
+        limit = {
+            OR = {
+                has_trait = trait_living_architecture
+                has_trait = trait_rooted_adults_rooted
+            }
+        }
+        always = no
+    }
+}

@@ -1,0 +1,18 @@
+katzen_trait_nukelad = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/leader_trait_expertise_propulsion.dds"
+    leader_trait = all
+    modifier = {
+        weapon_type_explosive_weapon_damage_mult = 0.1
+        weapon_type_explosive_weapon_fire_rate_mult = 0.1
+    }
+    leader_class = {
+        admiral
+    }
+    initial = no
+    randomized = no
+    ai_weight = {
+        weight = 0
+    }
+}

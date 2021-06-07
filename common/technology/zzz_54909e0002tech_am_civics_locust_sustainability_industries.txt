@@ -1,0 +1,33 @@
+tech_am_civics_locust_sustainability_industries = {
+    cost = @tier5cost1
+    area = society
+    tier = 5
+    category = {
+        statecraft
+    }
+    prerequisites = {
+    }
+    weight = @tier5weight1
+    is_rare = yes
+    icon = "tech_atmospheric_manipulation"
+    potential = {
+        has_valid_civic = civic_am_civics_locust_capitalism
+    }
+    modifier = {
+        description = tech_am_civics_locust_sustainability_industries_effect
+    }
+    weight_modifier = {
+        factor = 1
+        modifier = {
+            factor = 2
+            num_owned_planets <= 4
+        }
+        modifier = {
+            factor = 10
+            num_owned_planets <= 2
+        }
+    }
+    ai_weight = {
+        factor = 5
+    }
+}

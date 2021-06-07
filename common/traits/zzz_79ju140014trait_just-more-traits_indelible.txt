@@ -1,0 +1,18 @@
+trait_just-more-traits_indelible = {
+    cost = 3
+    potential_crossbreeding_chance = 0.5
+    modifier = {
+        leader_age = 60
+    }
+    opposites = {
+        "trait_enduring"
+        "trait_venerable"
+        "trait_fleeting"
+        "trait_just-more-traits_longlived"
+        "trait_just-more-traits_ephemeral"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+}

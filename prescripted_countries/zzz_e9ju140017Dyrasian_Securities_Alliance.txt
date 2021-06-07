@@ -1,0 +1,69 @@
+"Dyrasian Securities Alliance" = {
+    key = "Dyrasian Securities Alliance"
+    ship_prefix = "SAS"
+    species = {
+        class = "AVI"
+        portrait = "avi14"
+        name = "Strull"
+        plural = "Strulls"
+        adjective = "Strullian"
+        species_bio = "The Strulls of Dyras are a flightless avian species who have long lived in tightly packed communities, huddled against the brutal cold of their icy homeworld. Able swimmers and skilled predators, they are still driven to hunt for their food in the frigid waters. The most talented among them are chosen to lead, and their society is organized around concepts of common ownership and joint effort. In Dyras' Machine Age, the Securities Alliance was created to regulate trade relationships across their homeworld, undertaking only limited economic intervention to navigate crisis situations. This system enabled the miraculous development of their civilization despite the immense challenges faced in establishing complex industries in such a hostile environment. The legacy of the early Alliance endures into the Interstellar Age as the Strullian miracle spreads beyond the Beolur system."
+        name_list = "just-name-lists_avian1"
+        trait = "trait_conformists"
+        trait = "trait_just-more-traits_hardworking"
+        trait = "trait_just-more-traits_harmonious"
+        trait = "trait_just-more-traits_huntergatherers"
+        trait = "trait_sedentary"
+    }
+    name = "Dyrasian Securities Alliance"
+    adjective = "Dyrasian"
+    authority = "auth_corporate"
+    government = "gov_trade_league"
+    planet_name = "Dyras"
+    planet_class = "pc_glacial"
+    system_name = "Beolur"
+    initializer = ""
+    graphical_culture = "avian_01"
+    city_graphical_culture = "avian_01"
+    empire_flag = {
+        icon = {
+            category = "just-more-flags"
+            file = "flag_nature11.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "fabric_ring.dds"
+        }
+        colors = {
+            "light_blue"
+            "brown"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = female
+        name = "Tepekuitl Ispeyek"
+        portrait = "avi14_f"
+        texture = 2
+        hair = 0
+        clothes = 1
+        ruler_title = "Chief Officer"
+        ruler_title_female = "Chief Officer"
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "frozen1_room"
+    spawn_enabled = yes
+    ethic = "ethic_egalitarian"
+    ethic = "ethic_xenophile"
+    ethic = "ethic_materialist"
+    ethic = "ethic_fanatic_capitalism"
+    civics = {
+        "civic_free_traders"
+        "civic_private_prospectors"
+        "civic_franchising"
+    }
+    origin = "origin_default"
+}

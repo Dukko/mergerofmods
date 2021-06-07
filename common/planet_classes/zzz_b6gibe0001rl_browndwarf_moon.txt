@@ -1,0 +1,8 @@
+random_list = {
+    name = "rl_browndwarf_moon"
+    planets = {
+        "pc_barren"
+        "pc_frozen"
+        "pc_barren_cold"
+    }
+}

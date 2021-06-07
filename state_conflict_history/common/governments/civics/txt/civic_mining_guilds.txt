@@ -1,0 +1,32 @@
+civic_mining_guilds = {
+    potential = {
+        ethics = {
+            NOT = {
+                value = ethic_gestalt_consciousness
+            }
+        }
+        authority = {
+            NOR = {
+                value = auth_corporate
+                value = auth_corporate_imperial
+            }
+        }
+        possible = {
+            civics = {
+                NOR = {
+                    value = civic_keepers_harmony
+                    value = civic_agrarian_idyll
+                    value = civic_industrial_economy
+                }
+            }
+        }
+        modifier = {
+            planet_miners_minerals_produces_add = 1
+            category_materials_research_speed_mult = 0.15
+            station_gatherers_produces_mult = 0.1
+        }
+        random_weight = {
+            base = 5
+        }
+    }
+}

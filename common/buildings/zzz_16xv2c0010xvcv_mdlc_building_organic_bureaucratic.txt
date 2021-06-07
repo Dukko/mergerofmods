@@ -1,0 +1,36 @@
+xvcv_mdlc_building_organic_bureaucratic = {
+    base_buildtime = @b1_time
+    category = government
+    potential = {
+        exists = owner
+        owner = {
+            has_ascension_perk = xvcv_mdlc_ap_organic_work
+        }
+    }
+    destroy_trigger = {
+        exists = owner
+        owner = {
+            NOT = {
+                has_ascension_perk = xvcv_mdlc_ap_organic_work
+            }
+        }
+    }
+    convert_to = {
+        building_bureaucratic_2
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b2_minerals
+        }
+        upkeep = {
+            energy = @b2_upkeep
+        }
+    }
+    planet_modifier = {
+        job_xvcv_mdlc_organic_bureaucrat_add = @b2_jobs
+    }
+    triggered_desc = {
+        text = job_bureaucrat_effect_desc
+    }
+}

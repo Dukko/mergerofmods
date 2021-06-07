@@ -1,0 +1,63 @@
+"Bosang Grand Accord" = {
+    key = "Bosang Grand Accord"
+    ship_prefix = "BAS"
+    species = {
+        class = "PLANT"
+        portrait = "pla10"
+        name = "T'phero"
+        plural = "T'pheroi"
+        adjective = "T'pheric"
+        species_bio = "In their early Space Age, the T'pheroi nearly suffered the complete destruction of the ecosystem on their homeworld Giizhig when an ancient spaceborne alien virus arrived via meteor. Only a social and technological revolution saved them from extinction. Major governments overlooked their own selfish interests to strike a Grand Accord, agreeing to move a critical portion of their populations to jointly administered orbital habitats while their combined militaries remained planetside to wage a scorched earth campaign against the pandemic. This bold move succeeded, proving T'pheric civilization cannot easily be uprooted."
+        name_list = "just-name-lists_plantoid1"
+        trait = "trait_natural_engineers"
+        trait = "trait_resilient"
+    }
+    name = "Bosang Grand Accord"
+    adjective = "Bosang"
+    authority = "auth_democratic"
+    government = "gov_rational_consensus"
+    planet_name = "Giizhig"
+    planet_class = "pc_tropical"
+    system_name = "Bosang"
+    initializer = ""
+    graphical_culture = "plantoid_01"
+    city_graphical_culture = "plantoid_01"
+    empire_flag = {
+        icon = {
+            category = "just-more-flags"
+            file = "flag_materialist1.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "fabric_half_rotated.dds"
+        }
+        colors = {
+            "pink"
+            "burgundy"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = female
+        name = "Gold Pod"
+        portrait = "pla10"
+        texture = 0
+        hair = 0
+        clothes = 2
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "plantoid9_room"
+    spawn_enabled = yes
+    ethic = "ethic_egalitarian"
+    ethic = "ethic_fanatic_militarist"
+    ethic = "ethic_fanatic_materialist"
+    civics = {
+        "civic_environmentalist"
+        "civic_technocracy"
+        "civic_meritocracy"
+    }
+    origin = "origin_default"
+}

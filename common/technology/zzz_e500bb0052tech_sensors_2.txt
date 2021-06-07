@@ -1,0 +1,44 @@
+tech_sensors_2 = {
+    area = physics
+    cost = @tier2cost1
+    tier = 2
+    category = {
+        computing
+    }
+    ai_update_type = all
+    weight = @tier2weight1
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            has_tradition = tr_discovery_adopt
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+    ai_weight = {
+        weight = 400
+        factor = 5
+        modifier = {
+            factor = 100
+            has_technology = tech_lasers_4
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+    prereqfor_desc = {
+        component = {
+            title = "TECH_UNLOCK_SENSOR_2_TITLE"
+            desc = "TECH_UNLOCK_SENSOR_2_DESC"
+        }
+    }
+}

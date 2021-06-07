@@ -1,0 +1,144 @@
+decision_unshroud_world = {
+    icon = decision_resort_colony
+    owned_planets_only = yes
+    enactment_time = 1800
+    resources = {
+        category = decisions
+        cost = {
+            energy = 2000
+        }
+    }
+    potential = {
+        has_global_flag = planetarydiversityshroud
+        owner = {
+            has_technology = tech_psionic_theory
+            NOT = {
+                has_origin = origin_pd_shroud
+            }
+        }
+        is_artificial = no
+        OR = {
+            is_planet_class = pc_pdshroud
+            is_planet_class = pc_shroudcity
+            has_planet_flag = shroudedarc
+        }
+    }
+    effect = {
+        custom_tooltip = decision_unshroud_world_effects_custom
+        hidden_effect = {
+            if = {
+                limit = {
+                    has_modifier = pdeater
+                }
+                remove_modifier = pdeater
+            }
+            if = {
+                limit = {
+                    has_modifier = pdcomposer
+                }
+                remove_modifier = pdcomposer
+            }
+            if = {
+                limit = {
+                    has_modifier = pddesire
+                }
+                remove_modifier = pddesire
+            }
+            if = {
+                limit = {
+                    has_modifier = pdwhispers
+                }
+                remove_modifier = pdwhispers
+            }
+            if = {
+                limit = {
+                    has_deposit = d_pdshroud_composer
+                }
+                remove_deposit = d_pdshroud_composer
+            }
+            if = {
+                limit = {
+                    has_deposit = d_pdshroud_eater
+                }
+                remove_deposit = d_pdshroud_eater
+            }
+            if = {
+                limit = {
+                    has_deposit = d_pdshroud_desire
+                }
+                remove_deposit = d_pdshroud_desire
+            }
+            if = {
+                limit = {
+                    has_deposit = d_pdshroud_whispers
+                }
+                remove_deposit = d_pdshroud_whispers
+            }
+            if = {
+                limit = {
+                    is_planet_class = pc_pdshroud
+                }
+                remove_deposit = d_pdshroud
+                change_pc = pc_gaia
+                add_deposit = d_pdgaia
+            }
+            if = {
+                limit = {
+                    is_planet_class = pc_shroudecocity
+                }
+                remove_planet_flag = shroudedarc
+                change_pc = pc_ecocity
+            }
+            if = {
+                limit = {
+                    is_planet_class = pc_shroudcorpoarc
+                }
+                remove_planet_flag = shroudedarc
+                change_pc = pc_corpoarc
+            }
+            if = {
+                limit = {
+                    is_planet_class = pc_shroudpalacearc
+                }
+                remove_planet_flag = shroudedarc
+                change_pc = pc_palacearc
+            }
+            if = {
+                limit = {
+                    is_planet_class = pc_shroudcapitalarc
+                }
+                remove_planet_flag = shroudedarc
+                change_pc = pc_capitalarc
+            }
+            if = {
+                limit = {
+                    is_planet_class = pc_shroudmilarc
+                }
+                remove_planet_flag = shroudedarc
+                change_pc = pc_milarc
+            }
+            if = {
+                limit = {
+                    is_planet_class = pc_shroudcity
+                }
+                remove_planet_flag = shroudedarc
+                change_pc = pc_city
+            }
+        }
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            factor = 0
+            or = {
+                free_building_slots > 0
+                owner = {
+                    resource_stockpile_compare = {
+                        resource = energy
+                        value < 6000
+                    }
+                }
+            }
+        }
+    }
+}

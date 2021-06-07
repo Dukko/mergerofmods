@@ -1,0 +1,74 @@
+@apsr8part2cost_minerals = 5000
+@apsr8part2cost_time = 1000
+@apsr8part2upkeep_energy = 0
+@apsr8part2upkeep_minerals = 8
+@apsr8part2job = 9
+@apsr8part2powjob = 3
+apsr8_building_part2 = {
+    base_buildtime = @apsr8part2cost_time
+    icon = apsr8_building_part2
+    is_capped_by_modifier = no
+    category = resource
+    can_build = no
+    potential = {
+        has_modifier = "apsr8_planet_modifier"
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_apsr8_technician_hive_add = @apsr8part2job
+            job_apsr8_power_engineer_hive_add = @apsr8part2powjob
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_apsr8_technician_machine_add = @apsr8part2job
+            job_apsr8_power_engineer_machine_add = @apsr8part2powjob
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_apsr8_technician_normal_add = @apsr8part2job
+            job_apsr8_power_engineer_normal_add = @apsr8part2powjob
+        }
+    }
+    resources = {
+        category = planet_apsr_buildings
+        cost = {
+            minerals = @apsr8part2cost_minerals
+        }
+        upkeep = {
+            energy = @apsr8part2upkeep_energy
+            minerals = @apsr8part2upkeep_minerals
+        }
+    }
+    upgrades = {
+        "apsr8_building_part3"
+    }
+    prerequisites = {
+        "tech_apsr8_building_part2"
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    ai_weight = {
+        weight = 50000
+    }
+}

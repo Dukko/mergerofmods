@@ -1,0 +1,47 @@
+odd_factory_drone = {
+    category = simple_drone
+    is_capped_by_modifier = yes
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_primitive_factory
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible = {
+        drone_job_check_trigger = yes
+    }
+    resources = {
+        category = planet_metallurgists
+        produces = {
+            alloys = 4
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_foundry_2
+                }
+            }
+            alloys = 1
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_foundry_3
+                }
+            }
+            alloys = 2
+        }
+    }
+    weight = {
+        weight = 999
+        modifier = {
+            factor = 0
+            planet = {
+                num_pops < 2
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+trait_resilient = {
+    cost = 1
+    potential_crossbreeding_chance = 1
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    modifier = {
+        army_defense_damage_mult = 0.5
+    }
+    opposites = {
+        "trait_additrait_weak_willed"
+        "trait_additrait_delicate"
+        "trait_additrait_zealous_defenders"
+        "trait_additrait_steadfast"
+        "trait_additrait_soft"
+    }
+}

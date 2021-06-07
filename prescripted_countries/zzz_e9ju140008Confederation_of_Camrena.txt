@@ -1,0 +1,68 @@
+"Confederation of Camrena" = {
+    key = "Confederation of Camrena"
+    ship_prefix = "CNC"
+    species = {
+        class = "MAM"
+        portrait = "mam17"
+        name = "Kiir"
+        plural = "Kiiran"
+        adjective = "Kiiran"
+        species_bio = "A species obsessed with mechanical creations, it is perhaps natural that the Kiiran rarely consider their own people anything more than components in the apparatus of state. Although the Premier speaks on their behalf in galactic affairs, no single central authority sets internal economic objectives or manages scientific endeavor on their homeworld Camrena. The dozen or so nations that constitute the Confederation nevertheless all employ the same kind of tightly controlled autocratic systems."
+        name_list = "just-name-lists_mammalian3"
+        trait = "trait_communal"
+        trait = "trait_just-more-traits_compliant"
+        trait = "trait_natural_engineers"
+        trait = "trait_just-more-traits_inattentive"
+    }
+    name = "Confederation of Camrena"
+    adjective = "Camordic"
+    authority = "auth_dictatorial"
+    government = "gov_totalitarian_regime"
+    planet_name = "Camrena"
+    planet_class = "pc_arid"
+    system_name = "Padarn"
+    initializer = ""
+    graphical_culture = "mammalian_01"
+    city_graphical_culture = "mammalian_01"
+    empire_flag = {
+        icon = {
+            category = "just-more-flags"
+            file = "flag_authoritarian1.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "fabric_circle.dds"
+        }
+        colors = {
+            "red"
+            "orange"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = male
+        name = "Merould cur'Padarn"
+        portrait = "mam17"
+        texture = 3
+        hair = 0
+        clothes = 2
+        ruler_title = "Premier"
+        ruler_title_female = "Premier"
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "desert3_room"
+    spawn_enabled = yes
+    ethic = "ethic_fanatic_authoritarian"
+    ethic = "ethic_militarist"
+    ethic = "ethic_materialist"
+    ethic = "ethic_capitalism"
+    civics = {
+        "civic_corvee_system"
+        "civic_slaver_guilds"
+        "civic_nationalistic_zeal"
+    }
+    origin = "origin_mechanists"
+}

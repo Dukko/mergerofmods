@@ -1,0 +1,23 @@
+pw_tech_holy_reliquary_venerable_tradition = {
+    area = society
+    category = {
+        statecraft
+    }
+    tier = 5
+    cost = @pw_grand_archive_tech_cost_final
+    prerequisites = {
+        pw_tech_spiritual_artifacts_studies
+    }
+    weight = 0
+    is_rare = yes
+    potential = {
+        has_country_flag = pw_holy_reliquary_built
+    }
+    modifier = {
+        country_government_civic_points_add = 1
+        pop_government_ethic_attraction = 0.15
+    }
+    ai_weight = {
+        factor = 20
+    }
+}

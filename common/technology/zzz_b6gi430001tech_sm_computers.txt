@@ -1,0 +1,56 @@
+tech_sm_computers = {
+    area = physics
+    cost = @tier6cost1
+    weight = @tier6weight1
+    tier = 5
+    category = {
+        computing
+    }
+    ai_update_type = military
+    is_rare = yes
+    prerequisites = {
+        "tech_combat_computers_2"
+        "tech_ehof_sentient_tier_2"
+    }
+    weight_modifier = {
+        factor = 1.25
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+        modifier = {
+            factor = 1.5
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = 2
+            has_federation = yes
+            federation = {
+                has_federation_perk = rare_tech_boost
+                any_member = {
+                    has_technology = tech_sm_computers
+                }
+            }
+        }
+    }
+    ai_weight = {
+        factor = @ehof_t1_weight
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+    prereqfor_desc = {
+        hide_prereq_for_desc = component
+        custom = {
+            title = "TECH_UNLOCK_SM_COMPUTERS_TITLE"
+            desc = "TECH_UNLOCK_SM_COMPUTERS_DESC"
+        }
+    }
+}

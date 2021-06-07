@@ -1,0 +1,104 @@
+namespace = marauder
+country_event = {
+    id = marauder.551
+    title = "greatkhan_diplo_header"
+    desc = marauder.551.a.desc
+    picture_event_data = {
+        portrait = event_target:raider_khanate
+        room = ethic_spaceship_room
+    }
+    is_triggered_only = yes
+    force_open = yes
+    diplomatic = yes
+    immediate = {
+        set_country_flag = marauder_diplomacy_engaged
+    }
+    after = {
+        hidden_effect = {
+            remove_country_flag = marauder_diplomacy_engaged
+        }
+    }
+    option = {
+        name = marauder.551.a
+        trigger = {
+            has_been_declared_crisis = no
+        }
+        response_text = marauder.551.a.response
+        if = {
+            limit = {
+                is_overlord = yes
+            }
+            every_subject = {
+                set_subject_of = {
+                    who = event_target:raider_khanate
+                    subject_type = satrapy
+                }
+                hidden_effect = {
+                    country_event = {
+                        id = marauder.553
+                        days = 10
+                    }
+                    add_modifier = {
+                        modifier = "satrapy_of_horde"
+                        days = -1
+                    }
+                    event_target:raider_khanate = {
+                        set_faction_hostility = {
+                            target = prev
+                            set_hostile = no
+                            set_neutral = no
+                            set_friendly = yes
+                        }
+                    }
+                }
+            }
+        }
+        set_subject_of = {
+            who = event_target:raider_khanate
+            subject_type = satrapy
+        }
+        hidden_effect = {
+            set_timed_country_flag = {
+                flag = rebellion_cooldown
+                days = 360
+            }
+            save_event_target_as = new_satrapy
+            observer_event = {
+                id = observer.19
+            }
+            every_country = {
+                limit = {
+                    is_ai = no
+                    has_communications = root
+                    NOT = {
+                        is_same_value = root
+                    }
+                }
+                country_event = {
+                    id = marauder.552
+                }
+            }
+            country_event = {
+                id = marauder.553
+                days = 10
+            }
+            event_target:raider_khanate = {
+                set_faction_hostility = {
+                    target = root
+                    set_hostile = no
+                    set_neutral = no
+                    set_friendly = yes
+                }
+            }
+            add_modifier = {
+                modifier = "satrapy_of_horde"
+                days = -1
+            }
+        }
+    }
+    option = {
+        name = marauder.551.b
+        response_text = marauder.551.b.response
+        default_hide_option = yes
+    }
+}

@@ -1,0 +1,19 @@
+@tier3cost4 = 12000
+tech_weaver = {
+    area = society
+    cost = @tier3cost4
+    tier = 3
+    category = {
+        psionics
+    }
+    levels = -1
+    weight = 0
+    is_rare = yes
+    weight_modifier = {
+        factor = 0
+    }
+    modifier = {
+        country_admin_cap_add = 100
+        country_base_influence_produces_add = 1
+    }
+}

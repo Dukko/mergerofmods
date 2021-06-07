@@ -1,0 +1,111 @@
+district_giga_hab_city = {
+    base_buildtime = @giga_hab_district_buildtime
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        exists = from
+        from = {
+            is_regular_empire = yes
+        }
+        uses_district_set = giga_habitat
+    }
+    potential = {
+        exists = owner
+        owner = {
+            is_regular_empire = yes
+        }
+        uses_district_set = giga_habitat
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_giga_hab_nexus
+        district_giga_hab_hive
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @giga_hab_cost
+        }
+        upkeep = {
+            energy = @giga_hab_maintenance
+        }
+    }
+    triggered_planet_modifier = {
+        modifier = {
+            planet_housing_add = 8
+            job_clerk_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_agrarian_idyll
+            }
+        }
+        modifier = {
+            planet_housing_add = -1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_clerk_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_non_swapped_tradition = tr_prosperity_public_works
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_housing_1
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_housing_2
+                NOT = {
+                    has_valid_civic = civic_agrarian_idyll
+                }
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_non_swapped_tradition = tr_prosperity_interstellar_franchising
+            }
+        }
+        modifier = {
+            job_clerk_add = 1
+        }
+    }
+    triggered_desc = {
+        text = "job_clerk_effect_desc"
+    }
+}

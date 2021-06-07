@@ -1,0 +1,89 @@
+@apsr2cost4 = 30000
+@apsr2weight4 = 5
+tech_apsr2_building_part4 = {
+    cost = @apsr2cost4
+    area = engineering
+    tier = 4
+    category = {
+        industry
+    }
+    prerequisites = {
+        "tech_apsr2_building_part3"
+    }
+    weight = @apsr2weight4
+    is_rare = yes
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_deposit = apsr2_deposit
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            AND = {
+                years_passed < 150
+                num_owned_planets < 7
+                num_pops < 300
+                num_rare_techs < 15
+            }
+        }
+        modifier = {
+            factor = 2
+            AND = {
+                years_passed > 150
+                num_owned_planets > 7
+            }
+        }
+        modifier = {
+            factor = 2
+            AND = {
+                years_passed > 150
+                num_pops > 300
+            }
+        }
+        modifier = {
+            factor = 2
+            AND = {
+                years_passed > 150
+                num_rare_techs > 15
+            }
+        }
+        modifier = {
+            factor = 10
+            has_resource = {
+                type = apsr_knowledge
+                amount >= 300
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_maniacal"
+            }
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+                research_leader = {
+                    area = engineering
+                    has_trait = "leader_trait_curator"
+                }
+                research_leader = {
+                    area = engineering
+                    has_trait = "leader_trait_spark_of_genius"
+                }
+            }
+        }
+        modifier = {
+            factor = 5
+            has_origin = apsr_origin_unique_capital
+        }
+    }
+    ai_weight = {
+        factor = 150
+    }
+}

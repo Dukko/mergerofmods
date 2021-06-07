@@ -1,0 +1,26 @@
+nhsc_building_nanite_containment = {
+    base_buildtime = 480
+    can_build = no
+    can_demolish = yes
+    icon = nhsc_building_nanite_containment
+    potential = {
+    }
+    planet_modifier = {
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 1000
+        }
+        produces = {
+            minerals = 100
+            nanites = 10
+            rare_crystals = 2
+            exotic_gases = 2
+            volatile_motes = 2
+        }
+        upkeep = {
+            energy = 20
+        }
+    }
+}

@@ -1,0 +1,2 @@
+﻿l_default:
+ format.trade_league.4:1000 "<trade_league> of [This.Capital.System.GetName]"

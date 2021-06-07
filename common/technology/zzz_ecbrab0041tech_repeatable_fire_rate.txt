@@ -1,0 +1,114 @@
+@EarlyRepeatableTechCost = 12000
+@EarlyRepeatableTechLevelCost = 6000
+@EarlyRepatableTechFactor = 0.65
+@RepeatableCategoryFactor = 0.25
+@RepeatableDifferntFactor = 0.5
+@EarlyRepeatableWeight = 13
+@EarlyRepeatableTier = 3
+tech_repeatable_fire_rate = {
+    area = society
+    cost = @EarlyRepeatableTechCost
+    cost_per_level = @EarlyRepeatableTechLevelCost
+    tier = @EarlyRepeatableTier
+    category = {
+        military_theory
+    }
+    levels = -1
+    prerequisites = {
+        "tech_command_matrix"
+    }
+    weight = @EarlyRepeatableWeight
+    weight_modifier = {
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_fire_rate
+                value > 0
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_fire_rate
+                value > 1
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_fire_rate
+                value > 2
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_fire_rate
+                value > 3
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_fire_rate
+                value > 4
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_fire_rate
+                value > 5
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_fire_rate
+                value > 6
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_fire_rate
+                value > 7
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_fire_rate
+                value > 8
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_fire_rate
+                value > 9
+            }
+        }
+    }
+    potential = {
+        NOT = {
+            is_country_type = fallen_empire
+        }
+    }
+    ai_weight = {
+        factor = 1
+    }
+    weight_groups = {
+        production
+    }
+    mod_weight_if_group_picked = {
+        ship_repeatable = @RepeatableCategoryFactor
+        job_repeatable = @RepeatableDifferntFactor
+    }
+    mod_weight_if_group_picked = {
+        production_repeatable = @RepeatableDifferntFactor
+    }
+    modifier = {
+        ship_fire_rate_mult = 0.02
+    }
+}

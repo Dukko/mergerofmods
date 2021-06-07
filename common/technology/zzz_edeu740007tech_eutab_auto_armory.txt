@@ -1,0 +1,70 @@
+@tier3cost3 = 6000
+@tier3weight3 = 50
+tech_eutab_auto_armory = {
+    cost = @tier3cost3
+    area = engineering
+    tier = 3
+    category = {
+        industry
+    }
+    prerequisites = {
+        "tech_robotic_workers"
+        "tech_starbase_3"
+        "tech_mineral_purification_1"
+    }
+    weight = @tier3weight3
+    is_rare = yes
+    weight_modifier = {
+        modifier = {
+            factor = 0.75
+            NOT = {
+                research_leader = {
+                    area = engineering
+                    has_trait = "leader_trait_expertise_industry"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                AND = {
+                    has_ascension_perk = ap_eternal_vigilance
+                    OR = {
+                        has_ascension_perk = ap_technological_ascendancy
+                        has_ascension_perk = ap_enigmatic_engineering
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+                has_ethic = ethic_materialist
+                has_ethic = ethic_militarist
+            }
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                has_ethic = ethic_fanatic_materialist
+                has_ethic = ethic_fanatic_militarist
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+}

@@ -1,0 +1,89 @@
+namespace = utopia
+country_event = {
+    id = utopia.30
+    title = "utopia.30.name"
+    desc = "utopia.30.desc.v1"
+    picture = GFX_evt_dyson_sphere
+    show_sound = event_conversation
+    location = event_target:dyson_sphere
+    is_triggered_only = yes
+    option = {
+        name = utopia.30.a
+        ai_chance = {
+            factor = 90
+            modifier = {
+                factor = 20
+                OR = {
+                    relative_power = {
+                        who = event_target:dysonsphere_builder
+                        category = all
+                        value = pathetic
+                    }
+                    relative_power = {
+                        who = event_target:dysonsphere_builder
+                        category = all
+                        value = inferior
+                    }
+                }
+            }
+        }
+        event_target:dysonsphere_builder = {
+            country_event = {
+                id = utopia.31
+                days = 6
+            }
+        }
+    }
+    option = {
+        name = utopia.30.b
+        ai_chance = {
+            factor = 10
+            modifier = {
+                factor = 0
+                OR = {
+                    relative_power = {
+                        who = event_target:dysonsphere_builder
+                        category = all
+                        value = pathetic
+                    }
+                    relative_power = {
+                        who = event_target:dysonsphere_builder
+                        category = all
+                        value = inferior
+                    }
+                }
+            }
+            modifier = {
+                factor = 90
+                income < 0
+            }
+        }
+        if = {
+            limit = {
+                has_ethic = ethic_fanatic_materialist
+            }
+            add_modifier = {
+                modifier = unity_increase_utopia_30
+                days = 1800
+            }
+        }
+        hidden_effect = {
+            event_target:dysonsphere_builder = {
+                country_event = {
+                    id = utopia.32
+                    days = 1
+                }
+            }
+        }
+    }
+    option = {
+        name = utopia.30.c
+        ai_chance = {
+            factor = 10
+        }
+        add_modifier = {
+            modifier = unity_reduction_utopia_30
+            days = 1800
+        }
+    }
+}

@@ -1,0 +1,55 @@
+@tier2cost3 = 2500
+tech_eutab_mercantilism = {
+    cost = @tier2cost3
+    area = society
+    tier = 2
+    category = {
+        statecraft
+    }
+    prerequisites = {
+        "tech_planetary_unification"
+    }
+    weight = @tier2cost3
+    is_rare = yes
+    potential = {
+        eu_req_egal = yes
+    }
+    gateway = eu_imperial
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = ap_imperial_prerogative
+            }
+        }
+        modifier = {
+            factor = 0
+            calc_true_if = {
+                amount = 2
+                has_technology = tech_eutab_mercantilism
+                has_technology = tech_eutab_intel_vigilance
+                has_technology = tech_eutab_species_harmony
+                has_technology = tech_eutab_intergrated_logi
+                has_technology = tech_eutab_det_theory
+                has_technology = tech_eutab_dedication_to_wisdom
+                has_technology = tech_eutab_new_world_missions
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+}

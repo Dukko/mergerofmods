@@ -1,0 +1,522 @@
+building_solar_fields = {
+    base_buildtime = @building_build_time2
+    can_demolish = yes
+    category = resource
+    allow = {
+        solar_system = {
+            custom_tooltip = {
+                fail_text = "requires_no_black_hole_or_dyson_sphere"
+            }
+            OR = {
+                any_system_planet = {
+                    is_star = yes
+                }
+                NOR = {
+                    has_megastructure = dyson_sphere_3
+                    has_megastructure = dyson_sphere_4
+                    has_megastructure = dyson_sphere_5
+                }
+            }
+        }
+    }
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            solar_system = {
+                NOR = {
+                    any_system_planet = {
+                        is_star = no
+                    }
+                    OR = {
+                        has_megastructure = dyson_sphere_3
+                        has_megastructure = dyson_sphere_4
+                        has_megastructure = dyson_sphere_5
+                    }
+                }
+            }
+            AND = {
+                NOT = {
+                    is_planet_class = pc_habitat
+                }
+                free_building_slots = 0
+                owner = {
+                    is_ai = yes
+                    has_monthly_income = {
+                        resource = energy
+                        value >= 125
+                    }
+                    NOT = {
+                        has_country_flag = freed_energy
+                    }
+                }
+            }
+        }
+    }
+    on_destroy = {
+        owner = {
+            set_timed_country_flag = {
+                flag = freed_energy
+                days = 60
+            }
+        }
+    }
+    on_built = {
+        owner = {
+            set_timed_country_flag = {
+                flag = do_not_spam_building_solar_fields
+                days = 360
+            }
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_technician_drone_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_technician_drone_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire_spiritualist = no
+            }
+        }
+        modifier = {
+            job_technician_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_fallen_empire_spiritualist = yes
+            }
+        }
+        modifier = {
+            job_fe_acolyte_generator_add = 2
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_technician_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire_spiritualist = no
+            }
+        }
+        text = job_technician_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_fallen_empire_spiritualist = yes
+            }
+        }
+        text = job_fe_acolyte_generator_effect_desc
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @building_build_cost4
+        }
+        upkeep = {
+            energy = @building_build_upkeep2
+        }
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 500
+            NOR = {
+                is_planet_class = pc_habitat
+                is_planet_class = pc_city
+                is_planet_class = pc_relic
+            }
+            OR = {
+                free_jobs < 3
+                buildings_unemployed = yes
+            }
+            OR = {
+                num_free_districts = {
+                    type = district_generator
+                    value = 0
+                }
+                free_district_slots = 0
+            }
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 0
+                }
+            }
+        }
+        modifier = {
+            weight = 1000
+            free_housing > 3
+            has_building = building_solar_fields
+            OR = {
+                free_jobs < 3
+                buildings_unemployed = yes
+            }
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 125
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            colony_type = col_generator
+            OR = {
+                AND = {
+                    has_building = building_energy_grid
+                    num_buildings = {
+                        type = building_solar_fields
+                        value >= 2
+                    }
+                    num_districts = {
+                        type = district_generator
+                        value >= 6
+                    }
+                }
+                AND = {
+                    has_building = building_energy_nexus
+                    num_buildings = {
+                        type = building_solar_fields
+                        value >= 4
+                    }
+                    num_districts = {
+                        type = district_generator
+                        value >= 3
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            colony_type = col_generator
+            OR = {
+                AND = {
+                    has_building = building_energy_grid
+                    num_buildings = {
+                        type = building_solar_fields
+                        value >= 4
+                    }
+                    num_districts = {
+                        type = district_generator
+                        value >= 12
+                    }
+                }
+                AND = {
+                    has_building = building_energy_nexus
+                    num_buildings = {
+                        type = building_solar_fields
+                        value >= 8
+                    }
+                    num_districts = {
+                        type = district_generator
+                        value >= 6
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value > 50
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                OR = {
+                    has_monthly_income = {
+                        resource = energy
+                        value > 150
+                    }
+                    has_country_flag = do_not_spam_building_solar_fields
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 50
+                }
+            }
+        }
+        modifier = {
+            factor = 10
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < -150
+                }
+            }
+        }
+        modifier = {
+            factor = 1.4
+            has_modifier = hazardous_weather
+        }
+        modifier = {
+            factor = 1.1
+            has_modifier = strong_magnetic_field
+        }
+        modifier = {
+            factor = 1.15
+            count_owned_pop = {
+                limit = {
+                    has_trait = trait_ingenious
+                    is_unemployed = yes
+                }
+                count > 2
+            }
+        }
+        modifier = {
+            factor = 1.3
+            count_owned_pop = {
+                limit = {
+                    has_trait = trait_ingenious
+                    is_unemployed = yes
+                }
+                count > 5
+            }
+        }
+        modifier = {
+            factor = 1.02
+            count_owned_pop = {
+                limit = {
+                    has_trait = trait_strong
+                    is_unemployed = yes
+                }
+                count > 2
+            }
+        }
+        modifier = {
+            factor = 1.04
+            count_owned_pop = {
+                limit = {
+                    has_trait = trait_strong
+                    is_unemployed = yes
+                }
+                count > 5
+            }
+        }
+        modifier = {
+            factor = 1.05
+            count_owned_pop = {
+                limit = {
+                    has_trait = trait_very_strong
+                    is_unemployed = yes
+                }
+                count > 2
+            }
+        }
+        modifier = {
+            factor = 1.1
+            count_owned_pop = {
+                limit = {
+                    has_trait = trait_very_strong
+                    is_unemployed = yes
+                }
+                count > 5
+            }
+        }
+        modifier = {
+            factor = 1.1
+            count_owned_pop = {
+                limit = {
+                    has_trait = trait_cybernetic
+                    is_unemployed = yes
+                }
+                count > 2
+            }
+        }
+        modifier = {
+            factor = 1.2
+            count_owned_pop = {
+                limit = {
+                    has_trait = trait_cybernetic
+                    is_unemployed = yes
+                }
+                count > 5
+            }
+        }
+        modifier = {
+            factor = 1.1
+            count_owned_pop = {
+                limit = {
+                    has_trait = trait_psionic
+                    is_unemployed = yes
+                }
+                count > 2
+            }
+        }
+        modifier = {
+            factor = 1.2
+            count_owned_pop = {
+                limit = {
+                    has_trait = trait_psionic
+                    is_unemployed = yes
+                }
+                count > 5
+            }
+        }
+        modifier = {
+            factor = 1.05
+            count_owned_pop = {
+                limit = {
+                    has_trait = trait_latent_psionic
+                    is_unemployed = yes
+                }
+                count > 2
+            }
+        }
+        modifier = {
+            factor = 1.1
+            count_owned_pop = {
+                limit = {
+                    has_trait = trait_latent_psionic
+                    is_unemployed = yes
+                }
+                count > 5
+            }
+        }
+        modifier = {
+            factor = 1.05
+            count_owned_pop = {
+                limit = {
+                    has_trait = trait_nuumismatic_administration
+                    is_unemployed = yes
+                }
+                count > 2
+            }
+        }
+        modifier = {
+            factor = 1.1
+            count_owned_pop = {
+                limit = {
+                    has_trait = trait_nuumismatic_administration
+                    is_unemployed = yes
+                }
+                count > 5
+            }
+        }
+        modifier = {
+            factor = 1.05
+            count_owned_pop = {
+                limit = {
+                    has_trait = trait_robust
+                    is_unemployed = yes
+                }
+                count > 2
+            }
+        }
+        modifier = {
+            factor = 1.1
+            count_owned_pop = {
+                limit = {
+                    has_trait = trait_robust
+                    is_unemployed = yes
+                }
+                count > 5
+            }
+        }
+        modifier = {
+            factor = 1.05
+            count_owned_pop = {
+                limit = {
+                    has_trait = trait_nerve_stapled
+                    is_unemployed = yes
+                }
+                count > 2
+            }
+        }
+        modifier = {
+            factor = 1.1
+            count_owned_pop = {
+                limit = {
+                    has_trait = trait_nerve_stapled
+                    is_unemployed = yes
+                }
+                count > 5
+            }
+        }
+        modifier = {
+            factor = 1.05
+            count_owned_pop = {
+                limit = {
+                    has_trait = trait_robot_efficient_processors
+                    is_unemployed = yes
+                }
+                count > 2
+            }
+        }
+        modifier = {
+            factor = 1.1
+            count_owned_pop = {
+                limit = {
+                    has_trait = trait_robot_efficient_processors
+                    is_unemployed = yes
+                }
+                count > 5
+            }
+        }
+        modifier = {
+            factor = 1.15
+            count_owned_pop = {
+                limit = {
+                    has_trait = trait_robot_superconductive
+                    is_unemployed = yes
+                }
+                count > 2
+            }
+        }
+        modifier = {
+            factor = 1.3
+            count_owned_pop = {
+                limit = {
+                    has_trait = trait_robot_superconductive
+                    is_unemployed = yes
+                }
+                count > 5
+            }
+        }
+    }
+    prerequisites = {
+        "tech_high_efficiency_photovoltaic"
+    }
+}

@@ -1,0 +1,71 @@
+decadent_hierarchy = {
+    aggressiveness = 1.3
+    trade_willingness = 0.9
+    bravery = 1.1
+    combat_bravery = 1
+    military_spending = 1.1
+    colony_spending = 0.9
+    federation_acceptance = -30
+    nap_acceptance = 20
+    commercial_pact_acceptance = 0
+    research_agreement_acceptance = 0
+    defensive_pact_acceptance = -10
+    migration_pact_acceptance = -100
+    advanced_start_chance = 20
+    weapon_preferences = weapon_type_energy
+    armor_ratio = 0.3
+    shields_ratio = 0.5
+    hull_ratio = 0.2
+    threat_modifier = 1.1
+    threat_others_modifier = 0.75
+    friction_modifier = 0.75
+    claims_modifier = 1.5
+    behaviour = {
+        conqueror = yes
+        subjugator = no
+        liberator = no
+        opportunist = yes
+        slaver = yes
+        uplifter = no
+        purger = no
+        displacer = no
+        dominator = yes
+        infiltrator = no
+        robot_exploiter = yes
+        robot_liberator = no
+        propagator = no
+        multispecies = no
+        crisis_fighter = yes
+        wants_tribute = yes
+    }
+    allow = {
+        is_country_type = default
+        is_country_type = ark
+        OR = {
+            has_ethic = "ethic_authoritarian"
+            has_ethic = "ethic_fanatic_authoritarian"
+            has_ethic = "ethic_capitalism"
+            has_ethic = "ethic_fanatic_capitalism"
+        }
+        OR = {
+            has_ethic = "ethic_pacifist"
+            has_ethic = "ethic_fanatic_pacifist"
+            has_ethic = "ethic_xenophile"
+            has_ethic = "ethic_fanatic_xenophile"
+        }
+        OR = {
+            has_trait = "trait_decadent"
+            has_ethic = "ethic_xenophobe"
+            has_ethic = "ethic_fanatic_xenophobe"
+        }
+        NOR = {
+            has_ethic = "ethic_egalitarian"
+            has_ethic = "ethic_fanatic_egalitarian"
+            has_ethic = "ethic_socialism"
+            has_ethic = "ethic_fanatic_socialism"
+        }
+    }
+    weight_modifier = {
+        weight = 200
+    }
+}

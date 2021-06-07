@@ -1,0 +1,26 @@
+planetary_ring_nuked = {
+    entity = "planetary_ring1_nuked_entity"
+    entity_scale = 1
+    picture = pc_continental
+    tile_set = pc_continental
+    icon_frame = 17
+    enable_tilt = yes
+    climate = "wet"
+    atmosphere_color = hsv {
+        0.4
+        0.5
+        0.9
+    }
+    atmosphere_intensity = 0.5
+    atmosphere_width = 0.5
+    spawn_odds = 0
+    extra_orbit_size = 0
+    extra_planet_count = 0
+    chance_of_ring = 0
+    planet_size = 25
+    star = no
+    colonizable = yes
+    ideal = yes
+    starting_planet = no
+    orbit_lines = yes
+}

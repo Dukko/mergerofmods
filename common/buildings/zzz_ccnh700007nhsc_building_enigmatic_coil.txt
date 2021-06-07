@@ -1,0 +1,190 @@
+@AI_build_additional_building_threshold = 2
+@AI_no_build_additional_building_threshold = 3
+nhsc_building_enigmatic_coil = {
+    base_buildtime = 540
+    icon = nhsc_building_enigmatic_coil
+    category = manufacturing
+    potential = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+        NOT = {
+            has_global_flag = ESC_weapons_enigmatic_forbidden
+        }
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 600
+            rare_crystals = 50
+            exotic_gases = 50
+            sr_dark_matter = 50
+        }
+        upkeep = {
+            energy = 5
+            rare_crystals = 2
+            exotic_gases = 2
+            sr_dark_matter = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_esc_enigma_reader_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_esc_enigma_reader_drone_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_esc_enigma_reader_unit_add = 2
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = job_esc_enigma_reader_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = job_esc_enigma_reader_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = job_esc_enigma_reader_unit_effect_desc
+    }
+    prerequisites = {
+        "nhsc_tech_enigmatic_energy_harvesting"
+    }
+    on_queued = {
+        owner = {
+            set_country_flag = nhsc_queued_enigmatic_coil
+        }
+    }
+    on_unqueued = {
+        owner = {
+            remove_country_flag = nhsc_queued_enigmatic_coil
+        }
+    }
+    on_built = {
+        owner = {
+            set_country_flag = nhsc_has_enigmatic_coil
+            remove_country_flag = nhsc_queued_enigmatic_coil
+            set_timed_country_flag = {
+                flag = nhsc_just_built_enigmatic_coil
+                days = 35
+            }
+        }
+    }
+    on_destroy = {
+        planet_event = {
+            id = nhsc_buildings.60
+            days = 0
+        }
+    }
+    ai_weight = {
+        weight = 0.5
+        modifier = {
+            factor = 0
+            owner = {
+                is_fallen_empire = yes
+            }
+        }
+        modifier = {
+            factor = 0.01
+            owner = {
+                OR = {
+                    has_monthly_income = {
+                        resource = sr_dark_matter
+                        value < 1
+                    }
+                    has_monthly_income = {
+                        resource = exotic_gases
+                        value < 2
+                    }
+                    has_monthly_income = {
+                        resource = rare_crystals
+                        value < 2
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 100
+            owner = {
+                NOR = {
+                    has_country_flag = nhsc_queued_enigmatic_coil
+                    has_country_flag = nhsc_has_enigmatic_coil
+                }
+            }
+        }
+        modifier = {
+            factor = 20
+            owner = {
+                NOR = {
+                    has_country_flag = nhsc_queued_enigmatic_coil
+                    has_country_flag = nhsc_just_built_enigmatic_coil
+                }
+                has_monthly_income = {
+                    resource = esc_enigmatic_energy
+                    value < @AI_build_additional_building_threshold
+                }
+            }
+        }
+        modifier = {
+            factor = 0.001
+            owner = {
+                has_monthly_income = {
+                    resource = esc_enigmatic_energy
+                    value > @AI_no_build_additional_building_threshold
+                }
+            }
+        }
+    }
+    ai_resource_production = {
+        esc_enigmatic_energy = 3
+        trigger = {
+            always = yes
+        }
+    }
+}

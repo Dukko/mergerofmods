@@ -1,0 +1,16 @@
+Biolab_construction = {
+    cost = 45000
+    area = society
+    tier = 3
+    category = {
+        biology
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "allow_Biolab"
+            desc = "desc_allow_Biolab"
+        }
+    }
+    is_rare = yes
+    weight = 0
+}

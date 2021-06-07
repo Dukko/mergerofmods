@@ -1,0 +1,27 @@
+guiTypes = {
+    @entries_row8_y = 1182
+    @entries_column1 = 5
+    @entry_w_ap = 1252
+    containerWindowType = {
+        name = "SomethingTest"
+        size = {
+            width = @entry_w_ap
+            height = 80
+        }
+        position = {
+            x = @entries_column1
+            y = @entries_row8_y
+        }
+        containerWindowType = {
+            name = "tradition_box"
+            size = {
+                width = 300
+                height = 200
+            }
+            position = {
+                x = 15
+                y = 70
+            }
+        }
+    }
+}

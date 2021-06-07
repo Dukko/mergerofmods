@@ -1,0 +1,16 @@
+starnet_spice_melange_antifarmer = {
+    category = worker
+    condition_string = WORKER_JOB_TRIGGER
+    building_icon = building_residence
+    clothes_texture_index = 2
+    possible_pre_triggers = {
+        is_sapient = no
+        is_sapient = yes
+    }
+    possible = {
+        always = no
+    }
+    weight = {
+        weight = 0
+    }
+}

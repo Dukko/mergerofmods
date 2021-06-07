@@ -1,0 +1,45 @@
+@Titan_cost_food = 320
+@Titan_food_upkeep = 1.6
+@Titan_alloy_reduction = -0.68
+ship_section_template = {
+    key = "$ORGANIC$ $TITAN_MID$"
+    ship_size = titan
+    fits_on_slot = mid
+    should_draw_components = yes
+    entity = "titan_mid_entity"
+    icon = "GFX_ship_part_core_mid"
+    prerequisites = {
+        tech_voidcraft_breakthrough
+    }
+    component_slot = {
+        name = "LARGE_GUN_01"
+        template = "large_turret"
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_02"
+        template = "large_turret"
+        locatorname = "large_gun_02"
+    }
+    component_slot = {
+        name = "LARGE_GUN_03"
+        template = "large_turret"
+        locatorname = "large_gun_03"
+    }
+    component_slot = {
+        name = "LARGE_GUN_04"
+        template = "large_turret"
+        locatorname = "large_gun_04"
+    }
+    large_utility_slots = 6
+    resources = {
+        category = ship_sections
+        cost = {
+            food = @Titan_cost_food
+        }
+        upkeep = {
+            food = @Titan_food_upkeep
+            alloys = @Titan_alloy_reduction
+        }
+    }
+}

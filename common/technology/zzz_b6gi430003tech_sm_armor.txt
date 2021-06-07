@@ -1,0 +1,49 @@
+tech_sm_armor = {
+    area = engineering
+    cost = @tier6cost3
+    weight = @tier6weight3
+    tier = 5
+    category = {
+        materials
+    }
+    is_rare = yes
+    ai_update_type = all
+    prerequisites = {
+        "tech_ship_armor_5"
+        "tech_ehof_sentient_tier_4"
+    }
+    weight_modifier = {
+        factor = 1.25
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.5
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = 2
+            has_federation = yes
+            federation = {
+                has_federation_perk = rare_tech_boost
+                any_member = {
+                    has_technology = tech_sm_armor
+                }
+            }
+        }
+    }
+    ai_weight = {
+        factor = @ehof_t1_weight
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+}

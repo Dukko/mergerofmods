@@ -1,0 +1,39 @@
+@tier2cost1 = 1000
+@tier2weight1 = 85
+tech_eutab_breed_t1 = {
+    cost = @tier2cost1
+    area = society
+    tier = 2
+    category = {
+        biology
+    }
+    prerequisites = {
+        "tech_micro_replicators"
+    }
+    weight = @tier2weight1
+    potential = {
+        has_authority = auth_hive_mind
+    }
+    modifier = {
+        pop_category_drones_unity_produces_mult = 0.025
+        planet_pops_organics_food_upkeep_mult = -0.05
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+    }
+}

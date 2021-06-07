@@ -1,0 +1,25 @@
+leaders = {
+    use_for_ai_budget = yes
+    generate_add_modifiers = {
+        cost
+        upkeep
+    }
+    generate_mult_modifiers = {
+        cost
+        upkeep
+    }
+    ai_use_parent_for_resources_upkeep = {
+        energy
+    }
+    parent = country
+    triggered_upkeep_modifier = {
+        key = fleet_leaders
+        modifier_types = {
+            mult
+            add
+        }
+        trigger = {
+            exists = fleet
+        }
+    }
+}

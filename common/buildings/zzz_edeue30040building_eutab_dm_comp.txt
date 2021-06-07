@@ -1,0 +1,38 @@
+building_eutab_dm_comp = {
+    base_buildtime = @b3_time
+    base_cap_amount = 1
+    category = resource
+    potential = {
+        AND = {
+            owner = {
+                is_machine_empire = yes
+            }
+            is_planet_class = pc_machine
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b3_minerals
+            rare_crystals = 200
+        }
+        upkeep = {
+            energy = 15
+            rare_crystals = 5
+        }
+    }
+    planet_modifier = {
+        job_calculator_add = 10
+        job_calculator_per_pop = 0.1
+        planet_researchers_upkeep_mult = -0.25
+    }
+    triggered_desc = {
+        text = job_calculator_effect_desc
+    }
+    prerequisites = {
+        "tech_eutab_m_command_control"
+    }
+    ai_weight = {
+        weight = 100
+    }
+}

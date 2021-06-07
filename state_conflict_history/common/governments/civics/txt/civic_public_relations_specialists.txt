@@ -1,0 +1,24 @@
+civic_public_relations_specialists = {
+    playable = {
+        host_has_dlc = "Federations"
+    }
+    potential = {
+        OR = {
+        authority = {
+            OR = {
+                value = auth_corporate
+                value = auth_corporate_imperial
+            }
+            civics = {
+                value = civic_galactic_sovereign_megacorp
+            }
+        }
+    }
+    random_weight = {
+        base = 5
+    }
+    modifier = {
+        envoys_add = 2
+        diplo_weight_mult = 0.1
+    }
+}

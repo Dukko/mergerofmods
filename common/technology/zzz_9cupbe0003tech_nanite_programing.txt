@@ -1,0 +1,35 @@
+tech_nanite_programing = {
+    area = engineering
+    cost = @tier6cost1
+    tier = 6
+    category = {
+        industry
+    }
+    is_rare = no
+    weight = @tier6weight3
+    prerequisites = {
+        "tech_nanorobotics"
+        "tech_standard_automation"
+        "tech_great_precision"
+    }
+    weight_modifier = {
+        factor = 1.25
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 2
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+}

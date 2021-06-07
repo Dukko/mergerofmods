@@ -1,0 +1,61 @@
+@tier2cost2 = 2000
+@tier2weight2 = 75
+tech_eutab_cultural_exchanges = {
+    cost = @tier2cost2
+    area = society
+    tier = 2
+    prerequisites = {
+        "tech_adaptive_bureaucracy"
+    }
+    category = {
+        statecraft
+    }
+    weight = @tier2weight2
+    is_rare = yes
+    potential = {
+        eu_req_xphi = yes
+    }
+    modifier = {
+        country_unity_produces_mult = 0.05
+        country_consumer_goods_produces_mult = 0.15
+    }
+    gateway = eu_dominion
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = ap_interstellar_dominion
+            }
+        }
+        modifier = {
+            factor = 0
+            calc_true_if = {
+                amount = 2
+                has_technology = tech_eutab_blood_soil
+                has_technology = tech_eutab_psychohistory
+                has_technology = tech_eutab_terra_viruses
+                has_technology = tech_eutab_cultural_exchanges
+                has_technology = tech_eutab_mil_proxy
+                has_technology = tech_eutab_peace_envoy
+                has_technology = tech_eutab_self_sus_fleets
+                has_technology = tech_eutab_power_societies
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+}

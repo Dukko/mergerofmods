@@ -1,0 +1,56 @@
+@tier3cost3 = 6000
+@tier3weight3 = 50
+tech_eutab_support_lab = {
+    cost = @tier3cost3
+    area = engineering
+    tier = 3
+    category = {
+        industry
+    }
+    prerequisites = {
+        "tech_mega_engineering"
+    }
+    weight = @tier3weight3
+    is_rare = yes
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = ap_master_builders
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                OR = {
+                    eu_has_wonders = yes
+                    has_ascension_perk = ap_voidborn
+                    has_ascension_perk = ap_enigmatic_engineering
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 3
+            OR = {
+                has_ascension_perk = ap_master_builders
+                eu_has_wonders = yes
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+}

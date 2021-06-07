@@ -1,0 +1,96 @@
+@apsr14part3cost_energy = 0
+@apsr14part3cost_minerals = 10000
+@apsr14part3cost_time = 1500
+@apsr14part3upkeep_energy = 35
+@apsr14part3upkeep_minerals = 18
+@apsr14part3job = 5
+@apsr14cubejobs = 4
+apsr14_building_part_b3 = {
+    base_buildtime = @apsr14part3cost_time
+    icon = apsr14_building_part_b3
+    is_capped_by_modifier = no
+    category = amenity
+    can_build = no
+    potential = {
+        has_modifier = "apsr14_planet_modifier"
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_apsr14_stuff_hive_add = @apsr14part3job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                has_deposit = apsr_relic_cube_deposit
+            }
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_apsr14_stuff_hive_add = @apsr14cubejobs
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_apsr14_stuff_normal_add = @apsr14part3job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                has_deposit = apsr_relic_cube_deposit
+            }
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_apsr14_stuff_normal_add = @apsr14cubejobs
+        }
+    }
+    resources = {
+        category = planet_apsr_buildings
+        cost = {
+            energy = @apsr14part3cost_energy
+            minerals = @apsr14part3cost_minerals
+        }
+        upkeep = {
+            energy = @apsr14part3upkeep_energy
+            minerals = @apsr14part3upkeep_minerals
+        }
+    }
+    upgrades = {
+        "apsr14_building_part_mech_conversion"
+    }
+    planet_modifier = {
+        planet_housing_add = 20
+    }
+    country_modifier = {
+        leader_age = 40
+    }
+    prerequisites = {
+        "tech_apsr14_building_part_b3"
+    }
+    allow = {
+        has_major_upgraded_capital = yes
+    }
+    ai_weight = {
+        weight = 50000
+    }
+}

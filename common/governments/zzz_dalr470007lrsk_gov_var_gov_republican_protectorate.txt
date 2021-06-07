@@ -1,0 +1,46 @@
+lrsk_gov_var_gov_republican_protectorate = {
+    ruler_title = LRSK_GOV_VAR_RT_FIRST_CONSUL
+    possible = {
+        OR = {
+            has_authority = auth_dictatorial
+            has_authority = auth_democratic_dictatorship
+            has_authority = auth_dem_dict_dummy
+        }
+        has_valid_civic = lrsk_gov_var_civic_enlightened_liberalism
+        OR = {
+            has_valid_civic = civic_nationalistic_zeal
+            has_valid_civic = lrsk_gov_var_civic_imperial_economy
+        }
+        OR = {
+            has_ethic = ethic_militarist
+            has_ethic = ethic_fanatic_militarist
+        }
+        NOT = {
+            has_ethic = ethic_fanatic_elitist
+        }
+    }
+    election_candidates = {
+        modifier = {
+            add = 500
+            OR = {
+                leader_class = admiral
+                leader_class = general
+            }
+        }
+        modifier = {
+            add = 100
+            OR = {
+                leader_class = governor
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                leader_class = scientist
+            }
+        }
+    }
+    weight = {
+        base = 1000
+    }
+}

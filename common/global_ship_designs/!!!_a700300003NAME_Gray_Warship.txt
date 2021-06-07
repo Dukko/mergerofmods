@@ -1,0 +1,175 @@
+ship_design = {
+    name = "NAME_Gray_Warship"
+    ship_size = graygoo_mothership
+    is_event_design = yes
+    country_type = gray
+    section = {
+        template = "gray_warship_key"
+        slot = "mid"
+        component = {
+            slot = "TITAN_01"
+            template = "NHSC_NANITE_TITANIC_WEAPON"
+        }
+        component = {
+            slot = "TORPEDO_01"
+            template = "NHSC_NANITE_TORPEDO_2"
+        }
+        component = {
+            slot = "TORPEDO_02"
+            template = "NHSC_NANITE_TORPEDO_2"
+        }
+        component = {
+            slot = "TORPEDO_03"
+            template = "NHSC_NANITE_TORPEDO_2"
+        }
+        component = {
+            slot = "TORPEDO_04"
+            template = "NHSC_NANITE_TORPEDO_2"
+        }
+        component = {
+            slot = "TORPEDO_05"
+            template = "NANITE_ENERGY_MISSILE"
+        }
+        component = {
+            slot = "MEDIUM_GUN_01"
+            template = "MEDIUM_NHSC_LASER_7"
+        }
+        component = {
+            slot = "MEDIUM_GUN_02"
+            template = "MEDIUM_NHSC_LASER_7"
+        }
+        component = {
+            slot = "MEDIUM_GUN_03"
+            template = "MEDIUM_NHSC_LASER_7"
+        }
+        component = {
+            slot = "MEDIUM_GUN_04"
+            template = "MEDIUM_NHSC_MASS_DRIVER_7"
+        }
+        component = {
+            slot = "MEDIUM_GUN_05"
+            template = "MEDIUM_NHSC_MASS_DRIVER_7"
+        }
+        component = {
+            slot = "MEDIUM_GUN_06"
+            template = "MEDIUM_NHSC_MASS_DRIVER_7"
+        }
+        component = {
+            slot = "LARGE_GUN_01"
+            template = "LARGE_NHSC_LASER_7"
+        }
+        component = {
+            slot = "LARGE_GUN_02"
+            template = "LARGE_NHSC_LASER_7"
+        }
+        component = {
+            slot = "LARGE_GUN_03"
+            template = "LARGE_NHSC_MASS_DRIVER_7"
+        }
+        component = {
+            slot = "LARGE_GUN_04"
+            template = "LARGE_NHSC_MASS_DRIVER_7"
+        }
+        component = {
+            slot = "STRIKE_CRAFT_01"
+            template = "NANITE_STRIKE_CRAFT"
+        }
+        component = {
+            slot = "STRIKE_CRAFT_02"
+            template = "NANITE_STRIKE_CRAFT"
+        }
+        component = {
+            slot = "PD_01"
+            template = "POINT_DEFENCE_3"
+        }
+        component = {
+            slot = "PD_02"
+            template = "POINT_DEFENCE_3"
+        }
+        component = {
+            slot = "LARGE_UTILITY_1"
+            template = "LARGE_NHSC_ADV_SHIELD_2"
+        }
+        component = {
+            slot = "LARGE_UTILITY_2"
+            template = "LARGE_NHSC_ADV_SHIELD_2"
+        }
+        component = {
+            slot = "LARGE_UTILITY_3"
+            template = "LARGE_NHSC_ADV_SHIELD_2"
+        }
+        component = {
+            slot = "LARGE_UTILITY_4"
+            template = "LARGE_NHSC_ADV_SHIELD_2"
+        }
+        component = {
+            slot = "LARGE_UTILITY_5"
+            template = "LARGE_NHSC_ADV_SHIELD_2"
+        }
+        component = {
+            slot = "LARGE_UTILITY_6"
+            template = "LARGE_NHSC_ADV_SHIELD_2"
+        }
+        component = {
+            slot = "LARGE_UTILITY_7"
+            template = "LARGE_NHSC_NANO_ARMOR_2"
+        }
+        component = {
+            slot = "LARGE_UTILITY_8"
+            template = "LARGE_NHSC_NANO_ARMOR_2"
+        }
+        component = {
+            slot = "LARGE_UTILITY_9"
+            template = "LARGE_NHSC_NANO_ARMOR_2"
+        }
+        component = {
+            slot = "LARGE_UTILITY_10"
+            template = "LARGE_NHSC_NANO_ARMOR_2"
+        }
+        component = {
+            slot = "LARGE_UTILITY_11"
+            template = "LARGE_NHSC_NANO_ARMOR_2"
+        }
+        component = {
+            slot = "LARGE_UTILITY_12"
+            template = "LARGE_NHSC_NANO_ARMOR_2"
+        }
+        component = {
+            slot = "LARGE_UTILITY_13"
+            template = "LARGE_ARMOR_5"
+        }
+        component = {
+            slot = "LARGE_UTILITY_14"
+            template = "LARGE_ARMOR_5"
+        }
+        component = {
+            slot = "LARGE_UTILITY_15"
+            template = "LARGE_ARMOR_5"
+        }
+        component = {
+            slot = "LARGE_UTILITY_16"
+            template = "LARGE_ARMOR_5"
+        }
+        component = {
+            slot = "AUX_UTILITY_1"
+            template = "AUTO_REPAIR_2"
+        }
+        component = {
+            slot = "AUX_UTILITY_2"
+            template = "NHSC_ADV_SHIELD_RECHARGER"
+        }
+        component = {
+            slot = "AUX_UTILITY_3"
+            template = "AFTERBURNER_2"
+        }
+        component = {
+            slot = "AUX_UTILITY_4"
+            template = "FIRE_CONTROL_1"
+        }
+    }
+    required_component = "HYPER_DRIVE_3"
+    required_component = "NHSC_ADV_TACHYON_SENSOR_SHIP"
+    required_component = "GREYGOO_MOTHERSHIP_SHIP_THRUSTER_4"
+    required_component = "GREYGOO_MOTHERSHIP_ZERO_POINT_REACTOR"
+    required_component = "COMBAT_NANITE_COMPUTER_ARTILLERY_AUTONOMOUS"
+}

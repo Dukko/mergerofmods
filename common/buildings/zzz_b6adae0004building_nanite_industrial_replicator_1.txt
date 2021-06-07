@@ -1,0 +1,58 @@
+building_nanite_industrial_replicator_1 = {
+    base_buildtime = 600
+    category = manufacturing
+    potential = {
+        NOR = {
+            has_modifier = resort_colony
+            has_modifier = slave_colony
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 750
+            nanites = 50
+        }
+        produces = {
+            minerals = 40
+        }
+        upkeep = {
+            nanites = 5
+            energy = 20
+        }
+    }
+    prerequisites = {
+        "tech_nanite_transmutation"
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_nanite_worker_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_nanite_drone_add = 2
+        }
+    }
+    ai_weight = {
+        weight = 0.5
+    }
+    ai_resource_production = {
+        minerals = 5
+        trigger = {
+            always = yes
+        }
+    }
+}

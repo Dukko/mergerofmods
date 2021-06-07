@@ -1,0 +1,67 @@
+@apsr11part2cost_energy = 0
+@apsr11part2cost_minerals = 5000
+@apsr11part2cost_time = 1000
+@apsr11part2upkeep_energy = 8
+@apsr11part2upkeep_minerals = 5
+@apsr11part2job = 9
+@apsr11part2agrjob = 2
+apsr11_building_part_b2 = {
+    base_buildtime = @apsr11part2cost_time
+    icon = apsr11_building_part_b2
+    is_capped_by_modifier = no
+    category = resource
+    can_build = no
+    potential = {
+        has_modifier = "apsr11_planet_modifier"
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_apsr11_farmer_hive_add = @apsr11part2job
+            job_apsr11_agronomist_hive_add = @apsr11part2agrjob
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_apsr11_farmer_normal_add = @apsr11part2job
+            job_apsr11_agronomist_normal_add = @apsr11part2agrjob
+        }
+    }
+    resources = {
+        category = planet_apsr_buildings
+        cost = {
+            energy = @apsr11part2cost_energy
+            minerals = @apsr11part2cost_minerals
+        }
+        upkeep = {
+            energy = @apsr11part2upkeep_energy
+            minerals = @apsr11part2upkeep_minerals
+        }
+    }
+    country_modifier = {
+        planet_pops_organics_food_upkeep_mult = -0.1
+    }
+    upgrades = {
+        "apsr11_building_part_b3"
+    }
+    prerequisites = {
+        "tech_apsr11_building_part_b2"
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    ai_weight = {
+        weight = 50000
+    }
+}

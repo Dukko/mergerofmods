@@ -1,0 +1,67 @@
+building_eutab_comp_arcology = {
+    base_buildtime = @b2_time
+    can_build = no
+    category = amenity
+    potential = {
+        NOT = {
+            has_modifier = slave_colony
+        }
+        owner = {
+            eu_req_mat = yes
+        }
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    planet_modifier = {
+        planet_housing_add = 14
+        job_technician_add = 4
+        job_farmer_add = 2
+        job_researcher_add = 8
+        planet_max_buildings_add = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_non_swapped_tradition = tr_domination_imperious_architecture
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 600
+            alloys = 100
+        }
+        upkeep = {
+            alloys = 4
+        }
+    }
+    prerequisites = {
+        "tech_eutab_comp_arcology"
+    }
+    triggered_desc = {
+        text = job_technician_effect_desc
+    }
+    triggered_desc = {
+        text = job_farmer_effect_desc
+    }
+    triggered_desc = {
+        text = job_researcher_effect_desc
+    }
+    ai_weight = {
+        weight = 1
+        modifier = {
+            factor = 2
+            free_housing < 0
+        }
+        modifier = {
+            factor = 3
+            free_amenities < 2
+        }
+    }
+}

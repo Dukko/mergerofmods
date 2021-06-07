@@ -1,0 +1,18 @@
+trait_scales = {
+    cost = 0
+    sorting_priority = 19
+    initial = no
+    randomized = no
+    modification = no
+    improves_leaders = yes
+    modifier = {
+        planet_pops_organics_upkeep_mult = -0.25
+        leader_age = 120
+    }
+    potential_crossbreeding_chance = 1
+    icon = "gfx/interface/icons/traits/trait_scales.dds"
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+}

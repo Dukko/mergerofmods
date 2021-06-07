@@ -1,0 +1,17 @@
+tech_gpm_proto_forests_discovery_2 = {
+    area = society
+    cost = @tier2cost1
+    category = {
+        biology
+    }
+    tier = 2
+    is_rare = yes
+    ai_update_type = all
+    weight = 1
+    modifier = {
+        job_healthcare_per_pop = 0.05
+    }
+    weight_modifier = {
+        factor = 0
+    }
+}

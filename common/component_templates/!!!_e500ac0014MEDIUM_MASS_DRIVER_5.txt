@@ -1,0 +1,45 @@
+weapon_component_template = {
+    type = instant
+    key = "MEDIUM_MASS_DRIVER_5"
+    size = medium
+    icon = "GFX_ship_part_mass_driver_5"
+    icon_frame = 1
+    prerequisites = {
+        "tech_mass_drivers_5"
+    }
+    component_set = "MASS_DRIVER_5"
+    projectile_gfx = "gauss_cannon_m"
+    upgrades_to = "MEDIUM_NHSC_MASS_DRIVER_6"
+    tags = {
+        weapon_type_kinetic
+    }
+    ai_tags = {
+        weapon_role_anti_shield
+    }
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @m_t5_cost
+            volatile_motes = @m_t5_rare
+        }
+        upkeep = {
+            energy = @m_t5_upkeep_energy
+            alloys = @m_t5_upkeep_alloys
+        }
+    }
+    ai_weight = {
+        weight = 1
+        modifier = {
+            factor = 2
+            has_technology = tech_cruisers
+        }
+        modifier = {
+            factor = 0
+            is_country_type = default
+            resource_stockpile_compare = {
+                resource = volatile_motes
+                value < 10
+            }
+        }
+    }
+}

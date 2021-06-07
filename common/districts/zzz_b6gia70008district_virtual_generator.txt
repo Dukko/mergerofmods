@@ -1,0 +1,108 @@
+district_virtual_generator = {
+    base_buildtime = @giga_rw_district_buildtime
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        uses_district_set = virtual_ring_industry
+        has_planet_flag = giga_virtual_industry
+    }
+    potential = {
+        uses_district_set = virtual_ring_industry
+        has_planet_flag = giga_virtual_industry
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @giga_rw_cost
+            rare_crystals = @giga_rw_cost_sr
+        }
+        upkeep = {
+            energy = @giga_rw_maintenance
+            rare_crystals = @giga_rw_maintenance_sr
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 5
+        planet_technician_energy_produces_add = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_technician_drone_add = 5
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_technician_add = 5
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = "job_technician_drone_effect_desc"
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        text = "job_technician_effect_desc"
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 250
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 200
+                }
+            }
+        }
+        modifier = {
+            factor = 0.01
+            OR = {
+                planet = {
+                    has_district = district_virtual_mining
+                }
+                planet = {
+                    has_district = district_virtual_science
+                }
+                planet = {
+                    has_district = district_virtual_consumer
+                }
+                planet = {
+                    has_district = district_virtual_alloys
+                }
+                planet = {
+                    has_district = district_virtual_leisure
+                }
+                planet = {
+                    has_district = district_virtual_strat_res
+                }
+            }
+        }
+    }
+    ai_resource_production = {
+        energy = 10
+        trigger = {
+            always = yes
+        }
+    }
+}

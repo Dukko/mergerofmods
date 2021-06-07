@@ -1,0 +1,66 @@
+"Third Flowering of Zanfir" = {
+    key = "Third Flowering of Zanfir"
+    ship_prefix = ""
+    species = {
+        class = "PLANT"
+        portrait = "pla3"
+        name = "Molyn"
+        plural = "Molyns"
+        adjective = "Molynish"
+        species_bio = "Thrice touched by the serendipitous blessing of fate, the planet Zanfir is flowering once again. Casting its spores, the Molyns, into the void, it will bury new roots in distant soils to ensure its survival in the times to come. Zanfir is a Gaia world, however, a natural work of art, a gem floating in the firmament, and it's flowers will rarely bloom under anything but the most perfect skies."
+        name_list = "just-name-lists_plantoid1"
+        trait = "trait_agrarian"
+        trait = "trait_conservational"
+        trait = "trait_traditional"
+        trait = "trait_just-more-traits_rooted"
+    }
+    name = "Third Flowering of Zanfir"
+    adjective = "Zanfiri"
+    authority = "auth_oligarchic"
+    government = "gov_irenic_bureaucracy"
+    planet_name = "Zanfir"
+    planet_class = "pc_tropical"
+    system_name = "Noxa"
+    initializer = ""
+    graphical_culture = "plantoid_01"
+    city_graphical_culture = "plantoid_01"
+    empire_flag = {
+        icon = {
+            category = "just-more-flags"
+            file = "flag_nature4.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "fabric_gradient.dds"
+        }
+        colors = {
+            "yellow"
+            "orange"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = female
+        name = "Xanova ka Pretek"
+        portrait = "pla3"
+        texture = 0
+        hair = 0
+        clothes = 0
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "hive1_room"
+    spawn_enabled = yes
+    ethic = "ethic_authoritarian"
+    ethic = "ethic_xenophobe"
+    ethic = "ethic_fanatic_pacifist"
+    ethic = "ethic_socialism"
+    civics = {
+        "civic_inwards_perfection"
+        "civic_environmentalist"
+        "civic_executive_committee"
+    }
+    origin = "origin_life_seeded"
+}

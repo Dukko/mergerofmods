@@ -1,0 +1,89 @@
+namespace = cara
+country_event = {
+    id = cara.4020
+    title = cara.4020.name
+    desc = cara.4020.desc
+    picture = GFX_evt_cargoship_caravan
+    location = event_target:caravan_hulk_object
+    show_sound = event_ship_thrusters
+    mean_time_to_happen = {
+        years = 2
+    }
+    trigger = {
+        caravaneer_fleet_events_valid = yes
+        NOT = {
+            has_country_flag = hulk_caravan_recent
+        }
+        NOT = {
+            has_country_flag = caravan_recent_event
+        }
+    }
+    immediate = {
+        set_timed_country_flag = {
+            flag = hulk_caravan_recent
+            days = 3650
+        }
+        set_timed_country_flag = {
+            flag = caravan_recent_event
+            days = 720
+        }
+        random_system_within_border = {
+            limit = {
+                caravaneer_fleet_in_system = yes
+            }
+            random_fleet_in_system = {
+                limit = {
+                    exists = owner
+                    owner = {
+                        is_country_type = caravaneer_fleet
+                    }
+                }
+                save_event_target_as = caravan_hulk_country
+            }
+            save_event_target_as = caravan_hulk_system
+            create_ambient_object = {
+                type = abandoned_ship_object
+                location = this.star
+            }
+            last_created_ambient_object = {
+                save_event_target_as = caravan_hulk_object
+            }
+        }
+    }
+    option = {
+        name = cara.4020.a
+        event_target:caravan_hulk_object = {
+            enable_special_project = {
+                name = CARAVAN_HULK_PROJECT
+                location = this
+                owner = root
+            }
+        }
+    }
+    option = {
+        name = cara.4020.b
+        hidden_effect = {
+            event_target:caravan_hulk_object = {
+                destroy_ambient_object = this
+            }
+        }
+    }
+    option = {
+        name = cara.4020.c
+        trigger = {
+            is_megacorp = yes
+        }
+        custom_tooltip = cara.4020.c.tooltip
+        add_monthly_resource_mult = {
+            resource = consumer_goods
+            value = @tier2materialreward
+            min = @tier2materialmin
+            max = @tier2materialmax
+        }
+        hidden_effect = {
+            event_target:caravan_hulk_object = {
+                destroy_ambient_object = this
+            }
+        }
+    }
+}

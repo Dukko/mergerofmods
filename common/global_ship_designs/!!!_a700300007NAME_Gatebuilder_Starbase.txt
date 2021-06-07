@@ -1,0 +1,65 @@
+ship_design = {
+    name = "NAME_Gatebuilder_Starbase"
+    ship_size = starbase_gatebuilders
+    is_event_design = no
+    is_special_buildable = yes
+    section = {
+        template = "gatebuilder_starbase_key"
+        slot = "mid"
+        component = {
+            slot = "TITAN_01"
+            template = "GG_BEAM"
+        }
+        component = {
+            slot = "TORPEDO_01"
+            template = "NHSC_NANITE_TORPEDO_2"
+        }
+        component = {
+            slot = "TORPEDO_02"
+            template = "NHSC_NANITE_TORPEDO_2"
+        }
+        component = {
+            slot = "TORPEDO_03"
+            template = "NHSC_NANITE_TORPEDO_2"
+        }
+        component = {
+            slot = "TORPEDO_04"
+            template = "NHSC_NANITE_TORPEDO_2"
+        }
+        component = {
+            slot = "TORPEDO_05"
+            template = "NHSC_NANITE_TORPEDO_2"
+        }
+        component = {
+            slot = "STRIKE_CRAFT_01"
+            template = "NHSC_NANITE_STRIKECRAFT"
+        }
+        component = {
+            slot = "STRIKE_CRAFT_02"
+            template = "NHSC_NANITE_STRIKECRAFT"
+        }
+        component = {
+            slot = "STRIKE_CRAFT_03"
+            template = "NHSC_NANITE_STRIKECRAFT"
+        }
+        component = {
+            slot = "STRIKE_CRAFT_04"
+            template = "NHSC_NANITE_STRIKECRAFT"
+        }
+        component = {
+            slot = "STRIKE_CRAFT_05"
+            template = "NHSC_NANITE_STRIKECRAFT"
+        }
+        component = {
+            slot = "STRIKE_CRAFT_06"
+            template = "NHSC_NANITE_STRIKECRAFT"
+        }
+        component = {
+            slot = "AUX_UTILITY_1"
+            template = "AUTO_REPAIR_2"
+        }
+    }
+    required_component = "NHSC_ADV_TACHYON_SENSOR_SHIP"
+    required_component = "TITAN_ANTIMATTER_REACTOR"
+    required_component = "COMBAT_COMPUTER_PLATFORM_ADVANCED"
+}

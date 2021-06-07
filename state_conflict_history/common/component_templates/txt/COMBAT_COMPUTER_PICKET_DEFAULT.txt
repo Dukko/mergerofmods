@@ -1,0 +1,38 @@
+@cost0 = 0
+@power0 = -5
+utility_component_template = {
+    key = "COMBAT_COMPUTER_PICKET_DEFAULT"
+    size = small
+    icon = "GFX_ship_part_computer_default"
+    icon_frame = 1
+    power = @power0
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @cost0
+        }
+    }
+    ship_behavior = "picket"
+    size_restriction = {
+        corvette
+        destroyer
+        cruiser
+        crisis_corvette
+        crisis_destroyer
+        crisis_cruiser
+        StrikeCruiser
+        Battlecruiser
+        battleship
+        Carrier
+        Dreadnought
+        titan
+        Flagship
+        escortcarrier
+        explorationship
+    }
+    component_set = "combat_computers"
+    upgrades_to = "COMBAT_COMPUTER_PICKET_BASIC"
+    ai_weight = {
+        weight = 3
+    }
+}

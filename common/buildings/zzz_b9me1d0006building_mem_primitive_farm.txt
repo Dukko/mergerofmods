@@ -1,0 +1,18 @@
+building_mem_primitive_farm = {
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = no
+    icon = building_primitive_farm
+    potential = {
+        exists = owner
+        owner = {
+            is_primitive = yes
+            has_country_flag = mem_use_custom_primitive_buildings
+        }
+    }
+    planet_modifier = {
+        job_mem_primitive_farmer_add = 10
+    }
+    upgrades = {
+    }
+}

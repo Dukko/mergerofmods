@@ -1,0 +1,84 @@
+@apsr23part1cost_minerals = 500
+@apsr23part1cost_time = 300
+@apsr23part1upkeep_energy = 3
+@apsr23part1upkeep_minerals = 2
+@apsr23part1job = 1
+apsr23_building_part1 = {
+    base_buildtime = @apsr23part1cost_time
+    icon = apsr23_building_part1
+    base_cap_amount = 6
+    is_capped_by_modifier = no
+    category = manufacturing
+    potential = {
+        AND = {
+            has_modifier = "apsr23_planet_modifier"
+            NOT = {
+                OR = {
+                    has_building = apsr23_building_part1_fake
+                    has_building = apsr23_building_part2_fake
+                    has_building = apsr23_building_part3_fake
+                }
+            }
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_apsr23_processing_hive_add = @apsr23part1job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_apsr23_processing_machine_add = @apsr23part1job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_apsr23_processing_normal_add = @apsr23part1job
+        }
+    }
+    resources = {
+        category = planet_apsr_buildings
+        cost = {
+            minerals = @apsr23part1cost_minerals
+        }
+        upkeep = {
+            energy = @apsr23part1upkeep_energy
+            minerals = @apsr23part1upkeep_minerals
+        }
+    }
+    planet_modifier = {
+        planet_jobs_rare_crystals_produces_mult = 0.01
+        planet_jobs_volatile_motes_produces_mult = 0.01
+        planet_jobs_exotic_gases_produces_mult = 0.01
+    }
+    upgrades = {
+        "apsr23_building_part2"
+    }
+    prerequisites = {
+        "tech_apsr23_building_part1"
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    ai_weight = {
+        weight = 50000
+    }
+}

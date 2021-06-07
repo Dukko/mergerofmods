@@ -1,0 +1,298 @@
+can_build_branch_office_on_planet = {
+    custom_tooltip = {
+        fail_text = requires_recipient_not_warshipgirls
+        exists = owner
+        owner = {
+            OR = {
+                NOT = {
+                    has_authority = auth_warshipgirls
+                }
+            }
+        }
+    }
+    custom_tooltip = {
+        fail_text = requires_recipient_not_fanatic_purifiers
+        exists = owner
+        owner = {
+            OR = {
+                is_same_species = root
+                NOT = {
+                    has_civic = civic_fanatic_purifiers
+                }
+            }
+        }
+    }
+    custom_tooltip = {
+        fail_text = ACTION_RECIPIENT_NOT_YOUR_CORP
+        exists = owner
+        owner = {
+            OR = {
+                NOT = {
+                    has_global_flag = gf_moreauthorities_activated
+                }
+                AND = {
+                    has_global_flag = gf_moreauthorities_activated
+                    NOT = {
+                        AND = {
+                            is_subject = yes
+                            is_megacorp = yes
+                            NOT = {
+                                has_overlord = root
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    custom_tooltip = {
+        fail_text = BRANCH_OFFICE_NOT_COMMERCIAL_PACT
+        exists = owner
+        OR = {
+            root = {
+                OR = {
+                    is_criminal_syndicate = yes
+                    has_valid_civic = civic_mutualistic_behavior
+                    has_authority = auth_azur_lane_1
+                    has_ascension_perk = ap_megacorp
+                }
+            }
+            owner = {
+                has_commercial_pact = root
+            }
+            owner = {
+                is_in_federation_with = root
+            }
+            and = {
+                has_global_flag = gf_alphamod_activated
+                root = {
+                    is_megacorp = yes
+                    has_diplo_migration_treaty = owner
+                }
+                owner = {
+                    is_megacorp = yes
+                    has_diplo_migration_treaty = root
+                }
+            }
+            AND = {
+                has_global_flag = underground_realms
+                owner = {
+                    has_commercial_pact = root
+                }
+                root = {
+                    is_megacorp = yes
+                }
+                root = {
+                    is_criminal_syndicate = no
+                }
+            }
+            AND = {
+                root = {
+                    has_valid_civic = civic_machine_aperature_science
+                }
+                owner = {
+                    has_research_agreement = root
+                }
+            }
+            AND = {
+                owner = {
+                    has_ethic = ethic_gestalt_consciousness
+                }
+                root = {
+                    has_ascension_perk = ap_megacorp
+                }
+            }
+            root = {
+                is_subject = yes
+                OR = {
+                    has_global_flag = gf_alphamod_activated
+                    has_global_flag = gf_veru_activated
+                    has_global_flag = gf_moreauthorities_activated
+                    is_subject_type = subsidiary
+                    is_subject_type = subsidiary2
+                }
+                overlord = {
+                    is_same_value = owner
+                }
+            }
+            owner = {
+                is_subject = yes
+                OR = {
+                    has_global_flag = gf_alphamod_activated
+                    has_global_flag = gf_veru_activated
+                    has_global_flag = gf_moreauthorities_activated
+                    is_subject_type = subsidiary
+                    is_subject_type = subsidiary2
+                    overlord = {
+                        has_authority = auth_warshipgirls
+                    }
+                }
+                overlord = {
+                    is_same_value = root
+                }
+            }
+            OR = {
+                AND = {
+                    root = {
+                        has_civic = civic_galactic_sovereign_megacorp
+                    }
+                    owner = {
+                        is_galactic_community_member = yes
+                    }
+                }
+            }
+            OR = {
+                AND = {
+                    root = {
+                        has_modifier = imperial_charter
+                    }
+                    owner = {
+                        is_galactic_community_member = yes
+                    }
+                }
+            }
+            owner = {
+                AND = {
+                    OR = {
+                        has_authority = auth_azur_lane_2
+                        has_authority = auth_azur_lane_0
+                    }
+                    is_same_value = root
+                }
+            }
+            AND = {
+                has_global_flag = underground_realms
+                OR = {
+                    owner = {
+                        NOT = {
+                            is_megacorp = yes
+                        }
+                    }
+                    root = {
+                        is_criminal_syndicate = yes
+                    }
+                    root = {
+                        is_subject = yes
+                        OR = {
+                            is_subject_type = subsidiary
+                            is_subject_type = subsidiary2
+                        }
+                    }
+                    overlord = {
+                        is_same_value = owner
+                    }
+                    owner = {
+                        is_subject = yes
+                        OR = {
+                            is_subject_type = subsidiary
+                            is_subject_type = subsidiary2
+                            overlord = {
+                                has_authority = auth_warshipgirls
+                            }
+                        }
+                        overlord = {
+                            is_same_value = root
+                        }
+                    }
+                }
+            }
+            AND = {
+                has_global_flag = hfe_installed
+                root = {
+                    exists = overlord
+                    overlord = {
+                        is_country = prevprev.owner
+                    }
+                }
+            }
+        }
+    }
+    custom_tooltip = {
+        fail_text = BRANCH_OFFICE_CRIMINAL_HERITAGE_HAS_TRUCE
+        exists = owner
+        OR = {
+            has_global_flag = underground_realms
+            AND = {
+                NOT = {
+                    has_global_flag = underground_realms
+                }
+                OR = {
+                    root = {
+                        is_criminal_syndicate = no
+                    }
+                    root = {
+                        NOT = {
+                            has_authority = auth_azur_lane_1
+                        }
+                    }
+                    owner = {
+                        NOR = {
+                            has_truce = root
+                            is_at_war_with = root
+                        }
+                    }
+                }
+            }
+        }
+    }
+    custom_tooltip = {
+        fail_text = BRANCH_OFFICE_NOT_SELF
+        exists = owner
+        owner = {
+            NOT = {
+                is_same_value = root
+            }
+        }
+    }
+    custom_tooltip = {
+        fail_text = BRANCH_OFFICE_CRIMINAL_COOLDOWN
+        exists = owner
+        OR = {
+            root = {
+                is_criminal_syndicate = no
+            }
+            root = {
+                NOT = {
+                    has_authority = auth_azur_lane_1
+                }
+            }
+            AND = {
+                root = {
+                    is_criminal_syndicate = yes
+                }
+                NOT = {
+                    has_planet_flag = criminal_branch_closed_cooldown_planet@root
+                }
+            }
+        }
+    }
+    hidden_trigger = {
+        OR = {
+            NOT = {
+                root = {
+                    has_ai_personality = principled_rogues
+                    is_ai = yes
+                }
+            }
+            owner = {
+                their_opinion = {
+                    who = root
+                    value < 0
+                }
+            }
+            owner = {
+                their_opinion = {
+                    who = root
+                    value < 20
+                }
+                NOT = {
+                    has_opinion_modifier = {
+                        who = root
+                        modifier = opinion_new_contact
+                        is_reverse = yes
+                    }
+                }
+            }
+        }
+    }
+}

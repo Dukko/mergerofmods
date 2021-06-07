@@ -1,0 +1,6 @@
+trait_additrait_planetary_gardeners = {
+    cost = 2
+    allowed_archetypes = {
+        MACHINE
+    }
+}

@@ -1,0 +1,51 @@
+ap_nihilistic_acquisition = {
+    potential = {
+        host_has_dlc = "Apocalypse"
+        is_raider = no
+    }
+    on_enabled = {
+        custom_tooltip = "allow_raiding"
+        hidden_effect = {
+            country_event = {
+                id = relytor_raider.1
+            }
+        }
+    }
+    possible = {
+        OR = {
+            is_authoritarian = yes
+            is_xenophobe = yes
+            is_militarist = yes
+            has_ethic = ethic_gestalt_consciousness
+        }
+        is_xenophile = no
+    }
+    ai_weight = {
+        factor = 1
+        modifier = {
+            factor = 0
+            not = {
+                has_ascension_perk = ap_executive_vigor
+            }
+        }
+        modifier = {
+            factor = 0
+            turtler2 = no
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ai_personality_behaviour = slaver
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_valid_civic = civic_fanatic_purifiers
+                has_valid_civic = civic_hive_devouring_swarm
+                has_valid_civic = civic_inwards_perfection
+                has_valid_civic = civic_machine_terminator
+            }
+        }
+    }
+}

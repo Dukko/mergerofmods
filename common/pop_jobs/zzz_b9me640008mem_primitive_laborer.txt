@@ -1,0 +1,28 @@
+mem_primitive_laborer = {
+    category = worker
+    is_capped_by_modifier = yes
+    building_icon = building_primitive_factory
+    clothes_texture_index = 2
+    icon = primitive_laborer
+    possible = {
+        hidden_trigger = {
+            exists = owner
+        }
+        owner = {
+            is_primitive = yes
+            has_country_flag = mem_use_custom_primitive_buildings
+        }
+    }
+    resources = {
+        category = planet_artisans
+        produces = {
+            consumer_goods = 2
+        }
+        upkeep = {
+            minerals = 2
+        }
+    }
+    weight = {
+        weight = 2
+    }
+}

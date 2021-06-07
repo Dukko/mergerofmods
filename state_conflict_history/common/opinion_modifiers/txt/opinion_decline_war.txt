@@ -1,0 +1,10 @@
+opinion_decline_war = {
+    opinion = {
+        base = -50
+    }
+    decay = {
+        base = 1
+    }
+    unique = yes
+    accumulative = no
+}

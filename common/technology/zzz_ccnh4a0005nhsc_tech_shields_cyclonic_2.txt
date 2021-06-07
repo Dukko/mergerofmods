@@ -1,0 +1,52 @@
+nhsc_tech_shields_cyclonic_2 = {
+    area = physics
+    category = {
+        field_manipulation
+    }
+    tier = 5
+    cost = @tier5cost2
+    weight = @tier5weight2
+    ai_update_type = all
+    prerequisites = {
+        "nhsc_tech_shields_cyclonic_1"
+    }
+    potential = {
+        NOT = {
+            has_global_flag = ESC_shields_forbidden
+        }
+    }
+    weight_modifier = {
+        factor = 1.25
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_maniacal"
+            }
+        }
+    }
+    ai_weight = {
+        factor = @ESC_AI_tech_weight_multiplier
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_maniacal"
+            }
+        }
+    }
+}

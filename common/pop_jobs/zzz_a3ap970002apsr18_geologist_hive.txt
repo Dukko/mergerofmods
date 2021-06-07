@@ -1,0 +1,80 @@
+apsr18_geologist_hive = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = apsr18_building_part3
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        drone_job_check_trigger = yes
+    }
+    resources = {
+        category = apsr18_planet_geologist_hive
+        produces = {
+            minerals = 5
+            apsr_knowledge = 0.18
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr18_building_part3
+                }
+            }
+            apsr_knowledge = 0.09
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_deposit = apsr_relic_cube_deposit
+                }
+            }
+            minerals = 5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr18_advanced_1
+                }
+            }
+            minerals = 3.5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr18_advanced_2
+                }
+            }
+            minerals = 3.5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr18_advanced_3
+                }
+            }
+            minerals = 3.5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr18_advanced_4
+                }
+            }
+            minerals = 3.5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr18_advanced_5
+                }
+            }
+            minerals = 3.5
+        }
+    }
+    weight = {
+        weight = 100
+    }
+}

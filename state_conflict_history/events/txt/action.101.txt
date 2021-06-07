@@ -1,0 +1,40 @@
+namespace = action
+country_event = {
+    id = action.101
+    title = action.101.name
+    desc = {
+        text = action.101.desc
+        trigger = {
+            NOT = {
+                is_xenophobe = yes
+            }
+        }
+    }
+    desc = {
+        text = action.101.desc.phobe
+        trigger = {
+            is_xenophobe = yes
+        }
+    }
+    picture = GFX_evt_financial_instruments
+    location = event_target:galactic_market_station
+    immediate = {
+        set_country_flag = has_market_access
+        enable_galactic_market = yes
+        event_target:galactic_market_station.solar_system = {
+            every_system_planet = {
+                set_surveyed = {
+                    surveyed = yes
+                    surveyor = root
+                }
+            }
+        }
+    }
+    is_triggered_only = yes
+    option = {
+        name = OK
+        tooltip = {
+            end_event_chain = market_founding_chain
+        }
+    }
+}

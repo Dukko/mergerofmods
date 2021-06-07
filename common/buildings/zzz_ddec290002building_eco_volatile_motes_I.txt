@@ -1,0 +1,120 @@
+building_eco_volatile_motes_I = {
+    base_buildtime = @b2_time
+    category = manufacturing
+    potential = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+        building_basic_income_check = yes
+        exists = owner
+        owner = {
+            has_civic = civic_eco_social_economy
+        }
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    planet_modifier = {
+        planet_eco_foundry_upkeep_mult = -0.01
+    }
+    destroy_trigger = {
+        free_building_slots = 0
+        exists = owner
+        owner = {
+            is_ai = yes
+            has_monthly_income = {
+                resource = volatile_motes
+                value > 9
+            }
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_eco_chemist_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_chemist_drone_add = 1
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b2_minerals
+        }
+        upkeep = {
+            energy = 3
+        }
+    }
+    prerequisites = {
+        "tech_volatile_motes"
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        text = job_eco_chemist_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_chemist_drone_effect_desc
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            factor = 0
+            buildings_build_building = no
+        }
+        modifier = {
+            weight = 50
+            owner = {
+                has_monthly_income = {
+                    resource = volatile_motes
+                    value < 3
+                }
+            }
+        }
+        modifier = {
+            weight = 250
+            owner = {
+                has_monthly_income = {
+                    resource = volatile_motes
+                    value < 0
+                }
+            }
+        }
+    }
+    upgrades = {
+        building_eco_transmuter
+    }
+    ai_resource_production = {
+        volatile_motes = 1
+        trigger = {
+            always = yes
+        }
+    }
+}

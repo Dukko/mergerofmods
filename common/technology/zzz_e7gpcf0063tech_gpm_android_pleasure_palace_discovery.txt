@@ -1,0 +1,17 @@
+tech_gpm_android_pleasure_palace_discovery = {
+    area = society
+    cost = @tier2cost1
+    category = {
+        new_worlds
+    }
+    tier = 2
+    is_rare = no
+    ai_update_type = all
+    weight = 1
+    modifier = {
+        biological_pop_happiness = 0.05
+    }
+    weight_modifier = {
+        factor = 0
+    }
+}

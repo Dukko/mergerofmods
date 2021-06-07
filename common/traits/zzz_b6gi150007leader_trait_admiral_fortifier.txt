@@ -1,0 +1,23 @@
+leader_trait_admiral_fortifier = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/trait_fortifier.dds"
+    leader_trait = all
+    self_modifier = {
+        leader_age = 80
+    }
+    modifier = {
+        ship_weapon_damage = 0.15
+        ship_hull_mult = 0.3
+        ship_hull_regen_add_perc = 1.5
+        ship_armor_regen_add_perc = 1.5
+    }
+    leader_class = {
+        admiral
+    }
+    initial = no
+    randomized = no
+    ai_weight = {
+        weight = 0
+    }
+}

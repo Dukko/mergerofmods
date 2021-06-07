@@ -1,0 +1,17 @@
+tech_gpm_precursor_manufactorium_discovery = {
+    area = engineering
+    cost = @tier2cost1
+    category = {
+        materials
+    }
+    tier = 2
+    is_rare = yes
+    ai_update_type = all
+    weight = 1
+    modifier = {
+        planet_jobs_alloys_produces_mult = 0.12
+    }
+    weight_modifier = {
+        factor = 0
+    }
+}

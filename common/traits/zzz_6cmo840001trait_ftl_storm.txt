@@ -1,0 +1,17 @@
+trait_ftl_storm = {
+    cost = 0
+    potential_crossbreeding_chance = 0.33
+    initial = no
+    randomized = no
+    modification = no
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    modifier = {
+        pc_ftl_storm_cold_habitability = 0.1
+    }
+    slave_cost = {
+        energy = 50
+    }
+}

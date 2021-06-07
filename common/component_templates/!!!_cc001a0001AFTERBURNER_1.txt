@@ -1,0 +1,37 @@
+utility_component_template = {
+    key = "AFTERBURNER_1"
+    size = aux
+    icon = "GFX_ship_part_afterburner_1"
+    icon_frame = 1
+    power = -10
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = 4
+        }
+    }
+    modifier = {
+        ship_speed_mult = 0.1
+        ship_evasion_mult = 0.05
+    }
+    class_restriction = {
+        shipclass_military
+        shipclass_science_ship
+    }
+    prerequisites = {
+        "tech_afterburners_1"
+    }
+    component_set = "AFTERBURNER_1"
+    upgrades_to = "AFTERBURNER_2"
+    ai_weight = {
+        weight = 10
+        modifier = {
+            factor = 2
+            is_preferred_weapons = weapon_type_kinetic
+        }
+        modifier = {
+            factor = 0.5
+            is_preferred_weapons = weapon_type_explosive
+        }
+    }
+}

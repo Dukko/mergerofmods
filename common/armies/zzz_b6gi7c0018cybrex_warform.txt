@@ -1,0 +1,33 @@
+cybrex_warform = {
+    damage = 6
+    health = 5
+    has_morale = no
+    morale_damage = 2
+    collateral_damage = 2.5
+    war_exhaustion = 1
+    time = 500
+    has_species = no
+    icon_frame = 11
+    resources = {
+        category = armies
+        cost = {
+            alloys = 250
+        }
+        upkeep = {
+            energy = 8
+        }
+    }
+    potential = {
+        custom_tooltip = {
+            planet = {
+                is_capital = yes
+            }
+            owner = {
+                OR = {
+                    has_relic = r_war_forge
+                    has_relic = r_ehof_war_forge
+                }
+            }
+        }
+    }
+}

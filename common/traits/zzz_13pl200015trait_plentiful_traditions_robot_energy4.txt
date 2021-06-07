@@ -1,0 +1,21 @@
+trait_plentiful_traditions_robot_energy4 = {
+    cost = -2
+    initial = no
+    randomized = no
+    prerequisites = {
+        tech_plentiful_traditions_metaverse_ecosystem
+    }
+    opposites = {
+        trait_plentiful_traditions_robot_backup_batteries
+        trait_plentiful_traditions_robot_energy1
+        trait_plentiful_traditions_robot_energy2
+        trait_plentiful_traditions_robot_energy3
+    }
+    allowed_archetypes = {
+        ROBOT
+        MACHINE
+    }
+    modifier = {
+        planet_jobs_energy_produces_mult = -0.15
+    }
+}

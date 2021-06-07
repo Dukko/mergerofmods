@@ -1,0 +1,28 @@
+tech_esap_technological_ascendancy_bonus_1_society_research = {
+    cost = @tier3cost2
+    area = society
+    tier = 3
+    category = {
+        statecraft
+    }
+    prerequisites = {
+    }
+    is_rare = yes
+    weight = @tier3weight3
+    is_reverse_engineerable = no
+    modifier = {
+        country_society_tech_research_speed = 0.1
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            Not = {
+                has_ascension_perk = ap_esap_technological_ascendancy_bonus_1
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+    }
+}

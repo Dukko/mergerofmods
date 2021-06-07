@@ -1,0 +1,8 @@
+random_list = {
+    name = "special_stars"
+    planets = {
+        "pc_black_hole"
+        "pc_neutron_star"
+        "pc_pulsar"
+    }
+}

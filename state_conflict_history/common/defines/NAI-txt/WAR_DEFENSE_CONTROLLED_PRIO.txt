@@ -1,0 +1,3 @@
+NAI = {
+    WAR_DEFENSE_CONTROLLED_PRIO = 0.4
+}

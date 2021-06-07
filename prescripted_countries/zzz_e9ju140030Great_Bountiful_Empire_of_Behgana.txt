@@ -1,0 +1,65 @@
+"Great Bountiful Empire of Behgana" = {
+    key = "Great Bountiful Empire of Behgana"
+    ship_prefix = "BINC"
+    species = {
+        class = "MAM"
+        portrait = "mam13"
+        name = "Zir-Ura"
+        plural = "Zir-Urae"
+        adjective = "Zir-Uran"
+        species_bio = "The ponderous movements and manerisms of the average (and frankly enormous) Zir-Uran may make one question how their species ever got out of the caves of Behgana let alone into space, but these great beings are not so slow as they seem. When excited, they can make quite an impact. Most Zir-Urae live as subjects not of the Arkande Emperors themselves but of one or another of the lesser imperial dukes who possess vast feudal estates. Noble lords and ladies are expected to administer their holdings benevolently, spreading as much fortune and joy among their people as possible, and they face reclamation of their titles by the crown if they abuse their power."
+        name_list = "just-name-lists_humanoid8"
+        trait = "trait_very_strong"
+        trait = "trait_slow_breeders"
+    }
+    name = "Great Bountiful Empire of Behgana"
+    adjective = "Behganan"
+    authority = "auth_imperial"
+    government = "gov_feudal_empire"
+    planet_name = "Behgana"
+    planet_class = "pc_hajungle"
+    system_name = "Aslaya"
+    initializer = ""
+    graphical_culture = "mammalian_01"
+    city_graphical_culture = "mammalian_01"
+    empire_flag = {
+        icon = {
+            category = "just-more-flags"
+            file = "flag_spiritualist9.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "fabric_circle.dds"
+        }
+        colors = {
+            "dark_blue"
+            "dark_teal"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = male
+        name = "Lonchimbeldax Arkande"
+        portrait = "mam13"
+        texture = 2
+        hair = 0
+        clothes = 1
+        ruler_title = "Emperor"
+        ruler_title_female = "Empress"
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "apocalyptic12_room"
+    spawn_enabled = yes
+    ethic = "ethic_authoritarian"
+    ethic = "ethic_fanatic_pacifist"
+    ethic = "ethic_fanatic_spiritualist"
+    civics = {
+        "civic_feudal_realm"
+        "civic_philosopher_king"
+        "civic_exalted_priesthood"
+    }
+    origin = "origin_default"
+}

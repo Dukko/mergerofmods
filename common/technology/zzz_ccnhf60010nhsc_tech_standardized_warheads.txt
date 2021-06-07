@@ -1,0 +1,51 @@
+nhsc_tech_standardized_warheads = {
+    area = engineering
+    category = {
+        voidcraft
+    }
+    tier = 4
+    cost = @tier4cost3
+    weight = @tier4weight3
+    ai_update_type = all
+    prerequisites = {
+        "nhsc_tech_central_research_bureau"
+    }
+    potential = {
+        NOT = {
+            has_global_flag = ESC_aux_forbidden
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOR = {
+                has_technology = "tech_missiles_5"
+                has_technology = "tech_swarmer_missiles_2"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+    ai_weight = {
+        factor = @ESC_AI_tech_weight_multiplier
+        modifier = {
+            factor = 0
+            NOR = {
+                has_technology = "tech_missiles_5"
+                has_technology = "tech_swarmer_missiles_2"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+}

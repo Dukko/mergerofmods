@@ -1,0 +1,79 @@
+apsr2_miner_hive = {
+    category = simple_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = apsr2_building_part2
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        drone_job_check_trigger = yes
+    }
+    resources = {
+        category = apsr2_planet_miner_hive
+        produces = {
+            minerals = 7
+            apsr_knowledge = 0.075
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_deposit = apsr_relic_cube_deposit
+                }
+            }
+            minerals = 3.5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr2_advanced_1
+                }
+            }
+            minerals = 2.5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr2_advanced_2
+                }
+            }
+            minerals = 2.5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr2_advanced_3
+                }
+            }
+            minerals = 2.5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr2_advanced_4
+                }
+            }
+            minerals = 2.5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr2_advanced_5
+                }
+            }
+            minerals = 2.5
+        }
+    }
+    weight = {
+        weight = 100
+        modifier = {
+            factor = 2
+            OR = {
+                has_trait = trait_industrious
+                has_trait = trait_robot_power_drills
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+law_category_separate_treaties = {
+    potential = {
+        NOT = {
+            has_federation_type = vf_ef_federation
+        }
+    }
+    laws = {
+        treaties_separate_yes
+        treaties_separate_no
+        treaties_separate_no_imperial_loyalists
+    }
+}

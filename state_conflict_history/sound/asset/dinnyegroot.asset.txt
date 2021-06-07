@@ -1,0 +1,297 @@
+####### Groot Advisor Voice by DinnyeHunter
+soundgroup = 
+{
+    name = Groot
+    sort_order = 200
+    soundoverride =
+    {
+        name = "advisor_notification_system_survey_complete_01"
+        file = "dinnyegroot/groot_science_01.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_science_ship_destroyed_01"
+        file = "dinnyegroot/groot_die_01.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_science_ship_under_attack_01"
+        file = "dinnyegroot/groot_under_fire.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_construction_complete_01"
+        file = "dinnyegroot/groot_ready_build_01.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_construction_ship_destroyed_01"
+        file = "dinnyegroot/groot_die_01.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_construction_ship_under_attack_01"
+        file = "dinnyegroot/groot_under_fire.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_colony_established_01"
+        file = "dinnyegroot/groot_ready_epic.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_colony_ship_under_attack_01"
+        file = "dinnyegroot/groot_under_fire.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_colony_ship_destroyed_01"
+        file = "dinnyegroot/groot_die_01.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_spaceport_lost_01"
+        file = "dinnyegroot/groot_die_02.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_enemy_invasion_defeated_01"
+        file = "dinnyegroot/groot_attack_done.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_invasion_enemy_won_01"
+        file = "dinnyegroot/groot_high.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_invasion_failed_01"
+        file = "dinnyegroot/groot_high.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_invasion_success_01"
+        file = "dinnyegroot/groot_confident_01.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_military_station_lost_01"
+        file = "dinnyegroot/groot_die_02.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_mining_station_lost_01"
+        file = "dinnyegroot/groot_die_02.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_research_station_lost_01"
+        file = "dinnyegroot/groot_die_02.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_observation_post_lost_01"
+        file = "dinnyegroot/groot_die_02.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_outpost_station_lost_01"
+        file = "dinnyegroot/groot_die_02.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_wormhole_station_lost_01"
+        file = "dinnyegroot/groot_die_02.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_hostile_fleet_detected_01"
+        file = "dinnyegroot/groot_hostile_detected.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_hostile_fleet_engaged_01"
+        file = "dinnyegroot/groot_attack_01.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_fleet_destroyed_01"
+        file = "dinnyegroot/groot_die_01.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_station_under_attack_01"
+        file = "dinnyegroot/groot_under_fire.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_special_project_complete_01"
+        file = "dinnyegroot/groot_special_project.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_situation_log_01"
+        file = "dinnyegroot/groot_sitlog.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_enemy_troops_landing_01"
+        file = "dinnyegroot/groot_high.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_incoming_transmission_01"
+        file = "dinnyegroot/groot_notification_02.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_research_complete_01"
+        file = "dinnyegroot/groot_ready_research.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_discovery_detected_01"
+        file = "dinnyegroot/groot_notification_01.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_ships_upgraded_01"
+        file = "dinnyegroot/groot_ready_military_01.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_evade_hostile_fleet_01"
+        file = "dinnyegroot/groot_short.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_alien_spaceport_engaged_01"
+        file = "dinnyegroot/groot_attack_01.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_building_ruined_01"
+        file = "dinnyegroot/groot_notification_03.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_colonization_progress_01"
+        file = "dinnyegroot/groot_ready_02.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_debris_analysed_01"
+        file = "dinnyegroot/groot_ready_01.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_enemy_declared_war_01"
+        file = "dinnyegroot/groot_war.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_federation_formed_01"
+        file = "dinnyegroot/groot_federation.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_frontier_outpost_lost_01"
+        file = "dinnyegroot/groot_die_02.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_hostile_station_engaged_01"
+        file = "dinnyegroot/groot_attack_01.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_player_declare_war_01"
+        file = "dinnyegroot/groot_war.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_primitive_enlighted_01"
+        file = "dinnyegroot/groot_ready_epic.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_species_modified_01"
+        file = "dinnyegroot/groot_ready_epic.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_tile_blocker_clear_01"
+        file = "dinnyegroot/groot_notification_03.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_notification_unidentified_object_01"
+        file = "dinnyegroot/groot_question_01.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_sample_vo_01"
+        file = "dinnyegroot/groot_sample_01.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_sample_vo_02"
+        file = "dinnyegroot/groot_sample_02.wav"
+    }
+    soundoverride =
+    {
+        name = "advisor_sample_vo_03"
+        file = "dinnyegroot/groot_war.wav"
+    }
+#### EXTRA LINES
+    soundeffectoverrides =
+    {
+        advisor_notification_ships_upgraded = dinnyegroot_advisor_notification_ships_upgraded        
+        advisor_notification_constuction_complete = dinnyegroot_advisor_notification_constuction_complete
+        advisor_notification_system_survey_complete = dinnyegroot_advisor_notification_system_survey_complete
+    }
+    soundfileoverrides = 
+    {    
+        advisor_notification_ships_upgraded_02 = "dinnyegroot/groot_ready_military_02.wav"        
+        advisor_notification_constuction_complete_02 = "dinnyegroot/groot_ready_build_02.wav"
+        advisor_notification_system_survey_complete_02 = "dinnyegroot/groot_science_02.wav"
+    }
+}
+    #### Extra VO Lines
+soundeffect = {
+    name = dinnyegroot_advisor_notification_ships_upgraded
+    sounds = {
+        sound = advisor_notification_alien_vessel_encountered_01
+        sound = advisor_notification_alien_vessel_encountered_02
+    } 
+    volume = 0.45
+    max_audible = 1
+    max_audible_behaviour = fail
+}    
+soundeffect = {
+    name = dinnyegroot_advisor_notification_constuction_complete
+    sounds = {
+        sound = advisor_notification_constuction_complete_01
+        sound = advisor_notification_constuction_complete_02
+    } 
+    volume = 0.45
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+soundeffect = {
+    name = dinnyegroot_advisor_notification_system_survey_complete
+    sounds = {
+        sound = advisor_notification_system_survey_complete_01
+        sound = advisor_notification_system_survey_complete_02
+    } 
+    volume = 0.45
+    max_audible = 1
+    max_audible_behaviour = fail
+}
+        ### Category
+category = {
+ name = "Voice"
+ soundeffects = {
+        dinnyegroot_advisor_notification_ships_upgraded    
+        dinnyegroot_advisor_notification_constuction_complete
+        dinnyegroot_advisor_notification_system_survey_complete

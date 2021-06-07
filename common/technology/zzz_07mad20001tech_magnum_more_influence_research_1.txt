@@ -1,0 +1,54 @@
+tech_magnum_more_influence_research_1 = {
+    area = society
+    tier = 1
+    cost = @tier1cost3
+    category = {
+        statecraft
+    }
+    prerequisites = {
+        "tech_planetary_unification"
+    }
+    weight = @tier1weight3
+    modifier = {
+        country_base_influence_produces_add = 1
+    }
+    weight_modifier = {
+        factor = 4
+        modifier = {
+            factor = 0.75
+            NOT = {
+                OR = {
+                    has_ethic = ethic_pacifist
+                    has_ethic = ethic_fanatic_pacifist
+                }
+            }
+        }
+    }
+    ai_weight = {
+        factor = 2
+        modifier = {
+            factor = 0.75
+            NOT = {
+                OR = {
+                    has_ethic = ethic_pacifist
+                    has_ethic = ethic_fanatic_pacifist
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_authoritarian
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_authoritarian
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+}

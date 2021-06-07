@@ -1,0 +1,34 @@
+civic_corporate_dominion = {
+    potential = {
+        ethics = {
+            NOT = {
+                value = ethic_gestalt_consciousness
+            }
+        }
+        authority = {
+            NOR = {
+                value = auth_corporate
+                value = auth_corporate_imperial
+            }
+        }
+    }
+    possible = {
+        ethics = {
+            value = ethic_fanatic_capitalism
+            OR = {
+                text = civic_tooltip_pacifist
+                value = ethic_pacifist
+                value = ethic_fanatic_pacifist
+            }
+        }
+    }
+    random_weight = {
+        base = 5
+    }
+    modifier = {
+        country_starbase_capacity_add = 5
+        country_resource_max_add = 10000
+        job_merchant_per_pop = 0.03
+        army_morale = -0.15
+    }
+}

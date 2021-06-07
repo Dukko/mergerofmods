@@ -1,0 +1,3 @@
+NArmy = {
+    ARMY_EXP_ELITE = 1200
+}

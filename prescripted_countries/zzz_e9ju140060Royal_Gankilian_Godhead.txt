@@ -1,0 +1,64 @@
+"Royal Gankilian Godhead" = {
+    key = "Royal Gankilian Godhead"
+    ship_prefix = "HGS"
+    species = {
+        class = "REP"
+        portrait = "rep11"
+        name = "Gankil"
+        plural = "Gankili"
+        adjective = "Gankilian"
+        species_bio = "Filling their throat pouches with thrumming hymnal croaks every morning and evening, the fanatically devoted Gankili of Vilgolanis swear undying fealty to the being that they believe is the living avatar of their god... which to all analysis available to our science appears to be a fairly standard Gankilian specimen. Even the mere suggestion of such, however, is likely to get one arrested for heresy in their space. Though they dream of total galactic conversion, the choking grip of the Gankilian state may stifle their highest ambitions."
+        name_list = "just-name-lists_reptilian2"
+        trait = "trait_conformists"
+        trait = "trait_just-more-traits_hardworking"
+        trait = "trait_just-more-traits_dull"
+    }
+    name = "Royal Gankilian Godhead"
+    adjective = "Gankilian"
+    authority = "auth_imperial"
+    government = "gov_divine_empire"
+    planet_name = "Vilgolanis"
+    planet_class = "pc_swamp"
+    system_name = "Arocada"
+    initializer = ""
+    graphical_culture = "reptilian_01"
+    city_graphical_culture = "reptilian_01"
+    empire_flag = {
+        icon = {
+            category = "just-more-flags"
+            file = "flag_authoritarian10.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "fabric_x90.dds"
+        }
+        colors = {
+            "light_orange"
+            "brown"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = male
+        name = "Gulsras Aspect Divinum"
+        portrait = "rep11"
+        texture = 2
+        hair = 0
+        clothes = 0
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "desert8_room"
+    spawn_enabled = yes
+    ethic = "ethic_fanatic_authoritarian"
+    ethic = "ethic_militarist"
+    ethic = "ethic_fanatic_spiritualist"
+    civics = {
+        "civic_imperial_cult"
+        "civic_police_state"
+        "civic_exalted_priesthood"
+    }
+    origin = "origin_default"
+}

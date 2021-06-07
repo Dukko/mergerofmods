@@ -1,0 +1,18 @@
+weapon_component_template = {
+    key = "GG_BEAM"
+    size = titanic
+    entity = "invisible_turret_entity"
+    type = instant
+    prio_projectile = yes
+    hidden = yes
+    icon = "GFX_ship_part_nanite_perdition_beam"
+    icon_frame = 1
+    prerequisites = {
+        "tech_graygoo_nanite_perdition_beam"
+    }
+    component_set = "NANITE_PERDITION_1"
+    tags = {
+        weapon_type_nanite
+    }
+    projectile_gfx = "gatebuilder_titan_weapon"
+}

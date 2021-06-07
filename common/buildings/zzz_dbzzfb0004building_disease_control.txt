@@ -1,0 +1,48 @@
+building_disease_control = {
+    base_buildtime = @b2_time
+    base_cap_amount = 1
+    category = resource
+    potential = {
+        owner = {
+            has_country_flag = allow_lockdown
+        }
+        exists = planet
+        planet = {
+            is_capital = yes
+        }
+    }
+    allow = {
+        buildings_simple_allow = yes
+    }
+    planet_modifier = {
+        planet_stability_add = 10
+        pop_happiness = 0.05
+        planet_jobs_produces_mult = 0.05
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 1000
+            consumer_goods = 1000
+        }
+        upkeep = {
+            energy = 2
+        }
+        produces = {
+            energy = 5
+            consumer_goods = 5
+            food = 10
+        }
+    }
+    ai_weight = {
+        weight = 99
+    }
+    ai_resource_production = {
+        energy = 5
+        consumer_goods = 5
+        food = 10
+        trigger = {
+            always = yes
+        }
+    }
+}

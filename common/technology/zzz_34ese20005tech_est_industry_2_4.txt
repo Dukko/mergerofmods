@@ -1,0 +1,54 @@
+@tier3cost3 = 6000
+@tier4weight3 = 35
+@ap_technological_ascendancy_rare_tech = 1.5
+tech_est_industry_2_4 = {
+    cost = @tier3cost3
+    area = engineering
+    tier = 3
+    is_rare = yes
+    category = {
+        industry
+    }
+    weight = @tier4weight3
+    prereqfor_desc = {
+        hide_prereq_for_desc = component
+        custom = {
+            title = "tech_est_industry_2_4_effect_title"
+            desc = "tech_est_industry_2_4_effect_desc"
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = 0
+            Not = {
+                has_tradition = tr_est_industry_2
+            }
+        }
+        modifier = {
+            factor = 0
+            Not = {
+                has_tradition = tr_est_industry_4
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+}

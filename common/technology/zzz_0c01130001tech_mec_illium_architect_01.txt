@@ -1,0 +1,35 @@
+tech_mec_illium_architect_01 = {
+    icon = tech_tomb_world_adaption
+    cost = @tier2cost1
+    area = society
+    tier = 1
+    category = {
+        new_worlds
+    }
+    weight = 0
+    potential = {
+        has_origin = mec_asari_origin_illium
+    }
+    ai_weight = {
+        modifier = {
+            factor = 20
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_deposit = "d_mec_asari_nosparnalo_quarantine"
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            NOT = {
+                has_monthly_income = {
+                    resource = society_research
+                    value < 50
+                }
+            }
+        }
+    }
+}

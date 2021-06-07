@@ -1,0 +1,30 @@
+xvcv_mdlc_tech_negotiation_algorithms = {
+    cost = @tier3cost3
+    area = society
+    tier = 3
+    category = {
+        statecraft
+    }
+    prerequisites = {
+        xvcv_mdlc_tech_mutual_cooperation
+    }
+    weight = @tier3weight3
+    potential = {
+        has_valid_civic = xvcv_mdlc_civic_trading_machine
+    }
+    modifier = {
+        custom_tooltip = xvcv_mdlc_tech_negotiation_algorithms_tooltip
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

@@ -1,0 +1,51 @@
+namespace = utopia
+country_event = {
+    id = utopia.4101
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        FROM = {
+            is_megastructure_type = spy_orb_1
+        }
+    }
+    immediate = {
+        FROMFROM = {
+            save_event_target_as = spy_system
+        }
+        every_relation = {
+            limit = {
+                is_ai = no
+                has_communications = root
+                OR = {
+                    has_intel_level = {
+                        who = root
+                        category = economy
+                        level >= 1
+                    }
+                    has_intel_level = {
+                        who = root
+                        category = technology
+                        level >= 1
+                    }
+                }
+            }
+            country_event = {
+                id = utopia.4102
+            }
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_country_flag = started_first_spy_orb
+                }
+            }
+            set_country_flag = started_first_spy_orb
+        }
+        else_if = {
+            limit = {
+                has_country_flag = started_first_spy_orb
+            }
+            set_country_flag = started_first_spy_orb_2
+        }
+    }
+}

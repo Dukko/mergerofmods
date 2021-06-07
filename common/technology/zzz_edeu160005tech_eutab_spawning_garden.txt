@@ -1,0 +1,36 @@
+@tier3cost3 = 5000
+@tier3weight3 = 50
+tech_eutab_spawning_garden = {
+    cost = @tier3cost3
+    area = society
+    tier = 3
+    category = {
+        biology
+    }
+    prerequisites = {
+        "tech_autonomous_agents"
+        "tech_collective_production_methods"
+    }
+    weight = @tier3weight3
+    potential = {
+        has_authority = auth_hive_mind
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+    }
+}

@@ -1,0 +1,58 @@
+@tier3cost1 = 4000
+@tier3weight1 = 65
+tech_eutab_foreign_workers = {
+    cost = @tier3cost1
+    area = society
+    tier = 3
+    category = {
+        statecraft
+    }
+    prerequisites = {
+        "tech_mega_engineering"
+    }
+    is_rare = yes
+    weight = @tier3weight1
+    potential = {
+        eu_req_xphi = yes
+    }
+    gateway = eu_masterbuild
+    modifier = {
+        megastructure_build_speed_mult = 0.15
+        starbases_upkeep_mult = -0.15
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = ap_master_builders
+            }
+        }
+        modifier = {
+            factor = 0
+            calc_true_if = {
+                amount = 2
+                has_technology = tech_eutab_patriotic_effort
+                has_technology = tech_eutab_foreign_workers
+                has_technology = tech_eutab_stellar_citadel
+                has_technology = tech_eutab_starship_parts
+                has_technology = tech_eutab_holy_pilgrim
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+Tyanki_incubation = {
+    cost = 45000
+    area = society
+    tier = 3
+    category = {
+        biology
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "allow_Tyanki"
+            desc = "desc_allow_Tyanki"
+        }
+    }
+    is_rare = yes
+    weight = 0
+}

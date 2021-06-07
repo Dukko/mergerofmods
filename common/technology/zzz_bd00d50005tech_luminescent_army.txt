@@ -1,0 +1,33 @@
+tech_luminescent_army = {
+    cost = @tier3cost1
+    area = society
+    tier = 3
+    is_rare = yes
+    category = {
+        military_theory
+    }
+    prerequisites = {
+        "tech_luminescent_gas"
+    }
+    weight = @tier3weight1
+    weight_modifier = {
+        factor = 2
+        modifier = {
+            factor = 2
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 3
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+    }
+}

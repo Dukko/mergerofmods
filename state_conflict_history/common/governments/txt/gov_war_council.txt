@@ -1,0 +1,26 @@
+gov_war_council = {
+    ruler_title = RT_WARLORD
+    ruler_title_female = RT_WARLORD_FEMALE
+    should_force_rename = yes
+    leader_class = admiral
+    election_candidates = {
+        modifier = {
+            add = 100
+            leader_class = ruler
+        }
+        modifier = {
+            add = 10
+            OR = {
+                leader_class = admiral
+                leader_class = general
+            }
+        }
+    }
+    possible = {
+        has_authority = auth_oligarchic
+        has_valid_civic = civic_military_junta
+    }
+    weight = {
+        base = 800
+    }
+}

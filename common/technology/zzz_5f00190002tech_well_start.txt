@@ -1,0 +1,28 @@
+tech_well_start = {
+    cost = @guardiantechcost
+    area = physics
+    tier = @guardiantechtier
+    is_reverse_engineerable = no
+    category = {
+        computing
+    }
+    ai_update_type = all
+    weight = 0
+    is_rare = yes
+    prereqfor_desc = {
+        ship = {
+            title = "TECH_HIGHBORNE_HB_ASTROMANCY"
+            desc = "TECH_HIGHBORNE_HB_ASTROMANCY_DESC"
+        }
+    }
+    modifier = {
+        country_unity_produces_mult = -0.95
+        country_naval_cap_mult = -0.95
+        army_attack_damage_mult = -0.95
+        country_influence_produces_mult = -0.95
+        country_admin_cap_mult = -0.95
+    }
+    weight_modifier = {
+        factor = 0
+    }
+}

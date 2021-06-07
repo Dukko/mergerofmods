@@ -1,0 +1,64 @@
+wormhole = {
+    name = NATURAL_WORMHOLE_GALACTIC
+    is_pathfind = yes
+    uses_action = no
+    requires_exploration = yes
+    always_active = yes
+    windup_time = 0
+    winddown_time = 0
+    ftl_multiplier = 0
+    extends_sensors = yes
+    icon_frame = 12
+    remember_instances = yes
+    animation_time = 1
+    galactic_map_tooltip_header = NATURAL_WORMHOLE_GALACTIC
+    galactic_map_tooltip_desc = NATURAL_WORMHOLE_DESC
+    connection_type = one_to_one
+    ftl_ship_effect = "wormhole_ftl_ship_effect_entity"
+    ftl_bypass_effect = "wormhole_ftl_bypass_effect_entity"
+    prerequisites = {
+        tech_wormhole_stabilization
+    }
+    potential = {
+        always = yes
+    }
+    country_can_use = {
+        custom_tooltip = {
+            fail_text = NATURAL_WORMHOLE_COUNTRY_CANNOT_USE
+            OR = {
+                NOT = {
+                    exists = from
+                }
+                from = {
+                    NOT = {
+                        has_closed_borders = root
+                    }
+                }
+                from = {
+                    is_at_war_with = root
+                }
+                from = {
+                    NOR = {
+                        is_country_type_with_subjects = yes
+                        is_country_type = fallen_empire
+                    }
+                }
+                AND = {
+                    exists = from
+                    from = {
+                        is_galactic_community_member = yes
+                    }
+                    OR = {
+                        root = {
+                            is_galactic_custodian = yes
+                        }
+                        root = {
+                            is_galactic_emperor = yes
+                        }
+                    }
+                }
+            }
+        }
+    }
+    on_action = "on_entering_wormhole"
+}

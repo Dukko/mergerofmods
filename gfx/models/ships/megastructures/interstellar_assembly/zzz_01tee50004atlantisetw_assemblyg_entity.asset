@@ -1,0 +1,140 @@
+entity = {
+    name = "atlantisetw_assemblyg_entity"
+    locator = {
+        name = "slot1"
+        position = {
+            0
+            -90
+            0
+        }
+        rotation = {
+            0
+            90
+            0
+        }
+        scale = 1
+    }
+    locator = {
+        name = "slot2"
+        position = {
+            0
+            0
+            -90
+        }
+        rotation = {
+            0
+            180
+            0
+        }
+        scale = 1
+    }
+    locator = {
+        name = "slot3"
+        position = {
+            0
+            0
+            90
+        }
+        rotation = {
+            0
+            0
+            0
+        }
+        scale = 1
+    }
+    attach = {
+        "slot1" = "atlantisetw_assemblya_entity"
+    }
+    attach = {
+        "slot2" = "atlantisetw_assemblya_entity"
+    }
+    attach = {
+        "slot3" = "atlantisetw_assemblya_entity"
+    }
+    locator = {
+        name = "slota"
+        position = {
+            40
+            -90
+            90
+        }
+        rotation = {
+            0
+            0
+            90
+        }
+        scale = 1
+    }
+    locator = {
+        name = "slotb"
+        position = {
+            40
+            -90
+            -90
+        }
+        rotation = {
+            0
+            0
+            90
+        }
+        scale = 1
+    }
+    locator = {
+        name = "slotc"
+        position = {
+            0
+            120
+            90
+        }
+        rotation = {
+            0
+            0
+            90
+        }
+        scale = 4
+    }
+    locator = {
+        name = "slotd"
+        position = {
+            0
+            120
+            -90
+        }
+        rotation = {
+            0
+            0
+            90
+        }
+        scale = 4
+    }
+    locator = {
+        name = "slotk"
+        position = {
+            0
+            -50
+            0
+        }
+        rotation = {
+            0
+            0
+            0
+        }
+        scale = 4
+    }
+    attach = {
+        "slota" = "atlantistw_starbase_citadel_section_entity"
+    }
+    attach = {
+        "slotb" = "atlantistw_starbase_citadel_section_entity"
+    }
+    attach = {
+        "slotc" = "atlantistw_ion_cannon_section_entity"
+    }
+    attach = {
+        "slotd" = "atlantistw_ion_cannon_section_entity"
+    }
+    attach = {
+        "slotk" = "hologram_effect_entity"
+    }
+    scale = 1
+}

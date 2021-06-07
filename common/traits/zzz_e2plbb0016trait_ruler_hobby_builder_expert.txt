@@ -1,0 +1,24 @@
+trait_ruler_hobby_builder_expert = {
+    cost = 0
+    leader_trait = {
+        ruler
+    }
+    leader_class = {
+        ruler
+    }
+    self_modifier = {
+    }
+    modifier = {
+        planet_buildings_cost_mult = -0.15
+        planet_districts_cost_mult = -0.15
+        starbase_upgrade_cost_mult = -0.15
+        starbase_buildings_cost_mult = -0.15
+        starbase_modules_cost_mult = -0.15
+        building_time_mult = -0.2
+        megastructures_cost_mult = -0.1
+        megastructure_build_speed_mult = 0.25
+    }
+    initial = no
+    modification = no
+    randomized = no
+}

@@ -1,0 +1,23 @@
+gov_liberal_democracy = {
+    ruler_title = RT_PRESIDENT
+    ruler_title_female = RT_PRESIDENT_FEMALE
+    possible = {
+        OR = {
+            has_ethic = ethic_capitalism
+            has_ethic = ethic_fanatic_capitalism
+        }
+        OR = {
+            has_ethic = ethic_egalitarian
+            has_ethic = ethic_fanatic_egalitarian
+        }
+        OR = {
+            has_authority = auth_democratic
+            has_authority = auth_strict_democratic
+            has_authority = auth_democratic_dictatorship
+        }
+    }
+    should_force_rename = yes
+    weight = {
+        base = 100
+    }
+}

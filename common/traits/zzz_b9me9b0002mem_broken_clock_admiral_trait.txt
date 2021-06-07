@@ -1,0 +1,23 @@
+mem_broken_clock_admiral_trait = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/trait_mem_vortex.dds"
+    modifier = {
+        ship_disengage_chance_mult = 0.25
+        ship_fire_rate_mult = 0.1
+        ship_speed_mult = 0.1
+        ship_weapon_damage = 0.1
+        ships_upkeep_mult = -0.25
+    }
+    leader_trait = {
+        admiral
+    }
+    leader_class = {
+        admiral
+    }
+    initial = no
+    randomized = no
+    ai_weight = {
+        weight = 1000
+    }
+}

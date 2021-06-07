@@ -1,0 +1,22 @@
+gov_anarch_capitalism = {
+    ruler_title = RT_CEO
+    ruler_title_female = RT_CEO_FEMALE
+    possible = {
+        has_ethic = ethic_fanatic_capitalism
+        has_authority = auth_corporate
+        OR = {
+            has_ethic = ethic_egalitarian
+            has_ethic = ethic_fanatic_egalitarian
+        }
+    }
+    weight = {
+        base = 5000
+        modifier = {
+            factor = 5
+            OR = {
+                has_valid_civic = civic_beacon_of_liberty
+                has_valid_civic = civic_corporate_dominion
+            }
+        }
+    }
+}

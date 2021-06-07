@@ -1,0 +1,39 @@
+utility_component_template = {
+    key = "MEDIUM_NANITE_HULL_2"
+    size = medium
+    icon = "GFX_ship_part_nanite_hull"
+    icon_frame = 1
+    power = -20
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @m_t6_cost
+            nanites = @l_t5_rare
+        }
+        upkeep = {
+            energy = @m_t6_upkeep_energy
+            alloys = @m_t6_upkeep_alloys
+        }
+    }
+    prerequisites = {
+        "tech_nanocrystals"
+        "tech_nanite_living_metal"
+        "tech_nanite_hull"
+    }
+    component_set = "NANITE_HULL_2"
+    modifier = {
+        ship_hull_add = @armor_5M
+        ship_armor_add = @armor_1M
+        ship_hull_regen_add_static = 0.6
+        ship_armor_regen_add_static = 0.4
+    }
+    ai_weight = {
+        weight = 1
+        modifier = {
+            factor = 0
+            no_resource_for_component = {
+                RESOURCE = nanites
+            }
+        }
+    }
+}

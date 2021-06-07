@@ -1,0 +1,57 @@
+@Cruiser_cost_food = 80
+@Cruiser_food_upkeep = 0.4
+@Cruiser_alloy_reduction = -0.16
+ship_section_template = {
+    key = "$ORGANIC$ $CRUISER_MID_S2HB$"
+    ship_size = cruiser
+    fits_on_slot = mid
+    should_draw_components = yes
+    entity = "cruiser_mid_S2HB_entity"
+    icon = "GFX_ship_part_core_mid"
+    prerequisites = {
+        tech_voidcraft_breakthrough
+    }
+    ai_weight = {
+        modifier = {
+            factor = 20
+            is_preferred_weapons = weapon_type_strike_craft
+        }
+        modifier = {
+            factor = 0.1
+            NOT = {
+                is_preferred_weapons = weapon_type_strike_craft
+            }
+        }
+        modifier = {
+            factor = 0
+            has_authority = auth_machine_intelligence
+        }
+    }
+    component_slot = {
+        name = "PD_01"
+        template = "point_defence_turret"
+        locatorname = "small_gun_01"
+    }
+    component_slot = {
+        name = "PD_02"
+        template = "point_defence_turret"
+        locatorname = "small_gun_02"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_01"
+        template = "large_strike_craft"
+        rotation = 90
+        locatorname = "strike_craft_locator_01"
+    }
+    medium_utility_slots = 4
+    resources = {
+        category = ship_sections
+        cost = {
+            food = @Cruiser_cost_food
+        }
+        upkeep = {
+            food = @Cruiser_food_upkeep
+            alloys = @Cruiser_alloy_reduction
+        }
+    }
+}

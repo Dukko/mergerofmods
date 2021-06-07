@@ -1,0 +1,2 @@
+﻿l_default:
+ format.bandit_kingdom.3:1000 "<bandit_kingdom> of [This.Capital.GetName]"

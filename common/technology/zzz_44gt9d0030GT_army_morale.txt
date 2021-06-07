@@ -1,0 +1,37 @@
+GT_army_morale = {
+    cost = @tier3cost2
+    area = society
+    tier = 3
+    category = {
+        military_theory
+    }
+    prerequisites = {
+        "tech_combat_training"
+    }
+    weight = @tier4weight2
+    modifier = {
+        army_morale = 0.3
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            is_at_war = no
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+    }
+}

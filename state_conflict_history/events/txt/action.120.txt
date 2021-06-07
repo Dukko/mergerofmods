@@ -1,0 +1,64 @@
+namespace = action
+country_event = {
+    id = action.120
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        from = {
+            OR = {
+                is_megastructure_type = dyson_sphere_5
+                is_megastructure_type = dyson_sphere_restored
+                is_megastructure_type = spy_orb_4
+                is_megastructure_type = spy_orb_restored
+                is_megastructure_type = think_tank_3
+                is_megastructure_type = think_tank_restored
+                is_megastructure_type = gateway_final
+                is_megastructure_type = gateway_restored
+                is_megastructure_type = matter_decompressor_4
+                is_megastructure_type = strategic_coordination_center_3
+                is_megastructure_type = mega_art_installation_3
+                is_megastructure_type = interstellar_assembly_4
+            }
+        }
+    }
+    immediate = {
+        every_relation = {
+            limit = {
+                is_country_type = default
+                OR = {
+                    has_intel_level = {
+                        who = root
+                        category = economy
+                        level >= 1
+                    }
+                    has_intel_level = {
+                        who = root
+                        category = technology
+                        level >= 1
+                    }
+                }
+            }
+            create_message = {
+                type = ALIEN_MEGASTRUCTURE_BUILT
+                localization = MESSAGE_ALIEN_MEGASTRUCTURE_BUILT
+                days = 30
+                target = root.from
+                variable = {
+                    type = name
+                    localization = COUNTRY
+                    scope = root
+                }
+                variable = {
+                    type = name
+                    localization = MEGASTRUCTURE
+                    scope = root.from
+                }
+                variable = {
+                    type = name
+                    localization = SYSTEM
+                    scope = root.fromfrom
+                }
+            }
+        }
+    }
+}

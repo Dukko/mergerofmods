@@ -1,0 +1,103 @@
+pw_tech_planetary_mega_engineering = {
+    area = engineering
+    category = {
+        industry
+    }
+    cost = @pw_tech_cost_0
+    tier = 4
+    prerequisites = {
+        tech_housing_1
+        tech_starbase_4
+        tech_galactic_administration
+    }
+    weight = @tier4weight2
+    is_rare = yes
+    prereqfor_desc = {
+        custom = {
+            title = pw_prereq_planetary_wonders
+            desc = pw_prereq_planetary_wonders_desc
+        }
+    }
+    modifier = {
+        country_resource_max_add = 10000
+        planet_building_build_speed_mult = 0.25
+    }
+    weight_modifier = {
+        factor = 0.5
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = engineering
+                has_trait = leader_trait_expertise_industry
+            }
+        }
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = engineering
+                has_trait = leader_trait_spark_of_genius
+            }
+        }
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = engineering
+                has_trait = leader_trait_curator
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = @federation_perk_factor
+            has_federation = yes
+            federation = {
+                has_federation_perk = rare_tech_boost
+                any_member = {
+                    has_technology = pw_tech_planetary_mega_engineering
+                }
+            }
+        }
+        modifier = {
+            factor = 1.5
+            has_ascension_perk = ap_master_builders
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+                has_ascension_perk = ap_arcology_project
+                has_ascension_perk = ap_machine_worlds
+                has_ascension_perk = ap_hive_worlds
+            }
+        }
+        modifier = {
+            factor = 2
+            any_neighbor_country = {
+                has_technology = pw_tech_planetary_mega_engineering
+            }
+        }
+        modifier = {
+            factor = 2
+            has_valid_civic = civic_functional_architecture
+        }
+        modifier = {
+            factor = 2
+            has_valid_civic = civic_machine_builder
+        }
+        modifier = {
+            factor = 5
+            has_edict = pw_ambition_monumentality
+        }
+    }
+    ai_weight = {
+        factor = @pw_tech_ai_weight
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = leader_trait_expertise_industry
+            }
+        }
+    }
+}

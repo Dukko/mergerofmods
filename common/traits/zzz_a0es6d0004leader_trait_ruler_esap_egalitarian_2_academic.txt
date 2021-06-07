@@ -1,0 +1,16 @@
+leader_trait_ruler_esap_egalitarian_2_academic = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/leader_trait_esap_egalitarian_2_academic.dds"
+    modifier = {
+        species_leader_exp_gain = 0.2
+    }
+    leader_trait = {
+        ruler
+    }
+    leader_class = {
+        ruler
+    }
+    initial = no
+    randomized = no
+}

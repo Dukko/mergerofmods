@@ -1,0 +1,225 @@
+namespace = marauder
+event = {
+    id = marauder.113
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        any_country = {
+            is_country_type = marauder_raiders
+            has_country_flag = raid_ongoing
+            any_owned_fleet = {
+                exists = solar_system
+                OR = {
+                    AND = {
+                        has_fleet_flag = marauder_raider_fleet_1
+                        NOT = {
+                            has_fleet_flag = raid_accomplished
+                        }
+                        is_in_combat = no
+                        num_ships <= 3
+                    }
+                    AND = {
+                        has_fleet_flag = marauder_raider_fleet_2
+                        NOT = {
+                            has_fleet_flag = raid_accomplished
+                        }
+                        is_in_combat = no
+                        num_ships <= 6
+                    }
+                    AND = {
+                        has_fleet_flag = marauder_raider_fleet_3
+                        NOT = {
+                            has_fleet_flag = raid_accomplished
+                        }
+                        is_in_combat = no
+                        num_ships <= 9
+                    }
+                    AND = {
+                        has_fleet_flag = marauder_raider_fleet_4
+                        NOT = {
+                            has_fleet_flag = raid_accomplished
+                        }
+                        is_in_combat = no
+                        num_ships <= 12
+                    }
+                }
+            }
+        }
+    }
+    immediate = {
+        random_country = {
+            limit = {
+                is_country_type = marauder_raiders
+                has_country_flag = raid_ongoing
+                any_owned_fleet = {
+                    exists = solar_system
+                    OR = {
+                        AND = {
+                            has_fleet_flag = marauder_raider_fleet_1
+                            is_in_combat = no
+                            num_ships <= 3
+                        }
+                        AND = {
+                            has_fleet_flag = marauder_raider_fleet_2
+                            is_in_combat = no
+                            num_ships <= 6
+                        }
+                        AND = {
+                            has_fleet_flag = marauder_raider_fleet_3
+                            is_in_combat = no
+                            num_ships <= 9
+                        }
+                        AND = {
+                            has_fleet_flag = marauder_raider_fleet_4
+                            is_in_combat = no
+                            num_ships <= 12
+                        }
+                    }
+                }
+            }
+            save_event_target_as = marauder_raiding_country
+            random_country = {
+                limit = {
+                    has_country_flag = parent_of@event_target:marauder_raiding_country
+                }
+                save_event_target_as = marauder_country
+            }
+        }
+        if = {
+            limit = {
+                NOT = {
+                    exists = event_target:marauder_country
+                }
+            }
+            event_target:marauder_raiding_country = {
+                every_owned_fleet = {
+                    fleet_event = {
+                        id = marauder.118
+                    }
+                }
+            }
+        }
+        else = {
+            event_target:marauder_country = {
+                remove_country_flag = raid_ongoing
+                set_timed_country_flag = {
+                    flag = raid_cooldown
+                    days = @raidcooldown
+                }
+                if = {
+                    limit = {
+                        has_country_flag = marauder_1
+                    }
+                    random_system = {
+                        limit = {
+                            has_star_flag = marauder_capital_1
+                        }
+                        random_system_planet = {
+                            limit = {
+                                has_planet_flag = raid_source
+                            }
+                            save_event_target_as = raid_source
+                        }
+                    }
+                }
+                if = {
+                    limit = {
+                        has_country_flag = marauder_2
+                    }
+                    random_system = {
+                        limit = {
+                            has_star_flag = marauder_capital_2
+                        }
+                        random_system_planet = {
+                            limit = {
+                                has_planet_flag = raid_source
+                            }
+                            save_event_target_as = raid_source
+                        }
+                    }
+                }
+                if = {
+                    limit = {
+                        has_country_flag = marauder_3
+                    }
+                    random_system = {
+                        limit = {
+                            has_star_flag = marauder_capital_3
+                        }
+                        random_system_planet = {
+                            limit = {
+                                has_planet_flag = raid_source
+                            }
+                            save_event_target_as = raid_source
+                        }
+                    }
+                }
+                event_target:marauder_raiding_country = {
+                    remove_country_flag = raid_ongoing
+                    every_owned_fleet = {
+                        remove_auto_move_target = yes
+                        if = {
+                            limit = {
+                                exists = solar_system
+                            }
+                            solar_system = {
+                                save_event_target_as = retreating_fleet_system
+                            }
+                        }
+                        auto_move_to_planet = {
+                            target = event_target:raid_source
+                            destroy_on_arrival = yes
+                            clear_auto_move_on_arrival = yes
+                        }
+                        fleet_event = {
+                            id = marauder.118
+                            days = 360
+                        }
+                    }
+                }
+                random_country = {
+                    limit = {
+                        has_country_flag = raid_target_of@event_target:marauder_country
+                    }
+                    save_event_target_as = marauder_target
+                    country_event = {
+                        id = marauder.114
+                    }
+                    remove_country_flag = raid_target_of@event_target:marauder_country
+                    remove_country_flag = under_marauder_attack
+                    remove_country_flag = marauder_tribute_1@event_target:marauder_country
+                    remove_country_flag = marauder_tribute_2@event_target:marauder_country
+                    remove_country_flag = marauder_tribute_3@event_target:marauder_country
+                    remove_country_flag = marauder_tribute_4@event_target:marauder_country
+                    remove_country_flag = marauder_tribute_5@event_target:marauder_country
+                    remove_country_flag = marauder_tribute_6@event_target:marauder_country
+                    remove_relation_flag = {
+                        who = event_target:marauder_country
+                        flag = current_target
+                    }
+                    remove_relation_flag = {
+                        who = event_target:marauder_country
+                        flag = current_hired_target
+                    }
+                }
+                if = {
+                    limit = {
+                        any_country = {
+                            is_country_type = default
+                            has_country_flag = hired@event_target:marauder_country
+                        }
+                    }
+                    random_country = {
+                        limit = {
+                            has_country_flag = hired@event_target:marauder_country
+                        }
+                        country_event = {
+                            id = marauder.117
+                        }
+                        remove_country_flag = hired@event_target:marauder_country
+                    }
+                }
+            }
+        }
+    }
+}

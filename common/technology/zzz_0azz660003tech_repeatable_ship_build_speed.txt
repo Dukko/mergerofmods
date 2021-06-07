@@ -1,0 +1,46 @@
+@RepeatRepeatable = 0.5
+@infiniteRepeatableTechBaseCost = 50000
+@infiniteRepeatableTechLevelCost = 5000
+tech_repeatable_ship_build_speed = {
+    area = physics
+    cost = @infiniteRepeatableTechBaseCost
+    cost_per_level = @infiniteRepeatableTechLevelCost
+    tier = @repeatableTechTier
+    category = {
+        computing
+    }
+    levels = -1
+    prerequisites = {
+        "tech_self_aware_logic"
+    }
+    weight = @repeatableTechWeight
+    weight_modifier = {
+        factor = @repatableTechFactor
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+    potential = {
+        NOT = {
+            is_country_type = fallen_empire
+        }
+    }
+    ai_weight = {
+        factor = 1
+    }
+    weight_groups = {
+        repeatable
+    }
+    mod_weight_if_group_picked = {
+        repeatable = @RepeatRepeatable
+    }
+    modifier = {
+        starbase_shipyard_build_speed_mult = 0.05
+    }
+}

@@ -1,0 +1,32 @@
+namespace = action
+country_event = {
+    id = action.123
+    title = "action.123.name"
+    desc = "action.123.desc"
+    picture = GFX_evt_surrender
+    show_sound = event_screams
+    location = fromfrom
+    is_triggered_only = yes
+    option = {
+        trigger = {
+            NOT = {
+                from = {
+                    owner = {
+                        is_same_empire = root
+                    }
+                }
+            }
+        }
+        name = DISCONCERTING
+    }
+    option = {
+        trigger = {
+            from = {
+                owner = {
+                    is_same_empire = root
+                }
+            }
+        }
+        name = action.123.a
+    }
+}

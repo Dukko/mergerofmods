@@ -1,0 +1,69 @@
+namespace = ancrel
+fleet_event = {
+    id = ancrel.2006
+    title = "ancrel.2006.name"
+    desc = "ancrel.2006.desc"
+    picture = GFX_evt_baol_datacrystals
+    show_sound = event_finding_loot
+    location = from
+    archaeology = yes
+    is_triggered_only = yes
+    immediate = {
+        closest_system = {
+            limit = {
+                has_access_fleet = root.owner
+                NOR = {
+                    is_same_value = root.solar_system
+                    has_star_flag = first_grunur_site@root.owner
+                    has_star_flag = sol_system
+                }
+                OR = {
+                    has_owner = no
+                    owner = {
+                        is_same_empire = root.owner
+                    }
+                }
+                any_system_planet = {
+                    is_planet_class = pc_asteroid
+                    has_anomaly = no
+                    NOT = {
+                        exists = archaeological_site
+                    }
+                    NOT = {
+                        has_planet_flag = suppress_archaeological_sites
+                    }
+                }
+            }
+            min_steps = 1
+            max_steps = 10
+            random_system_planet = {
+                limit = {
+                    is_planet_class = pc_asteroid
+                    has_anomaly = no
+                    NOT = {
+                        exists = archaeological_site
+                    }
+                    NOT = {
+                        has_planet_flag = suppress_archaeological_sites
+                    }
+                }
+                save_event_target_as = baol_colony_2
+            }
+        }
+    }
+    option = {
+        name = "ancrel.2006.a"
+        owner = {
+            add_resource = {
+                minor_artifacts = 5
+            }
+        }
+        event_target:baol_colony_2 = {
+            enable_special_project = {
+                name = "BAOL_COLONY_2"
+                location = this
+                owner = root.owner
+            }
+        }
+    }
+}

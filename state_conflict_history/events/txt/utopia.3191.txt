@@ -1,0 +1,97 @@
+namespace = utopia
+country_event = {
+    id = utopia.3191
+    title = "utopia.3000.name"
+    desc = "utopia.3191.desc"
+    diplomatic = yes
+    diplomatic_title = BLANK_STRING
+    force_open = yes
+    picture_event_data = {
+        portrait = shroud1
+        room = shroud_room
+    }
+    is_triggered_only = yes
+    immediate = {
+        set_country_flag = shroud_diplomacy_engaged
+        set_country_flag = shroud_vision_10
+    }
+    after = {
+        hidden_effect = {
+            remove_country_flag = shroud_diplomacy_engaged
+        }
+    }
+    option = {
+        name = "exit.shroud"
+        default_hide_option = yes
+        if = {
+            limit = {
+                event_target:chosen_leader = {
+                    leader_class = admiral
+                }
+            }
+            event_target:chosen_leader = {
+                add_trait = leader_trait_admiral_chosen
+                add_ruler_trait = leader_trait_ruler_chosen
+                set_leader_flag = leader_trait_chosen
+                remove_trait = leader_trait_admiral_psionic
+            }
+            break = yes
+        }
+        if = {
+            limit = {
+                event_target:chosen_leader = {
+                    leader_class = general
+                }
+            }
+            event_target:chosen_leader = {
+                add_trait = leader_trait_general_chosen
+                add_ruler_trait = leader_trait_ruler_chosen
+                set_leader_flag = leader_trait_chosen
+                remove_trait = leader_trait_general_psionic
+            }
+            break = yes
+        }
+        if = {
+            limit = {
+                event_target:chosen_leader = {
+                    leader_class = governor
+                }
+            }
+            event_target:chosen_leader = {
+                add_trait = leader_trait_governor_chosen
+                add_ruler_trait = leader_trait_ruler_chosen
+                set_leader_flag = leader_trait_chosen
+                remove_trait = leader_trait_governor_psionic
+            }
+            break = yes
+        }
+        if = {
+            limit = {
+                event_target:chosen_leader = {
+                    leader_class = ruler
+                }
+            }
+            event_target:chosen_leader = {
+                add_trait = leader_trait_ruler_chosen
+                add_ruler_trait = leader_trait_ruler_chosen
+                set_leader_flag = leader_trait_chosen
+                remove_trait = leader_trait_ruler_psionic
+            }
+            break = yes
+        }
+        if = {
+            limit = {
+                event_target:chosen_leader = {
+                    leader_class = scientist
+                }
+            }
+            event_target:chosen_leader = {
+                add_trait = leader_trait_scientist_chosen
+                add_ruler_trait = leader_trait_ruler_chosen
+                set_leader_flag = leader_trait_chosen
+                remove_trait = leader_trait_scientist_psionic
+            }
+            break = yes
+        }
+    }
+}

@@ -1,0 +1,43 @@
+tech_crystal_prospecting_6 = {
+    cost = @tier4cost1
+    area = engineering
+    tier = 4
+    category = {
+        materials
+    }
+    prerequisites = {
+        "tech_crystal_prospecting_5"
+    }
+    weight = @tier4weight1
+    potential = {
+        has_valid_civic = civic_crystalline_energy_grid
+    }
+    weight_modifier = {
+        factor = 2
+        modifier = {
+            factor = 2
+            has_technology = tech_rare_crystals
+        }
+        modifier = {
+            factor = 1.5
+            has_technology = tech_mine_rare_crystals
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 5
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+}

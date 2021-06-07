@@ -1,0 +1,58 @@
+gpm_building_core_prison = {
+    base_buildtime = @b2_time
+    base_cap_amount = 1
+    category = government
+    potential = {
+        owner = {
+            has_country_flag = gpm_core_prison_rewarded
+        }
+        OR = {
+            gpm_is_planet_class_normal_habitable = yes
+            gpm_is_planet_class_nuked = yes
+            gpm_is_planet_class_city = yes
+            gpm_is_planet_class_machine = yes
+            gpm_is_planet_class_hive = yes
+            gpm_is_planet_class_ringworld = yes
+        }
+    }
+    planet_modifier = {
+        planet_crime_add = -40
+        planet_stability_add = 5
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b2_minerals
+        }
+        upkeep = {
+            energy = 3
+        }
+    }
+    ai_weight = {
+        weight = 10
+        modifier = {
+            weight = 50
+            planet_crime > 5
+        }
+        modifier = {
+            weight = 100
+            planet_crime > 10
+        }
+        modifier = {
+            weight = 150
+            planet_crime > 15
+        }
+        modifier = {
+            weight = 250
+            planet_crime > 25
+        }
+        modifier = {
+            weight = 500
+            planet_crime > 50
+        }
+        modifier = {
+            weight = 1000
+            has_modifier = crime_lord_deal
+        }
+    }
+}

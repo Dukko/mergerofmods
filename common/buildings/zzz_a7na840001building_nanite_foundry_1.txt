@@ -1,0 +1,177 @@
+building_nanite_foundry_1 = {
+    base_buildtime = 360
+    category = manufacturing
+    potential = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+        owner = {
+            OR = {
+                has_origin = origin_machine_nanites
+            }
+        }
+    }
+    allow = {
+        owner = {
+            OR = {
+                has_origin = origin_machine_nanites
+            }
+        }
+    }
+    destroy_trigger = {
+        exists = owner
+        owner = {
+            OR = {
+                is_ai = yes
+                has_monthly_income = {
+                    resource = nanites
+                    value > 200
+                }
+                NOR = {
+                    has_civic = civic_machine_nanites_culture
+                }
+            }
+        }
+        is_planet_class = pc_city
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_alloy_drone_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_nanite_fabricator_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_foundry_add = 2
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 400
+        }
+        upkeep = {
+            energy = 8
+        }
+    }
+    upgrades = {
+        building_nanite_foundry_2
+    }
+    prerequisites = {
+        tech_basic_industry
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 7
+            OR = {
+                planet_crime < 15
+                has_building = building_hall_judgment
+            }
+            is_capital = no
+            free_amenities > 2
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value > 100
+                }
+                has_monthly_income = {
+                    resource = nanites
+                    value < 100
+                }
+                has_monthly_income = {
+                    resource = nanites
+                    value > 6
+                }
+            }
+        }
+        modifier = {
+            weight = 10000
+            planet = {
+                is_capital = yes
+                NOR = {
+                    has_building = building_nanite_foundry_2
+                    has_building = building_nanite_foundry_3
+                }
+                num_buildings = {
+                    type = building_nanite_foundry_1
+                    value < 3
+                }
+                has_building_construction = no
+            }
+        }
+        modifier = {
+            weight = 22000
+            OR = {
+                AND = {
+                    owner = {
+                        OR = {
+                            has_monthly_income = {
+                                resource = consumer_goods
+                                value > 0
+                            }
+                            country_uses_consumer_goods = no
+                        }
+                    }
+                    NOR = {
+                        num_buildings = {
+                            type = building_nanite_foundry_1
+                            value > 1
+                        }
+                        has_building = building_nanite_foundry_2
+                        has_building = building_nanite_foundry_3
+                    }
+                    owner = {
+                        has_ai_personality_behaviour = conqueror
+                        OR = {
+                            has_ai_personality_behaviour = opportunist
+                            has_ai_personality_behaviour = purger
+                            has_ai_personality_behaviour = propagator
+                        }
+                    }
+                }
+                NOR = {
+                    has_building = building_nanite_foundry_1
+                    has_building = building_nanite_foundry_2
+                    has_building = building_nanite_foundry_3
+                }
+            }
+        }
+        modifier = {
+            weight = 25000
+            has_building = building_nanite_foundry_1
+            free_building_slots = 0
+        }
+    }
+    ai_resource_production = {
+        nanites = 1
+        trigger = {
+            always = yes
+        }
+    }
+}

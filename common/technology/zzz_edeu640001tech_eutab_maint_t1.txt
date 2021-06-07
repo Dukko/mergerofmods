@@ -1,0 +1,39 @@
+@tier2cost1 = 1000
+@tier2weight1 = 85
+tech_eutab_maint_t1 = {
+    cost = @tier2cost1
+    area = engineering
+    tier = 2
+    category = {
+        industry
+    }
+    prerequisites = {
+        "tech_micro_replicators"
+    }
+    weight = @tier2weight1
+    potential = {
+        has_authority = auth_machine_intelligence
+    }
+    modifier = {
+        planet_districts_energy_produces_add = 0.5
+        planet_amenities_no_happiness_mult = 0.05
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+}

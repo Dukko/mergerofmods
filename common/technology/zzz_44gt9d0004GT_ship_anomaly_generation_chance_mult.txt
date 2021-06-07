@@ -1,0 +1,40 @@
+GT_ship_anomaly_generation_chance_mult = {
+    cost = @tier1cost3
+    area = society
+    tier = 1
+    category = {
+        new_worlds
+    }
+    prerequisites = {
+        "tech_automated_exploration"
+    }
+    weight = @tier2weight3
+    potential = {
+        is_ai = no
+    }
+    modifier = {
+        ship_anomaly_generation_chance_mult = 0.05
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            years_passed > 30
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+}

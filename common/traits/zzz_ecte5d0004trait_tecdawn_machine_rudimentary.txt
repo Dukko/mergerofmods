@@ -1,0 +1,16 @@
+trait_tecdawn_machine_rudimentary = {
+    icon = gfx/interface/icons/traits/trait_robotic_1.dds
+    cost = 1
+    initial = no
+    sapient = no
+    modifier = {
+        pop_assembly_speed = -50
+    }
+    allowed_archetypes = {
+        ROBOT
+        MACHINE
+    }
+    species_potential_add = {
+        always = no
+    }
+}

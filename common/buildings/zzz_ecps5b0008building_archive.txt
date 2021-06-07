@@ -1,0 +1,33 @@
+building_archive = {
+    base_buildtime = 720
+    base_cap_amount = 2
+    potential = {
+        exists = planet
+        NOT = {
+            has_modifier = slave_colony
+        }
+        has_modifier = harsh_shroud
+    }
+    country_modifier = {
+        country_admin_cap_add = 50
+        leader_skill_levels = 1
+        species_leader_exp_gain = 0.25
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 500
+            energy = 500
+            sr_zro = 200
+            yin = 50
+        }
+        upkeep = {
+            energy = 40
+            sr_zro = 10
+            yin = 5
+        }
+    }
+    ai_weight = {
+        factor = 50
+    }
+}

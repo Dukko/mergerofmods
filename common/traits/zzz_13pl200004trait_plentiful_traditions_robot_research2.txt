@@ -1,0 +1,22 @@
+trait_plentiful_traditions_robot_research2 = {
+    cost = 2
+    initial = no
+    randomized = no
+    prerequisites = {
+        tech_plentiful_traditions_metaverse_ecosystem
+    }
+    opposites = {
+        trait_plentiful_traditions_robot_research1
+        trait_plentiful_traditions_robot_research3
+        trait_plentiful_traditions_robot_underclocked_processors
+    }
+    allowed_archetypes = {
+        ROBOT
+        MACHINE
+    }
+    modifier = {
+        planet_jobs_society_research_produces_mult = 0.1
+        planet_jobs_physics_research_produces_mult = 0.1
+        planet_jobs_engineering_research_produces_mult = 0.1
+    }
+}

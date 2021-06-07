@@ -1,0 +1,16 @@
+leader_trait_general_est_chivalry = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/leader_trait_est_chivalry.dds"
+    modifier = {
+        army_morale = 0.1
+    }
+    leader_trait = {
+        general
+    }
+    leader_class = {
+        general
+    }
+    initial = no
+    randomized = no
+}

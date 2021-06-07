@@ -1,0 +1,348 @@
+pw_building_guardian_angel = {
+    base_buildtime = @pw_building_buildtime
+    position_priority = 50
+    planetary_ftl_inhibitor = yes
+    base_cap_amount = 1
+    category = army
+    prerequisites = {
+        pw_tech_guardian_angel
+    }
+    potential = {
+        exists = owner
+        NOT = {
+            has_modifier = resort_colony
+        }
+        OR = {
+            NOT = {
+                is_planet_class = pc_habitat
+            }
+            owner = {
+                has_ascension_perk = ap_voidborn
+            }
+        }
+    }
+    destroy_trigger = {
+        has_modifier = resort_colony
+    }
+    convert_to = {
+        building_dread_encampment
+        building_military_academy
+        building_fortress
+    }
+    allow = {
+        has_major_upgraded_capital = yes
+        free_district_slots > 0
+        pw_can_build_planetary_wonder = yes
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @pw_building_cost
+            volatile_motes = @pw_building_cost_rare
+        }
+        cost = {
+            trigger = {
+                planet = {
+                    pw_has_any_planetary_wonder = yes
+                }
+            }
+            minerals = @pw_building_cost_extra
+        }
+        cost = {
+            trigger = {
+                planet = {
+                    OR = {
+                        has_designation = col_fortress
+                        has_designation = col_habitat_fortress
+                    }
+                }
+            }
+            minerals = @pw_building_cost_discount
+        }
+        upkeep = {
+            energy = @pw_building_upkeep
+            volatile_motes = @pw_building_upkeep_rare_1
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    pw_has_any_additional_planetary_wonder = yes
+                }
+            }
+            energy = @pw_building_upkeep_extra
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    OR = {
+                        has_designation = col_fortress
+                        has_designation = col_habitat_fortress
+                    }
+                }
+            }
+            energy = @pw_building_upkeep_discount
+        }
+    }
+    planet_modifier = {
+        planet_max_districts_add = -1
+    }
+    army_modifier = {
+        army_starting_experience_add = 200
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_soldier_add = 4
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+            owner = {
+                NOT = {
+                    has_valid_civic = civic_reanimated_armies
+                }
+            }
+        }
+        modifier = {
+            job_soldier_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+            owner = {
+                has_valid_civic = civic_reanimated_armies
+            }
+        }
+        modifier = {
+            job_necromancer_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+            owner = {
+                NOT = {
+                    has_ascension_perk = ap_mind_over_matter
+                }
+            }
+        }
+        modifier = {
+            job_enforcer_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+            owner = {
+                has_ascension_perk = ap_mind_over_matter
+            }
+        }
+        modifier = {
+            job_telepath_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_warrior_drone_add = 5
+            job_patrol_drone_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_edict = pw_ambition_monumentality
+            }
+        }
+        modifier = {
+            planet_stability_add = @pw_stability_production
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_edict = pw_ambition_wonders_beyond_ambition
+            }
+        }
+        modifier = {
+            planet_orbital_bombardment_damage = -0.1
+        }
+    }
+    triggered_desc = {
+        text = pw_planet_wonder_lb
+    }
+    triggered_desc = {
+        text = pw_guardian_angel_tooltip
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        text = job_soldier_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+            owner = {
+                has_valid_civic = civic_reanimated_armies
+            }
+        }
+        text = job_necromancer_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+            owner = {
+                NOT = {
+                    has_ascension_perk = ap_mind_over_matter
+                }
+            }
+        }
+        text = job_enforcer_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+            owner = {
+                has_ascension_perk = ap_mind_over_matter
+            }
+        }
+        text = job_telepath_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_warrior_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_patrol_drone_effect_desc
+    }
+    on_built = {
+        planet_event = {
+            id = pw_wonder.1200
+        }
+    }
+    ai_weight = {
+        weight = 20
+        modifier = {
+            factor = 0
+            buildings_has_motes = no
+            building_relaxed_basic_income_check = no
+        }
+        modifier = {
+            factor = 0.25
+            free_building_slots < 1
+            free_district_slots < 1
+        }
+        modifier = {
+            factor = 0.25
+            pw_has_any_planetary_wonder = yes
+            NOT = {
+                owner = {
+                    has_ascension_perk = pw_ap_planetary_wonders
+                }
+            }
+            NOT = {
+                has_active_building = pw_building_guardian_angel
+            }
+            NOT = {
+                has_building_construction = pw_building_guardian_angel
+            }
+        }
+        modifier = {
+            factor = 2
+            owner = {
+                used_naval_capacity_percent > 0.8
+            }
+        }
+        modifier = {
+            factor = 2
+            owner = {
+                used_naval_capacity_percent > 0.9
+            }
+        }
+        modifier = {
+            factor = 2
+            planet_crime > 10
+        }
+        modifier = {
+            factor = 1.25
+            OR = {
+                owner = {
+                    is_militarist = yes
+                }
+                owner = {
+                    is_gestalt = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+                owner = {
+                    has_valid_civic = civic_machine_terminator
+                }
+                owner = {
+                    has_valid_civic = civic_hive_devouring_swarm
+                }
+                owner = {
+                    has_valid_civic = civic_fanatic_purifiers
+                }
+            }
+        }
+        modifier = {
+            factor = 3
+            owner = {
+                is_at_war = yes
+            }
+        }
+    }
+}

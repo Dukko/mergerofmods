@@ -1,0 +1,40 @@
+leader_trait_unstable_code_base = {
+    cost = -1
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/leader_trait_nervous.dds"
+    modifier = {
+        ship_fire_rate_mult = -0.1
+    }
+    leader_potential_add = {
+        from = {
+            has_authority = "auth_machine_intelligence"
+        }
+    }
+    leader_trait = {
+        admiral
+    }
+    leader_class = {
+        admiral
+    }
+    opposites = {
+        "leader_trait_unyielding"
+        "leader_trait_nervous"
+        "leader_trait_armchair_commander"
+        "leader_trait_substance_abuser"
+        "leader_trait_stubborn"
+        "leader_trait_corrupt"
+        "leader_trait_demoralizer"
+        "leader_trait_rigid_programming"
+        "leader_trait_erratic_morality_core"
+        "leader_trait_unstable_code_base"
+        "admiral_flaw_hesitant"
+        "admiral_flaw_poor_maintainer"
+        "admiral_flaw_proud"
+        "admiral_flaw_sitting_duck"
+        "admiral_flaw_slacker"
+        "admiral_quirk_evasive"
+        "admiral_quirk_offensive"
+        "admiral_quirk_reinforced"
+        "admiral_quirk_scrappy"
+    }
+}

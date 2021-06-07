@@ -1,0 +1,65 @@
+"Ethereal Dynasty of Straalgor" = {
+    key = "Ethereal Dynasty of Straalgor"
+    ship_prefix = ""
+    species = {
+        class = "ART"
+        portrait = "art12"
+        name = "Eysh-Vaak"
+        plural = "Eysh-Vaaks"
+        adjective = "Eysh-Vaaki"
+        species_bio = "A prey species whose main predators were wiped out by a plague only a few hundred thousand years ago, the Eysh-Vaak are nonviolent hive builders. Without significant external or internal pressure, their civilization has developed slowly. Centuries passed between their first powered atmospheric flight and first venture into outer space. Despite this plodding pace, their society is tightly knit and uniformly aligned to the leadership of their monarch."
+        name_list = "just-name-lists_arthropoid4"
+        trait = "trait_communal"
+        trait = "trait_just-more-traits_compliant"
+        trait = "trait_just-more-traits_longlived"
+        trait = "trait_just-more-traits_feeble"
+    }
+    name = "Ethereal Dynasty of Straalgor"
+    adjective = "Straalgoran"
+    authority = "auth_imperial"
+    government = "gov_theocratic_monarchy"
+    planet_name = "J'Vaak"
+    planet_class = "pc_mangrove"
+    system_name = "Straalgor"
+    initializer = ""
+    graphical_culture = "arthropoid_01"
+    city_graphical_culture = "arthropoid_01"
+    empire_flag = {
+        icon = {
+            category = "just-more-flags"
+            file = "flag_nature7.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "fabric_gradient.dds"
+        }
+        colors = {
+            "dark_green"
+            "dark_teal"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = female
+        name = "Gek M'Bok"
+        portrait = "art12"
+        texture = 6
+        hair = 0
+        clothes = 0
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "underwater2_room"
+    spawn_enabled = yes
+    ethic = "ethic_authoritarian"
+    ethic = "ethic_fanatic_pacifist"
+    ethic = "ethic_fanatic_spiritualist"
+    civics = {
+        "civic_agrarian_idyll"
+        "civic_philosopher_king"
+        "civic_exalted_priesthood"
+    }
+    origin = "origin_default"
+}

@@ -1,0 +1,568 @@
+action_invite_to_federation = {
+    icon = "GFX_diplomacy_status_federation"
+    requires_actor_peace = yes
+    requires_recipient_peace = yes
+    requires_alliance_vote = yes
+    diplo_view_acceptance_icon = yes
+    should_notify_all_communications = yes
+    AI_acceptance_base_value = -50
+    action_type = positive
+    should_show_auto_accept_message_recipient = yes
+    should_open_auto_accept_message_recipient = yes
+    should_notify_auto_recipient_on_vote_fail = yes
+    requires_recipient_independence = no
+    potential = {
+        hidden_trigger = {
+            is_fallen_machine_empire = no
+            from = {
+                is_fallen_machine_empire = no
+            }
+        }
+    }
+    ai_weight = {
+        base = 0
+        modifier = {
+            add = -300
+            desc = federation_acceptance_empire_other
+            exists = federation
+            federation = {
+                has_federation_type = vf_ef_federation
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = vassal
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = protectorate
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = tributary
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = exalted_subject_warden
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = exalted_subject_automated_assembler
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = exalted_subject_remote_archive
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = exalted_subject_dominion
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = exalted_subject_special_administrative_region
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = exalted_subject_pet
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = exalted_subject_symbiont
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = dominion
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = satellite
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = signatory
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = thrall
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = scion
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = fe_clan_member
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = fe_demilitarized_state
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = fe_puppet_state
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = fe_union_state
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = fe_satrapy
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = fe_symbiote
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = fe_auxiliary
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = banished_ascendancy
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = verappendage
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = verautonomous
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = verbeneficiary
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = verdisciple
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = verfoederatus
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = verjrpartner
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = verpuppet
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = verserf
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = versister
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = verorganic
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = verparallel
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = verblood
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = vervassal
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = versubsidiary
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = verdevotee
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = verkobun
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = versupplier
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = verworshipper
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = verdebtor
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = versubscriber
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = verarmsdealer
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = versubcontractor
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = verdependency
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
+                is_subject_type = member_state
+            }
+        }
+    }
+    possible = {
+        if = {
+            limit = {
+                has_federation = no
+                is_country_type = default
+            }
+            if = {
+                limit = {
+                    has_authority = auth_machine_intelligence
+                }
+                custom_tooltip = {
+                    fail_text = requires_tradition_universal_compatibility
+                    has_swapped_tradition = tr_versatility_universal_compatibility
+                }
+            }
+            else = {
+                custom_tooltip = {
+                    fail_text = requires_tradition_the_federation
+                    has_non_swapped_tradition = tr_diplomacy_the_federation
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_recipient_not_shadow_state"
+            from = {
+                NOT = {
+                    has_valid_civic = civic_shadow_state
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_actor_not_shadow_state"
+            NOT = {
+                has_valid_civic = civic_shadow_state
+            }
+        }
+        custom_tooltip = {
+            fail_text = "ACTION_RECIPIENT_NOT_YOURS"
+            FROM = {
+                NOT = {
+                    AND = {
+                        is_subject = yes
+                        NOT = {
+                            has_overlord = root
+                        }
+                    }
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_actor_not_fanatic_purifiers"
+            OR = {
+                is_same_species = from
+                NOT = {
+                    has_valid_civic = civic_fanatic_purifiers
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_recipient_not_fanatic_purifiers"
+            OR = {
+                is_same_species = from
+                from = {
+                    NOT = {
+                        has_valid_civic = civic_fanatic_purifiers
+                    }
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_actor_not_devouring_swarm"
+            NOT = {
+                has_valid_civic = civic_hive_devouring_swarm
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_recipient_not_devouring_swarm"
+            from = {
+                NOT = {
+                    has_valid_civic = civic_hive_devouring_swarm
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_actor_not_machine_terminator"
+            OR = {
+                is_same_species = from
+                NOT = {
+                    has_valid_civic = civic_machine_terminator
+                }
+                AND = {
+                    has_valid_civic = civic_machine_terminator
+                    from = {
+                        OR = {
+                            has_country_flag = synthetic_empire
+                            has_authority = auth_machine_intelligence
+                        }
+                    }
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_recipient_not_machine_terminator"
+            OR = {
+                is_same_species = from
+                from = {
+                    NOT = {
+                        has_civic = civic_machine_terminator
+                    }
+                }
+                AND = {
+                    from = {
+                        has_valid_civic = civic_machine_terminator
+                    }
+                    OR = {
+                        has_country_flag = synthetic_empire
+                        has_authority = auth_machine_intelligence
+                    }
+                }
+            }
+        }
+        if = {
+            limit = {
+                from = {
+                    has_valid_civic = civic_inwards_perfection
+                }
+            }
+            if = {
+                limit = {
+                    has_intel = {
+                        who = from
+                        intel = civics
+                    }
+                }
+                custom_tooltip = {
+                    fail_text = requires_recipient_not_inward_perfection
+                    always = no
+                }
+            }
+            else = {
+                custom_tooltip = {
+                    fail_text = diplo_action_no_low_intel
+                    always = no
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_actor_not_inward_perfection"
+            NOT = {
+                has_valid_civic = civic_inwards_perfection
+            }
+        }
+        custom_tooltip = {
+            fail_text = "no_shared_borders"
+            OR = {
+                any_system_within_border = {
+                    any_neighbor_system = {
+                        exists = owner
+                        owner = {
+                            OR = {
+                                is_same_value = from
+                                is_in_federation_with = from
+                                AND = {
+                                    exists = overlord
+                                    overlord = {
+                                        is_same_value = from
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                from = {
+                    any_system_within_border = {
+                        any_neighbor_system = {
+                            exists = owner
+                            owner = {
+                                OR = {
+                                    is_same_value = root
+                                    is_in_federation_with = root
+                                    AND = {
+                                        exists = overlord
+                                        overlord = {
+                                            is_same_value = root
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_actor_recipient_not_in_galactic_empire"
+            NAND = {
+                has_galactic_emperor = yes
+                OR = {
+                    is_galactic_community_member = yes
+                    from = {
+                        is_galactic_community_member = yes
+                    }
+                }
+            }
+        }
+    }
+}

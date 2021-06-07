@@ -1,0 +1,61 @@
+@apsr14part3cost_energy = 0
+@apsr14part3cost_minerals = 10000
+@apsr14part3cost_time = 1500
+@apsr14part3mupkeep_energy = 15
+@apsr14part3mupkeep_minerals = 15
+@apsr14part3repjob = 3
+apsr14_building_part_m4 = {
+    base_buildtime = @apsr14part3cost_time
+    icon = apsr14_building_part_m3
+    is_capped_by_modifier = no
+    category = pop_assembly
+    can_build = no
+    potential = {
+        has_modifier = "apsr14_planet_modifier"
+        has_deposit = apsr_relic_cube_deposit
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_apsr14_replicator_machine_add = @apsr14part3repjob
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                NOT = {
+                    is_machine_empire = yes
+                }
+            }
+        }
+        modifier = {
+            job_apsr14_replicator_robot_normal_add = @apsr14part3repjob
+        }
+    }
+    resources = {
+        category = planet_apsr_buildings
+        cost = {
+            energy = @apsr14part3cost_energy
+            minerals = @apsr14part3cost_minerals
+        }
+        upkeep = {
+            energy = @apsr14part3mupkeep_energy
+            minerals = @apsr14part3mupkeep_minerals
+        }
+    }
+    country_modifier = {
+        planet_pop_assembly_mult = 0.25
+    }
+    allow = {
+        has_major_upgraded_capital = yes
+    }
+    ai_weight = {
+        weight = 80000
+    }
+}

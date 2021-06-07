@@ -1,0 +1,33 @@
+GT_starbase_shipyard_build_speed_mult = {
+    cost = @tier2cost3
+    area = engineering
+    tier = 2
+    category = {
+        voidcraft
+    }
+    prerequisites = {
+        "tech_starbase_3"
+    }
+    weight = @tier3weight3
+    modifier = {
+        starbase_shipyard_build_speed_mult = 0.1
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+}

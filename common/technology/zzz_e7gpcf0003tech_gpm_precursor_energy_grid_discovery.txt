@@ -1,0 +1,17 @@
+tech_gpm_precursor_energy_grid_discovery = {
+    area = physics
+    cost = @tier2cost1
+    category = {
+        particles
+    }
+    tier = 2
+    is_rare = yes
+    ai_update_type = all
+    weight = 1
+    modifier = {
+        starbase_constructions_energy_produces_mult = 0.2
+    }
+    weight_modifier = {
+        factor = 0
+    }
+}

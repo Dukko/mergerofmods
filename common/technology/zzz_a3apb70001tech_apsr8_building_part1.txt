@@ -1,0 +1,52 @@
+@apsr8cost1 = 5000
+@apsr8weight1 = 50
+tech_apsr8_building_part1 = {
+    cost = @apsr8cost1
+    area = physics
+    tier = 2
+    category = {
+        industry
+    }
+    prerequisites = {
+        "tech_fission_power"
+    }
+    weight = @apsr8weight1
+    is_rare = yes
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_deposit = apsr8_deposit
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_maniacal"
+            }
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+                research_leader = {
+                    area = physics
+                    has_trait = "leader_trait_curator"
+                }
+                research_leader = {
+                    area = physics
+                    has_trait = "leader_trait_spark_of_genius"
+                }
+            }
+        }
+        modifier = {
+            factor = 5
+            has_origin = apsr_origin_unique_capital
+        }
+    }
+    ai_weight = {
+        factor = 150
+    }
+}

@@ -1,0 +1,35 @@
+tech_tech_ii = {
+    area = society
+    is_rare = yes
+    cost = @repeatableTechBaseCost
+    cost_per_level = @repeatableTechLevelCost
+    tier = @repeatableTechTier
+    category = {
+        new_worlds
+    }
+    levels = -1
+    prerequisites = {
+        "tech_galactic_ambitions"
+    }
+    weight = @repeatableTechWeight
+    potential = {
+        NOT = {
+            is_fallen_empire = yes
+        }
+    }
+    weight_modifier = {
+        factor = 0
+    }
+    ai_weight = {
+        factor = 1
+    }
+    weight_groups = {
+        repeatable
+    }
+    mod_weight_if_group_picked = {
+        repeatable = 0.01
+    }
+    modifier = {
+        pop_environment_tolerance = 0.05
+    }
+}

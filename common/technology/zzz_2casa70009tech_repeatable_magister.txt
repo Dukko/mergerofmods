@@ -1,0 +1,27 @@
+tech_repeatable_magister = {
+    area = society
+    cost = 2000
+    cost_per_level = 1000
+    tier = 1
+    category = {
+        statecraft
+    }
+    levels = 20
+    weight = 50
+    potential = {
+        OR = {
+            has_government = gov_bloodelf_regency
+            has_government = gov_highelf_regency
+        }
+    }
+    modifier = {
+        job_magister_add = 1
+    }
+    ai_weight = {
+        factor = 1
+    }
+    weight_groups = {
+    }
+    mod_weight_if_group_picked = {
+    }
+}

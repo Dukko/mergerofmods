@@ -1,0 +1,43 @@
+trait_hive_mind_remote_drone = {
+    cost = 1
+    sorting_priority = 19
+    randomized = no
+    initial = no
+    modification = no
+    icon = "gfx/interface/icons/traits/trait_primitive.dds"
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    opposites = {
+        "trait_extremely_adaptive"
+        "trait_adaptive"
+        "trait_nonadaptive"
+        "trait_fleeting"
+        "trait_slow_learners"
+        "trait_quick_learners"
+        "trait_venerable"
+        "trait_enduring"
+        "trait_talented"
+        "trait_just-more-traits_longlived"
+        "trait_just-more-traits_indelible"
+        "trait_just-more-traits_ephemeral"
+        "trait_just-more-traits_virtuosos"
+        "trait_just-more-traits_dimwitted"
+        "trait_just-more-traits_prodigious"
+        "trait_just-more-traits_flexible"
+        "trait_just-more-traits_hardy"
+        "trait_just-more-traits_sensitive"
+        "trait_just-more-traits_particular"
+        "trait_just-more-traits_exacting"
+        "trait_just-more-traits_longlived"
+        "trait_just-more-traits_indelible"
+        "trait_just-more-traits_ephemeral"
+        "trait_just-more-traits_virtuosos"
+        "trait_just-more-traits_dimwitted"
+        "trait_just-more-traits_prodigious"
+    }
+    modifier = {
+        pop_environment_tolerance = 0.2
+    }
+}

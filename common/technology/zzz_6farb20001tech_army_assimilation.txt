@@ -1,0 +1,41 @@
+tech_army_assimilation = {
+    cost = @tier5cost1
+    area = society
+    tier = 5
+    is_rare = yes
+    category = {
+        biology
+    }
+    prerequisites = {
+        "tech_genetic_resequencing"
+    }
+    weight = @tier5weight2
+    modifier = {
+        army_health = 1
+        army_attack_damage_mult = 1
+    }
+    potential = {
+        has_authority = auth_hive_mind
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+            }
+        }
+        modifier = {
+            factor = 1.25
+            owner = {
+                has_valid_civic = civic_hive_devouring_swarm
+            }
+        }
+    }
+}

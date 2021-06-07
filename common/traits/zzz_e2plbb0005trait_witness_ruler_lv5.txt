@@ -1,0 +1,19 @@
+trait_witness_ruler_lv5 = {
+    cost = 0
+    leader_trait = {
+        ruler
+    }
+    leader_class = {
+        ruler
+    }
+    self_modifier = {
+    }
+    modifier = {
+        leader_cost_empire_size_mult = -0.1
+        country_naval_cap_mult = 0.05
+        country_leader_pool_size = 1
+    }
+    initial = no
+    modification = no
+    randomized = no
+}

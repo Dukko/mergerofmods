@@ -1,0 +1,40 @@
+namespace = utopia
+country_event = {
+    id = utopia.3401
+    title = "utopia.3401.name"
+    desc = "utopia.3401.desc"
+    picture = GFX_evt_psionics
+    show_sound = event_mystic_reveal
+    is_triggered_only = yes
+    option = {
+        name = "utopia.3401.a"
+        trigger = {
+            any_relation = {
+                is_country_type = shroud
+                has_communications = root
+            }
+        }
+    }
+    option = {
+        name = "utopia.3401.b"
+        trigger = {
+            OR = {
+                has_ethic = ethic_fanatic_materialist
+                has_ethic = ethic_materialist
+            }
+        }
+    }
+    option = {
+        name = "utopia.3401.c"
+        trigger = {
+            NOR = {
+                has_ethic = ethic_fanatic_materialist
+                has_ethic = ethic_materialist
+                any_relation = {
+                    is_country_type = shroud
+                    has_communications = root
+                }
+            }
+        }
+    }
+}

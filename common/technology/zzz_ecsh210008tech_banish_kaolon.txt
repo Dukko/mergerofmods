@@ -1,0 +1,15 @@
+tech_banish_kaolon = {
+    cost = 50000
+    area = engineering
+    tier = 3
+    category = {
+        psionics
+    }
+    is_rare = yes
+    weight = 10
+    weight_modifier = {
+        modifier = {
+            factor = 0
+        }
+    }
+}

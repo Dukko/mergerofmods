@@ -1,0 +1,124 @@
+apsr16_scientist_machine = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = apsr16_building_part3
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        drone_job_check_trigger = yes
+    }
+    resources = {
+        category = apsr16_planet_scientist_machine
+        produces = {
+            physics_research = 6
+            engineering_research = 6
+            society_research = 6
+            apsr_knowledge = 0.05
+        }
+        upkeep = {
+            minerals = 2.6
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr16_building_part2
+                }
+            }
+            physics_research = 2
+            engineering_research = 2
+            society_research = 2
+            apsr_knowledge = 0.05
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr16_building_part3
+                }
+            }
+            physics_research = 1
+            engineering_research = 1
+            society_research = 1
+            apsr_knowledge = 0.025
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_deposit = apsr_relic_cube_deposit
+                }
+            }
+            physics_research = 4
+            engineering_research = 4
+            society_research = 4
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr16_advanced_1
+                }
+            }
+            physics_research = 1.7
+            engineering_research = 1.7
+            society_research = 1.7
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr16_advanced_2
+                }
+            }
+            physics_research = 1.7
+            engineering_research = 1.7
+            society_research = 1.7
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr16_advanced_3
+                }
+            }
+            physics_research = 1.7
+            engineering_research = 1.7
+            society_research = 1.7
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr16_advanced_4
+                }
+            }
+            physics_research = 1.7
+            engineering_research = 1.7
+            society_research = 1.7
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr16_advanced_5
+                }
+            }
+            physics_research = 1.7
+            engineering_research = 1.7
+            society_research = 1.7
+        }
+    }
+    weight = {
+        weight = 100
+        modifier = {
+            factor = 2
+            has_trait = trait_robot_logic_engines
+        }
+        modifier = {
+            factor = 0.9
+            exists = owner
+            years_passed < 1
+            owner = {
+                has_valid_civic = civic_machine_assimilator
+            }
+            has_trait = trait_cybernetic
+        }
+    }
+}

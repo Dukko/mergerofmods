@@ -1,0 +1,45 @@
+@tier4cost1 = 6000
+@tier4weight1 = 45
+tech_eutab_h_drone_redist = {
+    cost = @tier4cost1
+    area = engineering
+    tier = 4
+    category = {
+        voidcraft
+    }
+    prerequisites = {
+        "tech_starbase_3"
+    }
+    weight = @tier4weight1
+    is_rare = yes
+    potential = {
+        has_authority = auth_hive_mind
+    }
+    modifier = {
+        pop_resettlement_cost_mult = -0.4
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = ap_imperial_prerogative
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+}

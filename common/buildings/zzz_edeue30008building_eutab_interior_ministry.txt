@@ -1,0 +1,49 @@
+building_eutab_interior_ministry = {
+    base_buildtime = @b2_time
+    can_build = no
+    category = government
+    potential = {
+        owner = {
+            eu_auth_other = yes
+        }
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    show_tech_unlock_if = {
+        eu_auth_other = yes
+    }
+    planet_modifier = {
+        job_administrator_add = 1
+        job_clerk_add = 3
+        job_clerk_per_pop = 0.05
+        job_administrator_per_pop = 0.02
+        planet_max_buildings_add = 1
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b2_minerals
+            rare_crystals = @b2_rare_cost
+        }
+        upkeep = {
+            energy = @b2_upkeep
+            rare_crystals = @b2_rare_upkeep
+        }
+    }
+    triggered_desc = {
+        text = job_administrator_effect_desc
+    }
+    triggered_desc = {
+        text = job_clerk_effect_desc
+    }
+    upgrades = {
+        building_eutab_shroud_ministry
+    }
+    prerequisites = {
+        "tech_eutab_governors_district"
+    }
+    ai_weight = {
+        factor = 2
+    }
+}

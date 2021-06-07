@@ -1,0 +1,40 @@
+ehof_traders = {
+    is_enclave = yes
+    blocks_piracy = yes
+    show_in_contacts_list = yes
+    share_communications = no
+    can_planets_be_attacked = no
+    has_capital = yes
+    custom_diplomacy = yes
+    share_survey_data = yes
+    enforces_borders = no
+    needs_survey = no
+    has_complete_sensor = no
+    can_have_their_comms_shared = no
+    observable = no
+    ai = {
+        enabled = no
+    }
+    faction = {
+        neutral = yes
+        hostile = no
+        pirate = no
+        needs_border_access = no
+        generate_borders = yes
+        needs_colony = no
+        auto_delete = no
+    }
+    modules = {
+        exclusive_diplomacy_module = {
+            contact_rule = on_action_only
+        }
+        all_technology_module = {
+        }
+        standard_leader_module = {
+        }
+        standard_event_module = {
+        }
+        standard_trade_routes_module = {
+        }
+    }
+}

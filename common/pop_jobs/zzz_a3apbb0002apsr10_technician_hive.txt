@@ -1,0 +1,80 @@
+apsr10_technician_hive = {
+    category = simple_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = apsr10_building_part1
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        drone_job_check_trigger = yes
+    }
+    resources = {
+        category = apsr10_planet_technician_hive
+        produces = {
+            energy = 7
+            apsr_knowledge = 0.15
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_deposit = apsr_relic_cube_deposit
+                }
+            }
+            energy = 3.2
+            apsr_knowledge = -0.05
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr10_advanced_1
+                }
+            }
+            energy = 4
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr10_advanced_2
+                }
+            }
+            energy = 4
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr10_advanced_3
+                }
+            }
+            energy = 4
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr10_advanced_4
+                }
+            }
+            energy = 4
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr10_advanced_5
+                }
+            }
+            energy = 4
+        }
+    }
+    weight = {
+        weight = 100
+        modifier = {
+            factor = 2
+            OR = {
+                has_trait = trait_robot_superconductive
+                has_trait = trait_ingenious
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+xvcv_mdlc_rogue_network = {
+    category = corrupt_drone
+    is_capped_by_modifier = yes
+    can_set_priority = no
+    clothes_texture_index = 2
+    contributes_to_diplo_weight = no
+    building_icon = building_autochthon_monument
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        planet = {
+            has_modifier = xvcv_mdlc_rogue_network
+        }
+        drone_job_check_trigger = yes
+    }
+    planet_modifier = {
+        planet_jobs_energy_produces_mult = -0.01
+    }
+    resources = {
+        category = planet_jobs
+        upkeep = {
+            energy = 5
+            unity = 5
+            influence = 0.1
+        }
+    }
+    weight = {
+        weight = @criminal_job_weight
+    }
+}

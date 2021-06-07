@@ -1,0 +1,55 @@
+sex_worker = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_instrument
+    clothes_texture_index = 2
+    possible = {
+        complex_specialist_job_check_trigger = yes
+    }
+    planet_modifier = {
+        planet_amenities_add = 20
+        trade_value_add = 60
+        planet_crime_add = 50
+    }
+    triggered_planet_modifier = {
+        potential = {
+            OR = {
+                has_trait = trait_robot_domestic_protocols
+                has_trait = trait_charismatic
+            }
+        }
+        modifier = {
+            planet_amenities_add = 10
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_trait = trait_repugnant
+        }
+        modifier = {
+            planet_amenities_add = -10
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            OR = {
+                has_trait = trait_thrifty
+                has_trait = trait_nuumismatic_administration
+            }
+        }
+        modifier = {
+            trade_value_add = 20
+        }
+    }
+    weight = {
+        weight = @specialist_job_weight
+        modifier = {
+            factor = 0.2
+            has_trait = trait_repugnant
+        }
+        modifier = {
+            factor = 2
+            has_trait = trait_charismatic
+        }
+    }
+}

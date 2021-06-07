@@ -1,0 +1,121 @@
+MACHINE = {
+    archetype = MACHINE
+    playable = {
+        has_synthethic_dawn = yes
+    }
+    randomized = {
+        has_synthethic_dawn = yes
+        NOT = {
+            has_global_flag = game_started
+        }
+    }
+    possible = {
+        authority = {
+            OR = {
+                value = auth_machine_intelligence
+                text = SPECIES_CLASS_MUST_USE_MACHINE_INTELLIGENCE
+            }
+        }
+    }
+    possible_secondary = {
+        always = no
+        text = SECONDARY_SPECIES_CLASS_INVALID
+    }
+    robotic = yes
+    gender = no
+    use_climate_preference = no
+    portrait_modding = yes
+    leader_age_min = 2
+    leader_age_max = 10
+    custom_portraits = {
+        randomized = {
+            has_synthethic_dawn = yes
+            NOT = {
+                has_global_flag = game_started
+            }
+        }
+        playable = {
+            has_synthethic_dawn = yes
+        }
+        portraits = {
+            "sd_hum_robot"
+            "sd_mam_robot"
+            "sd_rep_robot"
+            "sd_avi_robot"
+            "sd_art_robot"
+            "sd_mol_robot"
+            "sd_fun_robot"
+            "sd_pla_robot"
+            "esgoo"
+        }
+    }
+    custom_portraits = {
+        randomized = {
+            AND = {
+                has_synthethic_dawn = yes
+                has_lithoids = yes
+            }
+        }
+        playable = {
+            AND = {
+                has_synthethic_dawn = yes
+                has_lithoids = yes
+            }
+        }
+        portraits = {
+            "lith_machine"
+            "lithnanite"
+        }
+    }
+    custom_portraits = {
+        randomized = {
+            AND = {
+                has_synthethic_dawn = yes
+                has_necroids = yes
+            }
+        }
+        playable = {
+            AND = {
+                has_synthethic_dawn = yes
+                has_necroids = yes
+            }
+        }
+        portraits = {
+            "nec_machine"
+        }
+    }
+    custom_portraits = {
+        randomized = {
+            has_synthethic_dawn = yes
+            NOT = {
+                has_global_flag = game_started
+            }
+        }
+        playable = {
+            has_synthethic_dawn = yes
+        }
+        portraits = {
+            "default_robot"
+            "anthrobot"
+            "anthroid"
+            "humrobot"
+            "humroid"
+            "humansynth_machine"
+            "mammaliansynth_machine"
+            "reptiliansynth_machine"
+            "aviansynth_machine"
+            "arthropoidsynth_machine"
+            "molluscoidsynth"
+            "fungoidsynth"
+            "plantoidsynth"
+            "holofrixigram"
+            "zeriphensynth_machine"
+            "humaicon"
+            "syntherminator_machine"
+        }
+    }
+    graphical_culture = mammalian_01
+    move_pop_sound_effect = "robot_pops_move"
+    resources = {
+    }
+}

@@ -1,0 +1,115 @@
+ultimate_crisis_plan = {
+    type = ultimate
+    income = {
+        energy = 300
+        minerals = 500
+        alloys = 2500
+        physics_research = 1000
+        society_research = 1000
+        engineering_research = 1000
+        exotic_gases = 3
+        volatile_motes = 3
+        rare_crystals = 3
+        sr_living_metal = 3
+        sr_zro = 3
+        sr_dark_matter = 3
+    }
+    focus = {
+        energy = 50
+        minerals = 100
+        alloys = 500
+    }
+    subplan = {
+        potential = {
+            country_uses_consumer_goods = yes
+            country_uses_food = yes
+        }
+        income = {
+            food = 200
+            consumer_goods = 200
+        }
+        focus = {
+            food = 50
+            consumer_goods = 50
+        }
+    }
+    subplan = {
+        potential = {
+            country_uses_consumer_goods = yes
+            country_uses_food = no
+        }
+        income = {
+            consumer_goods = 200
+        }
+        focus = {
+            consumer_goods = 50
+        }
+    }
+    subplan = {
+        potential = {
+            country_uses_consumer_goods = no
+            country_uses_food = yes
+        }
+        income = {
+            food = 200
+        }
+        focus = {
+            food = 50
+        }
+    }
+    subplan = {
+        potential = {
+            str_food_crisis_1 = yes
+        }
+        income = {
+            food = 300
+        }
+        focus = {
+            food = 150
+        }
+    }
+    subplan = {
+        potential = {
+            str_minerals_crisis_1 = yes
+        }
+        income = {
+            minerals = 300
+        }
+        focus = {
+            minerals = 150
+        }
+    }
+    subplan = {
+        potential = {
+            str_energy_crisis_1 = yes
+        }
+        income = {
+            energy = 300
+        }
+        focus = {
+            energy = 150
+        }
+    }
+    subplan = {
+        potential = {
+            str_consumer_goods_crisis_1 = yes
+        }
+        income = {
+            consumer_goods = 100
+        }
+        focus = {
+            consumer_goods = 50
+        }
+    }
+    potential = {
+        or = {
+            str_raw_ecocrisis_level_1 = yes
+            str_consumer_goods_crisis_1 = yes
+        }
+    }
+    pops = 10000
+    empire_size = 1
+    ai_weight = {
+        weight = 8000
+    }
+}

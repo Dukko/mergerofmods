@@ -1,0 +1,18 @@
+gle_trait_chemist_lv1 = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/gle_trait_chemist_lv1.dds"
+    modifier = {
+        job_chemist_add = 1
+        planet_chemists_physics_research_produces_add = 1
+    }
+    sorting_priority = 10
+    initial = no
+    randomized = no
+    leader_trait = {
+        governor
+    }
+    leader_class = {
+        governor
+    }
+}

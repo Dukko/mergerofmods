@@ -1,0 +1,205 @@
+namespace = anomaly
+country_event = {
+    id = anomaly.1198
+    title = "anomaly.1198.name"
+    desc = "anomaly.1198.desc"
+    show_sound = event_mystic_reveal
+    picture = GFX_evt_synth_organic_relations
+    location = event_target:potential_target
+    is_triggered_only = yes
+    immediate = {
+        if = {
+            limit = {
+                any_planet_within_border = {
+                    habitable_planet = yes
+                    is_colony = no
+                    has_anomaly = no
+                    is_capital = no
+                    NOT = {
+                        has_modifier = holy_planet
+                    }
+                    NOR = {
+                        exists = owner
+                        exists = controller
+                    }
+                }
+            }
+            random_planet_within_border = {
+                limit = {
+                    habitable_planet = yes
+                    is_colony = no
+                    has_anomaly = no
+                    is_capital = no
+                    NOT = {
+                        has_modifier = holy_planet
+                    }
+                    NOT = {
+                        has_modifier = phaseshifted
+                    }
+                    NOR = {
+                        exists = owner
+                        exists = controller
+                    }
+                }
+                save_event_target_as = potential_target
+            }
+        }
+        else_if = {
+            capital_scope = {
+                save_event_target_as = potential_target
+            }
+        }
+    }
+    option = {
+        name = anomaly.189.a
+        custom_tooltip = anomaly.189.a.tooltip
+        trigger = {
+            any_planet_within_border = {
+                habitable_planet = yes
+                is_colony = no
+                has_anomaly = no
+                is_capital = no
+                NOT = {
+                    has_modifier = holy_planet
+                }
+                NOR = {
+                    exists = owner
+                    exists = controller
+                }
+            }
+            NOT = {
+                has_policy_flag = ai_outlawed
+            }
+        }
+        allow = {
+            NOT = {
+                has_policy_flag = ai_outlawed
+            }
+            any_planet_within_border = {
+                habitable_planet = yes
+                is_colony = no
+                has_anomaly = no
+                is_capital = no
+                NOT = {
+                    has_modifier = holy_planet
+                }
+                NOR = {
+                    exists = owner
+                    exists = controller
+                }
+            }
+        }
+        hidden_effect = {
+            if = {
+                limit = {
+                    capital_scope = {
+                        is_same_value = event_target:potential_target
+                    }
+                }
+                random_planet_within_border = {
+                    limit = {
+                        habitable_planet = yes
+                        is_colony = no
+                        has_anomaly = no
+                        is_capital = no
+                        NOT = {
+                            has_modifier = holy_planet
+                        }
+                        NOT = {
+                            has_modifier = phaseshifted
+                        }
+                        NOR = {
+                            exists = owner
+                            exists = controller
+                        }
+                    }
+                    save_event_target_as = potential_target
+                }
+            }
+            event_target:potential_target = {
+                set_owner = root
+                set_controller = root
+                prevent_anomaly = yes
+                if = {
+                    limit = {
+                        host_has_dlc = "Synthetic Dawn Story Pack"
+                    }
+                    create_species = {
+                        name = "NAME_Awoken_Robot"
+                        plural = "NAME_Awoken_Robot"
+                        class = ROBOT
+                        namelist = FUN3
+                        portrait = "sd_fun_robot"
+                        traits = {
+                            trait = "trait_mechanical"
+                            trait = "trait_robot_awoken"
+                        }
+                    }
+                }
+                else = {
+                    create_species = {
+                        name = "NAME_Awoken_Robot"
+                        plural = "NAME_Awoken_Robot"
+                        class = ROBOT
+                        namelist = FUN3
+                        portrait = "default_robot"
+                        traits = {
+                            trait = "trait_mechanical"
+                            trait = "trait_robot_awoken"
+                        }
+                    }
+                }
+                while = {
+                    count = 3
+                    create_pop = {
+                        species = last_created_species
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    has_event_chain = mandate_colonize_planet_chain
+                }
+                country_event = {
+                    id = moremandate.62
+                }
+            }
+            if = {
+                limit = {
+                    has_event_chain = mandate_uplift_chain
+                }
+                country_event = {
+                    id = moremandate.83
+                }
+            }
+        }
+    }
+    option = {
+        name = anomaly.1198.a
+        custom_tooltip = anomaly.189.b.tooltip
+        hidden_effect = {
+            country_event = {
+                id = anomaly.1195
+                days = 40
+            }
+            if = {
+                limit = {
+                    has_event_chain = mandate_uplift_chain
+                }
+                country_event = {
+                    id = moremandate.83
+                }
+            }
+        }
+    }
+    option = {
+        name = anomaly.189.c
+        custom_tooltip = anomaly.186.a.alt.tooltip
+        trigger = {
+            has_policy_flag = ai_servitude
+        }
+        add_resource = {
+            minerals = 200
+        }
+    }
+}

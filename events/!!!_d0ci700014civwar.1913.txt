@@ -1,0 +1,17 @@
+namespace = civwar
+country_event = {
+    id = civwar.1913
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        has_federation = no
+    }
+    immediate = {
+        if = {
+            limit = {
+                has_country_flag = remove_fed_civil_war
+            }
+            remove_country_flag = remove_fed_civil_war
+        }
+    }
+}

@@ -1,0 +1,21 @@
+trait_tass_cheat_immortal = {
+    cost = 0
+    sorting_priority = 50
+    icon = "gfx/interface/icons/traits/trait_tass_necron.dds"
+    initial = yes
+    modification = no
+    randomized = no
+    immortal_leaders = yes
+    allowed_archetypes = {
+        BIOLOGICAL
+        MACHINE
+        ROBOT
+        LITHOID
+    }
+    modifier = {
+        species_leader_exp_gain = 1
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

@@ -1,0 +1,36 @@
+namespace = utopia
+country_event = {
+    id = utopia.3151
+    title = "utopia.3000.name"
+    desc = {
+        text = utopia.3151.v1.desc
+    }
+    desc = {
+        text = utopia.3151.v2.desc
+    }
+    desc = {
+        text = utopia.3151.v3.desc
+    }
+    diplomatic = yes
+    diplomatic_title = BLANK_STRING
+    force_open = yes
+    picture_event_data = {
+        portrait = shroud1
+        room = shroud_room
+    }
+    is_triggered_only = yes
+    immediate = {
+        set_country_flag = shroud_diplomacy_engaged
+        set_country_flag = shroud_fallen_empire
+    }
+    after = {
+        hidden_effect = {
+            remove_country_flag = shroud_diplomacy_engaged
+        }
+    }
+    option = {
+        name = "exit.shroud"
+        give_fe_tech = yes
+        default_hide_option = yes
+    }
+}

@@ -1,0 +1,47 @@
+lrsk_gov_var_gov_private_military_contractor_fam = {
+    ruler_title = LRSK_GOV_VAR_RT_CAPTAIN_DIRECTOR
+    heir_title = HT_FIRST_CAPTAIN
+    heir_title_female = HT_FIRST_CAPTAIN
+    should_force_rename = yes
+    use_regnal_names = yes
+    dynastic_last_names = yes
+    possible = {
+        OR = {
+            AND = {
+                has_valid_civic = civic_corporate_dominion
+                has_valid_civic = civic_citizen_service
+            }
+            AND = {
+                has_authority = auth_corporate_imperial
+                AND = {
+                    has_valid_civic = civic_private_military_companies
+                    has_valid_civic = civic_naval_contractors
+                }
+            }
+        }
+    }
+    election_candidates = {
+        modifier = {
+            add = 1000
+            leader_class = admiral
+            leader_class = general
+        }
+        modifier = {
+            add = 500
+            leader_class = ruler
+        }
+        modifier = {
+            add = 100
+            OR = {
+                leader_class = governor
+            }
+        }
+        modifier = {
+            factor = 0
+            leader_class = scientist
+        }
+    }
+    weight = {
+        base = 1000
+    }
+}

@@ -1,0 +1,126 @@
+@EarlyRepeatableTechCost = 12000
+@EarlyRepeatableTechLevelCost = 6000
+@EarlyRepatableTechFactor = 0.65
+@RepeatableCategoryFactor = 0.25
+@RepeatableDifferntFactor = 0.5
+@EarlyRepeatableWeight = 13
+@EarlyRepeatableTier = 3
+tech_repeatable_collateral_reduction = {
+    area = society
+    cost = @EarlyRepeatableTechCost
+    cost_per_level = @EarlyRepeatableTechLevelCost
+    tier = @EarlyRepeatableTier
+    category = {
+        military_theory
+    }
+    levels = 10
+    prerequisites = {
+        "tech_combat_training"
+    }
+    weight = @EarlyRepeatableWeight
+    weight_modifier = {
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_collateral_reduction
+                value > 0
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_collateral_reduction
+                value > 1
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_collateral_reduction
+                value > 2
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_collateral_reduction
+                value > 3
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_collateral_reduction
+                value > 4
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_collateral_reduction
+                value > 5
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_collateral_reduction
+                value > 6
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_collateral_reduction
+                value > 7
+            }
+        }
+        modifier = {
+            factor = @EarlyRepatableTechFactor
+            check_variable = {
+                which = repeatable_collateral_reduction
+                value > 8
+            }
+        }
+    }
+    potential = {
+        NOT = {
+            is_country_type = fallen_empire
+        }
+        NOT = {
+            has_technology = tech_repeatable_collateral_damage
+        }
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "collateral_reduction"
+            desc = "collateral_damage_desc"
+        }
+    }
+    ai_weight = {
+        factor = 1
+        modifier = {
+            factor = 0
+            OR = {
+                has_ethic = ethic_militarist
+                has_ethic = ethic_fanatic_militarist
+                has_ethic = ethic_xenophobe
+                has_ethic = ethic_fanatic_xenophobe
+            }
+        }
+    }
+    weight_groups = {
+        production
+    }
+    mod_weight_if_group_picked = {
+        ship_repeatable = @RepeatableCategoryFactor
+    }
+    mod_weight_if_group_picked = {
+        production_repeatable = @RepeatableDifferntFactor
+        job_repeatable = @RepeatableDifferntFactor
+    }
+    modifier = {
+        army_collateral_damage_mult = -0.05
+        country_trust_cap_add = 10
+    }
+}

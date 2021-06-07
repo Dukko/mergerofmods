@@ -1,0 +1,62 @@
+@tier3cost3 = 6000
+@tier3weight3 = 50
+tech_eutab_foundation_institute = {
+    cost = @tier3cost3
+    area = physics
+    tier = 3
+    category = {
+        statecraft
+    }
+    prerequisites = {
+        "tech_global_research_initiative"
+    }
+    weight = @tier3weight3
+    is_rare = yes
+    modifier = {
+        num_tech_alternatives_add = 1
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0.75
+            NOT = {
+                research_leader = {
+                    area = physics
+                    has_trait = "leader_trait_expertise_statecraft"
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                AND = {
+                    has_ascension_perk = ap_technological_ascendancy
+                    has_tradition = tr_discovery_finish
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            has_ethic = ethic_materialist
+        }
+        modifier = {
+            factor = 3
+            has_ethic = ethic_fanatic_materialist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+}

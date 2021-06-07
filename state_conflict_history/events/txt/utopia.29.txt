@@ -1,0 +1,108 @@
+namespace = utopia
+country_event = {
+    id = utopia.29
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        is_country_type = default
+        NOR = {
+            has_country_flag = dysonsphere_diplomatic_event
+            is_subject_type = vassal
+        }
+        FROM = {
+            is_megastructure_type = dyson_sphere_0
+        }
+        any_neighbor_country = {
+            is_country_type = default
+            has_communications = root
+            opinion = {
+                who = ROOT
+                value > -100
+            }
+            their_opinion = {
+                who = ROOT
+                value > -100
+            }
+            OR = {
+                has_intel_level = {
+                    who = root
+                    category = economy
+                    level >= 1
+                }
+                has_intel_level = {
+                    who = root
+                    category = technology
+                    level >= 1
+                }
+            }
+            NOR = {
+                has_country_flag = dysonsphere_diplomatic_event
+                is_at_war_with = root
+                is_subject_type = vassal
+                is_overlord_to = root
+                is_same_value = root
+                has_global_flag = dyson_diplo_event_global
+                has_ethic = ethic_gestalt_consciousness
+                has_valid_civic = civic_fanatic_purifiers
+            }
+        }
+    }
+    immediate = {
+        fromfromfrom = {
+            save_event_target_as = dyson_system
+        }
+        save_event_target_as = dysonsphere_builder
+        set_country_flag = dysonsphere_diplomatic_event
+        random_neighbor_country = {
+            limit = {
+                is_country_type = default
+                has_communications = root
+                opinion = {
+                    who = ROOT
+                    value > -100
+                }
+                their_opinion = {
+                    who = ROOT
+                    value > -100
+                }
+                OR = {
+                    has_intel_level = {
+                        who = root
+                        category = economy
+                        level >= 1
+                    }
+                    has_intel_level = {
+                        who = root
+                        category = technology
+                        level >= 1
+                    }
+                }
+                NOR = {
+                    has_country_flag = dysonsphere_diplomatic_event
+                    is_at_war_with = root
+                    is_subject_type = vassal
+                    is_overlord_to = root
+                    is_same_value = root
+                    has_ethic = ethic_gestalt_consciousness
+                    has_valid_civic = civic_fanatic_purifiers
+                }
+            }
+            set_country_flag = dysonsphere_diplomatic_event
+            save_event_target_as = dyson_sphere_neighbor
+        }
+        random_list = {
+            35 = {
+                event_target:dyson_sphere_neighbor = {
+                    country_event = {
+                        id = utopia.30
+                        days = 10
+                        random = 7
+                    }
+                }
+            }
+            65 = {
+            }
+        }
+        set_global_flag = dyson_diplo_event_global
+    }
+}

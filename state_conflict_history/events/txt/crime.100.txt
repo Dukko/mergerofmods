@@ -1,0 +1,36 @@
+namespace = crime
+planet_event = {
+    id = crime.100
+    title = crime.100.name
+    desc = crime.100.desc
+    picture = GFX_evt_dark_alley
+    show_sound = event_criminal_activity
+    location = root
+    pre_triggers = {
+        has_owner = yes
+    }
+    trigger = {
+        has_modifier = criminal_underworld
+        NOT = {
+            has_modifier = gang_wars
+        }
+    }
+    is_triggered_only = yes
+    immediate = {
+        remove_modifier = criminal_underworld
+        add_modifier = {
+            modifier = "gang_wars"
+            days = -1
+        }
+    }
+    option = {
+        name = crime.100.a
+        tooltip = {
+            remove_modifier = criminal_underworld
+            add_modifier = {
+                modifier = "gang_wars"
+                days = -1
+            }
+        }
+    }
+}

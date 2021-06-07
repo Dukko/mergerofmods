@@ -1,0 +1,47 @@
+@tier2cost2 = 2000
+@tier2weight2 = 75
+tech_eutab_psi_arms = {
+    cost = @tier2cost2
+    area = society
+    tier = 2
+    category = {
+        psionics
+    }
+    prerequisites = {
+        "tech_psionic_theory"
+    }
+    weight = @tier2weight2
+    is_rare = yes
+    potential = {
+        has_ethic = ethic_fanatic_xenophobe
+    }
+    gateway = eu_fanatic
+    modifier = {
+        country_society_tech_research_speed = 0.1
+        category_psionics_research_speed_mult = 0.35
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = ap_mind_over_matter
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_psionics"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_psionics"
+            }
+        }
+    }
+}

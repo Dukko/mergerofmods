@@ -1,0 +1,9 @@
+random_list = {
+    name = rl_mem_forested_planets
+    planets = {
+        "pc_continental"
+        "pc_tropical"
+        "pc_ocean"
+        "pc_gaia"
+    }
+}

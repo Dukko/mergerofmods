@@ -1,0 +1,67 @@
+"Diranic Imperial Schemata" = {
+    key = "Diranic Imperial Schemata"
+    ship_prefix = "IDNS"
+    species = {
+        class = "REP"
+        portrait = "rep2"
+        name = "Diran"
+        plural = "Dirans"
+        adjective = "Diranic"
+        species_bio = "The enigmatic Polymaths, purportedly a hyper-intelligent race of Dirans constituting only 0.01% of their population, rule the Schemata from a vast imperial complex on their homeworld Dagama. Under their leadership, Diranic society has never been afraid to press into new fields of discovery regardless of the moral or ethical implications. Experimentation is celebrated and progress is practically worshipped. Nothing is valued more highly in their empire than novel information and bold innovations."
+        name_list = "just-name-lists_humanoid9"
+        trait = "trait_just-more-traits_indelible"
+        trait = "trait_intelligent"
+        trait = "trait_natural_physicists"
+        trait = "trait_just-more-traits_extravagant"
+        trait = "trait_just-more-traits_feeble"
+    }
+    name = "Diranic Imperial Schemata"
+    adjective = "Diranic"
+    authority = "auth_imperial"
+    government = "gov_despotic_hegemony"
+    planet_name = "Dagama"
+    planet_class = "pc_frozen_desert"
+    system_name = "Ghasmul"
+    initializer = ""
+    graphical_culture = "humanoid_01"
+    city_graphical_culture = "reptilian_01"
+    empire_flag = {
+        icon = {
+            category = "just-more-flags"
+            file = "flag_materialist3.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "fabric_circle.dds"
+        }
+        colors = {
+            "yellow"
+            "turquoise"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = female
+        name = "Jet Oron the Polymath"
+        portrait = "rep2"
+        texture = 2
+        hair = 1
+        clothes = 0
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "masseffect2_room"
+    spawn_enabled = yes
+    ethic = "ethic_authoritarian"
+    ethic = "ethic_xenophobe"
+    ethic = "ethic_militarist"
+    ethic = "ethic_fanatic_materialist"
+    civics = {
+        "civic_technocracy"
+        "civic_meritocracy"
+        "civic_efficient_bureaucracy"
+    }
+    origin = "origin_default"
+}

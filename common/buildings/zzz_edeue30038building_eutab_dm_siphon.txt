@@ -1,0 +1,35 @@
+building_eutab_dm_siphon = {
+    base_buildtime = @b3_time
+    category = resource
+    potential = {
+        AND = {
+            owner = {
+                is_machine_empire = yes
+            }
+            is_planet_class = pc_machine
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b2_minerals
+            alloys = 500
+        }
+        upkeep = {
+            energy = @b4_upkeep
+            alloys = 5
+        }
+    }
+    planet_modifier = {
+        job_eutab_siphon_add = 3
+    }
+    triggered_desc = {
+        text = job_eutab_siphon_effect_desc
+    }
+    prerequisites = {
+        "tech_eutab_m_command_control"
+    }
+    ai_weight = {
+        weight = 10
+    }
+}

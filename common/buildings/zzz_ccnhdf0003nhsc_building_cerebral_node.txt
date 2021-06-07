@@ -1,0 +1,165 @@
+nhsc_building_cerebral_node = {
+    base_buildtime = 360
+    base_cap_amount = 1
+    icon = nhsc_building_culture_nexus
+    category = unity
+    potential = {
+        NOT = {
+            has_modifier = slave_colony
+        }
+        NOT = {
+            has_global_flag = ESC_cult_nexus_forbidden
+        }
+        exists = owner
+        owner = {
+            is_hive_empire = yes
+        }
+    }
+    allow = {
+        has_major_upgraded_capital = yes
+        exists = owner
+        owner = {
+            NOT = {
+                any_owned_planet = {
+                    has_building = nhsc_building_cerebral_node
+                }
+            }
+            NOT = {
+                has_country_flag = nhsc_culture_nexus_queued
+            }
+        }
+    }
+    convert_to = {
+        nhsc_building_culture_nexus
+        nhsc_building_network_regulator
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            trigger = {
+                owner = {
+                    is_ai = yes
+                }
+            }
+            minerals = 1000
+        }
+        cost = {
+            trigger = {
+                owner = {
+                    is_ai = no
+                }
+            }
+            minerals = 600
+            influence = 15
+            rare_crystals = 25
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    is_ai = yes
+                }
+            }
+            energy = 10
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    is_ai = no
+                }
+            }
+            energy = 10
+            rare_crystals = 1
+        }
+        produces = {
+            influence = 0.5
+        }
+    }
+    country_modifier = {
+        leader_skill_levels = 1
+        pop_environment_tolerance = 0.05
+        country_society_tech_research_speed = 0.05
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                country_uses_chronicle_drones_nhsc = no
+            }
+        }
+        job_esc_mind_walker_add = 5
+        job_maintenance_drone_add = 2
+        planet_amenities_no_happiness_add = 10
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                country_uses_chronicle_drones_nhsc = no
+            }
+        }
+        text = job_esc_mind_walker_effect_desc
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                country_uses_chronicle_drones_nhsc = yes
+            }
+        }
+        job_chronicle_drone_add = 5
+        job_maintenance_drone_add = 2
+        planet_amenities_no_happiness_add = 10
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                country_uses_chronicle_drones_nhsc = yes
+            }
+        }
+        text = job_chronicle_drone_effect_desc
+    }
+    show_tech_unlock_if = {
+        owner = {
+            is_hive_empire = yes
+        }
+        NOT = {
+            has_global_flag = ESC_cult_nexus_forbidden
+        }
+    }
+    on_queued = {
+        owner = {
+            set_country_flag = nhsc_culture_nexus_queued
+        }
+    }
+    on_unqueued = {
+        owner = {
+            remove_country_flag = nhsc_culture_nexus_queued
+        }
+    }
+    on_built = {
+        owner = {
+            remove_country_flag = nhsc_culture_nexus_queued
+        }
+    }
+    prerequisites = {
+        "nhsc_tech_culture_nexus"
+    }
+    ai_weight = {
+        weight = 0.001
+        modifier = {
+            weight = 75000
+            owner = {
+                NOT = {
+                    any_owned_planet = {
+                        OR = {
+                            has_building = nhsc_building_culture_nexus
+                            has_building = nhsc_building_cerebral_node
+                            has_building = nhsc_building_network_regulator
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+tech_gpm_precursor_city_discovery = {
+    area = engineering
+    cost = @tier2cost1
+    category = {
+        materials
+    }
+    tier = 2
+    is_rare = yes
+    ai_update_type = all
+    weight = 1
+    modifier = {
+        planet_buildings_minerals_cost_add = -50
+    }
+    weight_modifier = {
+        factor = 0
+    }
+}

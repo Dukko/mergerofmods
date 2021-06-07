@@ -1,0 +1,17 @@
+tech_gpm_precursor_communication_hub_discovery_2 = {
+    area = society
+    cost = @tier2cost1
+    category = {
+        new_worlds
+    }
+    tier = 2
+    is_rare = yes
+    ai_update_type = all
+    weight = 1
+    modifier = {
+        country_war_exhaustion_mult = -0.1
+    }
+    weight_modifier = {
+        factor = 0
+    }
+}

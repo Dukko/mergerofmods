@@ -1,0 +1,29 @@
+tech_repeatable_abjuration = {
+    area = physics
+    cost = 2000
+    cost_per_level = 500
+    tier = 1
+    category = {
+        voidcraft
+    }
+    levels = -1
+    weight = 70
+    potential = {
+        OR = {
+            has_country_flag = kaldoreiempire
+            has_government = gov_bloodelf_regency
+            has_government = gov_highelf_regency
+        }
+    }
+    modifier = {
+        ship_shield_add = 100
+        ship_armor_add = 100
+    }
+    ai_weight = {
+        factor = 1
+    }
+    weight_groups = {
+    }
+    mod_weight_if_group_picked = {
+    }
+}

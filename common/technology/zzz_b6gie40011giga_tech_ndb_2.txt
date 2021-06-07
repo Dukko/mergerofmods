@@ -1,0 +1,68 @@
+giga_tech_ndb_2 = {
+    cost = 70000
+    area = physics
+    tier = 5
+    category = {
+        particles
+    }
+    is_rare = yes
+    prerequisites = {
+        "giga_tech_ndb_1"
+    }
+    weight = @gigatier7weight1
+    prereqfor_desc = {
+        hide_prereq_for_desc = ship
+        hide_prereq_for_desc = component
+        hide_prereq_for_desc = feature
+        hide_prereq_for_desc = resource
+        custom = {
+            title = "header_02_tetra"
+            desc = "header_02_tetra_desc"
+        }
+        custom = {
+            title = "allow_ndb_p2"
+            desc = "desc_ndb_p2"
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+        modifier = {
+            factor = 0
+            has_utopia = no
+        }
+        modifier = {
+            factor = 1.5
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = 2
+            has_federation = yes
+            federation = {
+                has_federation_perk = rare_tech_boost
+                any_member = {
+                    has_technology = giga_tech_ndb_2
+                }
+            }
+        }
+    }
+    ai_weight = {
+        factor = @giga_aiweight_multiplier
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+        modifier = {
+            factor = 0
+            has_utopia = no
+        }
+    }
+}

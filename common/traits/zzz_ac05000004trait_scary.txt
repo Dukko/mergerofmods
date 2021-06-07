@@ -1,0 +1,12 @@
+trait_scary = {
+    cost = -1
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    modification = no
+    icon = "gfx/interface/icons/traits/trait_scary.dds"
+    custom_tooltip = TRAIT_SCARY_EFFECT
+    modifier = {
+        army_morale_damage_mult = 0.1
+    }
+}

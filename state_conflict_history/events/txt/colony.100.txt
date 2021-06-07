@@ -1,0 +1,378 @@
+namespace = colony
+namespace = gpm_colony
+planet_event = {
+    id = colony.100
+    title = "colony.100.name"
+    desc = "colony.100.desc"
+    picture = GFX_evt_underground_civilization
+    show_sound = event_mystic_reveal
+    location = ROOT
+    trackable = yes
+    pre_triggers = {
+        has_owner = yes
+        is_homeworld = no
+        original_owner = yes
+        has_ground_combat = no
+        is_capital = no
+        is_occupied_flag = no
+    }
+    trigger = {
+        num_pops > 0
+        owner = {
+            is_ai = no
+        }
+        habitable_planet = yes
+        uses_district_set = standard
+        NOR = {
+            has_planet_flag = abandoned_terraforming_planet
+            has_planet_flag = colony_event
+            is_planet_class = pc_nuked
+            is_planet_class = pc_gaia
+            is_planet_class = pc_ringworld_habitable
+            is_planet_class = pc_habitat
+            is_planet_class = pc_city
+            is_planet_class = pc_pdshroud
+            is_planet_class = pc_relic
+            is_planet_class = pc_milarc_relic
+            is_planet_class = pc_floating
+            is_planet_class = pc_crystal
+            is_planet_class = pc_graveyard
+            is_planet_class = pc_tidallylocked
+            is_planet_class = pc_supercon
+            is_planet_class = pc_ammonia
+            is_planet_class = pc_sulfur
+            is_planet_class = pc_acid
+            is_planet_class = pc_methane
+            is_planet_class = pc_ash
+            is_planet_class = pc_technoorganic
+            is_planet_class = pc_archive
+            is_planet_class = pc_superhabitable
+            is_planet_class = pc_geothermal
+            is_planet_class = pc_biolumen
+            is_planet_class = pc_ecocity
+            is_planet_class = pc_corpoarc
+            is_planet_class = pc_palacearc
+            is_planet_class = pc_capitalarc
+            is_planet_class = pc_necropolis
+            is_planet_class = pc_machine_necropolis
+            is_planet_class = pc_necrohive
+            is_planet_class = pc_irradiated
+            is_planet_class = pc_karst
+            is_planet_class = pc_primal
+            is_planet_class = pc_aquatic
+            is_planet_class = pc_salt
+            is_planet_class = pc_aquifer
+            is_planet_class = pc_coral
+            is_planet_class = pc_storm
+            is_planet_class = pc_rogue
+            is_planet_class = pc_lichen
+            is_planet_class = pc_eyeball
+            is_planet_class = pc_glacio
+            is_planet_class = pc_lanthanide
+            is_planet_class = pc_megaflora
+            is_planet_class = pc_megaflorahive
+            is_planet_class = pc_megafloratol
+            is_planet_class = pc_bioforge
+            is_planet_class = pc_biofort
+            is_planet_class = pc_biocapital
+            is_planet_class = pc_machine_factory
+            is_planet_class = pc_machine_capital
+            is_planet_class = pc_machine_fort
+            is_planet_class = pc_pd_barren_cold_hab
+            is_planet_class = pc_pd_barren_hab
+            is_planet_class = pc_pd_frozen_hab
+            is_planet_class = pc_pd_gas_giant_hab
+            is_planet_class = pc_pd_hothouse_hab
+            is_planet_class = pc_pd_molten_hab
+            is_planet_class = pc_pd_toxic_hab
+            is_planet_class = pc_pd_asteroid_hab
+            is_planet_class = pc_pdshroud
+            owner = {
+                has_country_flag = abandoned_terraforming_country
+            }
+            owner = {
+                has_authority = auth_machine_intelligence
+            }
+            is_planet_class = pc_gd_hydrocarbon_hab
+            is_planet_class = pc_alderson_slice_gaia
+            is_planet_class = pc_alderson_slice_ecu
+            is_planet_class = pc_alderson_slice_pc
+            is_planet_class = pc_ringworld_city
+            is_planet_class = pc_ringworld_machine
+            is_planet_class = pc_ringworld_hive
+            is_planet_class = pc_squareworld_habitable
+            is_planet_class = pc_birch
+            is_planet_class = pc_equatorial_shipyard
+            is_planet_class = pc_giga_penrose_habitable
+            is_planet_class = pc_gigaorbital_ring
+            is_planet_class = pc_interstellar_habitat
+            is_planet_class = pc_interstellar_ringworld_habitable
+            is_planet_class = pc_flat_world
+            is_planet_class = pc_giga_planetary_computer
+            is_planet_class = pc_habitable_gas_giant
+            is_planet_class = pc_virtual_reality
+            is_planet_class = pc_virtual_industry
+            is_planet_class = pc_virtual_stellar_industry
+            is_planet_class = pc_katzenland
+            AND = {
+                owner = {
+                    ideal_planet_class = pc_arid
+                }
+                is_planet_class = pc_arid
+            }
+            AND = {
+                owner = {
+                    ideal_planet_class = pc_desert
+                }
+                is_planet_class = pc_desert
+            }
+            AND = {
+                owner = {
+                    ideal_planet_class = pc_tropical
+                }
+                is_planet_class = pc_tropical
+            }
+            AND = {
+                owner = {
+                    ideal_planet_class = pc_continental
+                }
+                is_planet_class = pc_continental
+            }
+            AND = {
+                owner = {
+                    ideal_planet_class = pc_ocean
+                }
+                is_planet_class = pc_ocean
+            }
+            AND = {
+                owner = {
+                    ideal_planet_class = pc_tundra
+                }
+                is_planet_class = pc_tundra
+            }
+            AND = {
+                owner = {
+                    ideal_planet_class = pc_arctic
+                }
+                is_planet_class = pc_arctic
+            }
+            AND = {
+                owner = {
+                    ideal_planet_class = pc_alpine
+                }
+                is_planet_class = pc_alpine
+            }
+            AND = {
+                owner = {
+                    ideal_planet_class = pc_savannah
+                }
+                is_planet_class = pc_savannah
+            }
+            AND = {
+                owner = {
+                    ideal_planet_class = pc_mangrove
+                }
+                is_planet_class = pc_mangrove
+            }
+            AND = {
+                owner = {
+                    ideal_planet_class = pc_wetswamp
+                }
+                is_planet_class = pc_wetswamp
+            }
+            AND = {
+                owner = {
+                    ideal_planet_class = pc_desertislands
+                }
+                is_planet_class = pc_desertislands
+            }
+            AND = {
+                owner = {
+                    ideal_planet_class = pc_hajungle
+                }
+                is_planet_class = pc_hajungle
+            }
+            AND = {
+                owner = {
+                    ideal_planet_class = pc_cenote
+                }
+                is_planet_class = pc_cenote
+            }
+            AND = {
+                owner = {
+                    ideal_planet_class = pc_cascadian
+                }
+                is_planet_class = pc_cascadian
+            }
+            AND = {
+                owner = {
+                    ideal_planet_class = pc_swamp
+                }
+                is_planet_class = pc_swamp
+            }
+            AND = {
+                owner = {
+                    ideal_planet_class = pc_mud
+                }
+                is_planet_class = pc_mud
+            }
+            AND = {
+                owner = {
+                    ideal_planet_class = pc_subarctic
+                }
+                is_planet_class = pc_subarctic
+            }
+            AND = {
+                owner = {
+                    ideal_planet_class = pc_glacial
+                }
+                is_planet_class = pc_glacial
+            }
+            AND = {
+                owner = {
+                    ideal_planet_class = pc_sandsea
+                }
+                is_planet_class = pc_sandsea
+            }
+            AND = {
+                owner = {
+                    ideal_planet_class = pc_mesa
+                }
+                is_planet_class = pc_mesa
+            }
+            AND = {
+                owner = {
+                    ideal_planet_class = pc_badlands
+                }
+                is_planet_class = pc_badlands
+            }
+            AND = {
+                owner = {
+                    ideal_planet_class = pc_outback
+                }
+                is_planet_class = pc_outback
+            }
+            AND = {
+                owner = {
+                    ideal_planet_class = pc_oasis
+                }
+                is_planet_class = pc_oasis
+            }
+            AND = {
+                owner = {
+                    ideal_planet_class = pc_hadesert
+                }
+                is_planet_class = pc_hadesert
+            }
+            AND = {
+                owner = {
+                    ideal_planet_class = pc_steppe
+                }
+                is_planet_class = pc_steppe
+            }
+            AND = {
+                owner = {
+                    ideal_planet_class = pc_frozen_desert
+                }
+                is_planet_class = pc_frozen_desert
+            }
+            AND = {
+                owner = {
+                    ideal_planet_class = pc_boreal
+                }
+                is_planet_class = pc_boreal
+            }
+            AND = {
+                owner = {
+                    ideal_planet_class = pc_mushroom
+                }
+                is_planet_class = pc_mushroom
+            }
+            AND = {
+                owner = {
+                    ideal_planet_class = pc_antarctic
+                }
+                is_planet_class = pc_antarctic
+            }
+            AND = {
+                owner = {
+                    ideal_planet_class = pc_aeolian
+                }
+                is_planet_class = pc_aeolian
+            }
+            AND = {
+                owner = {
+                    ideal_planet_class = pc_snow
+                }
+                is_planet_class = pc_snow
+            }
+            AND = {
+                owner = {
+                    ideal_planet_class = pc_highland
+                }
+                is_planet_class = pc_highland
+            }
+            AND = {
+                owner = {
+                    ideal_planet_class = pc_duneforest
+                }
+                is_planet_class = pc_duneforest
+            }
+            AND = {
+                owner = {
+                    ideal_planet_class = pc_retinal
+                }
+                is_planet_class = pc_retinal
+            }
+            AND = {
+                owner = {
+                    ideal_planet_class = pc_forest
+                }
+                is_planet_class = pc_forest
+            }
+            AND = {
+                owner = {
+                    ideal_planet_class = pc_lake
+                }
+                is_planet_class = pc_lake
+            }
+            AND = {
+                owner = {
+                    ideal_planet_class = pc_tepid
+                }
+                is_planet_class = pc_tepid
+            }
+        }
+    }
+    is_triggered_only = yes
+    immediate = {
+        set_planet_flag = abandoned_terraforming_planet
+        set_planet_flag = colony_event
+        owner = {
+            set_country_flag = abandoned_terraforming_country
+        }
+    }
+    option = {
+        name = colony.100.a
+        hidden_effect = {
+            add_modifier = {
+                modifier = "abandoned_terraforming"
+                days = -1
+            }
+        }
+        begin_event_chain = {
+            event_chain = "abandoned_terraforming_chain"
+            target = ROOT
+        }
+        enable_special_project = {
+            name = "ABANDONED_TERRAFORMING_1_PROJECT"
+            location = this
+            owner = root
+        }
+        enable_special_project = {
+            name = "ABANDONED_TERRAFORMING_2_PROJECT"
+            location = this
+            owner = root
+        }
+    }
+}

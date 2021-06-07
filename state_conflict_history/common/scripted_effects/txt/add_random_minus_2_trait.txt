@@ -1,0 +1,161 @@
+namespace = rapid_evolution
+add_random_minus_2_trait = {
+    random_list = {
+        10 = {
+            modify_species = {
+                species = this
+                add_trait = trait_repugnant
+            }
+            modifier = {
+                factor = 0
+                OR = {
+                    has_trait = trait_repugnant
+                    has_trait = trait_charismatic
+                }
+            }
+        }
+        10 = {
+            modify_species = {
+                species = this
+                add_trait = trait_nonadaptive
+            }
+            modifier = {
+                factor = 0
+                OR = {
+                    has_trait = trait_nonadaptive
+                    has_trait = trait_adaptive
+                    has_trait = trait_extremely_adaptive
+                }
+            }
+        }
+        10 = {
+            modify_species = {
+                species = this
+                add_trait = trait_slow_breeders
+            }
+            modifier = {
+                factor = 0
+                OR = {
+                    has_trait = trait_slow_breeders
+                    has_trait = trait_rapid_breeders
+                    has_trait = trait_lithoid
+                    has_trait = trait_very_rapid_breeders
+                    has_trait = trait_very_slow_breeders
+                }
+            }
+        }
+        10 = {
+            modify_species = {
+                species = this
+                add_trait = trait_unruly
+            }
+            modifier = {
+                factor = 0
+                OR = {
+                    has_trait = trait_unruly
+                    has_trait = trait_docile
+                }
+            }
+        }
+        10 = {
+            modify_species = {
+                species = this
+                add_trait = trait_fast_metabolism
+            }
+            modifier = {
+                factor = 0
+                OR = {
+                    has_trait = "trait_slow_metabolism"
+                    has_trait = "trait_fast_metabolism"
+                    has_trait = "trait_very_fast_metabolism"
+                    has_trait = "trait_very_slow_metabolism"
+                    has_trait = "trait_enduring"
+                    has_trait = "trait_venerable"
+                    has_trait = "trait_big"
+                    has_trait = "trait_huge"
+                    has_trait = "trait_lithoid"
+                }
+            }
+        }
+        10 = {
+            modify_species = {
+                species = this
+                add_trait = trait_spendthrifts
+            }
+            modifier = {
+                factor = 0
+                OR = {
+                    has_trait = trait_spendthrifts
+                    has_trait = trait_thrifty
+                    has_trait = trait_hive_mind
+                }
+            }
+        }
+        10 = {
+            modify_species = {
+                species = this
+                add_trait = trait_carnivore
+            }
+            modifier = {
+                factor = 0
+                OR = {
+                    has_trait = trait_carnivore
+                    has_trait = trait_grazer
+                    has_trait = trait_pioneer_flora
+                    has_trait = trait_lithoid
+                }
+            }
+        }
+        10 = {
+            modify_species = {
+                species = this
+                add_trait = trait_slow
+            }
+            modifier = {
+                factor = 0
+                OR = {
+                    has_trait = trait_slow
+                    has_trait = trait_swift
+                    has_trait = trait_sessile
+                }
+            }
+        }
+        10 = {
+            modify_species = {
+                species = this
+                add_trait = trait_rooted_adults
+            }
+            modifier = {
+                factor = 0
+                OR = {
+                    has_trait = "trait_rooted_adults"
+                    has_trait = "trait_rooted_adults_rooted"
+                    has_trait = "trait_nomadic"
+                    has_trait = "trait_sedentary"
+                    has_trait = "trait_potential_living_architecture"
+                    has_trait = "trait_living_architecture"
+                }
+            }
+        }
+        10 = {
+            modify_species = {
+                species = this
+                add_trait = trait_sapient_form
+            }
+            modifier = {
+                factor = 0
+                OR = {
+                    has_trait = "trait_sapient_form"
+                    has_trait = "trait_subsapient_form"
+                    has_trait = "trait_multihive"
+                    has_trait = "trait_multihive_drone"
+                    has_trait = "trait_multihive_core"
+                    has_trait = "trait_hive_mind"
+                    has_trait = "trait_nerve_stapled"
+                    has_trait = "trait_syncretic_proles"
+                    has_trait = "trait_presapient_proles"
+                }
+            }
+        }
+    }
+}

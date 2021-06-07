@@ -1,0 +1,35 @@
+namespace = crime
+planet_event = {
+    id = crime.202
+    title = crime.202.name
+    desc = crime.202.desc
+    picture = GFX_evt_derelict_interior
+    show_sound = event_ground_battle
+    location = root
+    pre_triggers = {
+        has_owner = yes
+    }
+    trigger = {
+        has_modifier = center_of_drug_trade
+    }
+    is_triggered_only = yes
+    immediate = {
+        add_modifier = {
+            modifier = "cartel_war"
+            days = 3600
+        }
+        set_timed_planet_flag = {
+            flag = planet_crime_flag
+            days = 3600
+        }
+    }
+    option = {
+        name = crime.203.a
+        tooltip = {
+            add_modifier = {
+                modifier = "cartel_war"
+                days = 3600
+            }
+        }
+    }
+}

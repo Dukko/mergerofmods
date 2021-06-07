@@ -1,0 +1,267 @@
+namespace = civic
+country_event = {
+    id = civic.2
+    title = "civic.2.name"
+    desc = "civic.2.desc"
+    picture = GFX_evt_signing
+    is_triggered_only = yes
+    immediate = {
+    }
+    option = {
+        name = "civic.2.a"
+        random_country = {
+            limit = {
+                has_country_flag = peacekeeper_victim
+            }
+            shift_ethic = ethic_fanatic_pacifist
+            shift_ethic = ethic_xenophile
+            hidden_effect = {
+                remove_country_flag = peacekeeper_victim
+            }
+        }
+    }
+    option = {
+        name = "civic.2.b"
+        random_country = {
+            limit = {
+                has_country_flag = peacekeeper_victim
+            }
+            if = {
+                limit = {
+                    NOR = {
+                        has_ethic = ethic_militarist
+                        has_ethic = ethic_fanatic_militarist
+                    }
+                }
+                shift_ethic = ethic_militarist
+            }
+            change_government = {
+                civics = {
+                    civic = civic_peacekeepers_cep
+                    civic = civic_military_academies
+                }
+            }
+            hidden_effect = {
+                remove_country_flag = peacekeeper_victim
+            }
+        }
+        random_list = {
+            10 = {
+                modifier = {
+                    factor = 8
+                    mid_game_years_passed >= 1
+                }
+                add_resource = {
+                    energy = -5000
+                }
+            }
+            10 = {
+                modifier = {
+                    factor = 5
+                    mid_game_years_passed >= 1
+                }
+                add_resource = {
+                    energy = -3000
+                }
+            }
+            40 = {
+                modifier = {
+                    factor = 3
+                    mid_game_years_passed >= 1
+                }
+                add_resource = {
+                    energy = -2000
+                }
+            }
+            20 = {
+                modifier = {
+                    factor = 0.5
+                    mid_game_years_passed >= 1
+                }
+                add_resource = {
+                    energy = -1000
+                }
+            }
+            5 = {
+                modifier = {
+                    factor = 0
+                    mid_game_years_passed >= 1
+                }
+                add_resource = {
+                    energy = -500
+                }
+            }
+        }
+        random_list = {
+            10 = {
+                modifier = {
+                    factor = 3
+                    mid_game_years_passed >= 1
+                }
+                add_resource = {
+                    energy = -7500
+                }
+            }
+            30 = {
+                modifier = {
+                    factor = 5
+                    mid_game_years_passed >= 1
+                }
+                add_resource = {
+                    minerals = -5000
+                }
+            }
+            50 = {
+                modifier = {
+                    factor = 4
+                    mid_game_years_passed >= 1
+                }
+                add_resource = {
+                    minerals = -4000
+                }
+            }
+            20 = {
+                modifier = {
+                    factor = 0.5
+                    mid_game_years_passed >= 1
+                }
+                add_resource = {
+                    minerals = -3000
+                }
+            }
+            5 = {
+                modifier = {
+                    factor = 0
+                    mid_game_years_passed >= 1
+                }
+                add_resource = {
+                    minerals = -1500
+                }
+            }
+        }
+        add_resource = {
+            influence = -100
+        }
+    }
+    option = {
+        name = "civic.2.c"
+        random_country = {
+            limit = {
+                has_country_flag = peacekeeper_victim
+            }
+            if = {
+                limit = {
+                    OR = {
+                        has_ethic = ethic_xenophobe
+                        has_ethic = ethic_fanatic_xenophobe
+                    }
+                }
+                shift_ethic = ethic_xenophile
+            }
+            join_alliance = {
+                who = root
+                override_requirements = yes
+            }
+            hidden_effect = {
+                remove_country_flag = peacekeeper_victim
+            }
+        }
+        random_list = {
+            10 = {
+                modifier = {
+                    factor = 8
+                    mid_game_years_passed >= 1
+                }
+                add_resource = {
+                    energy = -7500
+                }
+            }
+            10 = {
+                modifier = {
+                    factor = 5
+                    mid_game_years_passed >= 1
+                }
+                add_resource = {
+                    energy = -5000
+                }
+            }
+            40 = {
+                modifier = {
+                    factor = 3
+                    mid_game_years_passed >= 1
+                }
+                add_resource = {
+                    energy = -3000
+                }
+            }
+            20 = {
+                modifier = {
+                    factor = 0.5
+                    mid_game_years_passed >= 1
+                }
+                add_resource = {
+                    energy = -2000
+                }
+            }
+            5 = {
+                modifier = {
+                    factor = 0
+                    mid_game_years_passed >= 1
+                }
+                add_resource = {
+                    energy = -1000
+                }
+            }
+        }
+        random_list = {
+            10 = {
+                modifier = {
+                    factor = 3
+                    mid_game_years_passed >= 1
+                }
+                add_resource = {
+                    energy = -8000
+                }
+            }
+            30 = {
+                modifier = {
+                    factor = 5
+                    mid_game_years_passed >= 1
+                }
+                add_resource = {
+                    minerals = -7000
+                }
+            }
+            50 = {
+                modifier = {
+                    factor = 4
+                    mid_game_years_passed >= 1
+                }
+                add_resource = {
+                    minerals = -5500
+                }
+            }
+            20 = {
+                modifier = {
+                    factor = 0.5
+                    mid_game_years_passed >= 1
+                }
+                add_resource = {
+                    minerals = -3000
+                }
+            }
+            5 = {
+                modifier = {
+                    factor = 0
+                    mid_game_years_passed >= 1
+                }
+                add_resource = {
+                    minerals = -2000
+                }
+            }
+        }
+        add_resource = {
+            influence = -200
+        }
+    }
+}

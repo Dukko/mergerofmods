@@ -1,0 +1,28 @@
+gov_peoples_republic = {
+    ruler_title = RT_CHAIRMAN
+    ruler_title_female = RT_CHAIRWOMAN
+    election_candidates = {
+    }
+    should_force_rename = yes
+    possible = {
+        NOR = {
+            has_ethic = ethic_capitalism
+            has_ethic = ethic_fanatic_capitalism
+        }
+        OR = {
+            has_authority = auth_dictatorial
+            has_authority = auth_democratic_dictatorship
+        }
+    }
+    weight = {
+        base = 200
+        modifier = {
+            factor = 5
+            has_valid_civic = civic_political_pluralism
+        }
+        modifier = {
+            factor = 5
+            has_valid_civic = civic_socialistic
+        }
+    }
+}

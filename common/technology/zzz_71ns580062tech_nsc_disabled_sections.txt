@@ -1,0 +1,16 @@
+tech_nsc_disabled_sections = {
+    area = society
+    cost = 0
+    tier = 0
+    category = {
+        materials
+    }
+    ai_update_type = all
+    weight = 0
+    ai_weight = {
+        factor = 0
+    }
+    potential = {
+        always = no
+    }
+}

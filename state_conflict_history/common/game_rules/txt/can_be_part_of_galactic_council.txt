@@ -1,0 +1,12 @@
+can_be_part_of_galactic_council = {
+    OR = {
+        is_country_type = default
+        is_country_type = default_ev
+    }
+    NOR = {
+        has_civic = civic_fanatic_purifiers
+        has_civic = civic_hive_devouring_swarm
+        has_civic = civic_machine_terminator
+        has_country_flag = dark_side
+    }
+}

@@ -1,0 +1,21 @@
+trait_gpm_mega_adaptive = {
+    cost = 0
+    initial = no
+    randomized = no
+    modification = no
+    opposites = {
+        "trait_nonadaptive"
+        "trait_adaptive"
+        "trait_extremely_adaptive"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+        LITHOID
+    }
+    modifier = {
+        pop_environment_tolerance = 0.1
+        planet_jobs_minerals_produces_mult = 0.2
+        planet_jobs_food_produces_mult = 0.2
+    }
+}

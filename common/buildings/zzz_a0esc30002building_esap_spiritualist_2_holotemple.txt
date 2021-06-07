@@ -1,0 +1,69 @@
+building_esap_spiritualist_2_holotemple = {
+    base_buildtime = 360
+    can_build = no
+    category = unity
+    potential = {
+        exists = owner
+        always = no
+        owner = {
+            is_spiritualist = yes
+            has_ascension_perk = ap_esap_spiritualist_2
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+    }
+    allow = {
+        has_upgraded_capital = yes
+        buildings_upgrade_allow = yes
+    }
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            owner = {
+                is_spiritualist = no
+            }
+            has_modifier = slave_colony
+        }
+    }
+    convert_to = {
+        building_network_junction
+        building_hive_cluster
+        building_heritage_site
+        building_corporate_site
+    }
+    planet_modifier = {
+        job_priest_add = 4
+        pop_ethic_spiritualist_attraction_mult = 0.1
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 400
+        }
+        upkeep = {
+            energy = 2
+        }
+    }
+    upgrades = {
+        building_esap_spiritualist_2_sacred_nexus
+    }
+    prerequisites = {
+        "tech_holographic_rituals"
+    }
+    triggered_desc = {
+        text = job_priest_effect_desc
+    }
+    ai_weight = {
+        weight = 1
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = consumer_goods
+                    value < 8
+                }
+            }
+        }
+    }
+}

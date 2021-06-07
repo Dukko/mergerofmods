@@ -1,0 +1,57 @@
+building_corporate_entertainment_facilities = {
+    base_buildtime = @b2_time
+    base_cap_amount = 1
+    branch_office_building = yes
+    potential = {
+        has_branch_office = yes
+        branch_office_owner = {
+            has_valid_civic = civic_entertainment_facilities
+        }
+    }
+    destroy_trigger = {
+        has_branch_office = yes
+        NOT = {
+            branch_office_owner = {
+                has_valid_civic = civic_entertainment_facilities
+            }
+        }
+    }
+    planet_modifier = {
+        job_clerk_add = 1
+        job_entertainer_add = 1
+        branch_office_value_mult = 0.25
+    }
+    resources = {
+        category = planet_branch_office_buildings
+        cost = {
+            minerals = @b3_minerals
+        }
+        upkeep = {
+            energy = 3
+        }
+        produces = {
+            unity = 2
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = job_clerk_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = job_entertainer_effect_desc
+    }
+    ai_weight = {
+        weight = 10
+    }
+}

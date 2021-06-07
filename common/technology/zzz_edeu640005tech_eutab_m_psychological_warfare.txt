@@ -1,0 +1,35 @@
+@tier2cost3 = 2000
+@tier2weight3 = 70
+tech_eutab_m_psychological_warfare = {
+    cost = @tier2cost3
+    area = society
+    tier = 2
+    category = {
+        military_theory
+    }
+    prerequisites = {
+        "tech_adaptive_combat_algorithms"
+    }
+    weight = @tier2weight3
+    potential = {
+        has_authority = auth_machine_intelligence
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+trait_just-more-traits_gardeners = {
+    cost = 1
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_agrarian"
+        "trait_just-more-traits_inattentive"
+        "trait_just-more-traits_huntergatherers"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    modifier = {
+        planet_jobs_food_produces_mult = 0.075
+    }
+}

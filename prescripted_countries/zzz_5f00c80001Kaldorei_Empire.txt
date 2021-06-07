@@ -1,0 +1,84 @@
+"Kaldorei Empire" = {
+    key = "Kaldorei Empire"
+    ship_prefix = ""
+    species = {
+        class = "Highborne"
+        portrait = "highborne"
+        name = "Quel'dorei"
+        plural = "Quel'dorei"
+        adjective = "Kalassian"
+        species_bio = "The Kaldorei Empire was an ancient night elf civilization spanning most of the continent of old Kalimdor, from Lathar'Lazal in the far west to the halls of Uldaman in the east. During a golden age which lasted for millennia, the empire was ruled by the beautiful and intelligent Queen Azshara, one of the most remarkable and powerful rulers ever to hold sway in Azeroth, and in whose honor the kaldorei capital city of Zin-Azshari (meaning \"
+        The
+        Glory
+        of
+        Azshara\") was named. Incidentally, kaldorei society was highly class-based, with the Highborne ruling from the very top of the social ladder."
+        name_list = "HIGBORNE"
+        trait = "trait_highborne"
+        trait = "trait_tw_arcane_mastery"
+        trait = "trait_tw_arrogant"
+        trait = "trait_highborne_decadence"
+    }
+    secondary_species = {
+        class = "Highborne"
+        portrait = "kaldorei"
+        name = "Kaldorei"
+        plural = "Kaldorei"
+        adjective = "Darnassian"
+        name_list = "ART1"
+        trait = "trait_kaldorei_tw"
+        trait = "trait_kaldorei_bad"
+    }
+    name = "Kaldorei Empire"
+    adjective = "Highborne"
+    authority = "auth_imperial"
+    government = "gov_kaldorei_empire"
+    advisor_voice_type = "l_xenophobe"
+    planet_name = "Zin'Azshari"
+    planet_class = "pc_continental"
+    system_name = "Zin'Azshari"
+    initializer = "highborne_start_1ee"
+    graphical_culture = "highborne"
+    city_graphical_culture = "highborne"
+    empire_flag = {
+        icon = {
+            category = "elf"
+            file = "highborne.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "horizontal.dds"
+        }
+        colors = {
+            "purple"
+            "purple"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = female
+        name = "Azshara"
+        portrait = "highborne_female_02"
+        texture = 0
+        hair = 32
+        clothes = 28
+        ruler_title = "King"
+        heir_title = "First Arcanist"
+        heir_title_female = "Princess"
+        trait = "trait_ruler_deep_connections"
+        trait = "trait_ruler_eye_for_talent"
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = yes
+    room = "highborne_room"
+    spawn_enabled = no
+    ethic = "ethic_authoritarian"
+    ethic = "ethic_militarist"
+    ethic = "ethic_spiritualist"
+    civics = {
+        "civic_kaldorei_castes"
+        "civic_arcane_precursor"
+    }
+    origin = "origin_kaldorei"
+}

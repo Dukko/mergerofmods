@@ -1,0 +1,24 @@
+nhsc_building_crystalline_manufacture = {
+    base_buildtime = 480
+    can_build = no
+    can_demolish = yes
+    icon = nhsc_building_crystalline_manufacture
+    potential = {
+    }
+    planet_modifier = {
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 1000
+        }
+        produces = {
+            consumer_goods = 50
+            esc_living_crystal = 20
+        }
+        upkeep = {
+            minerals = 25
+            energy = 10
+        }
+    }
+}

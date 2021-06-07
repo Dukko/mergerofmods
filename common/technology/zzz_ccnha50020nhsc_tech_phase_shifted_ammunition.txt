@@ -1,0 +1,63 @@
+nhsc_tech_phase_shifted_ammunition = {
+    area = physics
+    category = {
+        field_manipulation
+    }
+    tier = 6
+    cost = @techTier6cost3
+    weight = @techTier6weight3
+    prerequisites = {
+        nhsc_tech_watcher
+    }
+    is_rare = yes
+    potential = {
+        NOR = {
+            is_country_type = fallen_empire
+            is_country_type = awakened_fallen_empire
+        }
+    }
+    modifier = {
+        ship_shield_penetration_mult = 0.1
+        ship_armor_penetration_mult = 0.1
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 2
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = @federation_perk_factor
+            has_federation = yes
+            federation = {
+                has_federation_perk = rare_tech_boost
+                any_member = {
+                    has_technology = nhsc_tech_phase_shifted_ammunition
+                }
+            }
+        }
+    }
+    ai_weight = {
+        factor = @ESC_AI_tech_weight_multiplier
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = @federation_perk_factor
+            has_federation = yes
+            federation = {
+                has_federation_perk = rare_tech_boost
+                any_member = {
+                    has_technology = nhsc_tech_phase_shifted_ammunition
+                }
+            }
+        }
+    }
+}

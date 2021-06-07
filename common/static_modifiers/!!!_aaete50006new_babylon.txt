@@ -1,0 +1,5 @@
+new_babylon = {
+    pop_government_ethic_attraction = -0.5
+    icon = "gfx/interface/icons/planet_modifiers/pm_new_babylon.dds"
+    icon_frame = 1
+}

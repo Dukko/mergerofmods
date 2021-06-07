@@ -1,0 +1,73 @@
+"Nexine Adaptive Unicortex" = {
+    key = "Nexine Adaptive Unicortex"
+    ship_prefix = ""
+    species = {
+        class = "MACHINE"
+        portrait = "sd_hum_robot"
+        name = "Nexite"
+        plural = "Nexites"
+        adjective = "Nexine"
+        species_bio = "As long as it exists, the Nexine Unicortex will attempt to sublimate your biological and technological distinctiveness into its own. Lowering your shields and preparing to be boarded is an option, but as voluntary assimilants are rarely available for interviews after the fact, it is hard to judge whether they regret the choice. The futility of resistance is a matter of some debate."
+        name_list = "just-name-lists_machine1"
+        trait = "trait_machine_unit"
+        trait = "trait_robot_learning_algorithms"
+    }
+    secondary_species = {
+        class = "HUM"
+        portrait = "humanoid_hp_02"
+        name = "Giranshu"
+        plural = "Giranshu"
+        adjective = "Giranshu"
+        species_bio = "What can be said for the species that created the Nexine scourge except... I wish they hadn't done that."
+        name_list = "HIVE"
+        trait = "trait_cybernetic"
+        trait = "trait_natural_engineers"
+        trait = "trait_nomadic"
+    }
+    name = "Nexine Adaptive Unicortex"
+    adjective = "Nexine"
+    authority = "auth_machine_intelligence"
+    government = "gov_machine_assimilator"
+    planet_name = "Grid X01"
+    planet_class = "pc_arctic"
+    system_name = "Sybron"
+    initializer = ""
+    graphical_culture = "mammalian_01"
+    city_graphical_culture = "humanoid_01"
+    empire_flag = {
+        icon = {
+            category = "just-more-flags"
+            file = "flag_machine6.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "fabric_circle.dds"
+        }
+        colors = {
+            "dark_grey"
+            "black"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = female
+        name = "Core"
+        portrait = "sd_hum_robot"
+        texture = 3
+        hair = 0
+        clothes = 0
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "robotic11_room"
+    spawn_enabled = yes
+    ethic = "ethic_gestalt_consciousness"
+    civics = {
+        "civic_machine_assimilator"
+        "civic_machine_ota_updates"
+        "xvcv_mdlc_civic_warfleet"
+    }
+    origin = "origin_default"
+}

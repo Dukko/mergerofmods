@@ -1,0 +1,36 @@
+@tier2cost3 = 2000
+@tier2weight3 = 70
+tech_eutab_h_beta_node = {
+    cost = @tier2cost3
+    area = society
+    tier = 2
+    category = {
+        biology
+    }
+    prerequisites = {
+        "tech_gene_banks"
+    }
+    weight = @tier2weight3
+    is_rare = yes
+    potential = {
+        has_authority = auth_hive_mind
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+    }
+}

@@ -1,0 +1,70 @@
+indiscriminate = {
+    trigger = {
+        owner = {
+            OR = {
+                NOT = {
+                    is_country_type = default
+                }
+                has_policy_flag = orbital_bombardment_indiscriminate
+                has_policy_flag = orbital_bombardment_armageddon
+            }
+            OR = {
+                is_ai = no
+                AND = {
+                    NOT = {
+                        has_policy_flag = orbital_bombardment_armageddon
+                    }
+                    NOT = {
+                        owner_species = {
+                            has_trait = trait_pc_nuked_preference
+                        }
+                    }
+                    NOT = {
+                        owner_species = {
+                            has_trait = trait_survivor
+                        }
+                    }
+                }
+            }
+        }
+    }
+    icon_frame = 2
+    default = no
+    stop_when_armies_dead = no
+    abduct_pops = no
+    planet_damage = 5
+    army_damage = 10
+    kill_pop_chance = {
+        base = 0.75
+    }
+    min_pops_to_kill_pop = 2
+    ai_weight = {
+        weight = 5
+        modifier = {
+            factor = 0.01
+            exists = from
+            from = {
+                owner = {
+                    NOT = {
+                        is_hostile = root.owner
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            exists = from
+            from = {
+                owner = {
+                    NOT = {
+                        is_hostile = root.owner
+                    }
+                }
+            }
+            owner = {
+                has_policy_flag = orbital_bombardment_armageddon
+                has_valid_civic = civic_machine_terminator
+            }
+        }
+    }
+}

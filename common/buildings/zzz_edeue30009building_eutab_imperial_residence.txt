@@ -1,0 +1,44 @@
+building_eutab_imperial_residence = {
+    base_buildtime = @b2_time
+    can_build = no
+    category = government
+    potential = {
+        owner = {
+            eu_auth_imp = yes
+        }
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    show_tech_unlock_if = {
+        eu_auth_imp = yes
+    }
+    planet_modifier = {
+        job_eutab_minor_noble_add = 4
+        job_eutab_minor_noble_per_pop = 0.04
+        planet_max_buildings_add = 1
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b2_minerals
+            rare_crystals = @b2_rare_cost
+        }
+        upkeep = {
+            energy = @b2_upkeep
+            rare_crystals = @b2_rare_upkeep
+        }
+    }
+    triggered_desc = {
+        text = job_eutab_minor_noble_effect_desc
+    }
+    upgrades = {
+        building_eutab_imperial_seat
+    }
+    prerequisites = {
+        "tech_eutab_governors_district"
+    }
+    ai_weight = {
+        factor = 2
+    }
+}

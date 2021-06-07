@@ -1,0 +1,20 @@
+trait_gpm_high_status = {
+    cost = 0
+    initial = no
+    randomized = no
+    modification = no
+    modifier = {
+        country_trust_growth = 0.15
+    }
+    opposites = {
+        "trait_repugnant"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        ROBOT
+        MACHINE
+        PRESAPIENT
+        LITHOID
+    }
+    custom_tooltip = TRAIT_GPM_HIGH_STATUS_EFFECT
+}

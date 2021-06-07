@@ -1,0 +1,74 @@
+gpm_precursor_archaeologist_drone = {
+    category = complex_drone
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_research_lab_1
+    clothes_texture_index = 3
+    possible = {
+        complex_specialist_job_check_trigger = yes
+    }
+    resources = {
+        category = planet_researchers
+        produces = {
+            physics_research = 16
+            engineering_research = 16
+            society_research = 16
+            minor_artifacts = 0.1
+        }
+        upkeep = {
+            energy = 4
+        }
+    }
+    weight = {
+        weight = @complex_drone_job_weight
+        modifier = {
+            factor = 0.1
+            planet = {
+                num_pops <= 3
+            }
+        }
+        modifier = {
+            factor = 3
+            has_trait = trait_erudite
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                has_trait = trait_robot_logic_engines
+                has_trait = trait_intelligent
+            }
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+                has_trait = trait_natural_engineers
+                has_trait = trait_natural_physicists
+                has_trait = trait_natural_sociologists
+            }
+        }
+        modifier = {
+            factor = 0.9
+            exists = owner
+            years_passed < 1
+            owner = {
+                has_valid_civic = civic_machine_assimilator
+            }
+            has_trait = trait_cybernetic
+        }
+        modifier = {
+            factor = 0
+            planet = {
+                owner = {
+                    is_ai = yes
+                    has_resource = {
+                        type = minerals
+                        amount < 500
+                    }
+                    has_monthly_income = {
+                        resource = minerals
+                        value < 25
+                    }
+                }
+            }
+        }
+    }
+}

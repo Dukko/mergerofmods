@@ -1,0 +1,20 @@
+leader_trait_ruler_est_individualism_inspiration = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/leader_trait_est_individualism_inspiration.dds"
+    modifier = {
+        starbase_shipyard_build_cost_mult = -0.15
+        armies_cost_mult = -0.15
+        planet_buildings_cost_mult = -0.15
+        shipclass_starbase_build_cost_mult = -0.15
+        deposit_blockers_cost_mult = -0.15
+    }
+    leader_trait = {
+        ruler
+    }
+    leader_class = {
+        ruler
+    }
+    initial = no
+    randomized = no
+}

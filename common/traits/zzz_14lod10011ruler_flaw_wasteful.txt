@@ -1,0 +1,41 @@
+ruler_flaw_wasteful = {
+    cost = -1
+    modification = no
+    icon = "gfx/interface/icons/traits/ruler_flaw_wasteful.dds"
+    modifier = {
+        planet_pops_upkeep_mult = 0.1
+    }
+    leader_potential_add = {
+        NOT = {
+            from = {
+                has_ethic = "ethic_gestalt_consciousness"
+            }
+        }
+    }
+    leader_trait = {
+        ruler
+    }
+    leader_class = {
+        ruler
+    }
+    opposites = {
+        "leader_trait_substance_abuser"
+        "leader_trait_stubborn"
+        "leader_flaw_terminal"
+        "leader_quirk_enduring"
+        "ruler_flaw_bad_reputation"
+        "ruler_flaw_conservationist"
+        "ruler_flaw_demagogue"
+        "ruler_flaw_devisive"
+        "ruler_flaw_disliked"
+        "ruler_flaw_emancipator"
+        "ruler_flaw_incompetent_builder"
+        "ruler_flaw_ineffective"
+        "ruler_flaw_logistic_ignorance"
+        "ruler_flaw_poor_strategist"
+        "ruler_flaw_wasteful"
+        "ruler_quirk_constitutionalist"
+        "ruler_quirk_populist"
+        "ruler_quirk_taxationist"
+    }
+}

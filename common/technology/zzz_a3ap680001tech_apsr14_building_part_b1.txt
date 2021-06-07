@@ -1,0 +1,56 @@
+@apsr14cost1 = 5000
+@apsr14weight1 = 50
+tech_apsr14_building_part_b1 = {
+    cost = @apsr14cost1
+    area = society
+    tier = 2
+    category = {
+        biology
+    }
+    prerequisites = {
+        "tech_fission_power"
+    }
+    weight = @apsr14weight1
+    is_rare = yes
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_deposit = apsr14_deposit
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            has_authority = auth_machine_intelligence
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_maniacal"
+            }
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+                research_leader = {
+                    area = society
+                    has_trait = "leader_trait_curator"
+                }
+                research_leader = {
+                    area = society
+                    has_trait = "leader_trait_spark_of_genius"
+                }
+            }
+        }
+        modifier = {
+            factor = 5
+            has_origin = apsr_origin_unique_capital
+        }
+    }
+    ai_weight = {
+        factor = 150
+    }
+}

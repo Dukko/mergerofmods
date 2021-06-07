@@ -1,0 +1,55 @@
+building_eutab_hive_alpha_node = {
+    base_buildtime = @b3_time
+    can_build = no
+    category = unity
+    potential = {
+        AND = {
+            owner = {
+                has_authority = auth_hive_mind
+            }
+            num_pops >= 60
+            NOR = {
+                is_planet_class = pc_habitat
+                is_planet_class = pc_ringworld_habitable
+            }
+        }
+    }
+    planet_modifier = {
+        job_eutab_caretaker_add = 10
+    }
+    country_modifier = {
+        country_admin_cap_add = 10
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b3_minerals
+            energy = @b3_minerals
+            food = @b3_minerals
+        }
+        upkeep = {
+            energy = @b3_upkeep
+            food = @b3_upkeep
+        }
+        produces = {
+            unity = 25
+        }
+    }
+    triggered_desc = {
+        text = job_eutab_caretaker_effect_desc
+    }
+    prerequisites = {
+        "tech_eutab_hive_alpha_node"
+    }
+    destroy_trigger = {
+        exists = owner
+        owner = {
+            NOT = {
+                has_ascension_perk = ap_eutab_mind_matter
+            }
+        }
+    }
+    ai_weight = {
+        weight = 1000
+    }
+}

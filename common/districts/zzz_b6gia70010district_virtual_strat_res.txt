@@ -1,0 +1,121 @@
+district_virtual_strat_res = {
+    base_buildtime = @giga_rw_district_buildtime
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        uses_district_set = virtual_ring_industry
+    }
+    potential = {
+        uses_district_set = virtual_ring_industry
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_virtual_city
+        district_virtual_hive
+        district_virtual_nexus
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @giga_rw_cost
+        }
+        upkeep = {
+            energy = @giga_rw_maintenance
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 5
+        planet_refiners_exotic_gases_produces_add = 0.5
+        planet_refiners_volatile_motes_produces_add = 0.5
+        planet_refiners_rare_crystals_produces_add = 0.5
+        planet_refiners_energy_upkeep_add = 1
+        planet_refiners_minerals_upkeep_add = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_virtual_rare_resource_gestalt_add = 5
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_virtual_rare_resource_add = 5
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = "job_virtual_rare_resource_gestalt_effect_desc"
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        text = "job_virtual_rare_resource_effect_desc"
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 250
+            owner = {
+                OR = {
+                    has_monthly_income = {
+                        resource = exotic_gases
+                        value < 20
+                    }
+                    has_monthly_income = {
+                        resource = volatile_motes
+                        value < 20
+                    }
+                    has_monthly_income = {
+                        resource = rare_crystals
+                        value < 20
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0.01
+            OR = {
+                planet = {
+                    has_district = district_virtual_generator
+                }
+                planet = {
+                    has_district = district_virtual_commercial
+                }
+                planet = {
+                    has_district = district_virtual_mining
+                }
+                planet = {
+                    has_district = district_virtual_science
+                }
+                planet = {
+                    has_district = district_virtual_consumer
+                }
+                planet = {
+                    has_district = district_virtual_alloys
+                }
+                planet = {
+                    has_district = district_virtual_leisure
+                }
+            }
+        }
+    }
+}

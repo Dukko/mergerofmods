@@ -1,0 +1,67 @@
+"Consortial Guilds of Nirm-Sa-Gand" = {
+    key = "Consortial Guilds of Nirm-Sa-Gand"
+    ship_prefix = "NGV"
+    species = {
+        class = "ART"
+        portrait = "art14"
+        name = "Mirdhaak"
+        plural = "Mirdhaas"
+        adjective = "Mirdhese"
+        species_bio = "The Chairbeing of the Illuminated Council, the guiding organ of the Consortial Guilds, would like you to know that all Nirm-Sa-Gander starports, stations, planets, and networks are open for business, but visitors are asked to remember to perform the ritual three-phase foot stomp upon arrival and departure. The Mirdhese inherited many of their traits from evolutionary ancestors, a species of horde-building insects that once roamed the crags and crevices of Nirm-Sa-Gand by night. Overseeing a vast blended capitalist market, their Consortium exercises control only when necessary to ensure the flow of commerce and economic growth."
+        name_list = "just-name-lists_arthropoid3"
+        trait = "trait_charismatic"
+        trait = "trait_thrifty"
+        trait = "trait_deviants"
+        trait = "trait_solitary"
+    }
+    name = "Consortial Guilds of Nirm-Sa-Gand"
+    adjective = "Nirm-Sa-Gander"
+    authority = "auth_oligarchic"
+    government = "gov_plutocratic_oligarchy"
+    planet_name = "Nirm-Sa-Gand"
+    planet_class = "pc_cascadian"
+    system_name = "Rars-Ka"
+    initializer = ""
+    graphical_culture = "arthropoid_01"
+    city_graphical_culture = "arthropoid_01"
+    empire_flag = {
+        icon = {
+            category = "just-more-flags"
+            file = "flag_egalitarian4.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "fabric_ring.dds"
+        }
+        colors = {
+            "light_green"
+            "dark_green"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = male
+        name = "Okyrormux"
+        portrait = "art14"
+        texture = 1
+        hair = 0
+        clothes = 0
+        ruler_title = "Chairbeing"
+        ruler_title_female = "Chairbeing"
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "apocalyptic4_room"
+    spawn_enabled = yes
+    ethic = "ethic_authoritarian"
+    ethic = "ethic_fanatic_xenophile"
+    ethic = "ethic_fanatic_capitalism"
+    civics = {
+        "civic_mining_guilds"
+        "civic_shadow_council"
+        "civic_globalism"
+    }
+    origin = "origin_default"
+}

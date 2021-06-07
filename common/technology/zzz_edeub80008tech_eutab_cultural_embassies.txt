@@ -1,0 +1,57 @@
+@tier3cost3 = 6000
+tech_eutab_cultural_embassies = {
+    cost = @tier3cost3
+    area = society
+    tier = 3
+    category = {
+        statecraft
+    }
+    prerequisites = {
+        "tech_manifest_destiny"
+        "tech_starbase_3"
+    }
+    weight = @tier3cost3
+    is_rare = yes
+    potential = {
+        eu_req_xphi = yes
+    }
+    gateway = eu_grasp
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = ap_grasp_the_void
+            }
+        }
+        modifier = {
+            factor = 0
+            calc_true_if = {
+                amount = 2
+                has_technology = tech_eutab_aggressive_negotiations
+                has_technology = tech_eutab_starbase_contracts
+                has_technology = tech_eutab_hyperlane_chokepoint
+                has_technology = tech_eutab_cultural_embassies
+                has_technology = tech_eutab_nullg_wargames
+                has_technology = tech_eutab_material_renewal
+                has_technology = tech_eutab_sub_civilan_fleet
+                has_technology = tech_eutab_new_monastism
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+}

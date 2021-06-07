@@ -1,0 +1,17 @@
+lrsk_gov_var_leader_trait_general_esper = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/lrsk_gov_var_leader_trait_esper.dds"
+    modifier = {
+        army_morale = 0.075
+        army_morale_damage_mult = 0.075
+    }
+    leader_trait = {
+        general
+    }
+    leader_class = {
+        general
+    }
+    initial = no
+    randomized = no
+}

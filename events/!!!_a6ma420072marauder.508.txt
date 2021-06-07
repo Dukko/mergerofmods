@@ -1,0 +1,45 @@
+namespace = marauder
+country_event = {
+    id = marauder.508
+    title = "greatkhan_diplo_header"
+    desc = {
+        trigger = {
+            OR = {
+                is_subject_type = satrapy
+                has_country_flag = rebelling_satrapy
+            }
+        }
+        text = "marauder.508.desc.1"
+    }
+    desc = {
+        trigger = {
+            NOR = {
+                is_subject_type = satrapy
+                has_country_flag = rebelling_satrapy
+                has_valid_civic = "civic_fanatic_purifiers"
+                has_valid_civic = "civic_hive_devouring_swarm"
+                has_valid_civic = "civic_machine_terminator"
+            }
+        }
+        text = "marauder.508.desc.2"
+    }
+    desc = {
+        trigger = {
+            OR = {
+                has_valid_civic = "civic_fanatic_purifiers"
+                has_valid_civic = "civic_hive_devouring_swarm"
+                has_valid_civic = "civic_machine_terminator"
+            }
+        }
+        text = "marauder.508.desc.3"
+    }
+    diplomatic = yes
+    picture_event_data = {
+        portrait = event_target:raider_khanate
+        room = "ethic_spaceship_room"
+    }
+    is_triggered_only = yes
+    option = {
+        name = marauder.508.a
+    }
+}

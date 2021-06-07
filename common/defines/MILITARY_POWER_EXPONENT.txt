@@ -1,0 +1,3 @@
+NShip = {
+    MILITARY_POWER_EXPONENT = 0.5
+}

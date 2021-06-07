@@ -1,0 +1,36 @@
+nhsc_tech_dreadnought_computer = {
+    area = physics
+    category = {
+        computing
+    }
+    tier = 4
+    cost = @tier4cost2
+    weight = @tier4weight2
+    ai_update_type = all
+    is_rare = yes
+    prerequisites = {
+        "tech_cruisers"
+    }
+    prereqfor_desc = {
+        hide_prereq_for_desc = component
+        custom = {
+            title = "NHSC_TECH_UNLOCK_DREADNOUGHT_COMPUTER_TITLE"
+            desc = "NHSC_TECH_UNLOCK_DREADNOUGHT_COMPUTER_DESC"
+        }
+    }
+    potential = {
+        NOT = {
+            has_global_flag = ESC_dreadnought_tech_forbidden
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 0
+        }
+    }
+}

@@ -1,0 +1,265 @@
+pw_building_transhabitat_logistics_network = {
+    base_buildtime = @pw_building_buildtime
+    position_priority = 120
+    base_cap_amount = 1
+    can_be_ruined = no
+    category = amenity
+    icon = pw_building_transplanetary_logistics_network
+    prerequisites = {
+        pw_tech_transplanetary_logistics
+    }
+    show_tech_unlock_if = {
+        exists = owner
+        owner = {
+            has_ascension_perk = ap_voidborn
+        }
+    }
+    potential = {
+        exists = owner
+        owner = {
+            is_gestalt = no
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+        NOT = {
+            has_modifier = penal_colony
+        }
+        is_planet_class = pc_habitat
+    }
+    allow = {
+        owner = {
+            is_egalitarian = yes
+        }
+        owner = {
+            has_ascension_perk = ap_voidborn
+        }
+        has_major_upgraded_capital = yes
+        free_district_slots > 0
+        pw_can_build_planetary_wonder = yes
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @pw_building_cost
+            exotic_gases = @pw_building_cost_rare
+        }
+        cost = {
+            trigger = {
+                planet = {
+                    pw_has_any_planetary_wonder = yes
+                }
+            }
+            minerals = @pw_building_cost_extra
+        }
+        upkeep = {
+            energy = @pw_building_upkeep_expensive
+            exotic_gases = @pw_building_upkeep_rare_1
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    pw_has_any_additional_planetary_wonder = yes
+                }
+            }
+            energy = @pw_building_upkeep_extra
+        }
+    }
+    destroy_trigger = {
+        OR = {
+            has_modifier = slave_colony
+            has_modifier = penal_colony
+            AND = {
+                exists = owner
+                owner = {
+                    is_gestalt = yes
+                }
+            }
+            AND = {
+                exists = owner
+                owner = {
+                    is_egalitarian = no
+                }
+            }
+        }
+    }
+    convert_to = {
+        building_commercial_megaplex
+        building_organic_paradise
+        building_hive_cluster
+        building_simulation_2
+    }
+    planet_modifier = {
+        planet_max_districts_add = -1
+        planet_amenities_mult = 0.1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_egalitarian = yes
+            }
+            owner = {
+                is_megacorp = no
+            }
+        }
+        modifier = {
+            job_administrator_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_egalitarian = yes
+            }
+            owner = {
+                is_megacorp = yes
+            }
+        }
+        modifier = {
+            job_executive_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_egalitarian = yes
+            }
+        }
+        modifier = {
+            job_bureaucrat_add = 1
+            job_clerk_add = 4
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_edict = pw_ambition_monumentality
+            }
+        }
+        modifier = {
+            planet_stability_add = @pw_stability_production
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_edict = pw_ambition_wonders_beyond_ambition
+            }
+        }
+        modifier = {
+            planet_housing_mult = 0.05
+        }
+    }
+    triggered_desc = {
+        text = pw_planet_wonder_lb
+    }
+    triggered_desc = {
+        text = pw_transplanetary_logistics_network_tooltip
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_egalitarian = yes
+            }
+            owner = {
+                is_megacorp = no
+            }
+        }
+        text = job_administrator_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_egalitarian = yes
+            }
+            owner = {
+                is_megacorp = yes
+            }
+        }
+        text = job_executive_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_egalitarian = yes
+            }
+        }
+        text = job_bureaucrat_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_egalitarian = yes
+            }
+        }
+        text = job_clerk_effect_desc
+    }
+    on_built = {
+        planet_event = {
+            id = pw_wonder.1700
+        }
+    }
+    ai_weight = {
+        weight = 55
+        modifier = {
+            factor = 0
+            buildings_has_exotic_gases = no
+            building_relaxed_basic_income_check = no
+            owner = {
+                OR = {
+                    AND = {
+                        country_uses_consumer_goods = yes
+                        has_monthly_income = {
+                            resource = consumer_goods
+                            value < 5
+                        }
+                    }
+                    AND = {
+                        country_uses_consumer_goods = no
+                        has_monthly_income = {
+                            resource = minerals
+                            value < 75
+                        }
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0.25
+            free_building_slots < 1
+            free_district_slots < 1
+        }
+        modifier = {
+            factor = 0.25
+            pw_has_any_planetary_wonder = yes
+            exists = owner
+            NOT = {
+                owner = {
+                    has_ascension_perk = pw_ap_planetary_wonders
+                }
+            }
+            NOT = {
+                has_active_building = pw_building_transplanetary_logistics_network
+            }
+            NOT = {
+                has_building_construction = pw_building_transplanetary_logistics_network
+            }
+        }
+        modifier = {
+            factor = 2
+            exists = owner
+            owner = {
+                has_ethic = ethic_fanatic_egalitarian
+            }
+        }
+    }
+}

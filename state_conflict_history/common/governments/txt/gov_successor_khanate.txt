@@ -1,0 +1,10 @@
+gov_successor_khanate = {
+    ruler_title = RT_KHAN
+    should_force_rename = yes
+    possible = {
+        has_valid_civic = civic_great_khans_legacy
+    }
+    weight = {
+        base = 100000
+    }
+}

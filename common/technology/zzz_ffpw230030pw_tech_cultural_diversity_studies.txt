@@ -1,0 +1,31 @@
+pw_tech_cultural_diversity_studies = {
+    area = society
+    category = {
+        statecraft
+    }
+    tier = 5
+    cost = @pw_tech_cost_5
+    prerequisites = {
+        pw_tech_xeno_art_integration
+    }
+    weight = 0
+    is_rare = yes
+    potential = {
+        is_gestalt = no
+        is_xenophile = yes
+    }
+    modifier = {
+        envoys_add = 1
+        envoy_improve_relations_mult = 0.25
+    }
+    ai_weight = {
+        factor = @pw_tech_ai_weight
+        modifier = {
+            factor = 2
+            research_leader = {
+                area = society
+                has_trait = leader_trait_expertise_statecraft
+            }
+        }
+    }
+}

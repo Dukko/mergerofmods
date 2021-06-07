@@ -1,0 +1,30 @@
+atlantis_robot_processing = {
+    category = worker
+    is_capped_by_modifier = yes
+    building_icon = building_atlantis_slaveprocessing
+    clothes_texture_index = 2
+    icon = assimilation
+    possible_pre_triggers = {
+        is_robot_pop = yes
+    }
+    possible = {
+        owner = {
+            has_civic = civic_tw_atlantis
+        }
+        has_trait = trait_mechanical
+    }
+    resources = {
+        category = planet_entertainers
+        produces = {
+            unity = 4
+        }
+        upkeep = {
+            consumer_goods = 1
+        }
+    }
+    planet_modifier = {
+    }
+    weight = {
+        weight = 10000
+    }
+}

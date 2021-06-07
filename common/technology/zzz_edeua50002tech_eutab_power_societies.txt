@@ -1,0 +1,60 @@
+@tier2cost3 = 2500
+tech_eutab_power_societies = {
+    cost = @tier2cost3
+    area = society
+    tier = 2
+    category = {
+        statecraft
+    }
+    prerequisites = {
+        "tech_planetary_unification"
+    }
+    weight = @tier2cost3
+    is_rare = yes
+    potential = {
+        eu_req_spi = yes
+    }
+    gateway = eu_dominion
+    modifier = {
+        trade_value_mult = 0.1
+        country_unity_produces_mult = 0.05
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = ap_interstellar_dominion
+            }
+        }
+        modifier = {
+            factor = 0
+            calc_true_if = {
+                amount = 2
+                has_technology = tech_eutab_blood_soil
+                has_technology = tech_eutab_psychohistory
+                has_technology = tech_eutab_terra_viruses
+                has_technology = tech_eutab_cultural_exchanges
+                has_technology = tech_eutab_mil_proxy
+                has_technology = tech_eutab_peace_envoy
+                has_technology = tech_eutab_self_sus_fleets
+                has_technology = tech_eutab_power_societies
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+lrsk_gov_var_gov_protection_racket_fam = {
+    ruler_title = LRSK_GOV_VAR_RT_CHIEF_ENFORCER
+    heir_title = HT_VICE_OFFICER
+    heir_title_female = HT_VICE_OFFICER
+    should_force_rename = yes
+    use_regnal_names = yes
+    dynastic_last_names = yes
+    possible = {
+        has_authority = auth_corporate_imperial
+        has_valid_civic = lrsk_gov_var_civic_mc_police_state
+        has_valid_civic = civic_criminal_heritage
+    }
+    election_candidates = {
+        modifier = {
+            add = 100
+            leader_class = scientist
+        }
+        modifier = {
+            add = 500
+            leader_class = ruler
+        }
+        modifier = {
+            add = 250
+            OR = {
+                leader_class = governor
+            }
+        }
+        modifier = {
+            add = 250
+            leader_class = admiral
+            leader_class = general
+        }
+    }
+    weight = {
+        base = 1750
+    }
+}

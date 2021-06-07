@@ -1,0 +1,72 @@
+tech_scavenger_bot = {
+    cost = @tier4cost3
+    area = engineering
+    tier = 5
+    category = {
+        voidcraft
+    }
+    prerequisites = {
+        "tech_nanite_guardians"
+        "tech_nanite_mega_construction"
+        "tech_nanite_modular_engineering"
+    }
+    weight = @tier4weight3
+    is_rare = yes
+    potential = {
+        no_scope = {
+            has_distar = yes
+            NOT = {
+                has_global_flag = scavenger_disabled
+            }
+        }
+        has_resource = {
+            type = sr_living_metal
+            amount > 0
+        }
+    }
+    prereqfor_desc = {
+        ship = {
+            title = "TECH_UNLOCK_SCAVENGER_CONSTRUCTION_TITLE"
+            desc = "TECH_UNLOCK_SCAVENGER_CONSTRUCTION_DESC"
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = scrapper_killed
+            }
+        }
+        modifier = {
+            factor = 1.25
+            exists = event_target:gray_owner
+            is_same_empire = event_target:gray_owner
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 0.25
+            OR = {
+                has_ethic = ethic_spiritualist
+                has_ethic = ethic_fanatic_spiritualist
+                has_ethic = ethic_pacifist
+                has_ethic = ethic_fanatic_pacifist
+                has_ethic = ethic_authoritarian
+                has_ethic = ethic_fanatic_authoritarian
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = scrapper_killed
+            }
+        }
+    }
+}

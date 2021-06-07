@@ -1,0 +1,77 @@
+district_arcology_pdtrade = {
+    base_buildtime = 600
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        OR = {
+            uses_district_set = pdecocity
+            uses_district_set = pdcorpoarc
+        }
+        from = {
+            is_regular_empire = yes
+        }
+    }
+    potential = {
+        OR = {
+            uses_district_set = pdecocity
+            uses_district_set = pdcorpoarc
+        }
+        owner = {
+            exists = owner
+            is_regular_empire = yes
+        }
+    }
+    conversion_ratio = 1
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = 1000
+            rare_crystals = 50
+        }
+        upkeep = {
+            energy = 5
+            rare_crystals = 1
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 10
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_merchant_add = 2
+            job_clerk_add = 4
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                NOT = {
+                    is_gestalt = yes
+                }
+            }
+        }
+        text = job_merchant_effect_desc
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 250
+            owner = {
+                has_monthly_income = {
+                    resource = consumer_goods
+                    value > 200
+                }
+                has_monthly_income = {
+                    resource = alloys
+                    value > 500
+                }
+            }
+        }
+    }
+}

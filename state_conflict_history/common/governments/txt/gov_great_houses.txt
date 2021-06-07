@@ -1,0 +1,20 @@
+gov_great_houses = {
+    ruler_title = RT_WARDEN
+    ruler_title_female = RT_WARDEN
+    election_candidates = {
+    }
+    should_force_rename = yes
+    possible = {
+        NOT = {
+            has_ethic = ethic_egalitarian
+        }
+        OR = {
+            has_ethic = ethic_authoritarian
+        }
+        has_valid_civic = civic_meritocracy
+        has_authority = auth_oligarchic
+    }
+    weight = {
+        base = 3000
+    }
+}

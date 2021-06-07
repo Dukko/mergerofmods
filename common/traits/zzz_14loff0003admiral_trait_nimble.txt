@@ -1,0 +1,18 @@
+admiral_trait_nimble = {
+    cost = 1
+    modification = no
+    icon = "gfx/interface/icons/traits/admiral_trait_nimble.dds"
+    modifier = {
+        ship_evasion_mult = 0.1
+    }
+    leader_trait = {
+        admiral
+    }
+    leader_class = {
+        admiral
+    }
+    opposites = {
+        "admiral_boon_artful_dodger"
+        "admiral_flaw_sitting_duck"
+    }
+}

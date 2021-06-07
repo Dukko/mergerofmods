@@ -1,0 +1,37 @@
+xvcv_mdlc_tech_organic_base_code_study = {
+    cost = @tier3cost1
+    area = society
+    tier = 3
+    category = {
+        biology
+    }
+    prerequisites = {
+        "tech_society_2"
+    }
+    weight = @tier3weight1
+    potential = {
+        has_authority = auth_machine_intelligence
+    }
+    modifier = {
+        planet_researchers_society_research_produces_mult = 0.05
+        category_biology_research_speed_mult = 0.2
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+    }
+}

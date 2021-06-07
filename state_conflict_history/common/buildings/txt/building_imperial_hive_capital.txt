@@ -1,0 +1,99 @@
+building_imperial_hive_capital = {
+    base_buildtime = @b4_time
+    capital = yes
+    can_build = no
+    can_demolish = no
+    can_be_ruined = no
+    can_be_disabled = no
+    position_priority = 0
+    category = government
+    potential = {
+        exists = owner
+        owner = {
+            OR = {
+                is_hive_empire = yes
+                is_country_type = swarm
+            }
+            is_galactic_emperor = yes
+        }
+        planet = {
+            is_capital = yes
+        }
+    }
+    convert_to = {
+        building_hive_major_capital
+        building_machine_system_capital
+        building_system_capital
+        building_hab_major_capital
+        building_ancient_control_center
+        building_ancient_palace
+    }
+    allow = {
+        num_pops >= 50
+    }
+    prerequisites = {
+    }
+    planet_modifier = {
+        planet_housing_add = 20
+        planet_amenities_add = 20
+        job_synapse_drone_add = 5
+        job_maintenance_drone_add = 7
+        job_patrol_drone_add = 4
+        planet_max_buildings_add = 11
+        planet_max_branch_office_buildings_add = 3
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_capital_productivity_1
+            }
+        }
+        modifier = {
+            planet_jobs_upkeep_mult = 0.1
+            planet_jobs_produces_mult = 0.1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_capital_productivity_2
+            }
+        }
+        modifier = {
+            planet_jobs_upkeep_mult = 0.1
+            planet_jobs_produces_mult = 0.1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_capital_productivity_3
+            }
+        }
+        modifier = {
+            planet_jobs_upkeep_mult = 0.1
+            planet_jobs_produces_mult = 0.1
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b4_minerals
+        }
+        upkeep = {
+            energy = @b4_upkeep
+        }
+    }
+    triggered_desc = {
+        text = job_synapse_drone_effect_desc
+    }
+    triggered_desc = {
+        text = job_maintenance_drone_effect_desc
+    }
+    triggered_desc = {
+        text = job_patrol_drone_effect_desc
+    }
+}

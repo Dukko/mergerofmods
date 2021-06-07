@@ -1,0 +1,45 @@
+building_eutab_imperial_seat = {
+    base_buildtime = @b3_time
+    can_build = no
+    category = government
+    potential = {
+        owner = {
+            eu_auth_imp = yes
+        }
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    show_tech_unlock_if = {
+        eu_auth_imp = yes
+    }
+    planet_modifier = {
+        job_eutab_minor_noble_add = 4
+        job_eutab_minor_noble_per_pop = 0.05
+        job_eutab_shroud_lord_add = 2
+        planet_max_buildings_add = 1
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b3_minerals
+            rare_crystals = @b3_rare_cost
+        }
+        upkeep = {
+            energy = @b3_upkeep
+            rare_crystals = @b3_rare_upkeep
+        }
+    }
+    triggered_desc = {
+        text = job_eutab_minor_noble_effect_desc
+    }
+    triggered_desc = {
+        text = job_eutab_shroud_lord_effect_desc
+    }
+    prerequisites = {
+        "tech_eutab_shroud_ministry"
+    }
+    ai_weight = {
+        factor = 2
+    }
+}

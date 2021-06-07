@@ -1,0 +1,45 @@
+@tier3cost2 = 4000
+@tier3weight2 = 60
+tech_eutab_m_relentless_will = {
+    cost = @tier3cost2
+    area = physics
+    tier = 3
+    category = {
+        computing
+    }
+    prerequisites = {
+        "tech_autonomous_agents"
+    }
+    weight = @tier3weight2
+    is_rare = yes
+    potential = {
+        has_authority = auth_machine_intelligence
+    }
+    modifier = {
+        ruler_skill_levels = 2
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = ap_executive_vigor
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+}

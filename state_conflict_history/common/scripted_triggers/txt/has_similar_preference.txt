@@ -1,0 +1,130 @@
+has_similar_preference = {
+    IF = {
+        limit = {
+            has_desert_type_preference = yes
+        }
+        $compare_species$ = {
+            OR = {
+                has_arid_type_preference = yes
+                has_savannah_type_preference = yes
+            }
+        }
+    }
+    ELSE_IF = {
+        limit = {
+            has_arid_type_preference = yes
+        }
+        $compare_species$ = {
+            OR = {
+                has_desert_type_preference = yes
+                has_savannah_type_preference = yes
+            }
+        }
+    }
+    ELSE_IF = {
+        limit = {
+            has_savannah_type_preference = yes
+        }
+        $compare_species$ = {
+            OR = {
+                has_arid_type_preference = yes
+                has_desert_type_preference = yes
+            }
+        }
+    }
+    ELSE_IF = {
+        limit = {
+            has_continental_type_preference = yes
+        }
+        $compare_species$ = {
+            OR = {
+                has_ocean_type_preference = yes
+                has_tropical_type_preference = yes
+            }
+        }
+    }
+    ELSE_IF = {
+        limit = {
+            has_ocean_type_preference = yes
+        }
+        $compare_species$ = {
+            OR = {
+                has_continental_type_preference = yes
+                has_tropical_type_preference = yes
+            }
+        }
+    }
+    ELSE_IF = {
+        limit = {
+            has_tropical_type_preference = yes
+        }
+        $compare_species$ = {
+            OR = {
+                has_ocean_type_preference = yes
+                has_continental_type_preference = yes
+            }
+        }
+    }
+    ELSE_IF = {
+        limit = {
+            has_arctic_type_preference = yes
+        }
+        $compare_species$ = {
+            OR = {
+                has_alpine_type_preference = yes
+                has_tundra_type_preference = yes
+            }
+        }
+    }
+    ELSE_IF = {
+        limit = {
+            has_alpine_type_preference = yes
+        }
+        $compare_species$ = {
+            OR = {
+                has_arctic_type_preference = yes
+                has_tundra_type_preference = yes
+            }
+        }
+    }
+    ELSE_IF = {
+        limit = {
+            has_tundra_type_preference = yes
+        }
+        $compare_species$ = {
+            OR = {
+                has_alpine_type_preference = yes
+                has_arctic_type_preference = yes
+            }
+        }
+    }
+    ELSE = {
+        switch = {
+            trigger = has_trait
+            trait_pc_nuked_preference = {
+                always = yes
+            }
+            trait_pc_gaia_preference = {
+                OR = {
+                    has_trait = trait_pc_ringworld_habitable_preference
+                    has_trait = trait_pc_relic_preference
+                }
+            }
+            trait_pc_ringworld_habitable_preference = {
+                OR = {
+                    has_trait = trait_pc_gaia_preference
+                    has_trait = trait_pc_relic_preference
+                }
+            }
+            trait_pc_relic_preference = {
+                OR = {
+                    has_trait = trait_pc_gaia_preference
+                    has_trait = trait_pc_ringworld_habitable_preference
+                }
+            }
+            default = {
+                always = no
+            }
+        }
+    }
+}

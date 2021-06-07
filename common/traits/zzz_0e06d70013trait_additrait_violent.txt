@@ -1,0 +1,22 @@
+trait_additrait_violent = {
+    cost = -2
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    modifier = {
+        pop_growth_speed = -0.075
+        pop_amenities_usage_mult = 0.05
+    }
+    opposites = {
+        "trait_repugnant"
+        "trait_charismatic"
+        "trait_hive_mind"
+        "trait_machine_unit"
+        "trait_additrait_hateful"
+        "trait_additrait_sociable"
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

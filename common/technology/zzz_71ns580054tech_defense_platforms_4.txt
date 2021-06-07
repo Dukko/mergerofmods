@@ -1,0 +1,33 @@
+tech_defense_platforms_4 = {
+    cost = @tier5cost1
+    area = engineering
+    tier = 5
+    category = {
+        voidcraft
+    }
+    prerequisites = {
+        "tech_defense_platforms_3"
+    }
+    weight = @tier5weight1
+    modifier = {
+        starbase_defense_platform_capacity_add = 16
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+}

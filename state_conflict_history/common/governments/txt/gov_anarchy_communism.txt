@@ -1,0 +1,43 @@
+gov_anarchy_communism = {
+    ruler_title = RT_GENERALISSIMO
+    ruler_title_female = RT_GENERALISSIMO
+    possible = {
+        OR = {
+            has_authority = auth_dictatorial
+            has_authority = auth_oligarchic
+            has_authority = auth_democratic_dictatorship
+            has_authority = auth_dem_dict_dummy
+        }
+        has_ethic = ethic_fanatic_socialism
+        OR = {
+            has_ethic = ethic_authoritarian
+            has_ethic = ethic_fanatic_authoritarian
+        }
+        OR = {
+            has_ethic = ethic_militarist
+            has_ethic = ethic_fanatic_militarist
+        }
+    }
+    should_force_rename = yes
+    election_candidates = {
+        modifier = {
+            add = 100
+            OR = {
+                leader_class = general
+                leader_class = admiral
+                leader_class = ruler
+                leader_class = governor
+            }
+        }
+    }
+    weight = {
+        base = 5000
+        modifier = {
+            factor = 100
+            OR = {
+                has_valid_civic = civic_military_dictatorship
+                has_ethic = ethic_fanatic_militarist
+            }
+        }
+    }
+}

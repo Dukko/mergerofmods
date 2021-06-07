@@ -1,0 +1,31 @@
+namespace = crime
+planet_event = {
+    id = crime.101
+    title = crime.101.name
+    desc = crime.101.desc
+    picture = GFX_evt_derelict_interior
+    show_sound = event_ground_battle
+    location = root
+    pre_triggers = {
+        has_owner = yes
+    }
+    trigger = {
+        has_modifier = gang_wars
+        any_owned_pop = {
+            has_job = enforcer
+        }
+    }
+    is_triggered_only = yes
+    immediate = {
+        random_owned_pop = {
+            limit = {
+                has_job = enforcer
+            }
+            kill_pop = yes
+        }
+    }
+    option = {
+        name = crime.200.a
+        custom_tooltip = crime.101.tooltip
+    }
+}

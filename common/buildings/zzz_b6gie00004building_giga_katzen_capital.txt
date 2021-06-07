@@ -1,0 +1,43 @@
+building_giga_katzen_capital = {
+    capital = yes
+    can_build = no
+    can_demolish = no
+    can_be_ruined = no
+    planetary_ftl_inhibitor = yes
+    base_buildtime = 720
+    ai_weight = {
+        weight = 0
+    }
+    potential = {
+        always = no
+    }
+    destroy_trigger = {
+        exists = owner
+        owner = {
+            NOR = {
+                is_country_type = katzenartig_imperium
+                has_country_flag = hke_federated
+                has_country_flag = katzen_civil_war_faction
+            }
+        }
+    }
+    planet_modifier = {
+        job_administrator_add = 2
+        planet_max_districts_add = 3
+        district_farming_max = 1
+        district_generator_max = 1
+        district_mining_max = 1
+        planet_housing_add = 20
+        planet_amenities_add = 20
+        planet_crime_add = -20
+        planet_orbital_bombardment_damage = -0.1
+    }
+    country_modifier = {
+        ship_fire_rate_mult = 0.01
+        ship_armor_mult = 0.015
+        ship_hull_mult = 0.015
+        ship_shield_mult = 0.01
+        army_damage_mult = 0.01
+        megastructure_build_speed_mult = 0.025
+    }
+}

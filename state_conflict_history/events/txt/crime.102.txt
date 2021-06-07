@@ -1,0 +1,42 @@
+namespace = crime
+planet_event = {
+    id = crime.102
+    title = crime.102.name
+    desc = crime.102.desc
+    picture = GFX_evt_pirates_attacking_cargo
+    show_sound = event_space_battle
+    location = root
+    pre_triggers = {
+        has_owner = yes
+    }
+    trigger = {
+        owner = {
+            has_country_flag = birth_of_piracy
+            NOT = {
+                has_country_flag = crime_pirates_spawned
+            }
+        }
+        has_modifier = gang_wars
+    }
+    is_triggered_only = yes
+    immediate = {
+        owner = {
+            set_timed_country_flag = {
+                flag = crime_pirates_spawned
+                days = 3600
+            }
+            owner_species = {
+                save_event_target_as = owner_species
+            }
+        }
+        solar_system = {
+            save_event_target_as = pirate_system
+            create_normal_pirate_country = yes
+            create_pirate_fleet = yes
+        }
+    }
+    option = {
+        name = crime.200.a
+        custom_tooltip = crime.102.tooltip
+    }
+}

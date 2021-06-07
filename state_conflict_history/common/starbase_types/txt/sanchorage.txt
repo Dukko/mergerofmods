@@ -1,0 +1,210 @@
+sanchorage = {
+    potential = {
+        has_starbase_size > starbase_outpost
+        count_starbase_modules = {
+            type = anchorage
+            count > 0
+        }
+    }
+    weight_modifier = {
+        base = 100
+        modifier = {
+            add = 100
+            count_starbase_modules = {
+                type = anchorage
+                count > 1
+            }
+        }
+        modifier = {
+            add = 100
+            count_starbase_modules = {
+                type = anchorage
+                count > 2
+            }
+        }
+        modifier = {
+            add = 100
+            count_starbase_modules = {
+                type = anchorage
+                count > 3
+            }
+        }
+        modifier = {
+            add = 100
+            count_starbase_modules = {
+                type = anchorage
+                count > 4
+            }
+        }
+        modifier = {
+            add = 100
+            count_starbase_modules = {
+                type = anchorage
+                count > 5
+            }
+        }
+    }
+    ai_design = {
+        min = {
+            base = 0
+        }
+        ratio = {
+            base = 0.45
+            modifier = {
+                add = 0.05
+                exists = owner
+                owner = {
+                    has_ethic = ethic_militarist
+                }
+            }
+            modifier = {
+                add = 0.1
+                exists = owner
+                owner = {
+                    used_naval_capacity_percent > 0.7
+                }
+            }
+            modifier = {
+                add = 0.1
+                exists = owner
+                owner = {
+                    used_naval_capacity_percent > 0.9
+                }
+            }
+            modifier = {
+                add = 0.02
+                exists = owner
+                owner = {
+                    has_ethic = ethic_fanatic_militarist
+                }
+            }
+        }
+        buildings = {
+            crew_quarters = {
+                base = 1
+            }
+            fleet_academy = {
+                base = 0.05
+            }
+            hydroponics_bay = {
+                base = 1
+            }
+            naval_logistics_office = {
+                base = 6.5
+            }
+            listening_post = {
+                base = 0.8
+            }
+            sensor_station = {
+                base = 0.6
+            }
+            reinforced_defenses = {
+                base = 0.4
+            }
+            strategic_defenses = {
+                base = 0.4
+            }
+            emergency_portal = {
+                base = 0.2
+            }
+            adv_space_engineers = {
+                base = 0.6
+            }
+            adv_starbase = {
+                base = 0.6
+            }
+            administration_office = {
+                base = 0.6
+            }
+            starbase_optimal_systems = {
+                base = 0.6
+            }
+            administration_computers = {
+                base = 0.6
+            }
+            market_computers = {
+                base = 0.4
+            }
+            research_computers = {
+                base = 0.4
+            }
+            orbital_assembly = {
+                base = 0.6
+            }
+            chain_manufacturing = {
+                base = 0.6
+            }
+            construction_planificator = {
+                base = 0.6
+            }
+            offworld_trading_company = {
+                base = 0.6
+            }
+            nebula_refinery = {
+                base = 0.6
+            }
+            resource_silo = {
+                base = 0.8
+            }
+            mining_base = {
+                base = 0.8
+            }
+            power_station = {
+                base = 0.8
+            }
+            farming_base = {
+                base = 0.8
+            }
+            solar_panel_01 = {
+                base = 0.4
+            }
+            solar_panel_02 = {
+                base = 0.4
+            }
+            solar_panel_03 = {
+                base = 0.4
+            }
+            solar_panel_04 = {
+                base = 0.4
+            }
+            hydroponics_bay = {
+                base = 0.4
+            }
+            trader_caravanserai = {
+                base = 0.03
+            }
+        }
+        modules = {
+            anchorage = {
+                base = 1
+            }
+            hangar_bay = {
+                base = 0.6
+            }
+            gun_battery = {
+                base = 0.8
+            }
+            missile_battery = {
+                base = 0.8
+            }
+            large_battery = {
+                base = 0.8
+            }
+            pd_battery = {
+                base = 0.8
+            }
+            xl_battery = {
+                base = 0.8
+            }
+            titanic_battery = {
+                base = 0.8
+            }
+            shield_module = {
+                base = 1
+            }
+            armor_module = {
+                base = 1
+            }
+        }
+    }
+}

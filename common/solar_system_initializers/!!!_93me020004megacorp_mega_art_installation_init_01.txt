@@ -1,0 +1,383 @@
+@base_moon_distance = 7
+megacorp_mega_art_installation_init_01 = {
+    class = "rl_trinary_stars"
+    usage = misc_system_init
+    flags = {
+        ruined_mega_art_installation_system
+    }
+    usage_odds = {
+        base = 0
+        modifier = {
+            host_has_dlc = "Megacorp"
+            add = 100
+        }
+    }
+    max_instances = 1
+    spawn_chance = 100
+    planet = {
+        count = 1
+        class = star
+        orbit_distance = 25
+        orbit_angle = 0
+        size = {
+            min = @standard_min
+            max = @standard_max
+        }
+        has_ring = no
+        init_effect = {
+            save_event_target_as = installation_star
+        }
+    }
+    planet = {
+        count = 1
+        class = star
+        orbit_distance = {
+            min = 0
+            max = 20
+        }
+        orbit_angle = 120
+        size = {
+            min = @standard_sat_min
+            max = @standard_sat_max
+        }
+        has_ring = no
+    }
+    planet = {
+        count = 1
+        class = star
+        orbit_distance = {
+            min = 0
+            max = 20
+        }
+        orbit_angle = 120
+        size = {
+            min = @standard_sat_min
+            max = @standard_sat_max
+        }
+        has_ring = no
+    }
+    change_orbit = {
+        min = 40
+        max = 60
+    }
+    planet = {
+        count = 1
+        orbit_angle = {
+            min = 90
+            max = 270
+        }
+        change_orbit = @base_moon_distance
+        moon = {
+            count = {
+                min = 0
+                max = 1
+            }
+            orbit_angle = {
+                min = 90
+                max = 270
+            }
+            orbit_distance = 5
+        }
+    }
+    planet = {
+        count = 1
+        orbit_distance = {
+            min = 15
+            max = 20
+        }
+        orbit_angle = {
+            min = 90
+            max = 270
+        }
+        flags = {
+            hot_zone
+        }
+        change_orbit = @base_moon_distance
+        moon = {
+            count = {
+                min = 0
+                max = 1
+            }
+            orbit_angle = {
+                min = 90
+                max = 270
+            }
+            orbit_distance = 5
+            flags = {
+                hot_zone
+            }
+        }
+    }
+    planet = {
+        count = {
+            min = 0
+            max = 1
+        }
+        orbit_distance = {
+            min = 20
+            max = 25
+        }
+        orbit_angle = {
+            min = 90
+            max = 270
+        }
+        change_orbit = @base_moon_distance
+        moon = {
+            count = {
+                min = 0
+                max = 1
+            }
+            orbit_angle = {
+                min = 90
+                max = 270
+            }
+            orbit_distance = 5
+        }
+    }
+    planet = {
+        count = {
+            min = 0
+            max = 1
+        }
+        orbit_distance = {
+            min = 25
+            max = 30
+        }
+        orbit_angle = {
+            min = 90
+            max = 270
+        }
+        change_orbit = @base_moon_distance
+        moon = {
+            count = {
+                min = 0
+                max = 1
+            }
+            orbit_angle = {
+                min = 90
+                max = 270
+            }
+            orbit_distance = 5
+        }
+    }
+    planet = {
+        count = {
+            min = 0
+            max = 1
+        }
+        orbit_distance = {
+            min = 30
+            max = 35
+        }
+        orbit_angle = {
+            min = 90
+            max = 270
+        }
+        change_orbit = @base_moon_distance
+        moon = {
+            count = {
+                min = 0
+                max = 1
+            }
+            orbit_angle = {
+                min = 90
+                max = 270
+            }
+            orbit_distance = 5
+        }
+    }
+    planet = {
+        count = {
+            min = 0
+            max = 1
+        }
+        orbit_distance = {
+            min = 35
+            max = 40
+        }
+        orbit_angle = {
+            min = 90
+            max = 270
+        }
+        change_orbit = @base_moon_distance
+        moon = {
+            count = {
+                min = 0
+                max = 1
+            }
+            orbit_angle = {
+                min = 90
+                max = 270
+            }
+            orbit_distance = 5
+        }
+    }
+    planet = {
+        count = {
+            min = 0
+            max = 1
+        }
+        orbit_distance = {
+            min = 40
+            max = 45
+        }
+        orbit_angle = {
+            min = 90
+            max = 270
+        }
+        change_orbit = @base_moon_distance
+        moon = {
+            count = {
+                min = 0
+                max = 1
+            }
+            orbit_angle = {
+                min = 90
+                max = 270
+            }
+            orbit_distance = 5
+        }
+    }
+    planet = {
+        count = {
+            min = 0
+            max = 1
+        }
+        orbit_distance = {
+            min = 45
+            max = 50
+        }
+        orbit_angle = {
+            min = 90
+            max = 270
+        }
+        change_orbit = @base_moon_distance
+        moon = {
+            count = {
+                min = 0
+                max = 1
+            }
+            orbit_angle = {
+                min = 90
+                max = 270
+            }
+            orbit_distance = 5
+        }
+    }
+    planet = {
+        count = {
+            min = 0
+            max = 1
+        }
+        orbit_distance = {
+            min = 50
+            max = 55
+        }
+        orbit_angle = {
+            min = 90
+            max = 270
+        }
+        change_orbit = @base_moon_distance
+        moon = {
+            count = {
+                min = 0
+                max = 1
+            }
+            orbit_angle = {
+                min = 90
+                max = 270
+            }
+            orbit_distance = 5
+        }
+    }
+    planet = {
+        count = {
+            min = 0
+            max = 1
+        }
+        orbit_distance = {
+            min = 55
+            max = 60
+        }
+        orbit_angle = {
+            min = 90
+            max = 270
+        }
+        change_orbit = @base_moon_distance
+        moon = {
+            count = {
+                min = 0
+                max = 1
+            }
+            orbit_angle = {
+                min = 90
+                max = 270
+            }
+            orbit_distance = 5
+        }
+    }
+    planet = {
+        count = {
+            min = 0
+            max = 1
+        }
+        orbit_distance = {
+            min = 60
+            max = 70
+        }
+        orbit_angle = {
+            min = 90
+            max = 270
+        }
+        change_orbit = @base_moon_distance
+        moon = {
+            count = {
+                min = 0
+                max = 1
+            }
+            orbit_angle = {
+                min = 90
+                max = 270
+            }
+            orbit_distance = 5
+        }
+    }
+    init_effect = {
+        spawn_megastructure = {
+            type = "mega_art_installation_ruined"
+            planet = event_target:installation_star
+        }
+        create_ambient_object = {
+            type = "large_debris_object"
+            location = solar_system
+        }
+        create_ambient_object = {
+            type = "large_debris_object"
+            location = solar_system
+        }
+        create_ambient_object = {
+            type = "large_debris_object"
+            location = solar_system
+        }
+        create_ambient_object = {
+            type = "medium_debris_01_object"
+            location = solar_system
+        }
+        create_ambient_object = {
+            type = "medium_debris_02_object"
+            location = solar_system
+        }
+        create_ambient_object = {
+            type = "medium_debris_01_object"
+            location = solar_system
+        }
+        create_ambient_object = {
+            type = "medium_debris_02_object"
+            location = solar_system
+        }
+        create_ambient_object = {
+            type = "small_debris_object"
+            location = solar_system
+        }
+    }
+}

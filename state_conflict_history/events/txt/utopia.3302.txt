@@ -1,0 +1,48 @@
+namespace = utopia
+country_event = {
+    id = utopia.3302
+    title = "utopia.3000.name"
+    desc = "utopia.3302.desc"
+    diplomatic = yes
+    diplomatic_title = BLANK_STRING
+    force_open = yes
+    picture_event_data = {
+        portrait = shroud1
+        room = shroud_room
+    }
+    is_triggered_only = yes
+    immediate = {
+        set_country_flag = shroud_diplomacy_engaged
+        random_owned_leader = {
+            limit = {
+                OR = {
+                    has_trait = leader_trait_admiral_chosen
+                    has_trait = leader_trait_general_chosen
+                    has_trait = leader_trait_governor_chosen
+                    has_trait = leader_trait_ruler_chosen
+                    has_trait = leader_trait_scientist_chosen
+                    has_trait = leader_trait_admiral_psionic
+                    has_trait = leader_trait_general_psionic
+                    has_trait = leader_trait_governor_psionic
+                    has_trait = leader_trait_ruler_psionic
+                    has_trait = leader_trait_scientist_psionic
+                }
+            }
+            save_event_target_as = leader_to_kill
+        }
+    }
+    after = {
+        hidden_effect = {
+            remove_country_flag = shroud_diplomacy_engaged
+        }
+    }
+    option = {
+        name = "exit.shroud"
+        default_hide_option = yes
+        event_target:leader_to_kill = {
+            kill_leader = {
+                show_notification = no
+            }
+        }
+    }
+}

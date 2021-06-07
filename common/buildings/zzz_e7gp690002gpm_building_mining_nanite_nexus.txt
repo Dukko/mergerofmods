@@ -1,0 +1,49 @@
+gpm_building_mining_nanite_nexus = {
+    base_buildtime = 360
+    base_cap_amount = 1
+    category = resource
+    potential = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+        NOR = {
+            is_planet_class = pc_ringworld_habitable
+            is_planet_class = pc_cybrex
+            is_planet_class = pc_habitat
+            is_planet_class = pc_city
+        }
+    }
+    planet_modifier = {
+        planet_miners_minerals_produces_mult = 0.1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+        }
+        modifier = {
+            district_mining_max = 3
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 300
+            alloys = 100
+        }
+        upkeep = {
+            energy = 10
+        }
+    }
+    prerequisites = {
+        tech_gpm_precursor_mines_discovery_2
+    }
+    ai_weight = {
+        weight = 5000
+    }
+    ai_resource_production = {
+        minerals = 1
+        trigger = {
+            always = yes
+        }
+    }
+}

@@ -1,0 +1,148 @@
+@apsr18part3cost_minerals = 10000
+@apsr18part3cost_time = 1500
+@apsr18part3upkeep_energy = 25
+@apsr18part3upkeep_minerals = 25
+@apsr18part3job = 10
+apsr18_building_part3 = {
+    base_buildtime = @apsr18part3cost_time
+    icon = apsr18_building_part3
+    is_capped_by_modifier = no
+    category = resource
+    can_build = no
+    potential = {
+        has_modifier = "apsr18_planet_modifier"
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_apsr18_geologist_hive_add = @apsr18part3job
+            district_mining_max = 15
+            planet_max_districts_add = 10
+            planet_jobs_minerals_produces_mult = 0.2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_apsr18_geologist_machine_add = @apsr18part3job
+            district_mining_max = 15
+            planet_max_districts_add = 10
+            planet_jobs_minerals_produces_mult = 0.2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_apsr18_geologist_normal_add = @apsr18part3job
+            district_mining_max = 15
+            planet_max_districts_add = 10
+            planet_jobs_minerals_produces_mult = 0.2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_apsr18_advanced_1
+            }
+        }
+        modifier = {
+            district_mining_max = 3
+            planet_max_districts_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_apsr18_advanced_2
+            }
+        }
+        modifier = {
+            district_mining_max = 3
+            planet_max_districts_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_apsr18_advanced_3
+            }
+        }
+        modifier = {
+            district_mining_max = 3
+            planet_max_districts_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_apsr18_advanced_4
+            }
+        }
+        modifier = {
+            district_mining_max = 3
+            planet_max_districts_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_apsr18_advanced_5
+            }
+        }
+        modifier = {
+            district_mining_max = 3
+            planet_max_districts_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_deposit = apsr_relic_cube_deposit
+        }
+        modifier = {
+            district_mining_max = 10
+            planet_max_districts_add = 5
+        }
+    }
+    resources = {
+        category = planet_apsr_buildings
+        cost = {
+            minerals = @apsr18part3cost_minerals
+        }
+        upkeep = {
+            energy = @apsr18part3upkeep_energy
+            minerals = @apsr18part3upkeep_minerals
+        }
+        produces = {
+            apsr_knowledge = 0.3
+        }
+    }
+    prerequisites = {
+        "tech_apsr18_building_part3"
+    }
+    allow = {
+        has_major_upgraded_capital = yes
+    }
+    ai_weight = {
+        weight = 50000
+    }
+}

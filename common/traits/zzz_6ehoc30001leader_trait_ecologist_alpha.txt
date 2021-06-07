@@ -1,0 +1,28 @@
+leader_trait_ecologist_alpha = {
+    cost = 1
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ecologist_alpha.dds"
+    modifier = {
+        pop_environment_tolerance = 0.1
+        planet_jobs_minerals_produces_mult = -0.1
+    }
+    leader_potential_add = {
+        NOT = {
+            from = {
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+    }
+    leader_trait = {
+        governor
+    }
+    leader_class = {
+        governor
+    }
+    prerequisites = {
+        tech_alien_life_studies
+    }
+    opposites = {
+        "leader_trait_pioneer_alpha"
+    }
+}

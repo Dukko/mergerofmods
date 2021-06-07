@@ -1,0 +1,60 @@
+@apsr_advanced_4_cost = 175000
+@apsr_advanced_4_weight = 0.5
+tech_apsr20_advanced_4 = {
+    icon = tech_apsr20_advanced_1
+    cost = @apsr_advanced_4_cost
+    area = society
+    tier = 5
+    category = {
+        statecraft
+    }
+    prerequisites = {
+        "tech_apsr20_advanced_3"
+    }
+    weight = @apsr_advanced_4_weight
+    is_rare = yes
+    prereqfor_desc = {
+        custom = {
+            title = "TECH_APSR_ADVANCED_TITLE"
+            desc = "TECH_APSR_ADVANCED_DESC"
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_deposit = apsr20_deposit
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            end_game_years_passed < 10
+        }
+        modifier = {
+            factor = 5
+            has_origin = apsr_origin_unique_capital
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                OR = {
+                    has_global_flag = apsr_advanced_count_4
+                    has_global_flag = apsr_advanced_count_5
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            has_global_flag = apsr_advanced_factor_050
+        }
+        modifier = {
+            factor = 2
+            has_global_flag = apsr_advanced_factor_200
+        }
+    }
+    ai_weight = {
+        factor = 200
+    }
+}

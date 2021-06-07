@@ -1,0 +1,32 @@
+tech_transport_plating = {
+    cost = @tier3cost1
+    area = engineering
+    tier = 3
+    category = {
+        materials
+    }
+    prerequisites = {
+        "tech_reinforced_transport"
+        "tech_ship_armor_3"
+    }
+    weight = @tier3weight1
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 3
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+}

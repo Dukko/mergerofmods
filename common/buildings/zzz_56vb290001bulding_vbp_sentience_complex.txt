@@ -1,0 +1,30 @@
+bulding_vbp_sentience_complex = {
+    capital = yes
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = no
+    icon = building_primitive_labs
+    potential = {
+        exists = owner
+        owner = {
+            is_country_type = vbp_machine
+        }
+    }
+    planet_modifier = {
+        planet_amenities_add = 15
+        planet_stability_add = 15
+        job_vbp_consciousness_drone_add = 3
+        job_vbp_security_drone_add = 3
+    }
+    destroy_trigger = {
+        exists = owner
+        owner = {
+            is_primitive = no
+        }
+    }
+    convert_to = {
+        building_hive_capital
+        building_machine_capital
+        building_colony_shelter
+    }
+}

@@ -1,0 +1,16 @@
+tech_mem_lex_artifact = {
+    area = society
+    cost = @tier5cost2
+    tier = 4
+    is_rare = yes
+    is_dangerous = yes
+    is_reverse_engineerable = yes
+    category = {
+        psionics
+    }
+    ai_update_type = all
+    weight = 0
+    weight_modifier = {
+        factor = 0
+    }
+}

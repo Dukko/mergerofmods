@@ -1,0 +1,48 @@
+genius_director = {
+    category = genius
+    is_capped_by_modifier = yes
+    building_icon = building_academy_lab_3
+    icon = evaluator
+    possible = {
+        hidden_trigger = {
+            exists = owner
+        }
+        owner = {
+            OR = {
+                has_civic = civic_cutting_edge_developments
+            }
+        }
+        OR = {
+            has_trait = trait_genetic_optimization
+            has_trait = trait_robot_logic_engines
+        }
+    }
+    resources = {
+        category = planet_jobs
+        upkeep = {
+            consumer_goods = 2
+        }
+        produces = {
+            physics_research = 2
+            engineering_research = 2
+            society_research = 2
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_valid_civic = civic_technocracy
+                }
+            }
+            unity = 2
+        }
+    }
+    planet_modifier = {
+        planet_researchers_upkeep_mult = -0.1
+    }
+    pop_modifier = {
+    }
+    weight = {
+        weight = 10000
+    }
+}

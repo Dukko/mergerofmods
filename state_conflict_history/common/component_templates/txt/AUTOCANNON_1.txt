@@ -1,0 +1,32 @@
+weapon_component_template = {
+    type = instant
+    key = "AUTOCANNON_1"
+    size = small
+    icon = "GFX_ship_part_autocannon_1"
+    icon_frame = 1
+    prerequisites = {
+        "tech_autocannons_1"
+    }
+    component_set = "AUTOCANNON_1"
+    projectile_gfx = "auto_cannons_s"
+    tags = {
+        weapon_type_kinetic
+    }
+    ai_tags = {
+        weapon_role_anti_shield
+    }
+    upgrades_to = "AUTOCANNON_2"
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @s_t3_cost
+        }
+        upkeep = {
+            energy = @s_t3_upkeep_energy
+            alloys = @s_t3_upkeep_alloys
+        }
+    }
+    ai_weight = {
+        weight = 3
+    }
+}

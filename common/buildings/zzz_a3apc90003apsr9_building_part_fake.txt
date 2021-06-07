@@ -1,0 +1,29 @@
+@apsr9part1cost_minerals = 1500
+@apsr9part1cost_time = 750
+apsr9_building_part_fake = {
+    base_buildtime = @apsr9part1cost_time
+    icon = apsr9_building_part_fake
+    base_cap_amount = 1
+    is_capped_by_modifier = no
+    category = research
+    can_build = no
+    potential = {
+        has_modifier = "apsr9_planet_modifier"
+    }
+    resources = {
+        category = planet_apsr_buildings
+        cost = {
+            minerals = @apsr9part1cost_minerals
+        }
+    }
+    upgrades = {
+        apsr9_building_part1
+        apsr9_building_part2
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

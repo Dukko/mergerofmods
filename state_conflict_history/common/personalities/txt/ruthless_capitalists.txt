@@ -1,0 +1,96 @@
+ruthless_capitalists = {
+    aggressiveness = 1.3
+    trade_willingness = 1
+    bravery = 1
+    combat_bravery = 1
+    military_spending = 1
+    colony_spending = 1.1
+    federation_acceptance = -10
+    nap_acceptance = -10
+    commercial_pact_acceptance = 20
+    research_agreement_acceptance = 10
+    defensive_pact_acceptance = 0
+    migration_pact_acceptance = 0
+    advanced_start_chance = 20
+    weapon_preferences = weapon_type_explosive
+    armor_ratio = 0.4
+    shields_ratio = 0.5
+    hull_ratio = 0.1
+    threat_modifier = 1
+    threat_others_modifier = 0.75
+    friction_modifier = 0.5
+    claims_modifier = 1.5
+    behaviour = {
+        conqueror = yes
+        subjugator = no
+        liberator = no
+        opportunist = yes
+        slaver = yes
+        uplifter = no
+        purger = no
+        displacer = no
+        infiltrator = yes
+        dominator = yes
+        robot_exploiter = yes
+        robot_liberator = no
+        propagator = no
+        multispecies = yes
+        crisis_fighter = yes
+        wants_tribute = yes
+    }
+    allow = {
+        OR = {
+            is_country_type = default
+            is_country_type = ark
+        }
+        NOR = {
+            has_ethic = "ethic_fanatic_pacifist"
+            has_ethic = "ethic_socialism"
+            has_ethic = "ethic_fanatic_socialism"
+            has_ethic = "ethic_fanatic_xenophobe"
+            has_valid_civic = civic_environmentalist
+            has_valid_civic = civic_welfare_state
+        }
+        OR = {
+            is_megacorp = yes
+            has_valid_civic = civic_corporate_dominion
+            has_ethic = "ethic_capitalism"
+            has_ethic = "ethic_fanatic_capitalism"
+        }
+    }
+    weight_modifier = {
+        weight = 300
+        modifier = {
+            factor = 10
+            has_valid_civic = civic_industrial_economy
+        }
+        modifier = {
+            factor = 50
+            has_valid_civic = civic_merchant_guilds
+        }
+        modifier = {
+            factor = 1
+            has_trait = "trait_thrifty"
+        }
+        modifier = {
+            factor = 1
+            has_trait = "trait_industrious"
+        }
+        modifier = {
+            factor = 1
+            has_election_type = oligarchic
+        }
+        modifier = {
+            factor = 50
+            has_valid_civic = civic_merchant_guilds
+        }
+        modifier = {
+            factor = -2
+            has_ethic = "ethic_egalitarian"
+        }
+        modifier = {
+            factor = -10
+            has_ethic = "ethic_fanatic_egalitarian"
+        }
+    }
+}

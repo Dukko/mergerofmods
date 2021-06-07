@@ -1,0 +1,24 @@
+tech_mem_vazuran_xentronium_armor = {
+    area = engineering
+    cost = @tier5cost3
+    tier = 5
+    is_rare = yes
+    is_reverse_engineerable = no
+    category = {
+        materials
+    }
+    ai_update_type = all
+    weight = @tier5weight1
+    weight_modifier = {
+        factor = 3
+        modifier = {
+            factor = 0
+            NOT = {
+                any_country = {
+                    has_country_flag = mem_vazuran_invader
+                    has_research_agreement = ROOT
+                }
+            }
+        }
+    }
+}

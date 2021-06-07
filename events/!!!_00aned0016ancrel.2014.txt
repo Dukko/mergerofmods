@@ -1,0 +1,57 @@
+namespace = ancrel
+country_event = {
+    id = ancrel.2014
+    hide_window = yes
+    fire_only_once = yes
+    is_triggered_only = yes
+    immediate = {
+        set_global_flag = last_baol_system_discovered
+        set_country_flag = last_baol_system
+        if = {
+            limit = {
+                any_system_within_border = {
+                    has_star_flag = precursor_baol_1
+                }
+            }
+            random_system_within_border = {
+                limit = {
+                    has_star_flag = precursor_baol_1
+                }
+                save_event_target_as = precursor_spawn_system
+            }
+        }
+        else = {
+            random_system_within_border = {
+                save_event_target_as = precursor_spawn_system
+            }
+        }
+        event_target:precursor_spawn_system = {
+            spawn_system = {
+                min_distance = 10
+                max_distance = 20
+                max_jumps = 0
+                initializer = "last_baol_system"
+            }
+            if = {
+                limit = {
+                    last_created_system = {
+                        NOT = {
+                            has_hyperlane_to = prev
+                        }
+                    }
+                }
+                add_hyperlane = {
+                    from = this
+                    to = last_created_system
+                }
+            }
+            else = {
+                add_extra_hyperlane_to_spawned_system_effect = yes
+            }
+        }
+        country_event = {
+            id = ancrel.2015
+            days = 10
+        }
+    }
+}

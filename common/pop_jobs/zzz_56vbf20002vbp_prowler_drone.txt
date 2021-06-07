@@ -1,0 +1,28 @@
+vbp_prowler_drone = {
+    category = simple_drone
+    is_capped_by_modifier = no
+    icon = spawning_drone
+    planet_modifier = {
+        planet_amenities_add = 3
+    }
+    possible_pre_triggers = {
+        has_owner = yes
+        is_sapient = yes
+    }
+    possible = {
+        exists = owner
+        owner = {
+            is_country_type = vbp_hive
+            has_country_flag = vbp_hive_id_stage
+        }
+    }
+    resources = {
+        category = planet_farmers
+        produces = {
+            food = 2
+        }
+    }
+    weight = {
+        weight = 1
+    }
+}

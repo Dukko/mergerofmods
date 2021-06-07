@@ -1,0 +1,25 @@
+pc_tt_red_star = {
+    entity = "tt_red_star_class_star_entity"
+    entity_scale = @star_standard_scale
+    picture = "pc_tt_star"
+    icon_frame = 26
+    atmosphere_color = hsv {
+        0.01
+        0.9
+        0.6
+    }
+    atmosphere_intensity = 0.1
+    atmosphere_width = 1
+    star = yes
+    min_distance_from_sun = 0
+    max_distance_from_sun = 0
+    spawn_odds = 0
+    extra_orbit_size = 0
+    extra_planet_count = 0
+    chance_of_ring = 0
+    planet_size = {
+        min = 63
+        max = 91
+    }
+    colonizable = no
+}

@@ -1,0 +1,42 @@
+@RepeatRepeatable = 0.5
+@bCurveRepeatableTechBaseCost = 50000
+@bCurveRepeatableTechLevelCost = 5000
+tech_repeatable_improved_armor_output = {
+    area = engineering
+    cost = @bCurveRepeatableTechBaseCost
+    cost_per_level = @bCurveRepeatableTechLevelCost
+    tier = @repeatableTechTier
+    category = {
+        materials
+    }
+    ai_update_type = all
+    levels = -1
+    prerequisites = {
+        "tech_ship_armor_3"
+    }
+    weight = @repeatableTechWeight
+    weight_modifier = {
+        factor = @repatableTechFactor
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 1
+    }
+    weight_groups = {
+        repeatable
+    }
+    mod_weight_if_group_picked = {
+        repeatable = @RepeatRepeatable
+    }
+    modifier = {
+        ship_armor_mult = 0.05
+    }
+}

@@ -1,0 +1,131 @@
+district_nsc_freebooter_hab_mining = {
+    base_buildtime = 540
+    is_capped_by_modifier = no
+    icon = district_mining
+    show_on_uncolonized = {
+        exists = space_owner
+        space_owner = {
+            is_lithoid_empire = yes
+        }
+        uses_district_set = nsc_freebooter_habitat
+    }
+    potential = {
+        exists = owner
+        owner = {
+            is_lithoid_empire = yes
+        }
+        uses_district_set = nsc_freebooter_habitat
+    }
+    allow = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_mining
+    }
+    resources = {
+        category = planet_district_nsc_freebooter_hab_mining
+        cost = {
+            minerals = 500
+        }
+        upkeep = {
+            energy = 3
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_agrarian_idyll
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_mining_drone_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_mining_drone_add = 2
+            planet_housing_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire_spiritualist = no
+            }
+        }
+        modifier = {
+            job_miner_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_fallen_empire_spiritualist = yes
+            }
+        }
+        modifier = {
+            job_fe_acolyte_mine_add = 2
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_mining_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire_spiritualist = no
+            }
+        }
+        text = job_miner_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_fallen_empire_spiritualist = yes
+            }
+        }
+        text = job_fe_acolyte_mine_effect_desc
+    }
+    ai_resource_production = {
+        minerals = 10
+        trigger = {
+            always = yes
+        }
+    }
+}

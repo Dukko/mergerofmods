@@ -1,0 +1,86 @@
+building_institute_atlantis = {
+    base_buildtime = @b2_time
+    base_cap_amount = 1
+    add_to_first_building_slot = yes
+    category = government
+    potential = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+        exists = owner
+        owner = {
+            is_regular_empire = yes
+        }
+        owner = {
+            has_civic = civic_tw_atlantis
+        }
+    }
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            has_modifier = resort_colony
+            has_modifier = slave_colony
+            owner = {
+                is_gestalt = no
+                is_regular_empire = no
+            }
+            buildings_no_exotic_gases = yes
+        }
+    }
+    convert_to = {
+        building_supercomputer
+    }
+    allow = {
+        has_building = building_ancient_palace_at
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 2000
+            exotic_gases = @b2_rare_cost
+        }
+        upkeep = {
+            energy = 15
+            exotic_gases = @b2_rare_upkeep
+        }
+        produces = {
+            society_research = 50
+            physics_research = 50
+            engineering_research = 50
+        }
+    }
+    planet_modifier = {
+        planet_researchers_produces_mult = 0.2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_building = building_institute
+        }
+        planet_researchers_produces_mult = -0.2
+    }
+    country_modifier = {
+    }
+    prerequisites = {
+        "tech_global_research_initiative"
+    }
+    show_tech_unlock_if = {
+        is_regular_empire = yes
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 100
+            OR = {
+                has_building = building_atlantis_lab_1
+                has_building = building_atlantis_lab_2
+                has_building = building_atlantis_lab_3
+                has_district = district_hab_science
+                has_district = district_rw_science
+                jobs_any_research = yes
+            }
+        }
+    }
+}

@@ -1,0 +1,63 @@
+"Indrithi Galactic Inheritance" = {
+    key = "Indrithi Galactic Inheritance"
+    ship_prefix = "IFS"
+    species = {
+        class = "MOL"
+        portrait = "mol5"
+        name = "Indrith"
+        plural = "Indrithi"
+        adjective = "Indrithi"
+        species_bio = "Rising from an environment full of megapredators, only their devious intelligence and ferocious protective instincts ensured the Indrithi would become the dominant species of their homeworld. Their early civilizations waged brutal wars for dominance of Minh until a single undeniable empire spanned the entire globe. In a galaxy populated by rival empires, their traits and their history are certain to mean the Indrithi will find conflict among the stars early and often. But to most Indrithi, all of this is as it should be, for their ultimate dominance of the universe belongs to the strongest species, and their place in that role is a manifest certainty."
+        name_list = "just-name-lists_molluscoid2"
+        trait = "trait_natural_physicists"
+        trait = "trait_talented"
+    }
+    name = "Indrithi Galactic Inheritance"
+    adjective = "Indrithi"
+    authority = "auth_imperial"
+    government = "gov_blood_court"
+    planet_name = "Minh"
+    planet_class = "pc_tidallylocked"
+    system_name = "Ghar"
+    initializer = ""
+    graphical_culture = "molluscoid_01"
+    city_graphical_culture = "molluscoid_01"
+    empire_flag = {
+        icon = {
+            category = "just-more-flags"
+            file = "flag_purifier1.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "fabric_circle.dds"
+        }
+        colors = {
+            "black"
+            "burgundy"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = male
+        name = "Yggash the Destroyer"
+        portrait = "mol5"
+        texture = 1
+        hair = 0
+        clothes = 0
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "outdoor7_room"
+    spawn_enabled = yes
+    ethic = "ethic_fanatic_authoritarian"
+    ethic = "ethic_fanatic_xenophobe"
+    ethic = "ethic_militarist"
+    civics = {
+        "civic_aristocratic_elite"
+        "civic_fanatic_purifiers"
+        "civic_reanimated_armies"
+    }
+    origin = "origin_default"
+}

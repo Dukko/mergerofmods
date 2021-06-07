@@ -1,0 +1,8 @@
+random_list = {
+    name = "rl_voidspawn_egg"
+    planets = {
+        pc_savannah
+        pc_desert
+        pc_arid
+    }
+}

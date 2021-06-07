@@ -1,0 +1,16 @@
+trait_just-more-traits_lethargic = {
+    cost = -2
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_industrious"
+        "trait_just-more-traits_lazy"
+        "trait_just-more-traits_hardworking"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    modifier = {
+        planet_jobs_minerals_produces_mult = -0.15
+    }
+}

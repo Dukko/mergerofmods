@@ -1,0 +1,38 @@
+genius_robotor = {
+    category = genius
+    is_capped_by_modifier = yes
+    icon = roboticist
+    building_icon = building_academy_lab_3
+    possible = {
+        hidden_trigger = {
+            exists = owner
+        }
+        owner = {
+            OR = {
+                has_civic = civic_cutting_edge_developments
+            }
+        }
+        OR = {
+            has_trait = trait_genetic_optimization
+            has_trait = trait_robot_logic_engines
+        }
+    }
+    resources = {
+        category = planet_jobs
+        upkeep = {
+            techcaches = 1
+            alloys = 2
+        }
+        produces = {
+            unity = 1
+        }
+    }
+    planet_modifier = {
+        planet_pop_assembly_add = 3
+    }
+    pop_modifier = {
+    }
+    weight = {
+        weight = 10000
+    }
+}

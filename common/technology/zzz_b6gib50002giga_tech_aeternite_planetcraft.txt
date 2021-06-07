@@ -1,0 +1,20 @@
+giga_tech_aeternite_planetcraft = {
+    cost = 300000
+    area = engineering
+    tier = 5
+    category = {
+        voidcraft
+    }
+    is_rare = yes
+    weight = 0
+    is_reverse_engineerable = no
+    modifier = {
+        megastructure_build_speed_mult = 0.15
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "allow_repair_aet_planetcraft"
+            desc = "allow_repair_aet_planetcraft_desc"
+        }
+    }
+}

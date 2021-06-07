@@ -1,0 +1,22 @@
+trait_plentiful_traditions_robot_supercharged_drills = {
+    cost = 2
+    initial = no
+    randomized = no
+    prerequisites = {
+        tech_plentiful_traditions_cybernetics_construct_amplifiers
+    }
+    opposites = {
+        trait_plentiful_traditions_robot_minerals1
+        trait_plentiful_traditions_robot_minerals2
+        trait_plentiful_traditions_robot_minerals3
+        trait_plentiful_traditions_robot_minerals4
+    }
+    allowed_archetypes = {
+        ROBOT
+        MACHINE
+    }
+    modifier = {
+        planet_jobs_minerals_produces_mult = 0.15
+        planet_jobs_energy_produces_mult = -0.1
+    }
+}

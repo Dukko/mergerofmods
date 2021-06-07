@@ -1,0 +1,39 @@
+eb_strategicresource_tech = {
+    cost = @tier2cost3
+    area = physics
+    tier = 2
+    category = {
+        materials
+    }
+    prerequisites = {
+        "tech_basic_science_lab_1"
+    }
+    weight = @tier2weight3
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOR = {
+                has_technology = tech_rare_crystals
+                has_technology = tech_exotic_gases
+                has_technology = tech_volatile_motes
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 5
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+}

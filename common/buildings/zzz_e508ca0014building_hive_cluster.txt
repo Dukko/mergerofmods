@@ -1,0 +1,96 @@
+building_hive_cluster = {
+    base_buildtime = @b2_time
+    can_build = no
+    category = unity
+    potential = {
+        exists = owner
+        owner = {
+            is_hive_empire = yes
+        }
+    }
+    allow = {
+        has_upgraded_capital = yes
+        buildings_upgrade_allow = yes
+    }
+    destroy_trigger = {
+        exists = owner
+        owner = {
+            is_hive_empire = no
+        }
+    }
+    convert_to = {
+        building_holotemple
+        building_simulation_2
+        building_heritage_site
+        building_corporate_site
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b2_minerals
+            exotic_gases = @b2_rare_cost
+        }
+        upkeep = {
+            energy = @b2_upkeep
+            exotic_gases = @b2_rare_upkeep
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_edict = synaptic_reinforcement
+                }
+            }
+            energy = 2
+        }
+    }
+    planet_modifier = {
+        job_synapse_drone_add = @b2_jobs
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_swapped_tradition = tr_domination_synaptic_extensions
+            }
+        }
+        modifier = {
+            planet_housing_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_edict = synaptic_reinforcement
+            }
+        }
+        job_maintenance_drone_add = 1
+    }
+    prerequisites = {
+        "tech_hive_cluster"
+    }
+    upgrades = {
+        building_hive_confluence
+    }
+    triggered_desc = {
+        text = job_synapse_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                has_edict = synaptic_reinforcement
+            }
+        }
+        text = job_maintenance_drone_effect_desc
+    }
+    on_queued = {
+        planet = {
+            set_timed_planet_flag = {
+                flag = recent_admin_building_built
+                days = 720
+            }
+        }
+    }
+}

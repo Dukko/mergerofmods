@@ -1,0 +1,76 @@
+namespace = galcom
+country_event = {
+    id = galcom.60
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        if = {
+            limit = {
+                NOR = {
+                    has_tech_option = tech_mine_zro
+                    has_technology = tech_mine_zro
+                }
+                is_active_resolution = resolution_galacticstudies_extradimensional_experimentation
+            }
+            country_event = {
+                id = federations.10020
+                days = 5
+            }
+        }
+        every_country = {
+            limit = {
+                is_galactic_community_member = yes
+                NOT = {
+                    is_same_value = root
+                }
+            }
+            add_opinion_modifier = {
+                who = root
+                modifier = opinion_fellow_galcom_member
+            }
+            root = {
+                add_opinion_modifier = {
+                    who = prev
+                    modifier = opinion_fellow_galcom_member
+                }
+            }
+        }
+        if = {
+            limit = {
+                has_global_flag = grand_custodianship_declared
+            }
+            every_country = {
+                limit = {
+                    is_galactic_community_member = yes
+                    NOT = {
+                        is_same_value = root
+                    }
+                }
+                add_opinion_modifier = {
+                    who = root
+                    modifier = opinion_prosperously_unified_galaxy
+                }
+                root = {
+                    add_opinion_modifier = {
+                        who = prev
+                        modifier = opinion_prosperously_unified_galaxy
+                    }
+                }
+            }
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_country_flag = has_market_access
+                }
+                any_country = {
+                    is_galactic_community_member = yes
+                    has_country_flag = has_market_access
+                }
+            }
+            country_event = {
+                id = action.115
+            }
+        }
+    }
+}

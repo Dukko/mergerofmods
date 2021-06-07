@@ -1,0 +1,42 @@
+lrsk_gov_var_gov_social_democracy = {
+    ruler_title = LRSK_GOV_VAR_RT_GENERAL_COORDINATOR
+    possible = {
+        OR = {
+            has_authority = auth_democratic
+            has_authority = auth_direct_democratic
+            has_authority = auth_strict_democratic
+            has_authority = auth_democratic_dictatorship
+            has_authority = auth_dem_dict_dummy
+        }
+        has_valid_civic = lrsk_gov_var_civic_institutionalized_collectivism
+        OR = {
+            has_ethic = ethic_socialism
+            has_ethic = ethic_fanatic_socialism
+        }
+    }
+    election_candidates = {
+        modifier = {
+            add = 1000
+            OR = {
+                leader_class = ruler
+            }
+        }
+        modifier = {
+            add = 500
+            OR = {
+                leader_class = governor
+                leader_class = scientist
+            }
+        }
+        modifier = {
+            add = 100
+            OR = {
+                leader_class = admiral
+                leader_class = general
+            }
+        }
+    }
+    weight = {
+        base = 1000
+    }
+}

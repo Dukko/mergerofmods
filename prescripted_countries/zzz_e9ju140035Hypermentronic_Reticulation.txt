@@ -1,0 +1,64 @@
+"Hypermentronic Reticulation" = {
+    key = "Hypermentronic Reticulation"
+    ship_prefix = "RCV"
+    species = {
+        class = "MACHINE"
+        portrait = "sd_rep_robot"
+        name = "Hypermind"
+        plural = "Hyperminds"
+        adjective = "Hyperminder"
+        species_bio = "What happens when an eccentric hyper-rich industrialist builds an artificially intelligent quantum network to assist with complex research tasks? You get a machine consciousness with a really sarcastic sense of humor. Whatever became of its creator or creators, the Hypermind Nexus does not know, but then again if it did it would probably be disappointed."
+        name_list = "just-name-lists_machine2"
+        trait = "trait_machine_unit"
+        trait = "trait_robot_efficient_processors"
+        trait = "trait_robot_logic_engines"
+        trait = "trait_robot_luxurious"
+        trait = "trait_just-more-traits_robot_bespokecircuitry"
+    }
+    name = "Hypermentronic Reticulation"
+    adjective = "Hyperminder"
+    authority = "auth_machine_intelligence"
+    government = "gov_machine_research"
+    planet_name = "Central Core"
+    planet_class = "pc_geothermal"
+    system_name = "Napier"
+    initializer = ""
+    graphical_culture = "humanoid_01"
+    city_graphical_culture = "mammalian_01"
+    empire_flag = {
+        icon = {
+            category = "just-more-flags"
+            file = "flag_machine5.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "fabric_ring.dds"
+        }
+        colors = {
+            "blue"
+            "light_blue"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = female
+        name = "Nexus"
+        portrait = "sd_rep_robot"
+        texture = 2
+        hair = 0
+        clothes = 0
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "industrial3_room"
+    spawn_enabled = yes
+    ethic = "ethic_gestalt_consciousness"
+    civics = {
+        "civic_machine_introspective"
+        "civic_machine_predictive_analysis"
+        "xvcv_mdlc_civic_efficient_administration"
+    }
+    origin = "origin_machine"
+}

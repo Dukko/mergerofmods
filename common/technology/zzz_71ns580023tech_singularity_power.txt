@@ -1,0 +1,52 @@
+@tier6cost3 = 68000
+tech_singularity_power = {
+    area = physics
+    cost = @tier6cost3
+    tier = 5
+    category = {
+        particles
+    }
+    ai_update_type = military
+    prerequisites = {
+        "tech_naquadria_power"
+    }
+    weight = @tier3weight3
+    gateway = power_generation
+    prereqfor_desc = {
+        hide_prereq_for_desc = component
+        custom = {
+            title = "TECH_UNLOCK_SINGULARITY_POWER_TITLE"
+            desc = "TECH_UNLOCK_SINGULARITY_POWER_DESC"
+        }
+    }
+    weight_modifier = {
+        factor = 1.5
+        modifier = {
+            factor = 10
+            any_neighbor_country = {
+                has_technology = tech_singularity_power
+            }
+        }
+        modifier = {
+            factor = 3
+            has_technology = tech_battleships
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 50
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+}

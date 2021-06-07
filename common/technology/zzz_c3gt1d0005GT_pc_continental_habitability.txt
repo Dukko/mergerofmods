@@ -1,0 +1,140 @@
+GT_pc_continental_habitability = {
+    cost = @tier1cost4
+    area = society
+    tier = 1
+    category = {
+        new_worlds
+    }
+    is_rare = yes
+    prerequisites = {
+        "tech_frontier_health"
+    }
+    weight = @tier2weight2
+    modifier = {
+        pc_continental_habitability = 0.05
+        pc_cascadian_habitability = 0.05
+        pc_retinal_habitability = 0.05
+        pc_forest_habitability = 0.05
+        pc_lake_habitability = 0.05
+        pc_tepid_habitability = 0.05
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            years_passed > 50
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                any_planet_within_border = {
+                    is_planet_class = pc_continental
+                }
+                any_planet_within_border = {
+                    is_planet_class = pc_cascadian
+                }
+                any_planet_within_border = {
+                    is_planet_class = pc_retinal
+                }
+                any_planet_within_border = {
+                    is_planet_class = pc_forest
+                }
+                any_planet_within_border = {
+                    is_planet_class = pc_lake
+                }
+                any_planet_within_border = {
+                    is_planet_class = pc_tepid
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                species = {
+                    has_trait = trait_pc_continental_preference
+                }
+                species = {
+                    has_trait = trait_pc_cascadian_preference
+                }
+                species = {
+                    has_trait = trait_pc_retinal_preference
+                }
+                species = {
+                    has_trait = trait_pc_forest_preference
+                }
+                species = {
+                    has_trait = trait_pc_lake_preference
+                }
+                species = {
+                    has_trait = trait_pc_tepid_preference
+                }
+            }
+        }
+        factor = 0.1
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOR = {
+                any_planet_within_border = {
+                    is_planet_class = pc_continental
+                }
+                any_planet_within_border = {
+                    is_planet_class = pc_cascadian
+                }
+                any_planet_within_border = {
+                    is_planet_class = pc_retinal
+                }
+                any_planet_within_border = {
+                    is_planet_class = pc_forest
+                }
+                any_planet_within_border = {
+                    is_planet_class = pc_lake
+                }
+                any_planet_within_border = {
+                    is_planet_class = pc_tepid
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                species = {
+                    has_trait = trait_pc_continental_preference
+                }
+                species = {
+                    has_trait = trait_pc_cascadian_preference
+                }
+                species = {
+                    has_trait = trait_pc_retinal_preference
+                }
+                species = {
+                    has_trait = trait_pc_forest_preference
+                }
+                species = {
+                    has_trait = trait_pc_lake_preference
+                }
+                species = {
+                    has_trait = trait_pc_tepid_preference
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+}

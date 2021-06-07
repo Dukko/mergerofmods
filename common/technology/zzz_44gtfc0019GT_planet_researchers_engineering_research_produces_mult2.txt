@@ -1,0 +1,36 @@
+GT_planet_researchers_engineering_research_produces_mult2 = {
+    cost = @tier3cost3
+    area = engineering
+    tier = 3
+    category = {
+        industry
+    }
+    prerequisites = {
+        "tech_engineering_2"
+        "GT_planet_researchers_engineering_research_produces_mult"
+    }
+    weight = @tier4weight3
+    modifier = {
+        planet_researchers_engineering_research_produces_add = 0.15
+        station_researchers_produces_mult = 0.15
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 5
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+}

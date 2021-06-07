@@ -1,0 +1,477 @@
+building_simple_testing_grounds = {
+    base_buildtime = 0
+    can_demolish = yes
+    category = research
+    potential = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+    }
+    allow = {
+    }
+    destroy_trigger = {
+        OR = {
+            OR = {
+                has_modifier = slave_colony
+                has_modifier = resort_colony
+            }
+            AND = {
+                exists = owner
+                owner = {
+                    is_ai = yes
+                }
+                AND = {
+                    free_building_slots = 0
+                    free_jobs >= 1
+                }
+            }
+        }
+    }
+    triggered_desc = {
+        text = dash_14
+    }
+    triggered_desc = {
+        text = buildings_effect_properties
+    }
+    triggered_desc = {
+        text = buildings_effect_basic_desc
+    }
+    triggered_desc = {
+        text = simple_testing_grounds_effect
+    }
+    triggered_desc = {
+        text = dash_14
+    }
+    triggered_desc = {
+        text = base_testing_grounds_effect
+    }
+    triggered_desc = {
+        trigger = {
+            planet = {
+                is_planet_class = pc_gaia
+            }
+        }
+        text = gaia_testing_grounds_effect
+    }
+    triggered_desc = {
+        trigger = {
+            planet = {
+                is_planet_class = pc_nuked
+            }
+        }
+        text = nuked_testing_grounds_effect
+    }
+    triggered_desc = {
+        trigger = {
+            planet = {
+                is_planet_class = pc_city
+            }
+        }
+        text = city_testing_grounds_effect
+    }
+    triggered_desc = {
+        trigger = {
+            planet = {
+                is_planet_class = pc_hive
+            }
+        }
+        text = hive_testing_grounds_effect
+    }
+    triggered_desc = {
+        trigger = {
+            planet = {
+                is_planet_class = pc_relic
+            }
+        }
+        text = relic_testing_grounds_effect
+    }
+    triggered_desc = {
+        trigger = {
+            planet = {
+                is_planet_class = pc_desert
+            }
+        }
+        text = desert_testing_grounds_effect
+    }
+    triggered_desc = {
+        trigger = {
+            planet = {
+                is_planet_class = pc_arid
+            }
+        }
+        text = arid_testing_grounds_effect
+    }
+    triggered_desc = {
+        trigger = {
+            planet = {
+                is_planet_class = pc_savannah
+            }
+        }
+        text = savannah_testing_grounds_effect
+    }
+    triggered_desc = {
+        trigger = {
+            planet = {
+                is_planet_class = pc_arctic
+            }
+        }
+        text = arctic_testing_grounds_effect
+    }
+    triggered_desc = {
+        trigger = {
+            planet = {
+                is_planet_class = pc_tundra
+            }
+        }
+        text = tundra_testing_grounds_effect
+    }
+    triggered_desc = {
+        trigger = {
+            planet = {
+                is_planet_class = pc_alpine
+            }
+        }
+        text = alpine_testing_grounds_effect
+    }
+    triggered_desc = {
+        trigger = {
+            planet = {
+                is_planet_class = pc_ocean
+            }
+        }
+        text = ocean_testing_grounds_effect
+    }
+    triggered_desc = {
+        trigger = {
+            planet = {
+                is_planet_class = pc_tropical
+            }
+        }
+        text = tropical_testing_grounds_effect
+    }
+    triggered_desc = {
+        trigger = {
+            planet = {
+                is_planet_class = pc_continental
+            }
+        }
+        text = continental_testing_grounds_effect
+    }
+    resources = {
+        category = planet_buildings
+        produces = {
+            engineering_research = 2
+            physics_research = 2
+            society_research = 2
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    is_planet_class = pc_gaia
+                }
+            }
+            physics_research = 6
+            engineering_research = 6
+            society_research = 6
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    is_planet_class = pc_nuked
+                }
+            }
+            physics_research = 10
+            engineering_research = 6
+            society_research = 2
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    is_planet_class = pc_city
+                }
+            }
+            physics_research = 6
+            engineering_research = 10
+            society_research = 2
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    is_planet_class = pc_hive
+                }
+            }
+            society_research = 18
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    is_planet_class = pc_relic
+                }
+            }
+            physics_research = 18
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    is_planet_class = pc_machine
+                }
+            }
+            engineering_research = 18
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    is_planet_class = pc_desert
+                }
+            }
+            engineering_research = 6
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    is_planet_class = pc_arid
+                }
+            }
+            engineering_research = 4
+            physics_research = 2
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    is_planet_class = pc_savannah
+                }
+            }
+            engineering_research = 4
+            society_research = 2
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    is_planet_class = pc_arctic
+                }
+            }
+            physics_research = 6
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    is_planet_class = pc_tundra
+                }
+            }
+            physics_research = 4
+            engineering_research = 2
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    is_planet_class = pc_alpine
+                }
+            }
+            physics_research = 4
+            society_research = 2
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    is_planet_class = pc_ocean
+                }
+            }
+            society_research = 6
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    is_planet_class = pc_tropical
+                }
+            }
+            society_research = 4
+            physics_research = 2
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    is_planet_class = pc_continental
+                }
+            }
+            society_research = 4
+            engineering_research = 2
+        }
+    }
+    upgrades = {
+        building_super_computers_station
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 1000
+            AND = {
+                free_building_slots >= 1
+                free_jobs = 0
+                free_amenities > 2
+                NOT = {
+                    owner = {
+                        has_monthly_income = {
+                            resource = energy
+                            value < 25
+                        }
+                        has_monthly_income = {
+                            resource = minerals
+                            value < 25
+                        }
+                    }
+                }
+            }
+            OR = {
+                AND = {
+                    has_upgraded_capital = no
+                    has_major_upgraded_capital = no
+                    has_fully_upgraded_capital = no
+                }
+                AND = {
+                    AND = {
+                        count_owned_pop = {
+                            limit = {
+                                is_specialist_researcher = yes
+                            }
+                            count > 40
+                        }
+                        owner = {
+                            NOT = {
+                                has_technology = tech_basic_science_lab_2
+                                has_technology = tech_hyper_processors
+                            }
+                        }
+                    }
+                    AND = {
+                        count_owned_pop = {
+                            limit = {
+                                is_specialist_researcher = yes
+                            }
+                            count > 100
+                        }
+                        owner = {
+                            has_technology = tech_basic_science_lab_2
+                            NOT = {
+                                has_technology = tech_hyper_processors
+                            }
+                        }
+                    }
+                    AND = {
+                        count_owned_pop = {
+                            limit = {
+                                is_specialist_researcher = yes
+                            }
+                            count > 160
+                        }
+                        owner = {
+                            has_technology = tech_basic_science_lab_3
+                            NOT = {
+                                has_technology = tech_hyper_processors
+                            }
+                        }
+                    }
+                    AND = {
+                        count_owned_pop = {
+                            limit = {
+                                is_specialist_researcher = yes
+                            }
+                            count > 13
+                        }
+                        owner = {
+                            has_technology = tech_hyper_processors
+                            NOT = {
+                                has_technology = tech_basic_science_lab_2
+                            }
+                        }
+                    }
+                    AND = {
+                        count_owned_pop = {
+                            limit = {
+                                is_specialist_researcher = yes
+                            }
+                            count > 33
+                        }
+                        owner = {
+                            has_technology = tech_hyper_processors
+                            has_technology = tech_basic_science_lab_2
+                        }
+                    }
+                    AND = {
+                        count_owned_pop = {
+                            limit = {
+                                is_specialist_researcher = yes
+                            }
+                            count > 53
+                        }
+                        owner = {
+                            has_technology = tech_hyper_processors
+                            has_technology = tech_basic_science_lab_3
+                        }
+                    }
+                    AND = {
+                        count_owned_pop = {
+                            limit = {
+                                is_specialist_researcher = yes
+                            }
+                            count > 8
+                        }
+                        owner = {
+                            has_technology = tech_quantum_computers
+                            NOT = {
+                                has_technology = tech_basic_science_lab_2
+                            }
+                        }
+                    }
+                    AND = {
+                        count_owned_pop = {
+                            limit = {
+                                is_specialist_researcher = yes
+                            }
+                            count > 20
+                        }
+                        owner = {
+                            has_technology = tech_quantum_computers
+                            has_technology = tech_basic_science_lab_2
+                        }
+                    }
+                    AND = {
+                        count_owned_pop = {
+                            limit = {
+                                is_specialist_researcher = yes
+                            }
+                            count > 32
+                        }
+                        owner = {
+                            has_technology = tech_quantum_computers
+                            has_technology = tech_basic_science_lab_3
+                        }
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            has_building = building_simple_testing_grounds
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_country_flag = buildings_new_simple_testing_grounds
+            }
+        }
+    }
+    on_built = {
+        owner = {
+            set_timed_country_flag = {
+                flag = buildings_new_simple_testing_grounds
+                days = 60
+            }
+        }
+    }
+    prerequisites = {
+        "tech_basic_exo_testing"
+    }
+}

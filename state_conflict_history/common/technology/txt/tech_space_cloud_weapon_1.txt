@@ -1,0 +1,49 @@
+tech_space_cloud_weapon_1 = {
+    area = physics
+    cost = @tier2cost3
+    tier = 2
+    is_rare = yes
+    category = {
+        particles
+    }
+    ai_update_type = military
+    weight = 0
+    ai_weight = {
+        factor = 2
+        modifier = {
+            factor = 5000
+            has_technology = tech_energy_torpedoes_2
+        }
+        modifier = {
+            factor = 100
+            NOT = {
+                has_tech_option = tech_lasers_4
+            }
+            NOT = {
+                has_technology = tech_lasers_4
+            }
+        }
+        modifier = {
+            factor = 500
+            OR = {
+                has_tech_option = tech_energy_torpedoes_1
+                has_tech_option = tech_energy_torpedoes_2
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+}

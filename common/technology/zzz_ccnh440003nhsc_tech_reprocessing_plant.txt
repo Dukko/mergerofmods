@@ -1,0 +1,56 @@
+nhsc_tech_reprocessing_plant = {
+    area = engineering
+    category = {
+        materials
+    }
+    tier = 4
+    cost = @tier4cost2
+    weight = @tier4weight2
+    prerequisites = {
+    }
+    is_rare = yes
+    potential = {
+        NOT = {
+            has_global_flag = ESC_scrapper_tech_forbidden
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = scrapper_killed
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+    }
+    ai_weight = {
+        factor = @ESC_AI_tech_weight_multiplier
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = technosphere_studied
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+    }
+}

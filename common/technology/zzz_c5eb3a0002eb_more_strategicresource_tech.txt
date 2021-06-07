@@ -1,0 +1,37 @@
+eb_more_strategicresource_tech = {
+    cost = @tier3cost3
+    area = physics
+    tier = 3
+    category = {
+        materials
+    }
+    prerequisites = {
+        "eb_strategicresource_tech"
+    }
+    weight = @tier3weight4
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_technology = tech_mine_dark_matter
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 5
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+}

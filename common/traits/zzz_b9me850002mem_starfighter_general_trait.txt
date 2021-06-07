@@ -1,0 +1,15 @@
+mem_starfighter_general_trait = {
+    icon = "gfx/interface/icons/traits/leader_traits/trait_mem_starfighter_leader.dds"
+    modifier = {
+        army_health = 0.1
+        army_damage_mult = 0.1
+    }
+    leader_trait = {
+        general
+    }
+    initial = no
+    randomized = no
+    leader_class = {
+        general
+    }
+}

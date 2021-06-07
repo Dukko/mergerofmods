@@ -1,0 +1,66 @@
+"Lithine Continuity Alliance" = {
+    key = "Lithine Continuity Alliance"
+    ship_prefix = "LCS"
+    species = {
+        class = "HUM"
+        portrait = "humanoid_hp_07"
+        name = "Lithin"
+        plural = "Lithini"
+        adjective = "Lithinic"
+        species_bio = "The supporters of the Continuinty Alliance are absolutely convinced that the Lithinic way of life is the only way of life. That is, a way of life wherein most members of society must tightly pack into hyperurbanized centers choked by pollution and endure the terrorizing whims of a cannibalistic death cult. Their religion teaches that this suffering is necessary to reach paradise, and nothing must stand between the Lithini and paradise."
+        name_list = "just-name-lists_humanoid7"
+        trait = "trait_just-more-traits_ascetic"
+        trait = "trait_communal"
+        trait = "trait_industrious"
+        trait = "trait_just-more-traits_addled"
+        trait = "trait_repugnant"
+    }
+    name = "Lithine Continuity Alliance"
+    adjective = "Lithine"
+    authority = "auth_democratic"
+    government = "gov_purity_assembly"
+    planet_name = "Farzhaak"
+    planet_class = "pc_subarctic"
+    system_name = "Draksog"
+    initializer = ""
+    graphical_culture = "humanoid_01"
+    city_graphical_culture = "humanoid_01"
+    empire_flag = {
+        icon = {
+            category = "just-more-flags"
+            file = "flag_purifier4.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "fabric_circle.dds"
+        }
+        colors = {
+            "dark_purple"
+            "black"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = male
+        name = "Adamant-Mind Uldek"
+        portrait = "humanoid_hp_07"
+        texture = 0
+        hair = 0
+        clothes = 4
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "militarist1_room"
+    spawn_enabled = yes
+    ethic = "ethic_fanatic_xenophobe"
+    ethic = "ethic_militarist"
+    ethic = "ethic_fanatic_spiritualist"
+    civics = {
+        "civic_fanatic_purifiers"
+        "civic_shadow_council"
+        "civic_defenders_faith"
+    }
+    origin = "origin_default"
+}

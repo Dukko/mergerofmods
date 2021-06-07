@@ -1,0 +1,22 @@
+@juggernaut_power_1 = 1650
+utility_component_template = {
+    key = "JUGGERNAUT_FISSION_REACTOR"
+    size = large
+    icon = "GFX_ship_part_reactor_1"
+    icon_frame = 1
+    power = @juggernaut_power_1
+    prerequisites = {
+        "tech_fission_power"
+    }
+    class_restriction = {
+        shipclass_starbase
+    }
+    component_set = "power_core"
+    size_restriction = {
+        juggernaut
+    }
+    upgrades_to = "JUGGERNAUT_FUSION_REACTOR"
+    ai_weight = {
+        weight = 1
+    }
+}

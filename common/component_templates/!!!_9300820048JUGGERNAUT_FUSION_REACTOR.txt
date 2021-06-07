@@ -1,0 +1,22 @@
+@juggernaut_power_2 = 2170
+utility_component_template = {
+    key = "JUGGERNAUT_FUSION_REACTOR"
+    size = large
+    icon = "GFX_ship_part_reactor_2"
+    icon_frame = 1
+    power = @juggernaut_power_2
+    prerequisites = {
+        "tech_fusion_power"
+    }
+    component_set = "power_core"
+    class_restriction = {
+        shipclass_starbase
+    }
+    size_restriction = {
+        juggernaut
+    }
+    upgrades_to = "JUGGERNAUT_COLD_FUSION_REACTOR"
+    ai_weight = {
+        weight = 2
+    }
+}

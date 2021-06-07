@@ -1,0 +1,72 @@
+@FQ_HivePsionicTheory = "tech_psionic_mind_theory"
+@FQ_HivePsionicTheory2 = "tech_mind_meld"
+nhsc_tech_zro_distilleries = {
+    area = engineering
+    category = {
+        materials
+    }
+    tier = 3
+    cost = @tier3cost3
+    weight = @tier3weight3
+    prerequisites = {
+        "nhsc_tech_central_research_bureau"
+    }
+    is_rare = yes
+    potential = {
+        is_machine_empire = no
+        NOT = {
+            has_global_flag = ESC_zro_dist_forbidden
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOR = {
+                has_technology = tech_psionic_theory
+                has_technology = @FQ_HivePsionicTheory
+                has_technology = @FQ_HivePsionicTheory2
+                has_technology = nhsc_tech_psionic_weapons
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = @federation_perk_factor
+            has_federation = yes
+            federation = {
+                has_federation_perk = rare_tech_boost
+                any_member = {
+                    has_technology = nhsc_tech_zro_distilleries
+                }
+            }
+        }
+    }
+    ai_weight = {
+        factor = @ESC_AI_tech_weight_multiplier
+        modifier = {
+            factor = 0
+            NOR = {
+                has_technology = tech_psionic_theory
+                has_technology = @FQ_HivePsionicTheory
+                has_technology = @FQ_HivePsionicTheory2
+                has_technology = nhsc_tech_psionic_weapons
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = @federation_perk_factor
+            has_federation = yes
+            federation = {
+                has_federation_perk = rare_tech_boost
+                any_member = {
+                    has_technology = nhsc_tech_zro_distilleries
+                }
+            }
+        }
+    }
+}

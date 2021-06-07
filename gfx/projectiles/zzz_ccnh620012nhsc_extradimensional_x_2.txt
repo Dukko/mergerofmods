@@ -1,0 +1,56 @@
+projectile_gfx_beam = {
+    name = "nhsc_extradimensional_x_2"
+    color = {
+        0.66
+        0.99
+        0.66
+        0.75
+    }
+    hit_entity = "tachyon_lance_hit_entity"
+    shield_hit_entity = "tachyon_lance_shield_hit_entity"
+    muzzle_flash_entity = "tachyon_lance_muzzle_entity"
+    windup_entity = "tachyon_lance_windup_entity"
+    width = 2
+    texture_scroll_speed = 2.5
+    texture_tiling = 5.5
+    hit = {
+        alpha_curve = {
+            0
+            0
+            0.05
+            0
+            0.1
+            25
+            0.4
+            1.25
+            0.6
+            0
+            1
+            0
+        }
+        duration = 2
+    }
+    miss = {
+        alpha_curve = {
+            0
+            0
+            0.05
+            0
+            0.1
+            25
+            0.4
+            1.25
+            0.6
+            0
+            1
+            0
+        }
+        duration = 1.5
+    }
+    texture = "gfx/models/combat_items/energy_lance_diffuse.dds"
+    shield_impact = {
+        size = large
+        loop_duration = 0.5
+        delay = 0.1
+    }
+}

@@ -1,0 +1,19 @@
+als_trait_strategic_explosive_expert = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/als_trait_strategic_explosive_expert.dds"
+    sorting_priority = -10
+    modifier = {
+        weapon_type_explosive_weapon_damage_mult = 0.3
+        weapon_type_explosive_weapon_fire_rate_mult = 0.3
+        weapon_type_explosive_speed_mult = 0.5
+    }
+    initial = no
+    randomized = no
+    leader_trait = {
+        admiral
+    }
+    leader_class = {
+        admiral
+    }
+}

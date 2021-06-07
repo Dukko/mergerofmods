@@ -1,0 +1,159 @@
+nhsc_building_watcher = {
+    base_buildtime = 540
+    base_cap_amount = 1
+    icon = nhsc_building_watcher
+    category = research
+    potential = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+        NOT = {
+            has_global_flag = ESC_watcher_forbidden
+        }
+    }
+    allow = {
+        has_major_upgraded_capital = yes
+        exists = owner
+        owner = {
+            NOT = {
+                any_owned_planet = {
+                    has_building = nhsc_building_watcher
+                }
+            }
+            NOT = {
+                has_country_flag = nhsc_watcher_of_eternity_queued
+            }
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 600
+            influence = 15
+            rare_crystals = 25
+            exotic_gases = 25
+            sr_dark_matter = 15
+        }
+        upkeep = {
+            energy = 10
+            sr_dark_matter = 2
+        }
+    }
+    country_modifier = {
+        all_technology_research_speed = 0.05
+    }
+    planet_modifier = {
+        planet_jobs_physics_research_produces_mult = 0.2
+        planet_jobs_society_research_produces_mult = 0.2
+        planet_jobs_engineering_research_produces_mult = 0.2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_head_researcher_add = 1
+            job_researcher_add = 4
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_brain_drone_add = 7
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_calculator_add = 7
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = job_head_researcher_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = job_brain_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = job_calculator_effect_desc
+    }
+    show_tech_unlock_if = {
+        NOT = {
+            has_global_flag = ESC_watcher_forbidden
+        }
+    }
+    on_queued = {
+        owner = {
+            set_country_flag = nhsc_watcher_of_eternity_queued
+        }
+    }
+    on_unqueued = {
+        owner = {
+            remove_country_flag = nhsc_watcher_of_eternity_queued
+        }
+    }
+    on_built = {
+        owner = {
+            remove_country_flag = nhsc_watcher_of_eternity_queued
+        }
+    }
+    prerequisites = {
+        "nhsc_tech_watcher"
+    }
+    ai_weight = {
+        weight = 0.001
+        modifier = {
+            weight = 10000
+            owner = {
+                NOT = {
+                    any_owned_planet = {
+                        has_building = nhsc_building_watcher
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0.001
+            owner = {
+                has_monthly_income = {
+                    resource = sr_dark_matter
+                    value < 1
+                }
+            }
+        }
+    }
+}
