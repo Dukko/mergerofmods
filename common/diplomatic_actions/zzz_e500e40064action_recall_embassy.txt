@@ -1,8 +1,0 @@
-action_recall_embassy = {
-    icon = "GFX_embassy_our"
-    auto_accepted = yes
-    requires_recipient_independence = no
-    requires_actor_independence = no
-    should_notify_all_communications = no
-    action_type = negative
-}

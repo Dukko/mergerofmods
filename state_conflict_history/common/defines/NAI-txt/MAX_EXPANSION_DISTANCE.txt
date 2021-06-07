@@ -1,3 +1,0 @@
-NAI = {
-    MAX_EXPANSION_DISTANCE = 2
-}

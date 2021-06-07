@@ -1,7 +1,0 @@
-trait_additrait_fast_analysers = {
-    cost = 1
-    allowed_archetypes = {
-        BIOLOGICAL
-        LITHOID
-    }
-}

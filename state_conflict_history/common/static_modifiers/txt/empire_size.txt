@@ -1,4 +1,0 @@
-empire_size = {
-    rare_edicts_cost_mult = 0.01
-    pop_government_ethic_attraction = -0.0001
-}

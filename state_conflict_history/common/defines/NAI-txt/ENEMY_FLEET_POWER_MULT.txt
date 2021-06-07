@@ -1,3 +1,0 @@
-NAI = {
-    ENEMY_FLEET_POWER_MULT = 0.9
-}

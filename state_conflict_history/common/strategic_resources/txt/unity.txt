@@ -1,6 +1,0 @@
-unity = {
-    deficit_modifier = unity_deficit
-    ai_weight = {
-        weight = 1
-    }
-}

@@ -1,8 +1,0 @@
-ap_esap_bio_cyber_psi_2_plain = {
-    potential = {
-       always = no
-    }
-    ai_weight = {
-        factor = 0
-    }
-}

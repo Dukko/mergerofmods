@@ -1,3 +1,0 @@
-NCombat = {
-    RANDOM_TARGETING_WEIGHT = 7
-}

@@ -1,3 +1,0 @@
-NGameplay = {
-    ADVANCED_EMPIRE_EXTRA_WARSHIPS_MAX = 17
-}

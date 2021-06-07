@@ -1,7 +1,0 @@
-NGraphics = {
-    SHIELD_DISTANCE_FROM_SHIP_MULT = {
-        1.15
-        1.15
-        1.15
-    }
-}

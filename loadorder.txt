@@ -1,6 +1,5 @@
 !!Ariphaos Unofficial Patch (3.0)
 Community Flash Patch
-Improved English Localisation
 Economic Flavor
 Better Ultimate Economic Plan
 Bypass Adjustments
@@ -222,7 +221,6 @@ Real Sol Textures
 Real Space 3.8
 Real Space - New Frontiers
 Real Space Nebulae
-Wild Space 3
 Real Machine Worlds (Now v3.0.* Compatible)
 Sol System Expanded (Real Space)
 Sol System Expanded - Real Sol Textures Patch
@@ -262,6 +260,7 @@ Amazing Civics - Megacorp
 Government Variety Pack
 Civics Expanded+
 More Authorities
+Improved English Localisation
 Ethics and Civics Alternative - Redux
 Relytor's Empire Governance - Redux
 Relytor's Empire United

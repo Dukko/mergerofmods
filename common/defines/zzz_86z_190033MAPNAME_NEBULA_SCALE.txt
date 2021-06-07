@@ -1,3 +1,0 @@
-NGraphics = {
-    MAPNAME_NEBULA_SCALE = 0
-}

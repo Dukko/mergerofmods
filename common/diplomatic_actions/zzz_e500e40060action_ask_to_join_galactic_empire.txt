@@ -1,6 +1,0 @@
-action_ask_to_join_galactic_empire = {
-    icon = "GFX_diplomacy_status_join_galactic_empire"
-    auto_accepted = no
-    should_notify_all_communications = yes
-    action_type = neutral
-}

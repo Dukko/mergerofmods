@@ -1,3 +1,0 @@
-NShip = {
-    FLEET_BASE_FORMATION_DIV = 25
-}

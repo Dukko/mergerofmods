@@ -1,3 +1,0 @@
-NGameplay = {
-    TRADITION_COST_TRADITION = 10.5
-}

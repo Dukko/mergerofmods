@@ -1,3 +1,0 @@
-NGameplay = {
-    WAR_EXHAUSTION_PASSIVE_GAIN_YEARLY = 0.03
-}
