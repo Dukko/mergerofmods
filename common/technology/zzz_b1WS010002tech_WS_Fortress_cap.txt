@@ -1,0 +1,32 @@
+tech_WS_Fortress_cap = {
+    area = engineering
+    category = {
+        voidcraft
+    }
+    tier = 5
+    cost = @repeatableTechBaseCost
+    cost_per_level = @repeatableTechLevelCost
+    levels = 40
+    prerequisites = {
+        "tech_WS_Fortress"
+    }
+    weight = @repeatableTechWeight
+    weight_modifier = {
+        factor = @repatableTechFactor
+    }
+    ai_weight = {
+        factor = 1
+    }
+    weight_groups = {
+        repeatable
+    }
+    mod_weight_if_group_picked = {
+        repeatable = 0.01
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "WS_fortress_capacity_increase_title"
+            desc = "WS_fortress_capacity_increase_desc"
+        }
+    }
+}

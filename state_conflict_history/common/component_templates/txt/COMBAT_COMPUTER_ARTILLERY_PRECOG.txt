@@ -53,5 +53,12 @@ utility_component_template = {
     }
     ai_weight = {
         weight = 4
+        modifier = {
+            factor = 0
+            is_country_type = default
+            NOT = {
+                has_ascension_perk = ap_transcendence
+            }
+        }
     }
 }

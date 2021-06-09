@@ -1,0 +1,66 @@
+tech_WS_sensors_nebula_2 = {
+    cost = @tier5cost3
+    area = physics
+    tier = 5
+    category = {
+        particles
+    }
+    is_rare = yes
+    is_reverse_engineerable = no
+    weight = @tier5weight3
+    prerequisites = {
+        "tech_WS_sensors_nebula_1"
+    }
+    modifier = {
+        custom_tooltip = tech_WS_sensors_nebula_2_small
+    }
+    weight_modifier = {
+        factor = 0.1
+        modifier = {
+            factor = 0.1
+            NOR = {
+                research_leader = {
+                    area = physics
+                    has_trait = "leader_trait_expertise_particles"
+                }
+                research_leader = {
+                    area = physics
+                    has_trait = "leader_trait_curator"
+                }
+                research_leader = {
+                    area = physics
+                    has_trait = "leader_trait_spark_of_genius"
+                }
+                research_leader = {
+                    area = physics
+                    has_trait = "leader_trait_maniacal"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = tr_discovery_adopt
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = 2
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 0.1
+        modifier = {
+            factor = 2
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+}

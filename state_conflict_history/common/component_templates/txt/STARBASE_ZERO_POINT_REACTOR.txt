@@ -1,4 +1,4 @@
-@starbase_power_5 = 8000
+@starbase_power_5 = 3200
 utility_component_template = {
     key = "STARBASE_ZERO_POINT_REACTOR"
     size = large
@@ -22,7 +22,7 @@ utility_component_template = {
         starbase_gatebuilders
         graygoo_factory
     }
-    upgrades_to = "STARBASE_DARK_MATTER_REACTOR"
+    upgrades_to = "STARBASE_NHSC_ADV_REACTOR_1"
     ai_weight = {
         weight = 5
     }

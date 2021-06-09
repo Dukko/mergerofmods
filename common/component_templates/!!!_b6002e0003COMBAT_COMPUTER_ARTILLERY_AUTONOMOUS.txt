@@ -17,6 +17,10 @@ utility_component_template = {
     class_restriction = {
         shipclass_military
         shipclass_starbase
+    }
+    class_restriction = {
+        shipclass_military
+        shipclass_starbase
         shipclass_military_special
     }
     size_restriction = {

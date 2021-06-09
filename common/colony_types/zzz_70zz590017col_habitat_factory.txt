@@ -34,50 +34,61 @@ col_habitat_factory = {
         }
     }
     weight_modifier = {
-        base = 500
+        base = 0
         modifier = {
-            factor = 2
-            owner = {
-                has_monthly_income = {
-                    resource = consumer_goods
-                    value < 5
-                }
+            add = 2.4
+            num_districts = {
+                type = district_hab_industrial
+                value >= 1
             }
         }
         modifier = {
-            factor = 3
-            has_designation = col_habitat_factory
+            add = 2.4
+            num_districts = {
+                type = district_hab_industrial
+                value >= 2
+            }
         }
         modifier = {
-            add = 2
-            has_building = building_factory_1
+            add = 4.8
+            num_districts = {
+                type = district_hab_industrial
+                value >= 4
+            }
         }
         modifier = {
-            add = 4
+            add = 4.8
+            num_districts = {
+                type = district_hab_industrial
+                value >= 6
+            }
+        }
+        modifier = {
+            factor = 1.16
             has_building = building_factory_2
         }
         modifier = {
+            factor = 1.33
+            has_building = building_factory_3
+        }
+        modifier = {
+            factor = 1.5
+            always = yes
+        }
+        modifier = {
             factor = 0
-            num_buildings = {
-                type = building_factory_1
-                value = 0
-            }
-            num_buildings = {
-                type = building_factory_2
-                value = 0
-            }
-            NOT = {
-                num_districts = {
-                    type = district_hab_industrial
-                    value >= 3
-                }
+            OR = {
+                has_building = building_foundry_1
+                has_building = building_foundry_2
+                has_building = building_foundry_3
             }
         }
         modifier = {
-            factor = 3
-            num_districts = {
-                type = district_hab_industrial
-                value >= 3
+            factor = 0
+            NOR = {
+                has_building = building_factory_1
+                has_building = building_factory_2
+                has_building = building_factory_2
             }
         }
     }

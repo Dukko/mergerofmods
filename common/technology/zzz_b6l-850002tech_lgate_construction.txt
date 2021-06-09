@@ -32,9 +32,7 @@ tech_lgate_construction = {
             }
             has_country_flag = completed_nanite_technology_mastery_chain
         }
-        no_scope = {
-            has_distar = yes
-        }
+        has_distar = yes
     }
     weight_modifier = {
         factor = 0.5

@@ -1,4 +1,4 @@
-@starbase_power_6 = 10000
+@starbase_power_6 = 4200
 utility_component_template = {
     key = "STARBASE_DARK_MATTER_REACTOR"
     size = large
@@ -27,7 +27,7 @@ utility_component_template = {
         weight = 6
         modifier = {
             factor = 0
-            is_country_type = default
+            is_country_type_with_subjects = yes
             has_monthly_income = {
                 resource = sr_dark_matter
                 value <= 0
