@@ -30,7 +30,7 @@ pc_alderson_slice_machine = {
     is_artificial_planet = yes
     modifier = {
         planet_max_buildings_add = 12
-        planet_jobs_produces_mult = 0.1
+        planet_jobs_produces_mult = 0.6
         pop_housing_usage_mult = -0.1
         pop_environment_tolerance = 0
     }

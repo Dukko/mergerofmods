@@ -1,0 +1,8 @@
+CmtEffectCreateShip_AncestralGlory = {
+    create_ship = {
+        name = random
+        design = "NAME_Ancestral_Glory"
+        prefix = no
+        graphical_culture = "madd_01"
+    }
+}

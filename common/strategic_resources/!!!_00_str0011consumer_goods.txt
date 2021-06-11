@@ -1,0 +1,151 @@
+@critical_energy_value = 50
+@critical_minerals_value = 700
+@critical_food_value = 100
+@critical_consumer_goods_value = 50
+@critical_alloys_value = 50
+@critical_mote_value = 25
+@critical_exotic_gases_value = 25
+@critical_rare_crystals_value = 25
+@critical_consumer_goods_target_value = 1000
+@target_consumer_goods_value = 350
+consumer_goods = {
+    tradable = yes
+    market_amount = 50
+    market_price = 100
+    max = 15000
+    deficit_modifier = consumer_goods_deficit
+    ai_weight = {
+        weight = 2
+        modifier = {
+            factor = 2
+            resource_stockpile_compare = {
+                resource = consumer_goods
+                value < @critical_consumer_goods_value
+            }
+            resource_income_compare = {
+                resource = consumer_goods
+                value < 0
+            }
+        }
+    }
+    ai_wants = {
+        base = 1
+        modifier = {
+            add = 5000
+            resource_stockpile_compare = {
+                resource = minerals
+                value > 300
+            }
+            resource_income_compare = {
+                resource = consumer_goods
+                value < 10
+            }
+            resource_stockpile_compare = {
+                resource = consumer_goods
+                value < 180
+            }
+            resource_stockpile_compare = {
+                resource = energy
+                value > 1000
+            }
+            is_at_war = no
+            ai_colonize_plans > 0
+        }
+        modifier = {
+            add = @target_consumer_goods_value
+            NOR = {
+                AND = {
+                    resource_stockpile_compare = {
+                        resource = energy
+                        value < @critical_energy_value
+                    }
+                    resource_income_compare = {
+                        resource = energy
+                        value < 0
+                    }
+                }
+                AND = {
+                    resource_stockpile_compare = {
+                        resource = minerals
+                        value < @critical_minerals_value
+                    }
+                    resource_income_compare = {
+                        resource = minerals
+                        value < 0
+                    }
+                }
+                AND = {
+                    resource_stockpile_compare = {
+                        resource = food
+                        value < @critical_food_value
+                    }
+                    resource_income_compare = {
+                        resource = food
+                        value < 0
+                    }
+                }
+                AND = {
+                    resource_stockpile_compare = {
+                        resource = alloys
+                        value < @critical_alloys_value
+                    }
+                    resource_income_compare = {
+                        resource = alloys
+                        value < 0
+                    }
+                }
+                AND = {
+                    resource_stockpile_compare = {
+                        resource = consumer_goods
+                        value < @critical_consumer_goods_value
+                    }
+                    resource_income_compare = {
+                        resource = consumer_goods
+                        value < 0
+                    }
+                }
+                AND = {
+                    resource_stockpile_compare = {
+                        resource = volatile_motes
+                        value < @critical_mote_value
+                    }
+                    resource_income_compare = {
+                        resource = volatile_motes
+                        value < 0
+                    }
+                }
+                AND = {
+                    resource_stockpile_compare = {
+                        resource = exotic_gases
+                        value < @critical_exotic_gases_value
+                    }
+                    resource_income_compare = {
+                        resource = exotic_gases
+                        value < 0
+                    }
+                }
+                AND = {
+                    resource_stockpile_compare = {
+                        resource = rare_crystals
+                        value < @critical_rare_crystals_value
+                    }
+                    resource_income_compare = {
+                        resource = rare_crystals
+                        value < 0
+                    }
+                }
+            }
+        }
+        modifier = {
+            add = @critical_consumer_goods_target_value
+            resource_stockpile_compare = {
+                resource = consumer_goods
+                value < @critical_consumer_goods_value
+            }
+            resource_income_compare = {
+                resource = consumer_goods
+                value < 0
+            }
+        }
+    }
+}

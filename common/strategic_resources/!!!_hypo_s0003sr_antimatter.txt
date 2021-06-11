@@ -1,0 +1,13 @@
+sr_antimatter = {
+    tradable = no
+    max = 10000
+    prerequisites = {
+        "tech_mine_antimatter"
+    }
+    visibility_prerequisite = {
+        always = yes
+    }
+    ai_weight = {
+        weight = 100
+    }
+}

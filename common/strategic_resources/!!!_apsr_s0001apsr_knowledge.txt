@@ -1,0 +1,10 @@
+apsr_knowledge = {
+    tradable = no
+    max = 15000
+    visibility_prerequisite = {
+        always = yes
+    }
+    ai_weight = {
+        weight = 100
+    }
+}

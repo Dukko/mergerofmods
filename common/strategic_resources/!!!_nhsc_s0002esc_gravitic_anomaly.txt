@@ -1,0 +1,13 @@
+esc_gravitic_anomaly = {
+    tradable = no
+    max = 10000
+    prerequisites = {
+        "nhsc_tech_gravity_manipulation"
+    }
+    visibility_prerequisite = {
+        always = no
+    }
+    ai_weight = {
+        weight = 100
+    }
+}

@@ -25,4 +25,13 @@ building_mem_colony_ship_protocity = {
     }
     upgrades = {
     }
+    destroy_trigger = {
+        NAND = {
+            exists = owner
+            owner = {
+                is_country_type = primitive
+                has_country_flag = mem_use_custom_primitive_buildings
+            }
+        }
+    }
 }

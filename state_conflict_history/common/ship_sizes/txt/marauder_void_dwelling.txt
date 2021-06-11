@@ -26,4 +26,5 @@ marauder_void_dwelling = {
     build_block_radius = @build_block_radius_civilian
     class = shipclass_military_station
     is_designable = no
+    auto_upgrade = yes
 }

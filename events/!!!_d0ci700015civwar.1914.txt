@@ -1,0 +1,11 @@
+namespace = civwar
+country_event = {
+    id = civwar.1914
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        set_subject_of = {
+            who = none
+        }
+    }
+}

@@ -1,0 +1,39 @@
+CmtEffectCreateFleet_KhanArmy = {
+    CmtEffectCreateGeneral_Marauder = yes
+    create_fleet = {
+        effect = {
+            set_owner = prev
+            event_target:CmtGlobalVar = {
+                set_variable = {
+                    which = CmtVarWhileControlShip
+                    value = CmtVarArmyPower_Khan
+                }
+            }
+            while = {
+                limit = {
+                    event_target:CmtGlobalVar = {
+                        check_variable = {
+                            which = CmtVarWhileControlShip
+                            value > 0.125
+                        }
+                    }
+                }
+                event_target:CmtGlobalVar = {
+                    change_variable = {
+                        which = CmtVarWhileControlShip
+                        value = -0.25
+                    }
+                }
+                while = {
+                    count = 5
+                    CmtEffectCreateShip_KhanArmy = yes
+                }
+            }
+            CmtFleetSetAuxParam_KhanAuxiliary = yes
+            set_fleet_stance = evasive
+        }
+    }
+    last_created_army = {
+        assign_leader = last_created_leader
+    }
+}

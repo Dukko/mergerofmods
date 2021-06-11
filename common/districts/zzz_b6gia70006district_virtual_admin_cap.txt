@@ -3,11 +3,9 @@ district_virtual_admin_cap = {
     is_capped_by_modifier = no
     show_on_uncolonized = {
         uses_district_set = virtual_ring
-        has_planet_flag = giga_virtual_reality
     }
     potential = {
         uses_district_set = virtual_ring
-        has_planet_flag = giga_virtual_reality
     }
     conversion_ratio = 1
     convert_to = {

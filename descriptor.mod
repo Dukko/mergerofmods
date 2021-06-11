@@ -1,5 +1,4 @@
-path="D:/Documents/Paradox Interactive/Stellaris/mod/IronyModManager_Dick_1.03"
-name="IronyModManager_Dick_1.03"
+name="IronyModManager_Dick_1.04"
 tags={
 	"Fixes"
 }

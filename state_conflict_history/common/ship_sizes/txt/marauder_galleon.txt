@@ -30,4 +30,5 @@ marauder_galleon = {
     is_civilian = no
     class = shipclass_military
     is_designable = no
+    auto_upgrade = yes
 }

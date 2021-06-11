@@ -1,0 +1,13 @@
+sr_magical_neutronium = {
+    tradable = no
+    max = 100000
+    prerequisites = {
+        "giga_tech_quasi_stellar_2"
+    }
+    visibility_prerequisite = {
+        always = yes
+    }
+    ai_weight = {
+        weight = 100
+    }
+}

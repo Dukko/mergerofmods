@@ -3,11 +3,9 @@ district_virtual_alloys = {
     is_capped_by_modifier = no
     show_on_uncolonized = {
         uses_district_set = virtual_ring_industry
-        has_planet_flag = giga_virtual_stellar_industry
     }
     potential = {
         uses_district_set = virtual_ring_industry
-        has_planet_flag = giga_virtual_stellar_industry
     }
     conversion_ratio = 1
     convert_to = {

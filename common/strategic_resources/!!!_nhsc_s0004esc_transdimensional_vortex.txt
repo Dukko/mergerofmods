@@ -1,0 +1,13 @@
+esc_transdimensional_vortex = {
+    tradable = no
+    max = 10000
+    prerequisites = {
+        "nhsc_tech_chrono_spatial_weapons"
+    }
+    visibility_prerequisite = {
+        always = no
+    }
+    ai_weight = {
+        weight = 100
+    }
+}

@@ -32,4 +32,5 @@ marauder_corvette = {
     required_component_set = "ftl_components"
     required_component_set = "combat_computers"
     required_component_set = "thruster_components"
+    auto_upgrade = yes
 }

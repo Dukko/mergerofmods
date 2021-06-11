@@ -1,20 +1,17 @@
 namespace = marauder
+namespace = khan
 country_event = {
     id = marauder.555
     hide_window = yes
     trigger = {
         has_been_declared_crisis = no
-        has_global_flag = marauder_crisis_ongoing
+        has_global_flag = marauder_crisis_started
         exists = event_target:raider_khanate
         CmtTriggerExistKhanCountry = yes
         CmtTriggerIsPlayableEmpire = yes
         is_subject = no
         is_ai = yes
-        NOR = {
-            has_valid_civic = "civic_fanatic_purifiers"
-            has_valid_civic = "civic_hive_devouring_swarm"
-            has_valid_civic = "civic_machine_terminator"
-        }
+        is_homicidal = no
         check_variable = {
             which = "planets_lost_to_marauder"
             value > 2
@@ -28,7 +25,7 @@ country_event = {
             relative_power = {
                 who = event_target:raider_khanate
                 category = fleet
-                value = pathetic
+            value < equivalent
             }
         }
     }

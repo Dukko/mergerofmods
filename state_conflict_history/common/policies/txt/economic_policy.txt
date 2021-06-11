@@ -50,6 +50,7 @@ economic_policy = {
             modifier = {
                 factor = 200
                 years_passed > 20
+                is_difficulty < 4
                 resource_income_compare = {
                     resource = society_research
                     value > 150
@@ -100,6 +101,11 @@ economic_policy = {
                     value < 90
                 }
                 is_ai = yes
+            }
+            modifier = {
+                factor = 10
+                is_ai = yes
+                is_difficulty > 3
             }
             modifier = {
                 factor = 20

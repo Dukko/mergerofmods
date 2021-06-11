@@ -6,9 +6,9 @@ tech_aec_aw_dpl_defense_platform_repeatable = {
     category = {
         military_theory
     }
-    levels = 10
+    levels = 5
     prerequisites = {
-        "tech_galactic_ambitions"
+        "tech_starbase_4"
     }
     weight = @repeatableTechWeight
     potential = {
@@ -28,7 +28,7 @@ tech_aec_aw_dpl_defense_platform_repeatable = {
     }
     modifier = {
         starbase_defense_platform_capacity_add = 4
-        shipsize_military_station_small_build_speed_mult = 0.15
-        shipsize_ion_cannon_build_speed_mult = 0.15
+        shipsize_military_station_small_build_speed_mult = 0.1
+        shipsize_ion_cannon_build_speed_mult = 0.1
     }
 }

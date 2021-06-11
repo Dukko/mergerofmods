@@ -1,4 +1,5 @@
 namespace = marauder
+namespace = khan
 @CmtConstKhanLifespan_1a = 1
 @CmtConstKhanLifespan_1c = 35
 @CmtConstKhanLifespan_1d = 5
@@ -264,6 +265,31 @@ country_event = {
                 destroy_country = yes
             }
         }
+        else = {
+            every_country = {
+                limit = {
+                    is_country_type = dormant_marauders
+                    NOT = {
+                        is_same_empire = root
+                    }
+                }
+                establish_communications_no_message = root
+                set_faction_hostility = {
+                    target = PREV
+                    set_hostile = no
+                    set_neutral = yes
+                    set_friendly = no
+                }
+                PREV = {
+                    set_faction_hostility = {
+                        target = PREV
+                        set_hostile = no
+                        set_neutral = yes
+                        set_friendly = no
+                    }
+                }
+            }
+        }
         if = {
             limit = {
                 NOT = {
@@ -500,9 +526,10 @@ country_event = {
             limit = {
                 is_country_type = enclave
             }
-            event_target:raider_khanate = {
+            establish_communications_no_message = root
+            PREV = {
                 set_faction_hostility = {
-                    target = prev
+                    target = PREV
                     set_hostile = no
                     set_neutral = no
                     set_friendly = yes
@@ -609,6 +636,30 @@ country_event = {
                 id = marauder.77
                 days = 20
             }
+        }
+        every_neighbor_country = {
+            limit = {
+                CmtTriggerIsPlayableEmpire = yes
+            }
+            declare_war = {
+                target = PREV
+                name = "The Expansion"
+                attacker_war_goal = "wg_war_in_heaven"
+            }
+            PREV = {
+                set_faction_hostility = {
+                    target = PREV
+                    set_hostile = yes
+                }
+                add_opinion_modifier = {
+                    modifier = opinion_first_contact_war
+                    who = PREV
+                }
+            }
+        }
+        country_event = {
+            id = khan.529
+            days = 360
         }
     }
 }

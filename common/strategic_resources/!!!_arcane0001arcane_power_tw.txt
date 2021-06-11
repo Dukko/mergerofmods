@@ -1,0 +1,8 @@
+arcane_power_tw = {
+    tradable = no
+    max = 15000
+    deficit_modifier = arcane_power_deficit
+    ai_weight = {
+        weight = 100
+    }
+}

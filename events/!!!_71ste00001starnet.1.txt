@@ -1,0 +1,48 @@
+namespace = starnet
+event = {
+    id = starnet.1
+    hide_window = yes
+    is_triggered_only = yes
+    fire_only_once = no
+    immediate = {
+        if = {
+            limit = {
+                years_passed > 30
+            }
+            every_country = {
+                limit = {
+                    is_country_type = default
+                }
+                country_event = {
+                    id = starnet.2
+                    days = 1
+                    random = 180
+                }
+                if = {
+                    limit = {
+                        has_technology = tech_ecological_adaptation
+                        years_passed > 20
+                        nand = {
+                            has_technology = tech_climate_restoration
+                            NOT = {
+                                has_authority = auth_hive_mind
+                            }
+                            OR = {
+                                NOT = {
+                                    has_authority = auth_machine_intelligence
+                                }
+                                has_valid_civic = civic_machine_servitor
+                                has_valid_civic = civic_machine_assimilator
+                            }
+                        }
+                    }
+                    country_event = {
+                        id = str_economy_plan.3
+                        days = 1
+                        random = 500
+                    }
+                }
+            }
+        }
+    }
+}

@@ -7,7 +7,6 @@ district_virtual_leisure = {
         from = {
             is_regular_empire = yes
         }
-        has_planet_flag = giga_virtual_reality
     }
     potential = {
         uses_district_set = virtual_ring
@@ -15,7 +14,6 @@ district_virtual_leisure = {
         owner = {
             is_regular_empire = yes
         }
-        has_planet_flag = giga_virtual_reality
     }
     conversion_ratio = 1
     convert_to = {

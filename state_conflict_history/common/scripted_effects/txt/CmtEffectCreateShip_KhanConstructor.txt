@@ -1,0 +1,14 @@
+CmtEffectCreateShip_KhanConstructor = {
+    create_fleet = {
+        effect = {
+            set_owner = prev
+            create_ship = {
+                name = random
+                design = "NAME_Clan_Builder"
+                graphical_culture = "pirate_01"
+            }
+            CmtFleetSetAuxParam_KhanAuxiliary = yes
+            set_fleet_stance = evasive
+        }
+    }
+}

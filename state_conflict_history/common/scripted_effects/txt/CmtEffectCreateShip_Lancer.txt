@@ -1,0 +1,8 @@
+CmtEffectCreateShip_Lancer = {
+    create_ship = {
+        name = random
+        design = "NAME_Lancer"
+        prefix = no
+        graphical_culture = "madd_01"
+    }
+}

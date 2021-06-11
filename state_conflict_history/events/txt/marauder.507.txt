@@ -1,4 +1,5 @@
 namespace = marauder
+namespace = khan
 country_event = {
     id = marauder.507
     hide_window = yes

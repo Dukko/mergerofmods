@@ -1,0 +1,9 @@
+favour = {
+    max = 10000
+    tooltip_decimals = 1
+    fixed_max_amount = yes
+    deficit_modifier = favour_deficit
+    ai_weight = {
+        weight = 1
+    }
+}

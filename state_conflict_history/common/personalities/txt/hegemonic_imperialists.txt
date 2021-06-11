@@ -1,8 +1,8 @@
 hegemonic_imperialists = {
-    aggressiveness = 1.5
+    aggressiveness = 1.75
     trade_willingness = 0.8
-    bravery = 1
-    combat_bravery = 1
+    bravery = 1.5
+    combat_bravery = 1.5
     military_spending = 1.1
     colony_spending = 1
     federation_acceptance = -20
@@ -39,7 +39,10 @@ hegemonic_imperialists = {
         wants_tribute = yes
     }
     allow = {
-        is_country_type = default
+        OR = {
+            is_country_type = awakened_marauders
+            CmtTriggerIsPlayableEmpire = yes
+        }
         NOR = {
             has_ethic = "ethic_pacifist"
             has_ethic = "ethic_fanatic_pacifist"
