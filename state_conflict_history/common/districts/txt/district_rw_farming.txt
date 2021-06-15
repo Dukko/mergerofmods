@@ -128,6 +128,7 @@ district_rw_farming = {
             exists = owner
             owner = {
                 has_valid_civic = civic_agrarian_idyll
+                is_lithoid_empire = no
             }
         }
         modifier = {
@@ -140,6 +141,7 @@ district_rw_farming = {
             owner = {
                 has_technology = tech_housing_agrarian_idyll
                 has_valid_civic = civic_agrarian_idyll
+                is_lithoid_empire = no
             }
         }
         modifier = {

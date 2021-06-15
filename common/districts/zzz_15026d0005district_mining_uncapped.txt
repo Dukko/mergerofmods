@@ -19,7 +19,6 @@ district_mining_uncapped = {
         NOT = {
             has_modifier = resort_colony
         }
-        str_mineral_district_allow = yes
     }
     conversion_ratio = 1
     convert_to = {
@@ -62,6 +61,7 @@ district_mining_uncapped = {
         potential = {
             exists = owner
             owner = {
+                has_technology = tech_housing_agrarian_idyll_lithoid
                 has_valid_civic = civic_agrarian_idyll
             }
         }
@@ -96,6 +96,18 @@ district_mining_uncapped = {
         potential = {
             exists = owner
             owner = {
+                is_gestalt = yes
+            }
+            has_active_building = building_mineral_purification_hub
+        }
+        modifier = {
+            job_mining_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
                 is_gestalt = no
                 is_fallen_empire_spiritualist = no
             }
@@ -108,11 +120,49 @@ district_mining_uncapped = {
         potential = {
             exists = owner
             owner = {
+                is_gestalt = no
+                is_fallen_empire_spiritualist = no
+            }
+            has_active_building = building_mineral_purification_hub
+        }
+        modifier = {
+            job_miner_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
                 is_fallen_empire_spiritualist = yes
             }
         }
         modifier = {
             job_fe_acolyte_mine_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire_spiritualist = no
+            }
+            has_active_building = building_mineral_purification_hub
+        }
+        modifier = {
+            job_miner_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_fallen_empire_spiritualist = yes
+            }
+            has_active_building = building_mineral_purification_hub
+        }
+        modifier = {
+            job_fe_acolyte_mine_add = 1
         }
     }
     triggered_planet_modifier = {
@@ -216,17 +266,6 @@ district_mining_uncapped = {
             planet_housing_add = 1
         }
     }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                has_tradition = tr_industry_compact_extraction_centers
-            }
-        }
-        modifier = {
-            planet_housing_add = 1
-        }
-    }
     triggered_desc = {
         trigger = {
             exists = owner
@@ -258,9 +297,20 @@ district_mining_uncapped = {
     prerequisites = {
     }
     ai_resource_production = {
-        minerals = 5
+        minerals = 1
         trigger = {
             always = yes
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_tradition = tr_industry_compact_extraction_centers
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
         }
     }
 }

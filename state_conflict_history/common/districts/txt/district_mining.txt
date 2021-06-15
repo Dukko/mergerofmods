@@ -56,6 +56,7 @@ district_mining = {
             exists = owner
             owner = {
                 has_valid_civic = civic_agrarian_idyll
+                has_technology = tech_housing_agrarian_idyll_lithoid
             }
         }
         modifier = {

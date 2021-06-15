@@ -13,8 +13,11 @@ tech_housing_agrarian_idyll = {
         factor = 1.5
         modifier = {
             factor = 0
-            NOT = {
-                has_valid_civic = civic_agrarian_idyll
+            OR = {
+                NOT = {
+                    has_valid_civic = civic_agrarian_idyll
+                }
+                is_lithoid_empire = yes
             }
         }
         modifier = {

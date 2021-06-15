@@ -61,6 +61,7 @@ district_mining_uncapped = {
         potential = {
             exists = owner
             owner = {
+                has_technology = tech_housing_agrarian_idyll_lithoid
                 has_valid_civic = civic_agrarian_idyll
             }
         }
