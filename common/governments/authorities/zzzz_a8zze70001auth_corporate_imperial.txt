@@ -1,0 +1,46 @@
+auth_corporate_imperial = {
+    localization_postfix = corporate
+    has_heir = yes
+    has_agendas = yes
+    playable = {
+        host_has_dlc = "Megacorp"
+    }
+    random_weight = {
+        modifier = {
+            factor = 0.1
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                host_has_dlc = "Megacorp"
+            }
+        }
+    }
+    possible = {
+        ethics = {
+            OR = {
+                value = ethic_capitalism
+                value = ethic_fanatic_capitalism
+            }
+            OR = {
+                value = ethic_authoritarian
+                value = ethic_fanatic_authoritarian
+            }
+            NOR = {
+                value = ethic_gestalt_consciousness
+                value = ethic_egalitarian
+                value = ethic_fanatic_egalitarian
+            }
+        }
+    }
+    country_modifier = {
+        country_edict_cap_add = 1
+        empire_size_penalty_mult = 0.3
+        pop_cat_worker_political_power = 2
+        pop_cat_specialist_political_power = 2
+        pop_cat_ruler_political_power = 6
+    }
+    tags = {
+        AUTHORITY_HAS_HEIR_CORP
+    }
+}

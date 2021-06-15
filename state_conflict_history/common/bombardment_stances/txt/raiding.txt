@@ -1,6 +1,5 @@
 raiding = {
     trigger = {
-        exists = owner
         owner = {
             is_raider = yes
         }

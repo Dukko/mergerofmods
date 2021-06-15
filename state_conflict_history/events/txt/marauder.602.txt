@@ -27,7 +27,6 @@ country_event = {
         }
         create_country = {
             name_list = random
-            name = random
             species = event_target:marauder_species
             type = default
             authority = auth_imperial
@@ -38,15 +37,16 @@ country_event = {
             }
             origin = "origin_khan_successor"
             ethos = {
-                ethic = ethic_fanatic_authoritarian
                 ethic = ethic_fanatic_militarist
                 ethic = ethic_xenophobe
+                ethic = ethic_authoritarian
             }
             ignore_initial_colony_error = yes
         }
         last_created_country = {
             save_event_target_as = new_khanate
             set_country_flag = new_khanate_flag
+            set_name = random
                 set_country_flag = first_alien_life
                 set_country_flag = has_encountered_other_empire
                 save_event_target_as = new_khanate

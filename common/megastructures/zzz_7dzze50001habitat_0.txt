@@ -70,7 +70,9 @@ habitat_0 = {
             }
             custom_tooltip = {
                 fail_text = "requires_no_anomaly"
-                has_anomaly = no
+                NOT = {
+                    has_anomaly = yes
+                }
             }
             custom_tooltip = {
                 fail_text = "requires_no_existing_megastructure"
@@ -99,9 +101,9 @@ habitat_0 = {
             }
             custom_tooltip = {
                 fail_text = "requires_not_minor_planetary_body"
-                is_asteroid = no
-                is_moon = no
                 NOR = {
+                    is_asteroid = yes
+                    is_moon = yes
                     is_planet_class = pc_pd_asteroid_hab
                     is_planet_class = pc_gpm_res
                 }
@@ -227,7 +229,7 @@ habitat_0 = {
                 set_name = "HABITAT_PLANET_NAME"
                 set_planet_entity = {
                     entity = "habitat_phase_01_entity"
-                    graphical_culture = root.from
+                    graphical_culture = fromfrom
                 }
                 set_surveyed = {
                     surveyed = yes

@@ -16,7 +16,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__desert
+                has_planet_flag = str_terraform_desert
                 num_pops > 8
             }
             NOR = {
@@ -45,7 +45,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__arid
+                has_planet_flag = str_terraform_arid
                 num_pops > 8
             }
             NOR = {
@@ -364,7 +364,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__desert
+                has_planet_flag = str_terraform_desert
                 num_pops > 8
             }
             NOR = {
@@ -393,7 +393,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__arid
+                has_planet_flag = str_terraform_arid
                 num_pops > 8
             }
             NOR = {
@@ -422,7 +422,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__savannah
+                has_planet_flag = str_terraform_savannah
                 num_pops > 8
             }
             NOR = {
@@ -451,7 +451,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__arctic
+                has_planet_flag = str_terraform_arctic
                 num_pops > 8
             }
             NOR = {
@@ -480,7 +480,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__tundra
+                has_planet_flag = str_terraform_tundra
                 num_pops > 8
             }
             NOR = {
@@ -509,7 +509,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__alpine
+                has_planet_flag = str_terraform_alpine
                 num_pops > 8
             }
             NOR = {
@@ -538,7 +538,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__tropical
+                has_planet_flag = str_terraform_tropical
                 num_pops > 8
             }
             NOR = {
@@ -567,7 +567,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__continental
+                has_planet_flag = str_terraform_continental
                 num_pops > 8
             }
             NOR = {
@@ -596,7 +596,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__ocean
+                has_planet_flag = str_terraform_ocean
                 num_pops > 8
             }
             NOR = {
@@ -625,7 +625,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__arctic
+                has_planet_flag = str_terraform_arctic
                 num_pops > 8
             }
             NOR = {
@@ -654,7 +654,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__tundra
+                has_planet_flag = str_terraform_tundra
                 num_pops > 8
             }
             NOR = {
@@ -683,7 +683,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__alpine
+                has_planet_flag = str_terraform_alpine
                 num_pops > 8
             }
             NOR = {
@@ -712,7 +712,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__tropical
+                has_planet_flag = str_terraform_tropical
                 num_pops > 8
             }
             NOR = {
@@ -741,7 +741,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__continental
+                has_planet_flag = str_terraform_continental
                 num_pops > 8
             }
             NOR = {
@@ -770,7 +770,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__ocean
+                has_planet_flag = str_terraform_ocean
                 num_pops > 8
             }
             NOR = {
@@ -799,7 +799,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__arctic
+                has_planet_flag = str_terraform_arctic
                 num_pops > 8
             }
             NOR = {
@@ -828,7 +828,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__tundra
+                has_planet_flag = str_terraform_tundra
                 num_pops > 8
             }
             NOR = {
@@ -857,7 +857,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__alpine
+                has_planet_flag = str_terraform_alpine
                 num_pops > 8
             }
             NOR = {
@@ -886,7 +886,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__tropical
+                has_planet_flag = str_terraform_tropical
                 num_pops > 8
             }
             NOR = {
@@ -915,7 +915,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__continental
+                has_planet_flag = str_terraform_continental
                 num_pops > 8
             }
             NOR = {
@@ -944,7 +944,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__ocean
+                has_planet_flag = str_terraform_ocean
                 num_pops > 8
             }
             NOR = {
@@ -973,7 +973,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__arctic
+                has_planet_flag = str_terraform_arctic
                 num_pops > 8
             }
             NOR = {
@@ -1002,7 +1002,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__tundra
+                has_planet_flag = str_terraform_tundra
                 num_pops > 8
             }
             NOR = {
@@ -1031,7 +1031,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__alpine
+                has_planet_flag = str_terraform_alpine
                 num_pops > 8
             }
             NOR = {
@@ -1060,7 +1060,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__tropical
+                has_planet_flag = str_terraform_tropical
                 num_pops > 8
             }
             NOR = {
@@ -1089,7 +1089,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__continental
+                has_planet_flag = str_terraform_continental
                 num_pops > 8
             }
             NOR = {
@@ -1118,7 +1118,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__ocean
+                has_planet_flag = str_terraform_ocean
                 num_pops > 8
             }
             NOR = {
@@ -1147,7 +1147,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__arid
+                has_planet_flag = str_terraform_arid
                 num_pops > 8
             }
             NOR = {
@@ -1176,7 +1176,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__desert
+                has_planet_flag = str_terraform_desert
                 num_pops > 8
             }
             NOR = {
@@ -1205,7 +1205,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__savannah
+                has_planet_flag = str_terraform_savannah
                 num_pops > 8
             }
             NOR = {
@@ -1234,7 +1234,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__tropical
+                has_planet_flag = str_terraform_tropical
                 num_pops > 8
             }
             NOR = {
@@ -1263,7 +1263,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__continental
+                has_planet_flag = str_terraform_continental
                 num_pops > 8
             }
             NOR = {
@@ -1292,7 +1292,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__ocean
+                has_planet_flag = str_terraform_ocean
                 num_pops > 8
             }
             NOR = {
@@ -1321,7 +1321,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__arid
+                has_planet_flag = str_terraform_arid
                 num_pops > 8
             }
             NOR = {
@@ -1350,7 +1350,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__desert
+                has_planet_flag = str_terraform_desert
                 num_pops > 8
             }
             NOR = {
@@ -1379,7 +1379,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__savannah
+                has_planet_flag = str_terraform_savannah
                 num_pops > 8
             }
             NOR = {
@@ -1408,7 +1408,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__tropical
+                has_planet_flag = str_terraform_tropical
                 num_pops > 8
             }
             NOR = {
@@ -1437,7 +1437,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__continental
+                has_planet_flag = str_terraform_continental
                 num_pops > 8
             }
             NOR = {
@@ -1466,7 +1466,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__ocean
+                has_planet_flag = str_terraform_ocean
                 num_pops > 8
             }
             NOR = {
@@ -1495,7 +1495,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__arid
+                has_planet_flag = str_terraform_arid
                 num_pops > 8
             }
             NOR = {
@@ -1524,7 +1524,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__desert
+                has_planet_flag = str_terraform_desert
                 num_pops > 8
             }
             NOR = {
@@ -1553,7 +1553,7 @@ terraform_link = {
         modifier = {
             weight = 10
             from = {
-                has_planet_flag = str_terraform__savannah
+                has_planet_flag = str_terraform_savannah
                 num_pops > 8
             }
             NOR = {

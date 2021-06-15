@@ -52,17 +52,28 @@ purge = {
         modifier = {
         }
         valid = {
+            custom_tooltip = {
+                fail_text = "requires_not_signatory"
+                NOR = {
+                    is_subject_type = signatory
+                    is_subject_type = scion_signatory
+                    is_subject_type = scion_auxiliary
+                }
+            }
+            NOR = {
+                has_ai_personality = harmonious_hierarchy
+                has_valid_civic = "civic_harm_hive"
+                has_valid_civic = "civic_harm_machine"
+            }
             NOT = {
-                is_subject_type = signatory
+                has_valid_civic = civic_mutualistic_behavior
             }
             OR = {
                 has_ethic = ethic_gestalt_consciousness
                 has_ethic = ethic_xenophobe
                 has_ethic = ethic_fanatic_xenophobe
-                NOT = {
-                    has_valid_civic = civic_mutualistic_behavior
-                }
                 has_menace_perk = menp_undertaker
+                is_country_type = ascended_empire
             }
         }
         AI_weight = {

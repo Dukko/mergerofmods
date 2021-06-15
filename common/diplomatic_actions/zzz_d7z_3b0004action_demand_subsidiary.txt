@@ -12,7 +12,7 @@ action_demand_subsidiary = {
         is_megacorp = yes
         or = {
             is_ai = no
-            years_passed = @str_years_of_twilight
+            years_passed > @str_years_of_twilight
         }
     }
     possible = {

@@ -41,7 +41,7 @@ ap_voidborn = {
         pc_habitat_habitability = 0.2
     }
     ai_weight = {
-        factor = 10
+        factor = 1
         modifier = {
             factor = 0
             not = {
@@ -54,11 +54,11 @@ ap_voidborn = {
             }
         }
         modifier = {
-            factor = 2
+            factor = 20
             has_ethic = ethic_pacifist
         }
         modifier = {
-            factor = 100
+            factor = 1000
             OR = {
                 has_ethic = ethic_fanatic_pacifist
                 has_origin = origin_void_dwellers

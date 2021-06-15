@@ -1,5 +1,6 @@
 !!Ariphaos Unofficial Patch (3.0)
 Community Flash Patch
+StellarStellaris
 Economic Flavor
 Better Ultimate Economic Plan
 Bypass Adjustments
@@ -60,6 +61,7 @@ PSO: Ringworlds Are 50
 PSO: EPSI x2
 Spaceborne Civs Expanded
 Silfae's Portraits with updated city sets - organics
+Segek's Animated Portraits
 Primitive Worlds for 3.x
 Mass Effect Civilizations - Asari
 LLX's Mods - Compiled Dimorphism (3.0 'Dick')
@@ -178,6 +180,7 @@ Vassals Expanded and Reworked - Exalted Domination Patch
 Vassals Love Powerful Overlords
 United Fleet Shipset
 Sins of the Prophets: Stellaris
+Necroids White Shipset
 Midas Apocalypse Golden Colossus
 Marauders but Cooler
 Machine Shipset

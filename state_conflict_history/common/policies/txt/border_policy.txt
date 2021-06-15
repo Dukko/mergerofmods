@@ -8,7 +8,13 @@ border_policy = {
             border_policy_open
         }
         valid = {
-            is_country_type = default
+            OR = {
+                is_country_type = default
+                is_country_type = ascended_empire
+                is_country_type = lost_empire
+                is_country_type = ascended_empire
+                is_country_type = original_empire_active
+            }
             NOR = {
                 has_valid_civic = civic_machine_terminator
                 has_valid_civic = civic_hive_devouring_swarm

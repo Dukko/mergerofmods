@@ -37,6 +37,9 @@ building_foundry_1 = {
                     }
                 }
                 years_passed > 20
+                not = {
+                    has_origin = origin_void_dwellers
+                }
             }
         }
     }

@@ -11,7 +11,7 @@ auth_corporate = {
     }
     random_weight = {
         modifier = {
-            factor = 0.7
+            factor = 0.2
         }
         modifier = {
             factor = 0

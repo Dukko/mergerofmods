@@ -1,8 +1,7 @@
 orbital_bombardment = {
     potential = {
         OR = {
-            ehof_default_country = yes
-            is_country_type = default
+            merg_is_standard_empire = yes
             is_country_type = vol
         }
     }
@@ -43,10 +42,10 @@ orbital_bombardment = {
         }
         valid = {
             NOR = {
-                has_valid_civic = civic_mutualistic_behavior
                 has_ethic = "ethic_pacifist"
                 has_ethic = "ethic_fanatic_pacifist"
                 has_valid_civic = "civic_xeno_militarist"
+                has_valid_civic = civic_mutualistic_behavior
             }
         }
         AI_weight = {
@@ -79,6 +78,7 @@ orbital_bombardment = {
                 has_valid_civic = civic_fanatic_purifiers
                 has_valid_civic = civic_machine_terminator
                 has_valid_civic = civic_bringers_of_death
+                is_country_type = ascended_empire
             }
         }
         policy_flags = {
@@ -92,6 +92,7 @@ orbital_bombardment = {
                 OR = {
                     has_valid_civic = civic_fanatic_purifiers
                     has_valid_civic = civic_machine_terminator
+                    has_valid_civic = civic_galactic_superpower
                 }
             }
             modifier = {
@@ -102,9 +103,14 @@ orbital_bombardment = {
     }
     option = {
         name = "orbital_bombardment_redtoxin"
+        in_breach_of = {
+             {
+                key = resolution_rulesofwar_independent_tribunals
+            }
+        }
         potential = {
             OR = {
-                ehof_default_country = yes
+                merg_is_standard_empire = yes
                 is_country_type = vol
             }
         }
@@ -118,6 +124,25 @@ orbital_bombardment = {
             NOR = {
                 has_ethic = "ethic_pacifist"
                 has_ethic = "ethic_fanatic_pacifist"
+                has_valid_civic = "civic_xeno_militarist"
+                has_valid_civic = civic_mutualistic_behavior
+            }
+        }
+        AI_weight = {
+            modifier = {
+                factor = 5
+                NOR = {
+                    has_ethic = "ethic_pacifist"
+                    has_ethic = "ethic_fanatic_pacifist"
+                }
+            }
+            modifier = {
+                factor = 0.1
+                is_galactic_community_member = yes
+                OR = {
+                    is_active_resolution = "resolution_galacticstudies_ethical_guideline_refactoring"
+                    is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+                }
             }
         }
     }

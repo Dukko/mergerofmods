@@ -4,6 +4,11 @@ war_philosophy = {
             is_country_type = default
             is_country_type = fallen_empire
             is_country_type = awakened_fallen_empire
+            is_country_type = kuat_fallen_empire
+            is_country_type = kuat_awakened_fallen_empire
+            is_country_type = awakened_return_kuat_empire
+            is_country_type = ascended_empire
+            is_country_type = lost_empire
         }
     }
     allow = {
@@ -21,10 +26,13 @@ war_philosophy = {
         }
         valid = {
             NOR = {
-                has_valid_civic = "civic_mutualistic_behavior"
                 has_ethic = "ethic_pacifist"
                 has_ethic = "ethic_fanatic_pacifist"
                 has_valid_civic = "civic_inwards_perfection"
+                has_valid_civic = "civic_mutualistic_behavior"
+                has_valid_civic = "civic_harm_hive"
+                has_valid_civic = "civic_harm_machine"
+                has_ai_personality = harmonious_hierarchy
             }
         }
         AI_weight = {
@@ -37,6 +45,8 @@ war_philosophy = {
                 NOT = {
                     has_ethic = "ethic_pacifist"
                     has_ethic = "ethic_fanatic_pacifist"
+                    has_ai_personality = open_hive_mind
+                    has_ai_personality = open_machine_intelligence
                 }
             }
             modifier = {
@@ -121,6 +131,16 @@ war_philosophy = {
                     has_ai_personality_behaviour = liberator
                 }
             }
+            modifier = {
+                factor = 10
+                has_valid_ai_personality = yes
+                is_ai = yes
+                is_galactic_community_member = yes
+                OR = {
+                    is_active_resolution = "resolution_rulesofwar_last_resort_doctrine"
+                    is_active_resolution = "resolution_rulesofwar_demobilization_initiative"
+                }
+            }
         }
     }
     option = {
@@ -172,8 +192,10 @@ war_philosophy = {
             }
             modifier = {
                 factor = 0
-                NOT = {
+                NOR = {
                     has_ethic = "ethic_fanatic_pacifist"
+                    has_ai_personality = open_hive_mind
+                    has_ai_personality = open_machine_intelligence
                 }
             }
         }

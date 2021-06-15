@@ -12,7 +12,7 @@ action_demand_tributary = {
         is_megacorp = no
         or = {
             is_ai = no
-            years_passed = @str_years_of_twilight
+            years_passed > @str_years_of_twilight
         }
     }
     possible = {
