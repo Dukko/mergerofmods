@@ -1,0 +1,71 @@
+elven_civ3 = {
+    name = "elven_civ3"
+    adjective = "Aurlûnoren"
+    spawn_enabled = no
+    spawn_as_fallen = no
+    ignore_portrait_duplication = yes
+    ship_prefix = ""
+    species = {
+        class = "ELVEN"
+        portrait = "lhuren"
+        name = "Lhûren"
+        plural = "Lhûren"
+        adjective = "Lhûren"
+        name_list = "eos_namelist_elf_eldali"
+        trait = "trait_elven_true"
+        trait = "trait_traditional"
+        trait = "trait_talented"
+    }
+    room = "personality_decadent_hierarchy_room"
+    authority = "auth_imperial"
+    civics = {
+        "civic_elven_celestial_grace"
+        "civic_inwards_perfection"
+    }
+    government = "gov_celestial_empire"
+    ethic = "ethic_xenophobe"
+    ethic = "ethic_pacifist"
+    ethic = "ethic_spiritualist"
+    planet_name = "Lhûmar"
+    planet_class = "pc_ocean"
+    origin = "origin_elven_celestial_throne"
+    initializer = "elven_system_lhuren_initializer"
+    system_name = "Aurlûnor"
+    graphical_culture = "elven_01"
+    city_graphical_culture = "elven_01"
+    advisor_voice_type = "l_the_soldier"
+    flags = {
+        lhuren_personality_flag
+    }
+    empire_flag = {
+        icon = {
+            category = "elven"
+            file = "elven_aurlunor.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "new_dawn.dds"
+        }
+        colors = {
+            "black"
+            "yellow"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = female
+        name = "Sareariel Lelya-Earcala"
+        portrait = "lhuren_female_10"
+        texture = 1
+        hair = 0
+        clothes = 4
+        ruler_title = "Velaran"
+        heir_title = "Aranon"
+        ruler_title_female = "Velereth"
+        heir_title_female = "Aranel"
+        trait = trait_ruler_home_in_the_sky
+        trait = leader_trait_ruler_psionic
+        leader_class = ruler
+    }
+}

@@ -154,5 +154,9 @@ resolution_sanctions_tech_3 = {
                 has_valid_civic = civic_machine_predictive_analysis
             }
         }
+        modifier = {
+            factor = 0.75
+            has_ai_personality = principled_rogues
+        }
     }
 }

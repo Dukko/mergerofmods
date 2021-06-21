@@ -71,6 +71,10 @@ tech_synthetic_workers = {
             has_origin = origin_mechanists
         }
         modifier = {
+            factor = 1.5
+            has_valid_civic = civic_automated_workforce
+        }
+        modifier = {
             factor = 2
             has_valid_civic = civic_machine_cult
         }
@@ -120,6 +124,10 @@ tech_synthetic_workers = {
         modifier = {
             factor = 2
             has_origin = origin_mechanists
+        }
+        modifier = {
+            factor = 1.5
+            has_valid_civic = civic_automated_workforce
         }
         modifier = {
             factor = 1.25

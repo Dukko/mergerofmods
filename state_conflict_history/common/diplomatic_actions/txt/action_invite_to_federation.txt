@@ -18,6 +18,14 @@ action_invite_to_federation = {
                 is_fallen_machine_empire = no
             }
         }
+        NOT = {
+            root = {
+                has_federation = yes
+                federation = {
+                    has_federation_type = vf_ef_federation
+                }
+            }
+        }
     }
     ai_weight = {
         base = 0
@@ -285,6 +293,13 @@ action_invite_to_federation = {
             desc = federation_acceptance_empire
             add = 50000
             from = {
+                is_subject_type = vertributary
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_empire
+            add = 50000
+            from = {
                 is_subject_type = versubsidiary
             }
         }
@@ -360,27 +375,6 @@ action_invite_to_federation = {
         }
     }
     possible = {
-        if = {
-            limit = {
-                has_federation = no
-                is_country_type = default
-            }
-            if = {
-                limit = {
-                    has_authority = auth_machine_intelligence
-                }
-                custom_tooltip = {
-                    fail_text = requires_tradition_universal_compatibility
-                    has_swapped_tradition = tr_versatility_universal_compatibility
-                }
-            }
-            else = {
-                custom_tooltip = {
-                    fail_text = requires_tradition_the_federation
-                    has_non_swapped_tradition = tr_diplomacy_the_federation
-                }
-            }
-        }
         custom_tooltip = {
             fail_text = "requires_recipient_not_shadow_state"
             from = {
@@ -405,6 +399,30 @@ action_invite_to_federation = {
                             has_overlord = root
                         }
                     }
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_tradition_the_federation"
+            OR = {
+                has_authority = auth_machine_intelligence
+                has_federation = yes
+                has_non_swapped_tradition = tr_diplomacy_the_federation
+                NOT = {
+                    is_country_type = default
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_tradition_universal_compatibility"
+            OR = {
+                NOT = {
+                    has_authority = auth_machine_intelligence
+                }
+                has_federation = yes
+                has_swapped_tradition = tr_versatility_universal_compatibility
+                NOT = {
+                    is_country_type = default
                 }
             }
         }
@@ -466,7 +484,7 @@ action_invite_to_federation = {
                 is_same_species = from
                 from = {
                     NOT = {
-                        has_civic = civic_machine_terminator
+                        has_valid_civic = civic_machine_terminator
                     }
                 }
                 AND = {
@@ -512,44 +530,16 @@ action_invite_to_federation = {
             }
         }
         custom_tooltip = {
-            fail_text = "no_shared_borders"
+            fail_text = "requires_excellent_or_better_opinion"
             OR = {
-                any_system_within_border = {
-                    any_neighbor_system = {
-                        exists = owner
-                        owner = {
-                            OR = {
-                                is_same_value = from
-                                is_in_federation_with = from
-                                AND = {
-                                    exists = overlord
-                                    overlord = {
-                                        is_same_value = from
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
                 from = {
-                    any_system_within_border = {
-                        any_neighbor_system = {
-                            exists = owner
-                            owner = {
-                                OR = {
-                                    is_same_value = root
-                                    is_in_federation_with = root
-                                    AND = {
-                                        exists = overlord
-                                        overlord = {
-                                            is_same_value = root
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
+                    is_same_value = prevprev
                 }
+                opinion_level = {
+                    who = from
+                    level >= excellent
+                }
+                is_improving_relations_with = from
             }
         }
         custom_tooltip = {

@@ -70,6 +70,7 @@ resolution_greatergood_repeal_3 = {
                 has_valid_civic = civic_socialistic
                 has_valid_civic = civic_inwards_perfection
                 has_valid_civic = civic_machine_servitor
+                has_ai_personality = principled_rogues
             }
         }
         modifier = {

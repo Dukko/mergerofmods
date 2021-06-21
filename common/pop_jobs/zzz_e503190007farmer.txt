@@ -63,7 +63,6 @@ farmer = {
             exists = owner
             owner = {
                 has_valid_civic = civic_agrarian_idyll
-                is_lithoid_empire = no
             }
         }
         modifier = {
@@ -75,7 +74,6 @@ farmer = {
             exists = owner
             owner = {
                 has_valid_civic = civic_agrarian_idyll
-                is_lithoid_empire = no
             }
             OR = {
                 has_trait = trait_robot_domestic_protocols
@@ -91,7 +89,6 @@ farmer = {
             exists = owner
             owner = {
                 has_valid_civic = civic_agrarian_idyll
-                is_lithoid_empire = no
             }
             has_trait = trait_repugnant
         }
@@ -112,7 +109,6 @@ farmer = {
             factor = 1.1
             owner = {
                 has_valid_civic = civic_agrarian_idyll
-                is_lithoid_empire = no
             }
         }
         modifier = {
@@ -197,7 +193,6 @@ farmer = {
             factor = 1.5
             owner = {
                 has_valid_civic = civic_agrarian_idyll
-                is_lithoid_empire = no
             }
             OR = {
                 has_trait = trait_robot_domestic_protocols
@@ -208,7 +203,6 @@ farmer = {
             factor = 0.5
             owner = {
                 has_valid_civic = civic_agrarian_idyll
-                is_lithoid_empire = no
             }
             has_trait = trait_repugnant
         }

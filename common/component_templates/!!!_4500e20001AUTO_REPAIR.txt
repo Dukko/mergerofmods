@@ -18,11 +18,22 @@ utility_component_template = {
         tech_regenerative_hull_tissue
     }
     component_set = "AUTO_REPAIR"
+    upgrades_to = @REGEN_HULL_TISSUE_T2
     ai_weight = {
         weight = 10
         modifier = {
             factor = 2
-            is_preferred_weapons = weapon_type_explosive
+            check_variable = {
+                which = BSWq_DEF_SLD
+                value <= 3
+            }
+        }
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = BSWq_DEF_SLD
+                value >= 6
+            }
         }
     }
 }

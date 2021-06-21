@@ -1,0 +1,52 @@
+@battleship_power_6 = 2000
+@battleship_cost_6 = 296
+utility_component_template = {
+    key = "BATTLESHIP_DARK_MATTER_REACTOR"
+    size = small
+    icon = "GFX_ship_part_dark_matter_power_core"
+    icon_frame = 1
+    power = @battleship_power_6
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @battleship_cost_6
+            sr_dark_matter = 8
+        }
+        upkeep = {
+            energy = 2.98
+            alloys = 0.298
+        }
+    }
+    prerequisites = {
+        "tech_dark_matter_power_core"
+    }
+    component_set = "power_core"
+    size_restriction = {
+        battleship
+        graygoo_interdictor
+        rs_dreadnought
+        rs_heavy_dreadnought
+        rs_heavy_dreadnought_type_a
+        rs_heavy_dreadnought_type_b
+        rs_heavy_dreadnought_type_c
+        rs_heavy_dreadnought_type_d
+        rs_heavy_dreadnought_type_e
+        rs_heavy_dreadnought_type_f
+        rs_heavy_dreadnought_type_g
+        rs_heavy_dreadnought_type_h
+        rs_heavy_dreadnought_type_i
+        rs_heavy_dreadnought_type_j
+        rs_heavy_dreadnought_type_k
+    }
+    upgrades_to = @DM_REACTORS_BB_T2
+    ai_weight = {
+        weight = 6
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = sr_dark_matter
+                value <= 50
+            }
+        }
+    }
+}

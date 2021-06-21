@@ -1,4 +1,4 @@
-@cooldown = 3600
+@cooldown = 720
 fleet_contribution_none = {
     potential = {
         NOT = {
@@ -86,6 +86,11 @@ fleet_contribution_none = {
             desc = federation_acceptance_federation_builders
             add = -5
             has_ai_personality = federation_builders
+        }
+        modifier = {
+            desc = federation_acceptance_crime_haven
+            add = 5
+            has_ai_personality = crime_haven
         }
         modifier = {
             desc = federation_acceptance_militarist

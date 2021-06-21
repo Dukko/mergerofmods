@@ -30,10 +30,10 @@ xvcv_mdlc_pc_machine_ecu_district_goods = {
             rare_crystals = 100
         }
         produces = {
-            consumer_goods = 78
+            consumer_goods = 114
         }
         upkeep = {
-            minerals = 48
+            minerals = 66
             energy = 10
             rare_crystals = 1
         }

@@ -55,6 +55,9 @@ building_gas_extractors = {
             energy = 1
         }
     }
+    upgrades = {
+        "building_gas_extractors_II"
+    }
     prerequisites = {
         "tech_mine_exotic_gases"
     }

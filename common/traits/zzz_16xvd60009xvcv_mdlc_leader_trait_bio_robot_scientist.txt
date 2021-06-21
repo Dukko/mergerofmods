@@ -1,0 +1,17 @@
+xvcv_mdlc_leader_trait_bio_robot_scientist = {
+    cost = 0
+    modification = no
+    initial = no
+    randomized = no
+    icon = "gfx/interface/icons/traits/xvcv_mdlc_trait_bio_robot.dds"
+    leader_trait = {
+        scientist
+    }
+    leader_class = {
+        scientist
+    }
+    modifier = {
+        all_technology_research_speed = 0.05
+        ship_archeaological_site_clues_add = 1
+    }
+}

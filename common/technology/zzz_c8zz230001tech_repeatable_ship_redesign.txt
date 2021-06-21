@@ -1,0 +1,26 @@
+tech_repeatable_ship_redesign = {
+    cost = 0
+    area = society
+    cost_per_level = 0
+    tier = 1
+    category = {
+        military_theory
+    }
+    is_reverse_engineerable = no
+    weight = 0
+    ai_update_type = military
+    levels = -1
+    weight_modifier = {
+        modifier = {
+            factor = 0
+        }
+    }
+    potential = {
+        is_ai = yes
+    }
+    ai_weight = {
+        modifier = {
+            factor = 0
+        }
+    }
+}

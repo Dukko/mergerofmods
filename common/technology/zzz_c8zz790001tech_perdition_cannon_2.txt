@@ -1,0 +1,49 @@
+tech_perdition_cannon_2 = {
+    area = engineering
+    cost = @avwtier6cost3
+    tier = 6
+    category = {
+        propulsion
+    }
+    ai_update_type = military
+    prerequisites = {
+        @tech_perdition_cannon_1q
+        @tech_cannon_3q
+    }
+    weight = @avwtier6weight3
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_propulsion"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 2
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_propulsion"
+            }
+        }
+    }
+}

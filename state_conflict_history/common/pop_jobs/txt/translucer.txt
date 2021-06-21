@@ -17,6 +17,15 @@ translucer = {
         produces = {
             rare_crystals = 2
         }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_valid_civic = civic_refining_consortium
+                }
+            }
+            rare_crystals = 1
+        }
         upkeep = {
             minerals = 10
         }

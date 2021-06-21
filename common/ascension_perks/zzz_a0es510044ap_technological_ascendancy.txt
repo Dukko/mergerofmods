@@ -1,0 +1,46 @@
+ap_technological_ascendancy = {
+    modifier = {
+        all_technology_research_speed = 0.15
+    }
+    potential = {
+        NOT = {
+            has_ascension_perk = ap_technological_ascendancy
+        }
+    }
+    on_enabled = {
+        custom_tooltip = "ap_technological_ascendancy_rare"
+        if = {
+            limit = {
+                NOT = {
+                    has_technology = tech_self_aware_logic
+                }
+            }
+            add_research_option = tech_self_aware_logic
+        }
+    }
+    ai_weight = {
+        factor = 1
+        modifier = {
+            factor = 0
+            not = {
+                has_ascension_perk = ap_executive_vigor
+            }
+        }
+        modifier = {
+            factor = 2
+            has_ethic = ethic_materialist
+        }
+        modifier = {
+            factor = 3
+            has_ethic = ethic_fanatic_materialist
+        }
+        modifier = {
+            factor = 0.1
+            rusher = yes
+        }
+        modifier = {
+            factor = 0
+            lategame = yes
+        }
+    }
+}

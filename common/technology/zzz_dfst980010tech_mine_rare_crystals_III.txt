@@ -1,0 +1,33 @@
+tech_mine_rare_crystals_III = {
+    cost = @tier4cost2
+    area = engineering
+    tier = 2
+    category = {
+        materials
+    }
+    prerequisites = {
+        "tech_mine_rare_crystals_II"
+    }
+    weight = @tier4weight2
+    icon = tech_mine_rare_crystals_III
+    weight_modifier = {
+        factor = 1.25
+        modifier = {
+            factor = 1.35
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 5
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+}

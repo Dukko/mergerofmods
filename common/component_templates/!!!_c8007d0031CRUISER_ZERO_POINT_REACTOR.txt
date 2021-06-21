@@ -1,0 +1,37 @@
+@cruiser_power_5 = 800
+@cruiser_cost_5 = 112
+utility_component_template = {
+    key = "CRUISER_ZERO_POINT_REACTOR"
+    size = small
+    icon = "GFX_ship_part_reactor_5"
+    icon_frame = 1
+    power = @cruiser_power_5
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @cruiser_cost_5
+        }
+        upkeep = {
+            energy = 1.14
+            alloys = 0.114
+        }
+    }
+    prerequisites = {
+        "tech_zero_point_power"
+    }
+    component_set = "power_core"
+    size_restriction = {
+        cruiser
+        crisis_cruiser
+        graygoo_interdictor
+        pasmod_assault_cruiser
+        rs_support_cruiser
+        rs_ea_cruiser
+        rs_battlecruiser
+        rs_carrier
+    }
+    upgrades_to = @REACTORS_CC_T6
+    ai_weight = {
+        weight = 5
+    }
+}

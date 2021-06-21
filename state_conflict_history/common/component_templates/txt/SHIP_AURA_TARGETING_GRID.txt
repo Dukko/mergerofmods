@@ -1,22 +1,23 @@
-@shipAuraRange = 80
 utility_component_template = {
     key = "SHIP_AURA_TARGETING_GRID"
     size = medium
-    icon = "GFX_ship_part_aura_nanobot"
+    icon = "GFX_ship_part_aura_targeting_grid"
     icon_frame = 1
     power = 0
     size_restriction = {
         titan
+        juggernaut
         scavenger_bot
         graygoo_mothership
         dreadnought
         nanite_dragon
     }
-    component_set = "ship_aura_components"
+    component_set = "ship_titan_aura_components"
     friendly_aura = {
         name = "aura_targeting_grid"
         radius = @shipAuraRange
         apply_on = ships
+        system_wide = yes
         stack_info = {
             id = friendly_targeting_grid
             priority = 20
@@ -38,9 +39,10 @@ utility_component_template = {
     ai_weight = {
         weight = 10
         modifier = {
-            factor = 2
-            is_ai = yes
-            is_preferred_weapons = weapon_type_kinetic
+            factor = 0
+            NOT = {
+                has_country_flag = BSWf_uSHIP_AURA_TARGETING_GRID
+            }
         }
     }
 }

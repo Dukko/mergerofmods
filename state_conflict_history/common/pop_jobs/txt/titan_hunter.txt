@@ -31,47 +31,6 @@ titan_hunter = {
             trade_value_add = 2
         }
     }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                has_valid_civic = civic_agrarian_idyll
-                is_lithoid_empire = no
-            }
-        }
-        modifier = {
-            planet_amenities_add = 2
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                has_valid_civic = civic_agrarian_idyll
-                is_lithoid_empire = no
-            }
-            OR = {
-                has_trait = trait_robot_domestic_protocols
-                has_trait = trait_charismatic
-            }
-        }
-        modifier = {
-            planet_amenities_add = 0.4
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                has_valid_civic = civic_agrarian_idyll
-                is_lithoid_empire = no
-            }
-            has_trait = trait_repugnant
-        }
-        modifier = {
-            planet_amenities_add = -0.4
-        }
-    }
     resources = {
         category = planet_farmers
         produces = {
@@ -107,7 +66,6 @@ titan_hunter = {
             factor = 1.1
             owner = {
                 has_valid_civic = civic_agrarian_idyll
-                is_lithoid_empire = no
             }
         }
         modifier = {
@@ -158,7 +116,6 @@ titan_hunter = {
             factor = 1.5
             owner = {
                 has_valid_civic = civic_agrarian_idyll
-                is_lithoid_empire = no
             }
             OR = {
                 has_trait = trait_robot_domestic_protocols
@@ -169,7 +126,6 @@ titan_hunter = {
             factor = 0.5
             owner = {
                 has_valid_civic = civic_agrarian_idyll
-                is_lithoid_empire = no
             }
             has_trait = trait_repugnant
         }

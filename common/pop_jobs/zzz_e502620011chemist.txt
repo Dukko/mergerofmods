@@ -17,6 +17,15 @@ chemist = {
         produces = {
             volatile_motes = 2
         }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_valid_civic = civic_refining_consortium
+                }
+            }
+            volatile_motes = 1
+        }
         upkeep = {
             minerals = 10
         }

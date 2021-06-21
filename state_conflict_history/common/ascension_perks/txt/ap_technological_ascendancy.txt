@@ -1,6 +1,6 @@
 ap_technological_ascendancy = {
     modifier = {
-        all_technology_research_speed = 0.1
+        all_technology_research_speed = 0.15
     }
     potential = {
         NOT = {
@@ -9,9 +9,17 @@ ap_technological_ascendancy = {
     }
     on_enabled = {
         custom_tooltip = "ap_technological_ascendancy_rare"
+        if = {
+            limit = {
+                NOT = {
+                    has_technology = tech_self_aware_logic
+                }
+            }
+            add_research_option = tech_self_aware_logic
+        }
     }
     ai_weight = {
-        factor = 2
+        factor = 1
         modifier = {
             factor = 0
             not = {

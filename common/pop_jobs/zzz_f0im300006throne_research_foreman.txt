@@ -1,0 +1,105 @@
+throne_research_foreman = {
+    category = ruler
+    condition_string = RULER_JOB_TRIGGER
+    building_icon = building_nano_forge
+    clothes_texture_index = 2
+    icon = researcher
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible = {
+        complex_specialist_job_check_trigger = yes
+        owner = {
+            is_fallen_empire = no
+        }
+    }
+    planet_modifier = {
+        planet_researchers_engineering_research_produces_mult = 0.05
+        planet_researchers_physics_research_produces_mult = 0.05
+        planet_researchers_society_research_produces_mult = 0.05
+        planet_researchers_upkeep_mult = -0.05
+    }
+    country_modifier = {
+        country_volatile_motes_produces_mult = 0.1
+        country_rare_crystals_produces_mult = 0.1
+        country_exotic_gases_produces_mult = 0.1
+    }
+    resources = {
+        category = planet_jobs
+        upkeep = {
+            consumer_goods = 20
+            energy = 25
+            sr_zro = 1.5
+        }
+        produces = {
+            society_research = 20
+            engineering_research = 20
+            physics_research = 20
+        }
+    }
+    weight = {
+        weight = 1
+        modifier = {
+            factor = 2
+            has_living_standard = {
+                type = living_standard_academic_privilege
+            }
+        }
+        modifier = {
+            factor = 3
+            has_trait = trait_erudite
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                has_trait = trait_robot_logic_engines
+                has_trait = trait_intelligent
+            }
+        }
+        modifier = {
+            factor = 2
+            has_trait = trait_brainslug
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+                has_trait = trait_natural_engineers
+                has_trait = trait_natural_physicists
+                has_trait = trait_natural_sociologists
+            }
+        }
+        modifier = {
+            factor = 1.5
+            has_trait = trait_latent_psionic
+        }
+        modifier = {
+            factor = 2
+            has_trait = trait_psionic
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                has_trait = trait_enigmatic_intelligence
+                has_trait = trait_enigmatic_intelligence_poor
+            }
+        }
+        modifier = {
+            factor = 2
+            has_trait = trait_presapient_natural_intellectuals
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+                has_trait = trait_robust
+                has_trait = trait_robot_efficient_processors
+            }
+        }
+        modifier = {
+            factor = 1.5
+            has_trait = trait_void_dweller_1
+        }
+    }
+}

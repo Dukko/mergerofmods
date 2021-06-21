@@ -23,17 +23,21 @@ utility_component_template = {
     component_set = "power_core"
     size_restriction = {
         cruiser
-        graygoo_interdictor
         crisis_cruiser
+        graygoo_interdictor
+        pasmod_assault_cruiser
+        rs_support_cruiser
+        rs_ea_cruiser
+        rs_battlecruiser
+        rs_carrier
     }
-    upgrades_to = "CRUISER_GRAVITON_REACTOR"
+    upgrades_to = @DM_REACTORS_CC_T2
     ai_weight = {
         weight = 6
         modifier = {
             factor = 0
-            resource_stockpile_compare = {
-                resource = sr_dark_matter
-                value <= 50
+            no_resource_for_component = {
+                RESOURCE = sr_dark_matter
             }
         }
     }

@@ -47,7 +47,7 @@ pw_building_enigma_engine = {
                     has_ancrel = no
                 }
             }
-            minerals = @pw_building_cost
+            minerals = @pw_building_cost_half
             alloys = @pw_building_cost_advanced
         }
         cost = {
@@ -77,6 +77,15 @@ pw_building_enigma_engine = {
                 }
             }
             energy = @pw_building_upkeep_extra
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_edict = pw_ambition_wonders_beyond_ambition
+                }
+            }
+            energy = @pw_building_upkeep_ambition
         }
         upkeep = {
             trigger = {

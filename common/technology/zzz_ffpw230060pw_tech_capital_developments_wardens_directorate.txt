@@ -27,6 +27,14 @@ pw_tech_capital_developments_wardens_directorate = {
             is_authoritarian = no
         }
         modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_modifier = penal_colony
+                }
+            }
+        }
+        modifier = {
             factor = 2
             has_ethic = ethic_fanatic_authoritarian
         }

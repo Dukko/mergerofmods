@@ -1,10 +1,7 @@
-@cannon_speed = 6
-@cannon_rotation = 10
-@cannon_acceleration = 10
 ion_cannon = {
-    max_speed = @cannon_speed
-    rotation_speed = @cannon_rotation
-    acceleration = @cannon_acceleration
+    max_speed = 6
+    rotation_speed = 10
+    acceleration = 10
     modifier = {
         ship_evasion_mult = -1
     }

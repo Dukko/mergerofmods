@@ -12,6 +12,20 @@ clerk = {
     possible = {
         worker_job_check_trigger = yes
     }
+    resources = {
+        category = planet_clerks
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_valid_civic = civic_founder_cult
+                }
+            }
+            physics_research = 1
+            engineering_research = 1
+            society_research = 1
+        }
+    }
     planet_modifier = {
         planet_amenities_add = 2
         trade_value_add = 4

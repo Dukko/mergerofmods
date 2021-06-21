@@ -46,10 +46,10 @@ tech_rare_crystals = {
         }
     }
     ai_weight = {
-        weight = 5
+        weight = 500
         factor = 5
         modifier = {
-            factor = 500
+            factor = 50
             has_technology = tech_energy_torpedoes_2
         }
         modifier = {

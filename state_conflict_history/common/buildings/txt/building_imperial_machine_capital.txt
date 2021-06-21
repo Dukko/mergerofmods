@@ -44,6 +44,66 @@ building_imperial_machine_capital = {
     }
     triggered_planet_modifier = {
         potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            num_buildings = {
+                type = building_stronghold
+                value > 0
+            }
+            str_force_stronghold = yes
+        }
+        job_starnet_spice_melange_farmer_add = -2
+        job_starnet_spice_melange_antifarmer_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            num_buildings = {
+                type = building_stronghold
+                value > 2
+            }
+            str_force_stronghold = yes
+        }
+        job_starnet_spice_melange_farmer_add = -2
+        job_starnet_spice_melange_antifarmer_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            num_buildings = {
+                type = building_stronghold
+                value > 4
+            }
+            str_force_stronghold = yes
+        }
+        job_starnet_spice_melange_farmer_add = -2
+        job_starnet_spice_melange_antifarmer_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            num_buildings = {
+                type = building_stronghold
+                value > 6
+            }
+            str_force_stronghold = yes
+        }
+        job_starnet_spice_melange_farmer_add = -2
+        job_starnet_spice_melange_antifarmer_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
             num_pops >= 10
         }
         modifier = {

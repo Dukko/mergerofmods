@@ -35,6 +35,9 @@ weapon_component_template = {
         modifier = {
             factor = 200
             has_global_flag = ai_invasion_happened
+            not = {
+                has_global_flag = ai_invasion_defeated
+            }
         }
         modifier = {
             factor = 0

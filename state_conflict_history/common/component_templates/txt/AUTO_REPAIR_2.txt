@@ -1,7 +1,7 @@
 utility_component_template = {
     key = "AUTO_REPAIR_2"
     size = aux
-    icon = "GFX_ship_part_nanite_auto_repair"
+    icon = "GFX_ship_part_auto_repair"
     icon_frame = 1
     power = 0
     resources = {
@@ -20,10 +20,28 @@ utility_component_template = {
     }
     component_set = "AUTO_REPAIR_2"
     ai_weight = {
-        weight = 15
+        weight = 10
         modifier = {
             factor = 2
-            is_preferred_weapons = weapon_type_explosive
+            check_variable = {
+                which = BSWq_DEF_SLD
+                value <= 3
+            }
+        }
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = BSWq_DEF_SLD
+                value >= 6
+            }
+        }
+        modifier = {
+            factor = 0
+            is_country_type = default
+            has_monthly_income = {
+                resource = nanites
+                value <= 0
+            }
         }
     }
 }

@@ -75,6 +75,10 @@ resolution_sanctions_tech_repeal_1 = {
             }
         }
         modifier = {
+            factor = 1.2
+            has_ai_personality = principled_rogues
+        }
+        modifier = {
             factor = 1.5
             OR = {
                 is_in_breach_of_any = yes

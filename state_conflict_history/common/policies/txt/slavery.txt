@@ -9,9 +9,14 @@ slavery = {
         valid = {
             NOR = {
                 has_valid_civic = civic_slaver_guilds
+                has_valid_civic = civic_indentured_assets
+                has_valid_civic = civic_slaving_despots
+                has_valid_civic = civic_slaving_despots_corpo
+                has_valid_civic = civic_caste_system
+                has_valid_civic = civic_state_monopoly
+                has_valid_civic = civic_divine_order
                 has_valid_civic = civic_reeducated_labor
                 has_valid_civic = civic_divine_order
-                has_valid_civic = civic_indentured_assets
             }
         }
         policy_flags = {
@@ -31,8 +36,13 @@ slavery = {
     option = {
         name = "slavery_allowed"
         valid = {
-            NOT = {
-                is_subject_type = signatory
+            custom_tooltip = {
+                fail_text = "requires_not_signatory"
+                NOR = {
+                    is_subject_type = signatory
+                    is_subject_type = scion_signatory
+                    is_subject_type = scion_auxiliary
+                }
             }
             OR = {
                 has_ethic = ethic_authoritarian
@@ -41,7 +51,12 @@ slavery = {
                 has_ethic = ethic_fanatic_xenophobe
                 has_valid_civic = civic_slaver_guilds
                 has_valid_civic = civic_divine_order
+                has_valid_civic = civic_caste_system
                 has_valid_civic = civic_reeducated_labor
+                has_valid_civic = civic_slaving_despots
+                has_valid_civic = civic_slaving_despots_corpo
+                has_ethic = ethic_elitist
+                has_ethic = ethic_fanatic_elitist
             }
         }
         policy_flags = {

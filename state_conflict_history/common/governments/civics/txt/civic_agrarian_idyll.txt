@@ -9,11 +9,19 @@ civic_agrarian_idyll = {
         authority = {
             NOR = {
                 value = auth_corporate
-                value = auth_corporate_imperial
+                value = auth_cooperative
+                value = auth_corporate_fiefdom
             }
         }
     }
     possible = {
+        ethics = {
+            OR = {
+                text = civic_tooltip_pacifist
+                value = ethic_pacifist
+                value = ethic_fanatic_pacifist
+            }
+        }
         civics = {
             NOR = {
                 value = civic_industrial_economy

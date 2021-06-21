@@ -1,13 +1,9 @@
-@ebh_min4 = 1000
-@ebh_sr3 = 200
-@ebh_upkeep3 = 3
-@ebh_upkeep5 = 5
 building_expanded_warren = {
-    base_buildtime = @b1_time
+    base_buildtime = @b2_time
     can_build = no
     category = amenity
     potential = {
-        has_building = ebh_hive_warren2
+        has_building = building_hive_warren
     }
     allow = {
         has_upgraded_capital = yes
@@ -30,8 +26,8 @@ building_expanded_warren = {
         building_communal_housing_large
     }
     planet_modifier = {
-        planet_housing_add = 12
-        planet_amenities_add = 20
+        planet_housing_add = 6
+        planet_amenities_add = 10
     }
     triggered_planet_modifier = {
         potential = {
@@ -47,18 +43,15 @@ building_expanded_warren = {
     resources = {
         category = planet_buildings
         cost = {
-            minerals = @ebh_min4
-            rare_crystals = @ebh_sr3
+            minerals = @b2_minerals
+            rare_crystals = @b2_rare_cost
         }
         upkeep = {
-            energy = @ebh_upkeep5
-            rare_crystals = @ebh_upkeep3
+            energy = 3
+            rare_crystals = @b2_rare_upkeep
         }
     }
     prerequisites = {
-        "ebh_hive_housing_1"
-    }
-    upgrades = {
-        "ebh_expanded_warren"
+        "tech_housing_2"
     }
 }

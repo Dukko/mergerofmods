@@ -146,6 +146,10 @@ resolution_sanctions_administrative_repeal_2 = {
         }
         modifier = {
             factor = 1.2
+            has_ai_personality = principled_rogues
+        }
+        modifier = {
+            factor = 1.2
             any_federation_ally = {
                 OR = {
                     is_xenophile = yes

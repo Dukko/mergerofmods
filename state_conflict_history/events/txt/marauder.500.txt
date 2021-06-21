@@ -70,6 +70,7 @@ country_event = {
                         random_system_planet = {
                             limit = {
                                 is_star = no
+                                is_colony = yes
                             }
                             save_global_event_target_as = CmtTargetMarauderRallyPoint1
                         }
@@ -81,6 +82,7 @@ country_event = {
                 random_planet_within_border = {
                     limit = {
                         is_star = no
+                        is_colony = yes
                     }
                     save_global_event_target_as = CmtTargetMarauderRallyPoint1
                 }
@@ -121,6 +123,7 @@ country_event = {
                         random_system_planet = {
                             limit = {
                                 is_star = no
+                                is_colony = yes
                             }
                             save_global_event_target_as = CmtTargetMarauderRallyPoint2
                         }
@@ -132,6 +135,7 @@ country_event = {
                 random_planet_within_border = {
                     limit = {
                         is_star = no
+                        is_colony = yes
                     }
                     save_global_event_target_as = CmtTargetMarauderRallyPoint2
                 }
@@ -172,6 +176,7 @@ country_event = {
                         random_system_planet = {
                             limit = {
                                 is_star = no
+                                is_colony = yes
                             }
                             save_global_event_target_as = CmtTargetMarauderRallyPoint3
                         }
@@ -183,6 +188,7 @@ country_event = {
                 random_planet_within_border = {
                     limit = {
                         is_star = no
+                        is_colony = yes
                     }
                     save_global_event_target_as = CmtTargetMarauderRallyPoint3
                 }
@@ -261,6 +267,14 @@ country_event = {
                 }
                 every_owned_fleet = {
                     set_owner = root
+                    if = {
+                        limit = {
+                            exists = leader
+                        }
+                        leader = {
+                            set_owner = root
+                        }
+                    }
                 }
                 destroy_country = yes
             }

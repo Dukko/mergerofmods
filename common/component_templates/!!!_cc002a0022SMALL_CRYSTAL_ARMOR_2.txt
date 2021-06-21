@@ -1,0 +1,30 @@
+utility_component_template = {
+    key = "SMALL_CRYSTAL_ARMOR_2"
+    size = small
+    icon = "GFX_ship_part_crystal_armor_2"
+    icon_frame = 1
+    power = 0
+    resources = {
+        category = ship_components
+        cost = {
+            rare_crystals = 0.33
+        }
+    }
+    prerequisites = {
+        "tech_crystal_armor_2"
+    }
+    component_set = "CRYSTAL_ARMOR_2"
+    upgrades_to = @SMALL_CRYSTAL_ARMOR_T3
+    modifier = {
+        ship_hull_add = @armor_6S
+    }
+    ai_weight = {
+        weight = 1
+        modifier = {
+            factor = 0
+            no_resource_for_component = {
+                RESOURCE = rare_crystals
+            }
+        }
+    }
+}

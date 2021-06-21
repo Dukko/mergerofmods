@@ -80,9 +80,6 @@ sanchorage = {
             }
         }
         buildings = {
-            crew_quarters = {
-                base = 1
-            }
             fleet_academy = {
                 base = 0.05
             }
@@ -92,83 +89,14 @@ sanchorage = {
             naval_logistics_office = {
                 base = 6.5
             }
-            listening_post = {
-                base = 0.8
+            curator_think_tank = {
+                base = 3
             }
-            sensor_station = {
-                base = 0.6
-            }
-            reinforced_defenses = {
-                base = 0.4
-            }
-            strategic_defenses = {
-                base = 0.4
-            }
-            emergency_portal = {
-                base = 0.2
-            }
-            adv_space_engineers = {
-                base = 0.6
-            }
-            adv_starbase = {
-                base = 0.6
-            }
-            administration_office = {
-                base = 0.6
-            }
-            starbase_optimal_systems = {
-                base = 0.6
-            }
-            administration_computers = {
-                base = 0.6
-            }
-            market_computers = {
-                base = 0.4
-            }
-            research_computers = {
-                base = 0.4
-            }
-            orbital_assembly = {
-                base = 0.6
-            }
-            chain_manufacturing = {
-                base = 0.6
-            }
-            construction_planificator = {
-                base = 0.6
-            }
-            offworld_trading_company = {
-                base = 0.6
-            }
-            nebula_refinery = {
-                base = 0.6
+            art_college = {
+                base = 3
             }
             resource_silo = {
-                base = 0.8
-            }
-            mining_base = {
-                base = 0.8
-            }
-            power_station = {
-                base = 0.8
-            }
-            farming_base = {
-                base = 0.8
-            }
-            solar_panel_01 = {
-                base = 0.4
-            }
-            solar_panel_02 = {
-                base = 0.4
-            }
-            solar_panel_03 = {
-                base = 0.4
-            }
-            solar_panel_04 = {
-                base = 0.4
-            }
-            hydroponics_bay = {
-                base = 0.4
+                base = 5
             }
             trader_caravanserai = {
                 base = 0.03
@@ -178,32 +106,8 @@ sanchorage = {
             anchorage = {
                 base = 1
             }
-            hangar_bay = {
-                base = 0.6
-            }
-            gun_battery = {
-                base = 0.8
-            }
-            missile_battery = {
-                base = 0.8
-            }
-            large_battery = {
-                base = 0.8
-            }
-            pd_battery = {
-                base = 0.8
-            }
-            xl_battery = {
-                base = 0.8
-            }
-            titanic_battery = {
-                base = 0.8
-            }
-            shield_module = {
-                base = 1
-            }
-            armor_module = {
-                base = 1
+            shipyard = {
+                base = 0.5
             }
         }
     }

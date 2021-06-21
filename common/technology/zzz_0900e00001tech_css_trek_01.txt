@@ -1,0 +1,18 @@
+tech_css_trek_01 = {
+    area = engineering
+    tier = 0
+    cost = 0
+    category = {
+        voidcraft
+    }
+    start_tech = yes
+    potential = {
+        graphical_culture = "trek_01"
+    }
+    prereqfor_desc = {
+        ship = {
+            title = "TECH_CSS_FEDERATION"
+            desc = "TECH_CSS_FEDERATION"
+        }
+    }
+}

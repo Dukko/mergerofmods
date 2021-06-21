@@ -68,6 +68,15 @@ pw_building_pavilion_of_wonders = {
         }
         upkeep = {
             trigger = {
+                exists = owner
+                owner = {
+                    has_edict = pw_ambition_wonders_beyond_ambition
+                }
+            }
+            energy = @pw_building_upkeep_ambition
+        }
+        upkeep = {
+            trigger = {
                 planet = {
                     OR = {
                         has_designation = col_resort
@@ -193,14 +202,6 @@ pw_building_pavilion_of_wonders = {
     }
     triggered_planet_modifier = {
         potential = {
-            has_modifier = resort_colony
-        }
-        modifier = {
-            job_pw_tourist_per_pop = @pw_job_per_25_pop
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
             exists = owner
             owner = {
                 NOT = {
@@ -309,12 +310,6 @@ pw_building_pavilion_of_wonders = {
             }
         }
         text = job_death_chronicler_effect_desc
-    }
-    triggered_desc = {
-        trigger = {
-            has_modifier = resort_colony
-        }
-        text = job_pw_tourist_effect_desc
     }
     triggered_desc = {
         trigger = {

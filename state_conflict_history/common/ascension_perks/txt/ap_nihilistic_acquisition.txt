@@ -5,6 +5,25 @@ ap_nihilistic_acquisition = {
     }
     on_enabled = {
         custom_tooltip = "allow_raiding"
+        custom_tooltip = "RAID_MORE"
+                if = {
+            limit = {
+                is_gestalt = no
+                NOT = {
+                    has_technology = tech_artificial_moral_codes
+                }
+            }
+            add_research_option = tech_artificial_moral_codes
+        }
+        if = {
+            limit = {
+                is_gestalt = yes
+                NOT = {
+                    has_technology = tech_unity_of_purpose
+                }
+            }
+            add_research_option = tech_unity_of_purpose
+        }
         hidden_effect = {
             country_event = {
                 id = relytor_raider.1

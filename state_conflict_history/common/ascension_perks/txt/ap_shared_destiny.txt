@@ -5,6 +5,16 @@ ap_shared_destiny = {
         subject_integration_influence_cost_mult = -0.5
         country_subject_trust_cap_add = 100
     }
+    on_enabled = {
+        if = {
+            limit = {
+                NOT = {
+                    has_technology = tech_xeno_diplomacy
+                }
+            }
+            add_research_option = tech_xeno_diplomacy
+        }
+    }
     potential = {
         NOR = {
             has_valid_civic = civic_fanatic_purifiers

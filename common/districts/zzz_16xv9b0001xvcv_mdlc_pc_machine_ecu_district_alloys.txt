@@ -30,10 +30,10 @@ xvcv_mdlc_pc_machine_ecu_district_alloys = {
             volatile_motes = 100
         }
         produces = {
-            alloys = 32
+            alloys = 54
         }
         upkeep = {
-            minerals = 38
+            minerals = 60
             energy = 10
             volatile_motes = 1
         }

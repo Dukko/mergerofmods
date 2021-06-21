@@ -54,6 +54,9 @@ building_crystal_mines = {
             energy = 1
         }
     }
+    upgrades = {
+        "building_crystal_mines_II"
+    }
     prerequisites = {
         "tech_mine_rare_crystals"
     }

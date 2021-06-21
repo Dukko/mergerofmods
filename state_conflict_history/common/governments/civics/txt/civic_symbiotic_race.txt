@@ -9,7 +9,8 @@ civic_symbiotic_race = {
         authority = {
             NOR = {
                 value = auth_corporate
-                value = auth_corporate_imperial
+                value = auth_cooperative
+                value = auth_corporate_fiefdom
             }
         }
     }

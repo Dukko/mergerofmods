@@ -3,6 +3,7 @@ Empyreal_liason_officer = {
     condition_string = SPECIALIST_JOB_TRIGGER
     building_icon = building_colony_shelter
     clothes_texture_index = 2
+    icon = merchant
     possible_pre_triggers = {
         has_owner = yes
         is_being_purged = no

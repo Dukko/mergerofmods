@@ -119,5 +119,9 @@ resolution_rulesofwar_reverence_for_life = {
             factor = 2
             is_pacifist = yes
         }
+        modifier = {
+            factor = 1.2
+            has_ai_personality = crime_haven
+        }
     }
 }

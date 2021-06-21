@@ -7,8 +7,8 @@ ap_become_the_crisis = {
     }
     possible = {
         custom_tooltip = {
-            fail_text = "requires_ascension_perks_2"
-            num_ascension_perks > 1
+            fail_text = "requires_ascension_perks_3"
+            num_ascension_perks > 2
         }
         custom_tooltip = {
             fail_text = "requires_independence"

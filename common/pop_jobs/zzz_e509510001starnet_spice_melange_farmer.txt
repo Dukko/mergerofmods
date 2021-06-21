@@ -16,7 +16,7 @@ starnet_spice_melange_farmer = {
         }
     }
     resources = {
-        category = planet_miners
+        category = planet_soldiers
         produces = {
             trigger = {
                 exists = owner
@@ -24,7 +24,7 @@ starnet_spice_melange_farmer = {
                     is_ai = yes
                 }
             }
-            starnet_spice_melange = 200
+            starnet_spice_melange = 1000
         }
     }
     weight = {

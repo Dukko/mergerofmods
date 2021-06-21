@@ -39,10 +39,10 @@ border_policy = {
             modifier = {
                 factor = 0
                 AND = {
+                    is_megacorp = yes
                     NOT = {
                         has_valid_civic = civic_shadow_state
                     }
-                is_megacorp = yes
                 }
             }
             modifier = {

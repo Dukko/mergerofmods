@@ -34,4 +34,5 @@ xvcv_mdlc_pc_machine_ecu = {
     starting_planet = no
     show_city = no
     is_artificial_planet = yes
+    carry_cap_per_free_district = @carry_cap_high
 }

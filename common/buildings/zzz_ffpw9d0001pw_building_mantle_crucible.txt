@@ -81,6 +81,15 @@ pw_building_mantle_crucible = {
             }
             energy = @pw_building_upkeep_extra
         }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_edict = pw_ambition_wonders_beyond_ambition
+                }
+            }
+            energy = @pw_building_upkeep_ambition
+        }
     }
     destroy_trigger = {
         OR = {
@@ -335,11 +344,10 @@ pw_building_mantle_crucible = {
             exists = owner
             owner = {
                 has_edict = pw_ambition_wonders_beyond_ambition
-                has_modifier = pw_mod_mantle_crucible_alloys
             }
         }
         modifier = {
-            planet_metallurgists_produces_mult = 0.1
+            planet_metallurgists_produces_mult = 0.05
         }
     }
     triggered_planet_modifier = {
@@ -347,11 +355,10 @@ pw_building_mantle_crucible = {
             exists = owner
             owner = {
                 has_edict = pw_ambition_wonders_beyond_ambition
-                has_modifier = pw_mod_mantle_crucible_consumer_goods
             }
         }
         modifier = {
-            planet_artisans_produces_mult = 0.1
+            planet_artisans_produces_mult = 0.05
         }
     }
     triggered_desc = {

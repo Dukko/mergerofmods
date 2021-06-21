@@ -55,6 +55,10 @@ tech_tomb_world_adaption = {
                 is_planet_class = pc_nuked
             }
         }
+        modifier = {
+            factor = 2
+            has_valid_civic = civic_reclamation
+        }
     }
     ai_weight = {
         factor = 1000

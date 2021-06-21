@@ -8,11 +8,16 @@ district_generator = {
     }
     potential = {
         uses_district_set = standard
+        NOT = {
+            has_modifier = urban_idyll_colony
+        }
     }
     allow = {
-        NOT = {
+        NOR = {
             has_modifier = resort_colony
-        }
+            has_modifier = urban_idyll_colony
+            }
+        str_energy_district_allow = yes
     }
     conversion_ratio = 1
     convert_to = {
@@ -40,6 +45,19 @@ district_generator = {
     }
     planet_modifier = {
         planet_housing_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            str_force_district_generator = yes
+        }
+        modifier = {
+            job_starnet_spice_melange_farmer_add = 1
+            job_starnet_spice_melange_antifarmer_add = -1
+        }
     }
     triggered_planet_modifier = {
         potential = {
@@ -79,18 +97,6 @@ district_generator = {
         potential = {
             exists = owner
             owner = {
-                is_gestalt = yes
-            }
-            has_active_building = building_energy_nexus
-        }
-        modifier = {
-            job_technician_drone_add = 1
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
                 is_gestalt = no
                 is_fallen_empire_spiritualist = no
             }
@@ -103,36 +109,11 @@ district_generator = {
         potential = {
             exists = owner
             owner = {
-                is_gestalt = no
-                is_fallen_empire_spiritualist = no
-            }
-            has_active_building = building_energy_nexus
-        }
-        modifier = {
-            job_technician_add = 1
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
                 is_fallen_empire_spiritualist = yes
             }
         }
         modifier = {
             job_fe_acolyte_generator_add = 2
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_fallen_empire_spiritualist = yes
-            }
-            has_active_building = building_energy_nexus
-        }
-        modifier = {
-            job_fe_acolyte_generator_add = 1
         }
     }
     triggered_planet_modifier = {
@@ -211,6 +192,17 @@ district_generator = {
             job_fe_acolyte_generator_add = 1
         }
     }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_tradition = tr_industry_compact_extraction_centers
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
     triggered_desc = {
         trigger = {
             exists = owner
@@ -243,20 +235,24 @@ district_generator = {
         tech_power_plant_1
     }
     ai_resource_production = {
-        energy = 1
+        energy = 3
         trigger = {
             always = yes
         }
     }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                has_tradition = tr_industry_compact_extraction_centers
+    ai_resource_production = {
+        energy = 1
+        trigger = {
+            nor = {
+                has_designation = col_factory
+                has_designation = col_foundry
             }
         }
-        modifier = {
-            planet_housing_add = 1
+    }
+    ai_resource_production = {
+        energy = 2
+        trigger = {
+            has_designation = col_generator
         }
     }
 }

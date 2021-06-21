@@ -175,5 +175,10 @@ resolution_sanctions_military_repeal_3 = {
                 has_policy_flag = diplo_stance_supremacist
             }
         }
+        modifier = {
+            factor = 1.2
+            has_ai_personality = principled_rogues
+            is_pacifist = no
+        }
     }
 }

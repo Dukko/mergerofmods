@@ -9,6 +9,7 @@ living_standard_academic_privilege = {
                 has_valid_civic = civic_reeducated_labor
                 has_valid_civic = civic_welfare_state
                 has_valid_civic = civic_shared_burden
+                has_valid_civic = civic_employee_ownership
             }
         }
         NOR = {

@@ -8,7 +8,8 @@ civic_state_monopoly = {
         authority = {
             NOR = {
                 value = auth_corporate
-                value = auth_corporate_imperial
+                value = auth_cooperative
+                value = auth_corporate_fiefdom
             }
         }
     }
@@ -18,19 +19,6 @@ civic_state_monopoly = {
                 value = civic_meritocracy
                 value = civic_merchant_guilds
                 value = civic_aristocratic_elite
-                value = civic_imperial_cult
-                value = civic_divine_council
-                value = civic_spiritual_democracy
-                value = civic_cyber_dictatorship
-                value = civic_science_directorate
-                value = civic_cyber_demos_cratos
-                value = civic_military_dictatorship
-                value = civic_military_junta
-                value = civic_citizen_service
-                value = civic_executive_committee
-                value = civic_philosopher_king
-                value = civic_peaceful_republic
-                value = civic_distributism
                 value = civic_exalted_priesthood
                 value = civic_technocracy
                 value = civic_bureaucracy
@@ -41,9 +29,6 @@ civic_state_monopoly = {
             NOR = {
                 value = auth_direct_democratic
                 value = auth_democratic
-                value = auth_strict_democratic
-                value = auth_democratic_dictatorship
-                value = auth_dem_dict_dummy
             }
         }
         ethics = {

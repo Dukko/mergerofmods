@@ -42,7 +42,7 @@ xvcv_mdlc_pc_machine_cpu_district_decryption = {
             exotic_gases = 100
         }
         upkeep = {
-            energy = 20
+            energy = 15
             rare_crystals = 1
         }
     }

@@ -7,11 +7,11 @@ solar_panel_network = {
         exists = owner
         OR = {
             AND = {
-                owner = {
-                    is_gestalt = yes
-                    has_technology = "tech_solar_panel_network"
-                }
-            }
+        owner = {
+            is_gestalt = yes
+            has_technology = "tech_solar_panel_network"
+        }
+    }
             AND = {
                 owner = {
                     is_gestalt = no
@@ -43,13 +43,7 @@ solar_panel_network = {
             alloys = 50
         }
         produces = {
-            energy = 3
-        }
-        produces = {
-            trigger = {
-                has_starbase_building = eutab_solar_tracker
-            }
-            energy = 3
+            energy = 6
         }
         produces = {
             trigger = {
@@ -64,6 +58,12 @@ solar_panel_network = {
                     is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
                     is_active_resolution = "resolution_galacticstudies_6"
                 }
+            }
+            energy = 6
+        }
+        produces = {
+            trigger = {
+                has_starbase_building = eutab_solar_tracker
             }
             energy = 3
         }

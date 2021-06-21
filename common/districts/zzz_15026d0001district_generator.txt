@@ -8,11 +8,15 @@ district_generator = {
     }
     potential = {
         uses_district_set = standard
+        NOT = {
+            has_modifier = urban_idyll_colony
+        }
     }
     allow = {
-        NOT = {
+        NOR = {
             has_modifier = resort_colony
-        }
+            has_modifier = urban_idyll_colony
+            }
         str_energy_district_allow = yes
     }
     conversion_ratio = 1

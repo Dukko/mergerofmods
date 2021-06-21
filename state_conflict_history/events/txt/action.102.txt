@@ -67,7 +67,7 @@ country_event = {
                     }
                     modifier = {
                         mult = 0.75
-                        has_ethic = ethic_gestalt_consciousness
+                        is_gestalt = yes
                     }
                 }
                 capital_scope = {

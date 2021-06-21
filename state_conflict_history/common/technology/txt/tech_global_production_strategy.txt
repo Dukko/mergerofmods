@@ -28,6 +28,10 @@ tech_global_production_strategy = {
         }
         modifier = {
             factor = 2
+            has_valid_civic = civic_manufactory
+        }
+        modifier = {
+            factor = 2
             has_policy_flag = economic_stance_market
         }
     }

@@ -72,6 +72,15 @@ pw_building_museum_of_the_grotesque = {
         }
         upkeep = {
             trigger = {
+                exists = owner
+                owner = {
+                    has_edict = pw_ambition_wonders_beyond_ambition
+                }
+            }
+            energy = @pw_building_upkeep_ambition
+        }
+        upkeep = {
+            trigger = {
                 planet = {
                     OR = {
                         has_designation = col_resort
@@ -197,14 +206,6 @@ pw_building_museum_of_the_grotesque = {
         }
         modifier = {
             job_manager_add = 2
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            has_modifier = resort_colony
-        }
-        modifier = {
-            job_pw_tourist_per_pop = @pw_job_per_20_pop
         }
     }
     triggered_planet_modifier = {
@@ -524,12 +525,6 @@ pw_building_museum_of_the_grotesque = {
             }
         }
         text = job_death_chronicler_effect_desc
-    }
-    triggered_desc = {
-        trigger = {
-            has_modifier = resort_colony
-        }
-        text = job_pw_tourist_effect_desc
     }
     triggered_desc = {
         trigger = {

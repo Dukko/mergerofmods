@@ -1,6 +1,7 @@
 !!Ariphaos Unofficial Patch (3.0)
 Community Flash Patch
 StellarStellaris
+StellarStellaris Micromod - Outliner - Every 56 Frames
 Economic Flavor
 Better Ultimate Economic Plan
 Bypass Adjustments
@@ -25,6 +26,7 @@ SpaceAmbient Music - Vol. II
 SpaceAmbient Music - Vol. I
 Music Pack
 War Name Variety | Redux
+Ultimate Imperium of Man Namelist
 Ultimate Eldar Namelist
 Shadowrun Name List
 Random Species Names - Updated
@@ -67,6 +69,7 @@ Primitive Worlds for 3.x
 Mass Effect Civilizations - Asari
 LLX's Mods - Compiled Dimorphism (3.0 'Dick')
 Extra Fallen Empires
+Elves of Stellaris
 Another Animated Avali
 Animated Ascellian Portraits (2.2.6 Le Guin +)
 Animated Valbaran Species
@@ -122,7 +125,6 @@ Trader Enclave Starbase Buildings
 The Great Khan Expanded [3.0]
 Tass Monster Wave
 Separate Peace Treaties
-Size 25 Homeworlds
 Shut Up, We Don't Care! (3.0)
 【3.0.2】Shroud Expanded【虚境扩展】The Decadance of Sanity--理智的终末癫狂
 Shadowgate
@@ -145,7 +147,6 @@ Land Appropriation Selection for Gestalt Consciousness
 Jump Gates
 Invasion! (3.0)
 Intervene: Help Friendly Nations - 3.*
-Interstellar Incorporated: Space Corp [3.0]
 Double Corp Ship Cost
 Influence Cap+
 Imperial Projects
@@ -179,40 +180,61 @@ Viable Feudalism and Imperialism - Empire Federation
 Vassals Expanded and Reworked - 3.0
 Vassals Expanded and Reworked - Exalted Domination Patch
 Vassals Love Powerful Overlords
+We are the Imperial Navy
+WAIN Color Scheme pack
+Vaygr Shipset
 United Fleet Shipset
+Titan Interdictor Module
+Taidian Shipset
+Stellar-Naval Ship Art Pack
 Sins of the Prophets: Stellaris
+Servants of the Omnissiah
+Protoss Ship Set
+Planetary Assault Army & Ship
 Necroids White Shipset
 Midas Apocalypse Golden Colossus
 Marauders but Cooler
 Machine Shipset
+Lotus Mod - Advanced Ship Sections
 Kurogane Expanded (New)
+Hiigara Shipset
 Formidable Star Eater - The Companion Cube
 Federation Builders: Ships and Cities
 Dark necroid ships [2.8]
 Dark Mammalian Ships
 Dark humanoid ships
 C&C: Scrin Ships
+Cheek's Custom Shipsets: Star Trek Cardassians
+Cheek's Custom Shipset: Star Trek [Romulans]
+Cheek's Custom Shipsets: Star Trek [Klingons]
+Cheek's Custom Shipsets: Star Trek [Federation]
+Champion of the Ruinous Powers
+BSG Shipset Renewal
+Borg Shipset 3.0
 Apocalypse Molluscoid Ships: 2.7
+Angels of Death
+Alternate Lithoid Ships
 [United Fleet]Mobile Shipyard
-(-NSC2 Season 6-)
-Asari and NSC Patch
+!-Starbase - Extended-!
+BSW 3 : Balanced Space Warfare
+BSW 3 // More AI Personalities
+BSW 3 // Planetary Assault Army & Ship
+BSW 3 // Starbase - Extended
 Wormhole Generation (3.0)
 Upper Limits V3.0+
 Start with AutoExplore
-Sins of the Prophets: NSC Compatibility Patch
 Technology Ascendant
-Tech Ascendant and NSC2 Compatibility Patch
-Tech Ascendant and NSC2 Compatibility Patch - Update
+Strategic Resource Upgrades
 Ship Component Adjustments
 Magnum's Mods - Resource Storage Research
 Magnum's Mods - More Influence Research
 Magnum's Mods - Megastructure Build Speed Research
+Magnum's Mods - Maximum Sized Home Planet
 Improved Transport Ship Behaviors and Transport Upgrades!
 Guilli's Technologies
 Gigastructural Engineering & More (3.0)
 Fallen Empire Megastructures
 EUTAB - Ethos Unique Techs and Buildings
-Extra Buildings - All in One
 Deprecated Humanoid Ship Sections Patch
 Compatibility - Guilli's Techs & Planetary Diversity
 Building Slot Technologies
@@ -238,10 +260,10 @@ Battle Debris - Starship Graveyards
 UI Overhaul Dynamic
 UI Overhaul Dynamic - Checksum Schism Version
 [3.0.*] UI Overhaul Dynamic + New Enclaves
-UI Overhaul Dynamic + Complete Colors
 Expanded Stellaris Traditions
 Plentiful Traditions 3.x
 Simple Traditions
+Perked Up Perks
 Expanded Stellaris Ascension Perks
 Advanced Ascension(No extra slot)
 Prosperity Tradition Rebalance for 3.0.3
@@ -262,34 +284,30 @@ Small fix for Immersive Galaxy - Planet Variety for PD
 Planetary Designations Adjustments
 Planetary Modifiers Enhancements
 UI Overhaul Dynamic + Planetary Diversity
-\
 Amazing Civics - Megacorp
+Venture Politics
 Government Variety Pack
 Civics Expanded+
-More Authorities
 Improved English Localisation
 Ethics and Civics Alternative - Redux
+More Corporate Authorities for 3.x
 Relytor's Empire Governance - Redux
 Relytor's Empire United
 Relytor's Empire United - Ethics and Civics Alternative Redux (Patch)
 Ethics-Civics Alt and Guilli's Planet Modifiers Patch
 Ethics & Civics Overhaul/GVP Sanity Patch
+~More Corporate Authorities / Amazing Civics - Megacorp Compatibility Patch
+Civics Expanded+ & More Corp Authorities Compatibility Patch
+!More Corporate Authorities/Ethics And Civics Alternative compatibility patch
+~More Corporate Authorities/Venture Politics Compatibility Patch
 StarTech AI
 Galactic Community Expanded
 UI Overhaul Dynamic + Ethics and Civics Alternative
-SpeedDial
-UI Overhaul Dynamic + SpeedDial
-Tiny Fleets for UI Overhaul Dynamic
-Tiny Megastructures
-Tiny Outliner v2
 Kaityo`s Tiny Planet Buildings for UI Overhaul Dynamic
 Tiny Ship Components
-Tiny Starbase Modules and Buildings
-UI Overhaul Dynamic + Tiny Outliner v2
-UI Overhaul Dynamic - Extended Topbar
-Dark UI
-UI Overhaul Dynamic - Dark UI
+! Dark Blue UI Overhaul !
 Improved Music Player & Dark UI Fix
+Crazy Renamer
 ! Immersive Beautiful Stellaris !
 Tier Numbers: Tech
 Tier Numbers: Buildings
@@ -308,7 +326,6 @@ Additional Humanoid Portraits
 Ketaros Clothes Base
 Stellerotica - Human Hair v2
 Void Dwellers traits: Ring World & modded habitats fix
-Viable Feudalism WRB Patch
 VF EF - Feudal Origins Patch
 VF EF - Federations Expanded Patch
 VF EF - Exalted Domination Patch
@@ -324,39 +341,26 @@ Psionic Synths / Planetary Diversity - Shroud Worlds Patch
 Psionic Synths - Gigastructures Compatibility Patch
 Psionic Species Expansion - Gigastructural Engineering
 Otter Editor's Dynamic Mod Menu Add-on
-NSC-IBS minipatch
-NSC - Dark UI Compatibility Patch
 Nemesis Frontend Recolor
-Nemesis: Menacing Shipset GFX patch
 MVG War Exhaustion - Updated + Tweaked
-More Authorities WRB Patch
-More Authorities - GVP Patch
-More Authorities - Expanded Mandates Patch
-More Authorities - EST Patch
-More Authorities - ESAP Patch
-More Authorities - ECA Patch
-More Authorities - DPE Patch
-More Authorities - Amazing Civics Patch
-MA-REG Patch
 Loyal Subjects Have Nothing to Fear (From the Colossus)[3.0]
 Longer Greetings Timer (3.0)
 Habitats Capped Dynamic
 Habitat AI colonisation fix
 Golden Galaxy: IBS
+NSC-IBS minipatch
 PD-RS:NF Compatibility Patch
 Diverse New Frontiers
 Giga Diversity
 Galactic Market Foundation Tweak
 Galactic Community Expanded Defines
-Forgotten Queens+NSC2 compat patch
 Fishbowl Robot Head Fix
 Federations - No Hard Feelings for Declined Votes
+Elves of Stellaris - Planetary Diversity Patch v3.0
 ECA - Espionage Operations
 Crisis Manager - Mid-Game Edition (3.0.¢)
 Crimewave: Crime and Criminal Heritage AI Overhaul
-Civil Wars - More Authorities Patch
 Civics Expanded+ & E&C Alternative Compatibility Patch
-Civics Expanded+ & More Authorities Compatibility Patch
 Caravaneers and Nomads coexist
 More Civic Points [S-02]
 Stellaris Enhanced Sound Project
@@ -372,9 +376,8 @@ Magnum's Mods - Tradition Cost Scaling
 !Patch - ECA - Real Space & Real Sol - No Name Empires
 !Patch - ECA - All in One - No Name Empires
 !Patch - Cubemap Fix
-! Starnet for NSC2
 Starnet for ESC
-Consistency Patch for Starnet AI
+BSW 3 // StarNet/StarTech AI
 !Civics Expanded+ - Starnet AI patch
 All unique systems in [3.x]
 !Colossus Hiveworld Fix

@@ -8,18 +8,14 @@ civic_parliamentary_system = {
         authority = {
             NOR = {
                 value = auth_corporate
-                value = auth_corporate_imperial
+                value = auth_cooperative
+                value = auth_corporate_fiefdom
             }
         }
     }
     possible = {
         authority = {
-            OR = {
-                value = auth_democratic
-                value = auth_strict_democratic
-                value = auth_democratic_dictatorship
-                value = auth_dem_dict_dummy
-            }
+            value = auth_democratic
         }
     }
     random_weight = {

@@ -29,9 +29,9 @@ xvcv_mdlc_pc_machine_ecu_district_rare_resources = {
             minerals = @xvcv_mdlc_district_cost_5
         }
         produces = {
-            volatile_motes = 6
-            exotic_gases = 6
-            rare_crystals = 6
+            volatile_motes = 7
+            exotic_gases = 7
+            rare_crystals = 7
         }
         upkeep = {
             minerals = 81

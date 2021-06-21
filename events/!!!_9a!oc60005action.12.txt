@@ -1,3 +1,4 @@
+namespace = action
 ship_event = {
     id = action.12
     is_triggered_only = yes

@@ -1,0 +1,95 @@
+tech_pasmod_assault_army_artillery_drone = {
+    cost = @tier3cost3
+    area = engineering
+    category = {
+        voidcraft
+    }
+    tier = 3
+    prerequisites = {
+        "tech_pasmod_assault_army_drop_pod"
+    }
+    weight = @tier3weight3
+    potential = {
+        has_global_flag = pasmod_main_feature
+        has_authority = auth_machine_intelligence
+    }
+    prereqfor_desc = {
+        hide_prereq_for_desc = component
+        custom = {
+            title = "TECH_UNLOCK_PASMOD_ASSAULT_ARMY_ARTILLERY_DRONE_TITLE"
+            desc = "TECH_UNLOCK_PASMOD_ASSAULT_ARMY_ARTILLERY_DRONE_DESC"
+        }
+        custom = {
+            title = "TECH_UNLOCK_PASMOD_ASSAULT_ARMY_ARTILLERY_DRONE_DROP_POD_TITLE"
+            desc = "TECH_UNLOCK_PASMOD_ASSAULT_ARMY_ARTILLERY_DRONE_DROP_POD_DESC"
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 0.1
+            NOR = {
+                research_leader = {
+                    area = engineering
+                    has_trait = "leader_trait_expertise_voidcraft"
+                }
+                research_leader = {
+                    area = engineering
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_spark_of_genius"
+            }
+        }
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = engineering
+                has_level > 4
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOT = {
+                research_leader = {
+                    area = engineering
+                    has_level > 3
+                }
+            }
+        }
+    }
+    ai_weight = {
+        factor = 3
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+}

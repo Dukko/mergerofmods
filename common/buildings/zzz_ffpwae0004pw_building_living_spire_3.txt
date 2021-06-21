@@ -82,6 +82,15 @@ pw_building_living_spire_3 = {
             }
             energy = @pw_building_upkeep_extra
         }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_edict = pw_ambition_wonders_beyond_ambition
+                }
+            }
+            energy = @pw_building_upkeep_ambition
+        }
     }
     planet_modifier = {
         planet_max_districts_add = -1
@@ -211,7 +220,7 @@ pw_building_living_spire_3 = {
         }
         modifier = {
             job_roboticist_add = 1
-            pop_assembly_speed = 0.15
+            planet_pop_assembly_mult = 0.15
         }
     }
     triggered_planet_modifier = {

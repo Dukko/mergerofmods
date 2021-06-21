@@ -159,5 +159,9 @@ resolution_sanctions_economic_1 = {
                 has_modifier = galactic_market_founder
             }
         }
+        modifier = {
+            factor = 0.75
+            has_ai_personality = principled_rogues
+        }
     }
 }

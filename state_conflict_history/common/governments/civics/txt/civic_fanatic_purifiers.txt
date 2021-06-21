@@ -15,7 +15,8 @@ civic_fanatic_purifiers = {
         authority = {
             NOR = {
                 value = auth_corporate
-                value = auth_corporate_imperial
+                value = auth_cooperative
+                value = auth_corporate_fiefdom
             }
         }
     }
@@ -35,7 +36,8 @@ civic_fanatic_purifiers = {
             }
         }
         civics = {
-            NOT = {
+            NOR = {
+                value = civic_slave_race
                 value = civic_barbaric_despoilers
             }
         }
@@ -49,7 +51,7 @@ civic_fanatic_purifiers = {
         }
     }
     random_weight = {
-        base = 1000
+        base = 5
         modifier = {
             factor = 0
             NOT = {

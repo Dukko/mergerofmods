@@ -12,8 +12,16 @@ ap_universal_transactions = {
     }
     on_enabled = {
         custom_tooltip = "free_commercial_pacts"
+        if = {
+            limit = {
+                NOT = {
+                    has_technology = tech_interstellar_economics
+                }
+            }
+            add_research_option = tech_interstellar_economics
+        }
     }
     ai_weight = {
-        factor = 0
+        factor = 5
     }
 }

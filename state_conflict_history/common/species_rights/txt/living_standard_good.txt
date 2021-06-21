@@ -8,7 +8,8 @@ living_standard_good = {
             NOR = {
                 has_valid_civic = civic_shared_burden
                 has_valid_civic = civic_beacon_of_liberty
-                has_ethic = ethic_fanatic_capitalism
+                has_valid_civic = civic_employee_ownership
+                has_ethic = ethic_fanatic_capitalism                
             }
         }
         NOR = {

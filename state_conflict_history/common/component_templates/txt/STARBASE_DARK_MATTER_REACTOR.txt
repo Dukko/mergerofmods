@@ -1,4 +1,4 @@
-@starbase_power_6 = 4200
+@starbase_power_6 = 6200
 utility_component_template = {
     key = "STARBASE_DARK_MATTER_REACTOR"
     size = large
@@ -12,7 +12,6 @@ utility_component_template = {
     class_restriction = {
         shipclass_starbase
     }
-    upgrades_to = "STARBASE_NHSC_DARK_MATTER_CORE_2"
     size_restriction = {
         starbase_outpost
         starbase_starport
@@ -20,18 +19,13 @@ utility_component_template = {
         starbase_starfortress
         starbase_citadel
         starbase_gatebuilders
+        starbase_stronghold
+        starbase_headquarters
         juggernaut
         graygoo_factory
     }
+    upgrades_to = @DM_REACTORS_STARBASE_T2
     ai_weight = {
         weight = 6
-        modifier = {
-            factor = 0
-            is_country_type_with_subjects = yes
-            has_monthly_income = {
-                resource = sr_dark_matter
-                value <= 0
-            }
-        }
     }
 }

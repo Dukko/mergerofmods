@@ -6,8 +6,20 @@ ap_galactic_force_projection = {
         }
     }
     modifier = {
-        country_naval_cap_add = 80
+        country_naval_cap_add = 20
+        country_naval_cap_mult = 0.15
+        ships_upkeep_mult = -0.15
         country_command_limit_add = 20
+    }
+    on_enabled = {
+        if = {
+            limit = {
+                NOT = {
+                    has_technology = tech_doctrine_navy_size_1
+                }
+            }
+            add_research_option = tech_doctrine_navy_size_1
+        }
     }
     potential = {
         NOT = {

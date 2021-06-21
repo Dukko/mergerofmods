@@ -1,0 +1,36 @@
+tech_mine_rare_crystals_psi = {
+    cost = @tier4cost3
+    area = engineering
+    tier = 3
+    category = {
+        psionics
+    }
+    prerequisites = {
+        "tech_mine_rare_crystals_II"
+        "tech_mine_zro"
+        "tech_psionic_theory"
+    }
+    is_rare = yes
+    weight = @tier4weight3
+    icon = tech_mine_rare_crystals_psi
+    weight_modifier = {
+        factor = 1.1
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_psionics"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 3
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_psionics"
+            }
+        }
+    }
+}

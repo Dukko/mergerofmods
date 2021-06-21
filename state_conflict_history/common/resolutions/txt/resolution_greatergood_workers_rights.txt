@@ -64,7 +64,10 @@ resolution_greatergood_workers_rights = {
         }
         modifier = {
             factor = 0.5
-            is_megacorp = yes
+            OR = {
+                has_authority = auth_corporate
+                has_authority = auth_corporate_fiefdom
+            }
         }
         modifier = {
             factor = 0.5
@@ -88,6 +91,7 @@ resolution_greatergood_workers_rights = {
                 has_valid_civic = civic_free_haven
                 has_valid_civic = civic_welfare_state
                 has_valid_civic = civic_inwards_perfection
+                has_ai_personality = principled_rogues
             }
         }
         modifier = {

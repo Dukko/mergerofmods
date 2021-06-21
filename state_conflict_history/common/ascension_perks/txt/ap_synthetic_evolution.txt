@@ -33,8 +33,8 @@ ap_synthetic_evolution = {
             }
         }
         custom_tooltip = {
-            fail_text = "requires_ascension_perks_2"
-            num_ascension_perks > 1
+            fail_text = "requires_ascension_perks_3"
+            num_ascension_perks > 2
         }
         custom_tooltip = {
             fail_text = "requires_technology_synthetic_workers"

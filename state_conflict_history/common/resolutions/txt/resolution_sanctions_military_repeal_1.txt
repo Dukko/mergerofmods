@@ -91,6 +91,11 @@ resolution_sanctions_military_repeal_1 = {
         }
         modifier = {
             factor = 1.2
+            has_ai_personality = principled_rogues
+            is_pacifist = no
+        }
+        modifier = {
+            factor = 1.2
             OR = {
                 is_militarist = yes
                 has_valid_civic = civic_machine_warbots

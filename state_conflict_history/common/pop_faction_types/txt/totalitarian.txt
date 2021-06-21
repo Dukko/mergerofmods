@@ -107,8 +107,9 @@ totalitarian = {
         potential = {
             exists = owner
             owner = {
-                NOT = {
+                NOR = {
                     is_democracy = yes
+                    has_authority = aut_cooperative
                 }
             }
         }
@@ -116,6 +117,7 @@ totalitarian = {
             owner = {
                 OR = {
                     is_autocracy = yes
+                    has_authority = auth_corporate_fiefdom
                 }
             }
         }
@@ -136,8 +138,9 @@ totalitarian = {
         }
         trigger = {
             owner = {
-                NOT = {
+                NOR = {
                     is_democracy = yes
+                    has_authority = auth_cooperative
                 }
             }
         }

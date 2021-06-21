@@ -55,6 +55,9 @@ building_mote_harvesters = {
             energy = 1
         }
     }
+    upgrades = {
+        "building_mote_harvesters_II"
+    }
     prerequisites = {
         "tech_mine_volatile_motes"
     }

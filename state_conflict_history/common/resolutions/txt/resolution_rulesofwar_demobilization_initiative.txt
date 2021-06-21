@@ -121,5 +121,9 @@ resolution_rulesofwar_demobilization_initiative = {
             factor = 2
             is_pacifist = yes
         }
+        modifier = {
+            factor = 1.2
+            has_ai_personality = crime_haven
+        }
     }
 }

@@ -73,6 +73,14 @@ resolution_sanctions_economic_3 = {
             has_global_flag = recent_galcom_sanctions_passed
         }
         modifier = {
+            factor = 1.25
+            is_in_breach_of_any = no
+            is_megacorp = yes
+            NOT = {
+                has_ai_personality = principled_rogues
+            }
+        }
+        modifier = {
             factor = 0
             any_federation_ally = {
                 OR = {
@@ -129,6 +137,10 @@ resolution_sanctions_economic_3 = {
                     has_modifier = galactic_market_founder
                 }
             }
+        }
+        modifier = {
+            factor = 0.75
+            has_ai_personality = principled_rogues
         }
         modifier = {
             factor = 1.5

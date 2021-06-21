@@ -1,9 +1,0 @@
-cruisers_good = {
-    has_technology = tech_cruisers
-    not = {
-        any_neighbor_country = {
-            is_country_type = default
-            has_technology = tech_battleships
-        }
-    }
-}

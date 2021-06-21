@@ -19,8 +19,20 @@ ap_galactic_wonders_utopia = {
                 add_research_option = tech_dyson_sphere
             }
         }
+        give_technology = {
+            tech = tech_ring_world
+            message = yes
+        }
+        give_technology = {
+            tech = tech_dyson_sphere
+            message = yes
+        }
     }
     possible = {
+        custom_tooltip = {
+            fail_text = "requires_ascension_perks_3"
+            num_ascension_perks > 2
+        }
         custom_tooltip = {
             fail_text = "requires_mega_engineering"
             has_technology = tech_mega_engineering

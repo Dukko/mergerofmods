@@ -12,13 +12,14 @@ weapon_component_template = {
     }
     component_set = "ARC_EMITTER_2"
     projectile_gfx = "focused_arc_emitter"
-    upgrades_to = "NHSC_ARC_EMITTER_3"
     tags = {
         weapon_type_energy
     }
     ai_tags = {
         weapon_role_artillery
     }
+    ai_tag_weight = 0
+    upgrades_to = @ARC_EMITTER_T3
     resources = {
         category = ship_components
         cost = {
@@ -35,6 +36,9 @@ weapon_component_template = {
         modifier = {
             factor = 200
             has_global_flag = ai_invasion_happened
+            not = {
+                has_global_flag = ai_invasion_defeated
+            }
         }
         modifier = {
             factor = 0

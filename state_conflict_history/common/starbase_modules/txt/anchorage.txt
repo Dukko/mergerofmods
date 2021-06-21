@@ -12,33 +12,32 @@ anchorage = {
         }
     }
     country_modifier = {
-        country_naval_cap_add = 15
+        country_naval_cap_add = 4
     }
     triggered_country_modifier = {
         potential = {
             has_starbase_building = naval_logistics_office
         }
-        country_naval_cap_add = 10
-    }
-    triggered_country_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                has_ascension_perk = ap_galactic_force_projection
-            }
-        }
-        modifier = {
-            country_naval_cap_add = 2
-        }
+        country_naval_cap_add = 2
     }
     ai_build_at_chokepoint = no
     ai_build_outside_chokepoint = yes
     ai_weight = {
-        weight = 20
+        weight = 300
         modifier = {
-            factor = 2
+            factor = 0
+            not = {
+                has_starbase_module = anchorage
+            }
+            owner = {
+                needs_shipyard = yes
+            }
+        }
+        modifier = {
+            factor = 0
+            has_starbase_module = shipyard
             count_starbase_modules = {
-                type = anchorage
+                type = shipyard
                 count < 2
             }
         }

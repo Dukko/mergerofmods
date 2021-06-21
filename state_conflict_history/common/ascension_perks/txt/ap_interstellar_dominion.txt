@@ -2,8 +2,20 @@ ap_interstellar_dominion = {
     modifier = {
         country_starbase_influence_cost_mult = -0.2
         country_claim_influence_cost_mult = -0.2
+        country_war_exhaustion_mult = -0.2
+    }
+    on_enabled = {
+        if = {
+            limit = {
+                NOT = {
+                    has_technology = tech_interstellar_campaigns
+                }
+            }
+            add_research_option = tech_interstellar_campaigns
+        }
     }
     potential = {
+        is_pacifist = no
         NOT = {
             has_ascension_perk = ap_interstellar_dominion
         }

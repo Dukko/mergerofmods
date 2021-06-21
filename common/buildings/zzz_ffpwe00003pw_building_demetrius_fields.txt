@@ -80,6 +80,15 @@ pw_building_demetrius_fields = {
         }
         upkeep = {
             trigger = {
+                exists = owner
+                owner = {
+                    has_edict = pw_ambition_wonders_beyond_ambition
+                }
+            }
+            energy = @pw_building_upkeep_ambition
+        }
+        upkeep = {
+            trigger = {
                 planet = {
                     OR = {
                         has_designation = col_mining
@@ -957,14 +966,9 @@ pw_building_demetrius_fields = {
             owner = {
                 has_edict = pw_ambition_wonders_beyond_ambition
             }
-            NOR = {
-                is_planet_class = pc_ringworld_habitable
-                is_planet_class = pc_habitat
-                is_planet_class = pc_hive
-            }
         }
         modifier = {
-            district_farming_max = 2
+            planet_pops_organics_food_upkeep_mult = -0.15
         }
     }
     country_modifier = {

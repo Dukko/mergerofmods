@@ -1,0 +1,53 @@
+building_gas_extractors_II = {
+    base_buildtime = 360
+    can_build = no
+    icon = building_gas_extractors_II
+    category = resource
+    potential = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_gas_extractor_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_gas_extraction_drone_add = 2
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 500
+        }
+        upkeep = {
+            energy = 4
+        }
+    }
+    upgrades = {
+        "building_gas_extractors_III"
+        "building_gas_extractors_psi"
+        "building_gas_extractors_academy"
+    }
+    prerequisites = {
+        "tech_mine_exotic_gases_II"
+    }
+    ai_weight = {
+        weight = 1000
+    }
+}

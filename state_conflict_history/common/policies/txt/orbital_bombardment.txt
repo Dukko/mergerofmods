@@ -77,7 +77,6 @@ orbital_bombardment = {
             OR = {
                 has_valid_civic = civic_fanatic_purifiers
                 has_valid_civic = civic_machine_terminator
-                has_valid_civic = civic_bringers_of_death
                 is_country_type = ascended_empire
             }
         }
@@ -121,6 +120,7 @@ orbital_bombardment = {
             orbital_bombardment_redtoxin
         }
         valid = {
+            has_global_flag = gigastructures_enabled
             NOR = {
                 has_ethic = "ethic_pacifist"
                 has_ethic = "ethic_fanatic_pacifist"

@@ -27,7 +27,7 @@ origin_remnants = {
     }
     advanced_start = yes
     random_weight = {
-        base = 0
+        base = 5
         modifier = {
             factor = 0
             OR = {

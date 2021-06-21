@@ -1,4 +1,3 @@
-@shipAuraRange = 80
 utility_component_template = {
     key = "SHIP_AURA_QUANTUM_DESTABILIZER"
     size = medium
@@ -7,15 +6,17 @@ utility_component_template = {
     power = 0
     size_restriction = {
         titan
+        juggernaut
         scavenger_bot
         graygoo_mothership
         dreadnought
     }
-    component_set = "ship_aura_components"
+    component_set = "ship_titan_aura_components"
     hostile_aura = {
         name = "aura_quantum_destabilizer"
         radius = @shipAuraRange
         apply_on = ships
+        system_wide = yes
         stack_info = {
             id = hostile_quantum_destabilizer
             priority = 10
@@ -36,5 +37,11 @@ utility_component_template = {
     }
     ai_weight = {
         weight = 10
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = BSWf_uSHIP_AURA_QUANTUM_DESTABILIZER
+            }
+        }
     }
 }

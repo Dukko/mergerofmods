@@ -12,10 +12,10 @@ ruthless_capitalists = {
     defensive_pact_acceptance = 0
     migration_pact_acceptance = 0
     advanced_start_chance = 20
-    weapon_preferences = weapon_type_explosive
+    weapon_preferences = weapon_type_kinetic
+    shields_ratio = 0
     armor_ratio = 0.4
-    shields_ratio = 0.5
-    hull_ratio = 0.1
+    hull_ratio = 0.6
     threat_modifier = 1
     threat_others_modifier = 0.75
     friction_modifier = 0.5
@@ -78,7 +78,10 @@ ruthless_capitalists = {
         }
         modifier = {
             factor = 1
-            has_election_type = oligarchic
+            OR = {
+                has_election_type = oligarchy
+                is_megacorp = yes
+            }
         }
         modifier = {
             factor = 50

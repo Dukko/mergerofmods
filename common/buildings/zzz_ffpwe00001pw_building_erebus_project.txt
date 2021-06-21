@@ -84,6 +84,15 @@ pw_building_erebus_project = {
         }
         upkeep = {
             trigger = {
+                exists = owner
+                owner = {
+                    has_edict = pw_ambition_wonders_beyond_ambition
+                }
+            }
+            energy = @pw_building_upkeep_ambition
+        }
+        upkeep = {
+            trigger = {
                 planet = {
                     OR = {
                         has_designation = col_mining
@@ -961,15 +970,9 @@ pw_building_erebus_project = {
             owner = {
                 has_edict = pw_ambition_wonders_beyond_ambition
             }
-            NOR = {
-                is_planet_class = pc_ringworld_habitable
-                is_planet_class = pc_habitat
-                is_planet_class = pc_machine
-                is_planet_class = pc_hive
-            }
         }
         modifier = {
-            district_mining_max = 2
+            planet_jobs_minerals_upkeep_mult = -0.1
         }
     }
     country_modifier = {

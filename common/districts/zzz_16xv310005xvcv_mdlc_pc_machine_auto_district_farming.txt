@@ -1,5 +1,5 @@
 xvcv_mdlc_pc_machine_auto_district_farming = {
-    base_buildtime = @xvcv_mdlc_district_time_1
+    base_buildtime = @xvcv_mdlc_district_time_2
     icon = xvcv_mdlc_pc_mechanical_district_farming
     is_capped_by_modifier = no
     show_on_uncolonized = {
@@ -26,12 +26,12 @@ xvcv_mdlc_pc_machine_auto_district_farming = {
         xvcv_mdlc_common_district_mining
     }
     resources = {
-        category = planet_districts
+        category = planet_farmers
         cost = {
-            minerals = @xvcv_mdlc_district_cost_1
+            minerals = @xvcv_mdlc_district_cost_2
         }
         produces = {
-            food = 21
+            food = 14
         }
         upkeep = {
             energy = 1

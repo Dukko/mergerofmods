@@ -1,0 +1,47 @@
+lrsk_gov_var_civic_enlightened_liberalism = {
+    potential = {
+        ethics = {
+            NOT = {
+                value = ethic_gestalt_consciousness
+            }
+        }
+        authority = {
+            NOR = {
+                value = auth_corporate
+                value = auth_cooperative
+                value = auth_corporate_fiefdom
+            }
+        }
+    }
+    possible = {
+        civics = {
+            NOR = {
+                value = lrsk_gov_var_civic_workers_councils
+                value = lrsk_gov_var_civic_institutionalized_collectivism
+                value = civic_shared_burden
+            }
+        }
+        ethics = {
+            NOR = {
+                text = civic_tooltip_not_spiritualist
+                value = ethic_spiritualist
+                value = ethic_fanatic_spiritualist
+            }
+            NOT = {
+                value = ethic_fanatic_authoritarian
+            }
+            NOR = {
+                text = civic_tooltip_not_socialism
+                value = ethic_socialism
+                value = ethic_fanatic_socialism
+            }
+        }
+    }
+    random_weight = {
+        base = 5
+    }
+    modifier = {
+        station_gatherers_produces_mult = 0.2
+        station_researchers_produces_mult = 0.2
+    }
+}

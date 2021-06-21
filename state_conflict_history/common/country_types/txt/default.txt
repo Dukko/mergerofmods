@@ -18,7 +18,7 @@ default = {
     ai = {
         enabled = yes
         declare_war = yes
-        min_navy_for_wars = 0.6
+        min_navy_for_wars = 0.7
         min_assault_armies_for_wars = 0
         colonizer = yes
         internal_policies = yes
@@ -35,24 +35,25 @@ default = {
         }
         ship_data = {
             constructor = {
-                min = 2
-                max = 6
+                min = 6
+                max = 9
+                system_mult = 0.1
             }
             science = {
-                min = 3
-                max = 6
+                min = 5
+                max = 8
             }
             colonizer = {
+                min = 2
+                max = 3
+            }
+            sponsored_colonizer = {
                 min = 1
                 max = 3
             }
             juggernaut = {
                 min = 1
                 max = 1
-            }
-            sponsored_colonizer = {
-                min = 1
-                max = 3
             }
             colossus = {
                 min = 1
@@ -62,27 +63,65 @@ default = {
                 min = 1
                 max = 1
             }
-            Flagship = {
+            titan = {
                 min = 1
-                max = 1
+                max = 10
             }
-            explorationship = {
-                min = 1
-                max = 8
+            battleship = {
+                fraction = {
+                    modifier = {
+                        add = 90
+                        has_technology = tech_battleships
+                    }
+                }
+            }
+            cruiser = {
+                fraction = {
+                    modifier = {
+                        add = 90
+                        has_technology = tech_cruisers
+                    }
+                    modifier = {
+                        add = -90
+                        has_technology = tech_battleships
+                    }
+                }
+            }
+            destroyer = {
+                fraction = {
+                    modifier = {
+                        add = 90
+                        can_kill_turtles = yes
+                    }
+                    modifier = {
+                        add = -90
+                        can_kill_turtles = yes
+                        has_technology = tech_cruisers
+                    }
+                }
             }
             corvette = {
                 fraction = {
                     base = 100
                     modifier = {
-                        add = -95
+                        add = -90
                         has_technology = tech_cruisers
+                    }
+                    modifier = {
+                        add = 90
+                        has_technology = tech_cruisers
+                        can_kill_turtles = yes
+                    }
+                    modifier = {
+                        add = -90
+                        can_kill_turtles = yes
                     }
                 }
             }
             crisis_cruiser = {
                 fraction = {
                     modifier = {
-                        add = 90
+                        add = 35
                         str_dont_build_menacing_ships = no
                         has_crisis_level = crisis_level_4
                     }
@@ -90,7 +129,16 @@ default = {
             }
             crisis_destroyer = {
                 fraction = {
-                    base = 0
+                    modifier = {
+                        add = 75
+                        str_dont_build_menacing_ships = no
+                        has_crisis_level = crisis_level_3
+                    }
+                    modifier = {
+                        add = -15
+                        str_dont_build_menacing_ships = no
+                        has_crisis_level = crisis_level_4
+                    }
                 }
             }
             crisis_corvette = {
@@ -101,108 +149,16 @@ default = {
                         has_crisis_level = crisis_level_2
                     }
                     modifier = {
-                        add = -90
+                        add = -75
+                        str_dont_build_menacing_ships = no
+                        has_crisis_level = crisis_level_3
+                    }
+                    modifier = {
+                        add = -20
                         str_dont_build_menacing_ships = no
                         has_crisis_level = crisis_level_4
                     }
                 }
-            }
-            destroyer = {
-                fraction = {
-                    base = 0
-                }
-            }
-            cruiser = {
-                fraction = {
-                    base = 0
-                    modifier = {
-                        add = 95
-                        has_technology = tech_cruisers
-                    }
-                    modifier = {
-                        add = -10
-                        has_technology = tech_StrikeCruiser_1
-                    }
-                    modifier = {
-                        add = -80
-                        has_technology = tech_escortcarrier_1
-                    }
-                    modifier = {
-                        add = 80
-                        has_technology = tech_battleships
-                        has_technology = tech_escortcarrier_1
-                    }
-                    modifier = {
-                        add = -80
-                        has_technology = tech_battleships
-                    }
-                }
-            }
-            StrikeCruiser = {
-                fraction = {
-                    base = 0
-                    modifier = {
-                        add = 10
-                        has_technology = tech_StrikeCruiser_1
-                    }
-                }
-            }
-            escortcarrier = {
-                fraction = {
-                    base = 0
-                    modifier = {
-                        add = 10
-                        has_technology = tech_escortcarrier_1
-                    }
-                    modifier = {
-                        add = -10
-                        has_technology = tech_Dreadnought_1
-                    }
-                }
-            }
-            Battlecruiser = {
-                fraction = {
-                    base = 0
-                    modifier = {
-                        add = 70
-                        has_technology = tech_escortcarrier_1
-                    }
-                    modifier = {
-                        add = -60
-                        has_technology = tech_battleships
-                    }
-                    modifier = {
-                        add = -10
-                        has_technology = tech_Dreadnought_1
-                    }
-                }
-            }
-            battleship = {
-                fraction = {
-                    base = 0
-                    modifier = {
-                        add = 60
-                        has_technology = tech_battleships
-                    }
-                }
-            }
-            Carrier = {
-                fraction = {
-                    base = 0
-                }
-            }
-            Dreadnought = {
-                fraction = {
-                    base = 0
-                    modifier = {
-                        add = 20
-                        has_technology = tech_Dreadnought_1
-                    }
-                }
-            }
-            titan = {
-                min = 1
-                max = 3
             }
         }
         army_data = {
@@ -412,8 +368,8 @@ default = {
     resources = {
         category = country_base
         produces = {
-            energy = 40
-            minerals = 40
+            energy = 20
+            minerals = 20
             physics_research = 10
             society_research = 10
             engineering_research = 10
@@ -463,10 +419,6 @@ default = {
         cost = {
             energy = 1000
             influence = 50
-        }
-        upkeep = {
-        }
-        produces = {
         }
     }
 }

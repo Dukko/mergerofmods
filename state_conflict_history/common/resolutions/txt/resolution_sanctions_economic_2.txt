@@ -95,6 +95,14 @@ resolution_sanctions_economic_2 = {
             }
         }
         modifier = {
+            factor = 1.25
+            is_in_breach_of_any = no
+            is_megacorp = yes
+            NOT = {
+                has_ai_personality = principled_rogues
+            }
+        }
+        modifier = {
             factor = 0.6
             OR = {
                 is_megacorp = yes
@@ -149,6 +157,10 @@ resolution_sanctions_economic_2 = {
                 has_valid_civic = civic_corporate_dominion
                 has_valid_civic = civic_merchant_guilds
                 has_modifier = galactic_market_founder
+            }
+        modifier = {
+            factor = 0.75
+            has_ai_personality = principled_rogues
             }
         }
     }

@@ -1,5 +1,5 @@
 building_refinery = {
-    base_buildtime = @b3_time
+    base_buildtime = @b2_time
     category = manufacturing
     potential = {
         NOT = {
@@ -20,7 +20,7 @@ building_refinery = {
             is_ai = yes
             has_monthly_income = {
                 resource = exotic_gases
-                value > 13
+                value > 11
             }
         }
     }
@@ -32,7 +32,7 @@ building_refinery = {
             }
         }
         modifier = {
-            job_gas_refiner_add = 2
+            job_gas_refiner_add = 1
         }
     }
     triggered_planet_modifier = {
@@ -43,23 +43,20 @@ building_refinery = {
             }
         }
         modifier = {
-            job_gas_refiner_drone_add = 2
+            job_gas_refiner_drone_add = 1
         }
     }
     resources = {
         category = planet_buildings
         cost = {
-            minerals = 1000
+            minerals = 500
         }
         upkeep = {
-            energy = 6
+            energy = 3
         }
     }
     prerequisites = {
         "tech_exotic_gases"
-    }
-    upgrades = {
-        "eb_refinery"
     }
     triggered_desc = {
         trigger = {

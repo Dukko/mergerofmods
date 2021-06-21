@@ -1,0 +1,25 @@
+utility_component_template = {
+    key = "MEDIUM_ARMOR_5"
+    size = medium
+    icon = "GFX_ship_part_armor_5"
+    icon_frame = 1
+    power = 0
+    modifier = {
+        ship_armor_add = @armor_5M
+    }
+    prerequisites = {
+        "tech_ship_armor_5"
+    }
+    component_set = "ARMOR_5"
+    upgrades_to = @MEDIUM_ARMOR_T6
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @m_t5_cost
+        }
+        upkeep = {
+            energy = @m_t5_upkeep_energy
+            alloys = @m_t5_upkeep_alloys
+        }
+    }
+}

@@ -11,7 +11,7 @@ utility_component_template = {
         "tech_ship_armor_5"
     }
     component_set = "ARMOR_5"
-    upgrades_to = "MEDIUM_NHSC_ADV_ARMOR_1"
+    upgrades_to = @MEDIUM_ARMOR_T6
     resources = {
         category = ship_components
         cost = {

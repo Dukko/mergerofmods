@@ -136,6 +136,12 @@ succession_type_challenge = {
             has_civic = civic_warrior_culture
         }
         modifier = {
+            desc = federation_acceptance_principled_rogues
+            add = 25
+            has_ai_personality = principled_rogues
+            is_egalitarian = no
+        }
+        modifier = {
             desc = federation_acceptance_ruler_chosen
             add = 100
             exists = ruler

@@ -1,0 +1,55 @@
+building_crystal_mines_industry = {
+    base_buildtime = 500
+    can_build = no
+    icon = building_crystal_mines_industry
+    category = resource
+    potential = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_crystal_miner_add = 6
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_crystal_mining_drone_add = 6
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 1000
+            alloys = 50
+        }
+        upkeep = {
+            energy = 10
+            alloys = 2
+        }
+        produces = {
+            minerals = 15
+            engineering_research = 5
+            unity = 5
+        }
+    }
+    prerequisites = {
+        "tech_mine_rare_crystals_industry"
+    }
+    ai_weight = {
+        weight = 1000
+    }
+}

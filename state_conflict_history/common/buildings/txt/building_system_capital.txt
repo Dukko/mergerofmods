@@ -48,6 +48,39 @@ building_system_capital = {
         potential = {
             exists = owner
             owner = {
+                has_valid_civic = civic_spiritual_seekers
+            }
+        }
+        modifier = {
+            job_transcend_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ethic = ethic_authoritarian
+            }
+        }
+        modifier = {
+            job_enforcer_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ethic = ethic_fanatic_authoritarian
+            }
+        }
+        modifier = {
+            job_enforcer_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
                 has_non_swapped_tradition = tr_domination_imperious_architecture
             }
         }
@@ -66,24 +99,18 @@ building_system_capital = {
     }
     triggered_planet_modifier = {
         potential = {
-            exists = owner
-            owner = {
-                has_valid_civic = civic_spiritual_seekers
-            }
+            has_administrators = yes
         }
         modifier = {
-            job_transcend_add = 1
+            job_administrator_add = 2
         }
     }
     triggered_planet_modifier = {
         potential = {
-            exists = owner
-            owner = {
-                has_ethic = ethic_authoritarian
-            }
+            has_regular_administrators = yes
         }
         modifier = {
-            job_enforcer_add = 1
+            job_administrator_add = 2
         }
     }
     triggered_planet_modifier = {
@@ -150,28 +177,61 @@ building_system_capital = {
         potential = {
             exists = owner
             owner = {
-                has_ethic = ethic_fanatic_authoritarian
+                is_ai = yes
             }
+            num_buildings = {
+                type = building_stronghold
+                value > 0
+            }
+            str_force_stronghold = yes
         }
-        modifier = {
-            job_enforcer_add = 2
-        }
+        job_starnet_spice_melange_farmer_add = -2
+        job_starnet_spice_melange_antifarmer_add = 2
     }
     triggered_planet_modifier = {
         potential = {
-            has_administrators = yes
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            num_buildings = {
+                type = building_stronghold
+                value > 2
+            }
+            str_force_stronghold = yes
         }
-        modifier = {
-            job_administrator_add = 2
-        }
+        job_starnet_spice_melange_farmer_add = -2
+        job_starnet_spice_melange_antifarmer_add = 2
     }
     triggered_planet_modifier = {
         potential = {
-            has_regular_administrators = yes
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            num_buildings = {
+                type = building_stronghold
+                value > 4
+            }
+            str_force_stronghold = yes
         }
-        modifier = {
-            job_administrator_add = 2
+        job_starnet_spice_melange_farmer_add = -2
+        job_starnet_spice_melange_antifarmer_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            num_buildings = {
+                type = building_stronghold
+                value > 6
+            }
+            str_force_stronghold = yes
         }
+        job_starnet_spice_melange_farmer_add = -2
+        job_starnet_spice_melange_antifarmer_add = 2
     }
     triggered_planet_modifier = {
         potential = {
@@ -208,6 +268,14 @@ building_system_capital = {
     triggered_planet_modifier = {
         potential = {
             is_technocracy = yes
+                                    OR = {
+            owner = {
+                is_megacorp = yes
+            }
+            owner = {
+                has_civic = civic_science_syndicate
+                }
+            }
         }
         modifier = {
             job_head_researcher_add = 2
@@ -216,6 +284,14 @@ building_system_capital = {
     triggered_planet_modifier = {
         potential = {
             is_plutocracy = yes
+                                    OR = {
+            owner = {
+                is_megacorp = yes
+            }
+            owner = {
+                has_civic = civic_bancorp
+                }
+            }
         }
         modifier = {
             job_mogul_add = 3
@@ -309,12 +385,28 @@ building_system_capital = {
     triggered_desc = {
         trigger = {
             is_technocracy = yes
+                                    OR = {
+            owner = {
+                is_megacorp = yes
+            }
+            owner = {
+                has_civic = civic_science_syndicate
+                }
+            }
         }
         text = job_head_researcher_effect_desc
     }
     triggered_desc = {
         trigger = {
             is_plutocracy = yes
+                        OR = {
+            owner = {
+                is_megacorp = yes
+            }
+            owner = {
+                has_civic = civic_bancorp
+                }
+            }
         }
         text = job_mogul_effect_desc
     }

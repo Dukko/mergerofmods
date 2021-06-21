@@ -30,15 +30,22 @@ roboticist = {
         }
     }
     weight = {
-        weight = 500
+        weight = 10000
         modifier = {
-            factor = 1.5
-            has_job = roboticist
+            factor = 0.001
+            exists = planet
+            exists = planet.controller
+            planet.controller = {
+                OR = {
+                    is_country_type = swarm
+                    is_country_type = ai_empire
+                }
         }
         modifier = {
             factor = 1.2
             is_unemployed = yes
             is_pop_category = specialist
+            }
         }
     }
 }

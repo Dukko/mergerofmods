@@ -1,8 +1,0 @@
-CmtEffectCreateShip_Outrider = {
-    create_ship = {
-        name = random
-        design = "NAME_Outrider"
-        prefix = no
-        graphical_culture = "madd_01"
-    }
-}

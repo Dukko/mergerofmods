@@ -7,16 +7,16 @@ utility_component_template = {
     resources = {
         category = ship_components
         cost = {
-            alloys = @armor_l_t6_cost
-            nanites = @armor_l_t7_cost_special
+            alloys = @l_t6_cost
+            nanites = @xl_t5_rare
         }
         upkeep = {
-            energy = @armor_l_t6_upkeep_energy
-            alloys = @armor_l_t6_upkeep_alloys
+            energy = @l_t6_upkeep_energy
+            alloys = @l_t6_upkeep_alloys
         }
     }
     modifier = {
-        ship_armor_add = @armor_l_t5_strength
+        ship_armor_add = @armor_5L
         ship_hull_regen_add_static = 1
         ship_armor_regen_add_static = 1.6
     }
@@ -29,8 +29,9 @@ utility_component_template = {
         weight = 1
         modifier = {
             factor = 0
-            no_resource_for_component = {
-                RESOURCE = nanites
+            resource_stockpile_compare = {
+                resource = nanites
+                value < 100
             }
         }
     }

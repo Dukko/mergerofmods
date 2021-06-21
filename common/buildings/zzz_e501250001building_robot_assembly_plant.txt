@@ -11,7 +11,7 @@ building_robot_assembly_plant = {
             and = {
                 free_building_slots > 0
                 owner = {
-                    num_pops < 900
+                    num_pops < 1000
                 }
                 or = {
                     nor = {
@@ -21,6 +21,7 @@ building_robot_assembly_plant = {
                     owner = {
                         has_technology = tech_droid_workers
                     }
+                    free_district_slots > 3
                 }
             }
         }
@@ -62,6 +63,20 @@ building_robot_assembly_plant = {
             }
         }
     }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            num_buildings = {
+                type = building_robot_assembly_plant
+                value = 0
+            }
+        }
+        job_starnet_spice_melange_farmer_add = 2
+        job_starnet_spice_melange_antifarmer_add = -2
+    }
     destroy_trigger = {
         exists = owner
         OR = {
@@ -92,7 +107,7 @@ building_robot_assembly_plant = {
             }
             owner = {
                 is_ai = yes
-                num_pops > 950
+                num_pops > 1500
             }
         }
     }

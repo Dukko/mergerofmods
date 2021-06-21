@@ -1,0 +1,51 @@
+civic_state_monopoly = {
+    potential = {
+        ethics = {
+            NOT = {
+                value = ethic_gestalt_consciousness
+            }
+        }
+        authority = {
+            NOR = {
+                value = auth_corporate
+                value = auth_cooperative
+                value = auth_corporate_fiefdom
+            }
+        }
+    }
+    possible = {
+        civics = {
+            NOR = {
+                value = civic_meritocracy
+                value = civic_merchant_guilds
+                value = civic_aristocratic_elite
+                value = civic_exalted_priesthood
+                value = civic_technocracy
+                value = civic_bureaucracy
+                value = civic_stratocracy
+            }
+        }
+        authority = {
+            NOR = {
+                value = auth_direct_democratic
+                value = auth_democratic
+            }
+        }
+        ethics = {
+            NOT = {
+                value = ethic_egalitarian
+            }
+            value = ethic_fanatic_capitalism
+        }
+    }
+    modifier = {
+        station_gatherers_produces_mult = 0.1
+        job_mogul_per_pop = 0.03
+        pop_cat_ruler_political_power = 2
+        pop_cat_worker_happiness = -0.05
+        trade_value_mult = -0.05
+    }
+    random_weight = {
+        base = 5
+    }
+}

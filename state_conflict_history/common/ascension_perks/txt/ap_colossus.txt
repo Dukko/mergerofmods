@@ -13,9 +13,27 @@ ap_colossus = {
                 id = apoc.100
             }
         }
+        if = {
+            limit = {
+                NOT = {
+                    has_technology = tech_titans
+                }
+            }
+            add_research_option = tech_titans
+        }
+        if = {
+            limit = {
+                host_has_dlc = "Federations"
+                NOT = {
+                    has_technology = tech_juggernaut
+                }
+            }
+            add_research_option = tech_juggernaut
+        }
     }
     possible = {
-        has_technology = tech_titans
+        has_technology = tech_battleships
+        has_technology = tech_starbase_5
         custom_tooltip = {
             fail_text = "requires_ascension_perks_3"
             num_ascension_perks > 2

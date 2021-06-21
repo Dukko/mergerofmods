@@ -142,7 +142,10 @@ resolution_greatergood_balance_in_the_middle = {
         }
         modifier = {
             factor = 0.5
-            is_megacorp = yes
+            OR = {
+                has_authority = auth_corporate
+                has_authority = auth_corporate_fiefdom
+            }
         }
         modifier = {
             factor = 0.5
@@ -207,6 +210,7 @@ resolution_greatergood_balance_in_the_middle = {
                 has_valid_civic = civic_idealistic_foundation
                 has_valid_civic = civic_welfare_state
                 has_valid_civic = civic_inwards_perfection
+                has_ai_personality = principled_rogues
             }
         }
         modifier = {

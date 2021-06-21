@@ -4,14 +4,15 @@ civic_indentured_assets = {
             authority = {
             OR = {
                 value = auth_corporate
-                value = auth_corporate_imperial
+                    value = auth_cooperative
+                    value = auth_corporate_fiefdom
+                }
             }
             civics = {
                 value = civic_galactic_sovereign_megacorp
                 }
             }
         }
-    }
     random_weight = {
         base = 5
     }

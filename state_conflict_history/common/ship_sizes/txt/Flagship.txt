@@ -42,6 +42,7 @@ Flagship = {
     is_space_station = no
     can_have_federation_design = yes
     enable_default_design = yes
+    enable_3dview_in_ship_browser = yes
     default_behavior = artillery
     components_add_to_cost = no
     possible_construction = {

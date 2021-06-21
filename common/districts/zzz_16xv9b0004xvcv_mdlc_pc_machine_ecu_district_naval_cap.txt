@@ -42,7 +42,7 @@ xvcv_mdlc_pc_machine_ecu_district_naval_cap = {
             volatile_motes = 100
         }
         upkeep = {
-            energy = 10
+            energy = 15
             volatile_motes = 1
         }
     }

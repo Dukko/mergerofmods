@@ -1,5 +1,5 @@
 building_chemical_plant = {
-    base_buildtime = @b3_time
+    base_buildtime = @b2_time
     category = manufacturing
     potential = {
         NOT = {
@@ -20,7 +20,7 @@ building_chemical_plant = {
             is_ai = yes
             has_monthly_income = {
                 resource = volatile_motes
-                value > 11
+                value > 9
             }
         }
     }
@@ -32,7 +32,7 @@ building_chemical_plant = {
             }
         }
         modifier = {
-            job_chemist_add = 2
+            job_chemist_add = 1
         }
     }
     triggered_planet_modifier = {
@@ -43,23 +43,20 @@ building_chemical_plant = {
             }
         }
         modifier = {
-            job_chemist_drone_add = 2
+            job_chemist_drone_add = 1
         }
     }
     resources = {
         category = planet_buildings
         cost = {
-            minerals = 1000
+            minerals = @b2_minerals
         }
         upkeep = {
-            energy = 6
+            energy = 3
         }
     }
     prerequisites = {
         "tech_volatile_motes"
-    }
-    upgrades = {
-        "eb_chemical_plant"
     }
     triggered_desc = {
         trigger = {

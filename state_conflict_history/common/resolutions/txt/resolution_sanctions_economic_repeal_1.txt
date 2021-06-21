@@ -49,6 +49,14 @@ resolution_sanctions_economic_repeal_1 = {
             }
         }
         modifier = {
+            factor = 0.25
+            is_in_breach_of_any = no
+            is_megacorp = yes
+            NOT = {
+                has_ai_personality = principled_rogues
+            }
+        }
+        modifier = {
             factor = 2
             any_federation_ally = {
                 OR = {
@@ -86,6 +94,10 @@ resolution_sanctions_economic_repeal_1 = {
                 has_valid_civic = civic_merchant_guilds
                 has_modifier = galactic_market_founder
             }
+        }
+        modifier = {
+            factor = 1.2
+            has_ai_personality = principled_rogues
         }
         modifier = {
             factor = 1.2

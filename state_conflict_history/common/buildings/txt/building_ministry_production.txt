@@ -44,6 +44,28 @@ building_ministry_production = {
             volatile_motes = @b2_rare_upkeep
         }
     }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            num_buildings = {
+                type = building_ministry_production
+                value = 0
+            }
+            or = {
+                has_designation = col_factory
+                has_designation = col_foundry
+                has_designation = col_habitat_factory
+                has_designation = col_habitat_foundry
+            }
+        }
+        modifier = {
+            job_starnet_spice_melange_farmer_add = 1
+            job_starnet_spice_melange_antifarmer_add = -1
+        }
+    }
     prerequisites = {
         "tech_global_production_strategy"
     }

@@ -1,0 +1,33 @@
+civic_private_military_companies = {
+    potential = {
+        OR = {
+            authority = {
+                OR = {
+                    value = auth_corporate
+                    value = auth_cooperative
+                    value = auth_corporate_fiefdom
+                }
+            }
+            civics = {
+                value = civic_galactic_sovereign_megacorp
+            }
+        }
+    }
+    random_weight = {
+        base = 5
+    }
+    possible = {
+        ethics = {
+            OR = {
+                text = civic_tooltip_militarist
+                value = ethic_militarist
+                value = ethic_fanatic_militarist
+            }
+        }
+    }
+    modifier = {
+        army_starting_experience_add = 100
+        army_damage_mult = 0.2
+        armies_upkeep_mult = -0.2
+    }
+}

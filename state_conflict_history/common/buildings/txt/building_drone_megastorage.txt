@@ -1,9 +1,5 @@
-@ebh_min4 = 1000
-@ebh_sr3 = 200
-@ebh_upkeep3 = 3
-@ebh_upkeep5 = 5
 building_drone_megastorage = {
-    base_buildtime = @b1_time
+    base_buildtime = @b2_time
     can_build = no
     category = amenity
     allow = {
@@ -13,7 +9,7 @@ building_drone_megastorage = {
         }
     }
     potential = {
-        has_building = ebh_drone_storage2
+        has_building = building_drone_storage
     }
     destroy_trigger = {
         exists = owner
@@ -33,8 +29,8 @@ building_drone_megastorage = {
         building_communal_housing_large
     }
     planet_modifier = {
-        planet_housing_add = 16
-        planet_amenities_add = 12
+        planet_housing_add = 8
+        planet_amenities_add = 6
     }
     triggered_planet_modifier = {
         potential = {
@@ -50,18 +46,15 @@ building_drone_megastorage = {
     resources = {
         category = planet_buildings
         cost = {
-            minerals = @ebh_min4
-            rare_crystals = @ebh_sr3
+            minerals = @b2_minerals
+            rare_crystals = @b2_rare_cost
         }
         upkeep = {
-            energy = @ebh_upkeep5
-            rare_crystals = @ebh_upkeep3
+            energy = 3
+            rare_crystals = @b2_rare_upkeep
         }
     }
     prerequisites = {
-        "ebh_machine_housing_1"
-    }
-    upgrades = {
-        "ebh_drone_megastorage"
+        "tech_micro_replicators"
     }
 }

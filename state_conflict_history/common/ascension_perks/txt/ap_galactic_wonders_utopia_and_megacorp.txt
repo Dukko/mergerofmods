@@ -27,8 +27,24 @@ ap_galactic_wonders_utopia_and_megacorp = {
                 add_research_option = tech_matter_decompressor
             }
         }
+        give_technology = {
+            tech = tech_ring_world
+            message = yes
+        }
+        give_technology = {
+            tech = tech_dyson_sphere
+            message = yes
+        }
+        give_technology = {
+            tech = tech_matter_decompressor
+            message = yes
+        }
     }
     possible = {
+        custom_tooltip = {
+            fail_text = "requires_ascension_perks_3"
+            num_ascension_perks > 2
+        }
         custom_tooltip = {
             fail_text = "requires_mega_engineering"
             has_technology = tech_mega_engineering

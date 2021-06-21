@@ -1,10 +1,10 @@
 tech_strike_craft_3 = {
     cost = @tier3cost3
-    area = engineering
+    area = society
     tier = 3
     ai_update_type = military
     category = {
-        voidcraft
+        military_theory
     }
     prerequisites = {
         "tech_strike_craft_2"
@@ -14,8 +14,8 @@ tech_strike_craft_3 = {
         modifier = {
             factor = 1.25
             research_leader = {
-                area = engineering
-                has_trait = "leader_trait_expertise_voidcraft"
+                area = society
+                has_trait = "leader_trait_expertise_military_theory"
             }
         }
     }
@@ -28,8 +28,8 @@ tech_strike_craft_3 = {
         modifier = {
             factor = 1.25
             research_leader = {
-                area = engineering
-                has_trait = "leader_trait_expertise_voidcraft"
+                area = society
+                has_trait = "leader_trait_expertise_military_theory"
             }
         }
     }

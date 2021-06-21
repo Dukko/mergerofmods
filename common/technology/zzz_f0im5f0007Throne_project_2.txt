@@ -1,0 +1,19 @@
+Throne_project_2 = {
+    cost = 160000
+    area = engineering
+    tier = 4
+    category = {
+        materials
+    }
+    prerequisites = {
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "allow_Throne_2"
+            desc = "desc_Throne_2"
+        }
+    }
+    is_rare = yes
+    is_dangerous = yes
+    weight = 0
+}

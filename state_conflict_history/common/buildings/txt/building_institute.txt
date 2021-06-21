@@ -13,6 +13,14 @@ building_institute = {
         owner = {
             is_regular_empire = yes
         }
+        or = {
+            owner = {
+                lategame = no
+            }
+            owner = {
+                is_ai = no
+            }
+        }
     }
     destroy_trigger = {
         exists = owner

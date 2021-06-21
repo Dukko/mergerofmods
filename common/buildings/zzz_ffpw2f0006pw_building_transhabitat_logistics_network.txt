@@ -64,6 +64,15 @@ pw_building_transhabitat_logistics_network = {
             }
             energy = @pw_building_upkeep_extra
         }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_edict = pw_ambition_wonders_beyond_ambition
+                }
+            }
+            energy = @pw_building_upkeep_ambition
+        }
     }
     destroy_trigger = {
         OR = {

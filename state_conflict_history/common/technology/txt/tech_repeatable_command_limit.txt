@@ -39,7 +39,4 @@ tech_repeatable_command_limit = {
     mod_weight_if_group_picked = {
         repeatable = @RepeatRepeatable
     }
-    modifier = {
-        country_command_limit_add = 10
-    }
 }

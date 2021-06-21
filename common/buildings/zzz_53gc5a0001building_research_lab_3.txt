@@ -19,6 +19,7 @@ building_research_lab_3 = {
                     is_capital = yes
                 }
                 free_housing > 5
+                str_research_allow = yes
             }
         }
     }

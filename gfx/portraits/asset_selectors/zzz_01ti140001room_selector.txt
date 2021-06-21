@@ -940,6 +940,12 @@ room_selector = {
         "tree_dwellers_room" = {
             always = yes
         }
+        "drow_tulshar_room" = {
+            always = yes
+        }
+        "lunari_silvermoon_room" = {
+            always = yes
+        }
     "scrappy_room" = {
       always = yes
     }
@@ -1075,6 +1081,15 @@ room_selector = {
     "default_room" = {
       always = no
     }
+    "drow_tulshar_room" = {
+            exists = owner
+            owner = {
+                AND = {
+                    is_species_class = DROW
+                    is_country_type = fallen_empire
+                }
+            }
+        }
     "crisis_room" = {
       exists = owner
       owner = {

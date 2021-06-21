@@ -11,6 +11,20 @@ building_machine_assembly_complex = {
     convert_to = {
         building_robot_assembly_plant
     }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            num_buildings = {
+                type = building_machine_assembly_complex
+                value = 0
+            }
+        }
+        job_starnet_spice_melange_farmer_add = 2
+        job_starnet_spice_melange_antifarmer_add = -2
+    }
     allow = {
         hidden_trigger = {
             OR = {

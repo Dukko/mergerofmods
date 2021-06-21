@@ -35,6 +35,17 @@ artisan = {
             }
             consumer_goods = 2
         }
+        produces = {
+            trigger = {
+                planet = {
+                    OR = {
+                        has_modifier = "industrialized_planet"
+                        has_modifier = "industrialized_arcology"
+                    }
+                }
+            }
+            consumer_goods = 1
+        }
         upkeep = {
             minerals = 6
         }
@@ -62,6 +73,17 @@ artisan = {
                 }
             }
             energy = 1
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    OR = {
+                        has_modifier = "industrialized_planet"
+                        has_modifier = "industrialized_arcology"
+                    }
+                }
+            }
+            minerals = 1
         }
         upkeep = {
             trigger = {

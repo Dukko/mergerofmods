@@ -20,7 +20,7 @@ origin_lost_colony = {
     traits = {
     }
     random_weight = {
-        base = 0
+        base = 5
         modifier = {
             factor = 0
             OR = {

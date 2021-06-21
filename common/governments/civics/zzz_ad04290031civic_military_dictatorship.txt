@@ -1,0 +1,37 @@
+civic_military_dictatorship = {
+    potential = {
+        ethics = {
+            NOT = {
+                value = ethic_gestalt_consciousness
+            }
+        }
+        authority = {
+            NOR = {
+                value = auth_corporate
+                value = auth_cooperative
+                value = auth_corporate_fiefdom
+            }
+        }
+    }
+    possible = {
+        ethics = {
+            value = ethic_fanatic_militarist
+        }
+        authority = {
+            OR = {
+                value = auth_dictatorial
+                value = auth_imperial
+            }
+        }
+    }
+    can_build_ruler_ship = yes
+    random_weight = {
+        base = 5
+    }
+    modifier = {
+        max_rivalries = 1
+        planet_army_build_speed_mult = 0.5
+        starbase_shipyard_build_speed_mult = 0.25
+        empire_size_penalty_mult = 0.15
+    }
+}

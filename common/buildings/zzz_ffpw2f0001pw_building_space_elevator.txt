@@ -75,6 +75,15 @@ pw_building_space_elevator = {
         }
         upkeep = {
             trigger = {
+                exists = owner
+                owner = {
+                    has_edict = pw_ambition_wonders_beyond_ambition
+                }
+            }
+            energy = @pw_building_upkeep_ambition
+        }
+        upkeep = {
+            trigger = {
                 planet = {
                     OR = {
                         has_designation = col_capital
@@ -109,18 +118,6 @@ pw_building_space_elevator = {
             job_merchant_add = 1
             job_clerk_add = 10
             job_enforcer_add = 1
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_regular_empire = yes
-            }
-            has_modifier = resort_colony
-        }
-        modifier = {
-            job_pw_tourist_per_pop = @pw_job_per_25_pop
         }
     }
     triggered_planet_modifier = {
@@ -235,18 +232,6 @@ pw_building_space_elevator = {
             }
         }
         text = job_enforcer_effect_desc
-    }
-    triggered_desc = {
-        trigger = {
-            exists = owner
-            owner = {
-                is_regular_empire = no
-            }
-            planet = {
-                has_designation = col_resort
-            }
-        }
-        text = job_pw_tourist_effect_desc
     }
     triggered_desc = {
         trigger = {

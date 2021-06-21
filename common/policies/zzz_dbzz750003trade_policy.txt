@@ -1,28 +1,12 @@
 trade_policy = {
     potential = {
-    is_country_type = default
+        is_country_type = default
         NOT = {
             has_ethic = ethic_gestalt_consciousness
         }
     }
     option = {
         name = "trade_policy_default"
-        AI_weight = {
-            factor = 1
-            modifier = {
-                factor = 10
-                lategame = yes
-                or = {
-                    resource_income_compare = {
-                        resource = consumer_goods
-                        value > 50
-                    }
-                    not = {
-                        has_policy_flag = trade_conversion_consumer_goods
-                    }
-                }
-            }
-        }
         potential = {
             OR = {
                 has_federation = no
@@ -43,6 +27,22 @@ trade_policy = {
             NOR = {
                 has_policy_flag = "economic_stance_planned"
                 has_ethic = "ethic_fanatic_socialism"
+            }
+        }
+        AI_weight = {
+            factor = 1
+            modifier = {
+                factor = 10
+                lategame = yes
+                or = {
+                    resource_income_compare = {
+                        resource = consumer_goods
+                        value > 50
+                    }
+                    not = {
+                        has_policy_flag = trade_conversion_consumer_goods
+                    }
+                }
             }
         }
     }
@@ -70,8 +70,6 @@ trade_policy = {
                 has_ethic = "ethic_fanatic_socialism"
             }
         }
-        modifier = {
-        }
         AI_weight = {
             factor = 0.5
             modifier = {
@@ -91,7 +89,7 @@ trade_policy = {
                     }
                 }
             }
-        }    
+        }
     }
     option = {
         name = "trade_policy_unity"
@@ -123,10 +121,8 @@ trade_policy = {
             factor = 300
             modifier = {
                 factor = 0
-                or = {
-                    num_ascension_perks > 0
-                    is_ai = no
-                }
+                is_ai = no
+            }
             modifier = {
                 factor = 0
                 num_ascension_perks > 0
@@ -247,6 +243,26 @@ trade_policy = {
             NOR = {
                 has_policy_flag = "economic_stance_market"
             }
+        }
+        AI_weight = {
+            factor = 0
+        }
+    }
+    option = {
+        name = "trade_policy_science"
+        potential = {
+            has_valid_civic = civic_science_syndicate
+            OR = {
+                has_federation = no
+                AND = {
+                    has_federation = yes
+                }
+            }
+        }
+        policy_flags = {
+            trade_conversion_science
+        }
+        modifier = {
         }
         AI_weight = {
             factor = 0

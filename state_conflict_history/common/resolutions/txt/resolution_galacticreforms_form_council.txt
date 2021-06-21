@@ -114,6 +114,7 @@ resolution_galacticreforms_form_council = {
             OR = {
                 has_ai_personality = democratic_crusaders
                 has_valid_civic = civic_shared_burden
+                has_ai_personality = principled_rogues
             }
         }
         modifier = {

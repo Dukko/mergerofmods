@@ -1,0 +1,8 @@
+random_list = {
+    name = "elven_01_random_planets_dry"
+    planets = {
+        "pc_desert"
+        "pc_arid"
+        "pc_savannah"
+    }
+}

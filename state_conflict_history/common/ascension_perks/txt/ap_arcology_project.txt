@@ -15,8 +15,8 @@ ap_arcology_project = {
             has_technology = tech_housing_2
         }
         custom_tooltip = {
-            fail_text = "requires_ascension_perks_2"
-            num_ascension_perks > 1
+            fail_text = "requires_ascension_perks_3"
+            num_ascension_perks > 2
         }
     }
     on_enabled = {
@@ -24,6 +24,44 @@ ap_arcology_project = {
         custom_tooltip = "decision_arcology_project_effects"
     }
     ai_weight = {
-        factor = 0
+        factor = 40
+        modifier = {
+            factor = 0.5
+            num_owned_planets > 10
+        }
+        modifier = {
+            factor = 0.5
+            num_owned_planets > 20
+        }
+        modifier = {
+            factor = 0.5
+            num_owned_planets > 30
+        }
+        modifier = {
+            factor = 0.5
+            num_owned_planets > 40
+        }
+        modifier = {
+            factor = 0.5
+            num_owned_planets > 50
+        }
+        modifier = {
+            factor = 0
+            num_owned_planets < 5
+        }
+        modifier = {
+            factor = 0
+            capital_scope = {
+                OR = {
+                    is_planet_class = pc_relic
+                    is_planet_class = pc_city
+                    habitable_structure = yes
+                    has_modifier = resort_colony
+                    has_modifier = penal_colony
+                    has_modifier = slave_colony
+                    has_modifier = pm_wenkwort_custodian
+                }
+            }
+        }
     }
 }

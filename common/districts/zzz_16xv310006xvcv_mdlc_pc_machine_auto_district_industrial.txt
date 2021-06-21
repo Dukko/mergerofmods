@@ -1,5 +1,5 @@
 xvcv_mdlc_pc_machine_auto_district_industrial = {
-    base_buildtime = @xvcv_mdlc_district_time_2
+    base_buildtime = @xvcv_mdlc_district_time_3
     icon = xvcv_mdlc_pc_mechanical_district_industrial
     is_capped_by_modifier = no
     show_on_uncolonized = {
@@ -29,9 +29,9 @@ xvcv_mdlc_pc_machine_auto_district_industrial = {
         xvcv_mdlc_pc_mechanical_district_industrial
     }
     resources = {
-        category = planet_districts
+        category = planet_jobs
         cost = {
-            minerals = @xvcv_mdlc_district_cost_2
+            minerals = @xvcv_mdlc_district_cost_3
         }
         upkeep = {
             energy = 2
@@ -49,114 +49,110 @@ xvcv_mdlc_pc_machine_auto_district_industrial = {
             trigger = {
                 exists = owner
                 owner = {
-                    NOR = {
-                        country_uses_consumer_goods = yes
-                        has_valid_civic = xvcv_mdlc_civic_emotion_emulator
+                    NOT = {
+                        has_ethic = ethic_gestalt_consciousness
                     }
                 }
             }
-            alloys = 10
+            alloys = 7
+            consumer_goods = 14
         }
         upkeep = {
             trigger = {
                 exists = owner
                 owner = {
-                    NOR = {
-                        country_uses_consumer_goods = yes
-                        has_valid_civic = xvcv_mdlc_civic_emotion_emulator
+                    NOT = {
+                        has_ethic = ethic_gestalt_consciousness
                     }
                 }
             }
-            minerals = 12
+            minerals = 26
         }
         produces = {
             trigger = {
+                exists = owner
+                owner = {
+                    has_ethic = ethic_gestalt_consciousness
+                }
+            }
+            alloys = 14
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_ethic = ethic_gestalt_consciousness
+                }
+            }
+            minerals = 24
+        }
+        produces = {
+            trigger = {
+                exists = planet
+                planet = {
+                    has_designation = col_foundry
+                }
+                exists = owner
+                owner = {
+                    NOT = {
+                        has_ethic = ethic_gestalt_consciousness
+                    }
+                }
+            }
+            alloys = 7
+            consumer_goods = -14
+        }
+        upkeep = {
+            trigger = {
+                exists = planet
+                planet = {
+                    has_designation = col_foundry
+                }
+                exists = owner
+                owner = {
+                    NOT = {
+                        has_ethic = ethic_gestalt_consciousness
+                    }
+                }
+            }
+            minerals = -2
+        }
+        produces = {
+            trigger = {
+                exists = planet
+                planet = {
+                    has_designation = col_factory
+                }
                 exists = owner
                 owner = {
                     OR = {
-                        country_uses_consumer_goods = yes
-                        has_valid_civic = xvcv_mdlc_civic_emotion_emulator
+                        NOT = {
+                            has_ethic = ethic_gestalt_consciousness
+                        }
+                        has_valid_civic = civic_machine_servitor
                     }
                 }
             }
-            alloys = 5
-            consumer_goods = 13
+            alloys = -7
+            consumer_goods = 14
         }
         upkeep = {
             trigger = {
+                exists = planet
+                planet = {
+                    has_designation = col_factory
+                }
                 exists = owner
                 owner = {
                     OR = {
-                        country_uses_consumer_goods = yes
-                        has_valid_civic = xvcv_mdlc_civic_emotion_emulator
+                        NOT = {
+                            has_ethic = ethic_gestalt_consciousness
+                        }
+                        has_valid_civic = civic_machine_servitor
                     }
                 }
             }
-            minerals = 14
-        }
-        produces = {
-            trigger = {
-                planet = {
-                    has_active_building = building_foundry_2
-                }
-            }
-            alloys = 5
-        }
-        upkeep = {
-            trigger = {
-                planet = {
-                    has_active_building = building_foundry_2
-                }
-            }
-            minerals = 6
-        }
-        produces = {
-            trigger = {
-                planet = {
-                    has_active_building = building_foundry_3
-                }
-            }
-            alloys = 10
-        }
-        upkeep = {
-            trigger = {
-                planet = {
-                    has_active_building = building_foundry_3
-                }
-            }
-            minerals = 12
-        }
-        produces = {
-            trigger = {
-                planet = {
-                    has_active_building = building_factory_2
-                }
-            }
-            consumer_goods = 12
-        }
-        upkeep = {
-            trigger = {
-                planet = {
-                    has_active_building = building_factory_2
-                }
-            }
-            minerals = 8
-        }
-        produces = {
-            trigger = {
-                planet = {
-                    has_active_building = building_factory_3
-                }
-            }
-            consumer_goods = 26
-        }
-        upkeep = {
-            trigger = {
-                planet = {
-                    has_active_building = building_factory_3
-                }
-            }
-            minerals = 16
+            minerals = 2
         }
     }
     triggered_planet_modifier = {

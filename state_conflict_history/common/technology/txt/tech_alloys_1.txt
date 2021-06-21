@@ -31,6 +31,15 @@ tech_alloys_1 = {
         }
     }
     ai_weight = {
+        weight = 40
+        modifier = {
+            factor = 100
+            has_technology = tech_lasers_3
+        }
+        modifier = {
+            factor = 100
+            has_technology = tech_energy_torpedoes_2
+        }
         modifier = {
             factor = 1.25
             research_leader = {

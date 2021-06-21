@@ -178,6 +178,10 @@ resolution_sanctions_administrative_repeal_3 = {
                 has_valid_civic = civic_machine_servitor
                 has_ai_personality = federation_builders
             }
+        modifier = {
+            factor = 1.2
+            has_ai_personality = principled_rogues
+            }
         }
     }
 }

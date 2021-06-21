@@ -32,7 +32,7 @@ shipyard = {
             factor = 0
             has_starbase_module = anchorage
             not = {
-            has_starbase_module = shipyard
+                has_starbase_module = shipyard
             }
         }
     }

@@ -30,10 +30,10 @@ xvcv_mdlc_pc_machine_ser_district_unity = {
             rare_crystals = 100
         }
         produces = {
-            unity = 27
+            unity = 46
         }
         upkeep = {
-            energy = 6
+            energy = 10
             rare_crystals = 1
         }
     }

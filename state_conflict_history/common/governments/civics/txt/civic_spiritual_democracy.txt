@@ -8,7 +8,8 @@ civic_spiritual_democracy = {
         authority = {
             NOR = {
                 value = auth_corporate
-                value = auth_corporate_imperial
+                value = auth_cooperative
+                value = auth_corporate_fiefdom
             }
         }
     }
@@ -20,23 +21,6 @@ civic_spiritual_democracy = {
             OR = {
                 value = auth_democratic
                 value = auth_direct_democratic
-                value = auth_strict_democratic
-                value = auth_democratic_dictatorship
-                value = auth_dem_dict_dummy
-            }
-        }
-        civics = {
-            nor = {
-                value = civic_slaver_guilds
-                value = civic_peaceful_republic
-                value = civic_citizen_service
-                value = civic_aristocratic_elite
-                value = civic_state_monopoly
-                value = civic_merchant_guilds
-                value = civic_exalted_priesthood
-                value = civic_technocracy
-                value = civic_bureaucracy
-                value = civic_stratocracy
             }
         }
     }

@@ -1,14 +1,9 @@
-@ebh_min4 = 1000
-@ebh_sr3 = 200
-@ebh_upkeep3 = 3
-@ebh_upkeep5 = 5
 building_communal_housing_large = {
-    base_buildtime = @b1_time
+    base_buildtime = @b2_time
     can_build = no
     icon = building_paradise_dome
     category = amenity
     potential = {
-        has_building = ebh_communal_housing2
         has_building = building_communal_housing
         OR = {
             NOT = {
@@ -64,8 +59,8 @@ building_communal_housing_large = {
         building_paradise_dome
     }
     planet_modifier = {
-        planet_housing_add = 20
-        planet_amenities_add = 12
+        planet_housing_add = 10
+        planet_amenities_add = 6
     }
     triggered_planet_modifier = {
         potential = {
@@ -81,24 +76,15 @@ building_communal_housing_large = {
     resources = {
         category = planet_buildings
         cost = {
-            minerals = @ebh_min4
-            rare_crystals = @ebh_sr3
+            minerals = @b2_minerals
+            rare_crystals = @b2_rare_cost
         }
         upkeep = {
-            energy = @ebh_upkeep5
-            rare_crystals = @ebh_upkeep3
-        }
-    }
-    show_tech_unlock_if = {
-        OR = {
-            has_valid_civic = civic_shared_burden
-            has_valid_civic = civic_employee_ownership
+            energy = 3
+            rare_crystals = @b2_rare_upkeep
         }
     }
     prerequisites = {
         "tech_paradise_dome"
-    }
-    upgrades = {
-        "ebh_communal_housing_large"
     }
 }

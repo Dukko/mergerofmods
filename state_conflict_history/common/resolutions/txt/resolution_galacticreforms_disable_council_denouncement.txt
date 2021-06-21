@@ -66,6 +66,11 @@ resolution_galacticreforms_disable_council_denouncement = {
             is_authoritarian = yes
         }
         modifier = {
+            factor = 1.5
+            is_part_of_galactic_council = no
+            has_ai_personality = principled_rogues
+        }
+        modifier = {
             factor = 0
             OR = {
                 is_part_of_galactic_council = yes

@@ -1,19 +1,18 @@
 weapon_component_template = {
     key = "GG_BEAM_STATIC"
     size = titanic
-    entity = "invisible_turret_entity"
     type = instant
-    prio_projectile = yes
     prerequisites = {
-        "tech_graygoo_nanite_perdition_beam"
+        tech_repeatable_nanite_technology_insight
     }
-    icon = "GFX_ship_part_nanite_perdition_beam"
+    prio_projectile = yes
+    hidden = yes
+    icon = "GFX_ship_part_space_whale_weapon_1"
     icon_frame = 1
     firing_arc = 15
     min_range = 30
-    static_rotation = yes
     tags = {
-        weapon_type_nanite
+        weapon_type_energy
     }
     projectile_gfx = "gatebuilder_titan_weapon"
 }

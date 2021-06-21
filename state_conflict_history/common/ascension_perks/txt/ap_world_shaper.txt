@@ -15,6 +15,22 @@ ap_world_shaper = {
     }
     on_enabled = {
         custom_tooltip = "allow_gaia"
+        if = {
+            limit = {
+                NOT = {
+                    has_technology = tech_ecological_adaptation
+                }
+            }
+            add_research_option = tech_ecological_adaptation
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_technology = tech_climate_restoration
+                }
+            }
+            add_research_option = tech_climate_restoration
+        }
     }
     potential = {
         NOT = {

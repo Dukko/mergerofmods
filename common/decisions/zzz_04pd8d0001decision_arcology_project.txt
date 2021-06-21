@@ -41,6 +41,11 @@ decision_arcology_project = {
         owner = {
             has_ascension_perk = ap_arcology_project
         }
+        owner = {
+            NOT = {
+                has_civic = civic_urban_idyll
+            }
+        }
     }
     allow = {
         custom_tooltip = {

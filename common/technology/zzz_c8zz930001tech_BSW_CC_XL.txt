@@ -1,0 +1,28 @@
+tech_BSW_CC_XL = {
+    cost = 0
+    area = engineering
+    tier = 1
+    ai_update_type = military
+    category = {
+        voidcraft
+    }
+    weight = 0
+    is_reverse_engineerable = no
+    weight_modifier = {
+        modifier = {
+            factor = 0
+        }
+    }
+    prereqfor_desc = {
+        hide_prereq_for_desc = component
+        ship = {
+            title = "TECH_BSW_CC_XL_TITLE"
+            desc = "TECH_BSW_CC_XL_DESC"
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 0
+        }
+    }
+}

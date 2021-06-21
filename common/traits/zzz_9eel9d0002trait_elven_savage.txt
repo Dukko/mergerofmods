@@ -1,0 +1,24 @@
+trait_elven_savage = {
+    cost = 0
+    initial = no
+    modification = yes
+    randomized = no
+    immortal_leaders = yes
+    species_potential_add = {
+        always = no
+    }
+    icon = "gfx/interface/icons/traits/trait_primitive.dds"
+    leader_age_min = 200
+    leader_age_max = 800
+    modifier = {
+        army_health = 0.25
+        army_damage_mult = 0.25
+        pop_happiness = 0.05
+        pop_growth_speed = 0.15
+        planet_jobs_produces_mult = -0.5
+    }
+    allowed_archetypes = {
+        ELVEN
+        BIOLOGICAL
+    }
+}

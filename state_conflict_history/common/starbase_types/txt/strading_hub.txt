@@ -52,8 +52,7 @@ strading_hub = {
     }
     ai_design = {
         min = {
-            base = 1
-            factor = 1
+            base = 0
         }
         ratio = {
             base = 0.3
@@ -73,112 +72,25 @@ strading_hub = {
             }
         }
         buildings = {
-            reinforced_defenses = {
-                base = 0.8
-            }
-            strategic_defenses = {
-                base = 0.8
-            }
-            adv_space_engineers = {
-                base = 0.4
-            }
-            adv_starbase = {
-                base = 0.4
-            }
-            asteroid_mining = {
-                base = 2
-            }
-            space_foundry = {
-                base = 1
-            }
-            administration_office = {
-                base = 0.4
-            }
-            starbase_optimal_systems = {
-                base = 0.4
-            }
-            curator_think_tank = {
-                base = 0.6
-            }
-            trader_proxy_office = {
-                base = 0.8
-            }
-            chain_manufacturing = {
-                base = 0.4
-            }
-            offworld_trading_company = {
-                base = 0.8
-            }
             nebula_refinery = {
                 base = 0.8
             }
-            resource_silo = {
-                base = 0.8
+            naval_logistics_office = {
+                base = 0.05
             }
-            solar_panel_04 = {
-                base = 0.6
+            art_college = {
+                base = 3
             }
-            hydroponics_bay = {
-                base = 1
-            }
-        }
-        modules = {
-            asteroid_mining = {
-                base = 2
-            }
-            space_foundry = {
-                base = 1
-            }
-            shipyard = {
-                base = 0.5
+            curator_think_tank = {
+                base = 0.03
             }
             trader_caravanserai = {
                 base = 0.03
             }
+        }
+        modules = {
             anchorage = {
-                base = 0.5
-            }
-            orbital_lab = {
                 base = 1
-            }
-            trading_hub = {
-                base = 1
-            }
-            space_power_plant = {
-                base = 0.8
-            }
-            space_foundry = {
-                base = 1
-            }
-            space_factory = {
-                base = 1
-            }
-            hangar_bay = {
-                base = 0.6
-            }
-            gun_battery = {
-                base = 0.8
-            }
-            missile_battery = {
-                base = 0.8
-            }
-            large_battery = {
-                base = 0.8
-            }
-            pd_battery = {
-                base = 0.8
-            }
-            xl_battery = {
-                base = 0.8
-            }
-            titanic_battery = {
-                base = 0.8
-            }
-            shield_module = {
-                base = 0.8
-            }
-            armor_module = {
-                base = 0.8
             }
         }
     }

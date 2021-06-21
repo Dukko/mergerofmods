@@ -10,7 +10,7 @@ building_betharian_power_plant = {
     resources = {
         category = planet_buildings
         cost = {
-            minerals = 200
+            minerals = 400
         }
         produces = {
             energy = 10
@@ -24,7 +24,7 @@ building_betharian_power_plant = {
             }
         }
         modifier = {
-            job_technician_add = 4
+            job_technician_add = 6
         }
     }
     triggered_planet_modifier = {
@@ -35,7 +35,7 @@ building_betharian_power_plant = {
             }
         }
         modifier = {
-            job_technician_drone_add = 4
+            job_technician_drone_add = 6
         }
     }
     triggered_desc = {

@@ -30,10 +30,10 @@ xvcv_mdlc_pc_machine_cpu_district_society = {
             exotic_gases = 100
         }
         produces = {
-            society_research = 42
+            society_research = 62
         }
         upkeep = {
-            energy = 14
+            energy = 19
             exotic_gases = 1
         }
     }

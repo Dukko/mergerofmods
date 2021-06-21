@@ -1,7 +1,5 @@
-@cost4 = 20
-@power3 = -20
-@fire_rate3 = 0.2
-@weapon_range3 = 0.2
+@cost3 = 20
+@power3 = -25
 utility_component_template = {
     key = "COMBAT_COMPUTER_ARTILLERY_AUTONOMOUS"
     size = small
@@ -11,47 +9,50 @@ utility_component_template = {
     resources = {
         category = ship_components
         cost = {
-            alloys = @cost4
+            alloys = @cost3
         }
     }
     class_restriction = {
         shipclass_military
-        shipclass_starbase
-    }
-    class_restriction = {
-        shipclass_military
-        shipclass_starbase
         shipclass_military_special
+        shipclass_starbase
     }
     size_restriction = {
-        corvette
-        destroyer
-        cruiser
         crisis_destroyer
-        crisis_cruiser
-        StrikeCruiser
-        Battlecruiser
-        battleship
-        Carrier
-        Dreadnought
-        titan
-        Flagship
-        escortcarrier
-        explorationship
-        juggernaut
-        crisis_destroyer
-        scavenger_bot
         crisis_cruiser
         star_eater
+        dreadnought
+        scavenger_bot
+        fe_escort
+        fe_battlecruiser
+        fe_titan
+        pasmod_assault_destroyer
+        pasmod_assault_cruiser
+        LoGHFlagship
+        rs_battlecruiser
+        rs_dreadnought
+        rs_heavy_dreadnought
+        rs_heavy_dreadnought_type_a
+        rs_heavy_dreadnought_type_b
+        rs_heavy_dreadnought_type_c
+        rs_heavy_dreadnought_type_d
+        rs_heavy_dreadnought_type_e
+        rs_heavy_dreadnought_type_f
+        rs_heavy_dreadnought_type_g
+        rs_heavy_dreadnought_type_h
+        rs_heavy_dreadnought_type_i
+        rs_heavy_dreadnought_type_j
+        rs_heavy_dreadnought_type_k
+        x
     }
     component_set = "combat_computers"
-    ship_behavior = "artillery"
+    ship_behavior = "BSW_artillery_096"
     prerequisites = {
-        "tech_combat_computers_autonomous"
+        @com_tech_3a
     }
     ship_modifier = {
-        ship_fire_rate_mult = @fire_rate3
-        ship_weapon_range_mult = @weapon_range3
+        ship_fire_rate_mult = 0.2
+        ship_weapon_range_mult = 0.2
     }
     ai_weight = {
         weight = 5

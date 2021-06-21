@@ -1,0 +1,39 @@
+lrsk_gov_var_civic_elected_clergy = {
+    potential = {
+        ethics = {
+            NOT = {
+                value = ethic_gestalt_consciousness
+            }
+        }
+        authority = {
+            NOR = {
+                value = auth_corporate
+                value = auth_cooperative
+                value = auth_corporate_fiefdom
+            }
+        }
+    }
+    description = "civic_tooltip_lrsk_gov_var_civic_elected_clergy_effects"
+    possible = {
+        authority = {
+            OR = {
+                value = auth_democratic
+                value = auth_direct_democratic
+            }
+        }
+        ethics = {
+            OR = {
+                text = civic_tooltip_spiritualist
+                value = ethic_spiritualist
+                value = ethic_fanatic_spiritualist
+            }
+        }
+    }
+    random_weight = {
+        base = 5
+    }
+    modifier = {
+        job_lrsk_gov_var_job_pastor_per_pop = 0.025
+        pop_factions_produces_mult = 0.1
+    }
+}

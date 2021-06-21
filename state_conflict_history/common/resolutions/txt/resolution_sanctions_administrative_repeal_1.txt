@@ -90,6 +90,10 @@ resolution_sanctions_administrative_repeal_1 = {
         }
         modifier = {
             factor = 1.2
+            has_ai_personality = principled_rogues
+        }
+        modifier = {
+            factor = 1.2
             OR = {
                 is_xenophile = yes
                 is_megacorp = yes

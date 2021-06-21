@@ -1,5 +1,3 @@
-@ebh_min1 = 400
-@ebh_upkeep2 = 2
 building_drone_storage = {
     base_buildtime = @b1_time
     category = amenity
@@ -43,13 +41,13 @@ building_drone_storage = {
     resources = {
         category = planet_buildings
         cost = {
-            minerals = @ebh_min1
+            minerals = @b1_minerals
         }
         upkeep = {
-            energy = @ebh_upkeep2
+            energy = 2
         }
     }
     upgrades = {
-        "ebh_drone_storage"
+        "building_drone_megastorage"
     }
 }

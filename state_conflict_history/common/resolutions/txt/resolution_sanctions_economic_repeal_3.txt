@@ -81,6 +81,14 @@ resolution_sanctions_economic_repeal_3 = {
         }
         modifier = {
             factor = 0.25
+            is_in_breach_of_any = no
+            is_megacorp = yes
+            NOT = {
+                has_ai_personality = principled_rogues
+            }
+        }
+        modifier = {
+            factor = 0.25
             has_valid_civic = civic_cutthroat_politics
             NOR = {
                 is_in_breach_of_any = yes
@@ -131,6 +139,10 @@ resolution_sanctions_economic_repeal_3 = {
                     has_modifier = galactic_market_founder
                 }
             }
+        }
+        modifier = {
+            factor = 1.2
+            has_ai_personality = principled_rogues
         }
         modifier = {
             factor = 0.5

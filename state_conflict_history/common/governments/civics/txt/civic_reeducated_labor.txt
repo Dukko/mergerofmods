@@ -1,0 +1,41 @@
+civic_reeducated_labor = {
+    potential = {
+        ethics = {
+            NOT = {
+                value = ethic_gestalt_consciousness
+            }
+        }
+        authority = {
+            NOR = {
+                value = auth_corporate
+                value = auth_cooperative
+                value = auth_corporate_fiefdom
+            }
+        }
+    }
+    possible = {
+        ethics = {
+            OR = {
+                text = civic_tooltip_authoritarian
+                value = ethic_authoritarian
+                value = ethic_fanatic_authoritarian
+            }
+            value = ethic_fanatic_capitalism
+        }
+        civics = {
+            NOR = {
+                value = civic_slaver_guilds
+                value = civic_indentured_assets
+            }
+        }
+    }
+    random_weight = {
+        base = 5
+    }
+    modifier = {
+        planet_jobs_slave_produces_mult = 0.2
+        slave_market_cost_mult = -0.25
+        pop_cat_slave_political_power = -0.25
+        pop_cat_slave_happiness = -0.05
+    }
+}

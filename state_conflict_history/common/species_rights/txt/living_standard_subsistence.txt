@@ -35,9 +35,10 @@ living_standard_subsistence = {
     }
     potential = {
         exists = from
-        NOT = {
+        NOR = {
             from = {
                 has_valid_civic = civic_shared_burden
+                has_valid_civic = civic_employee_ownership
             }
         }
         OR = {

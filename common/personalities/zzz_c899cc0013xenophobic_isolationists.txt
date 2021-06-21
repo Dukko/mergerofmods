@@ -1,0 +1,97 @@
+xenophobic_isolationists = {
+    aggressiveness = 0.05
+    trade_willingness = 0.5
+    bravery = 1.1
+    combat_bravery = 1
+    military_spending = 1.2
+    colony_spending = 1
+    federation_acceptance = -50
+    nap_acceptance = 20
+    commercial_pact_acceptance = -20
+    research_agreement_acceptance = -20
+    defensive_pact_acceptance = -20
+    migration_pact_acceptance = -100
+    advanced_start_chance = 10
+    weapon_preferences = weapon_type_explosive
+    shields_ratio = 0.6
+    armor_ratio = 0.2
+    hull_ratio = 0.2
+    threat_modifier = 0.75
+    threat_others_modifier = 0.75
+    friction_modifier = 2
+    claims_modifier = 5
+    behaviour = {
+        conqueror = yes
+        subjugator = no
+        liberator = no
+        opportunist = yes
+        slaver = no
+        uplifter = no
+        purger = no
+        displacer = yes
+        dominator = yes
+        infiltrator = no
+        robot_exploiter = yes
+        robot_liberator = no
+        propagator = no
+        multispecies = no
+        isolationist = yes
+        crisis_fighter = yes
+        wants_tribute = no
+    }
+    allow = {
+        OR = {
+            is_country_type = default
+            is_country_type = ark
+        }
+        OR = {
+            has_ethic = "ethic_pacifist"
+            has_ethic = "ethic_fanatic_pacifist"
+        }
+        OR = {
+            has_ethic = "ethic_xenophobe"
+            has_ethic = "ethic_fanatic_xenophobe"
+        }
+    }
+    weight_modifier = {
+        weight = 10
+        modifier = {
+            factor = -2
+            NOT = {
+                has_ethic = "ethic_pacifist"
+                has_ethic = "ethic_fanatic_pacifist"
+            }
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                has_ethic = "ethic_pacifist"
+                has_ethic = "ethic_fanatic_pacifist"
+            }
+        }
+        modifier = {
+            factor = 1
+            has_trait = "trait_repugnant"
+        }
+        modifier = {
+            factor = 1
+            has_trait = "trait_sedentary"
+        }
+        modifier = {
+            factor = -1
+            has_trait = "trait_nomadic"
+        }
+        modifier = {
+            factor = -1
+            has_trait = "trait_charismatic"
+        }
+        modifier = {
+            factor = 10
+            has_valid_civic = civic_isolationism
+        }
+        modifier = {
+            factor = 1000
+            has_valid_civic = civic_inwards_perfection
+        }
+    }
+}

@@ -1,0 +1,73 @@
+namespace = action
+country_event = {
+    id = action.96
+    title = action.96.name
+    desc = {
+        text = action.96.desc
+        trigger = {
+            is_xenophobe = no
+        }
+    }
+    desc = {
+        text = action.96.desc.phobe
+        trigger = {
+            is_xenophobe = yes
+        }
+    }
+    picture = GFX_evt_financial_instruments
+    show_sound = event_galactic_market
+    is_triggered_only = yes
+    fire_only_once = yes
+    immediate = {
+        set_global_flag = ongoing_market_nomination
+        set_country_flag = market_nomination_eligible
+        event_target:global_event_country = {
+            country_event = {
+                id = action.98
+                days = 1800
+            }
+        }
+        begin_event_chain = {
+            event_chain = market_founding_chain
+            target = this
+        }
+        every_playable_country = {
+            limit = {
+                NOT = {
+                    is_same_value = root
+                }
+                is_galactic_community_member = yes
+            }
+            begin_event_chain = {
+                event_chain = market_founding_chain
+                target = this
+            }
+            country_event = {
+                id = action.97
+            }
+        }
+    }
+    after = {
+        custom_tooltip = enable_decision_market_nomination
+        tooltip = {
+            begin_event_chain = {
+                event_chain = market_founding_chain
+                target = this
+            }
+        }
+    }
+    option = {
+        name = action.96.a
+        trigger = {
+            is_megacorp = yes
+        }
+    }
+    option = {
+        name = action.96.b
+        trigger = {
+            NOT = {
+                is_megacorp = yes
+            }
+        }
+    }
+}

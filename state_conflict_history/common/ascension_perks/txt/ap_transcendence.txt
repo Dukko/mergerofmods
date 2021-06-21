@@ -6,6 +6,28 @@ ap_transcendence = {
                 id = utopia.2650
             }
         }
+        if = {
+            limit = {
+                NOT = {
+                    has_technology = tech_precognition_interface
+                }
+            }
+            give_technology = {
+                tech = tech_precognition_interface
+                message = yes
+            }
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_technology = tech_psionic_shield
+                }
+            }
+            give_technology = {
+                tech = tech_psionic_shield
+                message = yes
+            }
+        }
     }
     modifier = {
         intel_decryption_add = 2
@@ -26,8 +48,8 @@ ap_transcendence = {
             }
         }
         custom_tooltip = {
-            fail_text = "requires_ascension_perks_2"
-            num_ascension_perks > 1
+            fail_text = "requires_ascension_perks_3"
+            num_ascension_perks > 2
         }
         custom_tooltip = {
             fail_text = "requires_ap_mind_over_matter"

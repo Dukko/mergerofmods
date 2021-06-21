@@ -6,7 +6,7 @@ action_demand_subsidiary = {
     diplo_view_acceptance_icon = yes
     should_notify_all_communications = no
     requires_recipient_independence = no
-    AI_acceptance_base_value = -150
+    AI_acceptance_base_value = -50
     action_type = aggressive
     potential = {
         is_megacorp = yes
@@ -42,47 +42,6 @@ action_demand_subsidiary = {
             fail_text = "requires_recipient_not_btc"
             from = {
                 has_been_declared_crisis = no
-            }
-        }
-        custom_tooltip = {
-            fail_text = "no_shared_borders"
-            OR = {
-                any_system_within_border = {
-                    any_neighbor_system = {
-                        exists = owner
-                        owner = {
-                            OR = {
-                                is_same_value = from
-                                is_in_federation_with = from
-                                AND = {
-                                    exists = overlord
-                                    overlord = {
-                                        is_same_value = from
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                from = {
-                    any_system_within_border = {
-                        any_neighbor_system = {
-                            exists = owner
-                            owner = {
-                                OR = {
-                                    is_same_value = root
-                                    is_in_federation_with = root
-                                    AND = {
-                                        exists = overlord
-                                        overlord = {
-                                            is_same_value = root
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
             }
         }
     }

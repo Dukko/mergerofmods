@@ -1,5 +1,5 @@
 tech_consumer_good_refinement_1 = {
-    cost = @tier3cost1
+    cost = @tier2cost1
     area = physics
     tier = 2
     category = {

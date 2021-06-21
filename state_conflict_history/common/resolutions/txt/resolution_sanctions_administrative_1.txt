@@ -183,6 +183,10 @@ resolution_sanctions_administrative_1 = {
                 has_valid_civic = civic_machine_servitor
                 has_ai_personality = federation_builders
             }
+        modifier = {
+            factor = 0.75
+            has_ai_personality = principled_rogues
+            }
         }
     }
 }

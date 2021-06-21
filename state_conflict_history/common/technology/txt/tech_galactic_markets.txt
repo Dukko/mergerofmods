@@ -67,6 +67,10 @@ tech_galactic_markets = {
             factor = 0
             num_communications < 2
         }
+        modifier = {
+            factor = 2
+            has_valid_civic = civic_bancorp
+        }
     }
     ai_weight = {
         weight = 40

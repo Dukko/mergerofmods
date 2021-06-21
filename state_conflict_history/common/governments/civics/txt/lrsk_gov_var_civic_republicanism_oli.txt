@@ -8,12 +8,9 @@ lrsk_gov_var_civic_republicanism_oli = {
         authority = {
             NOR = {
                 value = auth_corporate
-                value = auth_corporate_imperial
+                value = auth_cooperative
+                value = auth_corporate_fiefdom
                 value = auth_democratic
-                value = auth_direct_democratic
-                value = auth_strict_democratic
-                value = auth_democratic_dictatorship
-                value = auth_dem_dict_dummy
             }
         }
     }

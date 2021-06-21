@@ -32,6 +32,7 @@ explorationship = {
     combat_disengage_chance = 2
     is_space_station = no
     enable_default_design = yes
+    enable_3dview_in_ship_browser = yes
     is_designable = yes
     is_civilian = yes
     prerequisites = {

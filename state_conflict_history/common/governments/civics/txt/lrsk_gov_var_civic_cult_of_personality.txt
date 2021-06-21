@@ -8,7 +8,8 @@ lrsk_gov_var_civic_cult_of_personality = {
         authority = {
             NOR = {
                 value = auth_corporate
-                value = auth_corporate_imperial
+                value = auth_cooperative
+                value = auth_corporate_fiefdom
             }
         }
     }
@@ -17,8 +18,6 @@ lrsk_gov_var_civic_cult_of_personality = {
             OR = {
                 text = civic_tooltip_dic_imp
                 value = auth_dictatorial
-                value = auth_democratic_dictatorship
-                value = auth_dem_dict_dummy
                 value = auth_imperial
             }
         }

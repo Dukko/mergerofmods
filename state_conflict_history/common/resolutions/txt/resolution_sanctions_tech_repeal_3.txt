@@ -80,6 +80,10 @@ resolution_sanctions_tech_repeal_3 = {
             }
         }
         modifier = {
+            factor = 1.2
+            has_ai_personality = principled_rogues
+        }
+        modifier = {
             factor = 0.25
             has_valid_civic = civic_cutthroat_politics
             NOR = {

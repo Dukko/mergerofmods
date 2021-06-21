@@ -13,7 +13,16 @@ offworld_trading_company = {
             fail_text = "requires_starport"
             has_starbase_size >= starbase_starport
         }
-        has_starbase_module = trading_hub
+        OR = {
+            has_starbase_module = trading_hub
+            OR = {
+                exists = owner
+                owner = {
+                    has_valid_civic = civic_trading_fleet
+                }
+                has_starbase_module = anchorage
+            }
+        }
     }
     resources = {
         category = starbase_buildings
@@ -23,7 +32,7 @@ offworld_trading_company = {
     }
     station_modifier = {
         starbase_trade_collection_range_add = 1
-    }
+    }    
     triggered_station_modifier = {
         potential = {
             exists = owner
@@ -120,6 +129,116 @@ offworld_trading_company = {
             }
             count_starbase_modules = {
                 type = trading_hub
+                count >= 6
+            }
+        }
+        trade_value_add = 12
+    }
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            owner = {
+                has_valid_civic = civic_trading_fleet
+            }
+            count_starbase_modules = {
+                type = anchorage
+                count >= 1
+            }
+            count_starbase_modules = {
+                type = anchorage
+                count < 2
+            }
+        }
+        trade_value_add = 2
+    }
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            owner = {
+                has_valid_civic = civic_trading_fleet
+            }
+            count_starbase_modules = {
+                type = anchorage
+                count >= 2
+            }
+            count_starbase_modules = {
+                type = anchorage
+                count < 3
+            }
+        }
+        trade_value_add = 4
+    }
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            owner = {
+                has_valid_civic = civic_trading_fleet
+            }
+            count_starbase_modules = {
+                type = anchorage
+                count >= 3
+            }
+            count_starbase_modules = {
+                type = anchorage
+                count < 4
+            }
+        }
+        trade_value_add = 6
+    }
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            owner = {
+                has_valid_civic = civic_trading_fleet
+            }
+            count_starbase_modules = {
+                type = anchorage
+                count >= 4
+            }
+            count_starbase_modules = {
+                type = anchorage
+                count < 5
+            }
+        }
+        trade_value_add = 8
+    }
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            owner = {
+                has_valid_civic = civic_trading_fleet
+            }
+            count_starbase_modules = {
+                type = anchorage
+                count >= 5
+            }
+            count_starbase_modules = {
+                type = anchorage
+                count < 6
+            }
+        }
+        trade_value_add = 10
+    }
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            owner = {
+                has_valid_civic = civic_trading_fleet
+            }
+            count_starbase_modules = {
+                type = anchorage
                 count >= 6
             }
         }

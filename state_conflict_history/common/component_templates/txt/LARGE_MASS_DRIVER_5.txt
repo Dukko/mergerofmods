@@ -9,13 +9,13 @@ weapon_component_template = {
     }
     component_set = "MASS_DRIVER_5"
     projectile_gfx = "gauss_cannon_l"
-    upgrades_to = "LARGE_NHSC_MASS_DRIVER_6"
     tags = {
         weapon_type_kinetic
     }
     ai_tags = {
         weapon_role_anti_shield
     }
+    upgrades_to = @LARGE_MASS_DRIVER_T6
     resources = {
         category = ship_components
         cost = {

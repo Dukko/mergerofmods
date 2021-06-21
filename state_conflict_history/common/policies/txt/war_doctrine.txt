@@ -22,6 +22,13 @@ war_doctrine = {
         }
         AI_weight = {
             factor = 1
+            modifier = {
+                factor = 0.5
+                NOR = {
+                    has_ethic = ethic_xenophobe
+                    has_ethic = ethic_fanatic_xenophobe
+                }
+            }
         }
     }
     option = {
@@ -46,6 +53,8 @@ war_doctrine = {
                 NOR = {
                     has_ethic = ethic_pacifist
                     has_ethic = ethic_fanatic_pacifist
+                    has_ai_personality = open_hive_mind
+                    has_ai_personality = open_machine_intelligence
                 }
             }
             modifier = {
@@ -107,8 +116,10 @@ war_doctrine = {
             factor = 100
             modifier = {
                 factor = 0
-                NOT = {
+                NOR = {
                     has_ai_personality = honorbound_warriors
+                    has_ai_personality = devouring_swarm
+                    has_ai_personality = technological_warriors
                 }
             }
         }

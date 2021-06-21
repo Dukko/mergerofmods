@@ -31,9 +31,6 @@ origin_shattered_ring = {
     traits = {
     }
     advanced_start = yes
-    random_weight = {
-        base = 2
-    }
     swap_type = {
         description = "origin_tooltip_shattered_ring_effects_lithoid"
         trigger = {

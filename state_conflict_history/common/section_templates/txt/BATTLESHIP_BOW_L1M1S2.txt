@@ -1,3 +1,4 @@
+@section_cost = 80
 ship_section_template = {
     key = "BATTLESHIP_BOW_L1M1S2"
     ship_size = battleship
@@ -10,7 +11,7 @@ ship_section_template = {
         weight = 0
     }
     prerequisites = {
-        "tech_nsc_disabled_sections"
+        tech_BSW_unable
     }
     component_slot = {
         name = "LARGE_GUN_01"

@@ -97,7 +97,7 @@ resolution_galactic_market_relocate = {
         }
         modifier = {
             factor = 2
-            is_megacorp = yes
+            has_authority = auth_corporate
             NOT = {
                 has_modifier = galactic_market_founder
             }
@@ -107,9 +107,21 @@ resolution_galactic_market_relocate = {
             OR = {
                 has_ai_personality = peaceful_traders
                 has_ai_personality = ruthless_capitalists
+                has_ai_personality = crime_haven
             }
             NOT = {
                 has_modifier = galactic_market_founder
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_ai_personality = principled_rogues
+            any_relation = {
+                has_modifier = galactic_market_founder
+                their_opinion = {
+                    who = prev
+                    value < 0
+                }
             }
         }
     }

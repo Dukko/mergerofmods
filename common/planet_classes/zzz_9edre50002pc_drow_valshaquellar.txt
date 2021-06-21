@@ -1,0 +1,39 @@
+pc_drow_valshaquellar = {
+    habitat = yes
+    entity = "drow_01_valshaquellar_alive"
+    entity_scale = 1
+    fixed_entity_scale = yes
+    entity_face_object = no
+    climate = "dry"
+    icon_frame = 22
+    enable_tilt = no
+    atmosphere_color = hsv {
+        0.718
+        0.4
+        0.8
+    }
+    atmosphere_intensity = 1
+    atmosphere_width = 0.5
+    show_city = yes
+    city_color_lut = "gfx/portraits/misc/colorcorrection_neutral.dds"
+    modifier = {
+        planet_jobs_produces_mult = 0.2
+        pop_growth_speed = 0.5
+        planet_max_buildings_add = 12
+    }
+    spawn_odds = 0
+    extra_orbit_size = 0
+    extra_planet_count = 0
+    chance_of_ring = 0
+    planet_size = 15
+    moon_size = 1
+    colonizable = yes
+    starting_planet = no
+    orbit_lines = no
+    has_colonization_influence_cost = no
+    district_set = city_world
+    carry_cap_per_free_district = @carry_cap_high
+    is_artificial_planet = yes
+    place_entity_on_planet_plane = yes
+    default_planet_selection = yes
+}

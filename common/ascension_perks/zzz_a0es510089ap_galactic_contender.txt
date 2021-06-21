@@ -1,0 +1,58 @@
+ap_galactic_contender = {
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_ascension_perks_1"
+            num_ascension_perks > 0
+        }
+        has_technology = tech_cold_fusion_power
+        has_technology = tech_destroyers
+        has_technology = tech_starbase_3
+    }
+    modifier = {
+        damage_vs_country_type_awakened_fallen_empire_mult = 0.5
+        damage_vs_country_type_fallen_empire_mult = 0.5
+        damage_vs_country_type_gate_builders_mult = 0.5
+        diplo_weight_mult = 0.25
+    }
+    on_enabled = {
+        if = {
+            limit = {
+                NOT = {
+                    has_technology = tech_antimatter_power
+                }
+            }
+            add_research_option = tech_antimatter_power
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_technology = tech_cruisers
+                }
+            }
+            add_research_option = tech_cruisers
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_technology = tech_starbase_4
+                }
+            }
+            add_research_option = tech_starbase_4
+        }
+    }
+    potential = {
+        NOT = {
+            has_ascension_perk = ap_galactic_contender
+        }
+        any_relation = {
+            has_communications = root
+            OR = {
+                is_country_type = fallen_empire
+                is_country_type = awakened_fallen_empire
+            }
+        }
+    }
+    ai_weight = {
+        factor = 0
+    }
+}

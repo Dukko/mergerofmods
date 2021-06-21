@@ -184,46 +184,5 @@ action_ask_to_become_protectorate = {
             fail_text = "requires_recipient_not_btc"
             has_been_declared_crisis = no
         }
-        custom_tooltip = {
-            fail_text = "no_shared_borders"
-            OR = {
-                any_system_within_border = {
-                    any_neighbor_system = {
-                        exists = owner
-                        owner = {
-                            OR = {
-                                is_same_value = from
-                                is_in_federation_with = from
-                                AND = {
-                                    exists = overlord
-                                    overlord = {
-                                        is_same_value = from
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                from = {
-                    any_system_within_border = {
-                        any_neighbor_system = {
-                            exists = owner
-                            owner = {
-                                OR = {
-                                    is_same_value = root
-                                    is_in_federation_with = root
-                                    AND = {
-                                        exists = overlord
-                                        overlord = {
-                                            is_same_value = root
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
     }
 }

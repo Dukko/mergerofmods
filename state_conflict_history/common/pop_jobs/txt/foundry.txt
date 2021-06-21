@@ -35,6 +35,17 @@ foundry = {
             }
             alloys = 2
         }
+        produces = {
+            trigger = {
+                planet = {
+                    OR = {
+                        has_modifier = "industrialized_planet"
+                        has_modifier = "industrialized_arcology"
+                    }
+                }
+            }
+            alloys = 1
+        }
         upkeep = {
             minerals = 6
         }
@@ -53,6 +64,17 @@ foundry = {
                 }
             }
             minerals = 4
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    OR = {
+                        has_modifier = "industrialized_planet"
+                        has_modifier = "industrialized_arcology"
+                    }
+                }
+            }
+            minerals = 2
         }
         upkeep = {
             trigger = {

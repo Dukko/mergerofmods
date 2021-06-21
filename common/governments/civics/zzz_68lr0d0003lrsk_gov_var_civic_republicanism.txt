@@ -1,0 +1,37 @@
+lrsk_gov_var_civic_republicanism = {
+    potential = {
+        ethics = {
+            NOT = {
+                value = ethic_gestalt_consciousness
+            }
+        }
+        authority = {
+            NOR = {
+                value = auth_corporate
+                value = auth_cooperative
+                value = auth_corporate_fiefdom
+                value = auth_oligarchic
+            }
+        }
+    }
+    possible = {
+        authority = {
+            OR = {
+                value = auth_democratic
+                value = auth_direct_democratic
+            }
+        }
+        ethics = {
+            NOT = {
+                value = ethic_fanatic_pluralist
+            }
+        }
+    }
+    random_weight = {
+        base = 5
+    }
+    modifier = {
+        leaders_cost_mult = -0.3
+        job_administrator_per_pop = 0.02
+    }
+}

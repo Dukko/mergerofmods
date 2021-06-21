@@ -1,0 +1,45 @@
+tech_mine_exotic_gases_academy = {
+    cost = @tier4cost3
+    area = physics
+    tier = 3
+    category = {
+        field_manipulation
+    }
+    prerequisites = {
+        "tech_mine_exotic_gases_II"
+    }
+    is_rare = yes
+    weight = @tier4weight3
+    icon = tech_exotic_gases_academy
+    weight_modifier = {
+        factor = 1.1
+        modifier = {
+            factor = 1.15
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+        modifier = {
+            factor = 1.3
+            has_tradition = tr_est_academy_adopt
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_tradition = tr_est_academy_adopt
+            }
+        }
+    }
+    ai_weight = {
+        factor = 3
+        modifier = {
+            factor = 1.25
+            has_tradition = tr_est_academy_adopt
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+}

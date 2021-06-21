@@ -13,6 +13,11 @@ tech_battleship_hull_2 = {
     modifier = {
         shipsize_battleship_hull_add = 800
     }
+    prereqfor_desc = {
+        ship = {
+            title = "TECH_BSW_BB_2_TITLE"
+        }
+    }
     weight_modifier = {
         modifier = {
             factor = 0.25

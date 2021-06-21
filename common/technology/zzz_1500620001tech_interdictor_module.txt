@@ -1,0 +1,39 @@
+tech_interdictor_module = {
+    area = physics
+    cost = @tier5cost1
+    tier = 5
+    is_rare = yes
+    category = {
+        particles
+    }
+    prerequisites = {
+        "tech_ftl_inhibitor"
+        "tech_titans"
+    }
+    weight = @tier5weight1
+    ai_update_type = military
+    weight_modifier = {
+        factor = 4
+        modifier = {
+            factor = 1.25
+            has_tradition = tr_supremacy_adopt
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 4
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+}

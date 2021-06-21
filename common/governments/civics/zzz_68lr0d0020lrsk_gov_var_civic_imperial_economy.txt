@@ -1,0 +1,44 @@
+lrsk_gov_var_civic_imperial_economy = {
+    potential = {
+        ethics = {
+            NOT = {
+                value = ethic_gestalt_consciousness
+            }
+        }
+        authority = {
+            NOR = {
+                value = auth_corporate
+                value = auth_cooperative
+                value = auth_corporate_fiefdom
+            }
+        }
+    }
+    possible = {
+        authority = {
+            OR = {
+                text = civic_tooltip_dic_imp
+                value = auth_dictatorial
+                value = auth_imperial
+            }
+        }
+        ethics = {
+            NOR = {
+                text = civic_tooltip_not_xenophile
+                value = ethic_xenophile
+                value = ethic_fanatic_xenophile
+            }
+            NOR = {
+                text = civic_tooltip_not_pluralist
+                value = ethic_pluralist
+                value = ethic_fanatic_pluralist
+            }
+        }
+    }
+    random_weight = {
+        base = 5
+    }
+    modifier = {
+        country_vassal_naval_capacity_contribution_mult = 0.15
+        subject_tribute_mult = 0.075
+    }
+}

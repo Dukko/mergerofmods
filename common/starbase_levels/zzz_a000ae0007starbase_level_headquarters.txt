@@ -1,0 +1,8 @@
+starbase_level_headquarters = {
+    ship_size = starbase_headquarters
+    level_weight = 6
+    ai_weight = {
+        weight = 7
+    }
+    potential_home_base = yes
+}

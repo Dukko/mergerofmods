@@ -1,5 +1,5 @@
 building_crystal_plant = {
-    base_buildtime = @b3_time
+    base_buildtime = @b2_time
     category = manufacturing
     potential = {
         NOT = {
@@ -20,7 +20,7 @@ building_crystal_plant = {
             is_ai = yes
             has_monthly_income = {
                 resource = rare_crystals
-                value > 11
+                value > 9
             }
         }
     }
@@ -32,7 +32,7 @@ building_crystal_plant = {
             }
         }
         modifier = {
-            job_translucer_add = 2
+            job_translucer_add = 1
         }
     }
     triggered_planet_modifier = {
@@ -43,24 +43,20 @@ building_crystal_plant = {
             }
         }
         modifier = {
-            job_translucer_drone_add = 2
+            job_translucer_drone_add = 1
         }
     }
     resources = {
         category = planet_buildings
         cost = {
-            minerals = 1000
+            minerals = @b2_minerals
         }
         upkeep = {
-            energy = 6
+            energy = 3
         }
     }
     prerequisites = {
         "tech_rare_crystals"
-    }
-    upgrades = {
-        "building_crystal_plant_2"
-        "eb_crystal_plant"
     }
     triggered_desc = {
         trigger = {
@@ -79,6 +75,9 @@ building_crystal_plant = {
             }
         }
         text = job_translucer_drone_effect_desc
+    }
+    upgrades = {
+        "building_crystal_plant_2"
     }
     ai_resource_production = {
         rare_crystals = 1

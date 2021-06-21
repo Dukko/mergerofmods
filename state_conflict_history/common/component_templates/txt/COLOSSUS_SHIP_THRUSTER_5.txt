@@ -1,5 +1,6 @@
 @colossus_power_5 = -600
 @colossus_cost5 = 300
+@thruster_speed_mult_125 = 0.4
 utility_component_template = {
     key = "COLOSSUS_SHIP_THRUSTER_5"
     size = small
@@ -14,7 +15,7 @@ utility_component_template = {
         }
     }
     modifier = {
-        ship_base_speed_mult = 1.25
+        ship_base_speed_mult = @thruster_speed_mult_125
     }
     prerequisites = {
         "tech_dark_matter_propulsion"
@@ -25,8 +26,9 @@ utility_component_template = {
         juggernaut
         star_eater
     }
+    upgrades_to = @DM_THRUSTERS_COLOSSUS_T2
     ai_weight = {
-        weight = 5
+        weight = 8
         modifier = {
             factor = 0
             is_country_type = default

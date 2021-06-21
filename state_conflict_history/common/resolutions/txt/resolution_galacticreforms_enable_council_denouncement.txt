@@ -74,5 +74,10 @@ resolution_galacticreforms_enable_council_denouncement = {
                 }
             }
         }
+        modifier = {
+            factor = 0.5
+            is_part_of_galactic_council = no
+            has_ai_personality = principled_rogues
+        }
     }
 }

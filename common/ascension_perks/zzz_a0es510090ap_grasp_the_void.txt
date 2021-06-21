@@ -1,0 +1,56 @@
+ap_grasp_the_void = {
+    modifier = {
+        country_starbase_influence_cost_mult = -0.2
+        country_starbase_capacity_add = 5
+    }
+    on_enabled = {
+        if = {
+            limit = {
+                NOT = {
+                    has_technology = tech_habitat_1
+                }
+            }
+            add_research_option = tech_habitat_1
+        }
+    }
+    potential = {
+        NOT = {
+            has_ascension_perk = ap_grasp_the_void
+        }
+    }
+    ai_weight = {
+        factor = 10
+        modifier = {
+            factor = 1.2
+            has_civic = civic_inwards_perfection
+        }
+        modifier = {
+            factor = 1.5
+            is_xenophobe = yes
+        }
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = alloys
+                value < 2500
+            }
+            used_naval_capacity_percent < 0.6
+        }
+        modifier = {
+            factor = 5
+            resource_stockpile_compare = {
+                resource = alloys
+                value > 4000
+            }
+        }
+        modifier = {
+            factor = 5
+            rusher = yes
+            used_naval_capacity_percent > 0.95
+            resource_stockpile_compare = {
+                resource = alloys
+                value > 3000
+            }
+        }
+    }
+}

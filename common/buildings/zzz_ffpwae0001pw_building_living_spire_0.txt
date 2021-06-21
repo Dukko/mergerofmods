@@ -79,6 +79,15 @@ pw_building_living_spire_0 = {
             }
             energy = @pw_building_upkeep_extra_half
         }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_edict = pw_ambition_wonders_beyond_ambition
+                }
+            }
+            energy = @pw_building_upkeep_ambition
+        }
     }
     planet_modifier = {
         planet_max_districts_add = -1

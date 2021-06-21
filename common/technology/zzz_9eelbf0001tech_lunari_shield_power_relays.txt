@@ -1,0 +1,56 @@
+@tier3cost1 = 4000
+@tier3weight1 = 65
+tech_lunari_shield_power_relays = {
+    area = physics
+    cost = @tier3cost1
+    tier = 2
+    is_rare = yes
+    is_reverse_engineerable = no
+    category = {
+        field_manipulation
+    }
+    ai_update_type = all
+    prerequisites = {
+        "tech_shields_3"
+    }
+    weight = @tier3weight1
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_planet_flag = lunari_planet_flag
+                }
+            }
+        }
+    }
+    ai_weight = {
+        factor = 2
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_planet_flag = lunari_planet_flag
+                }
+            }
+        }
+    }
+    modifier = {
+        ship_shield_mult = 0.2
+        starbase_shipyard_build_cost_mult = 0.05
+    }
+}
