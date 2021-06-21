@@ -1041,38 +1041,6 @@ room_selector = {
     }
     "horrorworm_room" = {
     }
-    "forerunner_1_room" = {
-    }
-    "forerunner_2_room" = {
-    }
-    "forerunner_3_room" = {
-    }
-    "forerunner_4_room" = {
-    }
-    "forerunner_5_room" = {
-    }
-    "forerunner_6_room" = {
-    }
-    "forerunner_7_room" = {
-    }
-    "forerunner_8_room" = {
-    }
-    "promethean_1_room" = {
-    }
-    "promethean_2_room" = {
-    }
-   "promethean_3_room" = {
-    }
-   "promethean_4_room" = {
-   }
-   "promethean_5_room" = {
-   }
-   "promethean_6_room" = {
-   }
-  "promethean_7_room" = {
-  }
- "promethean_8_room" = {
-  }
     "cloning_room" = {
       always = no
     }
