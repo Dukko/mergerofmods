@@ -1,0 +1,18 @@
+als_trait_shock_1 = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/als_trait_shock_1.dds"
+    sorting_priority = -9
+    modifier = {
+        force_disparity_fire_rate_mult = 0.03
+        ship_disengage_chance_mult = 0.02
+    }
+    initial = no
+    randomized = no
+    leader_trait = {
+        admiral
+    }
+    leader_class = {
+        admiral
+    }
+}

@@ -1,0 +1,19 @@
+att_trait_movement_lv4 = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/att_trait_movement_lv4.dds"
+    sorting_priority = -8
+    modifier = {
+        ship_evasion_add = 4
+        ship_speed_mult = 0.1
+        ship_interstellar_speed_mult = 0.4
+    }
+    initial = no
+    randomized = no
+    leader_trait = {
+        admiral
+    }
+    leader_class = {
+        admiral
+    }
+}

@@ -1,0 +1,20 @@
+trait_seeded = {
+    icon = "gfx/interface/icons/traits/trait_seeded.dds"
+    initial = no
+    modification = no
+    randomized = no
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    sorting_priority = 15
+    potential_crossbreeding_chance = 0
+    modifier = {
+        leader_age = 20
+        country_unity_produces_mult = 0.05
+        pop_growth_speed = -0.1
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

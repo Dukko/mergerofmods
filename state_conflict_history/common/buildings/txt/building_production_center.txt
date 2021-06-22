@@ -19,6 +19,25 @@ building_production_center = {
     }
     allow = {
         has_major_upgraded_capital = yes
+        or = {
+            owner = {
+                is_ai = no
+            }
+            planet_resource_compare = {
+                resource = alloys
+                value > 40
+            }
+            planet_resource_compare = {
+                resource = consumer_goods
+                value > 80
+            }
+            has_designation = col_foundry
+            has_designation = col_factory
+            has_designation = col_ecu_foundry
+            has_designation = col_mac_foundry
+            has_designation = col_habitat_factory
+            has_designation = col_habitat_foundry
+        }
     }
     planet_modifier = {
         planet_metallurgists_produces_mult = 0.15

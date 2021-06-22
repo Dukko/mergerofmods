@@ -1,0 +1,18 @@
+gle_trait_ruler_tier_noble_3 = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/gle_trait_noble_lv1.dds"
+    modifier = {
+        job_noble_add = 1
+        planet_nobles_influence_produces_add = 0.1
+    }
+    sorting_priority = 20
+    initial = no
+    randomized = no
+    leader_trait = {
+        governor
+    }
+    leader_class = {
+        governor
+    }
+}

@@ -1,0 +1,19 @@
+leader_trait_ruler_eco = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/leader_trait_bureaucrat.dds"
+    modifier = {
+        pop_factions_influence_produces_mult = 0.25
+        country_unity_produces_mult = 0.15
+        edict_length_mult = 0.15
+        army_collateral_damage_mult = -0.5
+    }
+    leader_trait = {
+        ruler
+    }
+    leader_class = {
+        ruler
+    }
+    initial = no
+    randomized = no
+}

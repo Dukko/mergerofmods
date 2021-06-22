@@ -1,7 +1,8 @@
 robot_pop_policy = {
     potential = {
-        NOT = {
+        NOR = {
             has_ethic = ethic_gestalt_consciousness
+            has_authority = auth_commonwealth
         }
     }
     option = {
@@ -12,6 +13,8 @@ robot_pop_policy = {
                 has_ethic = "ethic_fanatic_materialist"
                 has_valid_civic = civic_machine_cult
                 has_valid_civic = civic_engineering_cult
+                has_valid_civic = civic_machine_cult_corpo
+                has_authority = auth_commonwealth
             }
             NOT = {
                 has_policy_flag = ai_full_rights

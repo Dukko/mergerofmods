@@ -1,0 +1,16 @@
+att_trait_movement_lv0 = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/att_trait_movement_lv0.dds"
+    sorting_priority = -8
+    modifier = {
+    }
+    initial = no
+    randomized = no
+    leader_trait = {
+        admiral
+    }
+    leader_class = {
+        admiral
+    }
+}

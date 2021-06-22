@@ -47,15 +47,11 @@ ap_the_flesh_is_weak = {
     ai_weight = {
         factor = 500
         modifier = {
-            factor = 0.01
+            factor = 0.001
             or = {
                 has_ethic = ethic_spiritualist
                 has_ethic = ethic_fanatic_spiritualist
             }
-        }
-        modifier = {
-            factor = 0
-            num_owned_planets < 10
         }
         modifier = {
             factor = 0

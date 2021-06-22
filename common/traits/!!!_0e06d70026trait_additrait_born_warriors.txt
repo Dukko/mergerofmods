@@ -1,0 +1,17 @@
+trait_additrait_born_warriors = {
+    cost = 1
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    modifier = {
+        army_damage_mult = 0.1
+        army_morale = 0.1
+    }
+    opposites = {
+        "trait_weak"
+        "trait_additrait_lateral_thinkers"
+        "trait_additrait_sky_born"
+        "trait_additrait_keen_vision"
+    }
+}

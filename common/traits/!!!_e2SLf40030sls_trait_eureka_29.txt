@@ -1,0 +1,20 @@
+sls_trait_eureka_29 = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/sls_trait_eureka_26.dds"
+    sorting_priority = 0
+    modifier = {
+    }
+    custom_tooltip = sls_trait_eureka.tooltip
+    initial = no
+    randomized = no
+    leader_trait = {
+        scientist
+    }
+    leader_class = {
+        scientist
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

@@ -46,7 +46,7 @@ war_doctrine = {
             ship_speed_mult = 0.1
         }
         AI_weight = {
-            factor = 10
+            factor = 5
             modifier = {
                 factor = 0
                 is_ai = no
@@ -59,6 +59,12 @@ war_doctrine = {
             }
             modifier = {
                 factor = 1000
+                or = {
+                    not = {
+                        has_technology = tech_energy_torpedoes_1
+                    }
+                    has_country_flag = str_just_got_launchers
+                }
                 is_ai = yes
             }
         }
@@ -81,10 +87,25 @@ war_doctrine = {
         AI_weight = {
             factor = 10
             modifier = {
-                factor = 0
+                factor = 0.1
+                is_ai = no
                 NOT = {
                     is_preferred_weapons = weapon_type_explosive
                 }
+            }
+            modifier = {
+                factor = 1000
+                nor = {
+                    not = {
+                        has_technology = tech_energy_torpedoes_1
+        }
+                    has_country_flag = str_just_got_launchers
+    }
+                or = {
+                    has_country_flag = str_has_bad_fleet_score
+                    used_naval_capacity_percent < 0.5
+                }
+                is_ai = yes
             }
         }
     }
@@ -116,11 +137,26 @@ war_doctrine = {
             factor = 100
             modifier = {
                 factor = 0
+                is_ai = no
                 NOR = {
                     has_ai_personality = honorbound_warriors
                     has_ai_personality = devouring_swarm
                     has_ai_personality = technological_warriors
                 }
+            }
+            modifier = {
+                factor = 100
+                nor = {
+                    not = {
+                        has_technology = tech_energy_torpedoes_1
+                    }
+                    has_country_flag = str_just_got_launchers
+                }
+                not = {
+                    has_country_flag = str_has_bad_fleet_score
+                }
+                used_naval_capacity_percent > 0.5
+                is_ai = yes
             }
         }
     }

@@ -1,0 +1,23 @@
+trait_nonadaptive = {
+    cost = -2
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_adaptive"
+        "trait_extremely_adaptive"
+        "trait_robust"
+        "trait_adaptive_lithoid"
+        "trait_additrait_genetically_ill"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    modifier = {
+        pop_environment_tolerance = -0.1
+    }
+    slave_cost = {
+        energy = -50
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

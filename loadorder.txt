@@ -44,7 +44,6 @@ Benjaseth's Species Names
 ( Twinks Kaldorei )
 ( Twinks Paradise Initiative )
 ( Twinks Sin'dorei )
-Zachs Rendition of Forerunner Mod
 V-Mods Species
 V-Mods Species - Ascellian Free Traders
 V-Mods Species - Shemei Covenant
@@ -97,6 +96,7 @@ Fatal Foundations Story Pack [3.0]
 Grand Custodianship
 Feudal Origins
 Fatherland: Colonial Empires
+Fatherland: Frontier Worlds
 Extra Events Unoffical fix
 More Events Mod
 Expanded Gestalts: Forgotten Queens
@@ -162,6 +162,7 @@ Hypertraversal Manipulation
 Dynamic Mod Menu (3.0.*)
 Dynamic Difficulty : More Modifiers
 Dynamic Difficulty - Ultimate Customization
+Distortion Cannon
 Diplomacy Adjustments
 Claims Decay - Dynamic Diplomacy [3.0]
 Choosable Shroud (Compatible with the Decadence of Sanity)
@@ -211,6 +212,7 @@ Cheek's Custom Shipsets: Star Trek [Federation]
 Champion of the Ruinous Powers
 BSG Shipset Renewal
 Borg Shipset 3.0
+Arkchitecture Shipsets
 Apocalypse Molluscoid Ships: 2.7
 Angels of Death
 Alternate Lithoid Ships
@@ -305,7 +307,7 @@ Galactic Community Expanded
 UI Overhaul Dynamic + Ethics and Civics Alternative
 Kaityo`s Tiny Planet Buildings for UI Overhaul Dynamic
 Tiny Ship Components
-! Dark Blue UI Overhaul !
+! Dark Blue UI Remake !
 Improved Music Player & Dark UI Fix
 Crazy Renamer
 ! Immersive Beautiful Stellaris !
@@ -348,6 +350,7 @@ Longer Greetings Timer (3.0)
 Habitats Capped Dynamic
 Habitat AI colonisation fix
 Golden Galaxy: IBS
+NSC - Dark UI Compatibility Patch
 NSC-IBS minipatch
 PD-RS:NF Compatibility Patch
 Diverse New Frontiers

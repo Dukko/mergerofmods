@@ -1,0 +1,20 @@
+trait_plentiful_traditions_robot_engineering4 = {
+    cost = -2
+    initial = no
+    randomized = no
+    prerequisites = {
+        tech_plentiful_traditions_metaverse_ecosystem
+    }
+    opposites = {
+        trait_plentiful_traditions_robot_engineering1
+        trait_plentiful_traditions_robot_engineering2
+        trait_plentiful_traditions_robot_engineering3
+    }
+    allowed_archetypes = {
+        ROBOT
+        MACHINE
+    }
+    modifier = {
+        planet_researchers_engineering_research_produces_mult = -0.15
+    }
+}

@@ -1,0 +1,20 @@
+trait_eutab_captivating = {
+    cost = 1
+    randomized = no
+    initial = no
+    potential_crossbreeding_chance = 2
+    modifier = {
+        pop_happiness = 0.05
+        pop_growth_speed = 0.25
+    }
+    prerequisites = {
+        tech_eutab_cross_species
+    }
+    opposites = {
+        "trait_repugnant"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    custom_tooltip = TRAIT_CAPTIVATING_EFFECT
+}

@@ -11,7 +11,7 @@ building_precinct_house = {
     }
     allow = {
         hidden_trigger = {
-            OR = {
+            or = {
                 owner = {
                     is_ai = no
                 }
@@ -20,7 +20,7 @@ building_precinct_house = {
                     owner = {
                         str_raw_ecocrisis_level_1 = no
                     }
-                    num_pops > 11
+                    num_pops > 20
                     not = {
                         has_modifier = crime_lord_deal
                     }

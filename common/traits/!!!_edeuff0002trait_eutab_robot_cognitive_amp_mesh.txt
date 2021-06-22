@@ -1,0 +1,25 @@
+trait_eutab_robot_cognitive_amp_mesh = {
+    cost = 3
+    initial = no
+    randomized = no
+    prerequisites = {
+        tech_eutab_m_adaptation_mastery
+    }
+    opposites = {
+        "trait_robot_logic_engines"
+    }
+    allowed_archetypes = {
+        MACHINE
+    }
+    species_potential_add = {
+        exists = from
+        from = {
+            has_authority = auth_machine_intelligence
+        }
+    }
+    modifier = {
+        planet_jobs_society_research_produces_mult = 0.2
+        planet_jobs_physics_research_produces_mult = 0.2
+        planet_jobs_engineering_research_produces_mult = 0.2
+    }
+}

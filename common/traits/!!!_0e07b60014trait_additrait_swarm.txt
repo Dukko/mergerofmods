@@ -1,0 +1,35 @@
+trait_additrait_swarm = {
+    cost = 1
+    allowed_archetypes = {
+        MACHINE
+    }
+    opposites = {
+        "trait_robot_power_drills"
+        "trait_robot_logic_engines"
+        "trait_robot_mass_produced"
+        "trait_robot_custom_made"
+        "trait_additrait_slow_processors"
+        "trait_additrait_erratic_processors"
+        "trait_additrait_multithreading"
+        "trait_additrait_standard_frame"
+        "trait_additrait_hand_crafted"
+    }
+    modifier = {
+        army_damage_mult = 0.25
+        army_morale_damage_mult = 0.25
+        planet_pop_assembly_mult = 0.3
+        pop_assembly_speed = 0.3
+        planet_jobs_minerals_produces_mult = 0.25
+        planet_jobs_unity_produces_mult = -0.1
+        planet_jobs_engineering_research_produces_mult = -0.3
+        planet_jobs_physics_research_produces_mult = -0.3
+        planet_jobs_society_research_produces_mult = -0.3
+    }
+    ai_weight = {
+        weight = 1
+        modifier = {
+            factor = 0
+            years_passed > 5
+        }
+    }
+}

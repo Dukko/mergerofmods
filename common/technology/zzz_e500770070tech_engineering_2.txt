@@ -38,7 +38,7 @@ tech_engineering_2 = {
         }
     }
     ai_weight = {
-        weight = 50
+        weight = 50000
         factor = 5
         modifier = {
             factor = 20

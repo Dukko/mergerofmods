@@ -62,10 +62,14 @@ ap_engineered_evolution = {
         is_mechanical_empire = no
     }
     ai_weight = {
-        factor = 10
+        factor = 1
         modifier = {
             factor = 0
-            num_owned_planets < 10
+            num_ascension_perks < 3
+        }
+        modifier = {
+            factor = 10000
+            is_gestalt = yes
         }
     }
 }

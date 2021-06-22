@@ -1,0 +1,14 @@
+admiral_trait_armorer = {
+    cost = 1
+    modification = no
+    icon = "gfx/interface/icons/traits/admiral_trait_armorer.dds"
+    modifier = {
+        ship_armor_mult = 0.25
+    }
+    leader_trait = {
+        admiral
+    }
+    leader_class = {
+        admiral
+    }
+}

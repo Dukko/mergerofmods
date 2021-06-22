@@ -1,0 +1,21 @@
+pw_leader_trait_admiral_codex_of_past_ages = {
+    cost = 1
+    modification = no
+    initial = no
+    randomized = no
+    icon = "gfx/interface/icons/traits/leader_traits/leader_trait_intellectual.dds"
+    self_modifier = {
+        species_leader_exp_gain = 0.25
+    }
+    modifier = {
+        ship_accuracy_mult = 0.1
+        ship_evasion_mult = 0.1
+        ship_weapon_range_mult = 0.1
+    }
+    leader_trait = {
+        admiral
+    }
+    leader_class = {
+        admiral
+    }
+}

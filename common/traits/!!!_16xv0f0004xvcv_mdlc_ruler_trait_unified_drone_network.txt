@@ -1,0 +1,15 @@
+xvcv_mdlc_ruler_trait_unified_drone_network = {
+    cost = 0
+    modification = no
+    initial = no
+    randomized = no
+    icon = "gfx/interface/icons/customgui/leader_traits/xvcv_mdlc_ruler_trait_unified_drone_network.dds"
+    modifier = {
+        planet_crime_no_happiness_add = -20
+        planet_crime_no_happiness_mult = -0.1
+    }
+    leader_class = {
+        ruler
+    }
+    leader_trait = all
+}

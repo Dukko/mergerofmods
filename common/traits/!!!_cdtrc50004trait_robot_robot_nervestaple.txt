@@ -1,0 +1,28 @@
+trait_robot_robot_nervestaple = {
+    cost = 2
+    forced_happiness = yes
+    icon = "gfx/interface/icons/traits/trait_robot_loyalty_circuits.dds"
+    initial = no
+    randomized = no
+    custom_tooltip = TRAIT_ROBOTSTAPLE_EFFECT
+    prerequisites = {
+        tech_synthetic_workers
+    }
+    modifier = {
+        planet_pops_consumer_goods_upkeep_mult = -0.5
+        pop_political_power = -1
+    }
+    allowed_archetypes = {
+        ROBOT
+    }
+    species_potential_add = {
+        exists = from
+        from = {
+            has_technology = tech_synthetic_workers
+            NOT = {
+                has_policy_flag = ai_outlawed
+            }
+            has_civic = civic_cutting_edge_developments
+        }
+    }
+}

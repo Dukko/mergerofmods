@@ -1,0 +1,20 @@
+als_trait_tactic_bottled_up_inactive7 = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/als_trait_tactic_bottled_up.dds"
+    modifier = {
+        ship_disengage_chance_mult = 0.1
+        ship_weapon_damage = -0.25
+        ship_fire_rate_mult = -0.25
+        ship_evasion_mult = -0.25
+    }
+    custom_tooltip = als_trait_tactic_bottled_up.tooltip
+    initial = no
+    randomized = no
+    leader_trait = {
+        admiral
+    }
+    leader_class = {
+        admiral
+    }
+}

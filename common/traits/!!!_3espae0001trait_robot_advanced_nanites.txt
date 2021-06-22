@@ -1,0 +1,24 @@
+trait_robot_advanced_nanites = {
+    cost = 0
+    initial = no
+    randomized = no
+    modification = no
+    allowed_archetypes = {
+        ROBOT
+        MACHINE
+    }
+    species_potential_add = {
+        exists = from
+        from = {
+            has_authority = auth_machine_intelligence
+            has_technology = tech_advanced_nanites
+            NOT = {
+                has_policy_flag = ai_outlawed
+            }
+        }
+    }
+    modifier = {
+        planet_jobs_unity_produces_mult = 0.15
+        pop_growth_speed = 0.1
+    }
+}

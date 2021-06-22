@@ -39,7 +39,7 @@ tech_physics_2 = {
         }
     }
     ai_weight = {
-        weight = 60
+        weight = 6000
         factor = 5
         modifier = {
             factor = 100

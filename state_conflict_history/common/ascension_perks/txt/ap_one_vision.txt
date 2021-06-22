@@ -8,6 +8,7 @@ ap_one_vision = {
         NOR = {
             has_ascension_perk = ap_one_vision
             has_ethic = ethic_gestalt_consciousness
+            }
         }
     on_enabled = {
         if = {

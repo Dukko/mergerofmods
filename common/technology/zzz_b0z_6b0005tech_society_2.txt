@@ -39,7 +39,7 @@ tech_society_2 = {
         }
     }
     ai_weight = {
-        weight = 15
+        weight = 15000
         factor = 5
         modifier = {
             factor = 500

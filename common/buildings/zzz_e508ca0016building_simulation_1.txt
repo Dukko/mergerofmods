@@ -12,6 +12,18 @@ building_simulation_1 = {
             }
         }
     }
+    allow = {
+        or = {
+            owner = {
+                is_ai = no
+            }
+            nor = {
+                has_building = building_simulation_1
+                has_building = building_simulation_2
+                has_building = building_simulation_2
+            }
+        }
+    }
     destroy_trigger = {
         exists = owner
         owner = {

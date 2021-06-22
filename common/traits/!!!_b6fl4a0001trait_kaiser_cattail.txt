@@ -1,0 +1,22 @@
+trait_kaiser_cattail = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/leader_trait_great_khan.dds"
+    immortal_leaders = yes
+    modifier = {
+        pop_government_ethic_attraction = 0.1
+        leader_skill_levels = 20
+        country_trust_growth = -0.1
+        all_technology_research_speed = -0.05
+        empire_size_penalty_mult = 0.15
+        diplo_weight_mult = -0.1
+    }
+    leader_trait = {
+        ruler
+    }
+    leader_class = {
+        ruler
+    }
+    initial = no
+    randomized = no
+}

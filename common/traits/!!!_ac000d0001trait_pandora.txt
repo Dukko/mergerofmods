@@ -1,0 +1,20 @@
+trait_pandora = {
+    cost = 0
+    sorting_priority = 15
+    randomized = no
+    initial = no
+    modification = no
+    allowed_archetypes = {
+        ROBOT
+    }
+    forced_happiness = yes
+    modifier = {
+        army_attack_health_mult = 0.25
+        army_defense_health_mult = 0.25
+        army_damage_mult = 0.2
+        army_morale_damage_mult = 0.2
+        army_collateral_damage_mult = 0.2
+        planet_jobs_produces_mult = -0.1
+    }
+    icon = "gfx/interface/icons/traits/trait_pandora.dds"
+}

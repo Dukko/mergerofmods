@@ -1,0 +1,20 @@
+trait_drow_xenocidal = {
+    cost = 1
+    modification = yes
+    randomized = no
+    icon = "gfx/interface/icons/traits/trait_drow_xenocidal.dds"
+    modifier = {
+        army_attack_damage_mult = 0.15
+        army_attack_morale_mult = 0.25
+    }
+    opposites = {
+        "trait_charismatic"
+    }
+    ai_weight = {
+        weight = 0
+    }
+    allowed_archetypes = {
+        DROW
+        BIOLOGICAL
+    }
+}

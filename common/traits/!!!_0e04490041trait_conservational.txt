@@ -1,0 +1,15 @@
+trait_conservational = {
+    cost = 1
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_wasteful"
+        "trait_hive_mind"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    modifier = {
+        planet_pops_consumer_goods_upkeep_mult = -0.1
+    }
+}

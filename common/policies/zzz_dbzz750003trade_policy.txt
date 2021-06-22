@@ -125,7 +125,7 @@ trade_policy = {
             }
             modifier = {
                 factor = 0
-                num_ascension_perks > 0
+                num_ascension_perks > 1
                 or = {
                     has_tradition = tr_supremacy_adopt
                     has_tradition = tr_prosperity_administrative_operations

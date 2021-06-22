@@ -1,0 +1,20 @@
+att_trait_movement_max = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/att_trait_movement_max.dds"
+    sorting_priority = -8
+    modifier = {
+        ship_evasion_add = 5
+        ship_evasion_mult = 0.1
+        ship_speed_mult = 0.25
+        ship_interstellar_speed_mult = 0.75
+    }
+    initial = no
+    randomized = no
+    leader_trait = {
+        admiral
+    }
+    leader_class = {
+        admiral
+    }
+}

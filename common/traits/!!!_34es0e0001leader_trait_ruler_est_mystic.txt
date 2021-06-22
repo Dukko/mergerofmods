@@ -1,0 +1,16 @@
+leader_trait_ruler_est_mystic = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/leader_trait_est_mystic.dds"
+    modifier = {
+        country_unity_produces_mult = 0.05
+    }
+    leader_trait = {
+        ruler
+    }
+    leader_class = {
+        ruler
+    }
+    initial = no
+    randomized = no
+}

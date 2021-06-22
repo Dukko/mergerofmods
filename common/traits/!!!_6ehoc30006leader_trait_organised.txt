@@ -1,0 +1,26 @@
+leader_trait_organised = {
+    cost = 1
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/leader_trait_organised.dds"
+    modifier = {
+        planet_stability_add = 5
+        planet_structures_upkeep_mult = -0.1
+        planet_pops_consumer_goods_upkeep_mult = -0.05
+    }
+    leader_potential_add = {
+        NOT = {
+            from = {
+                has_ethic = "ethic_gestalt_consciousness"
+            }
+        }
+    }
+    leader_class = {
+        governor
+    }
+    leader_trait = {
+        governor
+    }
+    ai_weight = {
+        weight = 50
+    }
+}

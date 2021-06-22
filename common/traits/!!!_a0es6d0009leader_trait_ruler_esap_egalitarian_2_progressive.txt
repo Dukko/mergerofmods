@@ -1,0 +1,16 @@
+leader_trait_ruler_esap_egalitarian_2_progressive = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/leader_trait_esap_egalitarian_2_progressive.dds"
+    modifier = {
+        all_technology_research_speed = 0.05
+    }
+    leader_trait = {
+        ruler
+    }
+    leader_class = {
+        ruler
+    }
+    initial = no
+    randomized = no
+}

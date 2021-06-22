@@ -1,0 +1,108 @@
+building_temple = {
+    base_buildtime = @b1_time
+    category = unity
+    potential = {
+        exists = owner
+        building_basic_income_check = yes
+        owner = {
+            is_spiritualist = yes
+            NOR = {
+                has_valid_civic = civic_death_cult
+                has_valid_civic = civic_death_cult_corporate
+            }
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+        owner = {
+            is_ai = no
+        }
+    }
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            owner = {
+                OR = {
+                    has_valid_civic = civic_death_cult
+                    has_valid_civic = civic_death_cult_corporate
+                    is_spiritualist = no
+                    and = {
+                        is_ai = yes
+                        num_ascension_perks > 2
+                        prev = {
+                            free_amenities > 5
+                            not = {
+                                has_modifier = planet_luxuries_boost
+                            }
+                        }
+                    }
+                    and = {
+                        is_ai = yes
+                        prev = {
+                            has_active_building = building_holo_theatres
+                        }
+                    }
+                }
+            }
+            has_modifier = slave_colony
+        }
+    }
+    convert_to = {
+        building_hive_node
+        building_simulation_1
+        building_autochthon_monument
+        building_corporate_monument
+        building_sacrificial_temple_1
+    }
+    planet_modifier = {
+        job_priest_add = @b1_jobs
+        pop_ethic_spiritualist_attraction_mult = 0.05
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b1_minerals
+        }
+        upkeep = {
+            energy = @b1_upkeep
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_defenders_faith
+            }
+        }
+        modifier = {
+            job_templar_add = 1
+        }
+    }
+    upgrades = {
+        building_holotemple
+    }
+    prerequisites = {
+        "tech_cultural_heritage"
+    }
+    show_tech_unlock_if = {
+        is_spiritualist = yes
+        NOT = {
+            OR = {
+                has_valid_civic = civic_death_cult
+                has_valid_civic = civic_death_cult_corporate
+            }
+        }
+    }
+    triggered_desc = {
+        text = job_priest_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_defenders_faith
+            }
+        }
+        text = job_templar_effect_desc
+    }
+}

@@ -1,0 +1,25 @@
+xvcv_mdlc_trait_abyss_psi_emulator = {
+    cost = 0
+    allowed_archetypes = {
+        MACHINE
+        ROBOT
+        XVCV_MDLC_BIO_ROBOT
+    }
+    sorting_priority = 20
+    initial = no
+    randomized = no
+    improves_leaders = yes
+    species_potential_add = {
+        exists = from
+        from = {
+            has_country_flag = xvcv_mdlc_trait_abyss_psi_emulator_possible
+        }
+    }
+    modifier = {
+        planet_jobs_produces_mult = 0.1
+        planet_researchers_produces_mult = 0.1
+    }
+    slave_cost = {
+        energy = 500
+    }
+}

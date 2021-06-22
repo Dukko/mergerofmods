@@ -1,0 +1,14 @@
+trait_xvcv_mdlc_pc_mechanical_preference = {
+    icon = "gfx/interface/icons/traits/trait_pc_ring_preference.dds"
+    modification = no
+    allowed_archetypes = {
+        ROBOT
+    }
+    sorting_priority = 30
+    modifier = {
+        xvcv_mdlc_pc_mechanical_habitability = 1
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

@@ -133,6 +133,7 @@ artificial_intelligence_policy = {
                 }
                 OR = {
                     has_valid_civic = civic_machine_cult
+                    has_valid_civic = civic_machine_cult_corpo
                     has_country_flag = cult_empire
                 }
             }

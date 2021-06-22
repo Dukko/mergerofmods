@@ -1,0 +1,33 @@
+trait_emotionless = {
+    cost = 2
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    advanced_trait = yes
+    forced_happiness = yes
+    opposites = {
+        "trait_conformists"
+        "trait_deviants"
+        "trait_communal"
+        "trait_solitary"
+        "trait_conservational"
+        "trait_wasteful"
+        "trait_docile"
+        "trait_unruly"
+        "trait_traditional"
+        "trait_quarrelsome"
+        "trait_charismatic"
+        "trait_natural_sociologists"
+        "trait_decadent"
+        "trait_nerve_stapled"
+        "trait_pride"
+        "trait_arrogant"
+        "trait_arrogant_2"
+        "trait_paranoid"
+    }
+    icon = "gfx/interface/icons/traits/trait_emotionless.dds"
+    modifier = {
+        planet_jobs_unity_produces_mult = -0.1
+        planet_jobs_society_research_produces_mult = -0.15
+    }
+}

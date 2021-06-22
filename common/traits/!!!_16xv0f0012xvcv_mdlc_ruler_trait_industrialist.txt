@@ -1,0 +1,14 @@
+xvcv_mdlc_ruler_trait_industrialist = {
+    cost = 0
+    modification = no
+    initial = no
+    randomized = no
+    icon = "gfx/interface/icons/customgui/leader_traits/xvcv_mdlc_ruler_trait_industrialist.dds"
+    modifier = {
+        planet_jobs_minerals_produces_mult = 0.1
+    }
+    leader_class = {
+        ruler
+    }
+    leader_trait = all
+}

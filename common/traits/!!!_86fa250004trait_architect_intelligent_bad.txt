@@ -1,0 +1,13 @@
+trait_architect_intelligent_bad = {
+    cost = 0
+    initial = no
+    modification = no
+    icon = gfx/interface/icons/traits/trait_fatalf_architect_bad.dds
+    modifier = {
+        pop_government_ethic_attraction = -0.3
+    }
+    randomized = no
+    ai_weight = {
+        weight = 0
+    }
+}

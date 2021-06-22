@@ -1,0 +1,14 @@
+xvcv_mdlc_ruler_trait_deep_connections = {
+    cost = 0
+    modification = no
+    initial = no
+    randomized = no
+    icon = "gfx/interface/icons/customgui/leader_traits/xvcv_mdlc_ruler_trait_deep_connections.dds"
+    modifier = {
+        country_base_influence_produces_add = 1
+    }
+    leader_class = {
+        ruler
+    }
+    leader_trait = all
+}

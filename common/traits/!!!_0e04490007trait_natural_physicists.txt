@@ -1,0 +1,19 @@
+trait_natural_physicists = {
+    cost = 1
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_natural_engineers"
+        "trait_natural_sociologists"
+        "trait_nerve_stapled"
+        "trait_additrait_unfit_engineers"
+        "trait_additrait_unfit_physicists"
+        "trait_additrait_unfit_sociologists"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    modifier = {
+        planet_jobs_physics_research_produces_mult = 0.15
+    }
+}

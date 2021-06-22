@@ -26,7 +26,22 @@ building_temple = {
                     has_valid_civic = civic_death_cult
                     has_valid_civic = civic_death_cult_corporate
                     is_spiritualist = no
-                    is_ai = yes
+                    and = {
+                        is_ai = yes
+                        num_ascension_perks > 2
+                        prev = {
+                            free_amenities > 5
+                            not = {
+                                has_modifier = planet_luxuries_boost
+                            }
+                        }
+                    }
+                    and = {
+                        is_ai = yes
+                        prev = {
+                            has_active_building = building_holo_theatres
+                        }
+                    }
                 }
             }
             has_modifier = slave_colony

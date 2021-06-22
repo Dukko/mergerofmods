@@ -1,0 +1,23 @@
+att_trait_shock_lv2_a = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/att_trait_shock_lv2.dds"
+    sorting_priority = -5
+    modifier = {
+        force_disparity_fire_rate_mult = 0.15
+        ship_disengage_chance_mult = 0.1
+        ship_hull_damage_mult = 0.1
+        ship_armor_damage_mult = 0.1
+        ship_shield_damage_mult = 0.1
+        weapon_type_explosive_speed_mult = 0.2
+        weapon_type_strike_craft_speed_mult = 0.2
+    }
+    initial = no
+    randomized = no
+    leader_trait = {
+        admiral
+    }
+    leader_class = {
+        admiral
+    }
+}

@@ -15,7 +15,7 @@ col_default = {
         pop_happiness = 0.1
     }
     weight_modifier = {
-        base = 10
+        base = 1000
         modifier = {
             factor = 100
             owner = {

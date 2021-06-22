@@ -1,0 +1,15 @@
+trait_just-more-traits_robot_premiumcomponents = {
+    cost = -1
+    opposites = {
+        "trait_robot_recycled"
+        "trait_robot_luxurious"
+        "trait_just-more-traits_robot_templatedparts"
+    }
+    allowed_archetypes = {
+        ROBOT
+        MACHINE
+    }
+    assembling_modifier = {
+        planet_pop_assemblers_upkeep_mult = 0.1
+    }
+}

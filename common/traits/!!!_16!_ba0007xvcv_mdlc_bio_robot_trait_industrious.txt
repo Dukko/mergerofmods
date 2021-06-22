@@ -1,0 +1,13 @@
+xvcv_mdlc_bio_robot_trait_industrious = {
+    cost = 2
+    allowed_archetypes = {
+        XVCV_MDLC_BIO_ROBOT
+    }
+    icon = "gfx/interface/icons/traits/trait_industrious.dds"
+    modifier = {
+        planet_jobs_minerals_produces_mult = 0.15
+    }
+    slave_cost = {
+        energy = 50
+    }
+}

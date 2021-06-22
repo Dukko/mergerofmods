@@ -38,6 +38,20 @@ building_necrophage_elevation_chamber = {
             }
         }
     }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            num_buildings = {
+                type = building_necrophage_elevation_chamber
+                value = 0
+            }
+        }
+        job_starnet_spice_melange_farmer_add = 2
+        job_starnet_spice_melange_antifarmer_add = -2
+    }
     destroy_trigger = {
         exists = owner
         OR = {

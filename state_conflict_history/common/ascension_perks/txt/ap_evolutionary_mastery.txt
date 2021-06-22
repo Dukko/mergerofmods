@@ -48,6 +48,6 @@ ap_evolutionary_mastery = {
         is_mechanical_empire = no
     }
     ai_weight = {
-        factor = 100
+        factor = 10000
     }
 }

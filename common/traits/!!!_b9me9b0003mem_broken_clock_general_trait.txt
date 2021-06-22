@@ -1,0 +1,21 @@
+mem_broken_clock_general_trait = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/trait_mem_vortex.dds"
+    modifier = {
+        army_damage_mult = 0.25
+        army_collateral_damage_mult = 0.5
+        armies_upkeep_mult = -0.3
+    }
+    leader_trait = {
+        general
+    }
+    leader_class = {
+        general
+    }
+    initial = no
+    randomized = no
+    ai_weight = {
+        weight = 1000
+    }
+}

@@ -1,0 +1,17 @@
+trait_gpm_forgotten_species = {
+    cost = 0
+    initial = no
+    randomized = no
+    modification = no
+    allowed_archetypes = {
+        BIOLOGICAL
+        ROBOT
+        MACHINE
+        PRESAPIENT
+        LITHOID
+    }
+    modifier = {
+        leader_skill_levels = 2
+        species_leader_exp_gain = 1
+    }
+}

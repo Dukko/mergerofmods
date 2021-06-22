@@ -22,7 +22,7 @@ tech_administrative_ai = {
         }
     }
     ai_weight = {
-        weight = 500
+        weight = 50000
         modifier = {
             factor = 100
             has_technology = tech_lasers_4

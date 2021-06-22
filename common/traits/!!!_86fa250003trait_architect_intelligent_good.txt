@@ -1,0 +1,15 @@
+trait_architect_intelligent_good = {
+    cost = 0
+    initial = no
+    modification = no
+    icon = gfx/interface/icons/traits/trait_fatalf_architect_good.dds
+    modifier = {
+        planet_jobs_physics_research_produces_mult = 0.1
+        planet_jobs_society_research_produces_mult = 0.1
+        planet_jobs_engineering_research_produces_mult = 0.1
+    }
+    randomized = no
+    ai_weight = {
+        weight = 0
+    }
+}

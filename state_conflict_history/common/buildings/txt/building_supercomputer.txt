@@ -15,6 +15,16 @@ building_supercomputer = {
     }
     allow = {
         has_major_upgraded_capital = yes
+        or = {
+            owner = {
+                is_ai = no
+            }
+            planet_resource_compare = {
+                resource = physics_research
+                value > 60
+            }
+            has_designation = col_research
+        }
     }
     destroy_trigger = {
         exists = owner

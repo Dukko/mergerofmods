@@ -1,0 +1,16 @@
+xvcv_mdlc_trait_low_cost_processor = {
+    cost = -2
+    initial = yes
+    allowed_archetypes = {
+        MACHINE
+        ROBOT
+    }
+    modifier = {
+        planet_jobs_physics_research_produces_mult = -0.1
+        planet_jobs_society_research_produces_mult = -0.1
+        planet_jobs_engineering_research_produces_mult = -0.1
+    }
+    slave_cost = {
+        energy = 200
+    }
+}

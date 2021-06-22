@@ -1,0 +1,24 @@
+trait_just-more-traits_exacting = {
+    cost = -4
+    potential_crossbreeding_chance = 0.25
+    opposites = {
+        "trait_nonadaptive"
+        "trait_adaptive"
+        "trait_extremely_adaptive"
+        "trait_just-more-traits_flexible"
+        "trait_just-more-traits_sensitive"
+        "trait_just-more-traits_particular"
+        "trait_just-more-traits_hardy"
+        "trait_robust"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    modifier = {
+        pop_environment_tolerance = -0.2
+    }
+    slave_cost = {
+        energy = -200
+    }
+}

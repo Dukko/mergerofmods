@@ -1,0 +1,18 @@
+katzen_trait_blitzkrieg = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ai_aided_design.dds"
+    leader_trait = all
+    modifier = {
+        ship_armor_mult = 0.1
+        ship_speed_mult = 0.15
+    }
+    leader_class = {
+        admiral
+    }
+    initial = no
+    randomized = no
+    ai_weight = {
+        weight = 0
+    }
+}

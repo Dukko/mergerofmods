@@ -1,0 +1,17 @@
+trait_shell = {
+    cost = 0
+    sorting_priority = 19
+    initial = no
+    randomized = no
+    modification = no
+    modifier = {
+        pop_housing_usage_mult = -0.05
+        army_health = 0.5
+    }
+    potential_crossbreeding_chance = 1
+    icon = "gfx/interface/icons/traits/trait_shell.dds"
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+}

@@ -1,0 +1,9 @@
+trait_additrait_thermosynthetic = {
+    cost = 3
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    modifier = {
+        planet_pops_food_upkeep_mult = -0.35
+    }
+}

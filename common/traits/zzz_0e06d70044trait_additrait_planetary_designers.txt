@@ -1,7 +1,0 @@
-trait_additrait_planetary_designers = {
-    cost = 2
-    allowed_archetypes = {
-        BIOLOGICAL
-        LITHOID
-    }
-}

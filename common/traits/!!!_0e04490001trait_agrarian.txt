@@ -1,0 +1,16 @@
+trait_agrarian = {
+    cost = 2
+    potential_crossbreeding_chance = 1
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    modifier = {
+        planet_jobs_food_produces_mult = 0.15
+    }
+    slave_cost = {
+        energy = 50
+    }
+    opposites = {
+        "trait_additrait_hunter_gatherers"
+    }
+}

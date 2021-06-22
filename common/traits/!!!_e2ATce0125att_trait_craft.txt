@@ -1,0 +1,22 @@
+att_trait_craft = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/att_trait_craft.dds"
+    sorting_priority = -10
+    modifier = {
+        weapon_type_strike_craft_weapon_damage_mult = 0.15
+        weapon_type_strike_craft_weapon_fire_rate_mult = 0.33
+        weapon_type_strike_craft_speed_mult = 0.25
+        weapon_type_explosive_weapon_damage_mult = 0.05
+        weapon_type_explosive_weapon_fire_rate_mult = 0.05
+        weapon_type_explosive_speed_mult = 0.1
+    }
+    initial = no
+    randomized = no
+    leader_trait = {
+        admiral
+    }
+    leader_class = {
+        admiral
+    }
+}

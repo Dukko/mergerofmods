@@ -1,0 +1,35 @@
+trait_neural_implants = {
+    icon = "gfx/interface/icons/traits/leader_traits/leader_trait_cyborg.dds"
+    cost = 2
+    opposites = {
+        "trait_hive_mind"
+        "trait_fleeting"
+        "trait_repugnant"
+        "trait_nerve_stapled"
+        "trait_quarrelsome"
+        "trait_enigmatic_intelligence_poor"
+    }
+    initial = no
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    randomized = no
+    modification = yes
+    potential_crossbreeding_chance = 0
+    prerequisites = {
+        tech_neural_implants
+    }
+    species_potential_add = {
+        exists = from
+        from = {
+            has_civic = civic_cutting_edge_developments
+        }
+    }
+    modifier = {
+        planet_jobs_produces_mult = 0.1
+        pop_amenities_usage_mult = 1
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

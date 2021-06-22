@@ -1,0 +1,19 @@
+als_trait_accuracy_11 = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/als_trait_accuracy_11.dds"
+    sorting_priority = -9
+    modifier = {
+        ship_accuracy_mult = 0.11
+        ship_accuracy_add = 1
+        ship_tracking_add = 14
+    }
+    initial = no
+    randomized = no
+    leader_trait = {
+        admiral
+    }
+    leader_class = {
+        admiral
+    }
+}

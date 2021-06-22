@@ -48,7 +48,7 @@ border_policy = {
             modifier = {
                 factor = 20
                 has_valid_ai_personality = yes
-                OR = {
+                NOR = {
                     has_ai_personality_behaviour = isolationist
                     has_ai_personality_behaviour = attack_neutrals
                 }
@@ -56,7 +56,7 @@ border_policy = {
             modifier = {
                 factor = 5
                 has_valid_ai_personality = no
-                OR = {
+                NOR = {
                     has_ethic = ethic_xenophobe
                     has_ethic = ethic_fanatic_xenophobe
                 }

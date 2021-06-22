@@ -31,7 +31,7 @@ purge = {
             is_homicidal = no
         }
         AI_weight = {
-            factor = 5
+            factor = 0.1
             modifier = {
                 factor = 0
                 has_valid_ai_personality = yes

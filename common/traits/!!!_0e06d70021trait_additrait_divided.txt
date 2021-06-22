@@ -1,0 +1,20 @@
+trait_additrait_divided = {
+    cost = -2
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    modifier = {
+        planet_jobs_unity_produces_mult = -0.25
+    }
+    opposites = {
+        "trait_traditional"
+        "trait_additrait_united"
+        "trait_additrait_melancholic"
+        "trait_additrait_passionate"
+        "trait_quarrelsome"
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

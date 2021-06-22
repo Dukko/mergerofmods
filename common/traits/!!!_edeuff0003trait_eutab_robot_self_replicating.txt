@@ -1,0 +1,26 @@
+trait_eutab_robot_self_replicating = {
+    cost = 3
+    initial = no
+    randomized = no
+    prerequisites = {
+        tech_eutab_m_adaptation_mastery
+    }
+    opposites = {
+        "trait_robot_custom_made"
+    }
+    allowed_archetypes = {
+        MACHINE
+    }
+    species_potential_add = {
+        exists = from
+        from = {
+            has_authority = auth_machine_intelligence
+        }
+    }
+    modifier = {
+        POP_ASSEMBLY_SPEED = 0.6
+    }
+    assembling_modifier = {
+        planet_pop_assemblers_upkeep_mult = -0.25
+    }
+}

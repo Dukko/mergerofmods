@@ -39,7 +39,7 @@ tech_engineering_1 = {
         }
     }
     ai_weight = {
-        weight = 30
+        weight = 30000
         modifier = {
             factor = 50
             has_technology = tech_lasers_4

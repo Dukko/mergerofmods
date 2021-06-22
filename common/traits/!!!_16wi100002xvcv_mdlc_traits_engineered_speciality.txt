@@ -1,0 +1,23 @@
+xvcv_mdlc_traits_engineered_speciality = {
+    cost = 4
+    initial = no
+    randomized = no
+    allowed_archetypes = {
+        MACHINE
+        ROBOT
+        XVCV_MDLC_BIO_ROBOT
+    }
+    icon = "gfx/interface/icons/traits/trait_delicious.dds"
+    species_potential_add = {
+        exists = from
+        from = {
+            has_technology = xvcv_mdlc_tech_bio_unique_case_analysis
+        }
+    }
+    modifier = {
+        planet_miners_minerals_produces_add = 2
+    }
+    slave_cost = {
+        energy = 200
+    }
+}

@@ -1,0 +1,82 @@
+leader_trait_archaeologist_est_2 = {
+    cost = 1
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/leader_trait_archaeologist_est_2.dds"
+    custom_tooltip = leader_trait_archaeologist_tooltip
+    self_modifier = {
+        vultaum_1_cat_research_speed_mult = 1
+        vultaum_2_cat_research_speed_mult = 1
+        vultaum_3_cat_research_speed_mult = 1
+        vultaum_4_cat_research_speed_mult = 1
+        vultaum_5_cat_research_speed_mult = 1
+        vultaum_6_cat_research_speed_mult = 1
+        vultaum_7_cat_research_speed_mult = 1
+        vultaum_8_cat_research_speed_mult = 1
+        vultaum_9_cat_research_speed_mult = 1
+        vultaum_10_cat_research_speed_mult = 1
+        vultaum_11_cat_research_speed_mult = 1
+        yuht_1_cat_research_speed_mult = 1
+        yuht_2_cat_research_speed_mult = 1
+        yuht_3_cat_research_speed_mult = 1
+        yuht_4_cat_research_speed_mult = 1
+        yuht_5_cat_research_speed_mult = 1
+        yuht_6_cat_research_speed_mult = 1
+        yuht_7_cat_research_speed_mult = 1
+        yuht_8_cat_research_speed_mult = 1
+        yuht_9_cat_research_speed_mult = 1
+        league_1_cat_research_speed_mult = 1
+        league_2_cat_research_speed_mult = 1
+        league_3_cat_research_speed_mult = 1
+        league_4_cat_research_speed_mult = 1
+        league_5_cat_research_speed_mult = 1
+        league_6_cat_research_speed_mult = 1
+        league_7_cat_research_speed_mult = 1
+        league_8_cat_research_speed_mult = 1
+        league_9_cat_research_speed_mult = 1
+        league_10_cat_research_speed_mult = 1
+        league_11_cat_research_speed_mult = 1
+        league_12_cat_research_speed_mult = 1
+        league_13_cat_research_speed_mult = 1
+        league_14_cat_research_speed_mult = 1
+        irassian_1_cat_research_speed_mult = 1
+        irassian_2_cat_research_speed_mult = 1
+        irassian_3_cat_research_speed_mult = 1
+        irassian_4_cat_research_speed_mult = 1
+        irassian_5_cat_research_speed_mult = 1
+        irassian_6_cat_research_speed_mult = 1
+        irassian_7_cat_research_speed_mult = 1
+        irassian_8_cat_research_speed_mult = 1
+        irassian_9_cat_research_speed_mult = 1
+        irassian_10_cat_research_speed_mult = 1
+        irassian_11_cat_research_speed_mult = 1
+        cybrex_1_cat_research_speed_mult = 1
+        cybrex_2_cat_research_speed_mult = 1
+        cybrex_3_cat_research_speed_mult = 1
+        cybrex_4_cat_research_speed_mult = 1
+        cybrex_5_cat_research_speed_mult = 1
+        cybrex_6_cat_research_speed_mult = 1
+        cybrex_7_cat_research_speed_mult = 1
+        cybrex_8_cat_research_speed_mult = 1
+        cybrex_9_cat_research_speed_mult = 1
+        cybrex_10_cat_research_speed_mult = 1
+        cybrex_11_cat_research_speed_mult = 1
+        VULTAUMAR_research_speed_mult = 1
+        YUHTAAN_research_speed_mult = 1
+        FEN_HABBANIS_research_speed_mult = 1
+        IRASSIA_research_speed_mult = 1
+    }
+    leader_trait = {
+        scientist
+    }
+    leader_class = {
+        scientist
+    }
+    initial = no
+    randomized = no
+    ai_categories = {
+        survey
+    }
+    ai_weight = {
+        weight = 100
+    }
+}

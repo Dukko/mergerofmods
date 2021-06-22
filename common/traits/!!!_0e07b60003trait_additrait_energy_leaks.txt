@@ -1,0 +1,16 @@
+trait_additrait_energy_leaks = {
+    cost = -1
+    allowed_archetypes = {
+        ROBOT
+        MACHINE
+    }
+    opposites = {
+        "trait_robot_superconductive"
+    }
+    modifier = {
+        planet_jobs_energy_produces_mult = -0.15
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

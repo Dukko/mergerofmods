@@ -1,0 +1,17 @@
+xvcv_mdlc_leader_trait_abyss_psi_emulator_governor = {
+    cost = 0
+    modification = no
+    initial = no
+    randomized = no
+    icon = "gfx/interface/icons/traits/xvcv_mdlc_trait_abyss_psi_emulator.dds"
+    leader_trait = {
+        governor
+    }
+    leader_class = {
+        governor
+    }
+    modifier = {
+        planet_stability_add = 5
+        planet_jobs_unity_produces_mult = 0.1
+    }
+}

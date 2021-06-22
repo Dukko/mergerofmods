@@ -1,0 +1,19 @@
+trait_grey_tempest_form = {
+    cost = 2
+    randomized = no
+    prerequisites = {
+        tech_nanite_start
+    }
+    allowed_archetypes = {
+        ROBOT
+        MACHINE
+    }
+    modifier = {
+        planet_jobs_physics_research_produces_mult = 0.1
+        planet_jobs_society_research_produces_mult = 0.1
+        planet_jobs_engineering_research_produces_mult = 0.1
+    }
+    ai_weight = {
+        factor = 0
+    }
+}

@@ -1,0 +1,20 @@
+trait_ruler_hobby_hive_growth_lithoid = {
+    cost = 0
+    leader_trait = {
+        ruler
+    }
+    leader_class = {
+        ruler
+    }
+    self_modifier = {
+    }
+    modifier = {
+        lith_pop_growth_speed = 0.15
+        pop_growth_speed_reduction = -0.15
+        colony_start_num_pops_add = 1
+        planet_colony_development_speed_mult = 0.5
+    }
+    initial = no
+    modification = no
+    randomized = no
+}
