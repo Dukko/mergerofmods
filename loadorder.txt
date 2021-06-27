@@ -69,6 +69,7 @@ Mass Effect Civilizations - Asari
 LLX's Mods - Compiled Dimorphism (3.0 'Dick')
 Extra Fallen Empires
 Elves of Stellaris
+elves of stellaris - mortal elves
 Another Animated Avali
 Animated Ascellian Portraits (2.2.6 Le Guin +)
 Animated Valbaran Species
@@ -305,6 +306,7 @@ Ethics & Civics Overhaul/GVP Sanity Patch
 Civics Expanded+ & More Corp Authorities Compatibility Patch
 !More Corporate Authorities/Ethics And Civics Alternative compatibility patch
 ~More Corporate Authorities/Venture Politics Compatibility Patch
+Governance Patch
 StarTech AI
 Galactic Community Expanded
 UI Overhaul Dynamic + Ethics and Civics Alternative
