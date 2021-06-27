@@ -1,3 +1,0 @@
-NGraphics = {
-    SHIP_RANDOM_HEIGHT_OFFSET = 50
-}

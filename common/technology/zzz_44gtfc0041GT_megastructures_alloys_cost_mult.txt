@@ -11,7 +11,7 @@ GT_megastructures_alloys_cost_mult = {
     }
     weight = @tier6weight3
     modifier = {
-        megastructures_alloys_cost_mult = -0.2
+        megastructures_alloys_cost_mult = -0.1
     }
     weight_modifier = {
         factor = 0.5

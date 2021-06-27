@@ -1,5 +1,5 @@
 GT_ship_science_ship_build_speed_mult2 = {
-    cost = 100
+    cost = 50
     area = society
     tier = 0
     is_rare = yes

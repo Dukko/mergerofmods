@@ -11,7 +11,7 @@ GT_ship_interstellar_speed_mult = {
     }
     weight = @tier5weight2
     modifier = {
-        ship_interstellar_speed_mult = 0.33
+        ship_interstellar_speed_mult = 0.5
     }
     weight_modifier = {
         modifier = {

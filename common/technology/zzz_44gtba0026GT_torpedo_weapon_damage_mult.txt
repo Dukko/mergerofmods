@@ -10,7 +10,7 @@ GT_torpedo_weapon_damage_mult = {
     }
     weight = @tier4weight1
     modifier = {
-        weapon_type_explosive_weapon_damage_mult = 0.15
+        weapon_type_explosive_weapon_damage_mult = 0.2
     }
     weight_modifier = {
         modifier = {

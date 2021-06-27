@@ -1,0 +1,63 @@
+@cost1 = 5
+@power1 = -10
+utility_component_template = {
+    key = "COMBAT_COMPUTER_CARRIER_BASIC"
+    size = small
+    icon = "GFX_ship_part_computer_carrier_basic"
+    icon_frame = 1
+    power = @power1
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @cost1
+        }
+    }
+    class_restriction = {
+        shipclass_military
+        shipclass_military_special
+        shipclass_starbase
+    }
+    size_restriction = {
+        star_eater
+        fe_battlecruiser
+        fe_titan
+        pasmod_assault_cruiser
+        rs_support_cruiser
+        rs_ea_cruiser
+        rs_battlecruiser
+        rs_carrier
+        rs_dreadnought
+        rs_heavy_dreadnought
+        rs_heavy_dreadnought_type_a
+        rs_heavy_dreadnought_type_b
+        rs_heavy_dreadnought_type_c
+        rs_heavy_dreadnought_type_d
+        rs_heavy_dreadnought_type_e
+        rs_heavy_dreadnought_type_f
+        rs_heavy_dreadnought_type_g
+        rs_heavy_dreadnought_type_h
+        rs_heavy_dreadnought_type_i
+        rs_heavy_dreadnought_type_j
+        rs_heavy_dreadnought_type_k
+        x
+    }
+    component_set = "combat_computers"
+    ship_behavior = "BSW_carrier"
+    prerequisites = {
+        @com_tech_1
+    }
+    upgrades_to = "COMBAT_COMPUTER_CARRIER_ADVANCED"
+    ship_modifier = {
+        ship_engagement_range_mult = @carrier_ship_engage_mult_025
+    }
+    modifier = {
+        ship_evasion_add = @carrier_evasion_add_BB
+        ship_evasion_mult = @carrier_evasion_mult_BB
+        ship_hull_mult = @carrier_ship_defense_mult_BB_1
+        ship_armor_mult = @carrier_ship_defense_mult_BB_1
+        ship_shield_mult = @carrier_ship_defense_mult_BB_1
+    }
+    ai_weight = {
+        weight = 2
+    }
+}

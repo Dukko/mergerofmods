@@ -10,7 +10,22 @@ tech_strike_craft_3 = {
         "tech_strike_craft_2"
     }
     weight = @tier3weight3
+    prereqfor_desc = {
+        hide_prereq_for_desc = component
+        custom = {
+            title = "TECH_SC_3_TITLE"
+            desc = "TECH_SC_3_DESC"
+        }
+        custom = {
+            title = "TECH_SCB_3_TITLE"
+            desc = "TECH_SCB_3_DESC"
+        }
+    }
     weight_modifier = {
+        modifier = {
+            factor = 0
+            has_country_flag = wrd_hwdis
+        }
         modifier = {
             factor = 1.25
             research_leader = {
@@ -20,10 +35,12 @@ tech_strike_craft_3 = {
         }
     }
     ai_weight = {
-        weight = 0.1
+        weight = 100000
         modifier = {
-            factor = 50000
-            uses_carriers = yes
+            factor = 100000
+            not = {
+                has_technology = tech_energy_torpedoes_1
+            }
         }
         modifier = {
             factor = 1.25

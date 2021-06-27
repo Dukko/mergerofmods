@@ -1,14 +1,14 @@
 GT_station_researchers_build_cost_mult = {
-    cost = @tier2cost2
+    cost = @tier1cost3
     area = society
-    tier = 2
+    tier = 1
     category = {
         statecraft
     }
     prerequisites = {
         "tech_space_science_3"
     }
-    weight = @tier2weight2
+    weight = @tier1weight3
     modifier = {
         station_researchers_minerals_cost_mult = -0.25
     }

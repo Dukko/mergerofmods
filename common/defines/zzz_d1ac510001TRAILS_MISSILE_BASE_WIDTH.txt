@@ -1,3 +1,0 @@
-NGraphics = {
-    TRAILS_MISSILE_BASE_WIDTH = 0.6
-}

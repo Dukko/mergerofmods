@@ -33,4 +33,5 @@ pc_giga_penrose_habitable = {
         planet_housing_add = 20
     }
     district_set = penrose_ring
+    carry_cap_per_free_district = @carry_cap_normal
 }

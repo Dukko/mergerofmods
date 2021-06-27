@@ -32,7 +32,7 @@ district_giga_alderson_city = {
     triggered_planet_modifier = {
         modifier = {
             planet_housing_add = 300
-            job_enforcer_add = 12
+            job_enforcer_add = 60
         }
     }
     triggered_planet_modifier = {

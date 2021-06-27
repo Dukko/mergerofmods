@@ -22,6 +22,18 @@ tech_ship_armor_5 = {
     }
     ai_weight = {
         modifier = {
+            factor = 0
+            or = {
+                has_technology = tech_crystal_armor_1
+                has_technology = tech_crystal_armor_2
+                not = {
+                    no_resource_for_component = {
+                        RESOURCE = rare_crystals
+                    }
+                }
+            }
+        }
+        modifier = {
             factor = 100
             has_technology = tech_cruisers
         }

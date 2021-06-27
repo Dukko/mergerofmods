@@ -11,7 +11,7 @@ GT_megastructure_build_speed_mult = {
     }
     weight = @tier6weight3
     modifier = {
-        megastructure_build_speed_mult = 0.33
+        megastructure_build_speed_mult = 0.25
     }
     weight_modifier = {
         factor = 0.5

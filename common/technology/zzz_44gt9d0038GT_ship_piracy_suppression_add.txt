@@ -8,12 +8,12 @@ GT_ship_piracy_suppression_add = {
     prerequisites = {
         "tech_galactic_administration"
     }
-    weight = @tier4weight2
+    weight = @tier3weight2
     potential = {
         is_gestalt = no
     }
     modifier = {
-        ship_piracy_suppression_add = 5
+        ship_piracy_suppression_add = 25
     }
     weight_modifier = {
         modifier = {

@@ -9,9 +9,9 @@ GT_country_base_minerals_produces_add = {
     prerequisites = {
         "tech_planetary_unification"
     }
-    weight = @tier4weight3
+    weight = @tier2weight3
     modifier = {
-        starbase_constructions_minerals_produces_mult = 0.2
+        starbase_constructions_minerals_produces_mult = 0.4
     }
     weight_modifier = {
         modifier = {

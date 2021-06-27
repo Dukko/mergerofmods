@@ -8,7 +8,7 @@ GT_planet_districts_minerals_cost_add = {
     prerequisites = {
         "tech_adaptive_bureaucracy"
     }
-    weight = @tier2weight3
+    weight = @tier1weight3
     modifier = {
         planet_districts_minerals_cost_add = -40
     }

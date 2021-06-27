@@ -10,7 +10,7 @@ GT_ship_armor_penetration_mult = {
     }
     weight = @tier4weight3
     modifier = {
-        ship_armor_penetration_mult = 0.05
+        ship_armor_penetration_mult = 0.15
     }
     weight_modifier = {
         modifier = {

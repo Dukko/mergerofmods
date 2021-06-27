@@ -1,6 +1,6 @@
 pc_gas_giant = {
     entity = "gas_giant"
-    entity_scale = 14
+    entity_scale = @giant_standard_scale
     icon_frame = 14
     atmosphere_color = hsv {
         0.1
@@ -17,8 +17,8 @@ pc_gas_giant = {
     can_be_moon = no
     chance_of_ring = 0.6
     planet_size = {
-        min = 20
-        max = 30
+        min = 18
+        max = 35
     }
     moon_size = {
         min = 8

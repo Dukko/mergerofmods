@@ -30,4 +30,5 @@ pc_interstellar_habitat = {
     modifier = {
         planet_max_buildings_add = 12
     }
+    carry_cap_per_free_district = @carry_cap_normal
 }

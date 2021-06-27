@@ -15,6 +15,7 @@ GT_pc_arid_habitability = {
         pc_mesa_habitability = 0.05
         pc_hadesert_habitability = 0.05
         pc_outback_habitability = 0.05
+        pc_badlands_habitability = 0.05
     }
     weight_modifier = {
         modifier = {
@@ -36,6 +37,9 @@ GT_pc_arid_habitability = {
                 any_planet_within_border = {
                     is_planet_class = pc_outback
                 }
+                any_planet_within_border = {
+                    is_planet_class = pc_badlands
+                }
             }
         }
         modifier = {
@@ -52,6 +56,9 @@ GT_pc_arid_habitability = {
                 }
                 species = {
                     has_trait = trait_pc_outback_preference
+                }
+                species = {
+                    has_trait = trait_pc_badlands_preference
                 }
             }
         }
@@ -84,6 +91,9 @@ GT_pc_arid_habitability = {
                 any_planet_within_border = {
                     is_planet_class = pc_outback
                 }
+                any_planet_within_border = {
+                    is_planet_class = pc_badlands
+                }
             }
         }
         modifier = {
@@ -100,6 +110,9 @@ GT_pc_arid_habitability = {
                 }
                 species = {
                     has_trait = trait_pc_outback_preference
+                }
+                species = {
+                    has_trait = trait_pc_badlands_preference
                 }
             }
         }

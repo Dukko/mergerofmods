@@ -14,7 +14,7 @@ tech_BSW_ECM = {
     weight = @tier4weight3
     prereqfor_desc = {
         hide_prereq_for_desc = component
-        ship = {
+        custom = {
             title = "TECH_BSW_ECM_TITLE"
             desc = "TECH_BSW_ECM_DESC"
         }

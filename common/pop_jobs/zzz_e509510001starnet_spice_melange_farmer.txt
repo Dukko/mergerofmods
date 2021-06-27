@@ -28,6 +28,6 @@ starnet_spice_melange_farmer = {
         }
     }
     weight = {
-        weight = 100
+        weight = 1000
     }
 }

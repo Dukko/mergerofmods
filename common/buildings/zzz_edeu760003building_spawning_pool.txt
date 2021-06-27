@@ -16,6 +16,23 @@ building_spawning_pool = {
             }
         }
     }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+                str_raw_ecocrisis_level_0 = no
+            }
+            num_buildings = {
+                type = building_spawning_pool
+                value = 0
+            }
+        }
+        modifier = {
+            job_starnet_spice_melange_farmer_add = 3
+            job_starnet_spice_melange_antifarmer_add = -3
+        }
+    }
     destroy_trigger = {
         exists = owner
         owner = {

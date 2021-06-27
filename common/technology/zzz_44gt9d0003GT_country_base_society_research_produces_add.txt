@@ -1,5 +1,5 @@
 GT_country_base_society_research_produces_add = {
-    cost = @tier1cost3
+    cost = @tier1cost1
     area = society
     tier = 1
     is_rare = yes
@@ -11,7 +11,7 @@ GT_country_base_society_research_produces_add = {
     }
     weight = @tier4weight3
     modifier = {
-        country_base_society_research_produces_add = 12
+        country_base_society_research_produces_add = 15
     }
     weight_modifier = {
         modifier = {

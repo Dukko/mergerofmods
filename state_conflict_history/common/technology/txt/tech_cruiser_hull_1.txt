@@ -31,10 +31,10 @@ tech_cruiser_hull_1 = {
         }
     }
     ai_weight = {
-        weight = 1
+        weight = 100
         factor = 25
         modifier = {
-            factor = 1000
+            factor = 10
             cruisers_good = yes
         }
         modifier = {

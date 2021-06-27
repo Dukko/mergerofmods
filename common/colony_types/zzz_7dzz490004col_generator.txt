@@ -8,7 +8,6 @@ col_generator = {
         exists = owner
         NOR = {
             uses_district_set = city_world
-            uses_district_set = pdshroudarc
             uses_district_set = ring_world
             uses_district_set = habitat
             uses_district_set = pdarchive

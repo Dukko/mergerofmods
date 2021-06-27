@@ -37,6 +37,14 @@ building_luxury_residence = {
             owner = {
                 is_ai = no
             }
+            not = {
+                has_building = building_luxury_residence
+            }
+        }
+        or = {
+            owner = {
+                is_ai = no
+            }
             and = {
                 free_jobs > 0
                 free_amenities < -4
@@ -52,6 +60,14 @@ building_luxury_residence = {
                 free_building_slots > 1
                 free_amenities < -10
                 num_pops > 11
+            }
+            and = {
+                free_building_slots > 1
+                free_jobs > 1
+                free_amenities < -2
+                free_amenities > -6
+                free_district_slots = 0
+                has_building = building_holo_theatres
             }
         }
     }

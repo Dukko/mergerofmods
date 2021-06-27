@@ -31,4 +31,5 @@ pc_ll_torrid = {
     starting_planet = no
     orbit_lines = yes
     district_set = standard
+    carry_cap_per_free_district = @carry_cap_normal
 }

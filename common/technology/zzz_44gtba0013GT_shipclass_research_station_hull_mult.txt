@@ -8,7 +8,7 @@ GT_shipclass_research_station_hull_mult = {
     prerequisites = {
         "tech_space_science_1"
     }
-    weight = @tier2weight3
+    weight = @tier1weight3
     modifier = {
         shipclass_research_station_hull_mult = 2
     }

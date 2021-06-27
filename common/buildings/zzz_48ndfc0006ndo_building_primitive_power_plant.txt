@@ -1,0 +1,19 @@
+ndo_building_primitive_power_plant = {
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = no
+    potential = {
+        exists = owner
+    }
+    destroy_trigger = {
+        exists = owner
+        owner = {
+            is_primitive = no
+        }
+    }
+    planet_modifier = {
+        job_primitive_technician_add = 2
+    }
+    upgrades = {
+    }
+}

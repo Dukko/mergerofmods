@@ -1,6 +1,6 @@
 pc_asteroid = {
     entity = "asteroid"
-    entity_scale = 1.5
+    entity_scale = @asteroid_standard_scale
     icon_frame = 18
     asteroid = yes
     spawn_odds = 10

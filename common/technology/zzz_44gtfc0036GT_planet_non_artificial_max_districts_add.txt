@@ -11,7 +11,7 @@ GT_planet_non_artificial_max_districts_add = {
     }
     weight = @tier6weight3
     modifier = {
-        planet_non_artificial_max_districts_add = 2
+        planet_non_artificial_max_districts_add = 1
     }
     weight_modifier = {
         factor = 0.5

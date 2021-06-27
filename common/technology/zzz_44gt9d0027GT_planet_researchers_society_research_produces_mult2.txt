@@ -11,8 +11,8 @@ GT_planet_researchers_society_research_produces_mult2 = {
     }
     weight = @tier4weight3
     modifier = {
-        planet_researchers_society_research_produces_add = 0.15
-        station_researchers_produces_mult = 0.15
+        planet_researchers_society_research_produces_add = 0.25
+        station_researchers_produces_mult = 0.1
     }
     weight_modifier = {
         modifier = {

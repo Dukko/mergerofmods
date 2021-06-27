@@ -11,8 +11,8 @@ GT_large_weapon_fire_rate_mult = {
     }
     weight = @tier5weight2
     modifier = {
-        weapon_role_anti_armor_weapon_fire_rate_mult = 0.05
-        weapon_role_anti_hull_weapon_fire_rate_mult = 0.05
+        shipclass_starbase_damage_mult = 0.25
+        shipclass_military_station_damage_mult = 0.25
     }
     weight_modifier = {
         modifier = {

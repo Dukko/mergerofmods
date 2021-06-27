@@ -97,6 +97,7 @@ Grand Custodianship
 Feudal Origins
 Fatherland: Colonial Empires
 Fatherland: Frontier Worlds
+Endless Frontier: An Event Mod
 Extra Events Unoffical fix
 More Events Mod
 Expanded Gestalts: Forgotten Queens
@@ -250,6 +251,8 @@ Real Sol Textures
 Real Space 3.8
 Real Space - New Frontiers
 Real Space Nebulae
+Real Space - System Scale
+Real Space - Ships in Scaling Lite
 Wild Space 3
 Real Machine Worlds (Now v3.0.* Compatible)
 Sol System Expanded (Real Space)
@@ -350,8 +353,7 @@ Longer Greetings Timer (3.0)
 Habitats Capped Dynamic
 Habitat AI colonisation fix
 Golden Galaxy: IBS
-NSC - Dark UI Compatibility Patch
-NSC-IBS minipatch
+!!Dark UI + IBS + Lvl 7 Starbases Patch
 PD-RS:NF Compatibility Patch
 Diverse New Frontiers
 Giga Diversity
@@ -373,14 +375,23 @@ Magnum's Mods - Tradition Cost Scaling
 !Stellaris Enhanced Sound Project - Unofficial ESC Patch
 !StartPopsPatch
 !patch PD: More Arcologies - Universal Authorities patch
+MEM - Real Space System Scale - Planetary Shields
 !Patch - Shader merge for ACoT, Gigastructures, Jump Gates and Real Space 3.7
+!Patch - Ringworld Lights Fix - Real Space System Scale
+!Patch - Jump Gates for Real Space System Scale 3.6
+!Patch - Improved Transport Ship_Behaviours - Ships in Scaling Lite
+!Patch - Harvester Nanites Origin & Distant Stars Overhaul- Ships in Scaling Lite
+Sins of the Prophets/Necroids/Imperial RS System Scale GS Pa
 !Patch - Fix PT Slave Armies
 !Patch - EST & PT Duplicated Traditions Update
+!Patch - ESC Combined Ships in Scaling Lite Patch
 !Patch - ECA - Real Space & Real Sol - No Name Empires
 !Patch - ECA - All in One - No Name Empires
 !Patch - Cubemap Fix
 Starnet for ESC
 BSW 3 // StarNet/StarTech AI
+BSW 3 // Real Space - Ships in Scaling
+BSW 3 // Real Space - System Scale
 !Civics Expanded+ - Starnet AI patch
 All unique systems in [3.x]
 !Colossus Hiveworld Fix

@@ -65,6 +65,9 @@ war_doctrine = {
                     }
                     has_country_flag = str_just_got_launchers
                 }
+                not = {
+                    has_country_flag = str_need_to_counter_corvettes
+                }
                 is_ai = yes
             }
         }

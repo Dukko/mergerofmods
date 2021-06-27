@@ -15,6 +15,7 @@ pc_katzenland = {
     starting_planet = no
     orbit_lines = yes
     district_set = standard
+    carry_cap_per_free_district = @carry_cap_normal
     spawn_odds = 0
     city_color_lut = "gfx/portraits/misc/colorcorrection_desert.dds"
 }

@@ -8,7 +8,7 @@ GT_shipsize_research_station_build_speed_mult = {
     prerequisites = {
         "tech_space_science_1"
     }
-    weight = @tier2weight2
+    weight = @tier1weight2
     modifier = {
         shipclass_research_station_build_speed_mult = 0.4
     }

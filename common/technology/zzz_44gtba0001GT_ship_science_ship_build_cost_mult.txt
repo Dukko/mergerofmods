@@ -1,5 +1,5 @@
 GT_ship_science_ship_build_cost_mult = {
-    cost = 100
+    cost = 50
     area = physics
     tier = 0
     is_rare = yes

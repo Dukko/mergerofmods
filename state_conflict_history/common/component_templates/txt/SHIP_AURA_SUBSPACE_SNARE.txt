@@ -1,3 +1,4 @@
+@shipAuraRange = 80
 utility_component_template = {
     key = "SHIP_AURA_SUBSPACE_SNARE"
     size = medium
@@ -6,17 +7,15 @@ utility_component_template = {
     power = 0
     size_restriction = {
         titan
-        juggernaut
         scavenger_bot
         graygoo_mothership
         dreadnought
     }
-    component_set = "ship_titan_aura_components"
+    component_set = "ship_aura_components"
     hostile_aura = {
         name = "aura_ship_subspace_snare"
         radius = @shipAuraRange
         apply_on = fleets
-        system_wide = yes
         stack_info = {
             id = hostile_snare_aura
             priority = 1
@@ -38,11 +37,5 @@ utility_component_template = {
     }
     ai_weight = {
         weight = 10
-        modifier = {
-            factor = 0
-            NOT = {
-                has_country_flag = BSWf_uSHIP_AURA_SUBSPACE_SNARE
-            }
-        }
     }
 }

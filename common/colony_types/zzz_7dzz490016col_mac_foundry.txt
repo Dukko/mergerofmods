@@ -1,0 +1,89 @@
+@built_districts_medium_threshold = 4
+col_mac_foundry = {
+    icon = 5
+    potential = {
+        uses_district_set = machine_world
+    }
+    planet_modifier = {
+        custom_tooltip = col_foundry_custom
+        planet_district_industrial_build_speed_mult = 0.25
+        planet_metallurgists_upkeep_mult = -0.2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_galactic_community_member = yes
+            }
+            OR = {
+                is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
+                is_active_resolution = "resolution_industry_project_cornucopia"
+            }
+        }
+        modifier = {
+            planet_metallurgists_produces_mult = 0.05
+        }
+    }
+    weight_modifier = {
+        base = 10
+        modifier = {
+            add = 5
+            owner = {
+                has_monthly_income = {
+                    resource = alloys
+                    value < 100
+                }
+            }
+        }
+        modifier = {
+            add = 5
+            has_designation = col_mac_foundry
+        }
+        modifier = {
+            add = 20
+            OR = {
+                has_modifier = gpm_spaceship_graveyard
+                has_modifier = gpm_radioactive_mantle
+            }
+        }
+        modifier = {
+            add = 40
+            OR = {
+                has_modifier = gpm_precursor_manufactorium
+                has_modifier = gpm_relic_factories
+            }
+        }
+        modifier = {
+            add = 2
+            has_building = building_foundry_1
+        }
+        modifier = {
+            add = 4
+            has_building = building_foundry_2
+        }
+        modifier = {
+            add = 5
+            num_districts = {
+                type = district_industrial
+                value >= @built_districts_medium_threshold
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                num_districts = {
+                    type = district_industrial
+                    value >= @built_districts_medium_threshold
+                }
+            }
+            num_buildings = {
+                type = building_foundry_1
+                value = 0
+            }
+            num_buildings = {
+                type = building_foundry_2
+                value = 0
+            }
+        }
+    }
+}

@@ -29,6 +29,6 @@ pc_desert = {
     production_spawn_chance = 0.4
     colonizable = yes
     district_set = standard
-    uses_alternative_skies_for_moons = no
+    uses_alternative_skies_for_moons = yes
     carry_cap_per_free_district = @carry_cap_normal
 }

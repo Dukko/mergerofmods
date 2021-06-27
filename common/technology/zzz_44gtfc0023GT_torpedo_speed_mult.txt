@@ -10,7 +10,7 @@ GT_torpedo_speed_mult = {
     }
     weight = @tier4weight2
     modifier = {
-        weapon_type_explosive_speed_mult = 0.3
+        weapon_type_explosive_speed_mult = 0.5
     }
     weight_modifier = {
         modifier = {

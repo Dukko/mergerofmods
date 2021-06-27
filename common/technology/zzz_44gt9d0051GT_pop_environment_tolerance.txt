@@ -14,7 +14,7 @@ GT_pop_environment_tolerance = {
         is_gestalt = no
     }
     modifier = {
-        pop_environment_tolerance = 0.1
+        pop_environment_tolerance = 0.05
     }
     weight_modifier = {
         factor = 0.5

@@ -11,6 +11,7 @@ GT_starbase_defense_platform_capacity_add2 = {
     }
     weight = @tier4weight3
     modifier = {
+        shipclass_military_station_build_cost_mult = -0.2
         starbase_defense_platform_capacity_add = 10
     }
     weight_modifier = {

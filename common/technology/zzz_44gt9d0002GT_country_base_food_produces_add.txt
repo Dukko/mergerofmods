@@ -9,12 +9,12 @@ GT_country_base_food_produces_add = {
     prerequisites = {
         "tech_planetary_unification"
     }
-    weight = @tier4weight3
+    weight = @tier2weight3
     potential = {
         is_machine_empire = no
     }
     modifier = {
-        starbase_constructions_food_produces_mult = 0.2
+        starbase_constructions_food_produces_mult = 0.4
     }
     weight_modifier = {
         modifier = {

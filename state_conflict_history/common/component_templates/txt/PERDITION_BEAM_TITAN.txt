@@ -16,6 +16,7 @@ weapon_component_template = {
     }
     component_set = "PERDITION_BEAM"
     projectile_gfx = "perdition_beam"
+    upgrades_to = @PERDITION_BEAM_T2
     size_restriction = {
         titan
         colossus

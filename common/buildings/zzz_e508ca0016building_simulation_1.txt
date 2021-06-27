@@ -4,7 +4,6 @@ building_simulation_1 = {
     category = unity
     potential = {
         exists = owner
-        building_basic_income_check = yes
         owner = {
             is_machine_empire = yes
             NOT = {
@@ -21,6 +20,17 @@ building_simulation_1 = {
                 has_building = building_simulation_1
                 has_building = building_simulation_2
                 has_building = building_simulation_2
+                owner = {
+                    num_ascension_perks > 2
+                }
+                owner = {
+                    resource_income_compare = {
+                        resource = unity
+                        value > 50
+                    }
+                }
+                has_designation = col_research
+                has_designation = col_bureau
             }
         }
     }
@@ -30,6 +40,17 @@ building_simulation_1 = {
             OR = {
                 is_machine_empire = no
                 has_valid_civic = civic_machine_servitor
+                and = {
+                    is_ai = yes
+                    num_ascension_perks > 2
+                    from = {
+                        or = {
+                            has_designation = col_bureau
+                            has_designation = col_research
+                            is_capital = yes
+                        }
+                    }
+                }
             }
         }
     }

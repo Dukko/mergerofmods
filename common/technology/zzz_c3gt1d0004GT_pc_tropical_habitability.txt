@@ -14,6 +14,7 @@ GT_pc_tropical_habitability = {
         pc_tropical_habitability = 0.05
         pc_desertislands_habitability = 0.05
         pc_hajungle_habitability = 0.05
+        pc_cenote_habitability = 0.05
     }
     weight_modifier = {
         modifier = {
@@ -32,6 +33,9 @@ GT_pc_tropical_habitability = {
                 any_planet_within_border = {
                     is_planet_class = pc_hajungle
                 }
+                any_planet_within_border = {
+                    is_planet_class = pc_cenote
+                }
             }
         }
         modifier = {
@@ -45,6 +49,9 @@ GT_pc_tropical_habitability = {
                 }
                 species = {
                     has_trait = trait_pc_hajungle_preference
+                }
+                species = {
+                    has_trait = trait_pc_cenote_preference
                 }
             }
         }
@@ -74,6 +81,9 @@ GT_pc_tropical_habitability = {
                 any_planet_within_border = {
                     is_planet_class = pc_hajungle
                 }
+                any_planet_within_border = {
+                    is_planet_class = pc_cenote
+                }
             }
         }
         modifier = {
@@ -87,6 +97,9 @@ GT_pc_tropical_habitability = {
                 }
                 species = {
                     has_trait = trait_pc_hajungle_preference
+                }
+                species = {
+                    has_trait = trait_pc_cenote_preference
                 }
             }
         }

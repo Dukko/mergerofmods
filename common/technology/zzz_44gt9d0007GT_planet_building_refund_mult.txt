@@ -10,6 +10,7 @@ GT_planet_building_refund_mult = {
     }
     weight = @tier2weight1
     modifier = {
+        planet_building_build_speed_mult = 0.2
         planet_building_refund_mult = 0.2
     }
     weight_modifier = {

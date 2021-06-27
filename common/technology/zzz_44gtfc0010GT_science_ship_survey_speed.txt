@@ -8,7 +8,7 @@ GT_science_ship_survey_speed = {
     prerequisites = {
         "tech_automated_exploration"
     }
-    weight = @tier2weight2
+    weight = @tier1weight3
     potential = {
         is_ai = no
     }

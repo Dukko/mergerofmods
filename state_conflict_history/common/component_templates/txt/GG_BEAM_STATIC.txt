@@ -10,7 +10,7 @@ weapon_component_template = {
     icon = "GFX_ship_part_space_whale_weapon_1"
     icon_frame = 1
     firing_arc = 15
-    min_range = 30
+    min_range = 5
     tags = {
         weapon_type_energy
     }

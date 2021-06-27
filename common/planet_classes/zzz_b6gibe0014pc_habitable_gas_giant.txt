@@ -33,4 +33,5 @@ pc_habitable_gas_giant = {
     orbit_lines = yes
     show_city = no
     district_set = giga_planet
+    carry_cap_per_free_district = @carry_cap_normal
 }

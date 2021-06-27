@@ -1,8 +1,6 @@
 machine_01 = {
     randomized = {
-        no_scope = {
-            has_synthethic_dawn = yes
-        }
+        has_synthethic_dawn = yes
     }
     fallback = esgoo_01
     ship_color = yes

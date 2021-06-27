@@ -1,5 +1,5 @@
 GT_ship_science_alloys_cost_add = {
-    cost = 100
+    cost = 50
     area = engineering
     tier = 0
     is_rare = yes

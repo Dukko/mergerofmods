@@ -3,7 +3,6 @@ building_galactic_memorial_1 = {
     category = unity
     potential = {
         exists = owner
-        building_basic_income_check = yes
         NOT = {
             has_modifier = slave_colony
         }
@@ -65,6 +64,29 @@ building_galactic_memorial_1 = {
     }
     planet_modifier = {
         planet_stability_add = 5
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            num_pops > 40
+            num_buildings = {
+                type = building_galactic_memorial_1
+                value < 2
+            }
+            num_buildings = {
+                type = building_galactic_memorial_2
+                value < 1
+            }
+            num_buildings = {
+                type = building_galactic_memorial_3
+                value < 1
+            }
+        }
+        job_starnet_spice_melange_farmer_add = 1
+        job_starnet_spice_melange_antifarmer_add = -1
     }
     triggered_planet_modifier = {
         potential = {

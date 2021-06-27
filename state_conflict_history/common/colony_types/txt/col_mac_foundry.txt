@@ -2,12 +2,7 @@
 col_mac_foundry = {
     icon = 5
     potential = {
-        OR = {
-            uses_district_set = machine_world
-            uses_district_set = pdmachinefactory
-            uses_district_set = pdmachinecapital
-            uses_district_set = pdmachinefort
-        }
+        uses_district_set = machine_world
     }
     planet_modifier = {
         custom_tooltip = col_foundry_custom

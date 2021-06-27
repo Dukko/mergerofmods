@@ -18,6 +18,7 @@ building_sentinel_posts = {
                     NOT = {
                         has_building = building_sentinel_posts
                     }
+                    planet_crime > 30
                 }
             }
         }
@@ -31,7 +32,7 @@ building_sentinel_posts = {
         }
     }
     planet_modifier = {
-        job_patrol_drone_add = 3
+        job_patrol_drone_add = 2
     }
     resources = {
         category = planet_buildings

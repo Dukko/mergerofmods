@@ -1,5 +1,5 @@
 GT_ship_constructor_cost_mult = {
-    cost = 100
+    cost = 50
     area = engineering
     tier = 0
     is_rare = yes

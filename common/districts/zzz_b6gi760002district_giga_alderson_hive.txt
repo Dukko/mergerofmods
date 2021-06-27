@@ -33,7 +33,7 @@ district_giga_alderson_hive = {
         modifier = {
             planet_housing_add = 300
             job_maintenance_drone_add = 216
-            job_patrol_drone_add = 12
+            job_patrol_drone_add = 60
         }
     }
     triggered_planet_modifier = {

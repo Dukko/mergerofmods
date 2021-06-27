@@ -10,7 +10,8 @@ GT_planet_researchers_physics_research_produces_mult1 = {
     }
     weight = @tier3weight2
     modifier = {
-        station_researchers_produces_mult = 0.2
+        num_tech_alternatives_add = 1
+        planet_researchers_physics_research_produces_add = 0.25
     }
     weight_modifier = {
         modifier = {

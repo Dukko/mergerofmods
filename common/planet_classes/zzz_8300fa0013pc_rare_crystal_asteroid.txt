@@ -1,7 +1,7 @@
 pc_rare_crystal_asteroid = {
     entity = "asteroid_crystal_large"
     picture = pc_crystal_asteroid
-    entity_scale = 1.5
+    entity_scale = @asteroid_standard_scale
     icon_frame = 18
     asteroid = yes
     spawn_odds = 10

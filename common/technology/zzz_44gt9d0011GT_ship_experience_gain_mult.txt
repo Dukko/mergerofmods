@@ -11,7 +11,7 @@ GT_ship_experience_gain_mult = {
     }
     weight = @tier4weight3
     modifier = {
-        ship_experience_gain_mult = 0.5
+        ship_experience_gain_mult = 0.3
     }
     weight_modifier = {
         factor = 0.5

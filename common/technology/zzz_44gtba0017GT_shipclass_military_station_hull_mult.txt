@@ -11,7 +11,7 @@ GT_shipclass_military_station_hull_mult = {
     }
     weight = @tier4weight2
     modifier = {
-        shipclass_military_station_hull_mult = 0.5
+        shipclass_military_station_hull_mult = 1
     }
     weight_modifier = {
         factor = 0.5

@@ -10,7 +10,8 @@ GT_large_weapon_damage_mult = {
     }
     weight = @tier4weight1
     modifier = {
-        weapon_role_anti_hull_weapon_damage_mult = 0.15
+        shipclass_starbase_damage_mult = 0.25
+        shipclass_military_station_damage_mult = 0.25
     }
     weight_modifier = {
         modifier = {

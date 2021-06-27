@@ -31,7 +31,7 @@ tech_destroyer_hull_1 = {
         }
     }
     ai_weight = {
-        weight = 250
+        weight = 2
         factor = 5
         modifier = {
             factor = 1.25

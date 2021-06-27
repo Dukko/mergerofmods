@@ -6,7 +6,6 @@ col_research = {
         exists = owner
         NOR = {
             uses_district_set = city_world
-            uses_district_set = pdshroudarc
             uses_district_set = ring_world
             uses_district_set = habitat
             uses_district_set = pdarchive
@@ -97,6 +96,12 @@ col_research = {
                 has_modifier = atmospheric_hallucinogen
                 has_modifier = dangerous_wildlife
                 has_modifier = unstable_tectonics
+                has_deposit = d_central_spire
+            }
+        }
+        modifier = {
+            add = 20
+            OR = {
                 has_modifier = gpm_decaying_structures
                 has_modifier = gpm_surface_of_bones
                 has_modifier = gpm_recent_mass_extinction
@@ -122,7 +127,6 @@ col_research = {
                 has_modifier = gpm_artificial_core
                 has_modifier = gpm_ecological_nervous_system
                 has_modifier = gpm_odd_cloud_shapes
-                has_deposit = d_central_spire
             }
         }
         modifier = {

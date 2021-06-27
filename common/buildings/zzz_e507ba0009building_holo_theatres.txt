@@ -19,6 +19,13 @@ building_holo_theatres = {
                 num_pops > 11
             }
             and = {
+                free_amenities < -4
+                or = {
+                    has_building = building_luxury_residence
+                    has_building = building_communal_housing
+                }
+            }
+            and = {
                 free_amenities < 2
                 or = {
                     years_passed > 15
@@ -45,36 +52,8 @@ building_holo_theatres = {
                 owner = {
                     is_ai = yes
                 }
-                OR = {
-                    free_amenities > 30
+                free_amenities > 30
                 years_passed > 25
-                    AND = {
-                        count_owned_pop = {
-                            limit = {
-                                is_sapient = yes
-                            }
-                            count < 75
-                        }
-                        owner = {
-                            has_technology = tech_frontier_health
-                        }
-                        NOR = {
-                            has_building = building_clinic
-                            has_building = building_hospital
-                        }
-                    }
-                    AND = {
-                        owner = {
-                            NOT = {
-                                has_policy_flag = robots_outlawed
-                            }
-                            has_technology = tech_robotic_workers
-                        }
-                        NOT = {
-                            has_building = building_robot_assembly_plant
-                        }
-                    }
-                }
             }
         }
     }
