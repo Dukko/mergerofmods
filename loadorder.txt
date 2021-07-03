@@ -10,7 +10,7 @@ AI-Player Exclusive Archaeology
 AI Species Limit
 Aggressive Crisis Engine
 More Natural Looking Galaxies
-Just More Empires 3.0.x (Expanded)
+Just More Empires 2.7.x (Expanded)
 Edit - Just More Empires 3.0.x (Expanded)
 Tass Cheat Tool
 Otter Editor
@@ -22,9 +22,6 @@ Planetary Wonders
 Planetary Curios
 Legendary Worlds 2.7.x
 Amazing Space Battles
-SpaceAmbient Music - Vol. II
-SpaceAmbient Music - Vol. I
-Music Pack
 War Name Variety | Redux
 Ultimate Imperium of Man Namelist
 Ultimate Eldar Namelist
@@ -288,7 +285,7 @@ Immersive Galaxy - Planet Variety for Planetary Diversity
 Better Ecumenopoli
 Small fix for Immersive Galaxy - Planet Variety for PD
 Planetary Designations Adjustments
-Planetary Modifiers Enhancements
+Planetary Modifier Enhancements
 UI Overhaul Dynamic + Planetary Diversity
 Amazing Civics - Megacorp
 Venture Politics
@@ -348,6 +345,7 @@ Psionic Synths / Planetary Diversity - Shroud Worlds Patch
 Psionic Synths - Gigastructures Compatibility Patch
 Psionic Species Expansion - Gigastructural Engineering
 Otter Editor's Dynamic Mod Menu Add-on
+Otter Editor Expanded
 Nemesis Frontend Recolor
 MVG War Exhaustion - Updated + Tweaked
 Loyal Subjects Have Nothing to Fear (From the Colossus)[3.0]
