@@ -10,10 +10,9 @@ AI-Player Exclusive Archaeology
 AI Species Limit
 Aggressive Crisis Engine
 More Natural Looking Galaxies
-Just More Empires 2.7.x (Expanded)
+Just More Empires 3.0.x (Expanded)
 Edit - Just More Empires 3.0.x (Expanded)
 Tass Cheat Tool
-Otter Editor
 [v1.0] Insults and Injuries
 SLEX
 Guilli's Planet Modifiers and Features
@@ -104,6 +103,7 @@ Even More Origins
 Dynamic Political Events
 Potent Rebellions
 Distant Origin
+Don't Panic -Phantom's Recreation-
 Basic Ordinary Origins
 AutoFabs Origin
 Auto Gene Assimilation
@@ -217,10 +217,6 @@ Angels of Death
 Alternate Lithoid Ships
 [United Fleet]Mobile Shipyard
 !-Starbase - Extended-!
-BSW 3 : Balanced Space Warfare
-BSW 3 // More AI Personalities
-BSW 3 // Planetary Assault Army & Ship
-BSW 3 // Starbase - Extended
 Wormhole Generation (3.0)
 Upper Limits V3.0+
 Start with AutoExplore
@@ -243,7 +239,6 @@ Building Adjustments
 Additional Balanced Repeatables
 All Tech Researchable [3.*]
 Extra Ship Components 3.0 [Actual]
-Extra Ship Components 3.0 - Overwrites [Actual]
 Hypothetical Stars
 Real Sol Textures
 Real Space 3.8
@@ -255,9 +250,7 @@ Wild Space 3
 Real Machine Worlds (Now v3.0.* Compatible)
 Sol System Expanded (Real Space)
 Sol System Expanded - Real Sol Textures Patch
-Immersive Galaxy - Planet Variety, 2K
-Immersive Galaxy - Planet Variety, Clouds
-Immersive Galaxy - Nuclear Fire
+Immersive Galaxie - Planet Variety Reborn 4K
 Interstellar Black Holes
 Battle Debris - Starship Graveyards
 UI Overhaul Dynamic
@@ -281,9 +274,7 @@ Planetary Diversity - Ringworlds
 Planetary Diversity - Shroud Worlds
 Planetary Diversity - Space Habitats
 Planetary Diversity - Unique Worlds
-Immersive Galaxy - Planet Variety for Planetary Diversity
 Better Ecumenopoli
-Small fix for Immersive Galaxy - Planet Variety for PD
 Planetary Designations Adjustments
 Planetary Modifier Enhancements
 UI Overhaul Dynamic + Planetary Diversity
@@ -305,6 +296,7 @@ Civics Expanded+ & More Corp Authorities Compatibility Patch
 ~More Corporate Authorities/Venture Politics Compatibility Patch
 Governance Patch
 StarTech AI
+Extra Ship Components 3.0 - Overwrites [Actual]
 Galactic Community Expanded
 UI Overhaul Dynamic + Ethics and Civics Alternative
 Kaityo`s Tiny Planet Buildings for UI Overhaul Dynamic
@@ -389,9 +381,6 @@ Sins of the Prophets/Necroids/Imperial RS System Scale GS Pa
 !Patch - ECA - All in One - No Name Empires
 !Patch - Cubemap Fix
 Starnet for ESC
-BSW 3 // StarNet/StarTech AI
-BSW 3 // Real Space - Ships in Scaling
-BSW 3 // Real Space - System Scale
 !Civics Expanded+ - Starnet AI patch
 All unique systems in [3.x]
 !Colossus Hiveworld Fix
