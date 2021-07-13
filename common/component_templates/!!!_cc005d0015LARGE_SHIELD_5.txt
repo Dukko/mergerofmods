@@ -1,0 +1,45 @@
+utility_component_template = {
+    key = "LARGE_SHIELD_5"
+    size = large
+    icon = "GFX_ship_part_shield_5"
+    icon_frame = 1
+    power = @power_L5
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @shield_l_t5_cost
+            exotic_gases = 1.333
+        }
+        upkeep = {
+            energy = @shield_l_t5_upkeep_energy
+            alloys = @shield_l_t5_upkeep_alloys
+        }
+    }
+    modifier = {
+        ship_shield_add = @shield_L5
+        ship_shield_regen_add_static = @regen_L5
+    }
+    prerequisites = {
+        "tech_shields_5"
+    }
+    upgrades_to = "LARGE_NHSC_ADV_SHIELD_1"
+    component_set = "SHIELD_5"
+    ai_weight = {
+        weight = 1
+        modifier = {
+            factor = 10000
+            or = {
+                has_technology = tech_crystal_armor_1
+                has_technology = tech_crystal_armor_2
+            }
+        }
+        modifier = {
+            factor = 0
+            is_country_type = default
+            resource_stockpile_compare = {
+                resource = exotic_gases
+                value <= 50
+            }
+        }
+    }
+}

@@ -5,7 +5,7 @@ tech_repeatable_improved_starbase_capacity = {
     cost_per_level = @repeatableTechLevelCost
     tier = @repeatableTechTier
     category = {
-        statecraft
+        new_worlds
     }
     levels = 5
     prerequisites = {

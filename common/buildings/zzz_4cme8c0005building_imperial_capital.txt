@@ -223,14 +223,6 @@ building_imperial_capital = {
     triggered_planet_modifier = {
         potential = {
             is_technocracy = yes
-            OR = {
-            owner = {
-                is_megacorp = yes
-            }
-            owner = {
-                has_civic = civic_science_syndicate
-                }
-            }
         }
         modifier = {
             job_head_researcher_add = 3
@@ -239,14 +231,6 @@ building_imperial_capital = {
     triggered_planet_modifier = {
         potential = {
             is_plutocracy = yes
-                        OR = {
-            owner = {
-                is_megacorp = yes
-            }
-            owner = {
-                has_civic = civic_bancorp
-                }
-            }
         }
         modifier = {
             job_mogul_add = 3
@@ -340,28 +324,12 @@ building_imperial_capital = {
     triggered_desc = {
         trigger = {
             is_technocracy = yes
-            OR = {
-            owner = {
-                is_megacorp = yes
-            }
-            owner = {
-                has_civic = civic_science_syndicate
-                }
-            }
         }
         text = job_head_researcher_effect_desc
     }
     triggered_desc = {
         trigger = {
             is_plutocracy = yes
-            OR = {
-            owner = {
-                is_megacorp = yes
-            }
-            owner = {
-                has_civic = civic_bancorp
-                }
-            }
         }
         text = job_mogul_effect_desc
     }

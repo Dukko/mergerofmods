@@ -1,0 +1,38 @@
+utility_component_template = {
+    key = "SMALL_SHIELD_4"
+    size = small
+    icon = "GFX_ship_part_shield_4"
+    icon_frame = 1
+    power = @power_S4
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @shield_s_t4_cost
+            exotic_gases = 0.25
+        }
+        upkeep = {
+            energy = @shield_s_t4_upkeep_energy
+            alloys = @shield_s_t4_upkeep_alloys
+        }
+    }
+    modifier = {
+        ship_shield_add = @shield_S4
+        ship_shield_regen_add_static = @regen_S4
+    }
+    prerequisites = {
+        "tech_shields_4"
+    }
+    component_set = "SHIELD_4"
+    upgrades_to = "SMALL_SHIELD_5"
+    ai_weight = {
+        weight = 1
+        modifier = {
+            factor = 0
+            is_country_type = default
+            resource_stockpile_compare = {
+                resource = exotic_gases
+                value <= 50
+            }
+        }
+    }
+}

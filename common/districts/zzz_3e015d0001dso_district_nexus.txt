@@ -1,3 +1,4 @@
+@nanite_city_cost = 500
 dso_district_nexus = {
     base_buildtime = 480
     icon = district_nanite_forgeworld_nexus
@@ -29,7 +30,7 @@ dso_district_nexus = {
     resources = {
         category = planet_districts_cities
         cost = {
-            minerals = @city_cost
+            minerals = @nanite_city_cost
         }
         upkeep = {
             energy = 2
@@ -39,6 +40,7 @@ dso_district_nexus = {
         planet_housing_add = 5
         job_maintenance_drone_add = 3
         planet_pop_assembly_mult = 0.05
+        planet_max_buildings_add = 1
     }
     triggered_planet_modifier = {
         potential = {
@@ -72,17 +74,6 @@ dso_district_nexus = {
         }
         modifier = {
             planet_housing_add = 1
-        }
-    }
-    ai_weight = {
-        weight = 0
-        modifier = {
-            weight = 100
-            planet = {
-                planet_devastation < 1
-                years_passed > 10
-                free_housing < 4
-            }
         }
     }
 }

@@ -54,6 +54,7 @@ trait_pc_superhabitable_preference = {
         pc_antarctic_habitability = 0.2
         pc_aeolian_habitability = 0.2
         pc_mud_habitability = 0.2
+        pc_basalt_habitability = 0.2
         pc_geothermal_habitability = 0.6
         pc_superhabitable_habitability = 0.6
         pc_tidallylocked_habitability = 0.4

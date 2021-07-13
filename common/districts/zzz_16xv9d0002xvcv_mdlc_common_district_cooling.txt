@@ -1,5 +1,5 @@
 xvcv_mdlc_common_district_cooling = {
-    base_buildtime = @xvcv_mdlc_district_time_5
+    base_buildtime = @xvcv_mdlc_district_time_3
     is_capped_by_modifier = no
     show_on_uncolonized = {
         exists = from

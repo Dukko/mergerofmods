@@ -25,4 +25,5 @@ pc_methane = {
     }
     district_set = standard
     carry_cap_per_free_district = @carry_cap_normal
+    starting_planet = no
 }

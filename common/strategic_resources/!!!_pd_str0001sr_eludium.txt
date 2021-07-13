@@ -1,9 +1,7 @@
 sr_eludium = {
-    tradable = yes
-    market_amount = 5
-    market_price = 100
-    max = 15000
-    deficit_modifier = volatile_motes_deficit
+    tradable = no
+    max = 5000
+    deficit_modifier = eludium_deficit
     visibility_prerequisite = {
         always = yes
     }

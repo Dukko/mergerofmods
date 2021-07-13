@@ -50,6 +50,7 @@ trait_pc_tundra_preference = {
         pc_desert_habitability = 0.2
         pc_oasis_habitability = 0.2
         pc_mud_habitability = 0.2
+        pc_basalt_habitability = 0.2
         pc_veld_habitability = 0.5
         pc_semiarid_habitability = 0.5
         pc_geothermal_habitability = 0.4

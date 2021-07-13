@@ -1,5 +1,5 @@
-@cost3 = 20
 @power3 = -25
+@cost3 = 20
 utility_component_template = {
     key = "COMBAT_COMPUTER_ARTILLERY_PRECOG"
     size = small
@@ -14,41 +14,23 @@ utility_component_template = {
     }
     class_restriction = {
         shipclass_military
-        shipclass_military_special
         shipclass_starbase
     }
     size_restriction = {
+        destroyer
+        cruiser
+        battleship
+        titan
+        juggernaut
         crisis_destroyer
         crisis_cruiser
         dreadnought
         scavenger_bot
-        star_eater
-        fe_escort
-        fe_battlecruiser
-        fe_titan
-        pasmod_assault_destroyer
-        pasmod_assault_cruiser
-        LoGHFlagship
-        rs_battlecruiser
-        rs_dreadnought
-        rs_heavy_dreadnought
-        rs_heavy_dreadnought_type_a
-        rs_heavy_dreadnought_type_b
-        rs_heavy_dreadnought_type_c
-        rs_heavy_dreadnought_type_d
-        rs_heavy_dreadnought_type_e
-        rs_heavy_dreadnought_type_f
-        rs_heavy_dreadnought_type_g
-        rs_heavy_dreadnought_type_h
-        rs_heavy_dreadnought_type_i
-        rs_heavy_dreadnought_type_j
-        rs_heavy_dreadnought_type_k
-        x
     }
     component_set = "combat_computers"
-    ship_behavior = "BSW_artillery_088"
+    ship_behavior = "artillery"
     prerequisites = {
-        @com_tech_3p
+        "tech_precognition_interface"
     }
     ship_modifier = {
         ship_fire_rate_mult = 0.15
@@ -56,6 +38,6 @@ utility_component_template = {
         ship_tracking_add = 10
     }
     ai_weight = {
-        weight = 4
+        weight = 35
     }
 }

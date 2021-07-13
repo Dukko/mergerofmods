@@ -1,0 +1,136 @@
+ship_design = {
+    name = "NAME_Relic"
+    ship_size = npc_warship_01
+    section = {
+        template = "automated_dreadnought_key"
+        slot = "mid"
+        component = {
+            slot = "LARGE_GUN_01"
+            template = "NHSC_ENERGY_TORPEDO_4"
+        }
+        component = {
+            slot = "LARGE_GUN_02"
+            template = "NHSC_ENERGY_TORPEDO_4"
+        }
+        component = {
+            slot = "LARGE_GUN_03"
+            template = "LARGE_NHSC_PLASMA_5"
+        }
+        component = {
+            slot = "LARGE_GUN_04"
+            template = "LARGE_NHSC_PLASMA_5"
+        }
+        component = {
+            slot = "LARGE_GUN_05"
+            template = "LARGE_NHSC_PLASMA_5"
+        }
+        component = {
+            slot = "LARGE_GUN_06"
+            template = "LARGE_NHSC_PLASMA_5"
+        }
+        component = {
+            slot = "LARGE_GUN_07"
+            template = "LARGE_NHSC_PLASMA_5"
+        }
+        component = {
+            slot = "SMALL_GUN_01"
+            template = "SMALL_NHSC_DISRUPTOR_5"
+        }
+        component = {
+            slot = "SMALL_GUN_02"
+            template = "SMALL_NHSC_DISRUPTOR_5"
+        }
+        component = {
+            slot = "SMALL_GUN_03"
+            template = "NHSC_POINT_DEFENSE_5"
+        }
+        component = {
+            slot = "SMALL_GUN_04"
+            template = "NHSC_POINT_DEFENSE_5"
+        }
+        component = {
+            slot = "SMALL_GUN_05"
+            template = "NHSC_POINT_DEFENSE_5"
+        }
+        component = {
+            slot = "SMALL_GUN_08"
+            template = "SMALL_NHSC_PLASMA_5"
+        }
+        component = {
+            slot = "SMALL_GUN_09"
+            template = "SMALL_NHSC_PLASMA_5"
+        }
+        component = {
+            slot = "SMALL_GUN_10"
+            template = "SMALL_NHSC_PLASMA_5"
+        }
+        component = {
+            slot = "LARGE_UTILITY_1"
+            template = "LARGE_NHSC_ADV_ARMOR_2"
+        }
+        component = {
+            slot = "LARGE_UTILITY_2"
+            template = "LARGE_NHSC_ADV_ARMOR_2"
+        }
+        component = {
+            slot = "LARGE_UTILITY_3"
+            template = "LARGE_NHSC_ADV_ARMOR_2"
+        }
+        component = {
+            slot = "LARGE_UTILITY_4"
+            template = "LARGE_NHSC_ADV_ARMOR_2"
+        }
+        component = {
+            slot = "LARGE_UTILITY_5"
+            template = "LARGE_NHSC_ADV_ARMOR_2"
+        }
+        component = {
+            slot = "LARGE_UTILITY_6"
+            template = "LARGE_NHSC_ADV_ARMOR_2"
+        }
+        component = {
+            slot = "LARGE_UTILITY_7"
+            template = "LARGE_NHSC_ADV_SHIELD_2"
+        }
+        component = {
+            slot = "LARGE_UTILITY_8"
+            template = "LARGE_NHSC_ADV_SHIELD_2"
+        }
+        component = {
+            slot = "LARGE_UTILITY_9"
+            template = "LARGE_NHSC_ADV_SHIELD_2"
+        }
+        component = {
+            slot = "LARGE_UTILITY_10"
+            template = "LARGE_NHSC_ADV_SHIELD_2"
+        }
+        component = {
+            slot = "LARGE_UTILITY_11"
+            template = "LARGE_NHSC_ADV_SHIELD_2"
+        }
+        component = {
+            slot = "AUX_UTILITY_1"
+            template = "NHSC_ADV_SHIELD_RECHARGER"
+        }
+        component = {
+            slot = "AUX_UTILITY_2"
+            template = "NHSC_ADV_SHIELD_RECHARGER"
+        }
+        component = {
+            slot = "AUX_UTILITY_3"
+            template = "NHSC_ADV_SHIELD_RECHARGER"
+        }
+        component = {
+            slot = "AUX_UTILITY_4"
+            template = "NHSC_REPAIR_DRONES"
+        }
+        component = {
+            slot = "AUX_UTILITY_5"
+            template = "NHSC_REPAIR_DRONES"
+        }
+    }
+    required_component = "NHSC_ADV_STRING_SENSOR_SHIP"
+    required_component = "JUMP_DRIVE_1"
+    required_component = "COMBAT_COMPUTER_LINE_SAPIENT"
+    required_component = "NHSC_ADV_THRUSTERS_1"
+}

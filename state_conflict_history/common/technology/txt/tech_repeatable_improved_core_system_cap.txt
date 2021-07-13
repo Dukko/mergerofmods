@@ -7,7 +7,7 @@ tech_repeatable_improved_core_system_cap = {
     cost_per_level = @infiniteRepeatableTechLevelCost
     tier = @repeatableTechTier
     category = {
-        statecraft
+        new_worlds
     }
     levels = -1
     prerequisites = {

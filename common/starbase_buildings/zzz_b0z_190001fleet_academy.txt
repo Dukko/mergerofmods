@@ -9,9 +9,6 @@ fleet_academy = {
                 has_valid_civic = civic_military_academies
             }
         }
-        NOT = {
-            has_starbase_building = fleet_academy_cep
-        }
     }
     possible = {
         has_starbase_module = shipyard

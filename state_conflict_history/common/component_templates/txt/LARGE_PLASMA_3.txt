@@ -9,6 +9,7 @@ weapon_component_template = {
     }
     component_set = "PLASMA_3"
     projectile_gfx = "plasma_cannon_l"
+    upgrades_to = "LARGE_NHSC_PLASMA_4"
     tags = {
         weapon_type_energy
     }
@@ -16,7 +17,6 @@ weapon_component_template = {
         weapon_role_anti_armor
     }
     ai_tag_weight = 3
-    upgrades_to = @LARGE_PLASMA_T4
     resources = {
         category = ship_components
         cost = {

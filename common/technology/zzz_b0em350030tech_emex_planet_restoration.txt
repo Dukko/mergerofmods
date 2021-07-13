@@ -1,0 +1,33 @@
+tech_emex_planet_restoration = {
+    cost = @tier4cost1
+    area = society
+    tier = 4
+    category = {
+        new_worlds
+    }
+    is_rare = yes
+    prerequisites = {
+        tech_emex_warped_energy_stabilisation
+        tech_terrestrial_sculpting
+    }
+    weight = @tier4weight1
+    potential = {
+        has_global_flag = tma_pt1_done
+    }
+    modifier = {
+        description = tma_planet_unwarping
+    }
+    weight_modifier = {
+        factor = 1
+    }
+    ai_weight = {
+        factor = 5
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+}

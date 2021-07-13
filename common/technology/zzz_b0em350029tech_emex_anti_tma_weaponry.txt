@@ -1,0 +1,33 @@
+tech_emex_anti_tma_weaponry = {
+    cost = @tier2cost3
+    area = engineering
+    tier = 3
+    category = {
+        propulsion
+    }
+    is_rare = no
+    prerequisites = {
+        tech_emex_warped_energy_stabilisation
+    }
+    weight = @tier3weight2
+    potential = {
+        has_global_flag = master_ai_project_complete
+    }
+    modifier = {
+        damage_vs_country_type_master_ai_country_mult = 0.05
+        ship_evasion_mult = 0.05
+    }
+    weight_modifier = {
+        factor = 1.5
+    }
+    ai_weight = {
+        factor = 5
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_propulsion"
+            }
+        }
+    }
+}

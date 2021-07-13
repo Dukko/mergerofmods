@@ -25,7 +25,7 @@ utility_component_template = {
         destroyer
         crisis_destroyer
     }
-    upgrades_to = "DESTROYER_GRAVITON_REACTOR"
+    upgrades_to = "DESTROYER_NHSC_DARK_MATTER_CORE_2"
     ai_weight = {
         weight = 6
         modifier = {

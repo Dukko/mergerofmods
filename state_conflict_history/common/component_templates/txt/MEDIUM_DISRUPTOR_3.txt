@@ -9,6 +9,7 @@ weapon_component_template = {
     }
     component_set = "DISRUPTOR_3"
     projectile_gfx = "disruptor_3_medium"
+    upgrades_to = "MEDIUM_NHSC_DISRUPTOR_4"
     tags = {
         weapon_type_energy
     }
@@ -16,7 +17,6 @@ weapon_component_template = {
         weapon_role_anti_hull
     }
     ai_tag_weight = 5
-    upgrades_to = @MEDIUM_DISRUPTOR_T4
     resources = {
         category = ship_components
         cost = {
@@ -29,12 +29,6 @@ weapon_component_template = {
         }
     }
     ai_weight = {
-        weight = 1
-        modifier = {
-            factor = 0
-            no_resource_for_component = {
-                RESOURCE = rare_crystals
-            }
-        }
+        weight = 0
     }
 }

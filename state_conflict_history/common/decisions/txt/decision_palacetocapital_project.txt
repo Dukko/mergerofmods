@@ -71,12 +71,20 @@ decision_palacetocapital_project = {
             }
             IF = {
                 limit = {
+                    has_planet_flag = planet_earth
+                }
+                set_planet_entity = {
+                    entity = "earthcapitalarc_planet_01_entity"
+                }
+            }
+            IF = {
+                limit = {
                     owner = {
                         has_trait = trait_pc_aquatic_preference
                     }
                 }
                 set_planet_entity = {
-                    entity = "aquaticcity_planet_01_entity"
+                    entity = "aquaticpalace_planet_01_entity"
                     picture = "pc_aquaticcapitalarc"
                 }
                 set_planet_flag = pdaquapicture

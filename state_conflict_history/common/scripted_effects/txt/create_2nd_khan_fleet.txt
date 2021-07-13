@@ -1,0 +1,29 @@
+create_2nd_khan_fleet = {
+    create_fleet = {
+        name = "NAME_Chosen_of_the_Great_Khan"
+        effect = {
+            set_owner = event_target:raider_khanate
+            create_ship = {
+                name = "NAME_JuukTidir"
+                random_existing_design = npc_galleon_01
+                graphical_culture = "npf_01_dirty"
+            }
+            set_leader = exiled_khan
+            create_dyn_marauder_fleet = {
+                GLORY = 0
+            }
+            set_location = {
+                target = event_target:marauder_rally_point
+                distance = 45
+                angle = random
+            }
+        }
+        settings = {
+            can_upgrade = no
+            can_disband = no
+            can_change_composition = no
+            can_change_leader = no
+            uses_naval_capacity = no
+        }
+    }
+}

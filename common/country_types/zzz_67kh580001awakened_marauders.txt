@@ -34,17 +34,30 @@ awakened_marauders = {
         tech = no
         modules = {
             horde_military_minister_module
-            foreign_minister_module
             horde_interior_minister_module
+            foreign_minister_module
         }
         army_data = {
+            assault_army = {
+                fraction = {
+                    factor = 10
+                    modifier = {
+                        factor = 0
+                        OR = {
+                            has_technology = tech_telepathy
+                            has_technology = tech_gene_seed_purification
+                        }
+                    }
+                }
+            }
             gene_warrior_army = {
                 fraction = {
                     factor = 75
                     modifier = {
                         factor = 0
-                        NOT = {
+                        NOR = {
                             has_ethic = ethic_fanatic_xenophile
+                            has_technology = tech_gene_seed_purification
                         }
                     }
                 }
@@ -54,52 +67,15 @@ awakened_marauders = {
                     factor = 75
                     modifier = {
                         factor = 0
-                        NOT = {
-                            has_ethic = ethic_fanatic_spiritualist
-                        }
-                    }
-                }
-            }
-            xenomorph_army = {
-                fraction = {
-                    factor = 75
-                    modifier = {
-                        factor = 0
-                        NOT = {
-                            has_ethic = ethic_fanatic_xenophobe
-                        }
-                    }
-                }
-            }
-            robotic_army = {
-                fraction = {
-                    factor = 75
-                    modifier = {
-                        factor = 0
-                        NOT = {
-                            has_ethic = ethic_fanatic_materialist
-                        }
-                    }
-                }
-            }
-            machine_assault_2 = {
-                fraction = {
-                    factor = 50
-                    modifier = {
-                        factor = 0
-                        NOT = {
+                        OR = {
                             has_authority = auth_machine_intelligence
-                        }
-                    }
-                }
-            }
-            machine_assault_3 = {
-                fraction = {
-                    factor = 25
-                    modifier = {
-                        factor = 0
-                        NOT = {
-                            has_authority = auth_machine_intelligence
+                            NOT = {
+                                has_technology = tech_telepathy
+                            }
+                            NOT = {
+                                has_ethic = ethic_fanatic_spiritualist
+                            }
+                            has_technology = tech_gene_seed_purification
                         }
                     }
                 }
@@ -138,7 +114,7 @@ awakened_marauders = {
     resources = {
         category = country_base
         produces = {
-            energy = 1000
+            energy = 3000
             minerals = 250
             food = 100
             alloys = 100

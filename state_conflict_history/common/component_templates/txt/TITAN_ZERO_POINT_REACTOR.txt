@@ -26,7 +26,7 @@ utility_component_template = {
         scavenger_bot
         dreadnought
     }
-    upgrades_to = @REACTORS_TITAN_T6
+    upgrades_to = "TITAN_NHSC_ADV_REACTOR_1"
     ai_weight = {
         weight = 5
     }

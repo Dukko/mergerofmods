@@ -1,5 +1,3 @@
-@destroyer_collision_radius = 2.5
-@speed_fast = 140
 marauder_destroyer = {
     graphical_culture = {
         "madd_01"

@@ -1,8 +1,8 @@
 hegemonic_imperialists = {
-    aggressiveness = 1.75
+    aggressiveness = 2
     trade_willingness = 0.8
     bravery = 1.5
-    combat_bravery = 1.5
+    combat_bravery = 2
     military_spending = 1.1
     colony_spending = 1
     federation_acceptance = -20
@@ -13,9 +13,9 @@ hegemonic_imperialists = {
     migration_pact_acceptance = -50
     advanced_start_chance = 200
     weapon_preferences = weapon_type_energy
-    shields_ratio = 0.5
-    armor_ratio = 0.5
-    hull_ratio = 0
+    armor_ratio = 0.1
+    shields_ratio = 0.2
+    hull_ratio = 0.7
     threat_modifier = 1
     threat_others_modifier = 0.66
     friction_modifier = 1.5
@@ -63,6 +63,10 @@ hegemonic_imperialists = {
         modifier = {
             factor = 5
             has_ethic = "ethic_fanatic_authoritarian"
+        }
+        modifier = {
+            weight = 1001
+            has_civic = civic_great_khans_vision
         }
         modifier = {
             factor = 10

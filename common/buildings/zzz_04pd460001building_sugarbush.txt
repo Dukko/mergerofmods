@@ -1,0 +1,48 @@
+building_sugarbush = {
+    base_buildtime = 360
+    is_capped_by_modifier = yes
+    category = resource
+    potential = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+        is_planet_class = pc_irradiated
+    }
+    prerequisites = {
+        "tech_rad_bloom_farm"
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_bloom_evaporator_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_bloom_hive_add = 1
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 400
+        }
+        upkeep = {
+            energy = 1
+        }
+    }
+    ai_weight = {
+        weight = 10
+    }
+}

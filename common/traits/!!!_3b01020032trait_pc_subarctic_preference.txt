@@ -27,6 +27,7 @@ trait_pc_subarctic_preference = {
         pc_cenote_habitability = 0.5
         pc_boreal_habitability = 0.5
         pc_mud_habitability = 0.5
+        pc_basalt_habitability = 0.5
         pc_steppe_habitability = 0.4
         pc_mushroom_habitability = 0.4
         pc_snow_habitability = 0.4

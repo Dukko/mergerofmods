@@ -1713,6 +1713,15 @@ default = {
                         has_technology = @PAS_AS_CC_TECH
                         has_country_flag = BSWf_WEAPON_STRIKECRAFT
                     }
+                    modifier = {
+                        add = @PAS_ADD
+                        has_technology = @PAS_AS_CO_TECH
+                        NOR = {
+                            has_technology = @PAS_AS_DD_TECH
+                            has_technology = @PAS_AS_CC_TECH
+                        }
+                        has_global_flag = pasmod_main_feature
+                    }
                 }
             }
             pasmod_assault_destroyer = {

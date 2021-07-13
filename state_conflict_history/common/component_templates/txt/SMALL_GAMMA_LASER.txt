@@ -9,13 +9,13 @@ weapon_component_template = {
     }
     component_set = "GAMMA_LASER"
     projectile_gfx = "gamma_laser_s"
+    upgrades_to = "SMALL_NHSC_LASER_6"
     tags = {
         weapon_type_energy
     }
     ai_tags = {
         weapon_role_anti_armor
     }
-    upgrades_to = @SMALL_LASER_T6
     resources = {
         category = ship_components
         cost = {
@@ -28,6 +28,7 @@ weapon_component_template = {
         }
     }
     ai_weight = {
+        weight = 1
         modifier = {
             factor = 0
             is_country_type = default

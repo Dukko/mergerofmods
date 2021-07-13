@@ -1,0 +1,38 @@
+utility_component_template = {
+    key = "MEDIUM_SHIELD_4"
+    size = medium
+    icon = "GFX_ship_part_shield_4"
+    icon_frame = 1
+    power = @power_M4
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @shield_m_t4_cost
+            exotic_gases = 0.5
+        }
+        upkeep = {
+            energy = @shield_m_t4_upkeep_energy
+            alloys = @shield_m_t4_upkeep_alloys
+        }
+    }
+    modifier = {
+        ship_shield_add = @shield_M4
+        ship_shield_regen_add_static = @regen_M4
+    }
+    prerequisites = {
+        "tech_shields_4"
+    }
+    component_set = "SHIELD_4"
+    upgrades_to = "MEDIUM_SHIELD_5"
+    ai_weight = {
+        weight = 1
+        modifier = {
+            factor = 0
+            is_country_type = default
+            resource_stockpile_compare = {
+                resource = exotic_gases
+                value <= 50
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+trait_drow = {
+    cost = 0
+    sorting_priority = 20
+    modification = no
+    randomized = no
+    initial = no
+    icon = "gfx/interface/icons/traits/trait_drow.dds"
+    leader_age_min = 100
+    leader_age_max = 400
+    modifier = {
+        leader_age = 625
+        planet_jobs_unity_produces_mult = -0.15
+        pop_environment_tolerance = -0.1
+    }
+    opposites = {
+        "trait_enduring"
+        "trait_venerable"
+        "trait_fleeting"
+    }
+    allowed_archetypes = {
+        DROW
+        BIOLOGICAL
+    }
+}

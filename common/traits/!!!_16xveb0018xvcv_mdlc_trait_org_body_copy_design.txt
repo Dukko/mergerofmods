@@ -5,7 +5,6 @@ xvcv_mdlc_trait_org_body_copy_design = {
     allowed_archetypes = {
         MACHINE
         ROBOT
-        XVCV_MDLC_BIO_ROBOT
     }
     icon = "gfx/interface/icons/traits/trait_fertile.dds"
     species_potential_add = {

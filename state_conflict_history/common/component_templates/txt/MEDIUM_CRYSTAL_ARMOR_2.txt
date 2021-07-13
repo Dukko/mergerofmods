@@ -14,12 +14,12 @@ utility_component_template = {
         "tech_crystal_armor_2"
     }
     component_set = "CRYSTAL_ARMOR_2"
-    upgrades_to = @MEDIUM_CRYSTAL_ARMOR_T3
+    upgrades_to = "MEDIUM_NHSC_CRYSTAL_ARMOR_3"
     modifier = {
         ship_hull_add = @armor_6M
     }
     ai_weight = {
-        weight = 1
+        weight = 10000
         modifier = {
             factor = 0
             no_resource_for_component = {

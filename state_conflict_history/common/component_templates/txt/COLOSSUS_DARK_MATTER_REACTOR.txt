@@ -1,0 +1,23 @@
+@colossus_power = 10000
+utility_component_template = {
+    key = "COLOSSUS_DARK_MATTER_REACTOR"
+    size = small
+    icon = "GFX_ship_part_dark_matter_power_core"
+    icon_frame = 1
+    power = @colossus_power
+    resources = {
+        category = ship_components
+    }
+    prerequisites = {
+        "tech_dark_matter_power_core"
+    }
+    component_set = "power_core"
+    size_restriction = {
+        colossus
+        star_eater
+    }
+    upgrades_to = "COLOSSUS_NHSC_DARK_MATTER_CORE_2"
+    ai_weight = {
+        weight = 6
+    }
+}

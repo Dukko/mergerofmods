@@ -1,0 +1,37 @@
+tech_emex_tma_advanced_data_storage = {
+    cost = @tier2cost1
+    area = engineering
+    tier = 2
+    category = {
+        industry
+    }
+    is_rare = no
+    prerequisites = {
+        tech_emex_tma_better_synth_brains
+    }
+    weight = @tier2weight1
+    modifier = {
+        country_resource_max_add = 2500
+        description = tma_progress3
+    }
+    weight_modifier = {
+        factor = 3
+        modifier = {
+            factor = 2
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 5
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+}

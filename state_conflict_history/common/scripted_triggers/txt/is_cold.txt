@@ -1,0 +1,25 @@
+is_cold = {
+    OR = {
+        is_planet_class = pc_arctic
+        is_planet_class = pc_tundra
+        is_planet_class = pc_alpine
+        is_planet_class = pc_swamp
+        is_planet_class = pc_mud
+        is_planet_class = pc_basalt
+        is_planet_class = pc_frozen_desert
+        is_planet_class = pc_glacial
+        is_planet_class = pc_boreal
+        is_planet_class = pc_mushroom
+        is_planet_class = pc_antarctic
+        is_planet_class = pc_aeolian
+        is_planet_class = pc_snow
+        is_planet_class = pc_highland
+        is_planet_class = pc_duneforest
+        is_planet_class = pc_storm
+        is_planet_class = pc_rogue
+        is_planet_class = pc_lichen
+        is_planet_class = pc_eyeball
+        is_planet_class = pc_glacio
+        is_planet_class = pc_lanthanide
+    }
+}

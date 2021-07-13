@@ -24,13 +24,8 @@ utility_component_template = {
         cruiser
         crisis_cruiser
         graygoo_interdictor
-        pasmod_assault_cruiser
-        rs_support_cruiser
-        rs_ea_cruiser
-        rs_battlecruiser
-        rs_carrier
     }
-    upgrades_to = @REACTORS_CC_T6
+    upgrades_to = "CRUISER_NHSC_ADV_REACTOR_1"
     ai_weight = {
         weight = 5
     }

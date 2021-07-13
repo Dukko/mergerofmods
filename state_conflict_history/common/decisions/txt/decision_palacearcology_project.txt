@@ -31,6 +31,8 @@ decision_palacearcology_project = {
             has_modifier = resort_colony
             has_modifier = penal_colony
             has_modifier = slave_colony
+            has_modifier = pm_wenkwort_custodian
+            is_pd_unique = yes
         }
         is_artificial = no
         exists = owner
@@ -65,7 +67,11 @@ decision_palacearcology_project = {
             fail_text = decision_palace_arcology_project_requirements
             num_districts = {
                 type = district_city
-                value >= 10
+                value >= 5
+            }
+            num_districts = {
+                type = district_industrial
+                value < 1
             }
             num_districts = {
                 type = district_farming
@@ -105,6 +111,14 @@ decision_palacearcology_project = {
             remove_modifier = pdeater
             IF = {
                 limit = {
+                    has_planet_flag = planet_earth
+                }
+                planet_event = {
+                    id = pdarcs.01
+                }
+            }
+            IF = {
+                limit = {
                     owner = {
                         NOT = {
                             has_trait = trait_pc_aquatic_preference
@@ -132,7 +146,7 @@ decision_palacearcology_project = {
                     }
                 }
                 set_planet_entity = {
-                    entity = "aquaticcity_planet_01_entity"
+                    entity = "aquaticpalace_planet_01_entity"
                     picture = "pc_aquaticpalacearc"
                 }
                 set_planet_flag = pdaquapicture

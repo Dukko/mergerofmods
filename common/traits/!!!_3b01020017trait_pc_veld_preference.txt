@@ -50,6 +50,7 @@ trait_pc_veld_preference = {
         pc_boreal_habitability = 0.2
         pc_snow_habitability = 0.2
         pc_mud_habitability = 0.2
+        pc_basalt_habitability = 0.2
         pc_swamp_habitability = 0.2
         pc_subarctic_habitability = 0.2
         pc_superhabitable_habitability = 0.2

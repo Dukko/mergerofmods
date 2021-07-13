@@ -1,0 +1,37 @@
+create_marauder_successor_fleet = {
+    random_owned_planet = {
+        save_event_target_as = fleet_position
+    }
+    create_leader = {
+        class = admiral
+        species = owner_main_species
+        name = random
+        skill = 3
+        leader_age_min = 25
+        leader_age_max = 45
+        traits = {
+            trait = leader_trait_mercenary_warrior
+            trait = random_trait
+        }
+    }
+    create_fleet = {
+        effect = {
+            set_owner = prev
+            create_dyn_marauder_fleet = {
+                OUTRIDER = 16
+                LANCER = 8
+            }
+            assign_leader = last_created_leader
+            set_location = {
+                target = event_target:fleet_position
+                distance = 45
+                angle = random
+            }
+        }
+        settings = {
+            uses_naval_capacity = no
+            can_upgrade = no
+            can_change_composition = no
+        }
+    }
+}

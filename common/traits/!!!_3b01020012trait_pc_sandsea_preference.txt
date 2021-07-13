@@ -42,6 +42,7 @@ trait_pc_sandsea_preference = {
         pc_aeolian_habitability = 0.2
         pc_snow_habitability = 0.2
         pc_mud_habitability = 0.2
+        pc_basalt_habitability = 0.2
         pc_continental_habitability = 0.2
         pc_ocean_habitability = 0.2
         pc_cascadian_habitability = 0.2

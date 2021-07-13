@@ -16,6 +16,7 @@ weapon_component_template = {
     ai_tags = {
         weapon_role_artillery
     }
+    ai_tag_weight = 0
     resources = {
         category = ship_components
         cost = {

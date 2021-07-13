@@ -1,0 +1,27 @@
+utility_component_template = {
+    key = "REACTOR_BOOSTER_1"
+    size = aux
+    icon = "GFX_ship_part_reactor_booster_1"
+    icon_frame = 1
+    power = 20
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = 5
+        }
+    }
+    prerequisites = {
+        "tech_reactor_boosters_1"
+    }
+    component_set = "REACTOR_BOOSTER_1"
+    upgrades_to = "REACTOR_BOOSTER_2"
+    ai_weight = {
+        weight = 3
+        modifier = {
+            factor = 100
+            not = {
+                has_technology = tech_fusion_power
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+tile_blocker_cleaner = {
+    icon = "GFX_starbase_tile_blocker_cleaner"
+    construction_days = 200
+    resources = {
+        category = starbase_buildings
+        cost = { alloys = 200 }
+        upkeep = { energy = 2 }
+    }
+    system_modifier = { deposit_blockers_cost_mult = -0.33 planet_clear_blocker_time_mult = -0.44 }
+    potential = { solar_system = { any_system_planet = { is_owned_by = from } } }
+    ai_build_at_chokepoint = no
+    ai_build_outside_chokepoint = yes    
+    ai_weight = {
+        weight = 50
+        modifier = { factor = 0.01 solar_system = { NOT = { any_system_planet = { is_owned_by = from } } } }
+    }
+}

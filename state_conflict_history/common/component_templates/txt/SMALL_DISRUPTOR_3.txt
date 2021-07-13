@@ -9,14 +9,13 @@ weapon_component_template = {
     }
     component_set = "DISRUPTOR_3"
     projectile_gfx = "disruptor_3_small"
+    upgrades_to = "SMALL_NHSC_DISRUPTOR_4"
     tags = {
         weapon_type_energy
     }
     ai_tags = {
         weapon_role_anti_hull
     }
-    ai_tag_weight = 5
-    upgrades_to = @SMALL_DISRUPTOR_T4
     resources = {
         category = ship_components
         cost = {

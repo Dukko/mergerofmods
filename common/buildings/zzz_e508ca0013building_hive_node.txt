@@ -25,7 +25,7 @@ building_hive_node = {
                         value > 30
                     }
                 }
-                not = {
+                nor = {
                     has_designation = col_research
                     is_capital = yes
                 }
@@ -39,6 +39,9 @@ building_hive_node = {
                 is_hive_empire = no
             }
             and = {
+                owner = {
+                    is_ai = yes
+                }
                 is_capital = yes
                 free_building_slots = 0
                 owner = {

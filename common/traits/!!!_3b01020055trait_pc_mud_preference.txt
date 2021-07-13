@@ -11,6 +11,7 @@ trait_pc_mud_preference = {
     }
     modifier = {
         pc_mud_habitability = 0.8
+        pc_basalt_habitability = 0.8
         pc_swamp_habitability = 0.8
         pc_snow_habitability = 0.8
         pc_boreal_habitability = 0.8

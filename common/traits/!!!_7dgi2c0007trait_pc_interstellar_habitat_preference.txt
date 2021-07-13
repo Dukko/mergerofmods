@@ -91,6 +91,7 @@ trait_pc_interstellar_habitat_preference = {
         pc_milarc_habitability = 0.4
         pc_milarc_relic_habitability = 0.4
         pc_corpoarc_habitability = 0.4
+        pc_basalt_habitability = 0.4
     }
     ai_weight = {
         weight = 0

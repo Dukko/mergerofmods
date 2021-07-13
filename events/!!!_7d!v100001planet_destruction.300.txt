@@ -345,6 +345,9 @@ planet_event = {
                 pc_mud = {
                     change_pc = pc_mud
                 }
+                pc_basalt = {
+                    change_pc = pc_basalt
+                }
                 pc_subarctic = {
                     change_pc = pc_subarctic
                 }

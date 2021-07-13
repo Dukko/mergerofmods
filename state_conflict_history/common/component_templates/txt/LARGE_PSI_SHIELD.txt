@@ -27,6 +27,13 @@ utility_component_template = {
     ai_weight = {
         weight = 1
         modifier = {
+            factor = 10000
+            or = {
+                has_technology = tech_crystal_armor_1
+                has_technology = tech_crystal_armor_2
+            }
+        }
+        modifier = {
             factor = 0
             is_country_type = default
             resource_stockpile_compare = {

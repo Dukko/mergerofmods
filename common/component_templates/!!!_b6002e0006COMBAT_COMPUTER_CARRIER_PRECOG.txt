@@ -1,0 +1,50 @@
+@power3 = -25
+@cost3 = 20
+utility_component_template = {
+    key = "COMBAT_COMPUTER_CARRIER_PRECOG"
+    size = small
+    icon = "GFX_ship_part_computer_carrier_precog"
+    icon_frame = 1
+    power = @power3
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @cost3
+        }
+    }
+    class_restriction = {
+        shipclass_military
+        shipclass_starbase
+        shipclass_military_special
+    }
+    size_restriction = {
+        cruiser
+        battleship
+        juggernaut
+        titan
+        star_eater
+        dreadnought
+        scavenger_bot
+    }
+    component_set = "combat_computers"
+    ship_behavior = "carrier"
+    prerequisites = {
+        "tech_precognition_interface"
+    }
+    ship_modifier = {
+        ship_engagement_range_mult = 0.75
+        ship_tracking_add = 10
+    }
+    ai_weight = {
+        weight = 400
+        modifier = {
+            factor = 0
+            or = {
+                has_technology = tech_energy_torpedoes_1
+                not = {
+                    has_technology = tech_strike_craft_1
+                }
+            }
+        }
+    }
+}

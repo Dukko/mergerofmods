@@ -30,6 +30,7 @@ trait_pc_aquatic_preference = {
         pc_med_habitability = 0.4
         pc_boreal_habitability = 0.4
         pc_mud_habitability = 0.4
+        pc_basalt_habitability = 0.4
         pc_veld_habitability = 0.3
         pc_semiarid_habitability = 0.3
         pc_mesa_habitability = 0.3

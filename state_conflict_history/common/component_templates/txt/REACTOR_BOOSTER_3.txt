@@ -14,7 +14,7 @@ utility_component_template = {
         "tech_reactor_boosters_3"
     }
     component_set = "REACTOR_BOOSTER_3"
-    upgrades_to = "NSC_REACTOR_BOOSTER_1"
+    upgrades_to = "NHSC_REACTOR_BOOSTER_4"
     ai_weight = {
         weight = 15
     }

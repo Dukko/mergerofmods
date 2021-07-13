@@ -1,3 +1,4 @@
+@nanite_district_cost = 300
 district_nanite_forgeworld_industry = {
     icon = district_nanite_forgeworld_industry
     base_buildtime = 240
@@ -15,7 +16,7 @@ district_nanite_forgeworld_industry = {
     resources = {
         category = planet_districts
         cost = {
-            minerals = 300
+            minerals = @nanite_district_cost
             nanites = 5
         }
         upkeep = {
@@ -44,21 +45,5 @@ district_nanite_forgeworld_industry = {
             }
         }
         text = job_fabricator_effect_desc
-    }
-    ai_weight = {
-        weight = 0
-        modifier = {
-            weight = 500
-            owner = {
-                has_monthly_income = {
-                    resource = alloys
-                    value < 500
-                }
-                has_monthly_income = {
-                    resource = minerals
-                    value > 99
-                }
-            }
-        }
     }
 }

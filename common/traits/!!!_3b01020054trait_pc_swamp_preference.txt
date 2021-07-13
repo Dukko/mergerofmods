@@ -13,6 +13,7 @@ trait_pc_swamp_preference = {
         pc_swamp_habitability = 0.8
         pc_boreal_habitability = 0.8
         pc_mud_habitability = 0.8
+        pc_basalt_habitability = 0.8
         pc_snow_habitability = 0.7
         pc_mushroom_habitability = 0.7
         pc_alpine_habitability = 0.6

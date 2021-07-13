@@ -11,7 +11,7 @@ building_clone_vats = {
             and = {
                 free_building_slots > 0
                 owner = {
-                    num_pops < 400
+                    num_pops < 1000
                 }
             }
         }
@@ -50,7 +50,7 @@ building_clone_vats = {
             and = {
                 owner = {
                     is_ai = yes
-                    num_pops > 450
+                    num_pops > 1500
                 }
             }
         }

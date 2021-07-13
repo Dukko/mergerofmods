@@ -55,6 +55,17 @@ create_first_diadochi = {
             copy_techs_from = {
                 target = root
             }
+            if = {
+                limit = {
+                    root = {
+                        num_owned_relics > 0
+                    }
+                }
+                steal_relic = {
+                    target = root
+                    relic = random
+                }
+            }
             every_owned_starbase = {
                 set_starbase_size = starbase_outpost
             }
@@ -167,41 +178,9 @@ create_first_diadochi = {
             create_fleet = {
                 effect = {
                     set_owner = event_target:first_diadochi
-                    while = {
-                        count = 32
-                        create_ship = {
-                            name = random
-                            design = "NAME_Outrider"
-                            prefix = no
-                            graphical_culture = "pirate_01"
-                        }
-                    }
-                    while = {
-                        count = 16
-                        create_ship = {
-                            name = random
-                            design = "NAME_Lancer"
-                            prefix = no
-                            graphical_culture = "pirate_01"
-                        }
-                    }
-                    while = {
-                        count = 12
-                        create_ship = {
-                            name = random
-                            design = "NAME_Void_Champion"
-                            prefix = no
-                            graphical_culture = "pirate_01"
-                        }
-                    }
-                    while = {
-                        count = 1
-                        create_ship = {
-                            name = random
-                            design = "NAME_Ancestral_Glory"
-                            prefix = no
-                            graphical_culture = "pirate_01"
-                        }
+                    create_dyn_marauder_fleet = {
+                        OUTRIDER = 16
+                        LANCER = 8
                     }
                     assign_leader = last_created_leader
                     set_location = {
@@ -213,78 +192,6 @@ create_first_diadochi = {
                 settings = {
                     uses_naval_capacity = no
                 }
-            }
-            create_marauder_successor_fleet = yes
-            create_marauder_successor_fleet = yes
-            if = {
-                limit = {
-                    any_country = {
-                        is_country_type = default
-                        OR = {
-                            fleet_power > 40000
-                            any_owned_planet = {
-                                has_planet_flag = fallen_empire_world
-                            }
-                        }
-                    }
-                }
-                create_marauder_successor_fleet = yes
-            }
-            if = {
-                limit = {
-                    any_country = {
-                        is_country_type = default
-                        OR = {
-                            fleet_power > 50000
-                            any_owned_planet = {
-                                has_planet_flag = fallen_empire_world
-                            }
-                        }
-                    }
-                }
-                create_marauder_successor_fleet = yes
-            }
-            if = {
-                limit = {
-                    any_country = {
-                        is_country_type = default
-                        OR = {
-                            fleet_power > 60000
-                            any_owned_planet = {
-                                has_planet_flag = fallen_empire_world
-                            }
-                        }
-                    }
-                }
-                create_marauder_successor_fleet = yes
-            }
-            if = {
-                limit = {
-                    any_country = {
-                        is_country_type = default
-                        OR = {
-                            fleet_power > 70000
-                            any_owned_planet = {
-                                has_planet_flag = fallen_empire_world
-                            }
-                        }
-                    }
-                }
-                create_marauder_successor_fleet = yes
-            }
-            if = {
-                limit = {
-                    any_country = {
-                        is_country_type = default
-                        OR = {
-                            fleet_power > 80000
-                            any_owned_planet = {
-                                has_planet_flag = fallen_empire_world
-                            }
-                        }
-                    }
-                }
-                create_marauder_successor_fleet = yes
             }
             create_leader = {
                 class = general
@@ -299,7 +206,7 @@ create_first_diadochi = {
                 effect = {
                     set_owner = event_target:first_diadochi
                     while = {
-                        count = 24
+                        count = 12
                         create_army_transport = {
                             ship_name = "NAME_Pirate_Transport"
                             graphical_culture = "mammalian_01"

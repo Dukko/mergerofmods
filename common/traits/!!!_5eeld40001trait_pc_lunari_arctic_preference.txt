@@ -32,6 +32,7 @@ trait_pc_lunari_arctic_preference = {
         pc_lichen_habitability = -0.1
         pc_lanthanide_habitability = -0.1
         pc_mud_habitability = -0.1
+        pc_basalt_habitability = 0.1
         pc_continental_habitability = -0.4
         pc_ocean_habitability = -0.4
         pc_mangrove_habitability = -0.4

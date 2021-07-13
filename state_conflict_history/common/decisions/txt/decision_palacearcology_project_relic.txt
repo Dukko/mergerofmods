@@ -64,6 +64,14 @@ decision_palacearcology_project_relic = {
             remove_modifier = pdeater
             IF = {
                 limit = {
+                    has_planet_flag = planet_earth
+                }
+                set_planet_entity = {
+                    entity = "earthpalacearc_planet_02_entity"
+                }
+            }
+            IF = {
+                limit = {
                     owner = {
                         NOT = {
                             has_trait = trait_pc_aquatic_preference
@@ -91,7 +99,7 @@ decision_palacearcology_project_relic = {
                     }
                 }
                 set_planet_entity = {
-                    entity = "aquaticcity_planet_01_entity"
+                    entity = "aquaticpalace_planet_01_entity"
                     picture = "pc_aquaticpalacearc"
                 }
                 set_planet_flag = pdaquapicture

@@ -28,7 +28,6 @@ district_throne_propaganda = {
     }
     planet_modifier = {
         planet_housing_add = 10
-        job_throne_propagandist_add = 2
     }
     triggered_planet_modifier = {
         potential = {
@@ -43,6 +42,7 @@ district_throne_propaganda = {
         modifier = {
             job_entertainer_add = 7
             job_culture_worker_add = 7
+            job_throne_propagandist_add = 2
         }
     }
     triggered_planet_modifier = {
@@ -56,6 +56,31 @@ district_throne_propaganda = {
         modifier = {
             job_duelist_add = 7
             job_culture_worker_add = 7
+            job_throne_propagandist_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_coordinator_add = 10
+            job_throne_propagandist_drone_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_synapse_drone_add = 10
+            job_throne_propagandist_drone_add = 2
         }
     }
     triggered_desc = {

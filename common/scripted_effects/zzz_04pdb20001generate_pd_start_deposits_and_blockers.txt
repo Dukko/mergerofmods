@@ -1157,6 +1157,51 @@ generate_pd_start_deposits_and_blockers = {
     }
     if = {
         limit = {
+            is_planet_class = pc_antarctic
+        }
+        add_deposit = d_hot_springs
+        add_deposit = d_frozen_gas_lake
+        add_deposit = d_geothermal_vent
+        if = {
+            limit = {
+                owner = {
+                    is_machine_empire = yes
+                }
+            }
+            add_deposit = d_frozen_gas_lake
+        }
+        if = {
+            limit = {
+                owner = {
+                    has_valid_civic = civic_machine_servitor
+                }
+            }
+            add_deposit = d_hot_springs
+        }
+        add_deposit = d_veiny_cliffs
+        add_deposit = d_ore_rich_caverns
+        add_deposit = d_rich_mountain
+        add_deposit = d_lichen_fields
+        add_deposit = d_fungal_caves
+        if = {
+            limit = {
+                owner = {
+                    is_machine_empire = no
+                }
+            }
+            if = {
+                limit = {
+                    owner = {
+                        is_lithoid_empire = yes
+                    }
+                }
+                add_deposit = d_rich_mountain
+            }
+            add_deposit = d_fungal_forest
+        }
+    }
+    if = {
+        limit = {
             is_planet_class = pc_aeolian
         }
         add_deposit = d_hot_springs
@@ -1293,6 +1338,51 @@ generate_pd_start_deposits_and_blockers = {
     if = {
         limit = {
             is_planet_class = pc_mud
+        }
+        add_deposit = d_hot_springs
+        add_deposit = d_frozen_gas_lake
+        add_deposit = d_geothermal_vent
+        if = {
+            limit = {
+                owner = {
+                    is_machine_empire = yes
+                }
+            }
+            add_deposit = d_frozen_gas_lake
+        }
+        if = {
+            limit = {
+                owner = {
+                    has_valid_civic = civic_machine_servitor
+                }
+            }
+            add_deposit = d_hot_springs
+        }
+        add_deposit = d_mineral_fields
+        add_deposit = d_ore_rich_caverns
+        add_deposit = d_rich_mountain
+        add_deposit = d_boggy_fens
+        add_deposit = d_fungal_caves
+        if = {
+            limit = {
+                owner = {
+                    is_machine_empire = no
+                }
+            }
+            if = {
+                limit = {
+                    owner = {
+                        is_lithoid_empire = yes
+                    }
+                }
+                add_deposit = d_rich_mountain
+            }
+            add_deposit = d_fungal_forest
+        }
+    }
+    if = {
+        limit = {
+            is_planet_class = pc_basalt
         }
         add_deposit = d_hot_springs
         add_deposit = d_frozen_gas_lake
@@ -2960,7 +3050,7 @@ generate_pd_start_deposits_and_blockers = {
                 add_deposit = d_fungal_forest
             }
         }
-        add_deposit = d_rad_blooms
+        add_deposit = d_rad_blooms_field
         if = {
             limit = {
                 not = {
@@ -2972,6 +3062,7 @@ generate_pd_start_deposits_and_blockers = {
                 days = -1
             }
         }
+        set_planet_flag = pd_natural_radiotropic_world
     }
     if = {
         limit = {
@@ -3158,16 +3249,16 @@ generate_pd_start_deposits_and_blockers = {
         limit = {
             is_planet_class = pc_floating
         }
-        add_deposit = d_hot_springs
-        add_deposit = d_rushing_waterfalls
-        add_deposit = d_tempestous_mountain
+        add_deposit = d_floating_energy_island
+        add_deposit = d_floating_energy_island
+        add_deposit = d_floating_energy_island
         if = {
             limit = {
                 owner = {
                     is_machine_empire = yes
                 }
             }
-            add_deposit = d_rushing_waterfalls
+            add_deposit = d_floating_energy_island
         }
         if = {
             limit = {
@@ -3175,33 +3266,32 @@ generate_pd_start_deposits_and_blockers = {
                     has_valid_civic = civic_machine_servitor
                 }
             }
-            add_deposit = d_hot_springs
+            add_deposit = d_floating_energy_island
         }
-        add_deposit = d_veiny_cliffs
-        add_deposit = d_prosperous_mesa
-        add_deposit = d_rich_mountain
-        add_deposit = d_green_hills
-        add_deposit = d_fertile_lands
+        add_deposit = d_floating_mineral_island
+        add_deposit = d_floating_mineral_island
+        add_deposit = d_floating_mineral_island
+        add_deposit = d_floating_food_island
         if = {
             limit = {
                 owner = {
                     is_machine_empire = no
                 }
             }
-            add_deposit = d_rugged_woods
+            add_deposit = d_floating_food_island
             if = {
                 limit = {
                     owner = {
                         is_lithoid_empire = yes
                     }
                 }
-                add_deposit = d_rich_mountain
+                add_deposit = d_floating_mineral_island
             }
             else = {
-                add_deposit = d_black_soil
+                add_deposit = d_floating_food_island
             }
         }
-        add_deposit = d_eludium_centre
+        add_deposit = d_eludium_islands
         set_planet_size = 20
         if = {
             limit = {
@@ -3214,6 +3304,9 @@ generate_pd_start_deposits_and_blockers = {
                 days = -1
             }
         }
+        remove_all_districts = yes
+        remove_all_buildings = yes
+        generate_start_buildings_and_districts = yes
     }
     if = {
         limit = {

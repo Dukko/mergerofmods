@@ -34,12 +34,18 @@ weapon_component_template = {
             factor = 600
             has_global_flag = prethoryn_invasion_happened
             not = {
-                has_global_flag = ai_invasion_defeated
+                has_global_flag = prethoryn_invasion_defeated
             }
         }
         modifier = {
             factor = 0
             has_global_flag = extradimensional_invasion_happened
+            or = {
+                not = {
+                    has_global_flag = prethoryn_invasion_happened
+                }
+                has_global_flag = prethoryn_invasion_defeated
+            }
             not = {
                 has_global_flag = extradimensional_invasion_defeated
             }

@@ -1,0 +1,41 @@
+utility_component_template = {
+    key = "SHIELD_BOOSTER"
+    size = aux
+    icon = "GFX_ship_part_shield_recharger"
+    icon_frame = 1
+    power = -20
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = 10
+            exotic_gases = 1
+        }
+    }
+    prerequisites = {
+        "tech_shield_rechargers_1"
+    }
+    component_set = "SHIELD_BOOSTER"
+    upgrades_to = "NHSC_ADV_SHIELD_RECHARGER"
+    modifier = {
+        ship_shield_mult = 0.1
+    }
+    ai_weight = {
+        weight = 10
+        modifier = {
+            factor = 2
+            is_preferred_weapons = weapon_type_energy
+            nhsc_is_playable_empire = yes
+            has_monthly_income = {
+                resource = exotic_gases
+                value > 0
+            }
+        }
+        modifier = {
+            factor = 0
+            nhsc_is_playable_empire = yes
+            no_resource_for_component = {
+                RESOURCE = exotic_gases
+            }
+        }
+    }
+}

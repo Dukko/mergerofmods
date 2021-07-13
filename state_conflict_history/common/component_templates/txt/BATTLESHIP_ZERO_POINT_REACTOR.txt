@@ -1,4 +1,4 @@
-@battleship_power_5 = 3100
+@battleship_power_5 = 1550
 @battleship_cost_5 = 224
 utility_component_template = {
     key = "BATTLESHIP_ZERO_POINT_REACTOR"
@@ -23,7 +23,7 @@ utility_component_template = {
     size_restriction = {
         battleship
     }
-    upgrades_to = "BATTLESHIP_DARK_MATTER_REACTOR"
+    upgrades_to = "BATTLESHIP_NHSC_ADV_REACTOR_1"
     ai_weight = {
         weight = 5
     }

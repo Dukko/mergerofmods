@@ -7,13 +7,13 @@ weapon_component_template = {
     icon = "GFX_ship_part_energy_lance_2"
     icon_frame = 1
     firing_arc = 25
-    min_range = 30
+    min_range = 5
     use_ship_kill_target = no
-    component_set = "TITAN_LASER"
-    projectile_gfx = "titan_laser"
     tags = {
         weapon_type_energy
     }
+    component_set = "TITAN_LASER"
+    projectile_gfx = "titan_laser"
     resources = {
         category = ship_components
         cost = {
@@ -27,5 +27,13 @@ weapon_component_template = {
     }
     ai_weight = {
         weight = 1
+        modifier = {
+            factor = 0
+            is_country_type = default
+            resource_stockpile_compare = {
+                resource = rare_crystals
+                value <= 100
+            }
+        }
     }
 }

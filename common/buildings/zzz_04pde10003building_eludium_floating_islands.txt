@@ -1,0 +1,62 @@
+building_eludium_floating_islands = {
+    base_buildtime = @b3_time
+    can_be_disabled = no
+    can_be_ruined = no
+    can_demolish = no
+    base_cap_amount = 1
+    category = amenity
+    potential = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+        NOR = {
+            is_planet_class = pc_floating
+            is_planet_class = pc_crystal
+            is_planet_class = pc_graveyard
+            is_planet_class = pc_technoorganic
+        }
+    }
+    allow = {
+        buildings_simple_allow = yes
+        has_major_upgraded_capital = yes
+    }
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            has_modifier = slave_colony
+            has_modifier = resort_colony
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            is_artificial = no
+        }
+        planet_max_districts_add = 2
+        planet_housing_add = 20
+        planet_amenities_add = 20
+    }
+    triggered_planet_modifier = {
+        potential = {
+            is_artificial = yes
+        }
+        planet_max_districts_add = 1
+        planet_housing_add = 20
+        planet_amenities_add = 20
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b3_minerals
+            sr_eludium = 1000
+        }
+        upkeep = {
+            energy = @b3_upkeep
+        }
+    }
+    prerequisites = {
+        "tech_eludium_floating_islands"
+    }
+}

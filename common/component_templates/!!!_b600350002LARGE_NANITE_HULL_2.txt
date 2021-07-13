@@ -1,0 +1,41 @@
+utility_component_template = {
+    key = "LARGE_NANITE_HULL_2"
+    size = large
+    icon = "GFX_ship_part_nanite_hull"
+    icon_frame = 1
+    power = -40
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @l_t6_cost
+            nanites = @xl_t5_rare
+        }
+        upkeep = {
+            energy = @l_t6_upkeep_energy
+            alloys = @l_t6_upkeep_alloys
+        }
+    }
+    prerequisites = {
+        "tech_nanocrystals"
+        "tech_nanite_living_metal"
+        "tech_nanite_hull"
+    }
+    component_set = "NANITE_HULL_2"
+    modifier = {
+        ship_hull_add = @armor_5L
+        ship_armor_add = @armor_1L
+        ship_hull_regen_add_static = 1.2
+        ship_armor_regen_add_static = 0.8
+    }
+    ai_weight = {
+        weight = 1
+        modifier = {
+            factor = 0
+            is_country_type_with_subjects = yes
+            resource_stockpile_compare = {
+                resource = nanites
+                value < 100
+            }
+        }
+    }
+}

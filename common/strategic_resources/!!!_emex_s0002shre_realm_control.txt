@@ -1,0 +1,7 @@
+shre_realm_control = {
+    tradable = no
+    max = 1000
+    ai_weight = {
+        weight = 1
+    }
+}

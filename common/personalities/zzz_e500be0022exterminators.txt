@@ -1,0 +1,48 @@
+exterminators = {
+    aggressiveness = 2
+    trade_willingness = 1
+    bravery = 1.5
+    combat_bravery = 1.5
+    military_spending = 1.2
+    colony_spending = 1.2
+    advanced_start_chance = 40
+    weapon_preferences = weapon_type_explosive
+    armor_ratio = 0.1
+    shields_ratio = 0.2
+    hull_ratio = 0.7
+    threat_modifier = 0
+    threat_others_modifier = 0
+    friction_modifier = 0
+    claims_modifier = 0
+    behaviour = {
+        conqueror = yes
+        subjugator = no
+        liberator = no
+        opportunist = yes
+        slaver = no
+        uplifter = no
+        purger = yes
+        displacer = no
+        dominator = yes
+        infiltrator = no
+        robot_exploiter = no
+        robot_liberator = yes
+        propagator = no
+        multispecies = no
+        crisis_fighter = no
+        attack_neutrals = yes
+    }
+    allow = {
+        OR = {
+            is_country_type = default
+            is_country_type = ark
+        }
+        AND = {
+            host_has_dlc = "Synthetic Dawn Story Pack"
+            has_valid_civic = "civic_machine_terminator"
+        }
+    }
+    weight_modifier = {
+        weight = 1000
+    }
+}

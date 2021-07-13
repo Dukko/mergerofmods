@@ -28,7 +28,7 @@ utility_component_template = {
         military_station_medium
         military_station_large
     }
-    upgrades_to = "PLATFORM_DARK_MATTER_REACTOR"
+    upgrades_to = "PLATFORM_NHSC_ADV_REACTOR_1"
     ai_weight = {
         weight = 5
     }

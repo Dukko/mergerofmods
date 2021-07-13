@@ -16,6 +16,7 @@ giga_tech_war_moon_1 = {
         ship_base_speed_mult = 0.1
     }
     prereqfor_desc = {
+        hide_prereq_for_desc = ship
         custom = {
             title = "giga_mobile_planet_quest_chain"
             desc = "giga_mobile_planet_quest_chain"

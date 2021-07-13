@@ -23,15 +23,15 @@ utility_component_template = {
     component_set = "power_core"
     size_restriction = {
         corvette
-        crisis_corvette
         colonizer
-        sponsored_colonizer
         lithoid_colonizer
+        sponsored_colonizer
         constructor
         science
         transport
+        crisis_corvette
     }
-    upgrades_to = "CORVETTE_GRAVITON_REACTOR"
+    upgrades_to = "CORVETTE_NHSC_DARK_MATTER_CORE_2"
     ai_weight = {
         weight = 6
         modifier = {

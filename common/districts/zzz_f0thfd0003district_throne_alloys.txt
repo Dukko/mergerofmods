@@ -30,7 +30,6 @@ district_throne_alloys = {
     }
     planet_modifier = {
         planet_housing_add = 10
-        job_throne_industrial_magnate_add = 2
     }
     triggered_planet_modifier = {
         potential = {
@@ -41,6 +40,7 @@ district_throne_alloys = {
         }
         modifier = {
             job_fabricator_add = 10
+            job_throne_industrial_magnate_drone_add = 2
         }
     }
     triggered_planet_modifier = {
@@ -52,6 +52,7 @@ district_throne_alloys = {
         }
         modifier = {
             job_alloy_drone_add = 10
+            job_throne_industrial_magnate_drone_add = 2
         }
     }
     triggered_planet_modifier = {
@@ -63,6 +64,7 @@ district_throne_alloys = {
         }
         modifier = {
             job_foundry_add = 10
+            job_throne_industrial_magnate_add = 2
         }
     }
     triggered_desc = {

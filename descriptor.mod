@@ -1,4 +1,4 @@
-name="IronyModManager_Dick_2.10"
+name="IronyModManager_Dick_2.20"
 tags={
 	"Fixes"
 }

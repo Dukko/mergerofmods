@@ -20,7 +20,6 @@ district_throne_science = {
     }
     triggered_planet_modifier = {
         planet_housing_add = 10
-        job_throne_research_foreman_add = 3
     }
     triggered_planet_modifier = {
         potential = {
@@ -34,6 +33,7 @@ district_throne_science = {
             job_chemist_add = 10
             job_gas_refiner_add = 10
             job_translucer_add = 10
+            job_throne_research_foreman_add = 3
         }
     }
     triggered_planet_modifier = {
@@ -48,6 +48,7 @@ district_throne_science = {
             job_chemist_drone_add = 10
             job_gas_refiner_drone_add = 10
             job_translucer_drone_add = 10
+            job_throne_foreman_drone_add = 3
         }
     }
     triggered_planet_modifier = {
@@ -62,6 +63,7 @@ district_throne_science = {
             job_chemist_drone_add = 10
             job_gas_refiner_drone_add = 10
             job_translucer_drone_add = 10
+            job_throne_foreman_drone_add = 3
         }
     }
 }

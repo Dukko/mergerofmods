@@ -1,1 +1,22 @@
-# This mod contains empty code. Possibly to overwrite other mods.
+@juggernaut_power_4 = 3750
+utility_component_template = {
+    key = "JUGGERNAUT_ANTIMATTER_REACTOR"
+    size = large
+    icon = "GFX_ship_part_reactor_4"
+    icon_frame = 1
+    power = @juggernaut_power_4
+    prerequisites = {
+        "tech_antimatter_power"
+    }
+    component_set = "power_core"
+    class_restriction = {
+        shipclass_starbase
+    }
+    size_restriction = {
+        juggernaut
+    }
+    upgrades_to = "JUGGERNAUT_ZERO_POINT_REACTOR"
+    ai_weight = {
+        weight = 4
+    }
+}

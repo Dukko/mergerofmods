@@ -1,0 +1,42 @@
+tech_emex_tma_intelligent_neural_emulation = {
+    cost = @tier3cost1
+    area = engineering
+    tier = 3
+    category = {
+        industry
+    }
+    is_rare = yes
+    prerequisites = {
+        tech_emex_tma_better_synth_brains
+        tech_sapient_ai
+    }
+    weight = @tier3weight1
+    modifier = {
+        planet_jobs_robotic_produces_mult = 0.05
+        description = tma_progress4
+    }
+    weight_modifier = {
+        factor = 2
+        modifier = {
+            factor = 2
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+    }
+    ai_weight = {
+        factor = 5
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+}

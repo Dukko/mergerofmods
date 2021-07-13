@@ -66,6 +66,14 @@ decision_capitalarcology_project_relic = {
             remove_modifier = pdeater
             IF = {
                 limit = {
+                    has_planet_flag = planet_earth
+                }
+                set_planet_entity = {
+                    entity = "earthcapitalarc_planet_02_entity"
+                }
+            }
+            IF = {
+                limit = {
                     owner = {
                         NOT = {
                             has_trait = trait_pc_aquatic_preference
@@ -93,7 +101,7 @@ decision_capitalarcology_project_relic = {
                     }
                 }
                 set_planet_entity = {
-                    entity = "aquaticcity_planet_01_entity"
+                    entity = "aquaticpalace_planet_01_entity"
                     picture = "pc_aquaticcapitalarc"
                 }
                 set_planet_flag = pdaquapicture
@@ -186,6 +194,7 @@ decision_capitalarcology_project_relic = {
                     entity = palacearcash_planet_01_entity
                 }
             }
+            add_deposit = d_former_relic_world
             IF = {
                 limit = {
                     owner = {
@@ -198,8 +207,24 @@ decision_capitalarcology_project_relic = {
                     entity = shroudpalacearc_planet_01_entity
                 }
             }
-            add_deposit = d_former_relic_world
-            add_building = building_senate_building
+            IF = {
+                limit = {
+                    NOT = {
+                        owner = {
+                            has_authority = auth_corporate
+                        }
+                    }
+                }
+                add_building = building_senate_building
+            }
+            IF = {
+                limit = {
+                    owner = {
+                        has_authority = auth_corporate
+                    }
+                }
+                add_building = building_grand_boardroom
+            }
             planet_event = {
                 id = mega.201
             }

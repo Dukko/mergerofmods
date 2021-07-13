@@ -286,6 +286,7 @@ traditionalist = {
                     has_country_flag = worm_tomb_ending
                     has_valid_civic = civic_memorialist
                     has_valid_civic = civic_physics_cult
+                    has_trait = trait_pc_irradiated_preference
                 }
             }
         }

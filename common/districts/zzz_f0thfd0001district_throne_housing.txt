@@ -19,8 +19,19 @@ district_throne_housing = {
     }
     planet_modifier = {
         planet_housing_add = 40
-        job_Clerical_Toiler_add = 10
-        job_throne_Zro_trader_add = 3
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_maintenance_drone_add = 15
+            job_Clerical_Toiler_add = 10
+            job_throne_Zro_trader_add = 3
+        }
     }
     triggered_planet_modifier = {
         potential = {
@@ -31,6 +42,8 @@ district_throne_housing = {
         }
         modifier = {
             job_maintenance_drone_add = 15
+            job_Clerical_Toiler_drone_add = 10
+            job_throne_Zro_drone_add = 3
         }
     }
     triggered_planet_modifier = {

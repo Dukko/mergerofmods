@@ -32,6 +32,7 @@ trait_pc_cascadian_preference = {
         pc_med_habitability = 0.4
         pc_prairie_habitability = 0.4
         pc_mud_habitability = 0.4
+        pc_basalt_habitability = 0.4
         pc_glacial_habitability = 0.4
         pc_alpine_habitability = 0.4
         pc_veld_habitability = 0.3

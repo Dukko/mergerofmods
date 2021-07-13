@@ -25,6 +25,7 @@ trait_pc_alpine_preference = {
         pc_antarctic_habitability = 0.5
         pc_aeolian_habitability = 0.5
         pc_mud_habitability = 0.5
+        pc_basalt_habitability = 0.5
         pc_prairie_habitability = 0.5
         pc_med_habitability = 0.5
         pc_retinal_habitability = 0.5

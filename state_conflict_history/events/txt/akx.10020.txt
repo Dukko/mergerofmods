@@ -32,6 +32,7 @@ planet_event = {
                         is_planet_class = pc_relic
                         is_star = yes
                         giga_habitable_structure = yes
+                        is_pd_arcology = yes
                     }
                 }
                 every_owned_pop = {
@@ -152,6 +153,20 @@ planet_event = {
                 change_pc = pc_nuked
                 set_planet_flag = nuked_planet_anomalies_disabled
                 reroll_planet = yes
+                }
+                if = {
+                    limit = {
+                        has_building = building_hab_capital
+                    }
+                    remove_building = building_hab_capital
+                    add_building = building_capital
+                }
+                if = {
+                    limit = {
+                        has_building = building_hab_major_capital
+                    }
+                    remove_building = building_hab_major_capital
+                    add_building = building_major_capital
                 }
             }
             every_system_planet = {

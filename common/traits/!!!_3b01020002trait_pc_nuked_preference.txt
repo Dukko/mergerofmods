@@ -48,6 +48,7 @@ trait_pc_nuked_preference = {
         pc_tundra_habitability = 0.6
         pc_swamp_habitability = 0.6
         pc_mud_habitability = 0.6
+        pc_basalt_habitability = 0.6
         pc_frozen_desert_habitability = 0.6
         pc_glacial_habitability = 0.6
         pc_boreal_habitability = 0.6

@@ -9,13 +9,13 @@ weapon_component_template = {
     }
     component_set = "AUTOCANNON_3"
     projectile_gfx = "stormfire_auto_cannons_s"
+    upgrades_to = "NHSC_AUTOCANNON_4"
     tags = {
         weapon_type_kinetic
     }
     ai_tags = {
         weapon_role_anti_shield
     }
-    upgrades_to = @AUTOCANNON_T4
     resources = {
         category = ship_components
         cost = {

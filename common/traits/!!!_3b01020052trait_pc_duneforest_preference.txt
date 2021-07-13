@@ -25,6 +25,7 @@ trait_pc_duneforest_preference = {
         pc_swamp_habitability = 0.5
         pc_glacial_habitability = 0.5
         pc_mud_habitability = 0.5
+        pc_basalt_habitability = 0.5
         pc_mesa_habitability = 0.5
         pc_badlands_habitability = 0.5
         pc_hadesert_habitability = 0.5

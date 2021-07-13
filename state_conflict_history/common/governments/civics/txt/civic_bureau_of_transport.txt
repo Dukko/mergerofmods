@@ -17,8 +17,9 @@ civic_bureau_of_transport = {
         base = 4
     }
     modifier = {
-        ship_ftl_jumpdrive_range_mult = 0.15
+        ship_interstellar_speed_mult = 0.15
         ship_speed_mult = 0.1
+        ship_ftl_jumpdrive_range_mult = 0.1
         ships_upkeep_mult = 0.1
     }
 }

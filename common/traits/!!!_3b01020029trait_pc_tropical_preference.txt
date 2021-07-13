@@ -52,6 +52,7 @@ trait_pc_tropical_preference = {
         pc_aeolian_habitability = 0.2
         pc_snow_habitability = 0.2
         pc_mud_habitability = 0.2
+        pc_basalt_habitability = 0.2
         pc_geothermal_habitability = 0.8
         pc_superhabitable_habitability = 0.8
         pc_tidallylocked_habitability = 0.4

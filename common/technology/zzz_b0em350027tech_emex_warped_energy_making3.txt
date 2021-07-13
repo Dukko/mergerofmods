@@ -1,0 +1,29 @@
+tech_emex_warped_energy_making3 = {
+    cost = @tier2cost2
+    area = physics
+    tier = 3
+    category = {
+        particles
+    }
+    is_rare = no
+    prerequisites = {
+        tech_emex_warped_energy_making2
+    }
+    weight = @tier2weight2
+    potential = {
+        has_global_flag = master_ai_project_complete
+    }
+    weight_modifier = {
+        factor = 5
+    }
+    ai_weight = {
+        factor = 5
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+}
