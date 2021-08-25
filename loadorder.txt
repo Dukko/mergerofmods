@@ -130,7 +130,7 @@ Separate Peace Treaties
 Shut Up, We Don't Care! (3.0)
 【3.0.2】Shroud Expanded【虚境扩展】The Decadance of Sanity--理智的终末癫狂
 Shadowgate
-Scientist AI Assistant Upgrader
+Leader Traits: Scientist AI Assistant Upgrader
 Robot Rights
 Resettle Colony
 resettlement_mod
@@ -183,7 +183,7 @@ Viable Feudalism and Imperialism - Empire Federation
 Vassals Expanded and Reworked - 3.0
 Vassals Expanded and Reworked - Exalted Domination Patch
 Vassals Love Powerful Overlords
-WhiteGold
+White-Gold Shipset
 We are the Imperial Navy
 WAIN Color Scheme pack
 Vaygr Shipset
