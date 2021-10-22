@@ -107,7 +107,7 @@ Experienced Leaders
 Experience Adjustments
 Expanded Mandates
 Expanded Diplomacy and Espionage
-Espionage Operation: Influence Ethics
+Espionage Operation: Influence Ethics 
 Espionage Extended <Eng/Rus ver.>
 End Truce & Close Borders
 Dynamic Mod Menu (3.1.*)
@@ -233,7 +233,6 @@ Stellerotica - Human Hair v2
 VF EF - Federations Expanded Patch
 VF EF - Exalted Domination Patch
 Vassals Expanded and Reworked - Exalted Domination Patch
-System Scale/AOT Compatability Patch
 Starnet + Planetary Collection
 Shattered Ring Shipset Fix
 RLS + Dark UI Patch
