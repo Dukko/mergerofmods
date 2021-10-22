@@ -96,6 +96,7 @@ Legendary Worlds 2.7.x
 Intrigue, Sabotage, & Espionage Expanded Uses
 Intervene: Help Friendly Nations - 3.*
 Influence Cap+
+Higher Fallen Empire Limit
 Habitats Capped Dynamic
 Get Off My Lawn!
 Gateway Policy Federation
