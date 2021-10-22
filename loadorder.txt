@@ -61,6 +61,7 @@ Spaceborne Civs Expanded
 Silfae's Portraits with updated city sets - organics
 Segek's Animated Portraits
 Primitive Worlds for 3.x
+Mucor
 Mass Effect Civilizations - Asari
 LLX's Mods - Compiled Dimorphism (3.0 'Dick')
 Extra Fallen Empires
@@ -88,6 +89,7 @@ More Origins Mod
 More Origins - Planetary Diversity compat
 More Default Origins
 Machine & Robot Expansion
+Inflection Point
 Guillified Precursor Story Pack (Compat Patch)
 Fatal Foundations Story Pack [3.0]
 Grand Custodianship
@@ -107,6 +109,7 @@ Don't Panic -Phantom's Recreation-
 Basic Ordinary Origins
 AutoFabs Origin
 Auto Gene Assimilation
+At War: Advanced Ship Sections (3.0.3)
 At War: Better Admiral Experience (3.0.3)
 At War: Carrier Improvements (3.0.3)
 At War: Defense Platform Longevity(3.0.3)
@@ -127,7 +130,7 @@ Separate Peace Treaties
 Shut Up, We Don't Care! (3.0)
 【3.0.2】Shroud Expanded【虚境扩展】The Decadance of Sanity--理智的终末癫狂
 Shadowgate
-Scientist AI Assistant Upgrader
+Leader Traits: Scientist AI Assistant Upgrader
 Robot Rights
 Resettle Colony
 resettlement_mod
@@ -180,10 +183,12 @@ Viable Feudalism and Imperialism - Empire Federation
 Vassals Expanded and Reworked - 3.0
 Vassals Expanded and Reworked - Exalted Domination Patch
 Vassals Love Powerful Overlords
+White-Gold Shipset
 We are the Imperial Navy
 WAIN Color Scheme pack
 Vaygr Shipset
 United Fleet Shipset
+Unbidden Ship Set (standalone)
 Titan Interdictor Module
 Taidian Shipset
 Stellar-Naval Ship Art Pack
@@ -200,6 +205,7 @@ Kurogane Expanded (New)
 Hiigara Shipset
 Formidable Star Eater - The Companion Cube
 Federation Builders: Ships and Cities
+Enigmatic Shipset
 Dark necroid ships [2.8]
 Dark Mammalian Ships
 Dark humanoid ships
@@ -351,6 +357,7 @@ Diverse New Frontiers
 Giga Diversity
 Galactic Market Foundation Tweak
 Galactic Community Expanded Defines
+Fleet Formation Mod v3.0.+ (Real Space -System Scale)
 Fishbowl Robot Head Fix
 Federations - No Hard Feelings for Declined Votes
 Elves of Stellaris - Planetary Diversity Patch v3.0
@@ -359,6 +366,7 @@ Crisis Manager - Mid-Game Edition (3.0.¢)
 Crimewave: Crime and Criminal Heritage AI Overhaul
 Civics Expanded+ & E&C Alternative Compatibility Patch
 Caravaneers and Nomads coexist
+Automated Dreadnought Fix - 2.8 Compatible
 More Civic Points [S-02]
 Stellaris Enhanced Sound Project
 Magnum's Mods - Tradition Cost Scaling
