@@ -1,5 +1,0 @@
-pragmatic_development_1 = {
-    pop_environment_tolerance = -0.02
-    icon = "gfx/interface/icons/planet_modifiers/pm_pragmatic_development_1.dds"
-    icon_frame = 1
-}

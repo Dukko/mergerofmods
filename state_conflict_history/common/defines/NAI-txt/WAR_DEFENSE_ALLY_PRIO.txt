@@ -1,3 +1,0 @@
-NAI = {
-    WAR_DEFENSE_ALLY_PRIO = 0.3
-}

@@ -1,3 +1,0 @@
-NCamera = {
-    FOV = 45
-}

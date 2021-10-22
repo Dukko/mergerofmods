@@ -1,3 +1,0 @@
-NGameplay = {
-    ENFORCE_STATUS_QUO_MONTHS = 60
-}

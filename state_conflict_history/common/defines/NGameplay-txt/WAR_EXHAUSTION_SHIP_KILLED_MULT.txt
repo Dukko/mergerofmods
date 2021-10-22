@@ -1,3 +1,0 @@
-NGameplay = {
-    WAR_EXHAUSTION_SHIP_KILLED_MULT = 0.25
-}

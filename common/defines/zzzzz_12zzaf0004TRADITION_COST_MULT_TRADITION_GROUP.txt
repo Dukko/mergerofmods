@@ -1,3 +1,0 @@
-NGameplay = {
-    TRADITION_COST_MULT_TRADITION_GROUP = 0.025
-}

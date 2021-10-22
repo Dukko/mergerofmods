@@ -1,5 +1,0 @@
-on_entering_system_fleet = {
-    events = {
-        midas.3112
-    }
-}

@@ -1,7 +1,0 @@
-eternal_night = {
-    pop_environment_tolerance = -0.15
-    biological_pop_happiness = -0.1
-    planet_jobs_food_produces_mult = -0.5
-    icon = "gfx/interface/icons/planet_modifiers/pm_eternal_night.dds"
-    icon_frame = 3
-}

@@ -1,9 +1,0 @@
-tech_dream_ridden = {
-    cost = @tier1cost2
-    area = society
-    tier = 2
-    category = {
-        biology
-    }
-    weight = 0
-}

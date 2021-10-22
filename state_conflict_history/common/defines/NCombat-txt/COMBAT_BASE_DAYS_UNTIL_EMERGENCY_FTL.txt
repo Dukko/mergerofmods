@@ -1,3 +1,0 @@
-NCombat = {
-    COMBAT_BASE_DAYS_UNTIL_EMERGENCY_FTL = 130
-}

@@ -1,9 +1,0 @@
-action_break_research_agreement = {
-    icon = "GFX_diplomacy_status_research_agreement"
-    auto_accepted = yes
-    requires_actor_independence = no
-    requires_recipient_independence = no
-    should_notify_all_communications = no
-    should_show_auto_accept_message_recipient = yes
-    action_type = negative
-}

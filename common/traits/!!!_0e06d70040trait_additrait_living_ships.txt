@@ -1,6 +1,0 @@
-trait_additrait_living_ships = {
-    cost = 1
-    allowed_archetypes = {
-        BIOLOGICAL
-    }
-}

@@ -1,8 +1,0 @@
-random_list = {
-    name = "elven_01_random_planets_cold"
-    planets = {
-        "pc_tundra"
-        "pc_arctic"
-        "pc_alpine"
-    }
-}

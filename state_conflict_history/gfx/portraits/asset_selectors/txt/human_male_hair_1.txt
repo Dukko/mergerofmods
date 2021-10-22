@@ -1,3 +1,0 @@
-human_male_hair_1 = {
-    default = "gfx/models/portraits/human/clothes/human_male_hair_blonde_style_03_and_beard_light_style_01.dds"
-}

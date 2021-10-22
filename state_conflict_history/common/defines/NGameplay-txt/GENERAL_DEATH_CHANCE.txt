@@ -1,3 +1,0 @@
-NGameplay = {
-    GENERAL_DEATH_CHANCE = 0
-}

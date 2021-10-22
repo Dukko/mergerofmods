@@ -1,3 +1,0 @@
-NCamera = {
-    SYSTEM_HOVER_RANGE = 0.009
-}

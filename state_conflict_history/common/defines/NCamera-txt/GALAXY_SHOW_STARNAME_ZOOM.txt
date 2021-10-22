@@ -1,3 +1,0 @@
-NCamera = {
-    GALAXY_SHOW_STARNAME_ZOOM = 650
-}

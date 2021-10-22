@@ -1,3 +1,0 @@
-NGraphics = {
-    STRIKE_CRAFT_HEIGHT_RANDOM = 60
-}

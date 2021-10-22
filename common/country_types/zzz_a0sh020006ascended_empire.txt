@@ -1,5 +1,0 @@
-ascended_empire = {
-    ai = {
-        enabled = no
-    }
-}
