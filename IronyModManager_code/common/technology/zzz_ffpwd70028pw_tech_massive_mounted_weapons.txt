@@ -1,0 +1,32 @@
+pw_tech_massive_mounted_weapons = {
+    area = engineering
+    category = {
+        propulsion
+    }
+    cost = @pw_research_tech_cost_1
+    tier = 5
+    prerequisites = {
+        pw_tech_abyssal_crater_test_site
+    }
+    weight = 0
+    is_rare = yes
+    potential = {
+        any_owned_planet = {
+            pw_planet_has_abyssal_test_crater = yes
+        }
+    }
+    modifier = {
+        weapon_type_kinetic_weapon_damage_mult = 0.1
+        weapon_type_kinetic_weapon_fire_rate_mult = 0.05
+    }
+    ai_weight = {
+        factor = @pw_tech_ai_weight
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = leader_trait_expertise_propulsion
+            }
+        }
+    }
+}

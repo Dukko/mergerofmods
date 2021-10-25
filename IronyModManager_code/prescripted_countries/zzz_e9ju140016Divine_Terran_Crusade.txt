@@ -1,0 +1,73 @@
+"Divine Terran Crusade" = {
+    key = "Divine Terran Crusade"
+    ship_prefix = "ICV"
+    species = {
+        class = "HUM"
+        portrait = "human"
+        name = "Human"
+        plural = "Humans"
+        adjective = "Human"
+        species_bio = "In its Late Space Age, Terra was ravaged by a powerful marauder fleet lured there by a rogue AI's errant transmissions. Though outmatched, the Humans of Terra did what few primitive species have ever done. Despite atrocious losses and the complete collapse of their old societies, they captured and reverse engineered the attackers' military technologies. Under the leadership of a mysterious figure known only as Salazar, the Humans threw the xenos out of the Sol System. Crowned Imperator by his victorious armies, Salazar proclaimed this was but the first triumph in a Great Crusade to cleanse the galaxy of all enemies, both alien and internal, to ensure Humanity's destiny as masters of creation."
+        name_list = "just-name-lists_human4"
+        trait = "trait_survivor"
+        trait = "trait_adaptive"
+    }
+    name = "Divine Terran Crusade"
+    adjective = "Terran"
+    authority = "auth_imperial"
+    flags = {
+        "divine_terran_crusade"
+        "custom_start_screen"
+        "divine_terran_crusade"
+        "custom_start_screen"
+    }
+    government = "gov_blood_court"
+    planet_name = "Holy Terra"
+    planet_class = "pc_continental"
+    system_name = "Sol"
+    initializer = "sol_system_initializer"
+    graphical_culture = "arthropoid_01"
+    city_graphical_culture = "humanoid_01"
+    empire_flag = {
+        icon = {
+            category = "just-more-flags"
+            file = "flag_divine_terran_crusade.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "fabric_x60x3.dds"
+        }
+        colors = {
+            "dark_grey"
+            "black"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = male
+        name = "Tiberius Salazar"
+        portrait = "human_male_03"
+        texture = 0
+        hair = 11
+        clothes = 5
+        ruler_title = "Imperator"
+        heir_title = "Lord Solar"
+        ruler_title_female = "Imperatrix"
+        heir_title_female = "Lady Solar"
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "imperium1_room"
+    spawn_enabled = yes
+    ethic = "ethic_authoritarian"
+    ethic = "ethic_fanatic_xenophobe"
+    ethic = "ethic_fanatic_spiritualist"
+    civics = {
+        "civic_fanatic_purifiers"
+        "civic_mining_guilds"
+        "civic_exalted_priesthood"
+    }
+    origin = "origin_post_apocalyptic"
+}

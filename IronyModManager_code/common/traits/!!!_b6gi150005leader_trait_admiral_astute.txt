@@ -1,0 +1,22 @@
+leader_trait_admiral_astute = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/trait_astute.dds"
+    leader_trait = all
+    self_modifier = {
+        leader_age = 80
+    }
+    modifier = {
+        ships_upkeep_mult = -0.3
+        ship_disengage_chance_mult = 0.75
+        ship_emergency_ftl_mult = -0.45
+    }
+    leader_class = {
+        admiral
+    }
+    initial = no
+    randomized = no
+    ai_weight = {
+        weight = 0
+    }
+}

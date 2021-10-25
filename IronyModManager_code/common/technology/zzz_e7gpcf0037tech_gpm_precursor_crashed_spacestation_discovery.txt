@@ -1,0 +1,18 @@
+tech_gpm_precursor_crashed_spacestation_discovery = {
+    area = engineering
+    cost = @tier2cost1
+    category = {
+        materials
+    }
+    tier = 2
+    is_rare = yes
+    ai_update_type = all
+    weight = 1
+    modifier = {
+        starbase_modules_cost_mult = -0.25
+        starbase_buildings_cost_mult = -0.25
+    }
+    weight_modifier = {
+        factor = 0
+    }
+}

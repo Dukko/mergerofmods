@@ -1,0 +1,45 @@
+tech_precursor_bc_cost = {
+    area = engineering
+    cost = @acot_tier7cost2
+    tier = 7
+    is_rare = yes
+    category = {
+        voidcraft
+    }
+    ai_update_type = military
+    weight = 0
+    icon = tech_precursor_bc_alpha
+    potential = {
+        NOT = {
+            is_country_type = fallen_empire
+        }
+    }
+    modifier = {
+        shipsize_precursor_battlecruiser_build_speed_mult = 0.25
+        shipsize_precursor_battlecruiser_hull_add = 6000
+    }
+    weight_modifier = {
+        factor = 0
+    }
+    prerequisites = {
+        tech_precursor_bc
+    }
+    ai_weight = {
+        factor = 5
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+}

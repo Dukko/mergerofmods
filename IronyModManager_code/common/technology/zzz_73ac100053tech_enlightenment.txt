@@ -1,0 +1,46 @@
+tech_enlightenment = {
+    cost = @acot_tier6cost2
+    area = society
+    tier = 6
+    is_rare = yes
+    category = {
+        statecraft
+    }
+    prerequisites = {
+        "tech_vitality_boosters"
+    }
+    weight = 25
+    potential = {
+        NOT = {
+            has_global_flag = acot_ethictech_forbidden
+        }
+        is_regular_empire = yes
+    }
+    modifier = {
+        species_leader_exp_gain = 0.2
+        biological_pop_happiness = 0.2
+        pop_government_ethic_attraction = 0.2
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            has_unlocked_all_traditions = no
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+}

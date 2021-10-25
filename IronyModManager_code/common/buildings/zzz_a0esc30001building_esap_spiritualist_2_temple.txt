@@ -1,0 +1,85 @@
+building_esap_spiritualist_2_temple = {
+    base_buildtime = 240
+    base_cap_amount = 1
+    category = unity
+    potential = {
+        exists = owner
+        always = no
+        owner = {
+            is_spiritualist = yes
+            has_ascension_perk = ap_esap_spiritualist_2
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+        OR = {
+            owner = {
+                is_ai = no
+            }
+            free_building_slots > 0
+        }
+        OR = {
+            has_building = building_temple
+            has_building = building_holotemple
+            has_building = building_sacred_nexus
+            has_building = building_citadel_of_faith
+        }
+    }
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            owner = {
+                is_spiritualist = no
+            }
+            owner = {
+                Not = {
+                    has_ascension_perk = ap_esap_spiritualist_2
+                }
+            }
+            has_modifier = slave_colony
+        }
+    }
+    convert_to = {
+        building_hive_node
+        building_uplink_node
+        building_autochthon_monument
+        building_corporate_monument
+    }
+    planet_modifier = {
+        job_priest_add = 2
+        pop_ethic_spiritualist_attraction_mult = 0.05
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 200
+        }
+        upkeep = {
+            energy = 1
+        }
+    }
+    upgrades = {
+        building_esap_spiritualist_2_holotemple
+    }
+    prerequisites = {
+        "tech_cultural_heritage"
+    }
+    show_tech_unlock_if = {
+        is_spiritualist = yes
+    }
+    triggered_desc = {
+        text = job_priest_effect_desc
+    }
+    ai_weight = {
+        weight = 35
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = consumer_goods
+                    value < 8
+                }
+            }
+        }
+    }
+}

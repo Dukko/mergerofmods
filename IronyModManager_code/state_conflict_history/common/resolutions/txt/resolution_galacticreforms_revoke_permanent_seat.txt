@@ -1,0 +1,59 @@
+@resolution_weight_disliked = 4
+@resolution_cost_t5 = 300
+resolution_galacticreforms_revoke_permanent_seat = {
+    icon = "GFX_resolution_council_member_permanent"
+    potential = {
+        has_federations_dlc = yes
+        is_galactic_council_established = yes
+        has_galactic_emperor = no
+    }
+    resources = {
+        category = resolutions
+        cost = {
+            influence = @resolution_cost_t5
+        }
+    }
+    target = yes
+    harmful = yes
+    valid_target = {
+        OR = {
+            is_country_type = default
+            is_country_type = ascended_empire
+            is_country_type = lost_empire
+        }
+        is_galactic_community_member = yes
+        is_part_of_galactic_council = yes
+        is_permanent_councillor = yes
+    }
+    effect = {
+        hidden_effect = {
+            add_modifier = {
+                modifier = resolution_passed_diplomatic_weight
+                days = 2200
+            }
+        }
+        remove_permanent_councillor = yes
+    }
+    potential = {
+        is_galactic_council_established = yes
+    }
+    ai_weight = {
+        weight = @resolution_weight_disliked
+        modifier = {
+            factor = 0
+            is_same_value = from
+        }
+        modifier = {
+            factor = 2
+            is_rival = from
+        }
+        modifier = {
+            factor = 0.8
+            is_authoritarian = yes
+        }
+        modifier = {
+            factor = 0.8
+            has_ethic = ethic_fanatic_authoritarian
+        }
+    }
+}

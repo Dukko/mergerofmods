@@ -1,0 +1,22 @@
+building_giga_aeternum_quantum_reactor = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = no
+    ai_weight = {
+        weight = 0
+    }
+    potential = {
+        always = no
+    }
+    resources = {
+        category = planet_buildings
+        produces = {
+            energy = 1000
+        }
+    }
+    planet_modifier = {
+        planet_jobs_energy_produces_mult = 0.15
+        planet_jobs_energy_upkeep_mult = -0.25
+    }
+}

@@ -1,0 +1,27 @@
+tech_dark_matter_power_core_pe = {
+    area = physics
+    category = {
+        particles
+    }
+    tier = 10
+    cost = @acot_tier10cost1
+    weight = 0
+    ai_update_type = all
+    is_rare = yes
+    is_reverse_engineerable = no
+    potential = {
+        has_country_flag = acot_phanon_tech_enabled
+        NOT = {
+            has_global_flag = acot_phanon_forbidden
+        }
+    }
+    prerequisites = {
+    }
+    prereqfor_desc = {
+        hide_prereq_for_desc = component
+        custom = {
+            title = "TECH_UNLOCK_DARK_MATTER_POWER_PE_TITLE"
+            desc = "TECH_UNLOCK_DARK_MATTER_POWER_PE_DESC"
+        }
+    }
+}

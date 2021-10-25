@@ -1,0 +1,66 @@
+"Galtanian Unistatic Regime" = {
+    key = "Galtanian Unistatic Regime"
+    ship_prefix = "GRS"
+    species = {
+        class = "MAM"
+        portrait = "mam2"
+        name = "Cassor"
+        plural = "Cassors"
+        adjective = "Cassorian"
+        species_bio = "Cassorian civilization is controlled by a million little tyrants, each the despot of his or her laboratory or classroom or factory. Having thrown off the shackles of an oppressive theocratic regime that was content to let them all die in a great Warm Age, the natives of the arctic planet Galtan set about reconstructing their society along scientific principles. Thus they avoided a catastrophic Global Melting and bought time to develop spaceflight and become an interstellar empire. They didn't really do away with the oppression though. As Dr. Gadar Gimcham famously said, 'ACKCHYUALLY, the Unistatic system is very logical, so maybe educate yourself before you criticize our methods.'"
+        name_list = "just-name-lists_mammalian4"
+        trait = "trait_intelligent"
+        trait = "trait_quick_learners"
+        trait = "trait_talented"
+        trait = "trait_just-more-traits_idle"
+        trait = "trait_just-more-traits_lazy"
+    }
+    name = "Galtanian Unistatic Regime"
+    adjective = "Galtanian"
+    authority = "auth_dictatorial"
+    government = "gov_totalitarian_regime"
+    planet_name = "Galtan"
+    planet_class = "pc_arctic"
+    system_name = "Ennari"
+    initializer = ""
+    graphical_culture = "mammalian_01"
+    city_graphical_culture = "mammalian_01"
+    empire_flag = {
+        icon = {
+            category = "just-more-flags"
+            file = "flag_materialist5.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "fabric_stripe_rotated.dds"
+        }
+        colors = {
+            "dark_blue"
+            "dark_purple"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = female
+        name = "Dr. Gadar Gimcham"
+        portrait = "mam2"
+        texture = 4
+        hair = 0
+        clothes = 1
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "mech1_room"
+    spawn_enabled = yes
+    ethic = "ethic_authoritarian"
+    ethic = "ethic_fanatic_militarist"
+    ethic = "ethic_fanatic_materialist"
+    civics = {
+        "civic_technocracy"
+        "civic_meritocracy"
+        "civic_shadow_council"
+    }
+    origin = "origin_mechanists"
+}

@@ -1,0 +1,33 @@
+tech_lightmatter_reactor = {
+    area = physics
+    cost = @acot_tier9cost2
+    tier = 9
+    category = {
+        particles
+    }
+    ai_update_type = military
+    is_rare = yes
+    is_reverse_engineerable = no
+    weight = 0
+    weight_modifier = {
+        factor = 0
+    }
+    potential = {
+        NOT = {
+            has_global_flag = acot_shipcom_forbidden
+        }
+        OR = {
+            is_progenitor_empires = yes
+            has_country_flag = acquired_light_matter
+        }
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "TECH_UNLOCK_ORIGIN_REACTOR_TITLE"
+            desc = "TECH_UNLOCK_ORIGIN_REACTOR_DESC"
+        }
+    }
+    ai_weight = {
+        factor = 200
+    }
+}

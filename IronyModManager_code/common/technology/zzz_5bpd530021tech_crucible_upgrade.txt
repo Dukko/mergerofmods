@@ -1,0 +1,37 @@
+tech_crucible_upgrade = {
+    icon = tech_crucible_study
+    cost = 12000
+    area = engineering
+    tier = 1
+    category = {
+        materials
+    }
+    prerequisites = {
+        "tech_crucible_study"
+        "tech_mine_zro"
+    }
+    weight = @tier1weight3
+    is_rare = yes
+    is_reverse_engineerable = no
+    start_tech = no
+    weight_modifier = {
+        factor = 0
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "tech_crucible_upgrade_custom"
+            desc = "tech_crucible_upgrade_custom_desc"
+        }
+    }
+    ai_weight = {
+        weight = 5
+        factor = 5
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+}

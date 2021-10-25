@@ -1,0 +1,42 @@
+pc_acot_pmc_vault = {
+    entity = "pc_acot_pmc_vault"
+    entity_scale = @planet_standard_scale
+    icon = GFX_planet_type_habitat
+    overlay_entity = "acot_pmc_planet_large_shield_effect_entity"
+    district_set = phanon_vault
+    enable_tilt = no
+    fixed_entity_scale = yes
+    place_entity_on_planet_plane = no
+    entity_face_object = no
+    atmosphere_color = hsv {
+        0
+        0
+        1
+    }
+    atmosphere_intensity = 1
+    atmosphere_width = 0.5
+    city_color_lut = "gfx/portraits/misc/colorcorrection_neutral.dds"
+    min_distance_from_sun = 60
+    max_distance_from_sun = 110
+    spawn_odds = 0
+    modifier = {
+        planet_orbital_bombardment_damage = -0.99
+    }
+    extra_orbit_size = 0
+    extra_planet_count = 0
+    chance_of_ring = 0
+    planet_size = {
+        min = @habitable_planet_min_size
+        max = @habitable_planet_max_size
+    }
+    moon_size = {
+        min = @habitable_moon_min_size
+        max = @habitable_moon_max_size
+    }
+    starting_planet = no
+    colonizable = yes
+    ideal = yes
+    is_artificial_planet = yes
+    uses_alternative_skies_for_moons = no
+    show_city = no
+}

@@ -1,0 +1,46 @@
+tech_ae_psi_altar = {
+    cost = @acot_tier7cost2
+    area = society
+    tier = 7
+    category = {
+        psionics
+    }
+    prerequisites = {
+        tech_fe_psi_altar
+        tech_ae_hospital
+    }
+    weight = @tier5weight3
+    modifier = {
+        pop_growth_speed = 0.2
+    }
+    potential = {
+        has_ascension_perk = ap_transcendence
+        any_country = {
+            is_country_type = shroud
+            has_established_contact = root
+        }
+    }
+    weight_modifier = {
+        factor = 1.5
+        modifier = {
+            factor = 1.25
+            has_tradition = tr_supremacy_adopt
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_psionics"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_psionics"
+            }
+        }
+    }
+}

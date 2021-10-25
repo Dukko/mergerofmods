@@ -1,0 +1,24 @@
+leader_trait_ruler_supercomputer = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/governments/civics/civic_sapient_intervention.dds"
+    immortal_leaders = yes
+    modifier = {
+        country_base_energy_produces_add = -1000
+        intel_encryption_add = 4
+        intel_decryption_add = 4
+        country_admin_cap_mult = 1
+        country_base_influence_produces_add = 4
+        local_trade_protection_add = 50
+        all_technology_research_speed = 0.25
+        planet_stability_add = 15
+    }
+    leader_trait = {
+        ruler
+    }
+    leader_class = {
+        ruler
+    }
+    initial = no
+    randomized = no
+}

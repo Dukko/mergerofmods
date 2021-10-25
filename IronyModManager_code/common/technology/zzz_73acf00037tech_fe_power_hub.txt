@@ -1,0 +1,49 @@
+tech_fe_power_hub = {
+    cost = @acot_tier6cost1
+    area = physics
+    tier = 6
+    category = {
+        field_manipulation
+    }
+    prerequisites = {
+        "tech_power_hub_2"
+        "tech_dark_matter_power_core"
+        "tech_mine_dark_energy"
+    }
+    weight = @tier5weight1
+    potential = {
+        NOT = {
+            has_global_flag = acot_building_forbidden
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOR = {
+                has_technology = tech_mine_exotic_gases
+                has_technology = tech_exotic_gases
+                has_country_flag = has_market_access
+            }
+        }
+        modifier = {
+            factor = 2
+            has_tradition = tr_prosperity_adopt
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+}

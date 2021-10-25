@@ -1,0 +1,64 @@
+"Memetic Circuit of Sensulatu" = {
+    key = "Memetic Circuit of Sensulatu"
+    ship_prefix = ""
+    species = {
+        class = "MOL"
+        portrait = "mol6"
+        name = "Phasgol"
+        plural = "Phasgolans"
+        adjective = "Phasgolan"
+        species_bio = "The Phasgolans are a psychologically unique species from the frigid rocky planet Torrubia. Fearing failed social encounters more than any other threat in the universe, most of them live out their lives in near isolation among the millions of mutually inaccessible ravines and valleys that cover their homeworld. Even in an era of cheap and instantaneous telecommunications, the individual Phasgol may go years without contacting another sentient being. When such an encounter does come, a Phasgol must be ready. During periods of isolation, they build trinkets, compose poetry, practice jokes, and study the mystic arts of the memeways in the hopes of impressing a caller or visitor. If this fails, they may become frustrated and physically compel a guest to stay. Once trapped, their victims can expect a slow torture by endless rambling hyperbolic conversation and frantic attempts by the Phasgol to demonstrate their cultural savvy and social value. The greatest among them, having impressed literally dozens of others, is elected High King. Phasgolan royalty, of course, should have the attention and admiration of the entire galaxy..."
+        name_list = "just-name-lists_molluscoid4"
+        trait = "trait_venerable"
+        trait = "trait_repugnant"
+        trait = "trait_solitary"
+    }
+    name = "Memetic Circuit of Sensulatu"
+    adjective = "Sensulatic"
+    authority = "auth_dictatorial"
+    government = "gov_irenic_dictatorship"
+    planet_name = "Torrubia"
+    planet_class = "pc_methane"
+    system_name = "Sensulatu"
+    initializer = ""
+    graphical_culture = "molluscoid_01"
+    city_graphical_culture = "fungoid_01"
+    empire_flag = {
+        icon = {
+            category = "just-more-flags"
+            file = "flag_nature8.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "fabric_gradient.dds"
+        }
+        colors = {
+            "burgundy"
+            "dark_grey"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = male
+        name = "Dooklor"
+        portrait = "mol6"
+        texture = 1
+        hair = 0
+        clothes = 0
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "industrial1_room"
+    spawn_enabled = yes
+    ethic = "ethic_fanatic_xenophile"
+    ethic = "ethic_fanatic_pacifist"
+    ethic = "ethic_materialist"
+    civics = {
+        "civic_free_haven"
+        "civic_philosopher_king"
+        "civic_peacekeepers"
+    }
+    origin = "origin_default"
+}

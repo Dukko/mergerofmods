@@ -1,0 +1,199 @@
+building_fe_transmutor = {
+    base_buildtime = 400
+    category = manufacturing
+    potential = {
+    }
+    allow = {
+        has_enigmatic_capital = yes
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_acot_transmute_man_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_acot_transmute_drone_add = 2
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 400
+            sr_dark_matter = 50
+        }
+        produces = {
+            trigger = {
+                has_modifier = acot_modifier_ascended_city
+                owner = {
+                    has_technology = tech_rare_crystals
+                }
+            }
+            rare_crystals = 4
+        }
+        produces = {
+            trigger = {
+                has_modifier = acot_modifier_ascended_city
+                owner = {
+                    has_technology = tech_volatile_motes
+                }
+            }
+            volatile_motes = 4
+        }
+        produces = {
+            trigger = {
+                has_modifier = acot_modifier_ascended_city
+                owner = {
+                    has_technology = tech_exotic_gases
+                }
+            }
+            exotic_gases = 4
+        }
+        produces = {
+            trigger = {
+                has_modifier = acot_modifier_ascended_city
+                owner = {
+                    has_technology = tech_mine_living_metal
+                }
+            }
+            sr_living_metal = 2
+        }
+        produces = {
+            trigger = {
+                has_modifier = acot_modifier_ascended_city
+                owner = {
+                    has_technology = tech_nanite_transmutation
+                }
+            }
+            nanites = 2
+        }
+        produces = {
+            trigger = {
+                has_modifier = acot_modifier_ascended_city
+                owner = {
+                    has_technology = tech_mine_zro
+                }
+            }
+            sr_zro = 2
+        }
+        upkeep = {
+            trigger = {
+                has_modifier = acot_modifier_ascended_city
+                owner = {
+                    has_technology = tech_rare_crystals
+                }
+            }
+            acot_sr_dark_energy = 1
+            sr_dark_matter = 1
+        }
+        upkeep = {
+            trigger = {
+                has_modifier = acot_modifier_ascended_city
+                owner = {
+                    has_technology = tech_volatile_motes
+                }
+            }
+            acot_sr_dark_energy = 1
+            sr_dark_matter = 1
+        }
+        upkeep = {
+            trigger = {
+                has_modifier = acot_modifier_ascended_city
+                owner = {
+                    has_technology = tech_exotic_gases
+                }
+            }
+            acot_sr_dark_energy = 1
+            sr_dark_matter = 1
+        }
+        upkeep = {
+            trigger = {
+                has_modifier = acot_modifier_ascended_city
+                owner = {
+                    has_technology = tech_mine_living_metal
+                }
+            }
+            acot_sr_dark_energy = 1
+            sr_dark_matter = 1
+        }
+        upkeep = {
+            trigger = {
+                has_modifier = acot_modifier_ascended_city
+                owner = {
+                    has_technology = tech_nanite_transmutation
+                }
+            }
+            acot_sr_dark_energy = 1
+            sr_dark_matter = 1
+        }
+        upkeep = {
+            trigger = {
+                has_modifier = acot_modifier_ascended_city
+                owner = {
+                    has_technology = tech_mine_zro
+                }
+            }
+            acot_sr_dark_energy = 1
+            sr_dark_matter = 1
+        }
+    }
+    prerequisites = {
+        "tech_fe_transmutor"
+    }
+    ai_weight = {
+        weight = 20000
+        modifier = {
+            factor = 5000
+            owner = {
+                OR = {
+                    has_monthly_income = {
+                        resource = rare_crystals
+                        value < 2
+                    }
+                    has_monthly_income = {
+                        resource = exotic_gases
+                        value < 2
+                    }
+                    has_monthly_income = {
+                        resource = volatile_motes
+                        value < 2
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            num_buildings = {
+                type = building_fe_transmutor
+                value >= 1
+            }
+        }
+        modifier = {
+            factor = 0
+            free_jobs > 0
+        }
+    }
+    ai_resource_production = {
+        volatile_motes = 10
+        exotic_gases = 10
+        rare_crystals = 10
+        trigger = {
+            always = yes
+        }
+    }
+    upgrades = {
+        building_ae_transmutor
+    }
+}

@@ -1,0 +1,31 @@
+tech_stellarite_inspire_aura = {
+    area = physics
+    tier = 8
+    cost = @acot_tier8cost1
+    category = {
+        computing
+    }
+    weight = 5
+    ai_update_type = military
+    prerequisites = {
+        "tech_stellarite_reactor"
+        "tech_computer_stellarite"
+        "tech_stellarite_weapon_core"
+    }
+    is_rare = yes
+    potential = {
+        NOT = {
+            has_global_flag = acot_shipcom_forbidden
+        }
+        has_technology = tech_stellarite_reactor
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "TECH_UNLOCK_INSPIRE_AURA_SE_TITLE"
+            desc = "TECH_UNLOCK_INSPIRE_AURA_SE_DESC"
+        }
+    }
+    ai_weight = {
+        factor = 200
+    }
+}

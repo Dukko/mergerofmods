@@ -1,0 +1,169 @@
+@resolution_weight_normal = 6
+@resolution_cost_t3 = 200
+@resolution_flag_timer = 360
+@resolution_flag_timer = 360
+resolution_commerce_underdeveloped_system_utilization = {
+    icon = "GFX_resolution_galactic_commerce"
+    resources = {
+        category = resolutions
+        cost = {
+            influence = @resolution_cost_t3
+        }
+    }
+    target = no
+    level = 3
+    modifier = {
+        resolution_commerce_buzzword_standardization = 1
+        resolution_commerce_leveraged_privateering = 1
+        resolution_commerce_underdeveloped_system_utilization = 1
+    }
+    effect = {
+        hidden_effect = {
+            add_modifier = {
+                modifier = resolution_passed_diplomatic_weight
+                days = 2200
+            }
+        }
+        custom_tooltip = resolution_commerce_underdeveloped_system_utilization_tooltip
+        hidden_effect = {
+            set_global_flag = galactic_community_resolution_passed
+            set_timed_country_flag = {
+                flag = galactic_community_resolution_passed_commerce
+                days = @resolution_flag_timer
+            }
+        }
+    }
+    fail_effects = {
+        hidden_effect = {
+            add_modifier = {
+                modifier = resolution_failed_diplomatic_weight
+                days = 2200
+            }
+        }
+        hidden_effect = {
+            set_timed_country_flag = {
+                flag = galactic_community_resolution_failed_commerce
+                days = @resolution_flag_timer
+            }
+        }
+    }
+    allow = {
+        is_active_resolution = "resolution_commerce_leveraged_privateering"
+    }
+    ai_weight = {
+        weight = @resolution_weight_normal
+        modifier = {
+            factor = 1.4
+            not = {
+                has_country_flag = str_has_bad_economy_score
+            }
+        }
+        modifier = {
+            factor = 0.8
+            has_country_flag = str_has_bad_economy_score
+        }
+        modifier = {
+            factor = 0.625
+            has_country_flag = str_has_terrible_economy_score
+        }
+        modifier = {
+            factor = 0.9
+            turtler = yes
+        }
+        modifier = {
+            factor = 0.9
+            turtler2 = yes
+        }
+        modifier = {
+            factor = 1.1
+            rusher = yes
+        }
+        modifier = {
+            factor = 1.1
+            rusher2 = yes
+        }
+        modifier = {
+            factor = 2
+            is_militarist = no
+            count_country = {
+                count < 4
+                limit = {
+                    is_galactic_community_member = yes
+                    relative_power = {
+                        who = prev
+                        category = economy
+                        value >= equivalent
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            any_relation = {
+                is_galactic_community_member = yes
+                OR = {
+                    is_rival = prev
+                    is_at_war_with = prev
+                }
+                count_country = {
+                    count < 4
+                    limit = {
+                        is_galactic_community_member = yes
+                        relative_power = {
+                            who = prev
+                            category = economy
+                            value >= equivalent
+                        }
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                is_megacorp = yes
+                has_valid_civic = civic_merchant_guilds
+                has_valid_civic = civic_globalism
+            }
+        }
+        modifier = {
+            factor = 1.5
+            any_planet_within_border = {
+                has_observation_outpost = yes
+            }
+        }
+        modifier = {
+            factor = 0.25
+            is_anti_corp = yes
+        }
+        modifier = {
+            factor = 0.75
+            has_valid_civic = civic_byzantine_bureaucracy
+        }
+        modifier = {
+            factor = 0.5
+            is_militarist = yes
+        }
+        modifier = {
+            factor = 0.75
+            is_civic_militarist = yes
+        }
+        modifier = {
+            factor = 1.2
+            is_xenophile = yes
+        }
+        modifier = {
+            factor = 1.3
+            is_capitalism = yes
+        }
+        modifier = {
+            factor = 0.25
+            is_civic_shared_burden = yes
+            is_auth_corporate = no
+        }
+        modifier = {
+            factor = 0.1
+            is_gestalt = yes
+        }
+    }
+}

@@ -1,0 +1,28 @@
+vbp_foundry_drone = {
+    category = simple_drone
+    is_capped_by_modifier = yes
+    building_icon = building_primitive_factory
+    icon = alloy_drone
+    possible_pre_triggers = {
+        has_owner = yes
+        is_sapient = yes
+    }
+    possible = {
+        exists = owner
+        owner = {
+            is_country_type = vbp_machine
+        }
+    }
+    resources = {
+        category = planet_farmers
+        produces = {
+            alloys = 1
+        }
+        upkeep = {
+            minerals = 1
+        }
+    }
+    weight = {
+        weight = 10
+    }
+}

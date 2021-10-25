@@ -1,0 +1,79 @@
+district_penrose_commercial = {
+    base_buildtime = @giga_rw_district_buildtime
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        is_planet_class = pc_giga_penrose_habitable
+        exists = from
+        from = {
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+        NOT = {
+            has_modifier = ringworld_upgrade_timer
+        }
+    }
+    potential = {
+        is_planet_class = pc_giga_penrose_habitable
+        exists = owner
+        owner = {
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+        NOT = {
+            has_modifier = ringworld_upgrade_timer
+        }
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_penrose_generator
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @giga_rw_cost
+            rare_crystals = @giga_rw_cost_sr
+        }
+        upkeep = {
+            energy = @giga_rw_maintenance
+            rare_crystals = @giga_rw_maintenance_sr
+        }
+    }
+    triggered_planet_modifier = {
+        modifier = {
+            planet_housing_add = 10
+        }
+    }
+    triggered_planet_modifier = {
+        modifier = {
+            job_merchant_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        modifier = {
+            job_clerk_add = 10
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            planet = {
+                has_deposit = d_arcane_generator
+                NOT = {
+                    has_district = district_rw_commercial
+                }
+            }
+        }
+        text = "arcane_generator_upkeep_desc"
+    }
+    triggered_desc = {
+        text = "job_merchant_effect_desc"
+    }
+    triggered_desc = {
+        text = "job_clerk_effect_desc"
+    }
+    ai_resource_production = {
+        energy = 10
+        trigger = {
+            always = yes
+        }
+    }
+}

@@ -1,0 +1,17 @@
+tech_gpm_precursor_ruins_discovery_2 = {
+    area = society
+    cost = @tier2cost1
+    category = {
+        new_worlds
+    }
+    tier = 2
+    is_rare = yes
+    ai_update_type = all
+    weight = 1
+    modifier = {
+        ship_archaeological_site_excavation_speed_mult = 0.2
+    }
+    weight_modifier = {
+        factor = 0
+    }
+}

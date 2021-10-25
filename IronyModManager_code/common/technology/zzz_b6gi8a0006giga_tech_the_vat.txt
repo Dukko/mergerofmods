@@ -1,0 +1,55 @@
+giga_tech_the_vat = {
+    cost = 100000
+    area = society
+    tier = 5
+    category = {
+        biology
+    }
+    is_rare = yes
+    weight = 70
+    prereqfor_desc = {
+        custom = {
+            title = "allow_the_vat"
+            desc = "desc_the_vat"
+        }
+    }
+    modifier = {
+        planet_jobs_food_produces_mult = 0.05
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            has_utopia = no
+        }
+        modifier = {
+            factor = 0
+            has_galactic_wonders = no
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = ap_evolutionary_mastery
+            }
+        }
+        modifier = {
+            factor = 0
+            has_global_flag = the_vat_disabled
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 0
+            has_utopia = no
+        }
+        modifier = {
+            factor = 0
+            has_galactic_wonders = no
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_ascension_perk = ap_evolutionary_mastery
+            }
+        }
+    }
+}

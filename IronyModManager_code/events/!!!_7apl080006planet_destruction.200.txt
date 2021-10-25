@@ -1,0 +1,205 @@
+namespace = planet_destruction
+planet_event = {
+    id = planet_destruction.200
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        if = {
+            limit = {
+                exists = owner
+                owner = {
+                    NOT = {
+                        is_same_value = from.owner
+                    }
+                }
+                NOT = {
+                    is_planet_class = pc_ai
+                }
+            }
+            from.owner = {
+                country_event = {
+                    id = planet_destruction.210
+                }
+            }
+        }
+        if = {
+            limit = {
+                has_observation_outpost = yes
+            }
+            observation_outpost_owner = {
+                country_event = {
+                    id = planet_destruction.1000
+                    days = 1
+                }
+            }
+        }
+        if = {
+            limit = {
+                is_planet_class = pc_ai
+                NOT = {
+                    has_planet_flag = machine_lair
+                }
+            }
+            set_planet_flag = destroyed_by_colossus
+            set_planet_flag = planet_shielded
+            planet_event = {
+                id = crisis.2040
+            }
+        }
+        if = {
+            limit = {
+                is_planet_class = pc_ai
+                has_planet_flag = machine_lair
+            }
+            set_planet_flag = destroyed_by_colossus
+            set_planet_flag = planet_shielded
+            stop_crisis_sound = yes
+            from.owner = {
+                save_event_target_as = final_machine_world_destroyer
+            }
+            planet_event = {
+                id = crisis.2046
+            }
+        }
+        if = {
+            limit = {
+                exists = owner
+                owner = {
+                    is_country_type = swarm
+                }
+            }
+            every_country = {
+                limit = {
+                    has_event_chain = "prethoryn_scourge_chain"
+                }
+                add_event_chain_counter = {
+                    event_chain = "prethoryn_scourge_chain"
+                    counter = "infested_worlds"
+                    amount = -1
+                }
+                add_event_chain_counter = {
+                    event_chain = "prethoryn_scourge_chain"
+                    counter = "infested_worlds_cleansed"
+                    amount = 1
+                }
+            }
+        }
+        if = {
+            limit = {
+                exists = owner
+                owner = {
+                    NOT = {
+                        is_same_value = from.owner
+                    }
+                    OR = {
+                        is_country_type = default
+                        is_country_type = fallen_empire
+                        is_country_type = awakened_fallen_empire
+                    }
+                }
+            }
+            add_threat = {
+                who = from.owner
+                amount = 3
+            }
+            every_country = {
+                limit = {
+                    NOR = {
+                        is_same_value = from.owner
+                        is_same_value = root.owner
+                        AND = {
+                            has_federation = yes
+                            is_in_federation_with = from.owner
+                        }
+                        is_loyal_to = from.owner
+                    }
+                    OR = {
+                        has_communications = from.owner
+                        has_communications = root.owner
+                    }
+                    OR = {
+                        AND = {
+                            has_federation = yes
+                            is_in_federation_with = root.owner
+                        }
+                        has_ai_personality = awakened_fallen_empire_xenophile
+                        AND = {
+                            is_country_type = default
+                            OR = {
+                                is_egalitarian = yes
+                                is_xenophile = yes
+                                is_militarist = yes
+                            }
+                        }
+                    }
+                }
+                add_opinion_modifier = {
+                    modifier = opinion_shielded_a_world
+                    who = from.owner
+                }
+            }
+            owner = {
+                add_opinion_modifier = {
+                    modifier = opinion_shielded_my_world
+                    who = from.owner
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            has_ethic = ethic_gestalt_consciousness
+                        }
+                    }
+                    add_modifier = {
+                        modifier = colossus_victim
+                        days = 10800
+                    }
+                }
+            }
+        }
+        from.owner = {
+            country_event = {
+                id = achievement.3
+            }
+        }
+        owner = {
+            if = {
+                limit = {
+                    is_at_war_with = from.fleet.owner
+                }
+            add_static_war_exhaustion = {
+                attacker = from.fleet.owner
+                location = root
+                value_for_planet_destruction = 1
+                }
+            }
+        }
+        if = {
+            limit = {
+                is_planet_class = pc_habitat
+            }
+            spawn_habitat_pacifier_effect = yes
+            change_pc = {
+                class = pc_habitat_shielded
+                inherit_entity = yes
+            }
+        }
+        else_if = {
+            limit = {
+                is_planet_class = pc_ringworld_habitable
+            }
+            spawn_ringworld_pacifier_effect = yes
+            change_pc = {
+                class = pc_ringworld_shielded
+                inherit_entity = yes
+            }
+        }
+        else = {
+            change_pc = {
+                class = pc_shielded
+                inherit_entity = yes
+            }
+        }
+        clear_deposits = yes
+        add_deposit = d_society_10
+    }
+}

@@ -1,0 +1,46 @@
+tech_eludium_mine = {
+    icon = tech_eludium_mine
+    cost = @tier2cost1
+    area = physics
+    tier = 2
+    category = {
+        particles
+    }
+    prerequisites = {
+        "tech_basic_industry"
+        "tech_eludium_research"
+    }
+    weight = @tier2weight1
+    is_rare = yes
+    is_reverse_engineerable = no
+    start_tech = no
+    weight_modifier = {
+        factor = 25
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    is_planet_class = pc_floating
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+    ai_weight = {
+        weight = 5
+        factor = 25
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+pc_mzilli_rogue_moon = {
+    entity = "frozen_planet"
+    picture = "pc_frozen"
+    entity_scale = @planet_standard_scale
+    icon = GFX_planet_type_frozen
+    atmosphere_color = hsv {
+        0
+        0
+        0
+    }
+    atmosphere_intensity = 1
+    atmosphere_width = 0.5
+    spawn_odds = 0
+    colonizable = no
+}

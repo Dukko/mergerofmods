@@ -1,0 +1,58 @@
+tech_shroud_jump_drive = {
+    area = society
+    cost = @acot_tier8cost2
+    tier = 8
+    category = {
+        psionics
+    }
+    ai_update_type = all
+    is_rare = yes
+    prerequisites = {
+        "tech_psi_jump_drive_1"
+    }
+    weight = 15
+    is_reverse_engineerable = no
+    modifier = {
+        ship_landing_time_mult = -1
+    }
+    potential = {
+        NOT = {
+            has_global_flag = acot_shipcom_forbidden
+        }
+        NOR = {
+            has_ethic = ethic_gestalt_consciousness
+            is_country_type = fallen_empire
+        }
+        has_technology = tech_precursor_design
+    }
+    prereqfor_desc = {
+        component = {
+            title = "TECH_UNLOCK_SHROUDDRIVE"
+            desc = "TECH_UNLOCK_SHROUDDRIVE_DESC"
+        }
+    }
+    weight_modifier = {
+        factor = 0.5
+        modifier = {
+            factor = 10
+            NOR = {
+                research_leader = {
+                    area = society
+                    has_trait = "leader_trait_expertise_psionics"
+                }
+                research_leader = {
+                    area = society
+                    has_trait = "leader_trait_curator"
+                }
+                research_leader = {
+                    area = society
+                    has_trait = "leader_trait_spark_of_genius"
+                }
+                research_leader = {
+                    area = society
+                    has_trait = "leader_trait_maniacal"
+                }
+            }
+        }
+    }
+}

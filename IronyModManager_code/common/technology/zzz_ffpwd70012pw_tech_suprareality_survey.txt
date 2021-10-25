@@ -1,0 +1,70 @@
+pw_tech_suprareality_survey = {
+    area = physics
+    category = {
+        computing
+    }
+    cost = @pw_research_tech_cost_3
+    tier = 5
+    prerequisites = {
+        pw_tech_interdimensional_collider
+    }
+    weight = @tier5weight1
+    is_rare = yes
+    potential = {
+        any_owned_planet = {
+            has_active_building = pw_building_interdimensional_collider
+        }
+    }
+    modifier = {
+        intel_decryption_add = 1
+        add_base_country_intel = 10
+    }
+    weight_modifier = {
+        factor = 0.5
+        modifier = {
+            factor = 1.5
+            OR = {
+                research_leader = {
+                    area = physics
+                    has_trait = leader_trait_expertise_computing
+                }
+                research_leader = {
+                    area = physics
+                    has_trait = leader_trait_curator
+                }
+                research_leader = {
+                    area = physics
+                    has_trait = leader_trait_maniacal
+                }
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_enigmatic_engineering
+        }
+        modifier = {
+            factor = @federation_perk_factor
+            has_federation = yes
+            federation = {
+                has_federation_perk = rare_tech_boost
+                any_member = {
+                    has_technology = pw_tech_suprareality_survey
+                }
+            }
+        }
+    }
+    ai_weight = {
+        factor = @pw_tech_ai_weight
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = leader_trait_expertise_computing
+            }
+        }
+    }
+}

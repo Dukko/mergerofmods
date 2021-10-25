@@ -1,0 +1,53 @@
+tech_libertyfukyeah = {
+    cost = @acot_tier6cost2
+    area = society
+    tier = 6
+    is_rare = yes
+    category = {
+        statecraft
+    }
+    prerequisites = {
+        "tech_manifest_destiny"
+    }
+    weight = 25
+    potential = {
+        NOT = {
+            has_global_flag = acot_ethictech_forbidden
+        }
+    }
+    modifier = {
+        ship_weapon_damage = 0.1
+        ship_fire_rate_mult = 0.1
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            used_naval_capacity_integer < 1000
+            used_naval_capacity_percent < 50
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+}

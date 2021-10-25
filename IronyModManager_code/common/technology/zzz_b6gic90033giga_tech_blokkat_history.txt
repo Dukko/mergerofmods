@@ -1,0 +1,21 @@
+giga_tech_blokkat_history = {
+    cost = 2000000
+    area = society
+    tier = 5
+    category = {
+        blokkats
+    }
+    is_rare = yes
+    weight = 0
+    is_reverse_engineerable = no
+    modifier = {
+        damage_vs_country_type_blokkat_stripminers_mult = 0.1
+        category_blokkats_research_speed_mult = 0.2
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "blokkat_history_title"
+            desc = "blokkat_history_title"
+        }
+    }
+}

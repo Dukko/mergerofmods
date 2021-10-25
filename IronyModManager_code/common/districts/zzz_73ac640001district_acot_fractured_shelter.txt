@@ -1,0 +1,102 @@
+district_acot_fractured_shelter = {
+    base_buildtime = 720
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        uses_district_set = fractured_world
+    }
+    potential = {
+        uses_district_set = fractured_world
+    }
+    prerequisites = {
+        tech_acot_fractured_shelter
+    }
+    convert_to = {
+        district_acot_fractured_ae_shelter
+    }
+    allow = {
+        OR = {
+            AND = {
+                free_district_slots >= 2
+                owner = {
+                    NOR = {
+                        has_technology = tech_acot_fractured_size_upgrade_1
+                        has_technology = tech_acot_fractured_size_upgrade_2
+                    }
+                }
+            }
+            AND = {
+                free_district_slots >= 1
+                owner = {
+                    has_technology = tech_acot_fractured_size_upgrade_1
+                    NOT = {
+                        has_technology = tech_acot_fractured_size_upgrade_2
+                    }
+                }
+            }
+            AND = {
+                owner = {
+                    has_technology = tech_acot_fractured_size_upgrade_2
+                }
+            }
+        }
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = 5000
+            alloys = 1000
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    is_machine_empire = no
+                }
+            }
+            food = 5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    is_machine_empire = yes
+                }
+            }
+            energy = 5
+        }
+        upkeep = {
+            energy = 20
+        }
+    }
+    planet_modifier = {
+        pop_environment_tolerance = 0.05
+        planet_housing_add = 5
+    }
+    triggered_planet_modifier = {
+        potential = {
+            owner = {
+                NOR = {
+                    has_technology = tech_acot_fractured_size_upgrade_1
+                    has_technology = tech_acot_fractured_size_upgrade_2
+                }
+            }
+        }
+        planet_max_districts_add = -2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            owner = {
+                has_technology = tech_acot_fractured_size_upgrade_1
+                NOT = {
+                    has_technology = tech_acot_fractured_size_upgrade_2
+                }
+            }
+        }
+        planet_max_districts_add = -1
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 5
+            free_housing < 10
+        }
+    }
+}

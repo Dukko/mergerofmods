@@ -1,0 +1,89 @@
+col_habitat_foundry = {
+    icon = GFX_colony_type_habitat_foundry
+    potential = {
+        OR = {
+            uses_district_set = habitat
+            uses_district_set = pdarchive
+        }
+    }
+    planet_modifier = {
+        custom_tooltip = col_habitat_foundry_custom
+        planet_district_hab_industrial_build_speed_mult = 0.25
+        planet_metallurgists_upkeep_mult = -0.2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_galactic_community_member = yes
+            }
+            OR = {
+                is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
+                is_active_resolution = "resolution_industry_project_cornucopia"
+                is_active_resolution = "resolution_industry_6"
+            }
+        }
+        modifier = {
+            planet_metallurgists_produces_mult = 0.05
+        }
+    }
+    weight_modifier = {
+        base = 0
+        modifier = {
+            add = 3.2
+            num_districts = {
+                type = district_hab_industrial
+                value >= 1
+            }
+        }
+        modifier = {
+            add = 3.2
+            num_districts = {
+                type = district_hab_industrial
+                value >= 2
+            }
+        }
+        modifier = {
+            add = 6.4
+            num_districts = {
+                type = district_hab_industrial
+                value >= 4
+            }
+        }
+        modifier = {
+            add = 6.4
+            num_districts = {
+                type = district_hab_industrial
+                value >= 6
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_building = building_foundry_2
+        }
+        modifier = {
+            factor = 1.5
+            has_building = building_foundry_3
+        }
+        modifier = {
+            factor = 1.5
+            always = yes
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_building = building_foundry_1
+                has_building = building_foundry_2
+                has_building = building_foundry_3
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_building = building_factory_1
+                has_building = building_factory_2
+                has_building = building_factory_2
+            }
+        }
+    }
+}

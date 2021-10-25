@@ -1,0 +1,101 @@
+@giga_gas_giant_habitat_cost = 400
+@giga_gas_giant_habitat_upkeep_energy_medium = 2
+@giga_gas_giant_habitat_district_buildtime = 220
+district_giga_gas_giant_habitat_science = {
+    base_buildtime = @giga_gas_giant_habitat_district_buildtime
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        uses_district_set = giga_gas_giant_habitat
+    }
+    potential = {
+        uses_district_set = giga_gas_giant_habitat
+    }
+    resources = {
+        category = planet_districts_hab_research
+        cost = {
+            minerals = @giga_gas_giant_habitat_cost
+        }
+        upkeep = {
+            energy = @giga_gas_giant_habitat_upkeep_energy_medium
+        }
+    }
+    conversion_ratio = 0.5
+    convert_to = {
+        district_giga_gas_giant_habitat_city
+        district_giga_gas_giant_habitat_hive
+        district_giga_gas_giant_habitat_nexus
+    }
+    triggered_planet_modifier = {
+        modifier = {
+            planet_housing_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_researcher_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_brain_drone_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_calculator_add = 3
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = "job_researcher_effect_desc"
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = "job_brain_drone_effect_desc"
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = "job_calculator_effect_desc"
+    }
+    ai_resource_production = {
+        physics_research = 12
+        society_research = 12
+        engineering_research = 12
+        trigger = {
+            always = yes
+        }
+    }
+}

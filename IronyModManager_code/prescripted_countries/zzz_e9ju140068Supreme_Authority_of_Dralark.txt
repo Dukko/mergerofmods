@@ -1,0 +1,65 @@
+"Supreme Authority of Dralark" = {
+    key = "Supreme Authority of Dralark"
+    ship_prefix = "OSC"
+    species = {
+        class = "HUM"
+        portrait = "humanoid_hp_01"
+        name = "Zilan"
+        plural = "Zilans"
+        adjective = "Zilan"
+        species_bio = "Masters of a military apparatus capable of immense cruelty, individual Zilan admirals and field marshals function as lesser potentates in control of all aspects of life on their homeworld of Sarmova. Volunteering for military service is the only path to emancipation for the slave caste. Even so, such freedom is only granted to a volunteer's descendants after their honorable death in battle. For those lucky to be born into the warrior caste, life is sweeter but no less tyrannical."
+        name_list = "just-name-lists_humanoid11"
+        trait = "trait_enduring"
+        trait = "trait_intelligent"
+        trait = "trait_decadent"
+    }
+    name = "Supreme Authority of Dralark"
+    adjective = "Dralarkan"
+    authority = "auth_dictatorial"
+    government = "gov_martial_dictatorship"
+    planet_name = "Sarmova"
+    planet_class = "pc_alpine"
+    system_name = "Dralark"
+    initializer = ""
+    graphical_culture = "humanoid_01"
+    city_graphical_culture = "humanoid_01"
+    empire_flag = {
+        icon = {
+            category = "just-more-flags"
+            file = "flag_authoritarian6.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "fabric_circle.dds"
+        }
+        colors = {
+            "purple"
+            "indigo"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = male
+        name = "Clator Teotinentus"
+        portrait = "humanoid_hp_01"
+        texture = 0
+        hair = 0
+        clothes = 0
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "frozen2_room"
+    spawn_enabled = yes
+    ethic = "ethic_fanatic_authoritarian"
+    ethic = "ethic_militarist"
+    ethic = "ethic_materialist"
+    ethic = "ethic_capitalism"
+    civics = {
+        "civic_slaver_guilds"
+        "civic_warrior_culture"
+        "civic_naval_traditions"
+    }
+    origin = "origin_default"
+}

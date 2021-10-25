@@ -1,0 +1,28 @@
+building_vbp_station_management = {
+    capital = yes
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = no
+    icon = building_commercial_forum
+    potential = {
+        exists = owner
+        owner = {
+            is_country_type = primitive
+            has_country_flag = vbp_voidbound_civilisation
+        }
+    }
+    planet_modifier = {
+        job_vbp_station_manager_add = 1
+        job_vbp_station_security_add = 2
+        planet_housing_add = 3
+    }
+    destroy_trigger = {
+        exists = owner
+        owner = {
+            is_primitive = no
+        }
+    }
+    convert_to = {
+        building_hab_capital
+    }
+}

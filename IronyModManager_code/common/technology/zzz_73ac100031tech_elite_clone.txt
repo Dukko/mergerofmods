@@ -1,0 +1,72 @@
+tech_elite_clone = {
+    cost = @acot_tier6cost2
+    area = society
+    tier = 6
+    category = {
+        biology
+    }
+    is_rare = yes
+    prerequisites = {
+        tech_gene_banks
+        "tech_dark_matter_army"
+    }
+    weight = 20
+    potential = {
+        NOT = {
+            has_global_flag = acot_army_forbidden
+        }
+        OR = {
+            NOT = {
+                has_authority = auth_machine_intelligence
+            }
+            has_civic = civic_machine_assimilator
+        }
+        has_ascension_perk = ap_engineered_evolution
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0.2
+            NOR = {
+                research_leader = {
+                    area = society
+                    has_trait = "leader_trait_expertise_biology"
+                }
+                research_leader = {
+                    area = society
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_spark_of_genius"
+            }
+        }
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = society
+                has_level > 4
+            }
+        }
+        modifier = {
+            factor = 0.75
+            research_leader = {
+                area = society
+                has_level < 2
+            }
+        }
+    }
+    ai_weight = {
+        factor = 3
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+    }
+}

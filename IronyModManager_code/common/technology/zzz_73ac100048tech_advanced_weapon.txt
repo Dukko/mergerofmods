@@ -1,0 +1,41 @@
+tech_advanced_weapon = {
+    cost = @acot_tier6cost2
+    area = physics
+    tier = 6
+    is_rare = yes
+    category = {
+        computing
+    }
+    prerequisites = {
+        "tech_synchronized_defences"
+    }
+    weight = 25
+    potential = {
+        NOT = {
+            has_global_flag = acot_ethictech_forbidden
+        }
+    }
+    modifier = {
+        ship_weapon_range_mult = 0.1
+        ship_accuracy_add = 10
+        ship_tracking_add = 10
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+}

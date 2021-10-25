@@ -1,0 +1,40 @@
+utility_component_template = {
+    key = "LARGE_ARMOR_5"
+    size = large
+    icon = "GFX_ship_part_armor_5"
+    icon_frame = 1
+    power = 0
+    modifier = {
+        ship_armor_add = @armor_5L
+    }
+    prerequisites = {
+        "tech_ship_armor_5"
+    }
+    component_set = "ARMOR_5"
+    upgrades_to = LARGE_ACOT_ARMOR_DM
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @l_t5_cost
+        }
+        upkeep = {
+            energy = @l_t5_upkeep_energy
+            alloys = @l_t5_upkeep_alloys
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 0
+            not = {
+                no_resource_for_component = {
+                    RESOURCE = rare_crystals
+                }
+            }
+            or = {
+                has_technology = tech_crystal_armor_1
+                has_technology = tech_crystal_armor_2
+            }
+            is_ai = yes
+        }
+    }
+}

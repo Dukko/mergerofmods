@@ -1,0 +1,64 @@
+"Honored Kotan Bloodlines" = {
+    key = "Honored Kotan Bloodlines"
+    ship_prefix = "KBC"
+    species = {
+        class = "ART"
+        portrait = "art7"
+        name = "Kota"
+        plural = "Kotakin"
+        adjective = "Kotan"
+        species_bio = "Ritual combat is the preferred method for resolving almost any problem a Kotan may face. Within their own clans, that approach works out quite well for them. In interstellar politics, it seems likely to draw the Bloodlines into potentially devastating conflicts... or to power them to a position of hegemony over the galaxy. One must understand that no matter how varied and unique the Kotakin appear from the outside, and their people's exoskeletal plating does come in an impressive array of natural colors and patterns, nearly all of them respect only one thing: courage."
+        name_list = "just-name-lists_arthropoid2"
+        trait = "trait_adaptive"
+        trait = "trait_traditional"
+        trait = "trait_solitary"
+    }
+    name = "Honored Kotan Bloodlines"
+    adjective = "Kotan"
+    authority = "auth_democratic"
+    government = "gov_assembly_of_clans"
+    planet_name = "Gasta"
+    planet_class = "pc_oasis"
+    system_name = "Lampra"
+    initializer = ""
+    graphical_culture = "arthropoid_01"
+    city_graphical_culture = "arthropoid_01"
+    empire_flag = {
+        icon = {
+            category = "just-more-flags"
+            file = "flag_militarist10.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "fabric_circle.dds"
+        }
+        colors = {
+            "dark_brown"
+            "brown"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = female
+        name = "Masteridix Castrix"
+        portrait = "art7"
+        texture = 1
+        hair = 0
+        clothes = 4
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "outdoor15_room"
+    spawn_enabled = yes
+    ethic = "ethic_fanatic_egalitarian"
+    ethic = "ethic_xenophobe"
+    ethic = "ethic_fanatic_militarist"
+    civics = {
+        "civic_parliamentary_system"
+        "civic_warrior_culture"
+        "civic_naval_traditions"
+    }
+    origin = "origin_default"
+}

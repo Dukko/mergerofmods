@@ -1,0 +1,17 @@
+tech_gpm_arachnophobia_discovery_2 = {
+    area = society
+    cost = @tier2cost1
+    category = {
+        biology
+    }
+    tier = 2
+    is_rare = yes
+    ai_update_type = all
+    weight = 1
+    modifier = {
+        planet_researchers_society_research_produces_add = 1
+    }
+    weight_modifier = {
+        factor = 0
+    }
+}

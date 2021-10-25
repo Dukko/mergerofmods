@@ -1,0 +1,51 @@
+tech_space_science_3 = {
+    cost = @tier2cost1
+    area = physics
+    tier = 2
+    category = {
+        computing
+    }
+    prerequisites = {
+        "tech_space_science_2"
+    }
+    weight = @tier2weight1
+    modifier = {
+        station_researchers_produces_mult = 0.15
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+    ai_weight = {
+        weight = 1
+        factor = 5
+        modifier = {
+            factor = 500
+            OR = {
+                has_tech_option = tech_energy_torpedoes_1
+                has_tech_option = tech_energy_torpedoes_2
+            }
+        }
+        modifier = {
+            factor = 100
+            NOT = {
+                has_tech_option = tech_lasers_4
+            }
+            NOT = {
+                has_technology = tech_lasers_4
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+}

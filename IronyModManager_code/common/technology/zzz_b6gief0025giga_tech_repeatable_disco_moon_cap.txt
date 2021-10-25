@@ -1,0 +1,53 @@
+@megastructure_repeatable_tech_weight = 10
+@lesser_megastructure_base_tech_cost = 36000
+@lesser_megastructure_per_level_cost = 108000
+giga_tech_repeatable_disco_moon_cap = {
+    area = physics
+    category = {
+        particles
+    }
+    tier = 5
+    weight = @megastructure_repeatable_tech_weight
+    cost = @lesser_megastructure_base_tech_cost
+    cost_per_level = @lesser_megastructure_per_level_cost
+    levels = 40
+    prerequisites = {
+        "giga_tech_disco_moon"
+    }
+    weight_groups = {
+        repeatable
+    }
+    mod_weight_if_group_picked = {
+        repeatable = 0.1
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "giga_disco_moon_capacity_increase_title"
+            desc = "giga_disco_moon_capacity_increase_desc"
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_global_flag = disco_moon_capped_r
+            }
+        }
+        modifier = {
+            factor = 0
+            has_global_flag = disco_moon_disabled
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_global_flag = disco_moon_capped_r
+            }
+        }
+        modifier = {
+            factor = 0
+            has_global_flag = disco_moon_disabled
+        }
+    }
+}

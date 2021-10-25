@@ -1,0 +1,46 @@
+tech_acean_mine = {
+    icon = tech_acean_mine
+    cost = @tier2cost1
+    area = engineering
+    tier = 2
+    category = {
+        materials
+    }
+    prerequisites = {
+        "tech_basic_industry"
+        "tech_acean_study"
+    }
+    weight = @tier2weight1
+    is_rare = yes
+    is_reverse_engineerable = no
+    start_tech = no
+    weight_modifier = {
+        factor = 25
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    is_planet_class = pc_crystal
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+    ai_weight = {
+        weight = 5
+        factor = 25
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+}

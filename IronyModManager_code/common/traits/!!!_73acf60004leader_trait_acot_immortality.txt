@@ -1,0 +1,20 @@
+leader_trait_acot_immortality = {
+    cost = 0
+    initial = no
+    randomized = no
+    modification = no
+    icon = "gfx/interface/icons/traits/trait_pc_ai_preference.dds"
+    leader_trait = all
+    leader_class = {
+        admiral
+        scientist
+        general
+        governor
+        ruler
+    }
+    self_modifier = {
+        species_leader_exp_gain = -0.2
+    }
+    modifier = {
+    }
+}

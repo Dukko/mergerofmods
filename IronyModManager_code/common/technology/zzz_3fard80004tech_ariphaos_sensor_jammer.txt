@@ -1,0 +1,40 @@
+tech_ariphaos_sensor_jammer = {
+    area = physics
+    cost = @tier5cost2
+    tier = 5
+    category = {
+        particles
+    }
+    ai_update_type = all
+    prerequisites = {
+        "tech_sensors_4"
+    }
+    weight = @tier5weight2
+    modifier = {
+        show_only_custom_tooltip = yes
+        custom_tooltip = tech_ariphaos_sensor_jammer_small
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            has_tradition = tr_supremacy_adopt
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 0.5
+        modifier = {
+            factor = 2
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+}

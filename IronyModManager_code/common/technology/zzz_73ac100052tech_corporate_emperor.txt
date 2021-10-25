@@ -1,0 +1,42 @@
+tech_corporate_emperor = {
+    cost = @acot_tier6cost2
+    area = society
+    tier = 6
+    is_rare = yes
+    category = {
+        statecraft
+    }
+    prerequisites = {
+        "tech_galactic_markets"
+    }
+    weight = 25
+    potential = {
+        has_authority = auth_corporate
+        NOT = {
+            has_global_flag = acot_ethictech_forbidden
+        }
+    }
+    modifier = {
+        empire_size_penalty_mult = -0.25
+        country_admin_cap_add = 30
+        empire_size_branch_office_mult = -0.1
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+}

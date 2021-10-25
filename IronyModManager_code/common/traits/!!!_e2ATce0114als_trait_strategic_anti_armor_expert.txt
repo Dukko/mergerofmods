@@ -1,0 +1,17 @@
+als_trait_strategic_anti_armor_expert = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/als_trait_strategic_anti_armor_expert.dds"
+    sorting_priority = -10
+    modifier = {
+        ship_armor_damage_mult = 0.4
+    }
+    initial = no
+    randomized = no
+    leader_trait = {
+        admiral
+    }
+    leader_class = {
+        admiral
+    }
+}

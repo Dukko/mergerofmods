@@ -1,0 +1,17 @@
+tech_gpm_holy_world_discovery = {
+    area = society
+    cost = @tier2cost1
+    category = {
+        new_worlds
+    }
+    tier = 2
+    is_rare = no
+    ai_update_type = all
+    weight = 1
+    modifier = {
+        all_technology_research_speed = 0.07
+    }
+    weight_modifier = {
+        factor = 0
+    }
+}

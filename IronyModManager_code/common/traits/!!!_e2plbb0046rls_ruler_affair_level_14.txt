@@ -1,0 +1,12 @@
+rls_ruler_affair_level_14 = {
+    cost = 0
+    leader_trait = {
+        ruler
+    }
+    leader_class = {
+        ruler
+    }
+    initial = no
+    modification = no
+    randomized = no
+}

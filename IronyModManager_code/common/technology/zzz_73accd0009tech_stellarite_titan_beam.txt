@@ -1,0 +1,21 @@
+tech_stellarite_titan_beam = {
+    area = physics
+    category = {
+        particles
+    }
+    tier = 8
+    cost = @acot_tier8cost1
+    weight = 5
+    ai_update_type = military
+    prerequisites = {
+        "tech_stellarite_reactor"
+        "tech_stellarite_beam"
+    }
+    is_rare = yes
+    potential = {
+        NOT = {
+            has_global_flag = acot_shipcom_forbidden
+        }
+        has_technology = tech_stellarite_reactor
+    }
+}

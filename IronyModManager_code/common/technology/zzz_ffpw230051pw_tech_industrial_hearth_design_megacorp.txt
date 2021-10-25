@@ -1,0 +1,21 @@
+pw_tech_industrial_hearth_design_megacorp = {
+    area = physics
+    category = {
+        computing
+    }
+    tier = 5
+    cost = @pw_tech_cost_5
+    prerequisites = {
+        pw_tech_industrial_hearth
+    }
+    weight = 0
+    potential = {
+        has_country_flag = pw_industrial_hearth_built
+    }
+    modifier = {
+        trade_value_mult = 0.15
+    }
+    ai_weight = {
+        factor = 20
+    }
+}

@@ -1,0 +1,14 @@
+energy_expenditure_campaigns = {
+    resource = energy
+    type = expenditure
+    category = campaigns
+    potential = {
+        resource_stockpile_compare = {
+            resource = energy
+            value > 1500
+        }
+    }
+    static_min = {
+        base = 20000
+    }
+}

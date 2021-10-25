@@ -1,0 +1,17 @@
+tech_gpm_ancient_temple_discovery_2 = {
+    area = physics
+    cost = @tier2cost1
+    category = {
+        new_worlds
+    }
+    tier = 2
+    is_rare = yes
+    ai_update_type = all
+    weight = 1
+    modifier = {
+        ship_archeaological_site_clues_add = 2
+    }
+    weight_modifier = {
+        factor = 0
+    }
+}

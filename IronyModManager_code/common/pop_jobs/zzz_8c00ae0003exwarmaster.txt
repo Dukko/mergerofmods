@@ -1,0 +1,30 @@
+exwarmaster = {
+    category = ruler
+    condition_string = RULER_JOB_TRIGGER
+    building_icon = building_fortress
+    clothes_texture_index = 4
+    country_modifier = {
+        country_naval_cap_mult = 0.03
+        army_damage_mult = 0.05
+    }
+    possible = {
+        ruler_job_check_trigger = yes
+    }
+    resources = {
+        category = planet_soldiers
+        upkeep = {
+            energy = 2
+        }
+    }
+    weight = {
+        weight = @specialist_job_weight
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+    }
+}

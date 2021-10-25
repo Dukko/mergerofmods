@@ -1,0 +1,50 @@
+tech_rad_bloom_farm = {
+    icon = tech_rad_bloom_farm
+    cost = @tier1cost3
+    area = society
+    tier = 1
+    category = {
+        new_worlds
+    }
+    prerequisites = {
+        "tech_basic_industry"
+    }
+    weight = @tier1weight3
+    is_reverse_engineerable = no
+    start_tech = no
+    is_rare = yes
+    weight_modifier = {
+        factor = 10
+        modifier = {
+            factor = 0
+            NOT = {
+                owner = {
+                    has_trait = trait_pc_irradiated_preference
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 5
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+}

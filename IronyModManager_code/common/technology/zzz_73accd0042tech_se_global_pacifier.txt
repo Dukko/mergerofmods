@@ -1,0 +1,60 @@
+tech_se_global_pacifier = {
+    area = physics
+    tier = 8
+    cost = @acot_tier8cost2
+    is_rare = yes
+    is_reverse_engineerable = no
+    category = {
+        field_manipulation
+    }
+    prerequisites = {
+        "tech_dm_global_pacifier"
+        "tech_precursor_colossus"
+        tech_stellarite_titan_beam
+    }
+    ai_update_type = military
+    weight = @tier5weight3
+    potential = {
+        host_has_dlc = "Apocalypse"
+        has_country_flag = colossus_project
+    }
+    weight_modifier = {
+        factor = 0.5
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = 0.2
+            NOR = {
+                research_leader = {
+                    area = physics
+                    has_trait = "leader_trait_maniacal"
+                }
+                research_leader = {
+                    area = physics
+                    has_trait = "leader_trait_curator"
+                }
+                research_leader = {
+                    area = physics
+                    has_trait = "leader_trait_expertise_field_manipulation"
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            is_pacifist = yes
+        }
+    }
+    ai_weight = {
+        factor = 0.25
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_pacifist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_pacifist
+        }
+    }
+}

@@ -1,0 +1,19 @@
+extra_building_slots_3 = {
+    cost = 6500
+    area = society
+    tier = 2
+    prerequisites = {
+        "tech_planetary_infrastructure_1"
+        "extra_building_slots_2"
+    }
+    category = {
+        new_worlds
+    }
+    weight = @tier2weight3
+    modifier = {
+        planet_max_buildings_add = 1
+    }
+    ai_weight = {
+        factor = 4
+    }
+}

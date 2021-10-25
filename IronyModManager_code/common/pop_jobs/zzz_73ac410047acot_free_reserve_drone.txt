@@ -1,0 +1,51 @@
+acot_free_reserve_drone = {
+    category = simple_drone
+    building_icon = building_fe_stronghold
+    clothes_texture_index = 1
+    icon = maintenance_drone
+    is_capped_by_modifier = no
+    possible_pre_triggers = {
+        has_owner = yes
+    }
+    possible = {
+        planet = {
+            has_modifier = acot_modifier_free_stasis
+        }
+    }
+    planet_modifier = {
+        planet_amenities_no_happiness_add = 1
+    }
+    country_modifier = {
+    }
+    resources = {
+        category = planet_jobs
+        produces = {
+        }
+        upkeep = {
+        }
+    }
+    weight = {
+        weight = 1000
+        modifier = {
+            factor = 0
+            NOT = {
+                is_unemployed = yes
+            }
+        }
+        modifier = {
+            factor = 0
+            planet = {
+                free_jobs >= 1
+            }
+        }
+        modifier = {
+            factor = 0.01
+            planet.controller = {
+                OR = {
+                    is_country_type = swarm
+                    is_country_type = ai_empire
+                }
+            }
+        }
+    }
+}

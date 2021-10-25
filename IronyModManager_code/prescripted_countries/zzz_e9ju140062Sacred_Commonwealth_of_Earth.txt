@@ -1,0 +1,71 @@
+"Sacred Commonwealth of Earth" = {
+    key = "Sacred Commonwealth of Earth"
+    ship_prefix = "CNS"
+    species = {
+        class = "HUM"
+        portrait = "human"
+        name = "Human"
+        plural = "Humans"
+        adjective = "Human"
+        species_bio = "The Black Death wiped out half of Earth's population in the 14th Century, including 99% of Europeans. Various Medieval Islamic powers expanded to fill the vacuum, first colonizing Europe and then discovering the Americas. Invigorated by a new era of frontiersmanship, these societies birthed a Renaissance spanning from Qurtuba to Makka to Jayakarta. During Earth's Industrial and Machine Ages, the Dar al-Islam came into frequent conflict with the Indian Travancore League and Chinese Empire. The struggle between these three blocs culminated in the Long War, spanning decades and killing hundreds of millions. Such horrific bloodshed gave rise to the political philosophy of Moral Progressivism. Dominated by the victorious powers of Firanja, Jinshan, and the Japanese Republic, the Human homeworld thrived under a syncretic vision of Islam, Buddhism, democracy, and environmentalism. As Humanity expanded into space, an enlightened and unified global government emerged to ensure lasting peace and prosperity: the Sacred Commonwealth of Earth."
+        name_list = "just-name-lists_human6"
+        trait = "trait_just-more-traits_curious"
+        trait = "trait_just-more-traits_flexible"
+    }
+    name = "Sacred Commonwealth of Earth"
+    adjective = "Earth"
+    authority = "auth_democratic"
+    flags = {
+        "sacred_commonwealth_of_earth"
+        "custom_start_screen"
+    }
+    government = "gov_liberal_democracy"
+    advisor_voice_type = "l_pacifist"
+    planet_name = "Earth"
+    planet_class = "pc_continental"
+    system_name = "Sol"
+    initializer = "sol_system_initializer"
+    graphical_culture = "humanoid_01"
+    city_graphical_culture = "humanoid_01"
+    empire_flag = {
+        icon = {
+            category = "just-more-flags"
+            file = "flag_human1.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "fabric_x120.dds"
+        }
+        colors = {
+            "dark_green"
+            "green"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = female
+        name = "Mahibah Mahdi"
+        portrait = "human_female_03"
+        texture = 0
+        hair = 8
+        clothes = 5
+        ruler_title = "President"
+        ruler_title_female = "President"
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "cityscape24_room"
+    spawn_enabled = yes
+    ethic = "ethic_fanatic_egalitarian"
+    ethic = "ethic_pacifist"
+    ethic = "ethic_spiritualist"
+    ethic = "ethic_capitalism"
+    civics = {
+        "civic_beacon_of_liberty"
+        "civic_environmentalist"
+        "civic_parliamentary_system"
+    }
+    origin = "origin_default"
+}

@@ -1,0 +1,28 @@
+tech_esap_technological_ascendancy_bonus_1_envoy = {
+    cost = @tier5cost3
+    area = society
+    tier = 5
+    category = {
+        statecraft
+    }
+    prerequisites = {
+    }
+    is_rare = yes
+    weight = @tier5weight3
+    is_reverse_engineerable = no
+    modifier = {
+        envoys_add = 1
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            Not = {
+                has_ascension_perk = ap_esap_technological_ascendancy_bonus_1
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+    }
+}

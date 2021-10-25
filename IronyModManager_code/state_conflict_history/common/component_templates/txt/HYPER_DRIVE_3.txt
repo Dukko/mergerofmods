@@ -1,0 +1,37 @@
+@cost3 = 15
+@power3 = -20
+utility_component_template = {
+    key = "HYPER_DRIVE_3"
+    size = small
+    icon = "GFX_ship_part_hyper_drive_3"
+    icon_frame = 1
+    power = @power3
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @cost3
+        }
+    }
+    ftl = yes
+    ship_modifier = {
+        ship_windup_mult = -0.5
+        ship_interstellar_speed_mult = 0.4
+    }
+    ai_weight = {
+        weight = 3
+    }
+    class_restriction = {
+        shipclass_military
+        shipclass_constructor
+        shipclass_colonizer
+        shipclass_science_ship
+        shipclass_transport
+        shipclass_military_special
+        shipclass_starbase
+    }
+    prerequisites = {
+        "tech_hyper_drive_3"
+    }
+    component_set = "ftl_components"
+    upgrades_to = ENIGMATIC_DRIVE_DM
+}

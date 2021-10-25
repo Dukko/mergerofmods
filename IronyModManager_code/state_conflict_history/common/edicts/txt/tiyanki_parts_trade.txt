@@ -1,0 +1,32 @@
+@EdictDuration = 3600
+tiyanki_parts_trade = {
+    length = @EdictDuration
+    resources = {
+        category = rare_edicts
+        cost = {
+            sr_tiyanki_parts = 50
+        }
+    }
+    potential = {
+        has_resource = {
+            type = sr_tiyanki_parts
+            amount > 0
+        }
+        owner = {
+            is_gestalt = no
+        }
+    }
+    modifier = {
+        trade_value_mult = 0.2
+    }
+    ai_weight = {
+        weight = @EdictLowPrio
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = sr_tiyanki_parts
+                value < 500
+            }
+        }
+    }
+}

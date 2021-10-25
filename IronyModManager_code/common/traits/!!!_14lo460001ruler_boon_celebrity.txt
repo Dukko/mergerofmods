@@ -1,0 +1,25 @@
+ruler_boon_celebrity = {
+    cost = 2
+    modification = no
+    icon = "gfx/interface/icons/traits/ruler_boon_celebrity.dds"
+    modifier = {
+        pop_happiness = 0.11
+    }
+    leader_potential_add = {
+        NOT = {
+            from = {
+                has_ethic = "ethic_gestalt_consciousness"
+            }
+        }
+    }
+    leader_trait = {
+        ruler
+    }
+    leader_class = {
+        ruler
+    }
+    opposites = {
+        "trait_ruler_champion_of_the_people"
+        "ruler_flaw_disliked"
+    }
+}

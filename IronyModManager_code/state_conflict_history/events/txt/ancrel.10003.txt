@@ -1,0 +1,58 @@
+namespace = ancrel
+country_event = {
+    id = ancrel.10003
+    title = "ancrel.10003.name"
+    desc = "ancrel.10003.desc"
+    picture = GFX_evt_ancient_records
+    is_triggered_only = yes
+    option = {
+        name = "FASCINATING"
+        locked_random_list = {
+            10 = {
+                add_random_research_option = {
+                    add_progress = 0.2
+                    area = engineering
+                    ignore_prereqs = no
+                    fail_effects = {
+                        add_monthly_resource_mult = {
+                            resource = engineering_research
+                            value = @tier3researchreward
+                            min = @tier3researchmin
+                            max = @tier3researchmax
+                        }
+                    }
+                }
+            }
+            10 = {
+                add_random_research_option = {
+                    add_progress = 0.2
+                    area = physics
+                    ignore_prereqs = no
+                    fail_effects = {
+                        add_monthly_resource_mult = {
+                            resource = physics_research
+                            value = @tier3researchreward
+                            min = @tier3researchmin
+                            max = @tier3researchmax
+                        }
+                    }
+                }
+            }
+            10 = {
+                add_random_research_option = {
+                    add_progress = 0.2
+                    area = society
+                    ignore_prereqs = no
+                    fail_effects = {
+                        add_monthly_resource_mult = {
+                            resource = society_research
+                            value = @tier3researchreward
+                            min = @tier3researchmin
+                            max = @tier3researchmax
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

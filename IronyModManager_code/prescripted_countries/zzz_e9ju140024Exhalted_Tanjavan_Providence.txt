@@ -1,0 +1,78 @@
+"Exhalted Tanjavan Providence" = {
+    key = "Exhalted Tanjavan Providence"
+    ship_prefix = "ITN"
+    species = {
+        class = "FUN"
+        portrait = "fun7"
+        name = "Basikos"
+        plural = "Basikosi"
+        adjective = "Basikosian"
+        species_bio = "The Basikosi are masters of the labrynthine fungal forests of the planet Morkev Civa, where a vast cornucopia of life seems to somehow move in slow motion. Heirs to a million year long history, Basikosian civilization has already endured a span of time orders of magnitude longer than that of other young interstellar powers. Their culture's survival is thanks in part to extremely conservative values. Individual Basikosi typically undertake extensive meditation before making decisions. When they act, however, it is with irresistable determination. More than a thousand years ago, the Basikosian God-Emperor Dakjavv CXII declared that his people must grow outward from their homeworld to inhabit the stars or face the ultimate sanction of heaven. Yet only now is that divine commandment becoming reality, and the light of Providence shining out at last into the galaxy."
+        name_list = "just-name-lists_molluscoid3"
+        trait = "trait_enduring"
+        trait = "trait_talented"
+        trait = "trait_traditional"
+        trait = "trait_sedentary"
+    }
+    secondary_species = {
+        class = "FUN"
+        portrait = "fun11"
+        name = "Lexolotus"
+        plural = "Lexoloti"
+        adjective = "Lexolotic"
+        species_bio = "Lexoloti are massive fungal beings that communicate through pheromones and bioluminescence. Slow moving, they nevertheless possess great physical strength and endurance. Eons ago, in the teeming mushroom jungles of Morkev Civa, they formed a symbiotic relationship with the Basikosi. The smaller, abler species tended to the Lexolotus like pilot fish, cleaning them of parasites and alerting them to resources and danger. The larger, wiser species in turn tended to Basikosian needs by providing shelter, protection from predators, and a source of physical labor."
+        name_list = "FUN2"
+        trait = "trait_syncretic_proles"
+        trait = "trait_communal"
+        trait = "trait_resilient"
+        trait = "trait_sedentary"
+    }
+    name = "Exhalted Tanjavan Providence"
+    adjective = "Tanjavan"
+    authority = "auth_imperial"
+    government = "gov_divine_empire"
+    planet_name = "Morkev Civa"
+    planet_class = "pc_swamp"
+    system_name = "Tanjava"
+    initializer = ""
+    graphical_culture = "fungoid_01"
+    city_graphical_culture = "fungoid_01"
+    empire_flag = {
+        icon = {
+            category = "just-more-flags"
+            file = "flag_spiritualist8.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "fabric_circle.dds"
+        }
+        colors = {
+            "dark_green"
+            "green"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = female
+        name = "Xincava Qalvrfin"
+        portrait = "fun7"
+        texture = 4
+        hair = 0
+        clothes = 0
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "hive5_room"
+    spawn_enabled = yes
+    ethic = "ethic_authoritarian"
+    ethic = "ethic_fanatic_pacifist"
+    ethic = "ethic_fanatic_spiritualist"
+    civics = {
+        "civic_imperial_cult"
+        "civic_philosopher_king"
+        "civic_exalted_priesthood"
+    }
+    origin = "origin_syncretic_evolution"
+}

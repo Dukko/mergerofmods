@@ -1,0 +1,57 @@
+tech_enigmatic_drive_dm = {
+    cost = @acot_tier6cost1
+    tier = 6
+    area = physics
+    category = {
+        particles
+    }
+    ai_update_type = all
+    is_reverse_engineerable = yes
+    is_rare = yes
+    weight = 15
+    prerequisites = {
+        "tech_dark_matter_power_core"
+    }
+    prereqfor_desc = {
+        component = {
+            title = "TECH_UNLOCK_ENIG_DRIVE_DM"
+            desc = "TECH_UNLOCK_ENIG_DRIVE_DM_DESC"
+        }
+    }
+    potential = {
+        NOT = {
+            has_global_flag = acot_shipcom_forbidden
+        }
+    }
+    weight_modifier = {
+        factor = 0.5
+        modifier = {
+            factor = 0.1
+            NOR = {
+                research_leader = {
+                    area = physics
+                    has_trait = "leader_trait_expertise_particles"
+                }
+                research_leader = {
+                    area = physics
+                    has_trait = "leader_trait_curator"
+                }
+                research_leader = {
+                    area = physics
+                    has_trait = "leader_trait_spark_of_genius"
+                }
+                research_leader = {
+                    area = physics
+                    has_trait = "leader_trait_maniacal"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = tr_discovery_adopt
+        }
+    }
+    ai_weight = {
+        factor = 20
+    }
+}

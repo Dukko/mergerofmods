@@ -1,0 +1,174 @@
+original_empire_active = {
+    sub_title = "COUNTRY_ORIGINAL_EMPIRE"
+    sub_title_desc = "COUNTRY_ORIGINAL_EMPIRE_DESC"
+    has_difficulty_bonuses = yes
+    counts_for_victory = yes
+    pop_growth = yes
+    playable = yes
+    share_survey_data = yes
+    has_pulse_events = yes
+    piracy_risk = no
+    randomize_ethos = no
+    shuffle_pop_ethos = no
+    needs_survey = no
+    diplomatic_wars = yes
+    ship_disengagement = yes
+    army_disengagement = yes
+    relations = yes
+    observable = yes
+    uses_special_buildables = no
+    custom_starbase = origin_super_citadel_playable
+    faction = {
+        needs_border_access = no
+        generate_borders = yes
+        needs_colony = no
+        auto_delete = no
+    }
+    ai = {
+        enabled = yes
+        declare_war = yes
+        min_navy_for_wars = 0.2
+        min_assault_armies_for_wars = 6
+        colonizer = yes
+        internal_policies = no
+        starbase_upgrade = yes
+        modification = yes
+        traditions = no
+        government = no
+        construction = yes
+        tech = yes
+        follow = yes
+        can_use_market = no
+        modules = {
+            military_minister_module
+            foreign_minister_module
+            interior_minister_module
+        }
+        ship_data = {
+            constructor = {
+                min = 4
+                max = 6
+                system_mult = 0.1
+            }
+            science = {
+                min = 2
+                max = 4
+                system_mult = 0.15
+            }
+            colonizer = {
+                min = 1
+                max = 1
+            }
+            colossus = {
+                min = 1
+                max = 10
+            }
+            progenitor_avatar = {
+                min = 2
+                max = 10
+            }
+            progenitor_titan = {
+                min = 5
+                max = 40
+            }
+            progenitor_escort = {
+                fraction = {
+                    modifier = {
+                        add = 60
+                    }
+                }
+            }
+            progenitor_battlecruiser = {
+                fraction = {
+                    modifier = {
+                        add = 40
+                    }
+                }
+            }
+        }
+        army_data = {
+            origin_assault_guardian = {
+                fraction = {
+                    factor = 100
+                    modifier = {
+                        factor = 0
+                        NOT = {
+                            has_technology = tech_celestial_guardian
+                        }
+                    }
+                }
+            }
+            sofe_omega_mech = {
+                fraction = {
+                    factor = 60
+                    modifier = {
+                        factor = 0
+                        NOT = {
+                            has_technology = tech_celestial_guardian
+                        }
+                    }
+                }
+            }
+        }
+    }
+    trade_routes_available = {
+        is_gestalt = no
+    }
+    modules = {
+        all_technology_module = {
+        }
+        standard_event_module = {
+        }
+        standard_leader_module = {
+        }
+        standard_economy_module = {
+        }
+        standard_species_rights_module = {
+        }
+        standard_expansion_module = {
+        }
+        exclusive_diplomacy_module = {
+            contact_rule = on_action_only
+            can_receive = {
+                action_declare_war
+                action_offer_peace
+                action_make_rival
+                action_end_rivalry
+                action_offer_trade_deal
+                action_cancel_trade_deal
+                action_insult
+            }
+            can_send = {
+                action_declare_war
+                action_make_rival
+                action_end_rivalry
+                action_offer_peace
+                action_offer_trade_deal
+                action_cancel_trade_deal
+                action_open_borders
+                action_close_borders
+            }
+        }
+    }
+    resources = {
+        category = country_base
+        produces = {
+            energy = 1000
+            minerals = 1000
+            food = 1000
+            alloys = 1000
+            consumer_goods = 10000
+            rare_crystals = 1000
+            exotic_gases = 1000
+            volatile_motes = 1000
+            sr_dark_matter = 1000
+            sr_living_metal = 1000
+            sr_zro = 1000
+            nanites = 1000
+            acot_sr_dark_energy = 500
+            acot_sr_stellarite = 500
+            acot_sr_light_matter = 100
+            influence = 5
+        }
+    }
+}

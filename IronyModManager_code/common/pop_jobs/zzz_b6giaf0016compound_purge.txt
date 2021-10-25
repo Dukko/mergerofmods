@@ -1,0 +1,18 @@
+compound_purge = {
+    icon = purge
+    category = compound_purge
+    purge = purge_normal
+    is_capped_by_modifier = no
+    weight = {
+        weight = 999999
+    }
+    possible = {
+        exists = planet
+        planet = {
+            exists = controller
+            controller = {
+                is_country_type = compound_empire
+            }
+        }
+    }
+}

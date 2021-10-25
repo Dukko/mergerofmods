@@ -1,0 +1,28 @@
+tech_stelar_advanced_ships = {
+    area = engineering
+    category = {
+        voidcraft
+    }
+    tier = 8
+    cost = @acot_tier8cost2
+    weight = 5
+    ai_update_type = military
+    prerequisites = {
+        "tech_stellarite_reactor"
+    }
+    is_rare = yes
+    modifier = {
+        shipsize_corvette_hull_add = 600
+        shipsize_destroyer_hull_add = 1800
+        shipsize_cruiser_hull_add = 3600
+        shipsize_battleship_hull_add = 6000
+        shipsize_titan_hull_add = 20000
+        shipsize_juggernaut_hull_add = 200000
+    }
+    potential = {
+        NOT = {
+            has_global_flag = acot_shipcom_forbidden
+        }
+        has_technology = tech_stellarite_reactor
+    }
+}

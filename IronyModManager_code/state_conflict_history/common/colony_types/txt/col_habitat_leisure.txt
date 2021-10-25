@@ -1,0 +1,24 @@
+col_habitat_leisure = {
+    icon = GFX_colony_type_habitat_leisure
+    potential = {
+        OR = {
+            uses_district_set = habitat
+            uses_district_set = pdarchive
+        }
+        exists = owner
+        owner = {
+            OR = {
+                is_gestalt = no
+                has_valid_civic = civic_machine_servitor
+            }
+        }
+    }
+    planet_modifier = {
+        planet_district_hab_cultural_build_speed_mult = 0.25
+        pop_happiness = 0.1
+        planet_jobs_unity_produces_mult = 0.1
+    }
+    weight_modifier = {
+        base = 0
+    }
+}

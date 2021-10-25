@@ -1,0 +1,29 @@
+giga_tech_repeatable_defense_nexus_capacity_upgrade = {
+    area = engineering
+    cost = 200000
+    cost_per_level = 50000
+    tier = 5
+    category = {
+        voidcraft
+    }
+    levels = 20
+    prerequisites = {
+        "giga_tech_defense_nexus_production_2"
+    }
+    weight = 20
+    ai_weight = {
+        factor = 1
+    }
+    weight_groups = {
+        repeatable
+    }
+    mod_weight_if_group_picked = {
+        repeatable = 0.01
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "increases_defense_nexus_capacity"
+            desc = "increases_defense_nexus_capacity"
+        }
+    }
+}

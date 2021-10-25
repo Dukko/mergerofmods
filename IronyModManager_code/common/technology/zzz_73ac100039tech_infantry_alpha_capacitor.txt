@@ -1,0 +1,63 @@
+tech_infantry_alpha_capacitor = {
+    area = society
+    cost = @acot_tier7cost1
+    tier = 7
+    category = {
+        military_theory
+    }
+    prerequisites = {
+        "tech_dark_matter_power_core_ae"
+    }
+    weight = 20
+    is_rare = yes
+    potential = {
+        NOT = {
+            has_global_flag = acot_army_forbidden
+        }
+        OR = {
+            has_technology = tech_dark_matter_army_ae
+            has_technology = tech_omnidroid_ae
+            has_technology = tech_spm_battledroid_ae
+        }
+    }
+    modifier = {
+        armies_cost_mult = -0.25
+        armies_upkeep_mult = -1
+    }
+    weight_modifier = {
+        factor = 0.5
+        modifier = {
+            factor = 0.25
+            NOR = {
+                research_leader = {
+                    area = society
+                    has_trait = "leader_trait_expertise_military_theory"
+                }
+                research_leader = {
+                    area = society
+                    has_trait = "leader_trait_curator"
+                }
+                research_leader = {
+                    area = society
+                    has_trait = "leader_trait_maniacal"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+@giga_ndb_scale = 1.5
+entity = {
+    name = "giga_ndb_firing_9"
+    cull_radius = 1000
+    scale = @giga_ndb_scale
+    locator = {
+        name = "m1"
+        position = {
+            -485
+            0
+            0
+        }
+        rotation = {
+            0
+            90
+            90
+        }
+        scale = 100
+    }
+    locator = {
+        name = "pew"
+        position = {
+            -485
+            0
+            0
+        }
+        rotation = {
+            0
+            90
+            90
+        }
+    }
+    locator = {
+        name = "loc101"
+        position = {
+            -1475
+            0
+            0
+        }
+        rotation = {
+            0
+            90
+            90
+        }
+        scale = 15
+    }
+    attach = {
+        m1 = "giga_ndb_beam_entity"
+    }
+    attach = {
+        pew = "fme01_titan_laser_muzzle_entity"
+    }
+    attach = {
+        pew = "titan_laser_hit_entity"
+    }
+    attach = {
+        loc101 = "giga_ndb_energy_entity"
+    }
+}

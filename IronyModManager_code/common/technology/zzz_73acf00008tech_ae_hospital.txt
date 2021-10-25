@@ -1,0 +1,40 @@
+tech_ae_hospital = {
+    cost = @acot_tier7cost1
+    area = society
+    tier = 7
+    category = {
+        biology
+    }
+    prerequisites = {
+        "tech_fe_hospital"
+    }
+    weight = @tier5weight1
+    potential = {
+        NOT = {
+            has_global_flag = acot_building_forbidden
+        }
+        is_gestalt = no
+        has_technology = tech_dark_matter_power_core_ae
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOR = {
+                has_technology = tech_mine_exotic_gases
+                has_technology = tech_exotic_gases
+                has_country_flag = has_market_access
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = tr_harmony_adopt
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+    }
+}

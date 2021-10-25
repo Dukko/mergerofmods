@@ -1,0 +1,61 @@
+namespace = colony_mod
+planet_event = {
+    id = colony_mod.101
+    title = "colony_mod.101.name"
+    desc = "colony_mod.101.desc"
+    picture = GFX_evt_alien_cavemen
+    show_sound = event_air_raid_siren
+    location = ROOT
+    is_triggered_only = yes
+    immediate = {
+        owner = {
+            if = {
+                limit = {
+                    NOT = {
+                        has_country_flag = titanic_life_soldiers
+                    }
+                }
+                set_country_flag = titanic_life_soldiers
+                set_variable = {
+                    which = titanic_life_soldier_count
+                    value = 0
+                }
+                set_variable = {
+                    which = titanic_life_soldier_maximum
+                    value = 0
+                }
+            }
+        }
+        set_planet_flag = titanic_life_can_build
+        owner = {
+            change_variable = {
+                which = titanic_life_soldier_maximum
+                value = @titanic_life_soldier_per_planet_maximum
+            }
+        }
+    }
+    option = {
+        name = EXCELLENT
+        trigger = {
+            NOT = {
+                has_planet_flag = nice_titan_study
+            }
+        }
+        custom_tooltip = titanic_recruit_tooltip
+    }
+    option = {
+        name = EXCELLENT
+        trigger = {
+            has_planet_flag = nice_titan_study
+        }
+        hidden_effect = {
+            every_deposit = {
+                limit = {
+                    is_deposit_type = d_titanic_life_blocker
+                }
+                clear_blocker = yes
+            }
+        }
+        custom_tooltip = titanic_recruit_phile_tooltip
+    }
+}

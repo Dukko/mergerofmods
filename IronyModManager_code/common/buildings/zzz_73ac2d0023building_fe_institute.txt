@@ -1,0 +1,108 @@
+building_fe_institute = {
+    base_buildtime = 520
+    base_cap_amount = 1
+    category = research
+    potential = {
+        exists = owner
+    }
+    allow = {
+        has_enigmatic_capital = yes
+    }
+    resources = {
+        category = planet_buildings
+        produces = {
+            physics_research = 50
+            engineering_research = 50
+            society_research = 50
+            minor_artifacts = 1
+        }
+        cost = {
+            minerals = 1000
+            sr_dark_matter = 500
+            acot_sr_dark_energy = 500
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    NOT = {
+                        has_technology = tech_acot_fractured_autoharvesting
+                    }
+                }
+            }
+            sr_dark_matter = 20
+            acot_sr_dark_energy = 20
+        }
+    }
+    planet_modifier = {
+        planet_jobs_society_research_produces_mult = 0.25
+        planet_jobs_engineering_research_produces_mult = 0.25
+        planet_jobs_physics_research_produces_mult = 0.25
+    }
+    country_modifier = {
+        num_tech_alternatives_add = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_acot_researcher_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_acot_researcher_drone_add = 1
+        }
+    }
+    prerequisites = {
+        "tech_fe_institute"
+    }
+    show_tech_unlock_if = {
+    }
+    ai_weight = {
+        weight = 1000
+        modifier = {
+            factor = 0
+            free_jobs > 0
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value <= 10
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = sr_dark_matter
+                    value <= 3
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = acot_sr_dark_energy
+                    value <= 3
+                }
+            }
+        }
+    }
+    upgrades = {
+        building_ae_institute
+    }
+}

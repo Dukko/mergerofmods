@@ -1,0 +1,28 @@
+namespace = anomaly
+namespace = anomaly
+ship_event = {
+    id = anomaly.240
+    title = anomaly.240.name
+    desc = anomaly.240.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+    is_triggered_only = yes
+    immediate = {
+        from = {
+            clear_planet_modifiers = yes
+            change_pc = pc_barren
+            reset_planet = yes
+            change_planet_size = 25
+            reroll_planet_modifiers = yes
+            gpm_remove_precursor_modifiers = yes
+        }
+    }
+    option = {
+        name = REMARKABLE
+        custom_tooltip = anomaly.240.a.tooltip
+        leader = {
+            add_experience = 200
+        }
+    }
+}

@@ -1,0 +1,32 @@
+tech_shroud_missile = {
+    area = society
+    cost = @acot_tier8cost2
+    tier = 8
+    category = {
+        psionics
+    }
+    ai_update_type = military
+    weight = 20
+    is_rare = yes
+    is_reverse_engineerable = yes
+    prerequisites = {
+        tech_precursor_design
+    }
+    potential = {
+        has_ascension_perk = ap_transcendence
+        any_country = {
+            is_country_type = shroud
+            has_established_contact = root
+        }
+        has_technology = tech_precursor_design
+        NOT = {
+            has_global_flag = acot_shipcom_forbidden
+        }
+    }
+    weight_modifier = {
+        factor = 1
+    }
+    ai_weight = {
+        factor = 200
+    }
+}

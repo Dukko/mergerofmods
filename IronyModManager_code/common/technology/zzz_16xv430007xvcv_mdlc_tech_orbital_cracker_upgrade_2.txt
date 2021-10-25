@@ -1,0 +1,33 @@
+xvcv_mdlc_tech_orbital_cracker_upgrade_2 = {
+    cost = @tier4cost1
+    area = engineering
+    tier = 4
+    category = {
+        industry
+    }
+    weight = @tier4weight1
+    potential = {
+        has_valid_civic = xvcv_mdlc_civic_planet_cracker
+    }
+    modifier = {
+        custom_tooltip = xvcv_mdlc_tech_orbital_cracker_upgrade_2_tooltip
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+}

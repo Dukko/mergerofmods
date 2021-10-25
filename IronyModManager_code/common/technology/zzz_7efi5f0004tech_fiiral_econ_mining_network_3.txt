@@ -1,0 +1,30 @@
+tech_fiiral_econ_mining_network_3 = {
+    cost = @tier4cost3
+    area = engineering
+    tier = 4
+    category = {
+        industry
+    }
+    prerequisites = {
+        "tech_fiiral_econ_mining_network_2"
+    }
+    weight = @tier4weight3
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+tech_sensor_pe = {
+    area = physics
+    tier = 10
+    cost = @acot_tier10cost1
+    category = {
+        computing
+    }
+    ai_update_type = all
+    weight = 0
+    is_rare = yes
+    is_reverse_engineerable = no
+    potential = {
+        has_technology = tech_dark_matter_power_core_pe
+        NOT = {
+            has_global_flag = acot_phanon_forbidden
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_technology = tech_dark_matter_power_core_pe
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = tr_discovery_adopt
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 1.25
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+    prereqfor_desc = {
+        component = {
+            title = "TECH_UNLOCK_FE_SENSOR_TITLE"
+            desc = "TECH_UNLOCK_FE_SENSOR_DESC"
+        }
+    }
+}

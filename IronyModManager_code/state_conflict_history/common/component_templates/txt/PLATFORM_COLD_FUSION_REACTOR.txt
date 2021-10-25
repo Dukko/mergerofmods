@@ -1,0 +1,35 @@
+@platform_power_3 = 950
+@platform_cost_3 = 34
+utility_component_template = {
+    key = "PLATFORM_COLD_FUSION_REACTOR"
+    size = large
+    icon = "GFX_ship_part_reactor_3"
+    icon_frame = 1
+    power = @platform_power_3
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @platform_cost_3
+        }
+        upkeep = {
+            energy = 0.26
+            alloys = 0.026
+        }
+    }
+    prerequisites = {
+        "tech_cold_fusion_power"
+    }
+    component_set = "power_core"
+    class_restriction = {
+        shipclass_military_station
+    }
+    size_restriction = {
+        military_station_small
+        military_station_medium
+        military_station_large
+    }
+    upgrades_to = "PLATFORM_ANTIMATTER_REACTOR"
+    ai_weight = {
+        weight = 3
+    }
+}

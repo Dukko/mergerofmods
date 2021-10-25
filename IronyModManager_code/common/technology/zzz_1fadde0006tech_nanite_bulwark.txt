@@ -1,0 +1,68 @@
+tech_nanite_bulwark = {
+    cost = @tier5cost1
+    area = engineering
+    icon = tech_nanite_starbase
+    tier = 5
+    category = {
+        voidcraft
+    }
+    ai_update_type = all
+    prerequisites = {
+        "tech_nanite_strike_craft"
+        "tech_space_defense_station_improvement"
+        "tech_nanite_guardians"
+    }
+    is_rare = yes
+    weight = @tier5weight1
+    potential = {
+        has_global_flag = l_cluster_opened
+        has_resource = {
+            type = nanites
+            amount > 30
+        }
+        OR = {
+            NOT = {
+                has_global_flag = distar_overhaul_mod_active
+            }
+            has_technology = tech_nanite_clouds
+        }
+        exists = event_target:goo_slayer
+    }
+    modifier = {
+        starbase_defense_platform_capacity_add = 12
+    }
+    prereqfor_desc = {
+        ship = {
+            title = "TECH_UNLOCK_NANITE_BULWARK_TITLE"
+            desc = "TECH_UNLOCK_NANITE_BULWARK_DESC"
+        }
+    }
+    weight_modifier = {
+        factor = 0.1
+        modifier = {
+            factor = 5
+            any_neighbor_country = {
+                OR = {
+                    has_technology = tech_nanite_bulwark
+                    has_technology = tech_starbase_5
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+building_virtual_entertainment_studios = {
+    base_buildtime = @b1_time
+    branch_office_building = yes
+    potential = {
+        has_branch_office = yes
+        branch_office_owner = {
+            is_criminal_syndicate = no
+        }
+    }
+    planet_modifier = {
+        job_clerk_add = 2
+    }
+    resources = {
+        category = planet_branch_office_buildings
+        cost = {
+            minerals = 500
+        }
+        produces = {
+            consumer_goods = 6
+        }
+        upkeep = {
+            energy = 2
+        }
+    }
+    ai_weight = {
+        weight = 50
+        modifier = {
+            factor = 0
+            owner = {
+                resource_income_compare = {
+                    resource = consumer_goods
+                    value > 15
+                }
+            }
+        }
+    }
+}

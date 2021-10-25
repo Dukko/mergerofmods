@@ -1,0 +1,211 @@
+amaryllian_district_arcology_civilian_industry = {
+    base_buildtime = 360
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        has_planet_flag = amaryllian_civilian_arcology
+    }
+    potential = {
+        has_planet_flag = amaryllian_civilian_arcology
+        exists = owner
+        owner = {
+            OR = {
+                is_gestalt = no
+                has_valid_civic = civic_machine_servitor
+            }
+        }
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_hab_housing
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = 1000
+            rare_crystals = 50
+        }
+        upkeep = {
+            energy = 5
+            rare_crystals = 2
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 10
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ascension_perk = ap_amaryllian_voidchildren
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_artisan_drone_add = 6
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                NOT = {
+                    has_ascension_perk = ap_amaryllian_voidchildren
+                }
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_artisan_drone_add = 4
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ascension_perk = ap_amaryllian_voidchildren
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_artisan_add = 6
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                NOT = {
+                    has_ascension_perk = ap_amaryllian_voidchildren
+                }
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_artisan_add = 4
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = job_artisan_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_artisan_drone_effect_desc
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_tradition = tr_prosperity_interstellar_franchising
+            }
+        }
+        modifier = {
+            job_clerk_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+            has_active_building = building_factory_2
+        }
+        modifier = {
+            job_artisan_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+            has_active_building = building_factory_3
+        }
+        modifier = {
+            job_artisan_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+            has_active_building = building_factory_2
+        }
+        modifier = {
+            job_artisan_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+            has_active_building = building_factory_3
+        }
+        modifier = {
+            job_artisan_drone_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+                has_edict = industrial_maintenance
+            }
+        }
+        modifier = {
+            job_maintenance_drone_add = 1
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+                has_edict = industrial_maintenance
+            }
+        }
+        text = job_maintenance_drone_effect_desc
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 500
+            owner = {
+                has_monthly_income = {
+                    resource = consumer_goods
+                    value < 200
+                }
+                has_monthly_income = {
+                    resource = minerals
+                    value > 99
+                }
+            }
+        }
+        modifier = {
+            weight = 50000
+            owner = {
+                has_monthly_income = {
+                    resource = consumer_goods
+                    value < 0
+                }
+            }
+        }
+    }
+}

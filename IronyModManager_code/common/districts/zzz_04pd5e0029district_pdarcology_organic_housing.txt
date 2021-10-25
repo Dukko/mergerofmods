@@ -1,0 +1,48 @@
+district_pdarcology_organic_housing = {
+    base_buildtime = 600
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        uses_district_set = pdecocity
+        from = {
+            has_valid_civic = civic_machine_servitor
+        }
+    }
+    potential = {
+        uses_district_set = pdecocity
+        owner = {
+            exists = owner
+            has_valid_civic = civic_machine_servitor
+        }
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_arcology_leisure
+        district_city
+        district_nexus
+        district_hive
+        district_arcology_housing
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = 1000
+            exotic_gases = 50
+        }
+        upkeep = {
+            energy = 5
+            exotic_gases = 1
+        }
+    }
+    planet_modifier = {
+        job_bio_trophy_add = 15
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_machine_servitor
+            }
+        }
+        text = job_bio_trophy_effect_desc
+    }
+}

@@ -1,0 +1,21 @@
+tech_darkmatter_reactive_drone_dm = {
+    area = engineering
+    category = {
+        materials
+    }
+    cost = @acot_tier6cost1
+    tier = 6
+    weight = @tier5weight2
+    ai_update_type = all
+    is_rare = yes
+    potential = {
+        NOT = {
+            has_global_flag = acot_utilitys_forbidden
+        }
+    }
+    prerequisites = {
+        "tech_armor_dm"
+    }
+    weight_modifier = {
+    }
+}

@@ -1,0 +1,69 @@
+particle_accelerator_1_manage = {
+    entity = ""
+    portrait = "GFX_megastructure_physics_research"
+    upgrade_from = {
+        particle_accelerator_1
+    }
+    build_time = 0
+    potential = {
+        NOR = {
+            has_global_flag = accelerator_disabled
+            has_global_flag = managing_giga_megastructure
+        }
+        is_ai = no
+    }
+    possible = {
+        from = {
+            has_technology = giga_tech_particle_accelerator
+        }
+    }
+    on_build_complete = {
+        from = {
+            set_country_flag = giga_repaired_mega_no_dialog
+        }
+        set_global_flag = managing_giga_megastructure
+        fromfrom.planet = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = acc_intensity
+                        value = 0
+                    }
+                }
+                set_variable = {
+                    which = acc_intensity
+                    value = 3
+                }
+            }
+            if = {
+                limit = {
+                    check_variable = {
+                        which = acc_spec
+                        value = 0
+                    }
+                }
+                set_variable = {
+                    which = acc_spec
+                    value = 1
+                }
+            }
+            save_global_event_target_as = giga_mega_manage_planet
+            solar_system = {
+                spawn_megastructure = {
+                    type = particle_accelerator_1
+                    planet = event_target:giga_mega_manage_planet
+                    owner = space_owner
+                }
+            }
+        }
+        remove_global_flag = managing_giga_megastructure
+        from = {
+            country_event = {
+                id = giga_accelerator.1000
+            }
+            remove_country_flag = giga_repaired_mega_no_dialog
+        }
+        set_global_flag = managing_giga_megastructure
+        remove_megastructure = fromfrom
+    }
+}

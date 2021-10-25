@@ -1,0 +1,17 @@
+giga_tech_blokkat_snare = {
+    cost = 1250000
+    area = society
+    tier = 5
+    category = {
+        blokkats
+    }
+    is_rare = yes
+    weight = 0
+    is_reverse_engineerable = no
+    prereqfor_desc = {
+        custom = {
+            title = "blokkat_snare_mega_title"
+            desc = "blokkat_snare_mega_title"
+        }
+    }
+}

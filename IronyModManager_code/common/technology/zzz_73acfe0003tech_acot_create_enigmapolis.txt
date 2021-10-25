@@ -1,0 +1,36 @@
+tech_acot_create_enigmapolis = {
+    cost = @acot_tier8cost3
+    area = society
+    tier = 8
+    category = {
+        new_worlds
+    }
+    prerequisites = {
+        tech_acot_colonize_fractured_ae
+        tech_acot_automated_systems
+        tech_acot_fractured_autoharvesting
+        tech_acot_supercharged_reactor
+        tech_acot_supercharged_pylon
+        tech_precursor_design
+        tech_acot_fractured_shelter
+        tech_acot_fractured_trapper
+        tech_acot_fractured_fort
+        tech_acot_fractured_science_dome
+        tech_acot_fractured_size_upgrade_1
+        tech_acot_fractured_size_upgrade_2
+    }
+    weight = 20
+    potential = {
+    }
+    weight_modifier = {
+        factor = 1
+        modifier = {
+            factor = 0
+            NOT = {
+                any_planet_within_border = {
+                    is_planet_class = pc_dark_fractured_ae
+                }
+            }
+        }
+    }
+}

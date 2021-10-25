@@ -1,0 +1,253 @@
+district_maginot_world_barracks = {
+    base_buildtime = 600
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        uses_district_set = maginot_world_districts
+    }
+    potential = {
+        uses_district_set = maginot_world_districts
+    }
+    allow = {
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = 1000
+            alloys = 10
+            rare_crystals = 50
+        }
+        upkeep = {
+            energy = 12
+            rare_crystals = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                NOT = {
+                    has_valid_civic = civic_warrior_culture
+                }
+            }
+        }
+        modifier = {
+            job_merchant_add = 1
+            job_entertainer_add = 4
+            job_clerk_add = 4
+            job_maginot_military_police_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                has_valid_civic = civic_warrior_culture
+            }
+        }
+        modifier = {
+            job_merchant_add = 1
+            job_duelist_add = 4
+            job_clerk_add = 4
+            job_maginot_military_police_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                owner = {
+                    is_hive_empire = yes
+                }
+            }
+        }
+        modifier = {
+            job_synapse_drone_add = 4
+            job_maintenance_drone_add = 4
+            job_patrol_drone_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                owner = {
+                    is_machine_empire = yes
+                }
+            }
+        }
+        modifier = {
+            job_coordinator_add = 2
+            job_evaluator_add = 2
+            job_maintenance_drone_add = 4
+            job_patrol_drone_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_housing_2
+                has_ethic = ethic_gestalt_consciousness
+            }
+        }
+        modifier = {
+            job_maintenance_drone_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_active_tradition = tr_prosperity_interstellar_franchising
+            }
+        }
+        modifier = {
+            job_clerk_add = 3
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = job_merchant_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = job_merchant_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_warrior_culture
+            }
+        }
+        text = job_maginot_military_police_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                NOT = {
+                    has_valid_civic = civic_warrior_culture
+                }
+            }
+        }
+        text = job_entertainer_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = job_clerk_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_maintenance_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_patrol_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = job_synapse_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = job_coordinator_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = job_evaluator_effect_desc
+    }
+    planet_modifier = {
+        planet_housing_add = 20
+        planet_amenities_add = 10
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_active_tradition = tr_prosperity_public_works
+            }
+        }
+        modifier = {
+            planet_housing_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_housing_1
+            }
+        }
+        modifier = {
+            planet_housing_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_housing_2
+                NOT = {
+                    has_valid_civic = civic_agrarian_idyll
+                }
+            }
+        }
+        modifier = {
+            planet_housing_add = 3
+        }
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 500
+            free_housing < 5
+        }
+        modifier = {
+            weight = 500
+            free_amenities < 5
+        }
+    }
+}

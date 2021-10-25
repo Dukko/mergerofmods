@@ -1,0 +1,31 @@
+tech_acot_fractured_autoharvesting = {
+    cost = @acot_tier6cost3
+    area = physics
+    tier = 6
+    category = {
+        computing
+    }
+    prerequisites = {
+        "tech_dark_matter_power_core"
+    }
+    weight = 20
+    potential = {
+        any_owned_planet = {
+            OR = {
+                is_planet_class = pc_dark_fractured
+                is_planet_class = pc_dark_fractured_ae
+            }
+        }
+        OR = {
+            has_technology = tech_dm_ancient_palace
+            has_technology = tech_dm_ancient_control_center
+            has_technology = tech_dm_ancient_hive_cluster
+        }
+    }
+    modifier = {
+        description = tech_acot_fractured_autoharvesting_tooltip
+    }
+    weight_modifier = {
+        factor = 4
+    }
+}

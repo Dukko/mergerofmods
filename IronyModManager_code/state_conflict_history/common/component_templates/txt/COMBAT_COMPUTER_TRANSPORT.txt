@@ -1,0 +1,18 @@
+utility_component_template = {
+    key = "COMBAT_COMPUTER_TRANSPORT"
+    size = small
+    icon = "GFX_ship_part_computer_smart"
+    icon_frame = 1
+    power = 0
+    ship_behavior = "advtransport"
+    class_restriction = {
+        shipclass_transport
+    }
+    size_restriction = {
+        transport
+    }
+    component_set = "combat_computers"
+    ai_weight = {
+        weight = 0
+    }
+}

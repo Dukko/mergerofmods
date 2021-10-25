@@ -1,0 +1,87 @@
+tech_thought_enforcement = {
+    cost = @tier4cost2
+    area = society
+    tier = 4
+    category = {
+        psionics
+    }
+    is_rare = yes
+    prerequisites = {
+        "tech_telepathy"
+    }
+    weight = @tier4weight2
+    is_reverse_engineerable = no
+    potential = {
+        NOT = {
+            has_ethic = ethic_gestalt_consciousness
+        }
+    }
+    weight_modifier = {
+        factor = 0.5
+        modifier = {
+            factor = 0.5
+            NOT = {
+                research_leader = {
+                    area = society
+                    has_trait = "leader_trait_expertise_psionics"
+                }
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = @federation_perk_factor
+            has_federation = yes
+            federation = {
+                has_federation_perk = rare_tech_boost
+                any_member = {
+                    has_technology = tech_thought_enforcement
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            is_spiritualist = yes
+            has_ethic = ethic_authoritarian
+        }
+        modifier = {
+            factor = 3
+            is_spiritualist = yes
+            has_ethic = ethic_fanatic_authoritarian
+        }
+        modifier = {
+            factor = 2
+            has_valid_civic = civic_police_state
+        }
+        modifier = {
+            factor = 2
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_maniacal"
+            }
+        }
+        modifier = {
+            factor = 4
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_psionics"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 5
+        modifier = {
+            factor = 2
+            is_authoritarian = yes
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_psionics"
+            }
+        }
+    }
+}

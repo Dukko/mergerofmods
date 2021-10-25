@@ -1,0 +1,38 @@
+tech_omega_colossus = {
+    cost = @acot_tier10cost2
+    tier = 10
+    area = engineering
+    category = {
+        voidcraft
+    }
+    prerequisites = {
+        tech_precursor_colossus
+        tech_lightmatter_reactor
+    }
+    weight = 0
+    is_rare = yes
+    potential = {
+        NOT = {
+            is_country_type = fallen_empire
+        }
+    }
+    prereqfor_desc = {
+        ship = {
+            title = "TECH_UNLOCK_OMEGA_COLOSSUS_TITLE"
+            desc = "TECH_UNLOCK_OMEGA_COLOSSUS_DESC"
+        }
+    }
+    modifier = {
+        shipsize_precursor_colossus_hull_add = 100000
+    }
+    ai_weight = {
+        factor = 3
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+}

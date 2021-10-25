@@ -1,0 +1,20 @@
+giga_tech_blokkat_reprogram = {
+    cost = 3000000
+    area = society
+    tier = 5
+    category = {
+        blokkats
+    }
+    is_rare = yes
+    weight = 0
+    is_reverse_engineerable = no
+    modifier = {
+        leader_skill_levels = 2
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "blokkat_reprogram_title"
+            desc = "blokkat_reprogram_title"
+        }
+    }
+}

@@ -1,0 +1,39 @@
+tech_precursor_design = {
+    area = physics
+    cost = @acot_tier7cost2
+    tier = 7
+    is_rare = yes
+    category = {
+        computing
+    }
+    ai_update_type = military
+    weight = 0
+    potential = {
+    }
+    prereqfor_desc = {
+        hide_prereq_for_desc = component
+        hide_prereq_for_desc = custom
+        custom = {
+            title = "TECH_UNLOCK_FE_SHIP_TITLE"
+            desc = "TECH_UNLOCK_FE_SHIP_DESC"
+        }
+    }
+    ai_weight = {
+        factor = 5
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+}

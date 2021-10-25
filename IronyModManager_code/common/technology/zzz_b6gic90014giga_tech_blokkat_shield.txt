@@ -1,0 +1,20 @@
+giga_tech_blokkat_shield = {
+    cost = 1000000
+    area = physics
+    tier = 5
+    category = {
+        blokkats
+    }
+    is_rare = yes
+    weight = 0
+    is_reverse_engineerable = no
+    modifier = {
+        ship_shield_mult = 0.2
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "giga_tech_blokkat_knowledge_50_chance"
+            desc = "giga_tech_blokkat_knowledge_50_chance"
+        }
+    }
+}

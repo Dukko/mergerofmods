@@ -1,0 +1,69 @@
+"Federal Empire of Kravaal" = {
+    key = "Federal Empire of Kravaal"
+    ship_prefix = "INS"
+    species = {
+        class = "REP"
+        portrait = "rep5"
+        name = "Rasken"
+        plural = "Raskens"
+        adjective = "Raskenese"
+        species_bio = "In the common tongue of the Raskens of Hish'Darar, messages of both greeting and farewell translate as 'the Emperor protects'. Amid periods of intense warfare in their homeworld's Industrial and Machine Ages, a single constitutional monarchy centered in the southern hemisphere rose to become imperial hegemon of the whole planet. Post-war reforms established a federalized global government with both representative and privy councils under the leadership of the Emperor. To administer global affairs, ensure societal control, and drive economic prosperity, the crown established the Imperial Enterprise. The Enterprise is a massive nationalized corporation to which a sizeable percentage of the Raskenese population is indentured, many by their own choice. Terms of voluntary indenture last between five and fifty years, offer proportionate benefits upon completion, and typically involve less grueling and dangerous labor than 'punitive' or 'reformative' indenture. While outsiders often see only this monolithic face of the Federal Empire, a diversity of cultures and lifestyles continue to thrive in its local jurisdictions."
+        name_list = "just-name-lists_humanoid3"
+        trait = "trait_industrious"
+        trait = "trait_just-more-traits_prudent"
+        trait = "trait_just-more-traits_sensitive"
+    }
+    name = "Federal Empire of Kravaal"
+    adjective = "Kravaalian"
+    authority = "auth_imperial"
+    government = "gov_irenic_monarchy"
+    planet_name = "Hish'Darar"
+    planet_class = "pc_hadesert"
+    system_name = "Kravaal"
+    initializer = ""
+    graphical_culture = "reptilian_01"
+    city_graphical_culture = "reptilian_01"
+    empire_flag = {
+        icon = {
+            category = "just-more-flags"
+            file = "flag_nature9.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "fabric_circle.dds"
+        }
+        colors = {
+            "purple"
+            "indigo"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = male
+        name = "Dhargran Engor"
+        portrait = "rep5"
+        texture = 0
+        hair = 0
+        clothes = 1
+        ruler_title = "Emperor"
+        heir_title = "Heir Designate"
+        ruler_title_female = "Empress"
+        heir_title_female = "Heiress Designate"
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "command8_room"
+    spawn_enabled = yes
+    ethic = "ethic_authoritarian"
+    ethic = "ethic_pacifist"
+    ethic = "ethic_materialist"
+    ethic = "ethic_fanatic_capitalism"
+    civics = {
+        "civic_efficient_bureaucracy"
+        "civic_slaver_guilds"
+        "civic_corvee_system"
+    }
+    origin = "origin_default"
+}

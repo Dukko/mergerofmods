@@ -1,0 +1,69 @@
+tech_dm_divine_enforcer = {
+    area = society
+    tier = 7
+    cost = @acot_tier7cost1
+    is_rare = yes
+    is_reverse_engineerable = no
+    category = {
+        psionics
+    }
+    prerequisites = {
+        "tech_pk_godray"
+        "tech_perdition_beam_ae"
+    }
+    ai_update_type = military
+    weight = @tier5weight3
+    potential = {
+        host_has_dlc = "Apocalypse"
+        has_country_flag = colossus_project
+        is_spiritualist = yes
+        has_technology = tech_dark_matter_power_core_ae
+        OR = {
+            AND = {
+                NOT = {
+                    host_has_dlc = "Utopia"
+                }
+                has_technology = tech_telepathy
+            }
+            AND = {
+                host_has_dlc = "Utopia"
+                has_ascension_perk = ap_mind_over_matter
+            }
+        }
+    }
+    weight_modifier = {
+        factor = 0.5
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = 0.2
+            NOR = {
+                research_leader = {
+                    area = society
+                    has_trait = "leader_trait_maniacal"
+                }
+                research_leader = {
+                    area = society
+                    has_trait = "leader_trait_curator"
+                }
+                research_leader = {
+                    area = society
+                    has_trait = "leader_trait_expertise_psionics"
+                }
+            }
+        }
+    }
+    ai_weight = {
+        factor = 0.25
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_spiritualist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_spiritualist
+        }
+    }
+}

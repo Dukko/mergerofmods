@@ -1,0 +1,82 @@
+building_fe_power_hub = {
+    base_buildtime = 480
+    category = resource
+    country_modifier = {
+        country_resource_max_energy_add = 7500
+    }
+    allow = {
+        has_enigmatic_capital = yes
+    }
+    planet_modifier = {
+        planet_jobs_energy_produces_mult = 0.05
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_acot_energyman_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_acot_energydrone_add = 2
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 250
+            acot_sr_dark_energy = 150
+        }
+        produces = {
+            trigger = {
+                has_modifier = acot_modifier_ascended_city
+            }
+            energy = 20
+        }
+        upkeep = {
+            trigger = {
+                has_modifier = acot_modifier_ascended_city
+            }
+            acot_sr_dark_energy = 1
+        }
+    }
+    prerequisites = {
+        tech_fe_power_hub
+    }
+    ai_weight = {
+        weight = 3000
+        modifier = {
+            factor = 5
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 10
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            free_jobs > 0
+        }
+    }
+    ai_resource_production = {
+        energy = 10
+        trigger = {
+            always = yes
+        }
+    }
+    upgrades = {
+        building_ae_power_hub
+    }
+}

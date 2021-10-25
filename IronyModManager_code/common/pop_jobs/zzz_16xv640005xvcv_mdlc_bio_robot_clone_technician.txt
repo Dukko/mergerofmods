@@ -1,0 +1,39 @@
+xvcv_mdlc_bio_robot_clone_technician = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_clone_vats
+    icon = xvcv_mdlc_bio_robot_clone_drone
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        specialist_job_check_trigger = yes
+    }
+    resources = {
+        category = planet_jobs
+        produces = {
+            society_research = 4
+        }
+        upkeep = {
+            energy = 2
+            alloys = 2
+            food = 2
+        }
+    }
+    weight = {
+        weight = @spawner_drone_job_weight
+        modifier = {
+            factor = 1.5
+            has_job = xvcv_mdlc_bio_robot_clone_technician
+        }
+        modifier = {
+            factor = 0.01
+            exists = planet
+            planet = {
+                xvcv_mdlc_bio_robot_auto_growth_not_possible_planet_trigger = yes
+            }
+        }
+    }
+}

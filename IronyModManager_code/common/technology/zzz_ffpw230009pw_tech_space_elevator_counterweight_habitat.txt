@@ -1,0 +1,104 @@
+pw_tech_space_elevator_counterweight_habitat = {
+    area = engineering
+    cost = @pw_tech_cost_5
+    tier = 5
+    category = {
+        voidcraft
+    }
+    is_rare = yes
+    prerequisites = {
+        tech_habitat_2
+        pw_tech_space_elevator_orbital_districts
+    }
+    weight = @tier5weight2
+    weight_modifier = {
+        factor = @pw_tech_weight_mod
+        modifier = {
+            factor = 0
+            count_owned_planet = {
+                count < 1
+                limit = {
+                    has_active_building = pw_building_space_elevator
+                    habitable_structure = no
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            count_owned_planet = {
+                count > 2
+                limit = {
+                    has_active_building = pw_building_space_elevator
+                    habitable_structure = no
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            any_owned_planet = {
+                is_planet_class = pc_habitat
+            }
+        }
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = engineering
+                has_trait = leader_trait_expertise_voidcraft
+            }
+        }
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = engineering
+                has_trait = leader_trait_spark_of_genius
+            }
+        }
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = engineering
+                has_trait = leader_trait_curator
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = @federation_perk_factor
+            has_federation = yes
+            federation = {
+                has_federation_perk = rare_tech_boost
+                any_member = {
+                    has_technology = pw_tech_space_elevator_counterweight_habitat
+                }
+            }
+        }
+        modifier = {
+            factor = 1.5
+            has_ascension_perk = ap_master_builders
+        }
+        modifier = {
+            factor = 1.5
+            has_ascension_perk = pw_ap_planetary_wonders
+        }
+        modifier = {
+            factor = 1.5
+            has_ascension_perk = ap_mastery_of_nature
+        }
+        modifier = {
+            factor = 2
+            has_valid_civic = civic_inwards_perfection
+        }
+    }
+    ai_weight = {
+        factor = @pw_tech_ai_weight
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = leader_trait_expertise_voidcraft
+            }
+        }
+    }
+}

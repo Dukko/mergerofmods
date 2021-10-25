@@ -1,0 +1,8 @@
+neutral = {
+    type = neutral
+    behaviour = {
+        trade = yes
+        vassalize = yes
+        weaken = yes
+    }
+}

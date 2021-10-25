@@ -1,0 +1,24 @@
+trait_ruler_logistic_understanding_est_2 = {
+    cost = 1
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/trait_ruler_logistic_understanding_est_2.dds"
+    leader_potential_add = {
+        NOT = {
+            from = {
+                has_ethic = "ethic_gestalt_consciousness"
+            }
+        }
+    }
+    modifier = {
+        ships_upkeep_mult = -0.1
+        armies_upkeep_mult = -0.15
+    }
+    leader_trait = {
+        ruler
+    }
+    leader_class = {
+        ruler
+    }
+    initial = no
+    randomized = no
+}

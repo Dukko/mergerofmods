@@ -1,0 +1,20 @@
+att_trait_turbolaser2 = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/att_trait_turbolaser2.dds"
+    sorting_priority = -10
+    modifier = {
+        weapon_type_turbo_laser_weapon_damage_mult = 0.3
+        weapon_type_turbo_laser_weapon_fire_rate_mult = 0.25
+        weapon_type_point_defense_weapon_damage_mult = 0.1
+        weapon_type_point_defense_weapon_fire_rate_mult = 0.25
+    }
+    initial = no
+    randomized = no
+    leader_trait = {
+        admiral
+    }
+    leader_class = {
+        admiral
+    }
+}

@@ -1,0 +1,33 @@
+trait_originsextended_eng_regen = {
+    cost = 2
+    potential_crossbreeding_chance = 0.33
+    initial = no
+    randomized = no
+    modification = no
+    sapient = yes
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    improves_leaders = no
+    modifier = {
+        pop_environment_tolerance = 0.05
+        army_damage_mult = 0.1
+        army_attack_health_mult = 0.25
+        army_defense_health_mult = 0.35
+        leader_age = 35
+    }
+    slave_cost = {
+        energy = 500
+    }
+    prerequisites = {
+        tech_gene_tailoring
+    }
+    species_potential_add = {
+        from = {
+            has_origin = originsextended_engineered
+        }
+    }
+    ai_weight = {
+        weight = 50
+    }
+}

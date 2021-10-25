@@ -1,0 +1,21 @@
+giga_tech_blokkat_computer = {
+    cost = 1100000
+    area = society
+    tier = 5
+    category = {
+        blokkats
+    }
+    is_rare = yes
+    weight = 0
+    is_reverse_engineerable = no
+    modifier = {
+        ship_accuracy_mult = 0.1
+        all_technology_research_speed = 0.1
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "giga_tech_blokkat_knowledge_50_chance"
+            desc = "giga_tech_blokkat_knowledge_50_chance"
+        }
+    }
+}

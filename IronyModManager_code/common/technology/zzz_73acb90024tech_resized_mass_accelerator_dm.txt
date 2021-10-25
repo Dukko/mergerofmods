@@ -1,0 +1,53 @@
+tech_resized_mass_accelerator_dm = {
+    area = engineering
+    cost = @acot_tier6cost2
+    tier = 6
+    category = {
+        propulsion
+    }
+    ai_update_type = military
+    prerequisites = {
+        "tech_autocannons_dm"
+    }
+    weight = @tier5weight2
+    potential = {
+        NOT = {
+            has_global_flag = acot_weapons_forbidden
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_propulsion"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 2
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_propulsion"
+            }
+        }
+    }
+}

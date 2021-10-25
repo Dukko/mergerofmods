@@ -1,0 +1,42 @@
+weapon_component_template = {
+    key = "MISSILE_5"
+    size = torpedo
+    icon = "GFX_ship_part_missile_5"
+    icon_frame = 1
+    type = missile
+    prerequisites = {
+        "tech_missiles_5"
+    }
+    component_set = "MISSILE_5"
+    projectile_gfx = "small_missile"
+    tags = {
+        weapon_type_explosive
+    }
+    ai_tags = {
+        weapon_role_artillery
+    }
+    ai_tag_weight = 0
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @m_t5_cost
+            volatile_motes = @m_t5_rare
+        }
+        upkeep = {
+            energy = @m_t5_upkeep_energy
+            alloys = @m_t5_upkeep_alloys
+        }
+    }
+    upgrades_to = ACOT_MISSILE_DM
+    ai_weight = {
+        weight = 15
+        modifier = {
+            factor = 0
+            is_country_type = default
+            resource_stockpile_compare = {
+                resource = volatile_motes
+                value < 10
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+giga_tech_planetary_matter_harvesting = {
+    cost = 125000
+    area = engineering
+    tier = 5
+    category = {
+        voidcraft
+    }
+    is_rare = yes
+    weight = 0
+    modifier = {
+        country_minerals_produces_mult = 0.05
+    }
+}

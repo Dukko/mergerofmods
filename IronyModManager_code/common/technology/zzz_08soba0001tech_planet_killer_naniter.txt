@@ -1,0 +1,27 @@
+tech_planet_killer_naniter = {
+    area = physics
+    cost = @acot_tier10cost2
+    tier = 10
+    category = {
+        particles
+    }
+    ai_update_type = military
+    weight = 0
+    is_rare = yes
+    is_reverse_engineerable = no
+    potential = {
+        OR = {
+            is_country_type = original_empire
+            is_country_type = original_empire_passive
+            is_country_type = original_empire_active
+        }
+    }
+    weight_modifier = {
+        factor = 0
+    }
+    modifier = {
+    }
+    ai_weight = {
+        factor = 200
+    }
+}

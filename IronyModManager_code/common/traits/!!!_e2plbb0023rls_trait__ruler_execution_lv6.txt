@@ -1,0 +1,16 @@
+rls_trait__ruler_execution_lv6 = {
+    cost = 0
+    leader_trait = {
+        ruler
+    }
+    leader_class = {
+        ruler
+    }
+    initial = no
+    modification = no
+    randomized = no
+    self_modifier = {
+    }
+    modifier = {
+    }
+}

@@ -1,0 +1,49 @@
+tech_master_shipcraft = {
+    cost = @acot_tier6cost2
+    area = engineering
+    tier = 6
+    is_rare = yes
+    category = {
+        voidcraft
+    }
+    prerequisites = {
+        "tech_battleships"
+    }
+    weight = 25
+    potential = {
+        NOT = {
+            has_global_flag = acot_ethictech_forbidden
+        }
+    }
+    modifier = {
+        shipsize_transport_hull_add = 6000
+        shipsize_science_hull_add = 2000
+        shipsize_colonizer_hull_add = 2000
+        shipsize_constructor_hull_add = 2000
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            check_variable = {
+                which = "civilian_ship_lost"
+                value < 5
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+    }
+}

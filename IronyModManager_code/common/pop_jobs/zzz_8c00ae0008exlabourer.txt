@@ -1,0 +1,24 @@
+exlabourer = {
+    category = worker
+    condition_string = WORKER_JOB_TRIGGER
+    building_icon = building_mineral_purification_plant
+    clothes_texture_index = 2
+    possible = {
+        worker_job_check_trigger = yes
+    }
+    resources = {
+        category = planet_miners
+        produces = {
+            minerals = 2
+            food = 2
+            energy = 2
+        }
+    }
+    weight = {
+        weight = @worker_job_weight
+        modifier = {
+            factor = 0.25
+            can_take_servant_job = yes
+        }
+    }
+}

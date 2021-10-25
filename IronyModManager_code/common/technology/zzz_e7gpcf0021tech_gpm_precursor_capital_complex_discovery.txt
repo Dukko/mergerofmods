@@ -1,0 +1,17 @@
+tech_gpm_precursor_capital_complex_discovery = {
+    area = society
+    cost = @tier2cost1
+    category = {
+        statecraft
+    }
+    tier = 2
+    is_rare = yes
+    ai_update_type = all
+    weight = 1
+    modifier = {
+        planet_decision_enact_speed_mult = 0.25
+    }
+    weight_modifier = {
+        factor = 0
+    }
+}

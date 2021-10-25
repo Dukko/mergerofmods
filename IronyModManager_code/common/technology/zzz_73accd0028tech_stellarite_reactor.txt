@@ -1,0 +1,85 @@
+tech_stellarite_reactor = {
+    area = physics
+    tier = 8
+    cost = @acot_tier8cost2
+    category = {
+        particles
+    }
+    weight = 5
+    ai_update_type = military
+    is_rare = yes
+    is_dangerous = yes
+    potential = {
+        NOT = {
+            has_global_flag = acot_shipcom_forbidden
+        }
+        NOR = {
+            is_country_type = fallen_empire
+            is_country_type = awakened_fallen_empire
+        }
+        has_country_flag = stellarite_tech_enable
+    }
+    prereqfor_desc = {
+        hide_prereq_for_desc = component
+        custom = {
+            title = "TECH_UNLOCK_STELLARITE_REACTOR_TITLE"
+            desc = "TECH_UNLOCK_STELLARITE_REACTOR_DESC"
+        }
+    }
+    weight_modifier = {
+        factor = 1
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = stellarite_tech_enable
+            }
+        }
+        modifier = {
+            factor = 2
+            has_country_flag = stellarite_project_success
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                research_leader = {
+                    area = physics
+                    has_level >= 10
+                    has_trait = leader_trait_scientist_erudite
+                }
+                research_leader = {
+                    area = physics
+                    has_level >= 10
+                    has_trait = leader_trait_spark_of_genius
+                }
+                research_leader = {
+                    area = physics
+                    has_level >= 10
+                    has_trait = leader_trait_curator
+                }
+                research_leader = {
+                    area = physics
+                    has_level >= 10
+                    has_trait = leader_trait_expertise_particles
+                }
+                research_leader = {
+                    area = physics
+                    has_level >= 10
+                    has_trait = leader_trait_sapient_AI_assistant
+                }
+                research_leader = {
+                    area = physics
+                    has_level >= 10
+                    has_trait = leader_trait_scientist_brainslug
+                }
+                research_leader = {
+                    area = physics
+                    has_level >= 10
+                    has_trait = leader_trait_scientist_chosen
+                }
+            }
+        }
+    }
+    ai_weight = {
+        factor = 200000
+    }
+}

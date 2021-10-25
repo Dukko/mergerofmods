@@ -1,0 +1,18 @@
+leader_trait_former_ruler_ruler = {
+    leader_trait = {
+        ruler
+    }
+    leader_class = {
+        ruler
+    }
+    cost = 0
+    modification = no
+    initial = no
+    randomized = no
+    icon = "gfx/interface/icons/traits/leader_traits/leader_trait_enclave_trader.dds"
+    modifier = {
+        country_base_influence_produces_add = 1
+        country_unity_produces_mult = 0.05
+        pop_happiness = 0.025
+    }
+}

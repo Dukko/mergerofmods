@@ -1,0 +1,188 @@
+expsion = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_psi_academy
+    clothes_texture_index = 5
+    possible = {
+        specialist_job_check_trigger = yes
+    }
+    resources = {
+        category = planet_culture_workers
+        produces = {
+            unity = 4
+            society_research = 4
+        }
+        upkeep = {
+            energy = 0.5
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_policy_flag = upsi_military
+                }
+            }
+            alloys = 1.5
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_policy_flag = upsi_zro
+                }
+            }
+            sr_zro = 0.015
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_policy_flag = upsi_research
+                }
+            }
+            unity = -4
+            society_research = 2
+            physics_research = 4
+            engineering_research = 4
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_policy_flag = upsi_trade
+                }
+            }
+            unity = -4
+            society_research = -4
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_policy_flag = upsi_zro
+                }
+            }
+            unity = -4
+            society_research = -4
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_policy_flag = upsi_crime
+                }
+            }
+            unity = -4
+            society_research = -4
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_policy_flag = upsi_military
+                }
+            }
+            unity = -4
+            society_research = -4
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_policy_flag = upsi_military
+                }
+            }
+            minerals = 4
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_policy_flag = upsi_research
+                }
+            }
+            energy = 2.5
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_policy_flag = upsi_zro
+                }
+            }
+            consumer_goods = 1.5
+        }
+    }
+    triggered_pop_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_policy_flag = upsi_pacifist
+            }
+        }
+        pop_housing_usage_add = -1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_policy_flag = upsi_trade
+            }
+        }
+        modifier = {
+            trade_value_add = 6
+            planet_amenities_add = 4
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_policy_flag = upsi_crime
+            }
+        }
+        modifier = {
+            planet_crime_add = -15
+        }
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_policy_flag = upsi_military
+            }
+        }
+        modifier = {
+            country_naval_cap_add = 3
+        }
+    }
+    weight = {
+        weight = @specialist_job_weight
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+        }
+        modifier = {
+            factor = 10
+            OR = {
+                has_trait = trait_latent_psionic
+                has_trait = trait_psionic
+            }
+        }
+        modifier = {
+            factor = 3
+            OR = {
+                has_trait = trait_traditional
+                has_trait = trait_ex_society_focus
+            }
+        }
+        modifier = {
+            factor = 2
+            has_trait = trait_natural_sociologists
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+    }
+}

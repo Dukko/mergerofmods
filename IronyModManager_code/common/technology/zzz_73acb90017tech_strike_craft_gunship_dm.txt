@@ -1,0 +1,36 @@
+tech_strike_craft_gunship_dm = {
+    area = engineering
+    category = {
+        voidcraft
+    }
+    cost = @acot_tier6cost3
+    tier = 6
+    weight = @tier5weight1
+    ai_update_type = military
+    prerequisites = {
+        "tech_strike_craft_bomber_dm"
+    }
+    potential = {
+        NOT = {
+            has_global_flag = acot_weapons_forbidden
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+}

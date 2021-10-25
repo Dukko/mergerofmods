@@ -1,0 +1,58 @@
+tech_enhancedskin = {
+    cost = @acot_tier6cost2
+    area = society
+    tier = 6
+    is_rare = yes
+    category = {
+        military_theory
+    }
+    prerequisites = {
+        "tech_colonization_5"
+    }
+    weight = 25
+    potential = {
+        has_authority = auth_hive_mind
+        NOT = {
+            has_global_flag = acot_ethictech_forbidden
+        }
+    }
+    modifier = {
+        BIOLOGICAL_species_trait_points_add = 3
+        ship_armor_regen_add_static = 5
+        ship_hull_regen_add_static = 5
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+    }
+}

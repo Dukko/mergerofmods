@@ -1,0 +1,86 @@
+ap_eternal_vigilance = {
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_technology_starbase_4"
+            has_technology = tech_starbase_4
+        }
+    }
+    on_enabled = {
+        custom_tooltip = "adds_4_asteroid_artillery_points"
+        hidden_effect = {
+            change_variable = {
+                which = asteroid_artillery_points_max
+                value = 4
+            }
+        }
+    }
+    modifier = {
+        shipclass_starbase_damage_mult = 0.25
+        shipclass_starbase_hull_mult = 0.25
+        shipclass_military_station_damage_mult = 0.25
+        starbase_defense_platform_capacity_add = 5
+    }
+    potential = {
+        NOT = {
+            has_ascension_perk = ap_eternal_vigilance
+        }
+    }
+    ai_weight = {
+        factor = 1
+        modifier = {
+            factor = 2
+            has_civic = civic_inwards_perfection
+        }
+        modifier = {
+            factor = 2
+            is_xenophobe = yes
+        }
+        modifier = {
+            factor = 2
+            is_egalitarian = yes
+        }
+        modifier = {
+            factor = 2
+            has_ethic = ethic_pacifist
+        }
+        modifier = {
+            factor = 4
+            has_ethic = ethic_fanatic_pacifist
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = ap_grasp_the_void
+        }
+        modifier = {
+            factor = 2
+            has_technology = tech_destroyers
+            NOT = {
+                has_technology = tech_starbase_3
+            }
+            NOT = {
+                has_ascension_perk = ap_galactic_contender
+            }
+            OR = {
+                is_egalitarian = yes
+                is_pacifist = yes
+                is_xenophile = yes
+            }
+        }
+        modifier = {
+            factor = 0.5
+            has_technology = tech_starbase_3
+        }
+        modifier = {
+            factor = 0.1
+            num_ascension_perks > 1
+        }
+        modifier = {
+            factor = 0.1
+            num_ascension_perks > 2
+        }
+        modifier = {
+            factor = 0.1
+            num_ascension_perks > 3
+        }
+    }
+}

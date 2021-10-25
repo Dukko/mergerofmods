@@ -1,0 +1,17 @@
+tech_gpm_enigmatic_power_relays = {
+    area = physics
+    cost = @tier2cost1
+    category = {
+        particles
+    }
+    tier = 2
+    is_rare = yes
+    ai_update_type = all
+    weight = 1
+    is_reverse_engineerable = no
+    modifier = {
+    }
+    weight_modifier = {
+        factor = 0
+    }
+}

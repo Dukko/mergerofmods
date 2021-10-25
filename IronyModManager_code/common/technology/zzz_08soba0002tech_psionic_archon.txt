@@ -1,0 +1,32 @@
+tech_psionic_archon = {
+    area = society
+    cost = @acot_tier10cost2
+    tier = 10
+    is_rare = yes
+    category = {
+        psionics
+    }
+    ai_update_type = military
+    weight = 0
+    weight_modifier = {
+        factor = 0
+    }
+    ai_weight = {
+        factor = 5
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_spiritualist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_spiritualist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_psionics"
+            }
+        }
+    }
+}

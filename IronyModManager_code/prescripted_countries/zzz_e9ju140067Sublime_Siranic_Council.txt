@@ -1,0 +1,80 @@
+"Sublime Siranic Council" = {
+    key = "Sublime Siranic Council"
+    ship_prefix = "SCS"
+    species = {
+        class = "HUM"
+        portrait = "humanoid_04"
+        name = "Cydret"
+        plural = "Cydreen"
+        adjective = "Cydrese"
+        species_bio = "A graceful demiamphibian species at home in warm littoral waters, the Cydreen of the planet Vacoo evolved a unique capability for telepathic empathy. This has allowed them to control some of their greatest predators, among them the physically imposing and more terrestrial Alari. Their talent may yet serve them well as they confront a galaxy full of no less hostile aliens."
+        name_list = "just-name-lists_humanoid4"
+        trait = "trait_charismatic"
+        trait = "trait_communal"
+        trait = "trait_natural_sociologists"
+        trait = "trait_weak"
+        trait = "trait_just-more-traits_sensitive"
+    }
+    secondary_species = {
+        class = "HUM"
+        portrait = "humanoid_hp_06"
+        name = "Alari"
+        plural = "Alari"
+        adjective = "Alarian"
+        species_bio = "Enraptured by their empathic evolutionary cousins, the Cydreen, the species known as the Alari seem quite content to do most of the heavy lifting on Sirana."
+        name_list = "HUM4"
+        trait = "trait_syncretic_proles"
+        trait = "trait_strong"
+        trait = "trait_resilient"
+        trait = "trait_slow_learners"
+    }
+    name = "Sublime Siranic Council"
+    adjective = "Siranic"
+    authority = "auth_democratic"
+    government = "gov_theocratic_republic"
+    planet_name = "Vacoo"
+    planet_class = "pc_desertislands"
+    system_name = "Sirana"
+    initializer = ""
+    graphical_culture = "avian_01"
+    city_graphical_culture = "humanoid_01"
+    empire_flag = {
+        icon = {
+            category = "just-more-flags"
+            file = "flag_spiritualist1.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "fabric_stripes.dds"
+        }
+        colors = {
+            "teal"
+            "light_green"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = female
+        name = "Aljoba Amanot"
+        portrait = "humanoid_04_female_01"
+        texture = 3
+        hair = 0
+        clothes = 1
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "cave5_room"
+    spawn_enabled = yes
+    ethic = "ethic_xenophile"
+    ethic = "ethic_pacifist"
+    ethic = "ethic_fanatic_spiritualist"
+    ethic = "ethic_socialism"
+    civics = {
+        "civic_free_haven"
+        "civic_parliamentary_system"
+        "civic_spiritual_democracy"
+    }
+    origin = "origin_syncretic_evolution"
+}

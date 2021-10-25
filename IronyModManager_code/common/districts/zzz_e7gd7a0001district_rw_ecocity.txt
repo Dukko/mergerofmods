@@ -1,0 +1,177 @@
+district_rw_ecocity = {
+    base_buildtime = @giga_rw_district_buildtime
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        exists = from
+        from = {
+            is_regular_empire = yes
+        }
+        uses_district_set = pd_rwecocity
+        is_planet_class = pc_ringworld_ecocity
+    }
+    potential = {
+        exists = owner
+        owner = {
+            is_regular_empire = yes
+        }
+        uses_district_set = pd_rwecocity
+        is_planet_class = pc_ringworld_ecocity
+    }
+    allow = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+    }
+    conversion_ratio = 0.5
+    convert_to = {
+        district_rw_city
+        district_rw_nexus
+        district_rw_hive
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @giga_rw_cost
+        }
+        upkeep = {
+            energy = @giga_rw_maintenance
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 20
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_eco_environment_preservor_add = 5
+            job_eco_environment_custodianship_add = 5
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_fallen_empire = no
+                is_regular_empire = yes
+            }
+        }
+        text = job_eco_environment_preservor_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_fallen_empire = no
+                is_regular_empire = yes
+            }
+        }
+        text = job_eco_environment_custodianship_effect_desc
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_agrarian_idyll
+            }
+        }
+        modifier = {
+            planet_housing_add = -10
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_housing_1
+            }
+        }
+        modifier = {
+            planet_housing_add = 2.5
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_housing_2
+                NOT = {
+                    has_valid_civic = civic_agrarian_idyll
+                }
+            }
+        }
+        modifier = {
+            planet_housing_add = 2.5
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_housing_2
+                has_valid_civic = civic_agrarian_idyll
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_active_tradition = tr_prosperity_public_works
+            }
+        }
+        modifier = {
+            planet_housing_add = 5
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_active_tradition = tr_prosperity_extended_hives
+            }
+        }
+        modifier = {
+            planet_housing_add = 5
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_active_tradition = tr_prosperity_optimized_nexus
+            }
+        }
+        modifier = {
+            planet_housing_add = 5
+        }
+    }
+    prerequisites = {
+    }
+    ai_weight = {
+        weight = 1
+        modifier = {
+            factor = 3
+            free_housing < 0
+        }
+        modifier = {
+            factor = 0
+            free_housing > 0
+            NOT = {
+                any_owned_pop = {
+                    OR = {
+                        is_unemployed = yes
+                        has_job = servant
+                    }
+                }
+            }
+        }
+    }
+}

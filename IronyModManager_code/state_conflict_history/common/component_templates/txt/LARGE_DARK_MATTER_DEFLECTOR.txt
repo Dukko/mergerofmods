@@ -1,0 +1,51 @@
+utility_component_template = {
+    key = "LARGE_DARK_MATTER_DEFLECTOR"
+    size = large
+    icon = "GFX_ship_part_dark_matter_shield"
+    icon_frame = 1
+    power = @power_L6
+    resources = {
+        category = ship_components
+        cost = {
+            energy = @shield_l_dm_cost
+            acot_sr_dark_energy = @shield_l_dm_sr_cost
+        }
+        upkeep = {
+            energy = @shield_l_dm_upkeep_energy
+        }
+    }
+    modifier = {
+        ship_shield_add = @shield_L6
+        ship_shield_regen_add_static = @regen_L6
+    }
+    prerequisites = {
+        "tech_dark_matter_deflector"
+    }
+    component_set = "DARK_MATTER_DEFLECTOR"
+    upgrades_to = "LARGE_ACOT_ENIGMATIC_SHIELD_AE"
+    ai_weight = {
+        weight = 1
+        modifier = {
+            factor = 10000
+            or = {
+                has_technology = tech_crystal_armor_1
+                has_technology = tech_crystal_armor_2
+            }
+        }
+        modifier = {
+            factor = 0
+            is_country_type = default
+            resource_stockpile_compare = {
+                resource = sr_dark_matter
+                value <= 50
+            }
+        }
+                modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = acot_sr_dark_energy
+                value <= 50
+            }
+        }
+    }
+}

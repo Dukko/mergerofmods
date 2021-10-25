@@ -1,0 +1,51 @@
+building_empyrean_shrine = {
+    base_buildtime = @b2_time
+    can_build = no
+    can_demolish = yes
+    icon = building_citadel_of_faith
+    potential = {
+        exists = owner
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_fallen_empire = yes
+            }
+        }
+        job_fe_augur_add = 3
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_fallen_empire = no
+                is_spiritualist = yes
+            }
+        }
+        job_priest_add = 10
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_fallen_empire = no
+                is_spiritualist = no
+            }
+        }
+        job_culture_worker_add = 10
+    }
+    resources = {
+        category = planet_buildings
+        produces = {
+            society_research = 25
+            unity = 25
+        }
+        upkeep = {
+            energy = 10
+        }
+    }
+    upgrades = {
+        building_ae_empyrean_shrine
+    }
+}

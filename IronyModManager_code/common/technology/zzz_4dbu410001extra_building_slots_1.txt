@@ -1,0 +1,18 @@
+extra_building_slots_1 = {
+    cost = @tier2cost3
+    area = engineering
+    tier = 2
+    prerequisites = {
+        "tech_housing_1"
+    }
+    category = {
+        industry
+    }
+    weight = @tier2weight2
+    modifier = {
+        planet_max_buildings_add = 1
+    }
+    ai_weight = {
+        factor = 2
+    }
+}

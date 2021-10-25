@@ -1,0 +1,17 @@
+trait_ruler_hobby_election_edict = {
+    cost = 0
+    leader_trait = {
+        ruler
+    }
+    leader_class = {
+        ruler
+    }
+    icon = "gfx/interface/icons/traits/trait_ruler_hobby_edict.dds"
+    self_modifier = {
+    }
+    modifier = {
+    }
+    initial = no
+    modification = no
+    randomized = no
+}

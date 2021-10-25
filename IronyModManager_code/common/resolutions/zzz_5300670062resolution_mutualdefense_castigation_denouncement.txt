@@ -1,0 +1,81 @@
+@resolution_weight_normal = 6
+@resolution_cost_denounce = 25
+resolution_mutualdefense_castigation_denouncement = {
+    icon = "GFX_resolution_mutual_defense"
+    resources = {
+        category = resolutions
+        cost = {
+            influence = @resolution_cost_denounce
+        }
+    }
+    target = yes
+    harmful = yes
+    valid_target = {
+        OR = {
+        is_country_type = default
+            is_country_type = ascended_empire
+            is_country_type = lost_empire
+        }
+        NOR = {
+            is_same_value = from
+            has_modifier = resolution_denounced
+        }
+        OR = {
+            is_galactic_community_member = no
+            is_in_breach_of_any = yes
+        }
+        OR = {
+            opinion_level = {
+                who = from
+                level < neutral
+            }
+            from = {
+                is_rival = prev
+            }
+            is_in_breach_of_any = yes
+        }
+        OR = {
+            is_galactic_emperor = no
+            imperial_authority <= 100
+        }
+    }
+    effect = {
+        add_modifier = {
+            modifier = resolution_denounced
+            days = 3600
+        }
+    }
+    potential = {
+        OR = {
+            is_active_resolution = "resolution_mutualdefense_castigation_proclamation"
+            is_active_resolution = "resolution_mutualdefense_renegade_containment"
+        }
+    }
+    allow = {
+    }
+    ai_weight = {
+        weight = @resolution_weight_normal
+        modifier = {
+            factor = 0.75
+            FROM = {
+                is_galactic_emperor = yes
+            }
+            imperial_authority >= 75
+        }
+        modifier = {
+            factor = 0.75
+            FROM = {
+                is_galactic_emperor = yes
+            }
+            imperial_authority >= 50
+        }
+        modifier = {
+            factor = 0
+            is_same_value = from
+        }
+        modifier = {
+            factor = 2
+            is_rival = from
+        }
+    }
+}

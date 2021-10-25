@@ -1,0 +1,4 @@
+DEITY = {
+    species_trait_points = 100
+    species_max_traits = 100
+}

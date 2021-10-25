@@ -1,0 +1,48 @@
+tech_precursor_science_alpha = {
+    area = engineering
+    cost = @acot_tier8cost2
+    tier = 8
+    is_rare = yes
+    category = {
+        voidcraft
+    }
+    ai_update_type = military
+    weight = 10
+    prereqfor_desc = {
+        custom = {
+            title = "TECH_UNLOCK_ALPHA_SCIENCE_TITLE"
+            desc = "TECH_UNLOCK_ALPHA_SCIENCE_DESC"
+        }
+    }
+    potential = {
+        NOT = {
+            is_country_type = fallen_empire
+        }
+    }
+    modifier = {
+        shipsize_precursor_science_hull_add = 1500
+    }
+    prerequisites = {
+        tech_precursor_science
+        tech_dark_matter_power_core_ae
+        tech_fe_thruster_2
+    }
+    ai_weight = {
+        factor = 5
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+}

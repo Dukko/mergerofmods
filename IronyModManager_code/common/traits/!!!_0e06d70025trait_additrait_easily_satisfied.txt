@@ -1,0 +1,18 @@
+trait_additrait_easily_satisfied = {
+    cost = 2
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    modifier = {
+        pop_housing_usage_mult = -0.2
+    }
+    opposites = {
+        "trait_solitary"
+        "trait_communal"
+        "trait_hive_mind"
+        "trait_machine_unit"
+        "trait_additrait_sociable"
+        "trait_additrait_passionate"
+    }
+}

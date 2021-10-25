@@ -1,0 +1,20 @@
+tech_omega_warmech = {
+    cost = @acot_tier10cost2
+    area = engineering
+    tier = 10
+    category = {
+        industry
+    }
+    weight = 0
+    is_rare = yes
+    ai_weight = {
+        factor = 3
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+}

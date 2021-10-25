@@ -1,0 +1,17 @@
+tech_gpm_gaia_world_discovery_2 = {
+    area = society
+    cost = @tier2cost1
+    category = {
+        biology
+    }
+    tier = 2
+    is_rare = yes
+    ai_update_type = all
+    weight = 1
+    modifier = {
+        planet_jobs_food_produces_mult = 0.3
+    }
+    weight_modifier = {
+        factor = 0
+    }
+}

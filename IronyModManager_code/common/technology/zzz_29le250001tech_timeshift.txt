@@ -1,0 +1,41 @@
+tech_timeshift = {
+    cost = 3000
+    area = society
+    category = {
+        new_worlds
+    }
+    tier = 1
+    weight = 100
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                any_planet_within_border = {
+                    OR = {
+                        has_modifier = timeshift_fast
+                        has_modifier = timeshift_slow
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 3
+            any_planet_within_border = {
+                OR = {
+                    has_modifier = timeshift_fast
+                    has_modifier = timeshift_slow
+                }
+            }
+        }
+    }
+    ai_weight = {
+        weight = 10
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+}

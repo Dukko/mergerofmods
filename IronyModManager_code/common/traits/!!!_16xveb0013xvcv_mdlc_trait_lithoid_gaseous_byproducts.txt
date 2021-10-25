@@ -1,0 +1,31 @@
+xvcv_mdlc_trait_lithoid_gaseous_byproducts = {
+    cost = 2
+    initial = no
+    opposites = {
+        "xvcv_mdlc_trait_lithoid_volatile_excretions"
+        "xvcv_mdlc_trait_lithoid_scintillating"
+    }
+    allowed_archetypes = {
+        MACHINE
+        ROBOT
+        XVCV_MDLC_BIO_ROBOT
+    }
+    custom_tooltip = xvcv_mdlc_trait_lithoid_gaseous_byproducts_tooltip
+    species_potential_add = {
+        exists = from
+        from = {
+            has_authority = auth_machine_intelligence
+            has_valid_civic = xvcv_mdlc_civic_rock_body
+        }
+        host_has_dlc = "Lithoids Species Pack"
+    }
+    modifier = {
+        pop_category_drones_exotic_gases_produces_add = 0.05
+        pop_category_workers_exotic_gases_produces_add = 0.05
+        pop_category_specialists_exotic_gases_produces_add = 0.05
+        pop_category_rulers_exotic_gases_produces_add = 0.05
+    }
+    slave_cost = {
+        energy = 500
+    }
+}

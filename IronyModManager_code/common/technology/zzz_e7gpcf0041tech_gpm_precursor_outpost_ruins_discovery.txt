@@ -1,0 +1,18 @@
+tech_gpm_precursor_outpost_ruins_discovery = {
+    area = physics
+    cost = @tier2cost1
+    category = {
+        field_manipulation
+    }
+    tier = 2
+    is_rare = yes
+    ai_update_type = all
+    weight = 1
+    modifier = {
+        ship_sensor_range_add = 1
+        ship_hyperlane_range_add = 2
+    }
+    weight_modifier = {
+        factor = 0
+    }
+}

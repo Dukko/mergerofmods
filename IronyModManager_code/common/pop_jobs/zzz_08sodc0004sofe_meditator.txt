@@ -1,0 +1,43 @@
+sofe_meditator = {
+    category = deity
+    is_capped_by_modifier = yes
+    icon = sofe_oceanmaster
+    building_icon = building_super_shelter
+    clothes_texture_index = 2
+    possible = {
+        hidden_trigger = {
+            exists = owner
+        }
+        owner = {
+            is_progenitor_empires = yes
+        }
+    }
+    resources = {
+        category = planet_jobs
+        produces = {
+            society_research = 50
+            physics_research = 50
+            engineering_research = 50
+        }
+        upkeep = {
+            unity = 50
+            trigger = {
+                owner = {
+                    is_progenitor_empires = no
+                }
+            }
+        }
+    }
+    weight = {
+        weight = 500
+        modifier = {
+            factor = 0.01
+            planet.controller = {
+                OR = {
+                    is_country_type = swarm
+                    is_country_type = ai_empire
+                }
+            }
+        }
+    }
+}

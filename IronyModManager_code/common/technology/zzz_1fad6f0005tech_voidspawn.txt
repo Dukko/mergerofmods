@@ -1,0 +1,117 @@
+tech_voidspawn = {
+    cost = @tier5cost1
+    area = engineering
+    tier = 5
+    category = {
+        voidcraft
+    }
+    prerequisites = {
+        "tech_colossus"
+        "tech_nanite_guardians"
+        "tech_nanite_mega_construction"
+        "tech_nanite_modular_engineering"
+    }
+    weight = @tier5weight3
+    is_rare = yes
+    is_dangerous = yes
+    potential = {
+        no_scope = {
+            has_distar = yes
+            has_global_flag = hatchling_triggered
+            exists = event_target:hatchling_egg
+            NOR = {
+                has_global_flag = voidspawn_disabled
+                exists = event_target:hatchling_fleet
+            }
+        }
+        OR = {
+            has_global_flag = distar_overhaul_mod_active
+            has_ethic = ethic_gestalt_consciousness
+            has_technology = tech_pk_nanobots
+        }
+        OR = {
+            has_country_flag = killed_hatchling
+            any_neighbor_country = {
+                has_technology = tech_voidspawn
+            }
+            AND = {
+                exists = event_target:gray_owner
+                is_same_empire = event_target:gray_owner
+            }
+        }
+    }
+    prereqfor_desc = {
+        ship = {
+            title = "TECH_UNLOCK_VOIDSPAWN_CONSTRUCTION_TITLE"
+            desc = "TECH_UNLOCK_VOIDSPAWN_CONSTRUCTION_DESC"
+        }
+    }
+    weight_modifier = {
+        factor = 0.01
+        modifier = {
+            factor = 1.5
+            has_country_flag = encountered_hatchling
+        }
+        modifier = {
+            factor = 2
+            exists = event_target:egg_owner
+            is_same_empire = event_target:egg_owner
+        }
+        modifier = {
+            factor = 8
+            has_country_flag = hatchling_killed
+        }
+        modifier = {
+            factor = 1.5
+            exists = event_target:gray_owner
+            is_same_empire = event_target:gray_owner
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 3
+            any_neighbor_country = {
+                has_technology = tech_voidspawn
+            }
+        }
+    }
+    ai_weight = {
+        factor = 0.05
+        modifier = {
+            factor = 1.5
+            has_country_flag = encountered_hatchling
+        }
+        modifier = {
+            factor = 1.5
+            exists = event_target:egg_owner
+            is_same_empire = event_target:egg_owner
+        }
+        modifier = {
+            factor = 6
+            has_country_flag = hatchling_killed
+        }
+        modifier = {
+            factor = 2
+            exists = event_target:gray_owner
+            is_same_empire = event_target:gray_owner
+        }
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 3
+            any_neighbor_country = {
+                has_technology = tech_voidspawn
+            }
+        }
+    }
+}

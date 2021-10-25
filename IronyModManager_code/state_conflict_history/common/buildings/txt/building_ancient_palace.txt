@@ -1,0 +1,175 @@
+building_ancient_palace = {
+    base_buildtime = @b2_time
+    capital = yes
+    can_build = no
+    can_demolish = no
+    position_priority = 0
+    icon = building_palace
+    can_be_ruined = no
+    category = government
+    potential = {
+        exists = owner
+    }
+    convert_to = {
+        building_hive_major_capital
+        building_machine_major_capital
+        building_major_capital
+        building_ancient_control_center
+    }
+    planet_modifier = {
+        planet_housing_add = 15
+        planet_amenities_add = 15
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_acot_enforcer_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_non_swapped_tradition = tr_domination_imperious_architecture
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_mechanical_empire = yes
+                is_fallen_empire = no
+            }
+        }
+        job_roboticist_add = 5
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                NOR = {
+                    has_authority = auth_corporate
+                    has_civic = civic_exalted_priesthood
+                    has_civic = civic_aristocratic_elite
+                    has_civic = civic_merchant_guilds
+                    has_civic = civic_technocracy
+                }
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_administrator_add = 5
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_authority = auth_corporate
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_executive_add = 5
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_civic = civic_exalted_priesthood
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_high_priest_add = 3
+            job_administrator_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_civic = civic_aristocratic_elite
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_noble_add = 2
+            job_administrator_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_civic = civic_technocracy
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_head_researcher_add = 2
+            job_administrator_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_civic = civic_merchant_guilds
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_merchant_add = 3
+            job_administrator_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_fallen_empire_spiritualist = no
+                is_fallen_empire = yes
+            }
+        }
+        modifier = {
+            job_fe_overseer_add = 2
+            job_fe_protector_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_fallen_empire_spiritualist = yes
+                is_fallen_empire = yes
+            }
+        }
+        modifier = {
+            job_fe_sky_cardinal_add = 2
+            job_fe_protector_add = 2
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b2_minerals
+        }
+        upkeep = {
+            energy = 10
+        }
+    }
+    upgrades = {
+    }
+}

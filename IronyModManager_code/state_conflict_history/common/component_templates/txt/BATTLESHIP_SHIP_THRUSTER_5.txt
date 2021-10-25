@@ -1,0 +1,42 @@
+@battleship_power_5 = -240
+@battleship_cost5 = 120
+utility_component_template = {
+    key = "BATTLESHIP_SHIP_THRUSTER_5"
+    size = small
+    icon = "GFX_ship_part_thruster_5"
+    icon_frame = 1
+    power = @battleship_power_5
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @battleship_cost5
+            sr_dark_matter = 8
+        }
+    }
+    modifier = {
+        ship_base_speed_mult = 0.7
+        ship_evasion_add = 8
+    }
+    prerequisites = {
+        "tech_dark_matter_propulsion"
+    }
+    component_set = "thruster_components"
+    size_restriction = {
+        battleship
+    }
+    upgrades_to = "BATTLESHIP_SHIP_THRUSTER_AE"
+    ai_weight = {
+        weight = 5
+        modifier = {
+            factor = 0
+            has_monthly_income = {
+                resource = sr_dark_matter
+                value <= 2
+            }
+            has_resource = {
+                type = sr_dark_matter
+                amount <= 5
+            }
+        }
+    }
+}

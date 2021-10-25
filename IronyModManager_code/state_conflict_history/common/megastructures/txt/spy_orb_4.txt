@@ -1,0 +1,39 @@
+spy_orb_4 = {
+    entity = "spyorb_phase_04_entity"
+    construction_entity = "spyorb_phase_04_construction_entity"
+    portrait = "GFX_megastructure_spy_orb_background"
+    place_entity_on_planet_plane = no
+    entity_offset = {
+        x = -15
+        y = -15
+    }
+    upgrade_from = {
+        spy_orb_3
+    }
+    prerequisites = {
+        "tech_sentry_array"
+        "tech_ariphaos_sensors_jammed"
+    }
+    show_prereqs = yes
+    build_time = 1800
+    resources = {
+        category = megastructures
+        cost = {
+            alloys = 10000
+        }
+        upkeep = {
+            energy = 100
+        }
+    }
+    ai_weight = {
+        factor = 10
+    }
+    on_build_complete = {
+        from = {
+            set_country_flag = has_built_or_repaired_megastructure
+        }
+    }
+    country_modifier = {
+        add_base_country_intel = 40
+    }
+}

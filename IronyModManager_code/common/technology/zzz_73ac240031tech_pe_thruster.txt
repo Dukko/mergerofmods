@@ -1,0 +1,33 @@
+tech_pe_thruster = {
+    area = engineering
+    category = {
+        propulsion
+    }
+    cost = @acot_tier10cost1
+    tier = 10
+    weight = 0
+    ai_update_type = all
+    is_rare = yes
+    is_reverse_engineerable = no
+    potential = {
+        has_technology = tech_dark_matter_power_core_pe
+        NOT = {
+            has_global_flag = acot_phanon_forbidden
+        }
+    }
+    prereqfor_desc = {
+        hide_prereq_for_desc = component
+        custom = {
+            title = "TECH_UNLOCK_PE_THRUSTER_TITLE"
+            desc = "TECH_UNLOCK_PE_THRUSTER_DESC"
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_technology = tech_dark_matter_power_core_pe
+            }
+        }
+    }
+}

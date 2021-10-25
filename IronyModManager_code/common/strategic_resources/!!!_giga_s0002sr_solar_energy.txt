@@ -1,0 +1,13 @@
+sr_solar_energy = {
+    tradable = no
+    max = 25000
+    prerequisites = {
+        "giga_tech_planetary_matter_harvesting"
+    }
+    visibility_prerequisite = {
+        always = yes
+    }
+    ai_weight = {
+        weight = 100
+    }
+}

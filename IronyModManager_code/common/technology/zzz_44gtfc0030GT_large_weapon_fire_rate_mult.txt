@@ -1,0 +1,51 @@
+GT_large_weapon_fire_rate_mult = {
+    cost = @tier4cost2
+    area = engineering
+    tier = 4
+    category = {
+        propulsion
+    }
+    ai_update_type = military
+    prerequisites = {
+        "tech_battleships"
+    }
+    weight = @tier5weight2
+    modifier = {
+        shipclass_starbase_damage_mult = 0.25
+        shipclass_military_station_damage_mult = 0.25
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_propulsion"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_propulsion"
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+building_psi_academy = {
+    base_buildtime = 480
+    base_cap_amount = 1
+    category = research
+    allow = {
+        has_upgraded_capital = yes
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 800
+        }
+        upkeep = {
+            energy = 4
+        }
+    }
+    planet_modifier = {
+        job_expsion_per_pop = 0.04
+        job_administrator_add = 1
+        planet_housing_add = 4
+    }
+    prerequisites = {
+        "tech_psionic_studies"
+    }
+    triggered_desc = {
+        text = job_academy_effect_desc
+    }
+    show_tech_unlock_if = {
+        is_regular_empire = yes
+    }
+    upgrades = {
+        "building_psi_academy_2"
+    }
+    ai_weight = {
+        weight = 1
+    }
+}

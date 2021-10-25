@@ -1,0 +1,56 @@
+ap_galactic_wonders_megacorp = {
+    on_enabled = {
+        if = {
+            limit = {
+                NOT = {
+                    has_technology = tech_matter_decompressor
+                }
+            }
+            add_research_option = tech_matter_decompressor
+        }
+        give_technology = {
+            tech = tech_matter_decompressor
+            message = yes
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_ascension_perks_2"
+            num_ascension_perks > 1
+        }
+        custom_tooltip = {
+            fail_text = "requires_mega_engineering"
+            has_technology = tech_mega_engineering
+        }
+        custom_tooltip = {
+            fail_text = "requires_built_or_repaired_megastructure"
+            has_country_flag = has_built_or_repaired_megastructure
+        }
+    }
+    potential = {
+        host_has_dlc = "Megacorp"
+        NOR = {
+            host_has_dlc = "Utopia"
+            has_ascension_perk = ap_galactic_wonders_megacorp
+        }
+    }
+    ai_weight = {
+        factor = 10
+        modifier = {
+            factor = 2
+            has_ethic = ethic_pacifist
+        }
+        modifier = {
+            factor = 4
+            has_ethic = ethic_fanatic_pacifist
+        }
+        modifier = {
+            factor = 2
+            is_egalitarian = yes
+        }
+        modifier = {
+            factor = 2
+            is_megacorp = yes
+        }
+    }
+}

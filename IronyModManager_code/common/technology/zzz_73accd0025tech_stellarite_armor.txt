@@ -1,0 +1,30 @@
+tech_stellarite_armor = {
+    area = engineering
+    tier = 8
+    cost = @acot_tier8cost1
+    category = {
+        materials
+    }
+    weight = 5
+    ai_update_type = military
+    prerequisites = {
+        "tech_stellarite_reactor"
+    }
+    is_rare = yes
+    potential = {
+        NOT = {
+            has_global_flag = acot_shipcom_forbidden
+        }
+        has_technology = tech_stellarite_reactor
+    }
+    prereqfor_desc = {
+        hide_prereq_for_desc = component
+        custom = {
+            title = "TECH_UNLOCK_STELLARITE_ARMOR_TITLE"
+            desc = "TECH_UNLOCK_STELLARITE_ARMOR_DESC"
+        }
+    }
+    ai_weight = {
+        factor = 200
+    }
+}

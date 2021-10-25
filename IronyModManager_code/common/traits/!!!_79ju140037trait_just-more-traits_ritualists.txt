@@ -1,0 +1,19 @@
+trait_just-more-traits_ritualists = {
+    cost = 2
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_traditional"
+        "trait_quarrelsome"
+        "trait_just-more-traits_fractious"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    modifier = {
+        planet_jobs_unity_produces_mult = 0.2
+    }
+    slave_cost = {
+        energy = 50
+    }
+}

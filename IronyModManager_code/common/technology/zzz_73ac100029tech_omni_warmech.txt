@@ -1,0 +1,36 @@
+tech_omni_warmech = {
+    cost = @acot_tier6cost2
+    area = engineering
+    tier = 7
+    category = {
+        industry
+    }
+    prerequisites = {
+        "tech_spm_battledroid_ae"
+    }
+    weight = 20
+    potential = {
+        has_authority = auth_machine_intelligence
+        NOT = {
+            has_global_flag = acot_army_forbidden
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+}

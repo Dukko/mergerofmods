@@ -1,0 +1,31 @@
+tech_repeatable_improved_ship_health = {
+    area = engineering
+    cost = @repeatableTechBaseCost
+    cost_per_level = @repeatableTechLevelCost
+    tier = @repeatableTechTier
+    category = {
+        voidcraft
+    }
+    ai_update_type = military
+    levels = 20
+    prerequisites = {
+        "tech_battleships"
+    }
+    weight = @repeatableTechWeight
+    weight_modifier = {
+        factor = @repatableTechFactor
+    }
+    ai_weight = {
+        factor = 1
+    }
+    weight_groups = {
+        repeatable
+    }
+    mod_weight_if_group_picked = {
+        repeatable = 0.01
+    }
+    modifier = {
+        shipclass_military_hull_mult = 0.05
+        shipclass_military_special_hull_mult = 0.05
+    }
+}

@@ -1,0 +1,45 @@
+GT_starbase_trade_protection_range_add = {
+    cost = @tier2cost1
+    area = society
+    tier = 2
+    category = {
+        statecraft
+    }
+    prerequisites = {
+        "tech_interstellar_economics"
+    }
+    weight = @tier2weight1
+    potential = {
+        is_gestalt = no
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = pirate_encountered
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = pirate_encountered
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+}

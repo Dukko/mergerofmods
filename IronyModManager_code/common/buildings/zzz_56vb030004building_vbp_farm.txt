@@ -1,0 +1,25 @@
+building_vbp_farm = {
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = no
+    icon = building_primitive_farm
+    potential = {
+        exists = owner
+        owner = {
+            is_country_type = vbp_hive
+            OR = {
+                has_country_flag = vbp_hive_ego_stage
+                has_country_flag = vbp_hive_superego_stage
+            }
+        }
+    }
+    planet_modifier = {
+        job_vbp_farmer_drone_add = 10
+    }
+    destroy_trigger = {
+        exists = owner
+        owner = {
+            is_primitive = no
+        }
+    }
+}

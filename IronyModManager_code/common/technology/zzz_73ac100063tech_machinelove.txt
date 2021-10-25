@@ -1,0 +1,46 @@
+tech_machinelove = {
+    cost = @acot_tier6cost2
+    area = society
+    tier = 6
+    is_rare = yes
+    category = {
+        military_theory
+    }
+    prerequisites = {
+        "tech_combat_computers_autonomous"
+    }
+    weight = 25
+    potential = {
+        has_authority = auth_machine_intelligence
+        NOT = {
+            has_global_flag = acot_ethictech_forbidden
+        }
+    }
+    modifier = {
+        description = tech_machinelove_modifier_desc
+        country_organic_trust_cap_add = 75
+        country_energy_produces_mult = 0.15
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            has_civic = civic_machine_terminator
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+    }
+}

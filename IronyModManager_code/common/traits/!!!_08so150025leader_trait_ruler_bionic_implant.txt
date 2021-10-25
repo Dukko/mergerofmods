@@ -1,0 +1,21 @@
+leader_trait_ruler_bionic_implant = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/trait_bionic_implants.dds"
+    modifier = {
+        starbase_upgrade_cost_mult = -0.5
+        starbase_upgrade_speed_mult = 0.5
+        starbase_shipyard_build_cost_mult = -0.5
+        country_ship_upgrade_cost_mult = -1
+        planet_colony_development_speed_mult = 10
+        armies_cost_mult = -0.5
+    }
+    leader_trait = {
+        ruler
+    }
+    leader_class = {
+        ruler
+    }
+    initial = no
+    randomized = no
+}

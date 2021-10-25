@@ -1,0 +1,28 @@
+trait_ex_ancient = {
+    cost = 0
+    potential_crossbreeding_chance = 0.5
+    initial = no
+    randomized = no
+    modification = no
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    opposites = {
+        "trait_venerable"
+        "trait_enduring"
+        "trait_fleeting"
+    }
+    icon = "gfx/interface/icons/traits/trait_ex_ancient.dds"
+    modifier = {
+        leader_age = 200
+        pop_environment_tolerance = 0.1
+        planet_jobs_specialist_produces_mult = 0.1
+        leader_skill_levels = 2
+        leaders_upkeep_mult = 0.5
+        species_leader_exp_gain = -0.33
+        pop_growth_speed = -0.1
+    }
+    leader_age_min = 30
+    leader_age_max = 99
+}

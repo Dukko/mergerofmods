@@ -1,0 +1,358 @@
+@base_cost = 300
+district_mining_uncapped = {
+    base_buildtime = 240
+    icon = district_mining
+    is_capped_by_modifier = no
+    desc = {
+        trigger = {
+            NOT = {
+                uses_district_set = shattered_ring_world
+            }
+        }
+        text = district_mining_uncapped_desc
+    }
+    desc = {
+        trigger = {
+            uses_district_set = shattered_ring_world
+        }
+        text = district_srw_mining_desc
+    }
+    show_on_uncolonized = {
+        OR = {
+            uses_district_set = hive_world
+            uses_district_set = machine_world
+            uses_district_set = shattered_ring_world
+        }
+    }
+    potential = {
+        OR = {
+            uses_district_set = hive_world
+            uses_district_set = machine_world
+            uses_district_set = shattered_ring_world
+        }
+    }
+    allow = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+        str_mineral_district_allow = yes
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_mining
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @base_cost
+        }
+        upkeep = {
+            energy = 1
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    or = {
+                        has_valid_civic = civic_welfare_state
+                        has_valid_civic = civic_shared_burden
+                    }
+                }
+            }
+            energy = 0.15
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    or = {
+                        has_valid_civic = civic_mining_guilds
+                    }
+                }
+            }
+            energy = 0.2
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_agrarian_idyll
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            NOT = {
+                uses_district_set = shattered_ring_world
+            }
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_mining_drone_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            NOT = {
+                uses_district_set = shattered_ring_world
+            }
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_mining_drone_add = 2
+            planet_housing_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            NOT = {
+                uses_district_set = shattered_ring_world
+            }
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire_spiritualist = no
+            }
+        }
+        modifier = {
+            job_miner_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            NOT = {
+                uses_district_set = shattered_ring_world
+            }
+            exists = owner
+            owner = {
+                is_fallen_empire_spiritualist = yes
+            }
+        }
+        modifier = {
+            job_fe_acolyte_mine_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            uses_district_set = shattered_ring_world
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_scrap_miner_drone_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            uses_district_set = shattered_ring_world
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_scrap_miner_drone_add = 2
+            planet_housing_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            uses_district_set = shattered_ring_world
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_scrap_miner_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_mining_guilds
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+            job_miner_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                or = {
+                    has_valid_civic = civic_keepers_harmony
+                }
+            }
+        }
+        modifier = {
+            planet_amenities_add = -1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                or = {
+                    has_valid_civic = civic_welfare_state
+                    has_valid_civic = civic_shared_burden
+                }
+            }
+        }
+        modifier = {
+            job_miner_add = 1
+            planet_housing_add = 1
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            NOT = {
+                uses_district_set = shattered_ring_world
+            }
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_mining_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            NOT = {
+                uses_district_set = shattered_ring_world
+            }
+            owner = {
+                is_gestalt = no
+                is_fallen_empire_spiritualist = no
+            }
+        }
+        text = job_miner_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_scrap_miner_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = job_scrap_miner_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            NOT = {
+                uses_district_set = shattered_ring_world
+            }
+            exists = owner
+            owner = {
+                is_fallen_empire_spiritualist = yes
+            }
+        }
+        text = job_fe_acolyte_mine_effect_desc
+    }
+    prerequisites = {
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_tradition = tr_plentiful_industry_3
+            }
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+            job_mining_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_tradition = tr_plentiful_industry_3
+            }
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+            job_mining_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_tradition = tr_plentiful_industry_3
+            }
+            owner = {
+                is_gestalt = no
+                is_fallen_empire_spiritualist = no
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+            job_miner_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_tradition = tr_industry_compact_extraction_centers
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_tradition = tr_plentiful_industry_3
+            }
+            owner = {
+                is_fallen_empire_spiritualist = yes
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+            job_fe_acolyte_mine_add = 1
+        }
+    }
+    ai_resource_production = {
+        minerals = 5
+        trigger = {
+            always = yes
+        }
+    }
+}

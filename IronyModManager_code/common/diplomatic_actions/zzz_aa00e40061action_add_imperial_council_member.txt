@@ -1,0 +1,18 @@
+action_add_imperial_council_member = {
+    icon = "GFX_diplomacy_status_add_imperial_council_member"
+    auto_accepted = yes
+    requires_recipient_independence = no
+    should_notify_all_communications = yes
+    action_type = positive
+    on_accept = {
+        hidden_effect = {
+            from = {
+                add_permanent_councillor = yes
+                add_opinion_modifier = {
+                    who = root
+                    modifier = opinion_emperor_gave_council_seat
+                }
+            }
+        }
+    }
+}

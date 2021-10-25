@@ -1,0 +1,8 @@
+until_max_network_cap_policy = {
+    weight = {
+        modifier = {
+            is_spynetwork_max_level < 100
+            weight = 60
+        }
+    }
+}

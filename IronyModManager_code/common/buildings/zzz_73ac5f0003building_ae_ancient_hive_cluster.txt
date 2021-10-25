@@ -1,0 +1,118 @@
+building_ae_ancient_hive_cluster = {
+    base_buildtime = 900
+    capital = yes
+    can_build = no
+    can_demolish = no
+    can_be_ruined = no
+    can_be_disabled = no
+    position_priority = 0
+    country_modifier = {
+        country_resource_max_add = 20000
+    }
+    category = government
+    potential = {
+        exists = owner
+        owner = {
+            is_hive_empire = yes
+        }
+    }
+    convert_to = {
+        building_ae_ancient_control_center
+        building_ae_ancient_palace
+    }
+    allow = {
+        num_pops >= 25
+    }
+    prerequisites = {
+        "tech_ae_ancient_hive_cluster"
+    }
+    show_tech_unlock_if = {
+        is_hive_empire = yes
+    }
+    planet_modifier = {
+        planet_housing_add = 50
+        planet_amenities_add = 50
+        job_acot_overlord_drone_add = 1
+        job_acot_overseer_drone_add = 8
+        job_acot_enforcer_drone_add = 8
+        planet_max_districts_add = 4
+        planet_max_buildings_add = 12
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_capital_productivity_1
+            }
+        }
+        modifier = {
+            planet_jobs_upkeep_mult = 0.1
+            planet_jobs_produces_mult = 0.1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_capital_productivity_2
+            }
+        }
+        modifier = {
+            planet_jobs_upkeep_mult = 0.1
+            planet_jobs_produces_mult = 0.1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_capital_productivity_3
+            }
+        }
+        modifier = {
+            planet_jobs_upkeep_mult = 0.1
+            planet_jobs_produces_mult = 0.1
+        }
+    }
+    resources = {
+        category = planet_buildings
+        produces = {
+            energy = 40
+            sr_dark_matter = 20
+            acot_sr_dark_energy = 20
+        }
+        produces = {
+            trigger = {
+                is_planet_class = pc_dark_fractured
+            }
+            energy = 20
+            sr_dark_matter = 10
+            acot_sr_dark_energy = 10
+        }
+        produces = {
+            trigger = {
+                is_planet_class = pc_dark_fractured_ae
+            }
+            energy = 40
+            sr_dark_matter = 20
+            acot_sr_dark_energy = 20
+        }
+        produces = {
+            trigger = {
+                is_planet_class = pc_acot_enigmopolis
+            }
+            energy = 120
+            sr_dark_matter = 60
+            acot_sr_dark_energy = 60
+        }
+        cost = {
+            minerals = 500
+            influence = 100
+            sr_dark_matter = 5000
+            acot_sr_dark_energy = 5000
+        }
+    }
+    ai_weight = {
+        weight = 100
+    }
+}

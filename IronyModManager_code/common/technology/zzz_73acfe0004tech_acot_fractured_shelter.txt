@@ -1,0 +1,27 @@
+tech_acot_fractured_shelter = {
+    cost = @acot_tier7cost3
+    area = society
+    tier = 7
+    category = {
+        new_worlds
+    }
+    prerequisites = {
+        tech_dark_matter_power_core
+    }
+    weight = 20
+    potential = {
+        OR = {
+            has_technology = tech_acot_colonize_fractured
+            has_technology = tech_acot_colonize_fractured_ae
+        }
+        any_owned_planet = {
+            OR = {
+                is_planet_class = pc_dark_fractured
+                is_planet_class = pc_dark_fractured_ae
+            }
+        }
+    }
+    weight_modifier = {
+        factor = 1
+    }
+}

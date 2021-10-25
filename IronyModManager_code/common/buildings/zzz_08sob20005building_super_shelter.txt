@@ -1,0 +1,51 @@
+building_super_shelter = {
+    base_buildtime = 5
+    can_be_ruined = no
+    can_be_disabled = no
+    category = research
+    resources = {
+        category = planet_buildings
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_progenitor_empires = no
+                }
+            }
+            acot_sr_light_matter = 500
+        }
+        produces = {
+            physics_research = 100
+            engineering_research = 100
+            society_research = 100
+        }
+    }
+    planet_modifier = {
+    }
+    show_tech_unlock_if = {
+        OR = {
+            is_country_Type = original_empire
+            is_country_Type = original_empire_passive
+            is_country_Type = original_empire_active
+            has_valid_civic = civic_solar_empire_ascended
+            has_valid_civic = civic_champion_empire
+        }
+    }
+    potential = {
+        owner = {
+            OR = {
+                is_country_Type = original_empire
+                is_country_Type = original_empire_passive
+                is_country_Type = original_empire_active
+                has_valid_civic = civic_solar_empire_ascended
+                has_valid_civic = civic_champion_empire
+            }
+        }
+    }
+    allow = {
+        is_progenitor_worlds = yes
+    }
+    ai_weight = {
+        weight = 15000
+    }
+}

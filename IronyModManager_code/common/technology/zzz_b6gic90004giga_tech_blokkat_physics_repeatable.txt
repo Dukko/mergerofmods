@@ -1,0 +1,31 @@
+giga_tech_blokkat_physics_repeatable = {
+    cost = 750000
+    cost_per_level = 750000
+    area = physics
+    tier = 5
+    category = {
+        blokkats
+    }
+    is_rare = yes
+    weight = 40
+    levels = 40
+    is_reverse_engineerable = no
+    prerequisites = {
+        giga_tech_blokkat_dimension_study
+    }
+    modifier = {
+        megastructure_build_speed_mult = 0.05
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            has_global_flag = blokkat_crisis_defeated
+        }
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "blokkat_knowledge_repeatable_title"
+            desc = "blokkat_knowledge_repeatable_title"
+        }
+    }
+}

@@ -1,0 +1,19 @@
+trait_ex_broken = {
+    cost = 0
+    initial = no
+    randomized = no
+    modification = no
+    ai_weight = {
+        weight = 0
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    icon = "gfx/interface/icons/traits/trait_ex_broken.dds"
+    modifier = {
+        pop_happiness = -0.05
+        planet_jobs_unity_produces_mult = -0.25
+        pop_growth_speed = -0.25
+    }
+}

@@ -1,0 +1,166 @@
+first_contact_protocol = {
+    potential = {
+        always = yes
+    }
+    option = {
+        name = "first_contact_proactive"
+        policy_flags = {
+            first_contact_proactive
+        }
+        modifier = {
+            first_contact_speed_mult = 0.1
+        }
+        on_enabled = {
+        }
+        valid = {
+            OR = {
+                AND = {
+                    NOT = {
+                        has_global_flag = expanded_pops_active
+                    }
+                    is_homicidal = no
+                    is_xenophobe = no
+                }
+                AND = {
+                    has_global_flag = expanded_pops_active
+                    is_xenophobic_isolationists = no
+                    is_homicidal = no
+                    is_xenophobe = no
+                }
+            }
+        }
+        AI_weight = {
+            modifier = {
+                factor = 2
+                is_pacifist = yes
+            }
+            modifier = {
+                factor = 2
+                is_xenophile = yes
+            }
+            modifier = {
+                factor = 2
+                has_valid_civic = civic_machine_servitor
+            }
+            modifier = {
+                factor = 2
+                AND = {
+                    has_global_flag = expanded_pops_active
+                    is_open_gestalt = yes
+                }
+            }
+        }
+    }
+    option = {
+        name = "first_contact_cautious"
+        policy_flags = {
+            first_contact_cautious
+        }
+        modifier = {
+            first_contact_defense_add = 2
+        }
+        on_enabled = {
+        }
+        valid = {
+            is_homicidal = no
+        }
+        AI_weight = {
+            modifier = {
+                factor = 1.5
+                always = yes
+            }
+            modifier = {
+                factor = 2
+                AND = {
+                    has_global_flag = expanded_pops_active
+                    is_xenophobic_isolationists = yes
+                }
+            }
+            modifier = {
+                factor = 10
+                years_passed > 40
+            }
+            modifier = {
+                factor = 2
+                AND = {
+                    has_global_flag = expanded_pops_active
+                    OR = {
+                        is_gestalt = yes
+                        is_open_gestalt = no
+                        is_civic_militarist = no
+                        is_civic_materialist = no
+                        is_spy_empire = no
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = "first_contact_attack_allowed"
+        policy_flags = {
+            first_contact_attack_allowed
+        }
+        modifier = {
+        }
+        valid = {
+            OR = {
+                AND = {
+                    NOT = {
+                        has_global_flag = expanded_pops_active
+                    }
+                    is_pacifist = no
+                    is_xenophile = no
+                    NOT = {
+                        has_valid_civic = civic_mutualistic_behavior
+                    }
+                }
+                AND = {
+                    has_global_flag = expanded_pops_active
+                    is_pacifist = no
+                    is_xenophile = no
+                    NOT = {
+                        has_valid_civic = civic_mutualistic_behavior
+                    }
+                    is_open_gestalt = no
+                }
+            }
+        }
+        AI_weight = {
+            modifier = {
+                factor = 2
+                is_militarist = yes
+            }
+            modifier = {
+                factor = 2
+                is_xenophobe = yes
+            }
+            modifier = {
+                factor = 2
+                is_gestalt = yes
+            }
+            modifier = {
+                factor = 2
+                OR = {
+                    has_ai_personality = slaving_despots
+                    has_ai_personality = infested_hive_mind
+                    has_ai_personality = assimilators
+                    has_ai_personality = metalhead
+                    has_ai_personality = became_the_crisis
+                    has_ai_personality = vb_sneering_technocrats
+                }
+            }
+            modifier = {
+                factor = 0.5
+                OR = {
+                    has_ai_personality = democratic_crusaders
+                    has_ai_personality = vb_keepers_of_peace
+                    has_ai_personality = honorbound_warriors
+                    has_ai_personality = technological_warriors
+                    has_ai_personality = fanatic_befrienders
+                    has_ai_personality = egalitarian_imperialists
+                    has_ai_personality = vb_ambitious_unifiers
+                }
+            }
+        }
+    }
+}

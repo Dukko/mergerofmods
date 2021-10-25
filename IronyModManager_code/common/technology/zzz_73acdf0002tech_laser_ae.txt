@@ -1,0 +1,58 @@
+tech_laser_ae = {
+    area = physics
+    category = {
+        particles
+    }
+    cost = @acot_tier7cost1
+    tier = 7
+    weight = @tier5weight1
+    ai_update_type = military
+    prerequisites = {
+        "tech_laser_dm"
+        "tech_dark_matter_power_core_ae"
+    }
+    is_rare = yes
+    potential = {
+        NOT = {
+            has_global_flag = acot_weapons_forbidden
+        }
+        NOT = {
+            is_country_type = fallen_empire
+        }
+        has_technology = tech_dark_matter_power_core_ae
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_technology = tech_dark_matter_power_core_ae
+            }
+        }
+    }
+    ai_weight = {
+        factor = 2
+        modifier = {
+            factor = 0.8
+            has_ethic = ethic_fanatic_pacifist
+        }
+        modifier = {
+            factor = 0.9
+            has_ethic = ethic_pacifist
+        }
+        modifier = {
+            factor = 1.1
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.2
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+building_bio_reactor = {
+    base_buildtime = 240
+    category = resource
+    potential = {
+        exists = owner
+        owner = {
+            OR = {
+                is_machine_empire = yes
+                is_mechanical_empire = yes
+                is_lithoid_empire = yes
+            }
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 200
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    NOT = {
+                        has_deficit = food
+                    }
+                }
+            }
+            energy = 20
+        }
+        upkeep = {
+            food = 25
+        }
+    }
+    prerequisites = {
+        "tech_bio_reactor"
+    }
+}

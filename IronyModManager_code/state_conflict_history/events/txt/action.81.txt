@@ -1,0 +1,10 @@
+namespace = action
+namespace = crisis
+planet_event = {
+    id = action.81
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        always = no
+    }
+}

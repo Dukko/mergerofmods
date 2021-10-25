@@ -1,0 +1,57 @@
+tech_synchronized_defences_2 = {
+    area = physics
+    tier = 5
+    cost = @tier5cost2
+    category = {
+        computing
+    }
+    ai_update_type = military
+    prerequisites = {
+        "tech_synchronized_defences"
+    }
+    weight = @tier5weight2
+    modifier = {
+        custom_tooltip = feature_buff_improved_defense_grid_desc
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOR = {
+                has_technology = "tech_sapient_ai"
+                has_technology = "tech_positronic_implants"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+        modifier = {
+            factor = 0.75
+            has_ethic = ethic_pacifist
+        }
+        modifier = {
+            factor = 0.65
+            has_ethic = ethic_fanatic_pacifist
+        }
+        modifier = {
+            factor = 1.1
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.2
+            has_ethic = ethic_fanatic_militarist
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+}

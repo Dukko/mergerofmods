@@ -1,0 +1,21 @@
+tech_enigmatic_power_core = {
+    area = physics
+    category = {
+        particles
+    }
+    tier = 5
+    cost = 35000
+    weight = 15
+    ai_update_type = all
+    potential = {
+        always = no
+        NOT = {
+            has_global_flag = acot_shipcom_forbidden
+        }
+    }
+    prerequisites = {
+        "tech_zero_point_power"
+    }
+    weight_modifier = {
+    }
+}

@@ -1,0 +1,48 @@
+@cost5 = 15
+@power_5 = -30
+utility_component_template = {
+    key = "SHIP_THRUSTER_5"
+    size = small
+    icon = "GFX_ship_part_thruster_5"
+    icon_frame = 1
+    power = @power_5
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @cost5
+            sr_dark_matter = 1
+        }
+    }
+    modifier = {
+        ship_base_speed_mult = 1.25
+        ship_evasion_add = 20
+    }
+    prerequisites = {
+        "tech_dark_matter_propulsion"
+    }
+    component_set = "thruster_components"
+    size_restriction = {
+        corvette
+        crisis_corvette
+        pirate_corvette
+        marauder_corvette
+        colonizer
+        lithoid_colonizer
+        sponsored_colonizer
+        constructor
+        science
+        transport
+    }
+    upgrades_to = "SHIP_THRUSTER_AE"
+    ai_weight = {
+        weight = 5
+        modifier = {
+            factor = 0
+            is_country_type = default
+            resource_stockpile_compare = {
+                resource = sr_dark_matter
+                value <= 50
+            }
+        }
+    }
+}

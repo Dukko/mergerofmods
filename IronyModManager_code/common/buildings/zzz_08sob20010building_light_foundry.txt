@@ -1,0 +1,56 @@
+building_light_foundry = {
+    base_buildtime = 5
+    can_demolish = yes
+    can_be_ruined = no
+    can_be_disabled = no
+    show_tech_unlock_if = {
+        OR = {
+            is_country_Type = original_empire
+            is_country_Type = original_empire_passive
+            is_country_Type = original_empire_active
+            has_valid_civic = civic_solar_empire_ascended
+            has_valid_civic = civic_champion_empire
+        }
+    }
+    potential = {
+        owner = {
+            OR = {
+                is_country_Type = original_empire
+                is_country_Type = original_empire_passive
+                is_country_Type = original_empire_active
+                has_valid_civic = civic_solar_empire_ascended
+                has_valid_civic = civic_champion_empire
+            }
+        }
+    }
+    allow = {
+        is_progenitor_worlds = yes
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_progenitor_empires = no
+                }
+            }
+            acot_sr_light_matter = 7500
+        }
+        produces = {
+            alloys = 1000
+            rare_crystals = 500
+            exotic_gases = 500
+            volatile_motes = 500
+            sr_dark_matter = 500
+            acot_sr_dark_energy = 500
+            acot_sr_stellarite = 500
+            nanites = 500
+            sr_living_metal = 500
+            sr_zro = 500
+        }
+    }
+    ai_weight = {
+        weight = 15000
+    }
+}

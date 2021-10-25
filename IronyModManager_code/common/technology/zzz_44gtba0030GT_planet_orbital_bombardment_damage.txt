@@ -1,0 +1,37 @@
+GT_planet_orbital_bombardment_damage = {
+    cost = @tier5cost1
+    area = physics
+    tier = 5
+    category = {
+        particles
+    }
+    prerequisites = {
+        "tech_zero_point_power"
+    }
+    weight = @tier6weight1
+    modifier = {
+        planet_orbital_bombardment_damage = -0.2
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            is_at_war = no
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+}

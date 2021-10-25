@@ -1,0 +1,50 @@
+tech_adt_energymissiles = {
+    area = physics
+    cost = @tier5cost2
+    tier = 5
+    is_rare = yes
+    category = {
+        particles
+    }
+    ai_update_type = military
+    prerequisites = {
+        "tech_energy_torpedoes_2"
+        "tech_missiles_5"
+        "tech_nanite_ships"
+    }
+    is_reverse_engineerable = yes
+    weight = @tier5weight2
+    potential = {
+        has_global_flag = l_cluster_opened
+        has_resource = {
+            type = nanites
+            amount > 0
+        }
+        NOT = {
+            has_global_flag = ESC_weapons_nanite_forbidden
+        }
+        OR = {
+            NOT = {
+                has_global_flag = distar_overhaul_mod_active
+            }
+            has_technology = tech_nanite_weaponry
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+}

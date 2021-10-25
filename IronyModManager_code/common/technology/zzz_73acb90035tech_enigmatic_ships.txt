@@ -1,0 +1,28 @@
+tech_enigmatic_ships = {
+    area = engineering
+    category = {
+        voidcraft
+    }
+    cost = @acot_tier6cost1
+    tier = 6
+    weight = 5
+    ai_update_type = military
+    prerequisites = {
+        "tech_dark_matter_power_core"
+        "tech_armor_dm"
+    }
+    is_rare = yes
+    modifier = {
+        shipsize_corvette_hull_add = 300
+        shipsize_destroyer_hull_add = 800
+        shipsize_cruiser_hull_add = 1800
+        shipsize_battleship_hull_add = 3000
+        shipsize_titan_hull_add = 10000
+        shipsize_juggernaut_hull_add = 100000
+    }
+    potential = {
+        NOT = {
+            has_global_flag = acot_shipcom_forbidden
+        }
+    }
+}

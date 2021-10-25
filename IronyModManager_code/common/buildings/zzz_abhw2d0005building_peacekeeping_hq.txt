@@ -1,0 +1,36 @@
+building_peacekeeping_hq = {
+    base_buildtime = 1800
+    category = unity
+    empire_limit = {
+        base = 1
+    }
+    potential = {
+        exists = owner
+        is_homeworld = yes
+        owner = {
+            OR = {
+                has_ethic = ethic_militarist
+                has_ethic = ethic_fanatic_militarist
+            }
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 500
+            influence = 100
+        }
+        produces = {
+            unity = 10
+        }
+    }
+    planet_modifier = {
+        pop_growth_speed = 0.1
+        job_soldier_per_pop = 0.025
+        job_enforcer_per_pop = 0.025
+        planet_stability_add = 5
+    }
+    country_modifier = {
+        envoys_add = 1
+    }
+}

@@ -1,0 +1,67 @@
+tech_abstract_2 = {
+    area = physics
+    cost = @tier3cost1
+    weight = @tier3weight1
+    tier = 2
+    is_rare = yes
+    category = {
+        particles
+    }
+    prerequisites = {
+        "tech_physics_2"
+        "tech_power_plant_3"
+        "tech_ehof_phase_01"
+    }
+    modifier = {
+        all_technology_research_speed = 0.05
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0.1
+            years_passed < 30
+        }
+        modifier = {
+            factor = 2
+            years_passed > 40
+        }
+        modifier = {
+            factor = 3
+            years_passed > 50
+        }
+        modifier = {
+            factor = 4
+            years_passed > 60
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+        modifier = {
+            factor = 1.5
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = 2
+            has_federation = yes
+            federation = {
+                has_federation_perk = rare_tech_boost
+                any_member = {
+                    has_technology = tech_abstract_2
+                }
+            }
+        }
+    }
+    ai_weight = {
+        factor = @ehof_t1_weight
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+}

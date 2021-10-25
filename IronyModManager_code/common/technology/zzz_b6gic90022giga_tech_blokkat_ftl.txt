@@ -1,0 +1,21 @@
+giga_tech_blokkat_ftl = {
+    cost = 1200000
+    area = engineering
+    tier = 5
+    category = {
+        blokkats
+    }
+    is_rare = yes
+    weight = 0
+    is_reverse_engineerable = no
+    modifier = {
+        ship_windup_mult = -0.15
+        ship_evasion_mult = 0.1
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "giga_tech_blokkat_knowledge_50_chance"
+            desc = "giga_tech_blokkat_knowledge_50_chance"
+        }
+    }
+}

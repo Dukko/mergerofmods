@@ -1,0 +1,32 @@
+pw_tech_crisis_management = {
+    area = society
+    category = {
+        statecraft
+    }
+    cost = @pw_research_tech_cost_1
+    tier = 5
+    prerequisites = {
+        pw_tech_domed_city
+    }
+    weight = 0
+    is_rare = yes
+    potential = {
+        any_owned_planet = {
+            pw_planet_has_domed_city = yes
+        }
+    }
+    modifier = {
+        pop_government_ethic_attraction = 0.1
+        country_influence_produces_mult = 0.1
+    }
+    ai_weight = {
+        factor = @pw_tech_ai_weight
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = leader_trait_expertise_statecraft
+            }
+        }
+    }
+}

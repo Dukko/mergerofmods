@@ -1,0 +1,59 @@
+building_giga_fortress_fe = {
+    base_buildtime = 1200
+    add_to_first_building_slot = yes
+    can_be_ruined = no
+    can_be_disabled = no
+    can_build = no
+    position_priority = 100
+    planetary_ftl_inhibitor = yes
+    category = army
+    allow = {
+    }
+    planet_modifier = {
+        planet_amenities_add = 20
+        planet_housing_add = 20
+        planet_stability_add = 50
+    }
+    army_modifier = {
+        army_defense_morale_mult = 10
+        army_defense_health_mult = 5
+        army_defense_damage_mult = 5
+    }
+    resources = {
+        category = planet_buildings
+        produces = {
+            unity = 50
+            food = 50
+        }
+        cost = {
+            minerals = 35000
+            influence = 150
+            sr_dark_matter = 500
+            acot_sr_dark_energy = 500
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            owner = {
+                is_fallen_empire = yes
+            }
+        }
+        job_acot_giga_fortress_operator_ancient_add = 3
+    }
+    triggered_planet_modifier = {
+        potential = {
+            owner = {
+                is_fallen_empire = no
+            }
+        }
+        job_acot_giga_fortress_operator_add = 3
+    }
+    upgrades = {
+        building_giga_fortress_array
+        building_giga_fortress_lab
+        building_giga_fortress_obelisk
+    }
+    ai_weight = {
+        weight = 150000
+    }
+}

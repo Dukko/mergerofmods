@@ -1,0 +1,49 @@
+GT_extra_large_weapon_damage_mult = {
+    cost = @tier5cost1
+    area = physics
+    tier = 5
+    category = {
+        computing
+    }
+    prerequisites = {
+        "tech_zero_point_power"
+    }
+    weight = @tier6weight1
+    modifier = {
+        shipclass_military_station_damage_mult = 0.5
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+}

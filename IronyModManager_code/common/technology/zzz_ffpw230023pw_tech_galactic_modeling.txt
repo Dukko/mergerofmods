@@ -1,0 +1,86 @@
+pw_tech_galactic_modeling = {
+    area = society
+    cost = @pw_tech_cost_3
+    tier = 5
+    category = {
+        statecraft
+    }
+    prerequisites = {
+        pw_tech_planetary_mega_engineering
+        tech_galactic_bureaucracy
+    }
+    weight = @tier5weight1
+    is_rare = yes
+    weight_modifier = {
+        factor = @pw_tech_weight_mod
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = society
+                has_trait = leader_trait_expertise_statecraft
+            }
+        }
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = society
+                has_trait = leader_trait_spark_of_genius
+            }
+        }
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = society
+                has_trait = leader_trait_curator
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = @federation_perk_factor
+            has_federation = yes
+            federation = {
+                has_federation_perk = rare_tech_boost
+                any_member = {
+                    has_technology = pw_tech_galactic_modeling
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            has_valid_civic = civic_byzantine_bureaucracy
+        }
+        modifier = {
+            factor = 2
+            has_valid_civic = civic_efficient_bureaucracy
+        }
+        modifier = {
+            factor = 0
+            num_owned_planets < 3
+        }
+        modifier = {
+            factor = 1.25
+            num_owned_planets > 5
+        }
+        modifier = {
+            factor = 1.25
+            num_owned_planets > 8
+        }
+        modifier = {
+            factor = 1.25
+            num_owned_planets > 12
+        }
+    }
+    ai_weight = {
+        factor = @pw_tech_ai_weight
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = leader_trait_expertise_statecraft
+            }
+        }
+    }
+}

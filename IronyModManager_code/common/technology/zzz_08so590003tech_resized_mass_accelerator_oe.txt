@@ -1,0 +1,22 @@
+tech_resized_mass_accelerator_oe = {
+    area = engineering
+    cost = @acot_tier9cost2
+    tier = 9
+    category = {
+        propulsion
+    }
+    ai_update_type = military
+    weight = 0
+    potential = {
+        NOT = {
+            has_global_flag = acot_shipcom_forbidden
+        }
+        has_technology = tech_lightmatter_reactor
+    }
+    weight_modifier = {
+        factor = 0
+    }
+    ai_weight = {
+        factor = 200
+    }
+}

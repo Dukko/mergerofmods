@@ -1,0 +1,167 @@
+@resolution_weight_unpopular = 5
+@resolution_cost_t4 = 250
+@resolution_flag_timer = 360
+resolution_greatergood_repeal_4 = {
+    icon = "GFX_resolution_council_veto"
+    potential = {
+        has_federations_dlc = yes
+    }
+    resources = {
+        category = resolutions
+        cost = {
+            influence = @resolution_cost_t4
+        }
+    }
+    target = no
+    fire_and_forget = yes
+    effect = {
+        hidden_effect = {
+            add_modifier = {
+                modifier = resolution_passed_diplomatic_weight
+                days = 2200
+            }
+        }
+        custom_tooltip = resolution_greatergood_repeal_4_effect_success
+        hidden_effect = {
+            cancel_resolution = "resolution_greatergood_balance_in_the_middle"
+            set_timed_country_flag = {
+                flag = galactic_community_resolution_passed_greatergood_repeal
+                days = @resolution_flag_timer
+            }
+            set_timed_country_flag = {
+                flag = faction_egalitarian_outraged_gc
+                days = 7200
+            }
+        }
+        custom_tooltip = resolution_greatergood_greater_than_ourselves_tooltip
+    }
+    fail_effects = {
+        hidden_effect = {
+            add_modifier = {
+                modifier = resolution_failed_diplomatic_weight
+                days = 2200
+            }
+        }
+        hidden_effect = {
+            set_timed_country_flag = {
+                flag = galactic_community_resolution_failed_greatergood_repeal
+                days = @resolution_flag_timer
+            }
+        }
+    }
+    potential = {
+        is_active_resolution = "resolution_greatergood_balance_in_the_middle"
+    }
+    modifier = {
+        resolution_greatergood_workers_rights = 1
+        resolution_greatergood_five_year_plans = 1
+        resolution_greatergood_greater_than_ourselves = 1
+    }
+    allow = {
+    }
+    ai_weight = {
+        weight = @resolution_weight_unpopular
+        modifier = {
+            factor = 0
+            is_socialism = yes
+        }
+        modifier = {
+            factor = 0.5
+            NOT = {
+                in_breach_of = resolution_greatergood_balance_in_the_middle
+            }
+            is_xenophile = yes
+            is_authoritarian = no
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                in_breach_of = resolution_greatergood_balance_in_the_middle
+            }
+            has_ethic = ethic_fanatic_xenophile
+            is_authoritarian = no
+        }
+        modifier = {
+            factor = 0
+            is_civic_machine_servitor = yes
+        }
+        modifier = {
+            factor = 2
+            is_authoritarian = yes
+        }
+        modifier = {
+            factor = 2
+            has_ethic = ethic_fanatic_authoritarian
+        }
+        modifier = {
+            factor = 2
+            is_civic_authoritarian = yes
+        }
+        modifier = {
+            factor = 2
+            is_civic_has_elite = yes
+        }
+        modifier = {
+            factor = 0.25
+            is_civic_has_meritocracy = yes
+        }
+        modifier = {
+            factor = 2
+            is_pleasure_seeker = yes
+        }
+        modifier = {
+            factor = 10
+            in_breach_of = resolution_greatergood_balance_in_the_middle
+        }
+        modifier = {
+            factor = 2
+            any_federation_ally = {
+                NOT = {
+                    federation = {
+                        has_federation_type = hegemony_federation
+                    }
+                }
+                in_breach_of = resolution_greatergood_balance_in_the_middle
+            }
+        }
+        modifier = {
+            factor = 0.5
+            OR = {
+                has_valid_civic = civic_agrarian_idyll
+                is_civic_free_haven = yes
+                is_civic_inwards_perfection = yes
+                has_valid_civic = civic_socialistic
+            }
+        }
+        modifier = {
+            factor = 5
+            OR = {
+                is_civic_slaver_guilds = yes
+                is_origin_syncretic_livestock = yes
+                is_slaver = yes
+                has_ethic = ethic_fanatic_capitalism
+                has_ai_personality_behaviour = slaver
+            }
+        }
+        modifier = {
+            factor = 0.75
+            any_owned_planet = {
+                free_housing < 1
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOT = {
+                in_breach_of = resolution_greatergood_balance_in_the_middle
+            }
+            any_relation = {
+                OR = {
+                    is_rival = prev
+                    is_at_war_with = prev
+                }
+                is_galactic_community_member = yes
+                in_breach_of = resolution_greatergood_balance_in_the_middle
+            }
+        }
+    }
+}

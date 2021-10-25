@@ -1,0 +1,33 @@
+GT_species_leader_exp_gain = {
+    cost = @tier1cost3
+    area = physics
+    tier = 1
+    category = {
+        computing
+    }
+    prerequisites = {
+        "tech_genome_mapping"
+    }
+    weight = @tier2weight3
+    modifier = {
+        species_leader_exp_gain = 0.2
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+}

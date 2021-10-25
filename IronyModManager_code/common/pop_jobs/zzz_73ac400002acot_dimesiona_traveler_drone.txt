@@ -1,0 +1,36 @@
+acot_dimesiona_traveler_drone = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_ae_dimensional_fabricator
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        drone_job_check_trigger = yes
+    }
+    resources = {
+        category = planet_jobs
+        produces = {
+            minerals = 50
+            rare_crystals = 1
+            exotic_gases = 1
+            volatile_motes = 1
+            sr_zro = 1
+            sr_dark_matter = 1
+            sr_living_metal = 1
+        }
+        upkeep = {
+            acot_sr_dark_energy = 2
+        }
+    }
+    weight = {
+        weight = @complex_drone_job_weight
+        modifier = {
+            factor = 1.5
+            has_job = acot_dimesiona_traveler_drone
+        }
+    }
+}

@@ -1,0 +1,73 @@
+"Presidium of Human Enlightenment" = {
+    key = "Presidium of Human Enlightenment"
+    ship_prefix = ""
+    species = {
+        class = "HUM"
+        portrait = "human"
+        name = "Human"
+        plural = "Humans"
+        adjective = "Human"
+        species_bio = "Rampant overpopulation on Earth nearly destroyed human civilization. During the worst of the planet's upheavals, a new philosophy took root in the Far East. Its followers and advocates spoke of a collective Human consciousness that was expanding beyond a crucial point. At last Humanity was ready to accept life's fundamental truth: that life's only purpose is life itself. Learning to extend their awareness outward, beyond the self of body, to embrace the self of group and the self of Humanity, followers found sollace amid endless turmoil. This movement came to dominate Earth, where most now see the goals of the group and the wider species as transcendent, and believe embracing them is to achieve enlightenment. Those who cannot or do not conform to these fundamental realities can be re-educated or, failing that, sent into the reprocessing tanks to become one with all the people."
+        name_list = "just-name-lists_human5"
+        trait = "trait_adaptive"
+        trait = "trait_communal"
+        trait = "trait_deviants"
+    }
+    name = "Presidium of Human Enlightenment"
+    adjective = "Earth"
+    authority = "auth_dictatorial"
+    flags = {
+        "presidium_of_human_enlightenment"
+        "custom_start_screen"
+        "presidium_of_human_enlightenment"
+        "custom_start_screen"
+    }
+    government = "gov_communist_dictatorship"
+    advisor_voice_type = "l_the_technocrat"
+    planet_name = "Earth"
+    planet_class = "pc_continental"
+    system_name = "Sol"
+    initializer = "sol_system_initializer"
+    graphical_culture = "reptilian_01"
+    city_graphical_culture = "humanoid_01"
+    empire_flag = {
+        icon = {
+            category = "just-more-flags"
+            file = "flag_presidium_of_human_enlightenment.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "fabric_circle.dds"
+        }
+        colors = {
+            "grey"
+            "black"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = male
+        name = "Guo Xinfang"
+        portrait = "human_male_02"
+        texture = 0
+        hair = 1
+        clothes = 2
+        ruler_title = "Chairman"
+        ruler_title_female = "Chairwoman"
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "tech3_room"
+    spawn_enabled = yes
+    ethic = "ethic_authoritarian"
+    ethic = "ethic_materialist"
+    ethic = "ethic_fanatic_socialism"
+    civics = {
+        "civic_efficient_bureaucracy"
+        "civic_police_state"
+        "civic_welfare_state"
+    }
+    origin = "origin_default"
+}

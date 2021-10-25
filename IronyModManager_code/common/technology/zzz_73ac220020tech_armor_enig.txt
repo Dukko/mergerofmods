@@ -1,0 +1,22 @@
+tech_armor_enig = {
+    area = engineering
+    category = {
+        materials
+    }
+    tier = 5
+    cost = @tier5cost2
+    weight = @tier5weight2
+    ai_update_type = all
+    prerequisites = {
+        "tech_enigmatic_power_core"
+        "tech_ship_armor_5"
+    }
+    potential = {
+        always = no
+        NOT = {
+            has_global_flag = acot_utilitys_forbidden
+        }
+    }
+    weight_modifier = {
+    }
+}

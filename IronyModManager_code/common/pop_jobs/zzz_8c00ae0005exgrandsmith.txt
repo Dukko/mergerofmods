@@ -1,0 +1,31 @@
+exgrandsmith = {
+    category = ruler
+    condition_string = RULER_JOB_TRIGGER
+    building_icon = building_capital
+    clothes_texture_index = 4
+    possible = {
+        ruler_job_check_trigger = yes
+    }
+    resources = {
+        produces = {
+            unity = 6
+        }
+        upkeep = {
+            alloys = 2
+        }
+    }
+    planet_modifier = {
+        planet_amenities_add = 16
+    }
+    weight = {
+        weight = @specialist_job_weight
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+    }
+}

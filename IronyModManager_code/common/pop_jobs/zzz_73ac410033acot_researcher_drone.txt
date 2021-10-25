@@ -1,0 +1,35 @@
+acot_researcher_drone = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_enigmatic_lab
+    clothes_texture_index = 3
+    icon = acot_researcher
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        drone_job_check_trigger = yes
+    }
+    resources = {
+        category = planet_researchers
+        produces = {
+            physics_research = 25
+            engineering_research = 25
+            society_research = 25
+        }
+        upkeep = {
+            sr_dark_matter = 2
+            acot_sr_dark_energy = 2
+        }
+    }
+    weight = {
+        weight = @complex_drone_job_weight
+        modifier = {
+            factor = 1.5
+            has_job = acot_researcher_drone
+        }
+    }
+}

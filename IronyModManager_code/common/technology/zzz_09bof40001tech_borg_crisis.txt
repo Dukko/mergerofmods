@@ -1,0 +1,10 @@
+tech_borg_crisis = {
+    cost = 2000
+    area = physics
+    tier = 1
+    category = {
+        field_manipulation
+    }
+    ai_update_type = all
+    weight = 0
+}

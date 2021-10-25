@@ -1,0 +1,39 @@
+tech_nano_dust = {
+    cost = @tier4cost1
+    area = society
+    tier = 4
+    category = {
+        biology
+    }
+    weight = @tier5weight1
+    modifier = {
+        terraform_speed_mult = 0.5
+        terraforming_cost_mult = -0.25
+    }
+    potential = {
+        has_global_flag = l_cluster_opened
+        has_resource = {
+            type = nanites
+            amount > 0
+        }
+        OR = {
+            NOT = {
+                has_global_flag = distar_overhaul_mod_active
+            }
+            has_country_flag = completed_nanite_technology_mastery_chain
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            has_monthly_income = {
+                resource = nanites
+                value < 1
+            }
+            resource_stockpile_compare = {
+                resource = nanites
+                value < 300
+            }
+        }
+    }
+}

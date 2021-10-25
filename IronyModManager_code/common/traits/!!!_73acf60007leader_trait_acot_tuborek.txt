@@ -1,0 +1,30 @@
+leader_trait_acot_tuborek = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/leader_trait_acot_phanon_admiral.dds"
+    immortal_leaders = yes
+    modifier = {
+        species_leader_exp_gain = 5
+        ship_experience_gain_mult = 5
+        ship_fire_rate_mult = 5
+        ship_speed_mult = 5
+        ship_weapon_damage = 5
+        ship_evasion_add = 50
+        ship_accuracy_add = 50
+        ship_tracking_add = 50
+        ship_emergency_ftl_min_days_mult = -1
+        ship_disengage_chance_mult = 2
+        leader_skill_levels = 20
+    }
+    initial = no
+    randomized = no
+    leader_trait = {
+        admiral
+    }
+    leader_class = {
+        admiral
+    }
+    ai_weight = {
+        weight = 1000
+    }
+}

@@ -1,0 +1,18 @@
+gle_trait_agri_drone_ruler_tier = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/gle_trait_farmer_lv1.dds"
+    modifier = {
+        job_agri_drone_add = 1
+        planet_farmers_unity_produces_add = 1
+    }
+    sorting_priority = 20
+    initial = no
+    randomized = no
+    leader_trait = {
+        governor
+    }
+    leader_class = {
+        governor
+    }
+}

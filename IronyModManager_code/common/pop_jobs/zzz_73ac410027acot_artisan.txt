@@ -1,0 +1,49 @@
+acot_artisan = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_fe_factory
+    clothes_texture_index = 3
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        specialist_job_check_trigger = yes
+    }
+    resources = {
+        category = planet_artisans
+        produces = {
+            consumer_goods = 20
+        }
+        upkeep = {
+            sr_dark_matter = 1
+        }
+    }
+    weight = {
+        weight = @specialist_job_weight
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+            NOT = {
+                has_trait = trait_mechanical
+            }
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 1.5
+            has_job = acot_artisan
+        }
+        modifier = {
+            factor = 1.2
+            is_enslaved = yes
+            has_slavery_type = {
+                type = slavery_indentured
+            }
+        }
+    }
+}

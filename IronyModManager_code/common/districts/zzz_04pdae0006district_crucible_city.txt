@@ -1,0 +1,54 @@
+@hab_cost = 500
+@hab_maintenance = 2
+district_crucible_city = {
+    base_buildtime = 480
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        exists = from
+        uses_district_set = pdcrucible
+    }
+    potential = {
+        exists = owner
+        uses_district_set = pdcrucible
+    }
+    allow = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @hab_cost
+        }
+        upkeep = {
+            energy = @hab_maintenance
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 8
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_maintenance_drone_add = 2
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_maintenance_drone_effect_desc
+    }
+}

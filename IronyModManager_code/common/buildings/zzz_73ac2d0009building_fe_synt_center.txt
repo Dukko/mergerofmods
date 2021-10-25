@@ -1,0 +1,73 @@
+building_fe_synt_center = {
+    base_buildtime = 360
+    base_cap_amount = 1
+    category = government
+    planet_modifier = {
+        planet_jobs_specialist_produces_mult = 0.1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            num_pops >= 50
+        }
+        planet_jobs_specialist_produces_mult = 0.1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            num_pops >= 100
+        }
+        planet_jobs_specialist_produces_mult = 0.1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            num_pops >= 150
+        }
+        planet_jobs_specialist_produces_mult = 0.1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            num_pops >= 200
+        }
+        planet_jobs_specialist_produces_mult = 0.1
+    }
+    allow = {
+        has_enigmatic_capital = yes
+    }
+    resources = {
+        category = planet_buildings
+        produces = {
+            engineering_research = 5
+        }
+        cost = {
+            minerals = 250
+            sr_dark_matter = 100
+            acot_sr_dark_energy = 100
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    NOT = {
+                        has_technology = tech_acot_fractured_autoharvesting
+                    }
+                }
+            }
+            sr_dark_matter = 5
+            acot_sr_dark_energy = 5
+        }
+    }
+    upgrades = {
+        building_ae_synt_center
+    }
+    prerequisites = {
+        tech_fe_synt_center
+    }
+    ai_weight = {
+        weight = 10000
+        modifier = {
+            factor = 0
+            OR = {
+                has_building = building_fe_synt_center
+                has_building = building_ae_synt_center
+            }
+        }
+    }
+}

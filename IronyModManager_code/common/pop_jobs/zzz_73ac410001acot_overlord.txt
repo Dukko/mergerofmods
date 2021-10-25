@@ -1,0 +1,96 @@
+acot_overlord = {
+    category = ruler
+    condition_string = RULER_JOB_TRIGGER
+    building_icon = building_dm_ancient_palace
+    clothes_texture_index = 1
+    icon = administrator
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    country_modifier = {
+        country_admin_cap_add = 50
+    }
+    possible = {
+        ruler_job_check_trigger = yes
+    }
+    resources = {
+        category = planet_jobs
+        produces = {
+            physics_research = 50
+            engineering_research = 50
+            society_research = 50
+            unity = 50
+            influence = 0.2
+        }
+        upkeep = {
+        }
+    }
+    planet_modifier = {
+        planet_crime_add = -10
+        planet_stability_add = 50
+        planet_amenities_add = 50
+        trade_value_add = 50
+    }
+    weight = {
+        weight = @ruler_job_weight
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+            NOT = {
+                has_trait = trait_mechanical
+            }
+        }
+        modifier = {
+            factor = 2
+            has_living_standard = {
+                type = living_standard_academic_privilege
+            }
+        }
+        modifier = {
+            factor = 3
+            has_trait = trait_erudite
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                has_trait = trait_robot_logic_engines
+                has_trait = trait_intelligent
+            }
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+                has_trait = trait_natural_engineers
+                has_trait = trait_natural_physicists
+                has_trait = trait_natural_sociologists
+            }
+        }
+        modifier = {
+            factor = 100
+            has_job = acot_overlord
+        }
+        modifier = {
+            factor = 1.5
+            has_trait = trait_latent_psionic
+        }
+        modifier = {
+            factor = 2
+            has_trait = trait_psionic
+        }
+        modifier = {
+            factor = 0.1
+            has_trait = trait_enigmatic_intelligence_failed
+        }
+        modifier = {
+            factor = 2
+            has_trait = trait_brainslug
+        }
+        modifier = {
+            factor = 0.75
+            has_trait = trait_repugnant
+        }
+    }
+}

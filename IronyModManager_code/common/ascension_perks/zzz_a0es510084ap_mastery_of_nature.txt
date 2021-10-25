@@ -1,0 +1,87 @@
+ap_mastery_of_nature = {
+    modifier = {
+        deposit_blockers_cost_mult = -0.5
+    }
+    on_enabled = {
+        custom_tooltip = "allow_decision_mastery_of_nature"
+        custom_tooltip = "describe_decision_mastery_of_nature"
+        add_research_option = tech_solar_reflectrion
+        add_research_option = tech_seismic_resonators
+        add_research_option = tech_nanite_soil
+        custom_tooltip = "d_give_all_blocker_tech"
+        if = {
+            limit = {
+                NOT = {
+                    has_technology = tech_terrestrial_sculpting
+                }
+            }
+            add_research_option = tech_terrestrial_sculpting
+        }
+        hidden_effect = {
+            give_technology = {
+                tech = tech_mountain_range
+                message = no
+            }
+            give_technology = {
+                tech = tech_volcano
+                message = no
+            }
+            give_technology = {
+                tech = tech_dangerous_wildlife
+                message = no
+            }
+            give_technology = {
+                tech = tech_dense_jungle
+                message = no
+            }
+            give_technology = {
+                tech = tech_quicksand_basin
+                message = no
+            }
+            give_technology = {
+                tech = tech_noxious_swamp
+                message = no
+            }
+            give_technology = {
+                tech = tech_massive_glacier
+                message = no
+            }
+            give_technology = {
+                tech = tech_toxic_kelp
+                message = no
+            }
+            give_technology = {
+                tech = tech_deep_sinkhole
+                message = no
+            }
+        }
+    }
+    potential = {
+        NOT = {
+            has_ascension_perk = ap_mastery_of_nature
+        }
+    }
+    ai_weight = {
+        factor = 1
+        modifier = {
+            factor = 100
+            any_controlled_planet = {
+                is_planet_class = pc_relic
+            }
+        }
+        modifier = {
+            factor = 0.5
+            has_technology = tech_terrestrial_sculpting
+        }
+        modifier = {
+            factor = 0
+            num_ascension_perks > 1
+            OR = {
+                NOT = {
+                    has_origin = origin_life_seeded
+                }
+                has_technology = tech_terrestrial_sculpting
+            }
+        }
+    }
+}

@@ -1,0 +1,100 @@
+district_rw_commercial = {
+    base_buildtime = @giga_rw_district_buildtime
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        uses_district_set = ring_world
+        exists = from
+        from = {
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+        OR = {
+            is_planet_class = pc_squareworld_habitable
+            is_planet_class = pc_ringworld_habitable
+        }
+        NOT = {
+            has_modifier = ringworld_upgrade_timer
+        }
+    }
+    potential = {
+        uses_district_set = ring_world
+        exists = owner
+        owner = {
+            is_gestalt = no
+            is_fallen_empire = no
+        }
+        OR = {
+            is_planet_class = pc_squareworld_habitable
+            is_planet_class = pc_ringworld_habitable
+        }
+        NOT = {
+            has_modifier = ringworld_upgrade_timer
+        }
+    }
+    allow = {
+        exists = owner
+        or = {
+            owner = {
+                is_ai = no
+            }
+            num_districts = {
+                type = district_rw_commercial
+                value < 1
+            }
+        }
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_rw_generator
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @giga_rw_cost
+            rare_crystals = @giga_rw_cost_sr
+        }
+        upkeep = {
+            energy = @giga_rw_maintenance
+            rare_crystals = @giga_rw_maintenance_sr
+        }
+    }
+    triggered_planet_modifier = {
+        planet_housing_add = 10
+        job_merchant_add = 2
+        job_clerk_add = 6
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_active_tradition = tr_mercantile_commercial_enterprise
+            }
+        }
+        modifier = {
+            job_merchant_add = 2
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            planet = {
+                has_deposit = d_arcane_generator
+                NOT = {
+                    has_district = district_rw_commercial
+                }
+            }
+        }
+        text = arcane_generator_upkeep_desc
+    }
+    triggered_desc = {
+        text = job_merchant_effect_desc
+    }
+    triggered_desc = {
+        text = job_clerk_effect_desc
+    }
+    ai_resource_production = {
+        energy = 10
+        trigger = {
+            always = yes
+        }
+    }
+}

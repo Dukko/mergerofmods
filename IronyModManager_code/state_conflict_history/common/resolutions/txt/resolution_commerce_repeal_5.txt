@@ -1,0 +1,229 @@
+@resolution_weight_unpopular = 5
+@resolution_cost_t5 = 300
+@resolution_flag_timer = 360
+@resolution_flag_timer = 360
+resolution_commerce_repeal_5 = {
+    icon = "GFX_repeal_orange"
+    potential = {
+        has_federations_dlc = yes
+    }
+    resources = {
+        category = resolutions
+        cost = {
+            influence = @resolution_cost_t5
+        }
+    }
+    target = no
+    fire_and_forget = yes
+    effect = {
+        hidden_effect = {
+            add_modifier = {
+                modifier = resolution_passed_diplomatic_weight
+                days = 2200
+            }
+        }
+        custom_tooltip = resolution_commerce_repeal_5_effect_success
+        hidden_effect = {
+            cancel_resolution = "resolution_commerce_profit_maximization_engines"
+            set_timed_country_flag = {
+                flag = galactic_community_resolution_passed_commerce_repeal
+                days = @resolution_flag_timer
+            }
+            if = {
+                limit = {
+                    is_auth_corporate = yes
+                }
+                set_timed_country_flag = {
+                    flag = faction_pacifist_outraged_gc
+                    days = 7200
+                }
+            }
+            set_timed_country_flag = {
+                flag = faction_authoritarian_outraged_gc
+                days = 7200
+            }
+        }
+    }
+    fail_effects = {
+        hidden_effect = {
+            add_modifier = {
+                modifier = resolution_failed_diplomatic_weight
+                days = 2200
+            }
+        }
+        hidden_effect = {
+            set_timed_country_flag = {
+                flag = galactic_community_resolution_failed_commerce_repeal
+                days = @resolution_flag_timer
+            }
+        }
+    }
+    potential = {
+        is_active_resolution = "resolution_commerce_profit_maximization_engines"
+    }
+    modifier = {
+        resolution_commerce_buzzword_standardization = 1
+        resolution_commerce_leveraged_privateering = 1
+        resolution_commerce_underdeveloped_system_utilization = 1
+        resolution_commerce_holistic_asset_coordination = 1
+    }
+    allow = {
+    }
+    ai_weight = {
+        weight = @resolution_weight_unpopular
+        modifier = {
+            factor = 0.625
+            not = {
+                has_country_flag = str_has_bad_economy_score
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_country_flag = str_has_bad_economy_score
+        }
+        modifier = {
+            factor = 1.4
+            has_country_flag = str_has_terrible_economy_score
+        }
+        modifier = {
+            factor = 1.1
+            turtler = yes
+        }
+        modifier = {
+            factor = 1.1
+            turtler2 = yes
+        }
+        modifier = {
+            factor = 0.9
+            rusher = yes
+        }
+        modifier = {
+            factor = 0.9
+            rusher2 = yes
+        }
+        modifier = {
+            factor = 0.5
+            is_militarist = no
+            count_country = {
+                count < 4
+                limit = {
+                    is_galactic_community_member = yes
+                    relative_power = {
+                        who = prev
+                        category = economy
+                        value >= equivalent
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            any_relation = {
+                is_galactic_community_member = yes
+                OR = {
+                    is_rival = prev
+                    is_at_war_with = prev
+                }
+                count_country = {
+                    count < 4
+                    limit = {
+                        is_galactic_community_member = yes
+                        relative_power = {
+                            who = prev
+                            category = economy
+                            value >= equivalent
+                        }
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                is_megacorp = yes
+                has_valid_civic = civic_merchant_guilds
+                has_valid_civic = civic_globalism
+            }
+        }
+        modifier = {
+            factor = 3
+            is_anti_corp = yes
+        }
+        modifier = {
+            factor = 1.25
+            has_valid_civic = civic_byzantine_bureaucracy
+        }
+        modifier = {
+            factor = 0.25
+            is_auth_corporate = yes
+            is_egalitarian = yes
+        }
+        modifier = {
+            factor = 0.25
+            is_authoritarian = yes
+        }
+        modifier = {
+            factor = 0
+            has_ethic = ethic_fanatic_authoritarian
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                is_slaver = yes
+                is_civic_slaver_guilds = yes
+            }
+        }
+        modifier = {
+            factor = 0.25
+            is_civic_has_elite = yes
+        }
+        modifier = {
+            factor = 1.5
+            is_civic_has_meritocracy = yes
+        }
+        modifier = {
+            factor = 0.75
+            is_xenophobe = yes
+        }
+        modifier = {
+            factor = 0.8
+            is_civic_cutthroat_politics = yes
+        }
+        modifier = {
+            factor = 0.75
+            OR = {
+                has_valid_civic = civic_free_traders
+                has_valid_civic = civic_trading_posts
+                has_valid_civic = civic_corporate_dominion
+                has_valid_civic = civic_beacon_of_liberty
+            }
+        }
+        modifier = {
+            factor = 1.25
+            is_militarist = yes
+        }
+        modifier = {
+            factor = 2
+            is_egalitarian = yes
+        }
+        modifier = {
+            factor = 3
+            has_ethic = ethic_fanatic_egalitarian
+        }
+        modifier = {
+            factor = 10
+            OR = {
+                is_civic_machine_servitor = yes
+                is_civic_shared_burden = yes
+            }
+        }
+        modifier = {
+            factor = 1.5
+            is_gestalt = yes
+        }
+        modifier = {
+            factor = 0.25
+            is_pleasure_seeker = yes
+        }
+    }
+}

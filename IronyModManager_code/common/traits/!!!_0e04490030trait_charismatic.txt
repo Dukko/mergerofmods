@@ -1,0 +1,15 @@
+trait_charismatic = {
+    cost = 2
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_repugnant"
+        "trait_additrait_hateful"
+        "trait_additrait_sociable"
+        "trait_additrait_violent"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    custom_tooltip = TRAIT_CHARISMATIC_EFFECT
+}

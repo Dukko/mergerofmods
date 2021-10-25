@@ -1,0 +1,24 @@
+tech_titan_lightmatter_emitter = {
+    area = physics
+    category = {
+        particles
+    }
+    tier = 9
+    cost = @acot_tier9cost2
+    ai_update_type = military
+    is_rare = yes
+    is_reverse_engineerable = no
+    weight = 0
+    potential = {
+        NOT = {
+            has_global_flag = acot_shipcom_forbidden
+        }
+        has_technology = tech_lightmatter_reactor
+    }
+    weight_modifier = {
+        factor = 0
+    }
+    ai_weight = {
+        factor = 200
+    }
+}

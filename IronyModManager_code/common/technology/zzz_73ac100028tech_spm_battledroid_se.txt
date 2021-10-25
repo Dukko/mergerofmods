@@ -1,0 +1,38 @@
+tech_spm_battledroid_se = {
+    cost = @acot_tier8cost1
+    area = engineering
+    tier = 8
+    category = {
+        industry
+    }
+    prerequisites = {
+        tech_spm_battledroid_ae
+        tech_computer_stellarite
+    }
+    weight = 20
+    potential = {
+        has_authority = auth_machine_intelligence
+        NOT = {
+            has_global_flag = acot_army_forbidden
+        }
+    }
+    weight_modifier = {
+        factor = 1.5
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+}

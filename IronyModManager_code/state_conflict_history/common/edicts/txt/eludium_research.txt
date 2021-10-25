@@ -1,0 +1,30 @@
+@EdictDuration = 3600
+eludium_research = {
+    length = @EdictDuration
+    icon = "GFX_edict_type_time"
+    resources = {
+        category = rare_edicts
+        cost = {
+            sr_eludium = 50
+        }
+    }
+    potential = {
+        has_resource = {
+            type = sr_eludium
+            amount > 0
+        }
+    }
+    modifier = {
+        planet_researchers_produces_mult = 0.1
+    }
+    ai_weight = {
+        weight = @EdictHighPrio
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = sr_eludium
+                value < 500
+            }
+        }
+    }
+}

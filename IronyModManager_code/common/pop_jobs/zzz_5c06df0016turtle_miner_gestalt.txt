@@ -1,0 +1,133 @@
+turtle_miner_gestalt = {
+    category = simple_drone
+    condition_string = DRONE_JOB_TRIGGER
+    clothes_texture_index = 3
+    icon = mining_drone
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible = {
+        drone_job_check_trigger = yes
+    }
+    resources = {
+        category = planet_miners
+        produces = {
+            minerals = 3
+            food = 2
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_food_processing_facility
+                }
+            }
+            food = 1
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_food_processing_center
+                }
+            }
+            food = 2
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_mineral_purification_plant
+                }
+            }
+            minerals = 1
+        }
+        produces = {
+            trigger = {
+                OR = {
+                    owner = {
+                        has_valid_civic = civic_mining_guilds
+                        has_valid_civic = civic_machine_rockbreakers
+                    }
+                }
+            }
+            minerals = 1
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_active_building = building_mineral_purification_hub
+                }
+            }
+            minerals = 2
+        }
+        upkeep = {
+            energy = 2
+        }
+    }
+    weight = {
+        weight = @simple_drone_job_weight
+        modifier = {
+            factor = 2
+            OR = {
+                has_trait = trait_robot_harvesters
+                has_trait = trait_agrarian
+                has_trait = trait_robot_power_drills
+                has_trait = trait_industrious
+            }
+        }
+        modifier = {
+            factor = 1.1
+            owner = {
+                has_valid_civic = civic_agrarian_idyll
+            }
+        }
+        modifier = {
+            factor = 0.25
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 2
+            has_trait = trait_syncretic_proles
+        }
+        modifier = {
+            factor = 1.2
+            has_trait = trait_very_strong
+        }
+        modifier = {
+            factor = 1.1
+            has_trait = trait_strong
+        }
+        modifier = {
+            factor = 0.9
+            has_trait = trait_weak
+        }
+        modifier = {
+            factor = 1.4
+            has_trait = trait_presapient_proles
+        }
+        modifier = {
+            factor = 1.1
+            OR = {
+                has_trait = trait_robust
+                has_trait = trait_robot_efficient_processors
+            }
+        }
+        modifier = {
+            factor = 1.1
+            has_trait = trait_nerve_stapled
+        }
+        modifier = {
+            factor = 0.5
+            has_trait = trait_lithoid
+            owner = {
+                is_lithoid_empire = yes
+                has_monthly_income = {
+                    resource = food
+                    value >= 0
+                }
+            }
+        }
+    }
+}

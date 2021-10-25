@@ -1,0 +1,64 @@
+tech_dm_stronghold = {
+    cost = @acot_tier6cost2
+    area = society
+    tier = 6
+    category = {
+        military_theory
+    }
+    prerequisites = {
+        "tech_dark_matter_power_core"
+    }
+    weight = @tier4weight3
+    potential = {
+        NOT = {
+            has_global_flag = acot_building_forbidden
+        }
+    }
+    modifier = {
+        army_defense_health_mult = 0.25
+    }
+    weight_modifier = {
+        factor = 2
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_technology = tech_dm_ancient_control_center
+                has_technology = tech_dm_ancient_palace
+                has_technology = tech_dm_ancient_hive_cluster
+            }
+        }
+    }
+    ai_weight = {
+        factor = 2
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+building_giga_katzen_terraformer = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = no
+    base_buildtime = 360
+    ai_weight = {
+        weight = 0
+    }
+    potential = {
+        always = no
+    }
+    planet_modifier = {
+        pop_environment_tolerance = 0.2
+    }
+}

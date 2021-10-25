@@ -1,0 +1,304 @@
+@resolution_weight_unpopular = 5
+@resolution_cost_t4 = 250
+@resolution_flag_timer = 360
+resolution_rulesofwar_last_resort_doctrine = {
+    icon = "GFX_resolution_rules_of_war"
+    potential = {
+        has_federations_dlc = yes
+    }
+    resources = {
+        category = resolutions
+        cost = {
+            influence = @resolution_cost_t4
+        }
+    }
+    target = no
+    level = 4
+    modifier = {
+        resolution_rulesofwar_guardian_angels = 1
+        resolution_rulesofwar_reverence_for_life = 1
+        resolution_rulesofwar_independent_tribunals = 1
+        resolution_rulesofwar_last_resort_doctrine = 1
+    }
+    effect = {
+        hidden_effect = {
+            add_modifier = {
+                modifier = resolution_passed_diplomatic_weight
+                days = 2200
+            }
+        }
+        custom_tooltip = resolution_rulesofwar_last_resort_doctrine_tooltip
+        hidden_effect = {
+            set_timed_country_flag = {
+                flag = galactic_community_resolution_passed_rulesofwar
+                days = @resolution_flag_timer
+            }
+            if = {
+                limit = {
+                    NOT = {
+                        has_ai_personality = vb_keepers_of_peace
+                    }
+                }
+                set_timed_country_flag = {
+                    flag = faction_militarist_outraged_gc
+                    days = 7200
+                }
+            }
+            set_timed_country_flag = {
+                flag = faction_xenophobe_supremacist_outraged_gc
+                days = 7200
+            }
+            every_playable_country = {
+                limit = {
+                    is_galactic_community_member = yes
+                    has_policy_flag = unrestricted_wars
+                }
+                country_event = {
+                    id = federations.10320
+                }
+            }
+        }
+    }
+    fail_effects = {
+        hidden_effect = {
+            add_modifier = {
+                modifier = resolution_failed_diplomatic_weight
+                days = 2200
+            }
+        }
+        hidden_effect = {
+            set_timed_country_flag = {
+                flag = galactic_community_resolution_failed_rulesofwar
+                days = @resolution_flag_timer
+            }
+        }
+    }
+    allow = {
+        is_active_resolution = "resolution_rulesofwar_independent_tribunals"
+    }
+    breach = {
+        has_policy_flag = unrestricted_wars
+    }
+    ai_weight = {
+        weight = @resolution_weight_unpopular
+        modifier = {
+            factor = 0.625
+            not = {
+                has_country_flag = str_has_bad_fleet_score
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_country_flag = str_has_bad_fleet_score
+        }
+        modifier = {
+            factor = 1.4
+            has_country_flag = str_has_terrible_fleet_score
+        }
+        modifier = {
+            factor = 1.1
+            turtler = yes
+        }
+        modifier = {
+            factor = 1.1
+            turtler2 = yes
+        }
+        modifier = {
+            factor = 0.9
+            rusher = yes
+        }
+        modifier = {
+            factor = 0.9
+            rusher2 = yes
+        }
+        modifier = {
+            factor = 0.5
+            count_country = {
+                count < 4
+                limit = {
+                    is_galactic_community_member = yes
+                    relative_power = {
+                        who = prev
+                        category = fleet
+                        value >= equivalent
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            any_relation = {
+                is_galactic_community_member = yes
+                OR = {
+                    is_rival = prev
+                    is_at_war_with = prev
+                }
+                count_country = {
+                    count < 4
+                    limit = {
+                        is_galactic_community_member = yes
+                        relative_power = {
+                            who = prev
+                            category = fleet
+                            value >= equivalent
+                        }
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.5
+            NOT = {
+                in_breach_of = resolution_rulesofwar_last_resort_doctrine
+            }
+            any_relation = {
+                OR = {
+                    is_rival = prev
+                    is_at_war_with = prev
+                }
+                is_galactic_community_member = yes
+                in_breach_of = resolution_rulesofwar_last_resort_doctrine
+            }
+        }
+        modifier = {
+            factor = 0
+            is_pacifist = no
+            is_xenophobic_isolationists = no
+            has_ascension_perk = ap_colossus
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_civic = civic_living_hosts
+                has_origin = origin_necrophage
+            }
+            is_pacifist = no
+            is_xenophobic_isolationists = no
+        }
+        modifier = {
+            factor = 5
+            has_ai_personality = vb_keepers_of_peace
+        }
+        modifier = {
+            factor = 0
+            is_militarist = yes
+            NOT = {
+                has_ai_personality = vb_keepers_of_peace
+            }
+        }
+        modifier = {
+            factor = 0.75
+            is_civic_militarist = yes
+        }
+        modifier = {
+            factor = 0
+            has_policy_flag = unrestricted_wars
+            NOR = {
+                any_relation = {
+                    OR = {
+                        is_rival = prev
+                        is_at_war_with = prev
+                    }
+                    is_galactic_community_member = yes
+                    in_breach_of = resolution_rulesofwar_last_resort_doctrine
+                }
+                any_neighbor_country = {
+                    is_galactic_community_member = yes
+                    relative_power = {
+                        who = prev
+                        category = all
+                        value > equivalent
+                    }
+                    is_hostile_to = prev
+                    has_claim = prev
+                    NOR = {
+                        has_non_aggression_pact = prev
+                        has_association_status = prev
+                    }
+                }
+                has_ai_personality = vb_keepers_of_peace
+            }
+        }
+        modifier = {
+            factor = 0
+            in_breach_of = resolution_rulesofwar_last_resort_doctrine
+            NOT = {
+                has_ai_personality = vb_keepers_of_peace
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOT = {
+                has_ai_personality = vb_keepers_of_peace
+            }
+            any_federation_ally = {
+                NOT = {
+                    federation = {
+                        has_federation_type = hegemony_federation
+                    }
+                }
+                in_breach_of = resolution_rulesofwar_last_resort_doctrine
+            }
+        }
+        modifier = {
+            factor = 0.2
+            has_ai_personality_behaviour = conqueror
+        }
+        modifier = {
+            factor = 2
+            any_neighbor_country = {
+                is_galactic_community_member = yes
+                relative_power = {
+                    who = prev
+                    category = all
+                    value > equivalent
+                }
+                is_hostile_to = prev
+                has_claim = prev
+                NOR = {
+                    has_non_aggression_pact = prev
+                    has_association_status = prev
+                }
+            }
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+                is_open_gestalt = yes
+                is_civic_machine_servitor = yes
+                is_civic_diplomatic_corps = yes
+                is_civic_inwards_perfection = yes
+            }
+        }
+        modifier = {
+            factor = 2
+            is_xenophobic_isolationists = yes
+        }
+        modifier = {
+            factor = 2
+            is_pacifist = yes
+        }
+        modifier = {
+            factor = 2
+            has_ethic = ethic_fanatic_pacifist
+        }
+        modifier = {
+            factor = 2
+            NOT = {
+                has_ethic = ethic_fanatic_militarist
+            }
+            any_relation = {
+                is_galactic_community_member = yes
+                OR = {
+                    is_rival = prev
+                    is_at_war_with = prev
+                }
+                has_ethic = ethic_fanatic_militarist
+            }
+        }
+        modifier = {
+            factor = 0
+            has_ascension_perk = ap_become_the_crisis
+        }
+    }
+}

@@ -1,0 +1,161 @@
+@resolution_weight_unpopular = 5
+@resolution_cost_t2 = 150
+@resolution_flag_timer = 360
+resolution_galacticstudies_repeal_2 = {
+    icon = "GFX_repeal_blue"
+    resources = {
+        category = resolutions
+        cost = {
+            influence = @resolution_cost_t2
+        }
+    }
+    target = no
+    fire_and_forget = yes
+    effect = {
+        hidden_effect = {
+            add_modifier = {
+                modifier = resolution_passed_diplomatic_weight
+                days = 2200
+            }
+        }
+        custom_tooltip = resolution_galacticstudies_repeal_2_effect_success
+        hidden_effect = {
+            cancel_resolution = "resolution_galacticstudies_astral_studies_network"
+            set_timed_country_flag = {
+                flag = galactic_community_resolution_passed_galacticstudies_repeal
+                days = @resolution_flag_timer
+            }
+            set_timed_country_flag = {
+                flag = faction_materialist_outraged_gc
+                days = 7200
+            }
+        }
+    }
+    fail_effects = {
+        hidden_effect = {
+            add_modifier = {
+                modifier = resolution_failed_diplomatic_weight
+                days = 2200
+            }
+        }
+        hidden_effect = {
+            set_timed_country_flag = {
+                flag = galactic_community_resolution_failed_galacticstudies_repeal
+                days = @resolution_flag_timer
+            }
+        }
+    }
+    potential = {
+        is_active_resolution = "resolution_galacticstudies_astral_studies_network"
+    }
+    modifier = {
+        resolution_galacticstudies_cooperative_research_channels = 1
+    }
+    allow = {
+    }
+    ai_weight = {
+        weight = @resolution_weight_unpopular
+        modifier = {
+            factor = 2
+            not = {
+                has_country_flag = str_has_bad_tech_score
+            }
+        }
+        modifier = {
+            factor = 0.8
+            has_country_flag = str_has_bad_tech_score
+        }
+        modifier = {
+            factor = 0.5
+            has_country_flag = str_has_terrible_tech_score
+        }
+        modifier = {
+            factor = 0.9
+            turtler = yes
+        }
+        modifier = {
+            factor = 0.9
+            turtler2 = yes
+        }
+        modifier = {
+            factor = 1.1
+            rusher = yes
+        }
+        modifier = {
+            factor = 1.1
+            rusher2 = yes
+        }
+modifier = {
+            factor = 0.5
+            count_country = {
+                count < 4
+                limit = {
+                    is_galactic_community_member = yes
+                    relative_power = {
+                        who = prev
+                        category = technology
+                        value >= equivalent
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            any_relation = {
+                is_galactic_community_member = yes
+                OR = {
+                    is_rival = prev
+                    is_at_war_with = prev
+                }
+                count_country = {
+                    count < 4
+                    limit = {
+                        is_galactic_community_member = yes
+                        relative_power = {
+                            who = prev
+                            category = technology
+                            value >= equivalent
+                        }
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                is_materialist = yes
+                is_civic_materialist = yes
+            }
+        }
+        modifier = {
+            factor = 0.5
+            is_gestalt = yes
+        }
+        modifier = {
+            factor = 2
+            is_spiritualist = yes
+        }
+        modifier = {
+            factor = 2
+            has_ethic = ethic_fanatic_spiritualist
+        }
+        modifier = {
+            factor = 0.75
+            OR = {
+                has_valid_civic = civic_merchant_guilds
+                has_valid_civic = civic_philosopher_king
+            }
+        }
+        modifier = {
+            factor = 2
+            has_monthly_income = {
+                resource = consumer_goods
+                value < 20
+            }
+        }
+        modifier = {
+            factor = 2
+            has_deficit = consumer_goods
+        }
+    }
+}

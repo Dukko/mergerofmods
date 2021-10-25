@@ -1,0 +1,157 @@
+@resolution_weight_loved = 7
+@resolution_cost_t1 = 100
+@resolution_flag_timer = 360
+resolution_galacticstudies_cooperative_research_channels = {
+    icon = "GFX_resolution_galactic_studies"
+    resources = {
+        category = resolutions
+        cost = {
+            influence = @resolution_cost_t1
+        }
+    }
+    target = no
+    level = 1
+    modifier = {
+        resolution_galacticstudies_cooperative_research_channels = 1
+    }
+    effect = {
+        hidden_effect = {
+            add_modifier = {
+                modifier = resolution_passed_diplomatic_weight
+                days = 2200
+            }
+        }
+        hidden_effect = {
+            set_global_flag = galactic_community_resolution_passed
+            set_timed_country_flag = {
+                flag = galactic_community_resolution_passed_galacticstudies
+                days = @resolution_flag_timer
+            }
+        }
+    }
+    fail_effects = {
+        hidden_effect = {
+            add_modifier = {
+                modifier = resolution_failed_diplomatic_weight
+                days = 2200
+            }
+        }
+        hidden_effect = {
+            set_timed_country_flag = {
+                flag = galactic_community_resolution_failed_galacticstudies
+                days = @resolution_flag_timer
+            }
+        }
+    }
+    allow = {
+        custom_tooltip = {
+            fail_text = "resolution_already_active"
+            NOR = {
+                is_active_resolution = "resolution_galacticstudies_cooperative_research_channels"
+                is_active_resolution = "resolution_galacticstudies_astral_studies_network"
+                is_active_resolution = "resolution_galacticstudies_advanced_xenostudies"
+                is_active_resolution = "resolution_galacticstudies_ethical_guideline_refactoring"
+                is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+            }
+        }
+    }
+    ai_weight = {
+        weight = @resolution_weight_loved
+        modifier = {
+            factor = 2
+            not = {
+                has_country_flag = str_has_bad_tech_score
+            }
+        }
+        modifier = {
+            factor = 0.8
+            has_country_flag = str_has_bad_tech_score
+        }
+        modifier = {
+            factor = 0.5
+            has_country_flag = str_has_terrible_tech_score
+        }
+        modifier = {
+            factor = 0.9
+            turtler = yes
+        }
+        modifier = {
+            factor = 0.9
+            turtler2 = yes
+        }
+        modifier = {
+            factor = 1.1
+            rusher = yes
+        }
+        modifier = {
+            factor = 1.1
+            rusher2 = yes
+        }
+modifier = {
+            factor = 2
+            count_country = {
+                count < 4
+                limit = {
+                    is_galactic_community_member = yes
+                    relative_power = {
+                        who = prev
+                        category = technology
+                        value >= equivalent
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            any_relation = {
+                is_galactic_community_member = yes
+                OR = {
+                    is_rival = prev
+                    is_at_war_with = prev
+                }
+                count_country = {
+                    count < 4
+                    limit = {
+                        is_galactic_community_member = yes
+                        relative_power = {
+                            who = prev
+                            category = technology
+                            value >= equivalent
+                        }
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            is_materialist = yes
+        }
+        modifier = {
+            factor = 2
+            has_ethic = ethic_fanatic_materialist
+        }
+        modifier = {
+            factor = 2
+            is_civic_materialist = yes
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+                has_valid_civic = civic_merchant_guilds
+                has_valid_civic = civic_philosopher_king
+            }
+        }
+        modifier = {
+            factor = 0.5
+            is_spiritualist = yes
+        }
+        modifier = {
+            factor = 0.5
+            has_ethic = ethic_fanatic_spiritualist
+        }
+        modifier = {
+            factor = 1.5
+            is_spy_empire = yes
+        }
+    }
+}

@@ -1,0 +1,114 @@
+GT_pc_tropical_habitability = {
+    cost = @tier1cost4
+    area = society
+    tier = 1
+    category = {
+        new_worlds
+    }
+    is_rare = yes
+    prerequisites = {
+        "tech_frontier_health"
+    }
+    weight = @tier2weight2
+    modifier = {
+        pc_tropical_habitability = 0.05
+        pc_desertislands_habitability = 0.05
+        pc_hajungle_habitability = 0.05
+        pc_cenote_habitability = 0.05
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            years_passed > 50
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                any_planet_within_border = {
+                    is_planet_class = pc_tropical
+                }
+                any_planet_within_border = {
+                    is_planet_class = pc_desertislands
+                }
+                any_planet_within_border = {
+                    is_planet_class = pc_hajungle
+                }
+                any_planet_within_border = {
+                    is_planet_class = pc_cenote
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                species = {
+                    has_trait = trait_pc_tropical_preference
+                }
+                species = {
+                    has_trait = trait_pc_desertislands_preference
+                }
+                species = {
+                    has_trait = trait_pc_hajungle_preference
+                }
+                species = {
+                    has_trait = trait_pc_cenote_preference
+                }
+            }
+        }
+        factor = 0.1
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOR = {
+                any_planet_within_border = {
+                    is_planet_class = pc_tropical
+                }
+                any_planet_within_border = {
+                    is_planet_class = pc_desertislands
+                }
+                any_planet_within_border = {
+                    is_planet_class = pc_hajungle
+                }
+                any_planet_within_border = {
+                    is_planet_class = pc_cenote
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                species = {
+                    has_trait = trait_pc_tropical_preference
+                }
+                species = {
+                    has_trait = trait_pc_desertislands_preference
+                }
+                species = {
+                    has_trait = trait_pc_hajungle_preference
+                }
+                species = {
+                    has_trait = trait_pc_cenote_preference
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+}

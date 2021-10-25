@@ -1,0 +1,24 @@
+tech_reinforced_starbase_se = {
+    area = engineering
+    cost = @acot_tier8cost2
+    tier = 8
+    category = {
+        voidcraft
+    }
+    prerequisites = {
+        "tech_stellarite_armor"
+        "tech_reinforced_starbase_ae"
+    }
+    weight = 10
+    is_rare = yes
+    potential = {
+        has_technology = tech_stellarite_reactor
+    }
+    ai_weight = {
+        factor = 1
+    }
+    modifier = {
+        shipclass_starbase_hull_mult = 0.1
+        shipclass_starbase_damage_mult = 0.2
+    }
+}

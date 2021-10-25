@@ -1,0 +1,100 @@
+building_dark_matter_generator = {
+    base_buildtime = 600
+    can_demolish = yes
+    can_be_disabled = yes
+    category = manufacturing
+    potential = {
+    }
+    allow = {
+        has_enigmatic_capital = yes
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_acot_dark_matter_man_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_acot_dark_matter_drone_add = 2
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 850
+        }
+        produces = {
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    NOT = {
+                        has_technology = tech_acot_fractured_autoharvesting
+                    }
+                }
+            }
+            energy = 4
+        }
+    }
+    prerequisites = {
+        "tech_dark_matter_generator"
+    }
+    ai_weight = {
+        weight = 5
+        modifier = {
+            factor = 10000
+            owner = {
+                has_monthly_income = {
+                    resource = sr_dark_matter
+                    value < 5
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = sr_dark_matter
+                    value > 250
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                num_buildings = {
+                    type = building_dark_matter_generator
+                    value >= 3
+                }
+                num_buildings = {
+                    type = building_ae_dark_matter_generator
+                    value >= 3
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value <= 10
+                }
+            }
+        }
+    }
+    upgrades = {
+        building_ae_dark_matter_generator
+    }
+}

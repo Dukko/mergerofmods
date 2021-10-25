@@ -1,0 +1,10 @@
+opinion_decline_war = {
+    opinion = {
+        base = -250
+    }
+    decay = {
+        base = 70
+    }
+    months = 48
+    accumulative = yes
+}

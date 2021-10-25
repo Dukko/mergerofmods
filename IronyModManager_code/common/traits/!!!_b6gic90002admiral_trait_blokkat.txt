@@ -1,0 +1,26 @@
+admiral_trait_blokkat = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/trait_blokkat.dds"
+    leader_trait = all
+    immortal_leaders = yes
+    self_modifier = {
+        leader_skill_levels = 10
+        species_leader_exp_gain = 1
+    }
+    modifier = {
+        ship_fire_rate_mult = 0.1
+        ship_weapon_damage = 0.1
+        ship_speed_mult = 0.1
+        force_disparity_fire_rate_mult = 0.15
+    }
+    leader_class = {
+        admiral
+        ruler
+    }
+    initial = no
+    randomized = no
+    ai_weight = {
+        weight = 0
+    }
+}

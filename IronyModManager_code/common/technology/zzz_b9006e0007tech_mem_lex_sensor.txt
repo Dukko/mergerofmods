@@ -1,0 +1,21 @@
+tech_mem_lex_sensor = {
+    area = physics
+    cost = @tier4cost2
+    tier = 4
+    is_rare = yes
+    is_reverse_engineerable = no
+    category = {
+        voidcraft
+    }
+    ai_update_type = all
+    weight = 0
+    weight_modifier = {
+        factor = 0
+    }
+    prereqfor_desc = {
+        component = {
+            title = "TECH_UNLOCK_MEM_LEX_SENSOR_TITLE"
+            desc = "TECH_UNLOCK_MEM_LEX_SENSOR_DESC"
+        }
+    }
+}

@@ -1,0 +1,86 @@
+building_tiyanki_parts_market = {
+    base_buildtime = @b3_time
+    base_cap_amount = 1
+    category = trade
+    potential = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+    }
+    allow = {
+        buildings_simple_allow = yes
+        has_major_upgraded_capital = yes
+    }
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            owner = {
+                is_regular_empire = no
+            }
+            has_modifier = slave_colony
+            has_modifier = resort_colony
+        }
+        NOT = {
+            owner = {
+                has_country_flag = pdtiyankiharvest
+            }
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                NOT = {
+                    has_deficit = sr_tiyanki_parts
+                }
+            }
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        job_merchant_add = 2
+        trade_value_mult = 0.2
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b3_minerals
+            sr_tiyanki_parts = 500
+        }
+        upkeep = {
+            energy = @b3_upkeep
+            sr_tiyanki_parts = 1
+        }
+    }
+    prerequisites = {
+        "tech_tiyanki_parts_market"
+    }
+    triggered_desc = {
+        text = job_merchant_effect_desc
+    }
+    ai_resource_production = {
+        energy = 3
+        trigger = {
+            always = yes
+        }
+    }
+    ai_resource_production = {
+        energy = 5
+        trigger = {
+            solar_system = {
+                has_system_trade_value >= 50
+            }
+        }
+    }
+    ai_resource_production = {
+        energy = 3
+        trigger = {
+            solar_system = {
+                has_system_trade_value >= 80
+            }
+        }
+    }
+}

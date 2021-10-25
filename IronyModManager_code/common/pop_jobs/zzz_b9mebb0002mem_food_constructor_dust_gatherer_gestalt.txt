@@ -1,0 +1,62 @@
+mem_food_constructor_dust_gatherer_gestalt = {
+    category = worker
+    is_capped_by_modifier = yes
+    condition_string = WORKER_JOB_TRIGGER
+    icon = mem_dust_gatherer
+    possible = {
+        worker_job_check_trigger = yes
+        exists = owner
+        owner = {
+            is_gestalt = yes
+        }
+    }
+    resources = {
+        category = planet_farmers
+        produces = {
+            food = 6
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_modifier = mem_food_constructor_modifier_2
+                }
+            }
+            food = 3
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_modifier = mem_food_constructor_modifier_3
+                }
+            }
+            food = 6
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_modifier = mem_food_constructor_modifier_4
+                }
+            }
+            food = 9
+        }
+    }
+    weight = {
+        weight = @simple_drone_job_weight
+        modifier = {
+            factor = 2
+            OR = {
+                has_trait = trait_agrarian
+                has_trait = trait_robot_harvesters
+            }
+        }
+        modifier = {
+            factor = 1.1
+            exists = owner
+            years_passed < 1
+            owner = {
+                has_valid_civic = civic_machine_assimilator
+            }
+            has_trait = trait_cybernetic
+        }
+    }
+}

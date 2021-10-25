@@ -1,0 +1,189 @@
+@resolution_weight_loved = 7
+@resolution_cost_t1 = 100
+@resolution_flag_timer = 360
+resolution_rulesofwar_guardian_angels = {
+    icon = "GFX_resolution_rules_of_war"
+    resources = {
+        category = resolutions
+        cost = {
+            influence = @resolution_cost_t1
+        }
+    }
+    target = no
+    level = 1
+    modifier = {
+        resolution_rulesofwar_guardian_angels = 1
+    }
+    effect = {
+        hidden_effect = {
+            add_modifier = {
+                modifier = resolution_passed_diplomatic_weight
+                days = 2200
+            }
+        }
+        hidden_effect = {
+            set_global_flag = galactic_community_resolution_passed
+            set_timed_country_flag = {
+                flag = galactic_community_resolution_passed_rulesofwar
+                days = @resolution_flag_timer
+            }
+        }
+    }
+    fail_effects = {
+        hidden_effect = {
+            add_modifier = {
+                modifier = resolution_failed_diplomatic_weight
+                days = 2200
+            }
+        }
+        hidden_effect = {
+            set_timed_country_flag = {
+                flag = galactic_community_resolution_failed_rulesofwar
+                days = @resolution_flag_timer
+            }
+        }
+    }
+    allow = {
+        custom_tooltip = {
+            fail_text = "resolution_already_active"
+            NOR = {
+                is_active_resolution = "resolution_rulesofwar_guardian_angels"
+                is_active_resolution = "resolution_rulesofwar_reverence_for_life"
+                is_active_resolution = "resolution_rulesofwar_independent_tribunals"
+                is_active_resolution = "resolution_rulesofwar_last_resort_doctrine"
+                is_active_resolution = "resolution_rulesofwar_demobilization_initiative"
+            }
+        }
+    }
+    ai_weight = {
+        weight = @resolution_weight_loved
+        modifier = {
+            factor = 0.625
+            not = {
+                has_country_flag = str_has_bad_fleet_score
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_country_flag = str_has_bad_fleet_score
+        }
+        modifier = {
+            factor = 1.4
+            has_country_flag = str_has_terrible_fleet_score
+        }
+        modifier = {
+            factor = 1.1
+            turtler = yes
+        }
+        modifier = {
+            factor = 1.1
+            turtler2 = yes
+        }
+        modifier = {
+            factor = 0.9
+            rusher = yes
+        }
+        modifier = {
+            factor = 0.9
+            rusher2 = yes
+        }
+        modifier = {
+            factor = 0.5
+            count_country = {
+                count < 4
+                limit = {
+                    is_galactic_community_member = yes
+                    relative_power = {
+                        who = prev
+                        category = fleet
+                        value >= equivalent
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            any_relation = {
+                is_galactic_community_member = yes
+                OR = {
+                    is_rival = prev
+                    is_at_war_with = prev
+                }
+                count_country = {
+                    count < 4
+                    limit = {
+                        is_galactic_community_member = yes
+                        relative_power = {
+                            who = prev
+                            category = fleet
+                            value >= equivalent
+                        }
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0.25
+            OR = {
+                has_civic = civic_living_hosts
+                has_origin = origin_necrophage
+            }
+            is_pacifist = no
+            is_xenophobic_isolationists = no
+        }
+        modifier = {
+            factor = 10
+            has_ai_personality = vb_keepers_of_peace
+        }
+        modifier = {
+            factor = 0.5
+            is_militarist = yes
+            NOT = {
+                has_ai_personality = vb_keepers_of_peace
+            }
+        }
+        modifier = {
+            factor = 0
+            has_ethic = ethic_fanatic_militarist
+            NOT = {
+                has_ai_personality = vb_keepers_of_peace
+            }
+        }
+        modifier = {
+            factor = 0.75
+            is_civic_militarist = yes
+            NOT = {
+                has_ai_personality = vb_keepers_of_peace
+            }
+        }
+        modifier = {
+            factor = 0.8
+            is_gestalt = yes
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+                is_open_gestalt = yes
+                is_civic_machine_servitor = yes
+                is_civic_diplomatic_corps = yes
+                is_civic_inwards_perfection = yes
+            }
+        }
+        modifier = {
+            factor = 2
+            is_xenophobic_isolationists = yes
+        }
+        modifier = {
+            factor = 2
+            is_pacifist = yes
+        }
+        modifier = {
+            factor = 2
+            has_ethic = ethic_fanatic_pacifist
+        }
+        modifier = {
+            factor = 0
+            has_ascension_perk = ap_become_the_crisis
+        }
+    }
+}

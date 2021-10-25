@@ -1,0 +1,120 @@
+building_fe_food_processing_complex = {
+    base_buildtime = 520
+    category = resource
+    country_modifier = {
+        country_resource_max_food_add = 7500
+    }
+    planet_modifier = {
+        planet_jobs_food_produces_mult = 0.05
+    }
+    allow = {
+        has_enigmatic_capital = yes
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_acot_foodman_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_acot_fooddrone_add = 2
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 250
+            sr_dark_matter = 50
+        }
+        produces = {
+            trigger = {
+                has_modifier = acot_modifier_ascended_city
+            }
+            food = 20
+        }
+        upkeep = {
+            trigger = {
+                has_modifier = acot_modifier_ascended_city
+            }
+            acot_sr_dark_energy = 0.5
+            sr_dark_matter = 0.5
+        }
+    }
+    prerequisites = {
+        "tech_fe_food_processing"
+    }
+    ai_weight = {
+        weight = 2
+        modifier = {
+            factor = 5
+            owner = {
+                has_monthly_income = {
+                    resource = food
+                    value < 5
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                OR = {
+                    is_mechanical_empire = no
+                    AND = {
+                        is_mechanical_empire = yes
+                        OR = {
+                            has_civic = civic_machine_servitor
+                            has_civic = civic_machine_assimilator
+                        }
+                    }
+                }
+                has_monthly_income = {
+                    resource = energy
+                    value < 5
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                is_mechanical_empire = yes
+                NOR = {
+                    has_civic = civic_machine_servitor
+                    has_civic = civic_machine_assimilator
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            count_owned_pops = {
+                limit = {
+                    OR = {
+                        is_unemployed = yes
+                        has_job = servant
+                    }
+                }
+                count < 1
+            }
+        }
+    }
+    ai_resource_production = {
+        food = 10
+        trigger = {
+            always = yes
+        }
+    }
+    upgrades = {
+        building_ae_food_processing_complex
+    }
+}

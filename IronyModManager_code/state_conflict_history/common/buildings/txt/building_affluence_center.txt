@@ -1,0 +1,100 @@
+building_affluence_center = {
+    base_buildtime = @b2_time
+    can_build = yes
+    can_demolish = yes
+    icon = building_hyper_entertainment_forum
+    potential = {
+        custom_tooltip = {
+            exists = owner
+            OR = {
+                owner = {
+                    is_fallen_empire = yes
+                }
+                owner = {
+                    check_variable = {
+                        which = affluence_center_build_count
+                        value >= 1
+                    }
+                }
+            }
+            fail_text = "ancrel.10004.failtext"
+        }
+    }
+    resources = {
+        category = planet_buildings
+        produces = {
+            consumer_goods = 50
+        }
+        cost = {
+            minerals = @b3_minerals
+        }
+        upkeep = {
+            minerals = 25
+            energy = 10
+        }
+    }
+    on_queued = {
+        owner = {
+            subtract_variable = {
+                which = affluence_center_build_count
+                value = 1
+            }
+        }
+    }
+    on_unqueued = {
+        owner = {
+            change_variable = {
+                which = affluence_center_build_count
+                value = 1
+            }
+        }
+    }
+    ai_weight = {
+        weight = 1
+        modifier = {
+            factor = 50
+            owner = {
+                resource_income_compare = {
+                    resource = consumer_goods
+                    value < 10
+                }
+            }
+        }
+        modifier = {
+            factor = 0.05
+            owner = {
+                resource_income_compare = {
+                    resource = consumer_goods
+                    value > 40
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                not = {
+                    has_country_flag = just_destroyed_awakened_consgoods
+                }
+                resource_income_compare = {
+                    resource = consumer_goods
+                    value > 150
+                }
+                resource_stockpile_compare = {
+                    resource = consumer_goods
+                    value > 5000
+                }
+            }
+        }
+    }
+    on_destroy = {
+        owner = {
+            set_timed_country_flag = {
+                flag = just_destroyed_awakened_consgoods
+                days = 40
+            }
+        }
+    }
+    upgrades = {
+        building_ae_affluence_center
+    }
+}

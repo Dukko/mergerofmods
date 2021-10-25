@@ -1,0 +1,39 @@
+building_imperial_concession_port = {
+    base_buildtime = @b3_time
+    base_cap_amount = 1
+    branch_office_building = yes
+    potential = {
+        has_branch_office = yes
+        branch_office_owner = {
+            OR = {
+                has_modifier = imperial_charter
+                has_civic = civic_galactic_sovereign_megacorp
+            }
+        }
+    }
+    country_modifier = {
+        diplo_weight_economy_mult = 0.05
+    }
+    planet_modifier = {
+        branch_office_value_mult = 0.25
+    }
+    resources = {
+        category = planet_branch_office_buildings
+        cost = {
+            minerals = 1000
+        }
+        produces = {
+            energy = 8
+        }
+    }
+    ai_weight = {
+        weight = 100
+        modifier = {
+            factor = 0
+            branch_office_value = {
+                who = THIS
+                value < 20
+            }
+        }
+    }
+}

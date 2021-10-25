@@ -1,0 +1,98 @@
+pw_tech_capital_developments_wardens_directorate = {
+    area = society
+    category = {
+        statecraft
+    }
+    tier = 4
+    cost = @tier5cost1
+    prerequisites = {
+        pw_tech_capital_developments
+        tech_penal_colonies
+    }
+    weight = @tier4weight3
+    potential = {
+        is_gestalt = no
+        is_authoritarian = yes
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = society
+                has_trait = leader_trait_expertise_statecraft
+            }
+        }
+        modifier = {
+            factor = 0
+            is_authoritarian = no
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_modifier = penal_colony
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            has_ethic = ethic_fanatic_authoritarian
+        }
+        modifier = {
+            factor = 1.5
+            has_valid_civic = civic_aristocratic_elite
+        }
+        modifier = {
+            factor = 1.5
+            has_valid_civic = civic_technocracy
+        }
+        modifier = {
+            factor = 1.5
+            has_valid_civic = civic_exalted_priesthood
+        }
+        modifier = {
+            factor = 1.5
+            has_valid_civic = civic_merchant_guilds
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = pw_ap_planetary_wonders
+        }
+        modifier = {
+            factor = 5
+            any_owned_planet = {
+                has_active_building = pw_building_forbidden_city
+            }
+        }
+        modifier = {
+            factor = 0.1
+            NOT = {
+                any_owned_planet = {
+                    has_modifier = penal_colony
+                }
+            }
+        }
+    }
+    ai_weight = {
+        factor = @pw_tech_ai_weight
+        modifier = {
+            factor = 2
+            research_leader = {
+                area = society
+                has_trait = leader_trait_expertise_statecraft
+            }
+        }
+        modifier = {
+            factor = 2
+            any_owned_planet = {
+                has_active_building = pw_building_forbidden_city
+            }
+        }
+        modifier = {
+            factor = 5
+            any_owned_planet = {
+                has_modifier = penal_colony
+            }
+        }
+    }
+}

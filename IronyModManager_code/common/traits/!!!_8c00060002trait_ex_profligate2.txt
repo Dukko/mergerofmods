@@ -1,0 +1,25 @@
+trait_ex_profligate2 = {
+    cost = -2
+    opposites = {
+        "trait_wasteful"
+        "trait_conservational"
+        "trait_adaptive"
+        "trait_nonadaptive"
+        "trait_extremely_adaptive"
+        "trait_ex_profligate2"
+    }
+    initial = no
+    randomized = no
+    modification = yes
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    ai_weight = {
+        weight = 0
+    }
+    modifier = {
+        planet_pops_consumer_goods_upkeep_mult = 0.3
+        pop_environment_tolerance = -0.1
+    }
+}

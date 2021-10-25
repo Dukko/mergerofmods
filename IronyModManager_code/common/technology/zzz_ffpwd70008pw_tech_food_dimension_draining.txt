@@ -1,0 +1,33 @@
+pw_tech_food_dimension_draining = {
+    area = physics
+    category = {
+        field_manipulation
+    }
+    cost = @pw_research_tech_cost_2
+    tier = 5
+    prerequisites = {
+        pw_tech_particle_supercollider
+    }
+    weight = 0
+    is_rare = yes
+    potential = {
+        country_uses_food = yes
+        any_owned_planet = {
+            pw_planet_has_particle_supercollider = yes
+        }
+    }
+    modifier = {
+        planet_jobs_food_produces_mult = 0.2
+        starbase_constructions_food_produces_mult = 0.2
+    }
+    ai_weight = {
+        factor = @pw_tech_ai_weight
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = leader_trait_expertise_field_manipulation
+            }
+        }
+    }
+}

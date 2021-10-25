@@ -1,0 +1,18 @@
+gle_trait_warrior_drone_ruler_tier = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/gle_trait_soldier_lv1.dds"
+    modifier = {
+        job_warrior_drone_add = 1
+        job_warrior_drone_per_pop = 0.02
+    }
+    sorting_priority = 20
+    initial = no
+    randomized = no
+    leader_trait = {
+        governor
+    }
+    leader_class = {
+        governor
+    }
+}

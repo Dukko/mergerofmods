@@ -1,0 +1,17 @@
+tech_fourschildren = {
+    cost = @tier4cost2
+    area = engineering
+    tier = 4
+    category = {
+        industry
+    }
+    weight = 0
+    is_rare = yes
+    is_reverse_engineerable = no
+    modifier = {
+        ROBOT_species_trait_points_add = 2
+    }
+    weight_modifier = {
+        factor = 0
+    }
+}

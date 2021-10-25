@@ -1,0 +1,30 @@
+@titan_power_1 = -160
+@titan_cost1 = 48
+utility_component_template = {
+    key = "TITAN_SHIP_THRUSTER_1"
+    size = small
+    icon = "GFX_ship_part_thruster_1"
+    icon_frame = 1
+    power = @titan_power_1
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @titan_cost1
+        }
+    }
+    modifier = {
+    }
+    prerequisites = {
+        "tech_thrusters_1"
+    }
+    component_set = "thruster_components"
+    size_restriction = {
+        titan
+        galleon
+        marauder_galleon
+    }
+    upgrades_to = "TITAN_SHIP_THRUSTER_2"
+    ai_weight = {
+        weight = 1
+    }
+}

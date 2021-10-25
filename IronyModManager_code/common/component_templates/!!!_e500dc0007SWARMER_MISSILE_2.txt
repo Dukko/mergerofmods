@@ -1,0 +1,34 @@
+weapon_component_template = {
+    key = "SWARMER_MISSILE_2"
+    size = torpedo
+    icon = "GFX_ship_part_swarmer_missile_2"
+    icon_frame = 1
+    type = missile
+    prerequisites = {
+        "tech_swarmer_missiles_2"
+    }
+    component_set = "SWARMER_MISSILE_2"
+    projectile_gfx = "swarmer_missiles_02"
+    tags = {
+        weapon_type_explosive
+    }
+    ai_tags = {
+        weapon_role_artillery
+    }
+    ai_tag_weight = 0
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @m_t5_cost
+            volatile_motes = @m_t5_rare
+        }
+        upkeep = {
+            energy = @m_t5_upkeep_energy
+            alloys = @m_t5_upkeep_alloys
+        }
+    }
+    upgrades_to = ACOT_SWARMER_MISSILES_DM
+    ai_weight = {
+        weight = 0
+    }
+}

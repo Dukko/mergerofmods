@@ -1,0 +1,168 @@
+@resolution_weight_disliked = 4
+@resolution_cost_t1 = 100
+resolution_council_denouncement = {
+    icon = "GFX_resolution_purges"
+    potential = {
+        OR = {
+            has_federations_dlc = yes
+            has_nemesis = yes
+        }
+    }
+    resources = {
+        category = resolutions
+        cost = {
+            influence = @resolution_cost_t1
+        }
+    }
+    target = yes
+    harmful = yes
+    valid_target = {
+        OR = {
+            is_country_type = default
+            is_country_type = ascended_empire
+            is_country_type = lost_empire
+        }
+        is_galactic_community_member = yes
+        NOR = {
+            is_same_value = from
+            has_modifier = resolution_denounced
+        }
+        OR = {
+            opinion_level = {
+                who = from
+                level < neutral
+            }
+            from = {
+                is_rival = prev
+            }
+            is_in_breach_of_any = yes
+        }
+        OR = {
+            is_galactic_emperor = no
+            imperial_authority <= 100
+        }
+    }
+    effect = {
+        add_modifier = {
+            modifier = resolution_denounced
+            days = 3600
+        }
+    }
+    potential = {
+        is_galactic_council_established = yes
+        NOT = {
+            has_global_flag = resolution_council_denouncement_abolished
+        }
+    }
+    allow = {
+        is_part_of_galactic_council = yes
+    }
+    ai_weight = {
+        weight = @resolution_weight_disliked
+        modifier = {
+            factor = 0.75
+            FROM = {
+                is_galactic_emperor = yes
+            }
+            imperial_authority >= 75
+        }
+        modifier = {
+            factor = 0.75
+            FROM = {
+                is_galactic_emperor = yes
+            }
+            imperial_authority >= 50
+        }
+        modifier = {
+            factor = 0
+            is_same_value = from
+        }
+        modifier = {
+            factor = 2
+            is_rival = from
+        }
+        modifier = {
+            factor = 5
+            has_nemesis = yes
+            any_playable_country = {
+                OR = {
+                    has_crisis_level = crisis_level_1
+                    has_crisis_level = crisis_level_2
+                    has_crisis_level = crisis_level_3
+                    has_crisis_level = crisis_level_4
+                    has_crisis_level = crisis_level_5
+                }
+                NOT = {
+                    is_same_value = prev
+                }
+                has_resource = {
+                    type = menace
+                    amount > 1000
+                }
+                relative_power = {
+                    who = prev
+                    category = all
+                    value > equivalent
+                }
+            }
+        }
+        modifier = {
+            factor = 5
+            has_nemesis = yes
+            any_playable_country = {
+                OR = {
+                    has_crisis_level = crisis_level_1
+                    has_crisis_level = crisis_level_2
+                    has_crisis_level = crisis_level_3
+                    has_crisis_level = crisis_level_4
+                    has_crisis_level = crisis_level_5
+                }
+                NOT = {
+                    is_same_value = prev
+                }
+                has_resource = {
+                    type = menace
+                    amount > 2000
+                }
+            }
+        }
+        modifier = {
+            factor = 5
+            has_nemesis = yes
+            any_neighbor_country = {
+                OR = {
+                    has_crisis_level = crisis_level_1
+                    has_crisis_level = crisis_level_2
+                    has_crisis_level = crisis_level_3
+                    has_crisis_level = crisis_level_4
+                    has_crisis_level = crisis_level_5
+                }
+            }
+        }
+        modifier = {
+            factor = 0.01
+            has_nemesis = yes
+            NOT = {
+                any_neighbor_country = {
+                    OR = {
+                        has_crisis_level = crisis_level_1
+                        has_crisis_level = crisis_level_2
+                        has_crisis_level = crisis_level_3
+                        has_crisis_level = crisis_level_4
+                        has_crisis_level = crisis_level_5
+                    }
+                }
+            }
+            any_rival_country = {
+                any_neighbor_country = {
+                    OR = {
+                        has_crisis_level = crisis_level_1
+                        has_crisis_level = crisis_level_2
+                        has_crisis_level = crisis_level_3
+                        has_crisis_level = crisis_level_4
+                    }
+                }
+            }
+        }
+    }
+}

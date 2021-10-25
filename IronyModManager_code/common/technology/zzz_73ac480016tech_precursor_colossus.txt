@@ -1,0 +1,41 @@
+tech_precursor_colossus = {
+    area = engineering
+    cost = @acot_tier8cost3
+    tier = 8
+    is_rare = yes
+    category = {
+        voidcraft
+    }
+    ai_update_type = military
+    weight = 0
+    weight_modifier = {
+        factor = 0
+    }
+    modifier = {
+        country_naval_cap_add = 250
+        country_resource_max_add = 500000
+    }
+    potential = {
+        NOT = {
+            is_country_type = fallen_empire
+        }
+    }
+    ai_weight = {
+        factor = 5
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+}

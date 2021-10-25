@@ -1,0 +1,31 @@
+tech_lightmatter_armor = {
+    area = engineering
+    cost = @acot_tier9cost2
+    tier = 9
+    category = {
+        materials
+    }
+    ai_update_type = military
+    is_rare = yes
+    is_reverse_engineerable = no
+    potential = {
+        NOT = {
+            has_global_flag = acot_shipcom_forbidden
+        }
+        has_technology = tech_lightmatter_reactor
+    }
+    weight = 0
+    weight_modifier = {
+        factor = 0
+    }
+    prereqfor_desc = {
+        hide_prereq_for_desc = component
+        custom = {
+            title = "TECH_UNLOCK_ORIGIN_ARMOR_TITLE"
+            desc = "TECH_UNLOCK_ORIGIN_ARMOR_DESC"
+        }
+    }
+    ai_weight = {
+        factor = 200
+    }
+}

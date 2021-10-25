@@ -1,0 +1,39 @@
+@cost3 = 9
+@power_3 = -20
+utility_component_template = {
+    key = "SHIP_THRUSTER_3"
+    size = small
+    icon = "GFX_ship_part_thruster_3"
+    icon_frame = 1
+    power = @power_3
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @cost3
+        }
+    }
+    modifier = {
+        ship_base_speed_mult = 0.3
+        ship_evasion_add = 10
+    }
+    prerequisites = {
+        "tech_thrusters_3"
+    }
+    component_set = "thruster_components"
+    size_restriction = {
+        corvette
+        crisis_corvette
+        pirate_corvette
+        marauder_corvette
+        colonizer
+        lithoid_colonizer
+        sponsored_colonizer
+        constructor
+        science
+        transport
+    }
+    upgrades_to = "SHIP_THRUSTER_4"
+    ai_weight = {
+        weight = 3
+    }
+}

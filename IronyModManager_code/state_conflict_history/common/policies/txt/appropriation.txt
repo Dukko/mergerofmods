@@ -1,0 +1,62 @@
+appropriation = {
+    potential = {
+        has_comms_with_alien_empire = yes
+        NOT = {
+            has_ethic = ethic_gestalt_consciousness
+        }
+    }
+    option = {
+        name = "appropriation_not_allowed"
+        policy_flags = {
+            appropriation_not_allowed
+        }
+        in_breach_of = {
+             {
+                key = resolution_lawandorder_free_migration
+            }
+        }
+        AI_weight = {
+            modifier = {
+                factor = 10
+                has_ai_personality_behaviour = multispecies
+            }
+            modifier = {
+                factor = 15
+                is_pacifist = no
+                or = {
+                    has_civic = civic_slaver_guilds
+                    has_civic = civic_indentured_assets
+                }
+            }
+            modifier = {
+                factor = 0.05
+                has_valid_ai_personality = yes
+                is_ai = yes
+                is_galactic_community_member = yes
+                OR = {
+                    is_active_resolution = "resolution_lawandorder_free_migration"
+                    is_active_resolution = "resolution_lawandorder_informed_governance"
+                }
+            }
+        }
+    }
+    option = {
+        name = "appropriation_allowed"
+        policy_flags = {
+            appropriation_allowed
+        }
+        modifier = {
+        }
+        AI_weight = {
+            modifier = {
+                factor = 10
+                NOT = {
+                    has_ai_personality_behaviour = multispecies
+                }
+                or = {
+                    is_pacifist = yes
+                }
+            }
+        }
+    }
+}

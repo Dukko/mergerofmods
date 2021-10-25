@@ -1,0 +1,28 @@
+@EdictDuration = 3600
+tiyanki_parts_armor = {
+    length = @EdictDuration
+    icon = "GFX_edict_type_time"
+    resources = {
+        category = rare_edicts
+        cost = {
+            sr_tiyanki_parts = 50
+        }
+    }
+    potential = {
+        has_resource = {
+            type = sr_tiyanki_parts
+            amount > 0
+        }
+    }
+    modifier = {
+        ship_armor_mult = 0.2
+        ship_armor_regen_add_perc = 2
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = @EdictHighPrio
+            is_at_war = yes
+        }
+    }
+}

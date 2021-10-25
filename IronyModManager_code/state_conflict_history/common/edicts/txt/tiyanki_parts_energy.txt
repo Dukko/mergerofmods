@@ -1,0 +1,33 @@
+@EdictDuration = 3600
+tiyanki_parts_energy = {
+    length = @EdictDuration
+    icon = "GFX_edict_type_time"
+    resources = {
+        category = rare_edicts
+        cost = {
+            sr_tiyanki_parts = 50
+        }
+    }
+    potential = {
+        has_resource = {
+            type = sr_tiyanki_parts
+            amount > 0
+        }
+        owner = {
+            is_gestalt = yes
+        }
+    }
+    modifier = {
+        planet_jobs_energy_produces_mult = 0.25
+    }
+    ai_weight = {
+        weight = @EdictHighPrio
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = sr_tiyanki_parts
+                value < 500
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+resettlement = {
+    potential = {
+        NOT = {
+            has_ethic = "ethic_gestalt_consciousness"
+        }
+    }
+    option = {
+        name = "resettlement_not_allowed"
+        policy_flags = {
+            resettlement_not_allowed
+        }
+        valid = {
+            NOT = {
+                has_valid_civic = civic_ultimate_collective
+            }
+        }
+        in_breach_of = {
+             {
+                key = resolution_lawandorder_free_migration
+            }
+        }
+    }
+    option = {
+        name = "resettlement_allowed"
+        policy_flags = {
+            resettlement_allowed
+        }
+        valid = {
+            NOR = {
+                has_valid_civic = civic_beacon_of_liberty
+                has_valid_civic = civic_anarchy_ideals
+                has_valid_civic = civic_beacon_of_liberty_corpo
+            }
+        }
+        modifier = {
+        }
+        AI_weight = {
+            factor = 10
+            modifier = {
+                factor = 0
+                OR = {
+                is_egalitarian = yes
+                    is_ai = yes
+                }
+                NAND = {
+                    is_galactic_community_member = yes
+                    OR = {
+                        is_active_resolution = "resolution_lawandorder_free_migration"
+                        is_active_resolution = "resolution_lawandorder_informed_governance"
+                    }
+                }
+            }
+        }
+    }
+}

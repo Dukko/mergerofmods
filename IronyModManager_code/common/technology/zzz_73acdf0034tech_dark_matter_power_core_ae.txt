@@ -1,0 +1,105 @@
+tech_dark_matter_power_core_ae = {
+    area = physics
+    category = {
+        particles
+    }
+    tier = 7
+    cost = @acot_tier7cost1
+    weight = 0
+    ai_update_type = all
+    is_rare = yes
+    is_dangerous = yes
+    potential = {
+        NOT = {
+            has_global_flag = acot_shipcom_forbidden
+        }
+        NOT = {
+            is_country_type = fallen_empire
+        }
+    }
+    prerequisites = {
+        "tech_dark_matter_power_core"
+        "tech_precursor_design"
+    }
+    prereqfor_desc = {
+        hide_prereq_for_desc = component
+        custom = {
+            title = "TECH_UNLOCK_DARK_MATTER_POWER_AE_TITLE"
+            desc = "TECH_UNLOCK_DARK_MATTER_POWER_AE_DESC"
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            has_country_flag = ae_dark_power_delay
+        }
+        modifier = {
+            factor = 0.15
+            is_ai = no
+            NOT = {
+                has_technology = tech_dark_matter_deflector
+            }
+        }
+        modifier = {
+            factor = 0.25
+            NOT = {
+                is_country_type = default
+            }
+        }
+        modifier = {
+            factor = 0.25
+            NOR = {
+                research_leader = {
+                    area = physics
+                    has_trait = "leader_trait_curator"
+                    has_level >= 6
+                }
+                research_leader = {
+                    area = physics
+                    has_trait = "leader_trait_spark_of_genius"
+                    has_level >= 6
+                }
+                research_leader = {
+                    area = physics
+                    has_trait = "leader_trait_scientist_erudite"
+                    has_level >= 6
+                }
+                research_leader = {
+                    area = physics
+                    has_trait = "leader_trait_scientist_chosen"
+                    has_level >= 6
+                }
+                research_leader = {
+                    area = physics
+                    has_trait = "leader_trait_maniacal"
+                    has_level >= 6
+                }
+                research_leader = {
+                    area = physics
+                    has_trait = "leader_trait_scientist_brainslug"
+                    has_level >= 6
+                }
+                research_leader = {
+                    area = physics
+                    has_trait = "leader_trait_sapient_AI_assistant"
+                    has_level >= 6
+                }
+                research_leader = {
+                    area = physics
+                    has_trait = "leader_trait_scientist_psionic"
+                    has_level >= 6
+                }
+                research_leader = {
+                    area = physics
+                    has_trait = "leader_trait_scientist_synthetic"
+                    has_level >= 6
+                }
+                research_leader = {
+                    area = physics
+                    has_trait = "leader_trait_expertise_particles"
+                    has_level >= 6
+                }
+            }
+        }
+    }
+}

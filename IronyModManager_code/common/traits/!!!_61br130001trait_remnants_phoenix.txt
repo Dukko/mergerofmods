@@ -1,0 +1,23 @@
+trait_remnants_phoenix = {
+    icon = "gfx/interface/icons/traits/trait_remnants_phoenix.dds"
+    cost = 0
+    potential_crossbreeding_chance = 0.5
+    initial = no
+    randomized = no
+    modification = no
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+        MACHINE
+    }
+    modifier = {
+        planet_jobs_produces_mult = 0.05
+        species_leader_exp_gain = 0.1
+    }
+    slave_cost = {
+        energy = 50
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

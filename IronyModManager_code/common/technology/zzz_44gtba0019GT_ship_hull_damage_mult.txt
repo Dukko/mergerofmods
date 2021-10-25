@@ -1,0 +1,37 @@
+GT_ship_hull_damage_mult = {
+    cost = @tier3cost1
+    area = physics
+    tier = 3
+    category = {
+        particles
+    }
+    prerequisites = {
+        "tech_engineering_2"
+    }
+    weight = @tier4weight1
+    modifier = {
+        ship_hull_damage_mult = 0.2
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            is_at_war = no
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+}

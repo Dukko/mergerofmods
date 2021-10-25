@@ -1,0 +1,14 @@
+sr_iodizium = {
+    tradable = no
+    max = 10000
+    prerequisites = {
+        "giga_tech_fusion_suppressor"
+    }
+    visibility_prerequisite = {
+        always = yes
+    }
+    deficit_modifier = iodizium_deficit
+    ai_weight = {
+        weight = 100
+    }
+}

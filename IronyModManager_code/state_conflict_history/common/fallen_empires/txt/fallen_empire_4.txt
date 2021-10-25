@@ -1,0 +1,57 @@
+fallen_empire_4 = {
+    graphical_culture = "fallen_empire_04"
+    initializer = "fallen_4"
+    weight_modifier = {
+        base = 100
+    }
+    create_country_effect = {
+        create_species = {
+            name = random
+            class = random_non_machine
+            portrait = random
+            traits = random
+            extra_trait_points = 12
+            allow_negative_traits = no
+            effect = {
+                save_global_event_target_as = fallen_4_species
+            }
+        }
+        create_country = {
+            name = random
+            type = fallen_empire
+            ignore_initial_colony_error = yes
+            authority = auth_dictatorial
+            civics = {
+                civic = civic_lethargic_leadership
+                civic = civic_empire_in_decline
+            }
+            species = last_created_species
+            ethos = {
+                ethic = ethic_fanatic_xenophobe
+                ethic = ethic_focused
+            }
+            flag = random
+            origin = "origin_fallen_empire"
+            effect = {
+                set_country_flag = fallen_empire_4
+                add_resource = {
+                    minerals = 1000000
+                    energy = 1000000
+                    food = 100000
+                    influence = 1000
+                    alloys = 10000
+                    acot_sr_dark_energy = 10000
+                    sr_dark_matter = 10000
+                }
+                add_global_ship_design = "NAME_Reaper"
+                add_global_ship_design = "NAME_Imperium"
+                add_global_ship_design = "NAME_Supremacy"
+                add_global_ship_design = "NAME_Glory"
+                add_global_ship_design = "NAME_Devastator"
+                add_global_ship_design = "NAME_Servitor"
+                add_global_ship_design = "NAME_Destiny"
+                add_global_ship_design = "NAME_FE_Starbase"
+            }
+        }
+    }
+}

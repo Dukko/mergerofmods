@@ -1,0 +1,119 @@
+building_esap_spiritualist_2_citadel_of_faith = {
+    base_buildtime = 600
+    can_build = no
+    category = unity
+    potential = {
+        exists = owner
+        always = no
+        owner = {
+            is_spiritualist = yes
+            has_ascension_perk = ap_esap_spiritualist_2
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+    }
+    allow = {
+        has_fully_upgraded_capital = yes
+        buildings_upgrade_allow = yes
+    }
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            owner = {
+                is_spiritualist = no
+            }
+            owner = {
+                Not = {
+                    has_ascension_perk = ap_esap_spiritualist_2
+                }
+            }
+            has_modifier = slave_colony
+            buildings_no_crystals = yes
+        }
+    }
+    convert_to = {
+        building_sacred_nexus
+        building_hive_confluence
+        building_alpha_hub
+        building_corporate_forum
+    }
+    planet_modifier = {
+        job_priest_add = 10
+        pop_ethic_spiritualist_attraction_mult = 0.2
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 1000
+            rare_crystals = 100
+        }
+        upkeep = {
+            energy = 4
+            rare_crystals = 2
+        }
+    }
+    prerequisites = {
+        "tech_transcendent_faith"
+    }
+    triggered_desc = {
+        text = job_priest_effect_desc
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 1
+            buildings_has_crystals = yes
+            owner = {
+                has_monthly_income = {
+                    resource = consumer_goods
+                    value > 8
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_country_flag = buildings_new_crystal_building
+            }
+        }
+    }
+    on_queued = {
+        IF = {
+            limit = {
+                owner = {
+                    has_technology = tech_construction_templates
+                }
+            }
+            owner = {
+                set_timed_country_flag = {
+                    flag = buildings_new_crystal_building
+                    days = 270
+                }
+            }
+        }
+        ELSE_IF = {
+            limit = {
+                owner = {
+                    has_technology = tech_assembly_pattern
+                }
+            }
+            owner = {
+                set_timed_country_flag = {
+                    flag = buildings_new_crystal_building
+                    days = 390
+                }
+            }
+        }
+        else = {
+            planet = {
+                owner = {
+                    set_timed_country_flag = {
+                        flag = buildings_new_crystal_building
+                        days = 510
+                    }
+                }
+            }
+        }
+    }
+}

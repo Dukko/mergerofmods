@@ -1,0 +1,78 @@
+namespace = planet_destruction
+country_event = {
+    id = planet_destruction.210
+    title = planet_destruction.210.name
+    desc = {
+        text = planet_destruction.210.desc
+        trigger = {
+            NOR = {
+                has_ethic = ethic_fanatic_pacifist
+                has_ethic = ethic_pacifist
+                has_ethic = ethic_fanatic_egalitarian
+                has_ethic = ethic_egalitarian
+            }
+        }
+    }
+    desc = {
+        text = planet_destruction.210.desc.alt
+        trigger = {
+            OR = {
+                has_ethic = ethic_fanatic_pacifist
+                has_ethic = ethic_pacifist
+                has_ethic = ethic_fanatic_egalitarian
+                has_ethic = ethic_egalitarian
+            }
+        }
+    }
+    picture = {
+        trigger = {
+            from = {
+                NOT = {
+                    is_planet_class = pc_habitat_shielded
+                }
+            }
+        }
+        picture = GFX_evt_shielded_planet
+    }
+    picture = {
+        trigger = {
+            from = {
+                is_planet_class = pc_habitat_shielded
+            }
+        }
+        picture = GFX_evt_strategic_coordination_center
+    }
+    show_sound = event_mystic_reveal
+    location = from
+    is_triggered_only = yes
+    trigger = {
+        NOT = {
+            has_country_flag = fired_pacifier
+        }
+    }
+    immediate = {
+        set_country_flag = fired_pacifier
+    }
+    option = {
+        name = planet_destruction.210.a
+        trigger = {
+            NOR = {
+                has_ethic = ethic_fanatic_pacifist
+                has_ethic = ethic_pacifist
+                has_ethic = ethic_fanatic_egalitarian
+                has_ethic = ethic_egalitarian
+            }
+        }
+    }
+    option = {
+        name = planet_destruction.210.b
+        trigger = {
+            OR = {
+                has_ethic = ethic_fanatic_pacifist
+                has_ethic = ethic_pacifist
+                has_ethic = ethic_fanatic_egalitarian
+                has_ethic = ethic_egalitarian
+            }
+        }
+    }
+}

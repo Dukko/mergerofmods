@@ -1,0 +1,30 @@
+void_lifeforms_1 = {
+    can_planets_be_attacked = yes
+    can_own_empty_planets = no
+    has_difficulty_bonuses = no
+    has_capital = no
+    government = no
+    observable = no
+    hide_names_if_no_communication = yes
+    playable = no
+    enforces_borders = no
+    uses_origins = no
+    ai = {
+        enabled = no
+    }
+    faction = {
+        hostile = yes
+        needs_border_access = no
+        needs_colony = no
+        auto_delete = no
+    }
+    modules = {
+        standard_event_module = {
+        }
+        all_technology_module = {
+        }
+        exclusive_diplomacy_module = {
+            contact_rule = on_action_only
+        }
+    }
+}

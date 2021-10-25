@@ -1,0 +1,20 @@
+tech_stellarite_autocannon = {
+    area = engineering
+    category = {
+        propulsion
+    }
+    tier = 8
+    cost = @acot_tier8cost1
+    weight = 5
+    ai_update_type = military
+    prerequisites = {
+        "tech_stellarite_reactor"
+    }
+    is_rare = yes
+    potential = {
+        NOT = {
+            has_global_flag = acot_weapons_forbidden
+        }
+        has_technology = tech_stellarite_reactor
+    }
+}

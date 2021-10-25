@@ -1,0 +1,76 @@
+@cb_subjugation_length = 360
+action_demand_subsidiary = {
+    icon = "GFX_diplomacy_status_has_vassal"
+    requires_actor_peace = no
+    requires_recipient_peace = no
+    diplo_view_acceptance_icon = yes
+    should_notify_all_communications = no
+    requires_recipient_independence = no
+    AI_acceptance_base_value = -50
+    action_type = aggressive
+    potential = {
+        is_megacorp = yes
+        or = {
+            is_ai = no
+            years_passed > @str_years_of_twilight
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_recipient_not_in_galactic_empire"
+            NAND = {
+                has_galactic_emperor = yes
+                is_galactic_community_member = no
+                from = {
+                    is_galactic_community_member = yes
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_recipient_not_custodian"
+            from = {
+                is_galactic_custodian = no
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_recipient_not_gal_emperor"
+            from = {
+                is_galactic_emperor = no
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_recipient_not_btc"
+            from = {
+                has_been_declared_crisis = no
+            }
+        }
+    }
+    proposable = {
+        if = {
+            limit = {
+                hidden_trigger = {
+                    from = {
+                        is_country_type = awakened_fallen_empire
+                    }
+                }
+            }
+            hidden_trigger = {
+                always = yes
+            }
+        }
+        else = {
+            relative_power = {
+                who = from
+                value >= superior
+            }
+        }
+        custom_tooltip = grants_megacorp_subjugate_cb
+    }
+    on_decline = {
+        add_casus_belli = {
+            type = cb_megacorp_subjugate
+            who = from
+            days = @cb_subjugation_length
+        }
+    }
+}

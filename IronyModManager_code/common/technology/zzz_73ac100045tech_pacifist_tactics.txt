@@ -1,0 +1,46 @@
+tech_pacifist_tactics = {
+    cost = @acot_tier6cost2
+    area = society
+    tier = 6
+    is_rare = yes
+    category = {
+        military_theory
+    }
+    prerequisites = {
+        "tech_galactic_campaigns"
+    }
+    weight = 25
+    potential = {
+        NOT = {
+            has_global_flag = acot_ethictech_forbidden
+        }
+    }
+    modifier = {
+        army_defense_morale_mult = 0.5
+        army_defense_damage_mult = 0.1
+        country_war_exhaustion_mult = -0.15
+        defensive_war_influence_gain_add = 1
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            recently_lost_war = no
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+building_am_civics_stellar_banking_institute = {
+    base_buildtime = 360
+    can_demolish = yes
+    base_cap_amount = 1
+    category = trade
+    potential = {
+        owner = {
+            has_valid_civic = civic_am_civics_banking_giant
+        }
+        has_upgraded_capital = yes
+        is_capital = yes
+        NOT = {
+            has_modifier = slave_colony
+        }
+    }
+    destroy_trigger = {
+        OR = {
+            NOT = {
+                owner = {
+                    has_valid_civic = civic_am_civics_banking_giant
+                }
+            }
+            has_modifier = slave_colony
+        }
+        is_capital = no
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 800
+        }
+        upkeep = {
+            energy = 5
+        }
+    }
+    triggered_desc = {
+        text = building_am_civics_stellar_banking_institute_summary
+    }
+}

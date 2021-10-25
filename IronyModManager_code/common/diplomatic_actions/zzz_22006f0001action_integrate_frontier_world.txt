@@ -1,0 +1,17 @@
+action_integrate_frontier_world = {
+    icon = "GFX_diplomacy_improve_relation"
+    auto_accepted = yes
+    requires_actor_independence = yes
+    requires_recipient_independence = no
+    should_notify_all_communications = yes
+    action_type = neutral
+    potential = {
+        from = {
+            is_subject_type = frontier_world
+        }
+    }
+    on_accept = {
+        hidden_effect = {
+        }
+    }
+}

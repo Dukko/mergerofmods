@@ -1,0 +1,68 @@
+tech_acot_end_rift = {
+    cost = @acot_tier6cost2
+    area = society
+    tier = 6
+    category = {
+        new_worlds
+    }
+    prerequisites = {
+        tech_dark_matter_power_core
+    }
+    weight = @tier2weight2
+    potential = {
+        any_owned_planet = {
+            OR = {
+                is_planet_class = pc_dark_fractured
+                is_planet_class = pc_dark_fractured_ae
+            }
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 2
+        }
+        modifier = {
+            factor = 1.25
+            has_tradition = tr_expansion_adopt
+        }
+        modifier = {
+            factor = 4
+            has_ascension_perk = ap_mastery_of_nature
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_deposit = "d_acot_void_rift"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 3
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_deposit = "d_acot_void_rift"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+}

@@ -1,0 +1,7 @@
+random_list = {
+    name = "rl_destroyed"
+    planets = {
+        "pc_broken"
+        "pc_shattered"
+    }
+}

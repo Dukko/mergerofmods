@@ -1,0 +1,32 @@
+@titan_power_4 = -400
+@titan_cost4 = 192
+utility_component_template = {
+    key = "TITAN_SHIP_THRUSTER_4"
+    size = small
+    icon = "GFX_ship_part_thruster_4"
+    icon_frame = 1
+    power = @titan_power_4
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @titan_cost4
+        }
+    }
+    modifier = {
+        ship_base_speed_mult = 0.45
+        ship_evasion_add = 3
+    }
+    prerequisites = {
+        "tech_thrusters_4"
+    }
+    component_set = "thruster_components"
+    size_restriction = {
+        titan
+        galleon
+        marauder_galleon
+    }
+    upgrades_to = "TITAN_SHIP_THRUSTER_5"
+    ai_weight = {
+        weight = 4
+    }
+}

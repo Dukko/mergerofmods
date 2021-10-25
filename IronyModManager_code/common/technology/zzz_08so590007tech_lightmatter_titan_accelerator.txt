@@ -1,0 +1,19 @@
+tech_lightmatter_titan_accelerator = {
+    area = engineering
+    category = {
+        propulsion
+    }
+    tier = 9
+    cost = @tier5cost3
+    weight = 0
+    ai_update_type = military
+    prerequisites = {
+        "tech_warp_lightmatter_cannon"
+    }
+    is_rare = yes
+    potential = {
+        NOT = {
+            has_global_flag = acot_shipcom_forbidden
+        }
+    }
+}

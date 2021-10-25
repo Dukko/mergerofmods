@@ -1,0 +1,73 @@
+drow_civ1 = {
+    name = "drow_civ1"
+    adjective = "Anorim"
+    spawn_enabled = no
+    spawn_as_fallen = no
+    ignore_portrait_duplication = yes
+    ship_prefix = "ES"
+    species = {
+        class = "DROW"
+        portrait = "drow"
+        name = "Anorim"
+        plural = "Anorim"
+        adjective = "Anoran"
+        name_list = "eos_namelist_drow_darkelf"
+        trait = "trait_drow"
+        trait = "trait_docile"
+        trait = "trait_nomadic"
+        trait = "trait_resilient"
+        trait = "trait_slow_breeders"
+    }
+    room = "personality_metalheads_room"
+    authority = "auth_dictatorial"
+    civics = {
+        "civic_philosopher_king"
+        "civic_drow_eilistraee"
+    }
+    government = "gov_elective_monarchy"
+    ethic = "ethic_pacifist"
+    ethic = "ethic_spiritualist"
+    ethic = "ethic_xenophile"
+    planet_name = "Sokoya"
+    planet_class = "pc_continental"
+    origin = "origin_drow_prismatic_refuge"
+    initializer = "drow_system_eilistraee_initializer"
+    system_name = "Eilistraee"
+    graphical_culture = "elven_01"
+    city_graphical_culture = "ilythiiri_01"
+    advisor_voice_type = "l_spiritualist"
+    flags = {
+        eilistraeean_personality_flag
+    }
+    empire_flag = {
+        icon = {
+            category = "drow"
+            file = "eilistraee_1.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "vertical.dds"
+        }
+        colors = {
+            "purple"
+            "black"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = female
+        name = "Aundae Arwel"
+        portrait = "drow_female_08"
+        texture = 0
+        hair = 50
+        clothes = 115
+        ruler_title = "M'thallar"
+        heir_title = "M'thain"
+        ruler_title_female = "Ulathtallar"
+        heir_title_female = "Yatharil"
+        trait = trait_ruler_charismatic
+        trait = trait_ruler_explorer
+        leader_class = ruler
+    }
+}

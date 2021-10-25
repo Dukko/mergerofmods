@@ -1,0 +1,76 @@
+gateway_0 = {
+    entity = "construction_platform_entity"
+    construction_entity = "construction_platform_entity"
+    portrait = "GFX_megastructure_construction_background"
+    place_entity_on_planet_plane = no
+    build_outside_gravity_well = yes
+    show_galactic_map_icon = no
+    construction_blocks_others = no
+    construction_blocked_by_others = no
+    build_time = 1080
+    resources = {
+        category = megastructures
+        cost = {
+            alloys = 2500
+            influence = 100
+        }
+    }
+    potential = {
+        has_technology = tech_gateway_construction
+    }
+    possible = {
+        exists = starbase
+        custom_tooltip = {
+            fail_text = "requires_inside_border"
+            is_inside_border = from
+        }
+        custom_tooltip = {
+            fail_text = "requires_surveyed_system"
+            giga_system_is_surveyed = yes
+        }
+        custom_tooltip = {
+            fail_text = "requires_technology_gateway_construction"
+            from = {
+                has_technology = tech_gateway_construction
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_no_existing_gateway"
+            NOR = {
+                has_megastructure = gateway_0
+                has_megastructure = gateway_ruined
+                has_megastructure = gateway_restored
+                has_megastructure = gateway_final
+            }
+        }
+    }
+    ai_weight = {
+        factor = 5
+        modifier = {
+            factor = 0
+            starbase = {
+                NOT = {
+                    has_starbase_size >= starbase_starfortress
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            any_neighbor_system = {
+                OR = {
+                    has_megastructure = gateway_0
+                    has_megastructure = gateway_ruined
+                    has_megastructure = gateway_restored
+                    has_megastructure = gateway_final
+                }
+            }
+        }
+    }
+    on_build_complete = {
+        from = {
+            country_event = {
+                id = apoc.14
+            }
+        }
+    }
+}

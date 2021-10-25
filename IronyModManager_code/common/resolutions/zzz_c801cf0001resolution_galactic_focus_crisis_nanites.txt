@@ -1,0 +1,238 @@
+@resolution_weight_normal = 6
+@resolution_cost_t1 = 100
+@resolution_flag_timer = 360
+resolution_galactic_focus_crisis_nanites = {
+    icon = "GFX_resolution_emergency_measure"
+    resources = {
+        category = resolutions
+        cost = {
+            influence = @resolution_cost_t1
+        }
+    }
+    target = no
+    modifier = {
+        resolution_nanites = 1
+    }
+    effect = {
+        custom_tooltip = resolution_galactic_focus_crisis_nanites_effect_success
+        hidden_effect = {
+            repeal_all_galactic_focus_resolutions = yes
+            set_global_flag = galactic_focus_crisis_nanites
+            set_global_flag = galactic_community_crisis_fighting
+            set_global_flag = galactic_community_resolution_passed
+            set_timed_country_flag = {
+                flag = galactic_community_resolution_passed_general
+                days = @resolution_flag_timer
+            }
+            add_modifier = {
+                modifier = resolution_passed_diplomatic_weight
+                days = 2200
+            }
+        }
+    }
+    fail_effects = {
+        hidden_effect = {
+            set_timed_country_flag = {
+                flag = galactic_community_resolution_failed_general
+                days = @resolution_flag_timer
+            }
+            add_modifier = {
+                modifier = resolution_failed_diplomatic_weight
+                days = 2200
+            }
+        }
+    }
+    potential = {
+        has_global_flag = gray_goo_crisis_active
+        NOT = {
+            has_global_flag = galactic_focus_crisis_nanites
+        }
+    }
+    active = {
+        has_global_flag = gray_goo_crisis_active
+    }
+    ai_weight = {
+        base = @resolution_weight_normal
+        modifier = {
+            factor = 10
+            any_neighbor_country = {
+                is_country_type = gray_goo
+            }
+        }
+        modifier = {
+            factor = 10
+            any_relation = {
+                is_in_federation_with = prev
+                any_neighbor_country = {
+                    is_country_type = gray_goo
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            any_relation = {
+                has_defensive_pact = prev
+                any_neighbor_country = {
+                    is_country_type = gray_goo
+                }
+            }
+        }
+        modifier = {
+            factor = 0.75
+            any_relation = {
+                is_rival = prev
+                any_neighbor_country = {
+                    is_country_type = gray_goo
+                }
+            }
+            NOT = {
+                any_neighbor_country = {
+                    is_country_type = gray_goo
+                }
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOT = {
+                any_country = {
+                    is_country_type = gray_goo
+                    galaxy_percentage > 0.1
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            any_country = {
+                is_country_type = gray_goo
+                galaxy_percentage > 0.1
+                galaxy_percentage <= 0.2
+            }
+        }
+        modifier = {
+            factor = 5
+            any_country = {
+                is_country_type = gray_goo
+                galaxy_percentage > 0.2
+                galaxy_percentage <= 0.3
+            }
+        }
+        modifier = {
+            factor = 10
+            any_country = {
+                is_country_type = gray_goo
+                galaxy_percentage > 0.3
+                galaxy_percentage <= 0.4
+            }
+        }
+        modifier = {
+            factor = 20
+            any_country = {
+                is_country_type = gray_goo
+                galaxy_percentage > 0.4
+                galaxy_percentage <= 0.5
+            }
+        }
+        modifier = {
+            factor = 30
+            any_country = {
+                is_country_type = gray_goo
+                galaxy_percentage > 0.5
+            }
+        }
+        modifier = {
+            factor = 50
+            has_ascension_perk = ap_defender_of_the_galaxy
+        }
+        modifier = {
+            factor = 3
+            OR = {
+                has_valid_civic = civic_philosopher_king
+                is_civic_diplomatic_corps = yes
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_ethic = ethic_fanatic_xenophobe
+                is_civic_inwards_perfection = yes
+            }
+        }
+        modifier = {
+            factor = 5
+            is_synthetic_empire = yes
+        }
+        modifier = {
+            factor = 3
+            is_militarist = yes
+        }
+        modifier = {
+            factor = 2
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 2
+            is_materialist = yes
+        }
+        modifier = {
+            factor = 2
+            has_ethic = ethic_fanatic_materialist
+        }
+        modifier = {
+            factor = 2
+            is_xenophile = yes
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_xenophile
+        }
+        modifier = {
+            factor = 0.75
+            has_ethic = ethic_fanatic_pacifist
+            NOT = {
+                any_neighbor_country = {
+                    is_country_type = gray_goo
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            OR = {
+                is_xenophobe = yes
+                is_xenophobic_isolationists = yes
+            }
+            NOT = {
+                any_neighbor_country = {
+                    is_country_type = gray_goo
+                }
+            }
+        }
+        modifier = {
+            factor = 5
+            OR = {
+                has_valid_civic = civic_machine_servitor
+                is_open_gestalt = yes
+            }
+        }
+        modifier = {
+            factor = 3
+            any_country = {
+                is_part_of_galactic_council = yes
+                is_proposing_resolution = resolution_galactic_focus_crisis_nanites
+            }
+        }
+        modifier = {
+            factor = 4
+            any_country = {
+                is_galactic_custodian = yes
+                is_proposing_resolution = resolution_galactic_focus_crisis_nanites
+            }
+        }
+        modifier = {
+            factor = 5
+            any_country = {
+                is_galactic_emperor = yes
+                is_proposing_resolution = resolution_galactic_focus_crisis_nanites
+            }
+        }
+    }
+}

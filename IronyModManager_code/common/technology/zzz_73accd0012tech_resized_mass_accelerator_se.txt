@@ -1,0 +1,20 @@
+tech_resized_mass_accelerator_se = {
+    area = engineering
+    tier = 8
+    cost = @acot_tier8cost2
+    category = {
+        propulsion
+    }
+    ai_update_type = military
+    prerequisites = {
+        "tech_stellarite_autocannon"
+        "tech_resized_mass_accelerator_ae"
+    }
+    weight = 5
+    potential = {
+        NOT = {
+            has_global_flag = acot_weapons_forbidden
+        }
+        has_technology = tech_stellarite_reactor
+    }
+}

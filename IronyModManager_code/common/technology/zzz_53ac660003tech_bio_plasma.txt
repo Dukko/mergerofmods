@@ -1,0 +1,27 @@
+tech_bio_plasma = {
+    area = society
+    cost = @tier5cost3
+    tier = 6
+    is_rare = yes
+    category = {
+        biology
+    }
+    ai_update_type = military
+    weight = 0
+    potential = {
+        NOT = {
+            is_country_type = fallen_empire
+        }
+    }
+    ai_weight = {
+        factor = 0.25
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+    }
+}

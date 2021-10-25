@@ -1,0 +1,29 @@
+utility_component_template = {
+    key = "AUTO_REPAIR"
+    size = aux
+    icon = "GFX_ship_part_auto_repair"
+    icon_frame = 1
+    power = 0
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = 20
+        }
+    }
+    modifier = {
+        ship_hull_regen_add_static = 1
+        ship_armor_regen_add_static = 2
+    }
+    prerequisites = {
+        tech_regenerative_hull_tissue
+    }
+    component_set = "AUTO_REPAIR"
+    upgrades_to = ACOT_REPAIR_COUNTERMEASURES_DM
+    ai_weight = {
+        weight = 10
+        modifier = {
+            factor = 2
+            is_preferred_weapons = weapon_type_explosive
+        }
+    }
+}

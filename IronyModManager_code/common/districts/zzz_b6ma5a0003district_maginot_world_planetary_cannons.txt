@@ -1,0 +1,94 @@
+district_maginot_world_planetary_cannons = {
+    base_buildtime = 600
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        uses_district_set = maginot_world_districts
+    }
+    allow = {
+    }
+    potential = {
+        uses_district_set = maginot_world_districts
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = 1000
+            alloys = 500
+        }
+        upkeep = {
+            energy = 10
+            alloys = 10
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_maginot_planetary_cannon_operator_add = 1
+            job_soldier_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_maginot_planetary_cannon_operator_gestalt_add = 1
+            job_warrior_drone_add = 2
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = job_maginot_planetary_cannon_operator_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = job_soldier_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_maginot_planetary_cannon_operator_gestalt_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_warrior_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+        }
+        text = job_maginot_planetary_artillery_effect_desc
+    }
+    planet_modifier = {
+    }
+    ai_weight = {
+        weight = 33
+    }
+}

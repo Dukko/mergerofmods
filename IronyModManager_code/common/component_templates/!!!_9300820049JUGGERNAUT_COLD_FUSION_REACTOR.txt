@@ -1,0 +1,22 @@
+@juggernaut_power_3 = 2850
+utility_component_template = {
+    key = "JUGGERNAUT_COLD_FUSION_REACTOR"
+    size = large
+    icon = "GFX_ship_part_reactor_3"
+    icon_frame = 1
+    power = @juggernaut_power_3
+    prerequisites = {
+        "tech_cold_fusion_power"
+    }
+    component_set = "power_core"
+    class_restriction = {
+        shipclass_starbase
+    }
+    size_restriction = {
+        juggernaut
+    }
+    upgrades_to = "JUGGERNAUT_ANTIMATTER_REACTOR"
+    ai_weight = {
+        weight = 3
+    }
+}

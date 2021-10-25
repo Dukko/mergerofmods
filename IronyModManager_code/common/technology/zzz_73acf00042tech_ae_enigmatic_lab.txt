@@ -1,0 +1,48 @@
+tech_ae_enigmatic_lab = {
+    area = physics
+    category = {
+        computing
+    }
+    tier = 7
+    cost = @acot_tier7cost2
+    prerequisites = {
+        "tech_enigmatic_lab"
+        "tech_dark_matter_power_core_ae"
+    }
+    weight = @tier5weight1
+    potential = {
+        NOT = {
+            is_country_type = fallen_empire
+        }
+        NOT = {
+            has_global_flag = acot_building_forbidden
+        }
+    }
+    weight_modifier = {
+        factor = 2
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_technology = tech_ae_ancient_control_center
+                has_technology = tech_ae_ancient_palace
+                has_technology = tech_ae_ancient_hive_cluster
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+GT_planet_colony_development_speed_mult = {
+    cost = @tier3cost3
+    area = society
+    tier = 3
+    category = {
+        new_worlds
+    }
+    prerequisites = {
+        "tech_colonization_4"
+    }
+    weight = @tier4weight3
+    modifier = {
+        planet_colony_development_speed_mult = 0.4
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+}

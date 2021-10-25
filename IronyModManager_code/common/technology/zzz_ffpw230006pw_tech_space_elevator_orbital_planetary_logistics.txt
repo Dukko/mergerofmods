@@ -1,0 +1,81 @@
+pw_tech_space_elevator_orbital_planetary_logistics = {
+    area = engineering
+    cost = @pw_tech_cost_2
+    tier = 4
+    category = {
+        voidcraft
+    }
+    prerequisites = {
+        pw_tech_space_elevator
+    }
+    weight = @tier4weight2
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            count_owned_planet = {
+                count < 1
+                limit = {
+                    has_active_building = pw_building_space_elevator
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            count_owned_planet = {
+                count > 2
+                limit = {
+                    has_active_building = pw_building_space_elevator
+                }
+            }
+        }
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = engineering
+                has_trait = leader_trait_expertise_voidcraft
+            }
+        }
+        modifier = {
+            factor = 2
+            is_megacorp = yes
+        }
+        modifier = {
+            factor = 1.5
+            has_ascension_perk = ap_master_builders
+        }
+        modifier = {
+            factor = 1.5
+            has_valid_civic = civic_corvee_system
+        }
+        modifier = {
+            factor = 2
+            has_valid_civic = civic_free_traders
+        }
+        modifier = {
+            factor = 2
+            has_valid_civic = civic_merchant_guilds
+        }
+        modifier = {
+            factor = 1.5
+            has_valid_civic = civic_machine_ota_updates
+        }
+        modifier = {
+            factor = 1.5
+            has_valid_civic = civic_hive_subspace_ephapse
+        }
+        modifier = {
+            factor = 1.5
+            has_valid_civic = civic_hive_empath
+        }
+    }
+    ai_weight = {
+        factor = @pw_tech_ai_weight
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = leader_trait_expertise_voidcraft
+            }
+        }
+    }
+}

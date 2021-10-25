@@ -1,0 +1,62 @@
+population_controls = {
+    potential = {
+        NOT = {
+            has_ethic = "ethic_gestalt_consciousness"
+        }
+    }
+    option = {
+        name = "population_controls_not_allowed"
+        on_enabled = {
+            hidden_effect = {
+                every_owned_planet = {
+                    remove_modifier = planet_population_control
+                }
+            }
+        }
+        policy_flags = {
+            population_controls_not_allowed
+        }
+        in_breach_of = {
+             {
+                key = resolution_lawandorder_informed_governance
+            }
+        }
+    }
+    option = {
+        name = "population_controls_allowed"
+        on_enabled = {
+            hidden_effect = {
+                every_owned_planet = {
+                    remove_modifier = planet_growth_discouraged
+                }
+            }
+        }
+        valid = {
+            NOR = {
+                has_valid_civic = civic_beacon_of_liberty
+                has_valid_civic = civic_spiritual_democracy
+            }
+        }
+        policy_flags = {
+            population_controls_allowed
+        }
+        modifier = {
+        }
+        AI_weight = {
+            factor = 0.5
+            modifier = {
+                factor = 0
+                OR = {
+                    has_ethic = ethic_egalitarian
+                    has_ethic = ethic_fanatic_egalitarian
+                    has_ethic = ethic_xenophile
+                    has_ethic = ethic_fanatic_xenophile
+                }
+                NAND = {
+                    is_galactic_community_member = yes
+                    is_active_resolution = "resolution_lawandorder_informed_governance"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+@platform_power_4 = 1250
+@platform_cost_4 = 44
+utility_component_template = {
+    key = "PLATFORM_ANTIMATTER_REACTOR"
+    size = large
+    icon = "GFX_ship_part_reactor_4"
+    icon_frame = 1
+    power = @platform_power_4
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @platform_cost_4
+        }
+        upkeep = {
+            energy = 0.44
+            alloys = 0.044
+        }
+    }
+    prerequisites = {
+        "tech_antimatter_power"
+    }
+    component_set = "power_core"
+    class_restriction = {
+        shipclass_military_station
+    }
+    size_restriction = {
+        military_station_small
+        military_station_medium
+        military_station_large
+    }
+    upgrades_to = "PLATFORM_ZERO_POINT_REACTOR"
+    ai_weight = {
+        weight = 4
+    }
+}

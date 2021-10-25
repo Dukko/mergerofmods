@@ -1,0 +1,29 @@
+district_acot_phanon_data = {
+    base_buildtime = 0
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        uses_district_set = phanon_vault
+    }
+    allow = {
+        has_ground_combat = no
+    }
+    potential = {
+        uses_district_set = phanon_vault
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+        }
+        produces = {
+            engineering_research = 10
+        }
+        upkeep = {
+            energy = 500
+        }
+    }
+    planet_modifier = {
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

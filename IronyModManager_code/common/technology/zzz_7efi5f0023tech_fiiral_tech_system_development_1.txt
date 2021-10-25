@@ -1,0 +1,38 @@
+tech_fiiral_tech_system_development_1 = {
+    cost = @tier3cost3
+    area = engineering
+    tier = 3
+    category = {
+        industry
+    }
+    weight = @tier3weight3
+    potential = {
+        NOT = {
+            galaxy_percentage > 0.03
+        }
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "TECH_UNLOCK_SYSTEM_DEVELOPMENT_1_TITLE"
+            desc = "TECH_UNLOCK_SYSTEM_DEVELOPMENT_1_DESC"
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+}

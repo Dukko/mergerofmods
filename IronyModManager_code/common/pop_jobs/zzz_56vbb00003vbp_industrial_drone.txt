@@ -1,0 +1,29 @@
+vbp_industrial_drone = {
+    category = simple_drone
+    is_capped_by_modifier = yes
+    building_icon = building_robot_assembly_plant
+    icon = maintenance_drone
+    possible_pre_triggers = {
+        has_owner = yes
+        is_sapient = yes
+    }
+    possible = {
+        exists = owner
+        owner = {
+            is_country_type = vbp_machine
+        }
+    }
+    planet_modifier = {
+        planet_amenities_add = 10
+        planet_stability_add = 5
+    }
+    resources = {
+        category = planet_farmers
+        upkeep = {
+            minerals = 1
+        }
+    }
+    weight = {
+        weight = 10
+    }
+}

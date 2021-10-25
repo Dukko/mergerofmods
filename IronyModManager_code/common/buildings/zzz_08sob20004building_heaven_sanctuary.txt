@@ -1,0 +1,81 @@
+building_heaven_sanctuary = {
+    base_buildtime = 5
+    capital = yes
+    can_demolish = no
+    can_be_ruined = no
+    can_be_disabled = no
+    can_build = no
+    category = government
+    show_tech_unlock_if = {
+        OR = {
+            is_country_Type = original_empire
+            is_country_Type = original_empire_passive
+            is_country_Type = original_empire_active
+            has_valid_civic = civic_solar_empire_ascended
+            has_valid_civic = civic_champion_empire
+        }
+    }
+    potential = {
+        owner = {
+            OR = {
+                is_country_Type = original_empire
+                is_country_Type = original_empire_passive
+                is_country_Type = original_empire_active
+                has_valid_civic = civic_solar_empire_ascended
+                has_valid_civic = civic_champion_empire
+            }
+        }
+    }
+    allow = {
+        is_progenitor_worlds = yes
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_mechanical_empire = yes
+            }
+        }
+        job_acot_roboman_add = 20
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_progenitor_empires = no
+                }
+            }
+            acot_sr_light_matter = 750
+        }
+        produces = {
+            food = 1000
+            consumer_goods = 1000
+            unity = 1500
+            acot_sr_light_matter = 20
+        }
+        upkeep = {
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 300
+        planet_amenities_add = 300
+        planet_crime_add = -100
+        pop_government_ethic_attraction = 2
+        pop_happiness = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_progenitor_empires = yes
+            }
+        }
+        job_sofe_oceanmaster_add = 1
+        job_sofe_lifebinder_add = 1
+    }
+    ai_weight = {
+        weight = 15000
+    }
+}

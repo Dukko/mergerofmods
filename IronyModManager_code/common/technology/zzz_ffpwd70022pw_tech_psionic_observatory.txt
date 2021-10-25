@@ -1,0 +1,28 @@
+pw_tech_psionic_observatory = {
+    area = society
+    category = {
+        psionics
+    }
+    cost = @pw_research_tech_cost_3
+    tier = 5
+    prerequisites = {
+        pw_tech_domed_city
+    }
+    weight = 0
+    is_rare = yes
+    potential = {
+        any_owned_planet = {
+            pw_planet_has_domed_city = yes
+        }
+    }
+    ai_weight = {
+        factor = @pw_tech_ai_weight
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = society
+                has_trait = leader_trait_expertise_psionics
+            }
+        }
+    }
+}

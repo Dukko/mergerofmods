@@ -1,0 +1,20 @@
+trait_pc_elven_sanctuary_preference = {
+    icon = "gfx/interface/icons/traits/trait_pc_ring_preference.dds"
+    initial = no
+    randomized = no
+    modification = no
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+    }
+    species_potential_add = {
+        always = no
+    }
+    sorting_priority = 30
+    modifier = {
+        pc_elven_sanctuary_habitability = 1
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

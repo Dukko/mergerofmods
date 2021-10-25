@@ -1,0 +1,51 @@
+tech_fe_institute = {
+    area = physics
+    tier = 6
+    cost = @acot_tier6cost3
+    category = {
+        computing
+    }
+    prerequisites = {
+        "tech_global_research_initiative"
+        "tech_dark_matter_power_core"
+        "tech_enigmatic_lab"
+    }
+    weight = @tier5weight1
+    potential = {
+        NOT = {
+            has_global_flag = acot_building_forbidden
+        }
+    }
+    weight_modifier = {
+        factor = 1.5
+        modifier = {
+            factor = 0.25
+            NOR = {
+                research_leader = {
+                    area = physics
+                    has_trait = "leader_trait_expertise_computing"
+                }
+                research_leader = {
+                    area = physics
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+}

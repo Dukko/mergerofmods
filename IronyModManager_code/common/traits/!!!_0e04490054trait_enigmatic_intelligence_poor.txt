@@ -1,0 +1,23 @@
+trait_enigmatic_intelligence_poor = {
+    cost = 0
+    initial = no
+    randomized = no
+    modification = no
+    improves_leaders = yes
+    advanced_trait = yes
+    opposites = {
+        "trait_intelligent"
+        "trait_additrait_easily_distracted"
+        "trait_additrait_simple_minded"
+        "trait_additrait_multitasking"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    modifier = {
+        planet_jobs_engineering_research_produces_mult = 0.1
+        planet_jobs_physics_research_produces_mult = 0.1
+        planet_jobs_society_research_produces_mult = 0.1
+    }
+}

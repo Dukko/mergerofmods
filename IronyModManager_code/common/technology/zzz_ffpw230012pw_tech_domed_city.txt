@@ -1,0 +1,71 @@
+pw_tech_domed_city = {
+    area = society
+    cost = @pw_tech_cost_2
+    tier = 4
+    category = {
+        statecraft
+    }
+    prerequisites = {
+        pw_tech_planetary_mega_engineering
+        tech_society_3
+    }
+    weight = @tier4weight3
+    is_rare = yes
+    weight_modifier = {
+        factor = @pw_tech_weight_mod
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = society
+                has_trait = leader_trait_expertise_statecraft
+            }
+        }
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = society
+                has_trait = leader_trait_spark_of_genius
+            }
+        }
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = society
+                has_trait = leader_trait_curator
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = @federation_perk_factor
+            has_federation = yes
+            federation = {
+                has_federation_perk = rare_tech_boost
+                any_member = {
+                    has_technology = pw_tech_domed_city
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            research_leader = {
+                area = society
+                species = {
+                    has_trait = trait_natural_sociologists
+                }
+            }
+        }
+    }
+    ai_weight = {
+        factor = @pw_tech_ai_weight
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = leader_trait_expertise_statecraft
+            }
+        }
+    }
+}

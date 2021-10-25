@@ -1,0 +1,16 @@
+trait_additrait_lazy = {
+    cost = -2
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    modifier = {
+        planet_jobs_minerals_produces_mult = -0.15
+    }
+    opposites = {
+        "trait_industrious"
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

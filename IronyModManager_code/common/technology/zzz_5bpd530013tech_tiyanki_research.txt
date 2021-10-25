@@ -1,0 +1,47 @@
+tech_tiyanki_research = {
+    icon = tech_tiyanki_research
+    cost = @tier1cost3
+    area = society
+    tier = 1
+    category = {
+        biology
+    }
+    prerequisites = {
+        "tech_basic_industry"
+    }
+    weight = @tier1weight3
+    is_rare = yes
+    is_reverse_engineerable = no
+    start_tech = no
+    modifier = {
+        planet_jobs_society_research_produces_mult = 0.1
+    }
+    weight_modifier = {
+        factor = 15
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    is_planet_class = pc_graveyard
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 5
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+tech_gpm_precursor_mines_discovery_2 = {
+    area = engineering
+    cost = @tier2cost1
+    category = {
+        industry
+    }
+    tier = 2
+    is_rare = yes
+    ai_update_type = all
+    weight = 1
+    modifier = {
+    }
+    weight_modifier = {
+        factor = 0
+    }
+}

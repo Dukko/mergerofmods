@@ -1,0 +1,60 @@
+pw_tech_panopticon_penal_industries = {
+    area = society
+    cost = @pw_panopticon_tech_cost
+    tier = 3
+    category = {
+        statecraft
+    }
+    prerequisites = {
+        pw_tech_utilitarian_vigilance
+    }
+    weight = @tier3weight2
+    potential = {
+        is_authoritarian = yes
+        any_owned_planet = {
+            has_active_building = pw_building_panopticon
+        }
+    }
+    modifier = {
+        custom_tooltip = pw_tech_panopticon_penal_industries_tooltip
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = society
+                has_trait = leader_trait_expertise_statecraft
+            }
+        }
+        modifier = {
+            factor = 1.25
+            is_authoritarian = yes
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_authoritarian
+        }
+        modifier = {
+            factor = 2
+            has_valid_civic = civic_police_state
+        }
+        modifier = {
+            factor = 1.5
+            has_valid_civic = civic_cutthroat_politics
+        }
+        modifier = {
+            factor = 0.25
+            has_valid_civic = civic_beacon_of_liberty
+        }
+    }
+    ai_weight = {
+        factor = @pw_tech_ai_weight
+        modifier = {
+            factor = 2
+            research_leader = {
+                area = society
+                has_trait = leader_trait_expertise_statecraft
+            }
+        }
+    }
+}

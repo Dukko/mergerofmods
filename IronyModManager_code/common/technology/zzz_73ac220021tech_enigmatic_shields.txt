@@ -1,0 +1,22 @@
+tech_enigmatic_shields = {
+    area = physics
+    category = {
+        field_manipulation
+    }
+    tier = 5
+    cost = @tier5cost2
+    weight = @tier5weight2
+    ai_update_type = all
+    potential = {
+        always = no
+        NOT = {
+            has_global_flag = acot_utilitys_forbidden
+        }
+    }
+    prerequisites = {
+        "tech_shields_5"
+        "tech_enigmatic_power_core"
+    }
+    weight_modifier = {
+    }
+}

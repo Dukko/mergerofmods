@@ -1,0 +1,33 @@
+GT_torpedo_speed_mult = {
+    cost = @tier3cost2
+    area = engineering
+    tier = 3
+    category = {
+        propulsion
+    }
+    prerequisites = {
+        "tech_torpedoes_1"
+    }
+    weight = @tier4weight2
+    modifier = {
+        weapon_type_explosive_speed_mult = 0.5
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_propulsion"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_propulsion"
+            }
+        }
+    }
+}

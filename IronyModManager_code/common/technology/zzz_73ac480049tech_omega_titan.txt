@@ -1,0 +1,47 @@
+tech_omega_titan = {
+    area = engineering
+    cost = @acot_tier10cost2
+    tier = 10
+    is_rare = yes
+    category = {
+        voidcraft
+    }
+    ai_update_type = military
+    weight = 0
+    prereqfor_desc = {
+        custom = {
+            title = "TECH_UNLOCK_OMEGA_TITAN_TITLE"
+            desc = "TECH_UNLOCK_OMEGA_TITAN_DESC"
+        }
+    }
+    potential = {
+        NOT = {
+            is_country_type = fallen_empire
+        }
+    }
+    modifier = {
+        shipsize_precursor_titan_hull_add = 5000
+    }
+    prerequisites = {
+        tech_precursor_titan
+        tech_lightmatter_reactor
+    }
+    ai_weight = {
+        factor = 5
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+}

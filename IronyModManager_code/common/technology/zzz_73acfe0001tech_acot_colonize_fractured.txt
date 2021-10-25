@@ -1,0 +1,32 @@
+tech_acot_colonize_fractured = {
+    cost = @acot_tier6cost3
+    area = society
+    tier = 6
+    category = {
+        new_worlds
+    }
+    prerequisites = {
+        tech_dark_matter_power_core
+        tech_sensors_dm
+    }
+    weight = 20
+    potential = {
+        any_planet_within_border = {
+            is_planet_class = pc_dark_fractured
+        }
+    }
+    modifier = {
+        pc_dark_fractured_habitability = 0.2
+    }
+    weight_modifier = {
+        factor = 1
+        modifier = {
+            factor = 0
+            NOT = {
+                any_planet_within_border = {
+                    is_planet_class = pc_dark_fractured
+                }
+            }
+        }
+    }
+}

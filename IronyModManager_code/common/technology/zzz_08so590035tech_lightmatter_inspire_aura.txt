@@ -1,0 +1,30 @@
+tech_lightmatter_inspire_aura = {
+    area = physics
+    cost = @acot_tier9cost2
+    tier = 9
+    category = {
+        computing
+    }
+    ai_update_type = military
+    is_rare = yes
+    is_reverse_engineerable = no
+    weight = 0
+    weight_modifier = {
+        factor = 0
+    }
+    potential = {
+        NOT = {
+            has_global_flag = acot_shipcom_forbidden
+        }
+        has_technology = tech_lightmatter_reactor
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "TECH_UNLOCK_INSPIRE_AURA_OE_TITLE"
+            desc = "TECH_UNLOCK_INSPIRE_AURA_OE_DESC"
+        }
+    }
+    ai_weight = {
+        factor = 200
+    }
+}

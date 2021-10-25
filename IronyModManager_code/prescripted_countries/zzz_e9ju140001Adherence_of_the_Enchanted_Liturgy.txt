@@ -1,0 +1,65 @@
+"Adherence of the Enchanted Liturgy" = {
+    key = "Adherence of the Enchanted Liturgy"
+    ship_prefix = ""
+    species = {
+        class = "MOL"
+        portrait = "mol2"
+        name = "Tymot"
+        plural = "Tymosh"
+        adjective = "Tymotic"
+        species_bio = "Those who follow the Divine Prescription of the Enchanted Liturgy with perfect precision open the doors of their minds to the Universe, and the doors of the Universe are opened them... at least, so teaches the Adherence. The native molluscoids of Naff'Lin, the Tymosh, live in neurosymbiosis with an eel-like creature. Their all-encompassing church promotes the belief that all sentient beings (and the economies that they generate) exist in a similar relationship with an otherworldly spirit known as the Invisible Tentacle. Contacting that spirit, which is most often attempted to win its favor in some material pursuit or another, is achieved through a series of complex rituals and investment decisions. The more financially advantageous those investments are to the Adherence, the greater the spiritual rapture... or so they say."
+        name_list = "just-name-lists_molluscoid4"
+        trait = "trait_nomadic"
+        trait = "trait_rapid_breeders"
+        trait = "trait_weak"
+    }
+    name = "Adherence of the Enchanted Liturgy"
+    adjective = "Tymotic"
+    authority = "auth_corporate"
+    government = "gov_megachurch"
+    planet_name = "Naff'Lin"
+    planet_class = "pc_mesa"
+    system_name = "Yulil"
+    initializer = ""
+    graphical_culture = "molluscoid_01"
+    city_graphical_culture = "molluscoid_01"
+    empire_flag = {
+        icon = {
+            category = "just-more-flags"
+            file = "flag_spiritualist6.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "fabric_circle.dds"
+        }
+        colors = {
+            "teal"
+            "light_green"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = female
+        name = "Kaabbea Ba Tuy"
+        portrait = "mol2"
+        texture = 0
+        hair = 0
+        clothes = 0
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "desert6_room"
+    spawn_enabled = yes
+    ethic = "ethic_xenophile"
+    ethic = "ethic_pacifist"
+    ethic = "ethic_spiritualist"
+    ethic = "ethic_fanatic_capitalism"
+    civics = {
+        "civic_brand_loyalty"
+        "civic_gospel_of_the_masses"
+        "civic_public_relations_specialists"
+    }
+    origin = "origin_default"
+}

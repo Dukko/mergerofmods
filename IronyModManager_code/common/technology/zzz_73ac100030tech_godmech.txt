@@ -1,0 +1,71 @@
+tech_godmech = {
+    cost = @acot_tier7cost2
+    area = engineering
+    category = {
+        industry
+    }
+    tier = 8
+    is_rare = yes
+    prerequisites = {
+        "tech_omni_warmech"
+    }
+    weight = 20
+    potential = {
+        has_authority = auth_machine_intelligence
+        NOT = {
+            has_global_flag = acot_army_forbidden
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0.5
+            is_country_type = default
+        }
+        modifier = {
+            factor = 0.1
+            NOR = {
+                research_leader = {
+                    area = engineering
+                    has_trait = "leader_trait_expertise_industry"
+                }
+                research_leader = {
+                    area = engineering
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_spark_of_genius"
+            }
+        }
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = engineering
+                has_level > 4
+            }
+        }
+        modifier = {
+            factor = 0.75
+            NOT = {
+                research_leader = {
+                    area = engineering
+                    has_level > 3
+                }
+            }
+        }
+    }
+    ai_weight = {
+        factor = 3
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+}

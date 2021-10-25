@@ -1,0 +1,19 @@
+att_trait_shock_lv1 = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/att_trait_shock_lv1.dds"
+    sorting_priority = -5
+    modifier = {
+        force_disparity_fire_rate_mult = 0.1
+        ship_disengage_chance_mult = 0.05
+    }
+    custom_tooltip = att_trait_shock_lv1.tooltip
+    initial = no
+    randomized = no
+    leader_trait = {
+        admiral
+    }
+    leader_class = {
+        admiral
+    }
+}

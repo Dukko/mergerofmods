@@ -1,0 +1,67 @@
+"Ten Triads of Great Zeizok" = {
+    key = "Ten Triads of Great Zeizok"
+    ship_prefix = ""
+    species = {
+        class = "HUM"
+        portrait = "humanoid_hp_12"
+        name = "Zeizok"
+        plural = "Zeizox"
+        adjective = "Zeizoki"
+        species_bio = "The Zeizox, a native species of Gog, were genetically modified by an unknown precursor civilization several millennia ago in an abortive attempt to breed a race of slave soldiers. In the age since, brutal Zeizoki kleptocracies have vied for dominance of their homeworld in a never ending series of increasingly destructive wars. They would have likely wiped themselves out within a few more centuries were it not for a large nomad starship crashing on Gog mostly intact. The tech salvaged from this ship transformed Zeizoki fortunes, opening up space and the hyperlane network, but left their culture unchanged. Their quasi-tribal groups, little better than gangs on a planetary scale, now look to the stars as a source of adventure and plunder."
+        name_list = "just-name-lists_humanoid2"
+        trait = "trait_nomadic"
+        trait = "trait_just-more-traits_tenacious"
+        trait = "trait_just-more-traits_unbreakable"
+        trait = "trait_just-more-traits_dimwitted"
+        trait = "trait_quarrelsome"
+    }
+    name = "Ten Triads of Great Zeizok"
+    adjective = "Zeizoki"
+    authority = "auth_oligarchic"
+    government = "gov_bandit_commune"
+    planet_name = "Gog"
+    planet_class = "pc_hajungle"
+    system_name = "Zangush"
+    initializer = ""
+    graphical_culture = "fungoid_01"
+    city_graphical_culture = "mammalian_01"
+    empire_flag = {
+        icon = {
+            category = "just-more-flags"
+            file = "flag_militarist6.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "fabric_circle.dds"
+        }
+        colors = {
+            "green"
+            "dark_green"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = male
+        name = "Sagu, son of Imat"
+        portrait = "humanoid_hp_12"
+        texture = 3
+        hair = 0
+        clothes = 4
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "plantoid7_room"
+    spawn_enabled = yes
+    ethic = "ethic_xenophobe"
+    ethic = "ethic_fanatic_militarist"
+    ethic = "ethic_materialist"
+    ethic = "ethic_capitalism"
+    civics = {
+        "civic_barbaric_despoilers"
+        "civic_warrior_culture"
+        "civic_private_militaries"
+    }
+    origin = "origin_shoulders_of_giants"
+}

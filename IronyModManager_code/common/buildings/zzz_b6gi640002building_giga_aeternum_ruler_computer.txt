@@ -1,0 +1,44 @@
+building_giga_aeternum_ruler_computer = {
+    capital = no
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = no
+    ai_weight = {
+        weight = 0
+    }
+    potential = {
+        always = no
+    }
+    planet_modifier = {
+        planet_jobs_physics_research_produces_mult = 1
+        planet_jobs_society_research_produces_mult = 1
+        planet_jobs_engineering_research_produces_mult = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            owner = {
+                is_regular_birch_empire = yes
+            }
+        }
+        job_head_researcher_add = 10
+    }
+    triggered_planet_modifier = {
+        potential = {
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        job_brain_drone_add = 25
+    }
+    triggered_planet_modifier = {
+        potential = {
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        job_calculator_add = 25
+    }
+    country_modifier = {
+        all_technology_research_speed = 1
+    }
+}

@@ -1,0 +1,33 @@
+trait_blokkat_keen = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/trait_blokkat_keen.dds"
+    leader_trait = all
+    immortal_leaders = yes
+    self_modifier = {
+        species_leader_exp_gain = 2
+    }
+    modifier = {
+        ship_anomaly_research_speed_mult = 0.5
+        ship_anomaly_generation_chance_mult = 0.5
+        ship_archaeological_site_excavation_speed_mult = 0.3
+        ship_engagement_range_mult = 0.3
+        ship_weapon_range_mult = 0.3
+        ship_base_speed_mult = 0.3
+        planet_jobs_unity_produces_mult = 0.25
+        army_collateral_damage_mult = 1
+        army_morale = 1
+    }
+    leader_class = {
+        governor
+        scientist
+        admiral
+        general
+        ruler
+    }
+    initial = no
+    randomized = no
+    ai_weight = {
+        weight = 0
+    }
+}

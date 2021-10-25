@@ -1,0 +1,88 @@
+gpm_tech_ringworld_simulators = {
+    cost = @tier5cost3
+    area = physics
+    tier = 5
+    category = {
+        computing
+    }
+    prerequisites = {
+        tech_mega_engineering
+    }
+    is_rare = yes
+    weight = @tier5weight3
+    modifier = {
+        custom_tooltip = gpm_tech_ringworld_simulators_tt
+    }
+    potential = {
+        any_planet_within_border = {
+            is_planet_class = pc_ringworld_habitable
+            is_colony = yes
+        }
+        NOR = {
+            has_ethic = ethic_fanatic_pacifist
+            has_ethic = ethic_pacifist
+        }
+    }
+    weight_modifier = {
+        factor = 0.5
+        modifier = {
+            factor = 0.5
+            NOT = {
+                research_leader = {
+                    area = society
+                    has_trait = "leader_trait_expertise_computing"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 2
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+        modifier = {
+            factor = 2
+            research_leader = {
+                area = society
+                has_level > 4
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = 2
+            has_ethic = "ethic_materialist"
+        }
+        modifier = {
+            factor = 3
+            has_ethic = "ethic_fanatic_materialist"
+        }
+    }
+    ai_weight = {
+        factor = 5
+        modifier = {
+            factor = 1.5
+            is_spiritualist = yes
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+}

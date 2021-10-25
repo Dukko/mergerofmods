@@ -1,0 +1,29 @@
+tech_darkmatter_afterburners_pe = {
+    area = engineering
+    category = {
+        propulsion
+    }
+    cost = @acot_tier10cost1
+    tier = 10
+    weight = 0
+    ai_update_type = all
+    is_rare = yes
+    is_reverse_engineerable = no
+    potential = {
+        NOT = {
+            has_global_flag = acot_aux_forbidden
+        }
+        has_technology = tech_dark_matter_power_core_pe
+        NOT = {
+            has_global_flag = acot_phanon_forbidden
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_technology = tech_dark_matter_power_core_pe
+            }
+        }
+    }
+}

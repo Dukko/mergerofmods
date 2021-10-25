@@ -1,0 +1,48 @@
+exmetatechnician = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_power_plant
+    clothes_texture_index = 3
+    possible = {
+        specialist_job_check_trigger = yes
+    }
+    resources = {
+        category = planet_technician
+        produces = {
+            energy = 8
+            physics_research = 6
+        }
+    }
+    weight = {
+        weight = @specialist_job_weight
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+        }
+        modifier = {
+            factor = 3
+            OR = {
+                has_trait = trait_ex_high_caste
+            }
+        }
+        modifier = {
+            factor = 1.75
+            OR = {
+                has_trait = trait_robot_superconductive
+                has_trait = trait_ingenious
+                has_trait = trait_nuumismatic_administration
+            }
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+                has_trait = trait_natural_physicists
+                has_trait = trait_ex_physics_focus
+            }
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+    }
+}

@@ -1,0 +1,54 @@
+acot_free_thinker = {
+    category = worker
+    building_icon = building_dm_ancient_palace
+    clothes_texture_index = 1
+    icon = researcher
+    is_capped_by_modifier = no
+    possible_pre_triggers = {
+        has_owner = yes
+    }
+    possible = {
+        planet = {
+            has_modifier = acot_modifier_free_thinker
+        }
+    }
+    planet_modifier = {
+    }
+    country_modifier = {
+    }
+    resources = {
+        category = planet_jobs
+        produces = {
+            society_research = 1
+            engineering_research = 1
+            physics_research = 1
+        }
+        upkeep = {
+            consumer_goods = 2
+        }
+    }
+    weight = {
+        weight = 100
+        modifier = {
+            factor = 0
+            NOT = {
+                is_unemployed = yes
+            }
+        }
+        modifier = {
+            factor = 0
+            planet = {
+                free_jobs >= 1
+            }
+        }
+        modifier = {
+            factor = 0.01
+            planet.controller = {
+                OR = {
+                    is_country_type = swarm
+                    is_country_type = ai_empire
+                }
+            }
+        }
+    }
+}

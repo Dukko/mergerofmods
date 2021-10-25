@@ -1,0 +1,43 @@
+district_shadowgate_staging_area = {
+    base_buildtime = 360
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        uses_district_set = shadowgate
+    }
+    potential = {
+        uses_district_set = shadowgate
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            alloys = 200
+        }
+        upkeep = {
+            energy = 2
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 4
+        planet_amenities_add = 3
+        planet_max_buildings_add = 2
+        job_shadowgate_researcher_add = 1
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 5
+            free_amenities < 2
+        }
+        modifier = {
+            weight = 5
+            free_amenities < 0
+        }
+        modifier = {
+            factor = 0
+            num_districts = {
+                type = district_shadowgate_staging_area
+                value >= 3
+            }
+        }
+    }
+}

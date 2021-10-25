@@ -1,0 +1,38 @@
+tech_point_defense_pe = {
+    area = physics
+    category = {
+        computing
+    }
+    cost = @acot_tier10cost1
+    tier = 10
+    weight = 0
+    ai_update_type = military
+    is_reverse_engineerable = no
+    is_rare = yes
+    potential = {
+        NOT = {
+            has_global_flag = acot_weapons_forbidden
+        }
+        has_technology = tech_dark_matter_power_core_pe
+        NOT = {
+            has_global_flag = acot_phanon_forbidden
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_technology = tech_dark_matter_power_core_pe
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+}

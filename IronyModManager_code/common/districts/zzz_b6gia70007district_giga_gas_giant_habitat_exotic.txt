@@ -1,0 +1,79 @@
+@giga_gas_giant_habitat_cost = 400
+@giga_gas_giant_habitat_upkeep_energy_heavy = 3
+@giga_gas_giant_habitat_district_buildtime = 220
+district_giga_gas_giant_habitat_exotic = {
+    base_buildtime = @giga_gas_giant_habitat_district_buildtime
+    is_capped_by_modifier = yes
+    show_on_uncolonized = {
+        uses_district_set = giga_gas_giant_habitat
+    }
+    potential = {
+        uses_district_set = giga_gas_giant_habitat
+    }
+    conversion_ratio = 0.5
+    convert_to = {
+        district_giga_gas_giant_habitat_city
+        district_giga_gas_giant_habitat_hive
+        district_giga_gas_giant_habitat_nexus
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @giga_gas_giant_habitat_cost
+        }
+        upkeep = {
+            energy = @giga_gas_giant_habitat_upkeep_energy_heavy
+        }
+    }
+    triggered_planet_modifier = {
+        modifier = {
+            planet_housing_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_giga_gas_harvester_fixed_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_giga_gas_harvester_drone_fixed_add = 3
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        text = "job_giga_gas_harvester_effect_desc"
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = "job_giga_gas_harvester_drone_effect_desc"
+    }
+    ai_resource_production = {
+        exotic_gases = 6
+        trigger = {
+            always = yes
+        }
+    }
+}

@@ -1,0 +1,22 @@
+building_aspmod_primitive_mine = {
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = no
+    icon = building_primitive_mine
+    resources = {
+        category = planet_buildings
+        produces = {
+            minerals = 6
+        }
+    }
+    destroy_trigger = {
+        if = {
+            limit = {
+                exists = owner
+            }
+            owner = {
+                is_ai = yes
+            }
+        }
+    }
+}

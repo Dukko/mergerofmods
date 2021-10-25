@@ -1,0 +1,167 @@
+@b1_jobs = 1
+building_fiiral_econ_compact_mine_1 = {
+    base_buildtime = @b1_time
+    category = resource
+    potential = {
+        exists = owner
+        NOT = {
+            is_planet_class = pc_habitat
+        }
+        NOT = {
+            is_planet_class = pc_city
+        }
+        NOT = {
+            is_planet_class = pc_relic
+        }
+        NOT = {
+            is_planet_class = pc_ringworld_habitable
+        }
+        NOT = {
+            has_modifier = resort_colony
+        }
+    }
+    allow = {
+        buildings_simple_allow = yes
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                is_fallen_empire_spiritualist = no
+            }
+        }
+        modifier = {
+            job_miner_add = @b1_jobs
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_fallen_empire_spiritualist = yes
+            }
+        }
+        modifier = {
+            job_fe_acolyte_mine_add = @b1_jobs
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_mining_drone_add = @b1_jobs
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b1_minerals
+        }
+        upkeep = {
+            energy = 2
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_mining_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire_spiritualist = no
+            }
+        }
+        text = job_miner_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_fallen_empire_spiritualist = yes
+            }
+        }
+        text = job_fe_acolyte_mine_effect_desc
+    }
+    prerequisites = {
+        "tech_fiiral_econ_mining_network_1"
+    }
+    upgrades = {
+        building_fiiral_econ_compact_mine_2
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 10
+            NOR = {
+                is_planet_class = pc_city
+                is_planet_class = pc_relic
+            }
+            OR = {
+                free_jobs < 3
+                buildings_unemployed = yes
+            }
+            OR = {
+                num_free_districts = {
+                    type = district_mining
+                    value = 0
+                }
+                free_district_slots = 0
+            }
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 0
+                }
+            }
+        }
+        modifier = {
+            weight = 20
+            OR = {
+                free_housing > 3
+                owner = {
+                    is_gestalt = no
+                }
+            }
+            OR = {
+                free_jobs < 3
+                buildings_unemployed = yes
+            }
+            OR = {
+                owner = {
+                    has_monthly_income = {
+                        resource = minerals
+                        value < 50
+                    }
+                }
+                has_building = building_hydroponics_farm
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value > 100
+                }
+            }
+        }
+    }
+    ai_resource_production = {
+        minerals = 1
+        trigger = {
+            always = yes
+        }
+    }
+}

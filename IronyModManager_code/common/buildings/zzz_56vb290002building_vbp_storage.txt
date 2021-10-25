@@ -1,0 +1,21 @@
+building_vbp_storage = {
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = no
+    icon = building_drone_storage
+    potential = {
+        exists = owner
+        owner = {
+            is_country_type = vbp_machine
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 30
+    }
+    destroy_trigger = {
+        exists = owner
+        owner = {
+            is_primitive = no
+        }
+    }
+}

@@ -1,0 +1,27 @@
+lrsk_gov_var_leader_trait_scientist_esper = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/lrsk_gov_var_leader_trait_esper.dds"
+    modifier = {
+        all_technology_research_speed = 0.05
+        category_psionics_research_speed_mult = 0.05
+        science_ship_survey_speed = 0.2
+    }
+    leader_trait = {
+        scientist
+    }
+    leader_class = {
+        scientist
+    }
+    initial = no
+    randomized = no
+    ai_categories = {
+        survey
+        physics
+        society
+        engineering
+    }
+    ai_weight = {
+        weight = 100
+    }
+}

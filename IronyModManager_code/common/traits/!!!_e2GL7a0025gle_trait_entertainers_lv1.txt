@@ -1,0 +1,19 @@
+gle_trait_entertainers_lv1 = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/gle_trait_entertainer_lv1.dds"
+    modifier = {
+        job_entertainer_add = 1
+        planet_entertainers_unity_produces_add = 1
+        planet_amenities_mult = 0.05
+    }
+    sorting_priority = 10
+    initial = no
+    randomized = no
+    leader_trait = {
+        governor
+    }
+    leader_class = {
+        governor
+    }
+}

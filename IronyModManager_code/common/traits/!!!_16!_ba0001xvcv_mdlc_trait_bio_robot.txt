@@ -1,0 +1,11 @@
+xvcv_mdlc_trait_bio_robot = {
+    cost = 0
+    allowed_archetypes = {
+        XVCV_MDLC_BIO_ROBOT
+    }
+    sorting_priority = 20
+    initial = no
+    randomized = no
+    modification = no
+    improves_leaders = yes
+}

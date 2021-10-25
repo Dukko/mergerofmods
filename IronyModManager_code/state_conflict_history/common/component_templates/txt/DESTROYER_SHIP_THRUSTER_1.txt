@@ -1,0 +1,31 @@
+@destroyer_power_1 = -20
+@destroyer_cost1 = 6
+utility_component_template = {
+    key = "DESTROYER_SHIP_THRUSTER_1"
+    size = small
+    icon = "GFX_ship_part_thruster_1"
+    icon_frame = 1
+    power = @destroyer_power_1
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @destroyer_cost1
+        }
+    }
+    modifier = {
+    }
+    prerequisites = {
+        "tech_thrusters_1"
+    }
+    component_set = "thruster_components"
+    size_restriction = {
+        destroyer
+        crisis_destroyer
+        pirate_destroyer
+        marauder_destroyer
+    }
+    upgrades_to = "DESTROYER_SHIP_THRUSTER_2"
+    ai_weight = {
+        weight = 1
+    }
+}

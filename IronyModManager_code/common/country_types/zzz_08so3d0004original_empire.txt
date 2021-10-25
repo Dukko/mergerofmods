@@ -1,0 +1,50 @@
+original_empire = {
+    attack_unarmed_orbital_stations = yes
+    has_difficulty_bonuses = no
+    has_capital = no
+    destroys_starbases = yes
+    pop_growth = no
+    show_in_contacts_list = yes
+    enforces_borders = no
+    share_survey_data = no
+    end_game_crisis = yes
+    can_own_empty_planets = yes
+    share_communications = yes
+    counts_for_victory = yes
+    has_complete_sensor = yes
+    can_have_their_comms_shared = yes
+    custom_starbase = origin_super_citadel
+    observable = yes
+    needs_survey = no
+    sub_title = "COUNTRY_ORIGINAL_EMPIRE"
+    sub_title_desc = "COUNTRY_ORIGINAL_EMPIRE_DESC"
+    custom_diplomacy = yes
+    targets = {
+        fallen_empire
+        awakened_fallen_empire
+    }
+    faction = {
+        hostile = yes
+        needs_border_access = no
+        generate_borders = yes
+        needs_colony = no
+        auto_delete = no
+    }
+    ai = {
+        enabled = yes
+        modules = {
+            berserk_military_minister_module
+        }
+    }
+    modules = {
+        all_technology_module = {
+        }
+        standard_leader_module = {
+        }
+        exclusive_diplomacy_module = {
+            contact_rule = always
+        }
+        standard_event_module = {
+        }
+    }
+}

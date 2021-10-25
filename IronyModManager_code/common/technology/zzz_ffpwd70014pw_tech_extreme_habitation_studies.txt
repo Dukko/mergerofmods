@@ -1,0 +1,32 @@
+pw_tech_extreme_habitation_studies = {
+    area = society
+    category = {
+        new_worlds
+    }
+    cost = @pw_research_tech_cost_1
+    tier = 5
+    prerequisites = {
+        pw_tech_domed_city
+    }
+    weight = 0
+    is_rare = yes
+    potential = {
+        any_owned_planet = {
+            pw_planet_has_domed_city = yes
+        }
+    }
+    modifier = {
+        pop_environment_tolerance = 0.05
+        planet_colony_development_speed_mult = 0.2
+    }
+    ai_weight = {
+        factor = @pw_tech_ai_weight
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = leader_trait_expertise_new_worlds
+            }
+        }
+    }
+}

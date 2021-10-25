@@ -1,0 +1,61 @@
+fallen_empire_2 = {
+    graphical_culture = "fallen_empire_01"
+    initializer = "fallen_2"
+    weight_modifier = {
+        base = 100
+        modifier = {
+            factor = 99999
+            has_origin = origin_scion
+        }
+    }
+    create_country_effect = {
+        create_species = {
+            name = random
+            class = random_non_machine
+            portrait = random
+            traits = random
+            extra_trait_points = 6
+            allow_negative_traits = no
+            effect = {
+                save_global_event_target_as = fallen_2_species
+            }
+        }
+        create_country = {
+            name = random
+            type = fallen_empire
+            ignore_initial_colony_error = yes
+            authority = auth_imperial
+            civics = {
+                civic = civic_lethargic_leadership
+                civic = civic_empire_in_decline
+            }
+            species = last_created_species
+            ethos = {
+                ethic = ethic_fanatic_spiritualist
+                ethic = ethic_focused
+            }
+            flag = random
+            origin = "origin_fallen_empire"
+            effect = {
+                set_country_flag = fallen_empire_2
+                add_resource = {
+                    minerals = 1000000
+                    energy = 1000000
+                    food = 100000
+                    influence = 1000
+                    alloys = 10000
+                    acot_sr_dark_energy = 10000
+                    sr_dark_matter = 10000
+                }
+                add_global_ship_design = "NAME_Cleanser"
+                add_global_ship_design = "NAME_Eternal"
+                add_global_ship_design = "NAME_Avatar"
+                add_global_ship_design = "NAME_Zealot"
+                add_global_ship_design = "NAME_Penitent"
+                add_global_ship_design = "NAME_Faith"
+                add_global_ship_design = "NAME_Pilgrim"
+                add_global_ship_design = "NAME_FE_Starbase"
+            }
+        }
+    }
+}

@@ -1,0 +1,8 @@
+random_list = {
+    name = "yellow_supergiant"
+    planets = {
+        "pc_g_super_star"
+        "pc_k_super_star"
+        "pc_m_super_star"
+    }
+}

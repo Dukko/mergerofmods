@@ -1,0 +1,39 @@
+tech_fe_machine_dome = {
+    cost = @acot_tier6cost2
+    area = engineering
+    tier = 6
+    category = {
+        industry
+    }
+    prerequisites = {
+        tech_super_assembly
+    }
+    weight = @tier4weight2
+    potential = {
+        NOT = {
+            has_global_flag = acot_building_forbidden
+        }
+        has_ascension_perk = ap_synthetic_age
+        is_machine_empire = yes
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+                has_level > 2
+            }
+        }
+    }
+    ai_weight = {
+        weight = 2
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+}

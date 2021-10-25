@@ -1,0 +1,38 @@
+building_est_archivist_finish_archive = {
+    icon = "building_est_archivist_finish_archive"
+    base_buildtime = 360
+    base_cap_amount = 1
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 240
+        }
+        produces = {
+            unity = 3
+        }
+        upkeep = {
+            energy = 2
+        }
+    }
+    planet_modifier = {
+        planet_jobs_engineering_research_produces_mult = 0.1
+        planet_jobs_physics_research_produces_mult = 0.1
+        planet_jobs_society_research_produces_mult = 0.1
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    potential = {
+        planet = {
+            NOT = {
+                is_planet_class = pc_habitat
+            }
+        }
+        owner = {
+            has_tradition = tr_est_archivist_finish
+        }
+    }
+    ai_weight = {
+        factor = 15
+    }
+}

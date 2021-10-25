@@ -1,0 +1,50 @@
+tech_encryption_3 = {
+    area = physics
+    tier = 4
+    cost = @tier4cost3
+    category = {
+        computing
+    }
+    prerequisites = {
+        "tech_encryption_2"
+        "tech_physics_3"
+    }
+    weight = @tier4weight2
+    modifier = {
+        intel_encryption_add = 2
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+        modifier = {
+            factor = 0.1
+            NOR = {
+                is_ai = yes
+                has_country_flag = first_spynetwork
+            }
+        }
+    }
+    ai_weight = {
+        weight = 100
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+        modifier = {
+            factor = 10
+            years_passed > 100
+        }
+        modifier = {
+            factor = 10
+            years_passed > 125
+        }
+    }
+}

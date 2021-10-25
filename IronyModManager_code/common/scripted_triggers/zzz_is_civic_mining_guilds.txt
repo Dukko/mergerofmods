@@ -1,0 +1,10 @@
+is_civic_mining_guilds = {
+    OR = {
+        has_valid_civic = civic_mining_guilds
+        has_valid_civic = civic_industrial_economy
+        has_valid_civic = civic_machine_rockbreakers
+        has_valid_civic = civic_mining_company
+        has_valid_civic = civic_mineral_hoarders
+        has_origin = origin_exploited_homeworld
+    }
+}

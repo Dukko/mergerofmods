@@ -1,0 +1,51 @@
+tech_negative_mass_enrichment = {
+    area = physics
+    cost = @tier6cost1
+    weight = @tier6weight1
+    tier = 4
+    category = {
+        particles
+    }
+    prerequisites = {
+        "tech_physics_3"
+        "tech_ehof_phase_02"
+    }
+    modifier = {
+        station_gatherers_ehof_sr_negative_mass_produces_mult = 0.2
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0.1
+            years_passed < 50
+        }
+        modifier = {
+            factor = 2
+            years_passed > 60
+        }
+        modifier = {
+            factor = 3
+            years_passed > 70
+        }
+        modifier = {
+            factor = 4
+            years_passed > 80
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+    ai_weight = {
+        factor = @ehof_t1_weight
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+}

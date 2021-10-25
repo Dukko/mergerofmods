@@ -1,0 +1,113 @@
+tech_pse_leader_1 = {
+    cost = @tier3cost1
+    area = society
+    tier = 3
+    category = {
+        psionics
+    }
+    prerequisites = {
+        "tech_pse_power_1"
+    }
+    weight = @tier4weight1
+    is_reverse_engineerable = no
+    is_rare = yes
+    prereqfor_desc = {
+        feature = {
+            title = feature_pse_leader_feature
+            desc = feature_pse_leader_feature_desc
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.5
+            any_owned_leader = {
+                OR = {
+                    has_trait = leader_trait_ruler_chosen
+                    has_trait = leader_trait_admiral_chosen
+                    has_trait = leader_trait_governor_chosen
+                    has_trait = leader_trait_general_chosen
+                    has_trait = leader_trait_admiral_chosen
+                    has_trait = leader_trait_scientist_chosen
+                    has_trait = leader_trait_ruler_psionic
+                    has_trait = leader_trait_admiral_psionic
+                    has_trait = leader_trait_governor_psionic
+                    has_trait = leader_trait_general_psionic
+                    has_trait = leader_trait_admiral_psionic
+                    has_trait = leader_trait_scientist_psionic
+                }
+            }
+        }
+        modifier = {
+            factor = 0.25
+            NOT = {
+                research_leader = {
+                    area = society
+                    has_trait = "leader_trait_scientist_psionic"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 2
+                has_trait = "leader_trait_expertise_psionics"
+            }
+        }
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_psionics"
+            }
+        }
+        modifier = {
+            factor = 2
+            research_leader = {
+                area = society
+                has_level > 4
+                has_trait = "leader_trait_expertise_psionics"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_level > 5
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = 2
+            has_ethic = "ethic_spiritualist"
+        }
+        modifier = {
+            factor = 3
+            has_ethic = "ethic_fanatic_spiritualist"
+        }
+        modifier = {
+            factor = 4
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_maniacal"
+            }
+        }
+    }
+    modifier = {
+        description = tech_pse_leader_1_tooltip
+    }
+    ai_weight = {
+        factor = 5
+        modifier = {
+            factor = 2.5
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_psionics"
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+tech_fiiral_tech_space_science_7 = {
+    cost = @tier4cost3
+    area = physics
+    tier = 4
+    category = {
+        computing
+    }
+    prerequisites = {
+        "tech_fiiral_tech_space_science_6"
+    }
+    weight = @tier4weight3
+    modifier = {
+        station_researchers_produces_mult = 0.5
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+}

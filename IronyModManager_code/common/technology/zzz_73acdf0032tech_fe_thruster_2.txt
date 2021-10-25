@@ -1,0 +1,39 @@
+tech_fe_thruster_2 = {
+    area = engineering
+    category = {
+        propulsion
+    }
+    cost = @acot_tier7cost1
+    tier = 7
+    weight = @tier5weight2
+    ai_update_type = all
+    is_rare = yes
+    potential = {
+        NOT = {
+            has_global_flag = acot_shipcom_forbidden
+        }
+        NOT = {
+            is_country_type = fallen_empire
+        }
+        has_technology = tech_dark_matter_power_core_ae
+    }
+    prerequisites = {
+        "tech_dark_matter_propulsion"
+        "tech_dark_matter_power_core_ae"
+    }
+    prereqfor_desc = {
+        hide_prereq_for_desc = component
+        custom = {
+            title = "TECH_UNLOCK_FE_THRUSTER_TITLE"
+            desc = "TECH_UNLOCK_FE_THRUSTER_DESC"
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_technology = tech_dark_matter_power_core_ae
+            }
+        }
+    }
+}

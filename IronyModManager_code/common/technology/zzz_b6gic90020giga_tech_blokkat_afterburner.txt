@@ -1,0 +1,20 @@
+giga_tech_blokkat_afterburner = {
+    cost = 1000000
+    area = engineering
+    tier = 5
+    category = {
+        blokkats
+    }
+    is_rare = yes
+    weight = 0
+    is_reverse_engineerable = no
+    modifier = {
+        ship_speed_mult = 0.1
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "giga_tech_blokkat_knowledge_50_chance"
+            desc = "giga_tech_blokkat_knowledge_50_chance"
+        }
+    }
+}

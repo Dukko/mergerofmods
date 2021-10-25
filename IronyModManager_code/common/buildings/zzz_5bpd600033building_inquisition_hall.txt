@@ -1,0 +1,79 @@
+building_inquisition_hall = {
+    base_buildtime = @b1_time
+    base_cap_amount = 1
+    category = government
+    potential = {
+        owner = {
+            has_civic = civic_pdinquisition
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+    }
+    allow = {
+        hidden_trigger = {
+            or = {
+                owner = {
+                    is_ai = no
+                }
+                and = {
+                    planet_crime > 40
+                    owner = {
+                        str_raw_ecocrisis_level_1 = no
+                    }
+                    num_pops > 20
+                    not = {
+                        has_modifier = crime_lord_deal
+                    }
+                    not = {
+                        has_planet_flag = str_just_removed_precinct
+                    }
+                    num_buildings = {
+                        type = building_precinct_house
+                        value < 2
+                    }
+                }
+            }
+        }
+    }
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            NOT = {
+                owner = {
+                    has_civic = civic_pdinquisition
+                }
+            }
+            AND = {
+                owner = {
+                    is_ai = yes
+                }
+                has_modifier = crime_lord_deal
+            }
+        }
+    }
+    planet_modifier = {
+        job_inquisitor_add = 2
+        planet_stability_add = 5
+        pop_cat_worker_happiness = -0.05
+        pop_cat_worker_political_power = -0.1
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b1_minerals
+        }
+        upkeep = {
+            energy = 2
+        }
+    }
+    triggered_desc = {
+        text = job_inquisitor_effect_desc
+    }
+    show_tech_unlock_if = {
+        is_regular_empire = yes
+    }
+    upgrades = {
+        building_inquisition_fortress
+    }
+}

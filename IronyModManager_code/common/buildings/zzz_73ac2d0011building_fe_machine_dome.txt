@@ -1,0 +1,77 @@
+building_fe_machine_dome = {
+    base_buildtime = 360
+    base_cap_amount = 1
+    category = government
+    planet_modifier = {
+        planet_jobs_complex_drone_produces_mult = 0.05
+        planet_jobs_simple_drone_produces_mult = 0.05
+    }
+    triggered_planet_modifier = {
+        potential = {
+            num_pops >= 50
+        }
+        planet_jobs_complex_drone_produces_mult = 0.05
+        planet_jobs_simple_drone_produces_mult = 0.05
+    }
+    triggered_planet_modifier = {
+        potential = {
+            num_pops >= 100
+        }
+        planet_jobs_complex_drone_produces_mult = 0.05
+        planet_jobs_simple_drone_produces_mult = 0.05
+    }
+    triggered_planet_modifier = {
+        potential = {
+            num_pops >= 150
+        }
+        planet_jobs_complex_drone_produces_mult = 0.05
+        planet_jobs_simple_drone_produces_mult = 0.05
+    }
+    triggered_planet_modifier = {
+        potential = {
+            num_pops >= 200
+        }
+        planet_jobs_complex_drone_produces_mult = 0.05
+        planet_jobs_simple_drone_produces_mult = 0.05
+    }
+    allow = {
+        has_enigmatic_capital = yes
+    }
+    resources = {
+        category = planet_buildings
+        produces = {
+        }
+        cost = {
+            minerals = 250
+            sr_dark_matter = 100
+            acot_sr_dark_energy = 100
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    NOT = {
+                        has_technology = tech_acot_fractured_autoharvesting
+                    }
+                }
+            }
+            sr_dark_matter = 5
+            acot_sr_dark_energy = 5
+        }
+    }
+    upgrades = {
+        building_ae_machine_dome
+    }
+    prerequisites = {
+        tech_fe_machine_dome
+    }
+    ai_weight = {
+        weight = 10000
+        modifier = {
+            factor = 0
+            OR = {
+                has_building = building_fe_machine_dome
+                has_building = building_ae_machine_dome
+            }
+        }
+    }
+}

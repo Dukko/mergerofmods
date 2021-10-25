@@ -1,0 +1,33 @@
+@cruiser_power_3 = -80
+@cruiser_cost3 = 36
+utility_component_template = {
+    key = "CRUISER_SHIP_THRUSTER_3"
+    size = small
+    icon = "GFX_ship_part_thruster_3"
+    icon_frame = 1
+    power = @cruiser_power_3
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @cruiser_cost3
+        }
+    }
+    modifier = {
+        ship_base_speed_mult = 0.3
+        ship_evasion_add = 6
+    }
+    prerequisites = {
+        "tech_thrusters_3"
+    }
+    component_set = "thruster_components"
+    size_restriction = {
+        cruiser
+        crisis_cruiser
+        pirate_cruiser
+        marauder_cruiser
+    }
+    upgrades_to = "CRUISER_SHIP_THRUSTER_4"
+    ai_weight = {
+        weight = 3
+    }
+}

@@ -1,0 +1,21 @@
+giga_tech_blokkat_sensors = {
+    cost = 1000000
+    area = physics
+    tier = 5
+    category = {
+        blokkats
+    }
+    is_rare = yes
+    weight = 0
+    is_reverse_engineerable = no
+    modifier = {
+        ship_engagement_range_mult = 0.1
+        ship_tracking_mult = 0.1
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "giga_tech_blokkat_knowledge_50_chance"
+            desc = "giga_tech_blokkat_knowledge_50_chance"
+        }
+    }
+}

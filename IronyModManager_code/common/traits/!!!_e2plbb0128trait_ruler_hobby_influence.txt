@@ -1,0 +1,19 @@
+trait_ruler_hobby_influence = {
+    cost = 0
+    leader_trait = {
+        ruler
+    }
+    leader_class = {
+        ruler
+    }
+    self_modifier = {
+    }
+    modifier = {
+        country_base_influence_produces_add = 1
+        pop_factions_produces_mult = 0.1
+        diplo_weight_mult = 0.05
+    }
+    initial = no
+    modification = no
+    randomized = no
+}

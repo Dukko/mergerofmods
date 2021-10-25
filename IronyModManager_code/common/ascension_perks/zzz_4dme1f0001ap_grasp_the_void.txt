@@ -1,0 +1,108 @@
+ap_grasp_the_void = {
+    modifier = {
+        country_starbase_influence_cost_mult = -0.2
+        country_starbase_capacity_add = 5
+    }
+    on_enabled = {
+        if = {
+            limit = {
+                NOT = {
+                    has_technology = tech_starbase_3
+                }
+            }
+            add_research_option = tech_starbase_3
+        }
+        else_if = {
+            limit = {
+                NOT = {
+                    has_technology = tech_starbase_4
+                }
+            }
+            add_research_option = tech_starbase_4
+        }
+        else_if = {
+            limit = {
+                NOT = {
+                    has_technology = tech_starbase_5
+                }
+            }
+            add_research_option = tech_starbase_5
+        }
+        else_if = {
+            limit = {
+                NOT = {
+                    has_technology = tech_starbase_6
+                }
+            }
+            add_research_option = tech_starbase_6
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_technology = tech_habitat_1
+                }
+            }
+            add_research_option = tech_habitat_1
+        }
+    }
+    potential = {
+        NOT = {
+            has_ascension_perk = ap_grasp_the_void
+        }
+    }
+    ai_weight = {
+        factor = 4
+        modifier = {
+            factor = 0
+            num_ascension_perks > 0
+        }
+        modifier = {
+            factor = 2
+            has_civic = civic_inwards_perfection
+        }
+        modifier = {
+            factor = 2
+            has_ethic = ethic_xenophobe
+        }
+        modifier = {
+            factor = 4
+            has_ethic = ethic_fanatic_xenophobe
+        }
+        modifier = {
+            factor = 2
+            has_ethic = ethic_pacifist
+        }
+        modifier = {
+            factor = 4
+            has_ethic = ethic_fanatic_pacifist
+        }
+        modifier = {
+            factor = 2
+            is_egalitarian = yes
+        }
+        modifier = {
+            factor = 0.1
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 0
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 0.5
+            has_technology = tech_habitat_1
+        }
+        modifier = {
+            factor = 0.1
+            num_ascension_perks > 1
+        }
+        modifier = {
+            factor = 0.1
+            num_ascension_perks > 2
+        }
+        modifier = {
+            factor = 0.1
+            num_ascension_perks > 3
+        }
+    }
+}

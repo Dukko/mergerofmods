@@ -1,0 +1,47 @@
+xvcv_mdlc_building_sentinel_complex = {
+    base_buildtime = @b2_time
+    category = government
+    potential = {
+        exists = owner
+        owner = {
+            has_authority = auth_machine_intelligence
+        }
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    destroy_trigger = {
+        exists = owner
+        NOT = {
+            owner = {
+                has_authority = auth_machine_intelligence
+            }
+        }
+    }
+    convert_to = {
+        building_hall_judgment
+    }
+    planet_modifier = {
+        job_patrol_drone_add = @b2_jobs
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b2_minerals
+            exotic_gases = @b2_rare_cost
+        }
+        upkeep = {
+            energy = @b2_upkeep
+            exotic_gases = @b2_rare_upkeep
+        }
+    }
+    prerequisites = {
+        "tech_colonial_centralization"
+    }
+    triggered_desc = {
+        text = job_patrol_drone_effect_desc
+    }
+    show_tech_unlock_if = {
+        has_authority = auth_machine_intelligence
+    }
+}

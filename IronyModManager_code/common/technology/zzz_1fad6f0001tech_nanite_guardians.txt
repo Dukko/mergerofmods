@@ -1,0 +1,92 @@
+tech_nanite_guardians = {
+    cost = @tier4cost1
+    area = engineering
+    icon = tech_guardians
+    tier = 5
+    category = {
+        voidcraft
+    }
+    prerequisites = {
+        "tech_battleships"
+        "tech_nanite_ships"
+    }
+    weight = @tier5weight1
+    is_rare = yes
+    gateway = guardians
+    potential = {
+        has_global_flag = l_cluster_opened
+        NAND = {
+            has_global_flag = auto_dread_disabled
+            has_global_flag = scavenger_disabled
+            has_global_flag = voidspawn_disabled
+            has_global_flag = dragon_disabled
+        }
+        OR = {
+            exists = event_target:goo_slayer
+            NOT = {
+                exists = event_target:graygoo_country
+            }
+        }
+        NAND = {
+            exists = event_target:scavenger_bot_country
+            exists = event_target:automated_dreadnought_country
+            exists = event_target:hatchling_country
+        }
+    }
+    prereqfor_desc = {
+        ship = {
+            title = "TECH_UNLOCK_GUARDIANS_CONSTRUCTION_TITLE"
+            desc = "TECH_UNLOCK_GUARDIANS_CONSTRUCTION_DESC"
+        }
+    }
+    weight_modifier = {
+        factor = 0.01
+        modifier = {
+            factor = 5
+            has_country_flag = pantagruel
+        }
+        modifier = {
+            factor = 5
+            has_country_flag = enigmatic_cache_host_country
+        }
+        modifier = {
+            factor = 20
+            has_country_flag = enigmatic_caches_choice
+        }
+        modifier = {
+            factor = 20
+            has_country_flag = applied_enigmatic_intelligence
+        }
+        modifier = {
+            factor = 1.25
+            exists = event_target:gray_owner
+            is_same_empire = event_target:gray_owner
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 0.05
+        modifier = {
+            factor = 5
+            has_country_flag = pantagruel
+        }
+        modifier = {
+            factor = 1.5
+            exists = event_target:gray_owner
+            is_same_empire = event_target:gray_owner
+        }
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+}

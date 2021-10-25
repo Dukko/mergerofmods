@@ -1,0 +1,45 @@
+tech_tiyanki_power_plant = {
+    area = physics
+    tier = 3
+    cost = @tier3cost1
+    category = {
+        statecraft
+    }
+    prerequisites = {
+        "tech_colonial_centralization"
+        "tech_mine_tiyanki_butcher"
+    }
+    weight = @tier3weight1
+    is_rare = yes
+    potential = {
+        is_gestalt = yes
+        has_country_flag = pdtiyankiharvest
+    }
+    weight_modifier = {
+        factor = 10
+        modifier = {
+            factor = 0
+            NOT = {
+                owner = {
+                    has_country_flag = pdtiyankiharvest
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+}

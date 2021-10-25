@@ -1,0 +1,31 @@
+tech_acot_fractured_size_upgrade_2 = {
+    cost = @acot_tier7cost3
+    area = physics
+    tier = 7
+    category = {
+        field_manipulation
+    }
+    prerequisites = {
+        tech_acot_fractured_size_upgrade_1
+        tech_acot_fractured_shelter
+        tech_acot_fractured_fort
+        tech_acot_fractured_trapper
+        tech_acot_fractured_science_dome
+    }
+    weight = 20
+    modifier = {
+        description = tech_acot_fractured_size_upgrade_2_tooltip
+        pc_dark_fractured_habitability = 0.25
+        pc_dark_fractured_ae_habitability = 0.25
+    }
+    potential = {
+        OR = {
+            has_technology = tech_dm_ancient_palace
+            has_technology = tech_dm_ancient_control_center
+            has_technology = tech_dm_ancient_hive_cluster
+        }
+    }
+    weight_modifier = {
+        factor = 4
+    }
+}

@@ -1,0 +1,16 @@
+once = {
+    federation = {
+        trigger = {
+            has_federation = yes
+            NOR = {
+                has_valid_civic = civic_peacekeepers
+            }
+        }
+        resources = {
+            category = federation
+            upkeep = {
+                influence = 1
+            }
+        }
+    }
+}

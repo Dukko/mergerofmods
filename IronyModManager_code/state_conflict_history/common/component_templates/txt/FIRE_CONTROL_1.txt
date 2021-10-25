@@ -1,0 +1,24 @@
+utility_component_template = {
+    key = "FIRE_CONTROL_1"
+    size = aux
+    icon = "GFX_ship_part_computer_default"
+    icon_frame = 1
+    power = -10
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = 10
+        }
+    }
+    ship_modifier = {
+        ship_accuracy_add = 5
+    }
+    prerequisites = {
+        tech_auxiliary_fire_control
+    }
+    component_set = "FIRE_CONTROL_1"
+    upgrades_to = ACOT_STARCHARTER_DM
+    ai_weight = {
+        weight = 100
+    }
+}

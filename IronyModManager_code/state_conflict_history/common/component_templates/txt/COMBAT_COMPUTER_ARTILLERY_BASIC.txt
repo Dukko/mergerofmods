@@ -1,0 +1,49 @@
+@cost1 = 5
+@power1 = -10
+utility_component_template = {
+    key = "COMBAT_COMPUTER_ARTILLERY_BASIC"
+    size = small
+    icon = "GFX_ship_part_computer_artillery_basic"
+    icon_frame = 1
+    power = @power1
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @cost1
+        }
+    }
+    class_restriction = {
+        shipclass_military
+        shipclass_starbase
+        shipclass_military_special
+    }
+    size_restriction = {
+        destroyer
+        crisis_destroyer
+        pirate_destroyer
+        marauder_destroyer
+        cruiser
+        crisis_cruiser
+        pirate_cruiser
+        marauder_cruiser
+        battleship
+        titan
+        juggernaut
+        galleon
+        marauder_galleon
+        star_eater
+    }
+    component_set = "combat_computers"
+    ship_behavior = "artillery"
+    prerequisites = {
+        "tech_combat_computers_1"
+    }
+    upgrades_to = "COMBAT_COMPUTER_ARTILLERY_ADVANCED"
+    ship_modifier = {
+        ship_fire_rate_mult = 0.05
+        ship_weapon_range_mult = 0.05
+    }
+    ai_weight = {
+        weight = 10
+    }
+}

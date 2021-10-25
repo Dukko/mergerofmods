@@ -1,0 +1,64 @@
+namespace = precursor
+ship_event = {
+    id = precursor.1000
+    title = "precursor.1000.name"
+    desc = "precursor.1000.desc"
+    picture = GFX_evt_archaeological_dig
+    is_triggered_only = yes
+    trigger = {
+        solar_system = {
+            has_star_flag = precursor_3
+        }
+        solar_system = {
+            NOT = {
+                is_same_value = root.owner.capital_scope.solar_system
+            }
+        }
+        owner = {
+            is_ai = no
+        }
+        FROM = {
+            has_anomaly = no
+            is_star = no
+        }
+        owner = {
+            NOR = {
+                has_country_flag = vultaum_intro
+                has_country_flag = yuht_intro
+                has_country_flag = first_league_intro
+                has_country_flag = irassian_intro
+                has_country_flag = cybrex_intro
+                has_country_flag = zroni_intro
+                has_country_flag = baol_intro
+            }
+        }
+    }
+    immediate = {
+        owner = {
+            set_country_flag = first_league_intro
+        }
+    }
+    option = {
+        name = INTERESTING
+        hidden_effect = {
+            owner = {
+                country_event = {
+                    id = story.5
+                    days = 30
+                }
+            }
+        }
+        owner = {
+            begin_event_chain = {
+                event_chain = "first_league_chain"
+                target = THIS
+            }
+            if = {
+                limit = {
+                    has_ancrel = yes
+                }
+                small_artifact_reward = yes
+            }
+        }
+    }
+}

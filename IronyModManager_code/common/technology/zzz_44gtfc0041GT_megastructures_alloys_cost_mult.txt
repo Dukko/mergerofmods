@@ -1,0 +1,45 @@
+GT_megastructures_alloys_cost_mult = {
+    cost = @tier5cost3
+    area = engineering
+    tier = 5
+    is_rare = yes
+    category = {
+        voidcraft
+    }
+    prerequisites = {
+        "tech_mega_engineering"
+    }
+    weight = @tier6weight3
+    modifier = {
+        megastructures_alloys_cost_mult = -0.1
+    }
+    weight_modifier = {
+        factor = 0.5
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                has_any_megastructure_in_empire = yes
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+}

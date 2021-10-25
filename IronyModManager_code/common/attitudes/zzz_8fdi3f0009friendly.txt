@@ -1,0 +1,9 @@
+friendly = {
+    type = friendly
+    behaviour = {
+        trade = yes
+        alliance = yes
+        coexist = yes
+        vassalize = yes
+    }
+}

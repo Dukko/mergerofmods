@@ -1,0 +1,46 @@
+namespace = akx
+planet_event = {
+    id = akx.10000
+    title = akx.10000.name
+    desc = akx.10000.desc
+    picture = GFX_evt_metropolis
+    show_sound = event_ship_bridge
+    location = root
+    trackable = yes
+    is_triggered_only = yes
+    trigger = {
+        owner = {
+            is_ai = no
+            has_event_chain = WORM_CHAIN_1
+            NOT = {
+                has_country_flag = alignment_built
+            }
+        }
+        has_building = building_akx_worm_3
+    }
+    immediate = {
+        owner = {
+            set_country_flag = alignment_built
+        }
+    }
+    after = {
+        owner = {
+            end_event_chain = WORM_CHAIN_1
+            begin_event_chain = {
+                event_chain = WORM_CHAIN_2
+                target = this
+            }
+        }
+        enable_special_project = {
+            name = WORM_ENTRY_POINT
+            location = this
+            owner = root.owner
+        }
+    }
+    option = {
+        name = akx.10000.a
+    }
+    option = {
+        name = akx.10000.b
+    }
+}

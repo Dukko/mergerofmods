@@ -1,0 +1,86 @@
+ap_one_vision = {
+    modifier = {
+        country_unity_produces_mult = 0.1
+        pop_amenities_usage_mult = -0.1
+        pop_government_ethic_attraction = 0.5
+    }
+    on_enabled = {
+        if = {
+            limit = {
+                is_regular_empire = yes
+                NOT = {
+                    has_technology = tech_living_state
+                }
+            }
+            add_research_option = tech_living_state
+        }
+        if = {
+            limit = {
+                is_regular_empire = no
+                NOT = {
+                    has_technology = tech_autonomous_agents
+                }
+            }
+            add_research_option = tech_autonomous_agents
+        }
+    }
+    potential = {
+        NOT = {
+            has_ascension_perk = ap_one_vision
+            has_authority = "auth_machine_intelligence"
+        }
+    }
+    ai_weight = {
+        factor = 1
+        modifier = {
+            factor = 2
+            has_ascension_perk = ap_consecrated_worlds
+        }
+        modifier = {
+            factor = 2
+            has_civic = civic_cutthroat_politics
+        }
+        modifier = {
+            factor = 2
+            has_civic = civic_imperial_cult
+        }
+        modifier = {
+            factor = 2
+            has_ethic = ethic_authoritarian
+        }
+        modifier = {
+            factor = 4
+            has_ethic = ethic_fanatic_authoritarian
+        }
+        modifier = {
+            factor = 2
+            has_ethic = ethic_spiritualist
+        }
+        modifier = {
+            factor = 4
+            has_ethic = ethic_fanatic_spiritualist
+        }
+        modifier = {
+            factor = 0.5
+            is_regular_empire = yes
+            has_technology = tech_living_state
+        }
+        modifier = {
+            factor = 0.5
+            is_regular_empire = no
+            has_technology = tech_autonomous_agents
+        }
+        modifier = {
+            factor = 0.1
+            num_ascension_perks > 1
+        }
+        modifier = {
+            factor = 0.1
+            num_ascension_perks > 2
+        }
+        modifier = {
+            factor = 0.1
+            num_ascension_perks > 3
+        }
+    }
+}

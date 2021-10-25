@@ -1,0 +1,101 @@
+namespace = crisis
+planet_event = {
+    id = crisis.202
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        num_pops = 1
+        exists = controller
+        controller = {
+            is_country_type = "swarm"
+        }
+    }
+    immediate = {
+        controller = {
+            save_event_target_as = swarm
+        }
+        if = {
+            limit = {
+                NOR = {
+                    is_planet_class = pc_ringworld_habitable
+                    is_planet_class = pc_habitat
+                    gpm_is_planet_class_habitat = yes
+                    gpm_is_planet_class_ringworld = yes
+                }
+            }
+            change_pc = pc_infested
+            set_owner = event_target:swarm
+            planet_event = {
+                id = crisis.215
+            }
+            planet_event = {
+                id = gpm_crisis.2
+            }
+        }
+        else_if = {
+            limit = {
+                OR = {
+                    is_planet_class = pc_ringworld_habitable
+                    gpm_is_planet_class_ringworld = yes
+                }
+            }
+            destroy_colony = yes
+            change_pc = pc_ringworld_habitable_damaged
+            reset_planet = yes
+        }
+        else_if = {
+            limit = {
+                OR = {
+                    is_planet_class = pc_habitat
+                    gpm_is_planet_class_habitat = yes
+            }
+            ariphaos_patch_remove_habitat = yes
+        }
+            remove_planet = yes
+        solar_system = {
+            if = {
+                limit = {
+                    NOT = {
+                        exists = starbase
+                        any_system_planet = {
+                            has_owner = yes
+                            owner = {
+                                NOT = {
+                                    is_same_value = event_target:swarm
+                                }
+                            }
+                        }
+                    }
+                }
+                create_starbase = {
+                    size = starbase_swarm
+                    owner = event_target:swarm
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            any_system_ambient_object = {
+                                has_ambient_object_flag = swarm_system_effect
+                            }
+                        }
+                    }
+                    star = {
+                        create_ambient_object = {
+                            type = "swarm_1"
+                            location = this
+                        }
+                        last_created_ambient_object = {
+                            set_ambient_object_flag = swarm_system_effect
+                            set_location = {
+                                target = prev
+                                distance = 0
+                                angle = random
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        }
+    }
+}

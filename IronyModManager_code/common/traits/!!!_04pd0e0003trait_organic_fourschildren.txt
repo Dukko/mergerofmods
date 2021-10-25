@@ -1,0 +1,26 @@
+trait_organic_fourschildren = {
+    cost = 0
+    initial = no
+    modification = no
+    randomized = no
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    sorting_priority = 30
+    immortal_leaders = yes
+    species_potential_add = {
+        always = no
+    }
+    species_possible_remove = {
+        always = no
+    }
+    modifier = {
+        planet_jobs_produces_mult = 0.2
+        pop_growth_speed = -0.5
+        planet_pops_upkeep_mult = -0.1
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

@@ -1,0 +1,145 @@
+ap_master_builders = {
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_ascension_perks_2"
+            num_ascension_perks > 1
+        }
+        has_technology = tech_antimatter_power
+        has_technology = tech_starbase_4
+        has_technology = tech_cruisers
+    }
+    on_enabled = {
+        if = {
+            limit = {
+                NOT = {
+                    has_technology = tech_mega_engineering
+                }
+            }
+            give_technology = {
+                tech = tech_mega_engineering
+                message = yes
+            }
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_technology = tech_science_nexus
+                }
+            }
+            add_research_option = tech_science_nexus
+            hidden_effect = {
+                add_tech_progress = {
+                    tech = tech_science_nexus
+                    progress = 0.5
+                }
+            }
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_technology = tech_sentry_array
+                }
+            }
+            add_research_option = tech_sentry_array
+            hidden_effect = {
+                add_tech_progress = {
+                    tech = tech_sentry_array
+                    progress = 0.5
+                }
+            }
+        }
+        if = {
+            limit = {
+                host_has_dlc = "Megacorp"
+                NOT = {
+                    has_technology = tech_interstellar_assembly
+                }
+            }
+            add_research_option = tech_interstellar_assembly
+            hidden_effect = {
+                add_tech_progress = {
+                    tech = tech_interstellar_assembly
+                    progress = 0.5
+                }
+            }
+        }
+        if = {
+            limit = {
+                host_has_dlc = "Megacorp"
+                NOT = {
+                    has_technology = tech_mega_art
+                }
+            }
+            add_research_option = tech_mega_art
+            hidden_effect = {
+                add_tech_progress = {
+                    tech = tech_mega_art
+                    progress = 0.5
+                }
+            }
+        }
+        if = {
+            limit = {
+                host_has_dlc = "Megacorp"
+                NOT = {
+                    has_technology = tech_strategic_coordination
+                }
+            }
+            add_research_option = tech_strategic_coordination
+            hidden_effect = {
+                add_tech_progress = {
+                    tech = tech_strategic_coordination
+                    progress = 0.5
+                }
+            }
+        }
+        if = {
+            limit = {
+                host_has_dlc = "Federations"
+                NOT = {
+                    has_technology = tech_mega_shipyard
+                }
+            }
+            add_research_option = tech_mega_shipyard
+            hidden_effect = {
+                add_tech_progress = {
+                    tech = tech_mega_shipyard
+                    progress = 0.5
+                }
+            }
+        }
+    }
+    modifier = {
+        megastructure_build_speed_mult = 0.5
+        country_megastructure_build_cap_add = 1
+    }
+    potential = {
+        host_has_dlc = "Utopia"
+        NOT = {
+            has_ascension_perk = ap_master_builders
+        }
+    }
+    ai_weight = {
+        factor = 10
+        modifier = {
+            factor = 2
+            has_ethic = ethic_pacifist
+        }
+        modifier = {
+            factor = 4
+            has_ethic = ethic_fanatic_pacifist
+        }
+        modifier = {
+            factor = 2
+            is_egalitarian = yes
+        }
+        modifier = {
+            factor = 4
+            is_megacorp = yes
+        }
+        modifier = {
+            factor = 0.1
+            has_technology = tech_mega_engineering
+        }
+    }
+}

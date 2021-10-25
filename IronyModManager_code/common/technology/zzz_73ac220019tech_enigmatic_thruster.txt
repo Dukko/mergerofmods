@@ -1,0 +1,29 @@
+tech_enigmatic_thruster = {
+    area = engineering
+    category = {
+        propulsion
+    }
+    tier = 5
+    cost = @tier5cost2
+    weight = @tier5weight2
+    ai_update_type = all
+    potential = {
+        always = no
+        NOT = {
+            has_global_flag = acot_shipcom_forbidden
+        }
+    }
+    prerequisites = {
+        "tech_thrusters_4"
+        "tech_enigmatic_power_core"
+    }
+    prereqfor_desc = {
+        hide_prereq_for_desc = component
+        custom = {
+            title = "TECH_UNLOCK_FE_THRUSTER_TITLE"
+            desc = "TECH_UNLOCK_FE_THRUSTER_DESC"
+        }
+    }
+    weight_modifier = {
+    }
+}

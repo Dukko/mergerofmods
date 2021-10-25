@@ -1,0 +1,344 @@
+@giga_gas_giant_habitat_cost = 400
+@giga_gas_giant_habitat_upkeep_energy_medium = 2
+@giga_gas_giant_habitat_district_buildtime = 220
+district_giga_gas_giant_habitat_industrial = {
+    base_buildtime = @giga_gas_giant_habitat_district_buildtime
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        uses_district_set = giga_gas_giant_habitat
+    }
+    potential = {
+        uses_district_set = giga_gas_giant_habitat
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_giga_gas_giant_habitat_city
+        district_giga_gas_giant_habitat_hive
+        district_giga_gas_giant_habitat_nexus
+    }
+    resources = {
+        category = planet_districts_hab_industrial
+        cost = {
+            minerals = @giga_gas_giant_habitat_cost
+        }
+        upkeep = {
+            energy = @giga_gas_giant_habitat_upkeep_energy_medium
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_edict = industrial_maintenance
+                }
+            }
+            energy = 2
+        }
+    }
+    triggered_planet_modifier = {
+        planet_housing_add = 3
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                is_crafter_empire = no
+            }
+        }
+        modifier = {
+            job_artisan_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                is_crafter_empire = yes
+            }
+        }
+        modifier = {
+            job_artificer_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                is_catalytic_empire = no
+            }
+        }
+        modifier = {
+            job_foundry_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                is_catalytic_empire = yes
+            }
+        }
+        modifier = {
+            job_catalytic_technician_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+                is_catalytic_empire = no
+            }
+        }
+        modifier = {
+            job_alloy_drone_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+                is_catalytic_empire = no
+            }
+        }
+        modifier = {
+            job_fabricator_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+                is_catalytic_empire = yes
+            }
+        }
+        modifier = {
+            job_catalytic_drone_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+                is_catalytic_empire = no
+                has_valid_civic = civic_machine_servitor
+            }
+        }
+        modifier = {
+            job_fabricator_add = -1
+            job_artisan_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+                is_catalytic_empire = yes
+                has_valid_civic = civic_machine_servitor
+            }
+        }
+        modifier = {
+            job_catalytic_drone_add = -1
+            job_artisan_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+                has_edict = industrial_maintenance
+            }
+        }
+        modifier = {
+            job_maintenance_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_designation = col_giga_gas_giant_habitat_foundry
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                is_crafter_empire = no
+                is_catalytic_empire = no
+            }
+        }
+        modifier = {
+            job_artisan_add = -1
+            job_foundry_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_designation = col_giga_gas_giant_habitat_foundry
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                is_crafter_empire = yes
+                is_catalytic_empire = no
+            }
+        }
+        modifier = {
+            job_artificer_add = -1
+            job_foundry_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_designation = col_giga_gas_giant_habitat_foundry
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                is_crafter_empire = no
+                is_catalytic_empire = yes
+            }
+        }
+        modifier = {
+            job_artisan_add = -1
+            job_catalytic_technician_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_designation = col_giga_gas_giant_habitat_foundry
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                is_crafter_empire = yes
+                is_catalytic_empire = yes
+            }
+        }
+        modifier = {
+            job_artificer_add = -1
+            job_catalytic_technician_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_designation = col_giga_gas_giant_habitat_factory
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+                has_valid_civic = civic_machine_servitor
+                is_catalytic_empire = no
+            }
+        }
+        modifier = {
+            job_artisan_drone_add = 1
+            job_fabricator_add = -1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_designation = col_giga_gas_giant_habitat_factory
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+                has_valid_civic = civic_machine_servitor
+                is_catalytic_empire = yes
+            }
+        }
+        modifier = {
+            job_artisan_drone_add = 1
+            job_catalytic_drone_add = -1
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                is_crafter_empire = no
+            }
+        }
+        text = job_artisan_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                has_civic = civic_crafters
+            }
+        }
+        text = job_artificer_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+                has_valid_civic = civic_machine_servitor
+            }
+        }
+        text = job_artisan_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                is_catalytic_empire = no
+            }
+        }
+        text = job_foundry_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                is_catalytic_empire = yes
+            }
+        }
+        text = job_catalytic_technician_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+                is_catalytic_empire = no
+            }
+        }
+        text = job_fabricator_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+                is_catalytic_empire = no
+            }
+        }
+        text = job_alloy_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+                is_catalytic_empire = yes
+            }
+        }
+        text = job_catalytic_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+                has_edict = industrial_maintenance
+            }
+        }
+        text = job_maintenance_drone_effect_desc
+    }
+}

@@ -1,0 +1,31 @@
+giga_tech_blokkat_society_repeatable = {
+    cost = 750000
+    cost_per_level = 750000
+    area = society
+    tier = 5
+    category = {
+        blokkats
+    }
+    is_rare = yes
+    weight = 40
+    levels = 40
+    is_reverse_engineerable = no
+    prerequisites = {
+        giga_tech_blokkat_sociology_study
+    }
+    modifier = {
+        country_unity_produces_mult = 0.1
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            has_global_flag = blokkat_crisis_defeated
+        }
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "blokkat_knowledge_repeatable_title"
+            desc = "blokkat_knowledge_repeatable_title"
+        }
+    }
+}

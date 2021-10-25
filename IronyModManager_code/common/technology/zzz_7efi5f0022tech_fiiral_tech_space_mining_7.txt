@@ -1,0 +1,33 @@
+tech_fiiral_tech_space_mining_7 = {
+    cost = @tier4cost3
+    area = engineering
+    tier = 4
+    category = {
+        industry
+    }
+    prerequisites = {
+        "tech_fiiral_tech_space_mining_6"
+    }
+    weight = @tier4weight3
+    modifier = {
+        station_gatherers_produces_mult = 0.5
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+}

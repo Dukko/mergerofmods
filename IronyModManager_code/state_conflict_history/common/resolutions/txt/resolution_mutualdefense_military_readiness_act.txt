@@ -1,0 +1,180 @@
+@resolution_weight_popular = 6.5
+@resolution_cost_t2 = 150
+@resolution_flag_timer = 360
+resolution_mutualdefense_military_readiness_act = {
+    icon = "GFX_resolution_mutual_defense"
+    resources = {
+        category = resolutions
+        cost = {
+            influence = @resolution_cost_t2
+        }
+    }
+    target = no
+    level = 2
+    modifier = {
+        resolution_mutualdefense_the_readied_shield = 1
+        resolution_mutualdefense_naval_weight = 1
+    }
+    effect = {
+        hidden_effect = {
+            add_modifier = {
+                modifier = resolution_passed_diplomatic_weight
+                days = 2200
+            }
+        }
+        custom_tooltip = resolution_mutualdefense_military_readiness_act_tooltip
+        hidden_effect = {
+            set_global_flag = resolution_with_breach_effect_passed
+            set_timed_country_flag = {
+                flag = galactic_community_resolution_passed_mutualdefense
+                days = @resolution_flag_timer
+            }
+            set_timed_country_flag = {
+                flag = faction_pacifist_outraged_gc
+                days = 7200
+            }
+            set_timed_country_flag = {
+                flag = faction_xenophobe_isolationist_outraged_gc
+                days = 7200
+            }
+        }
+    }
+    fail_effects = {
+        hidden_effect = {
+            add_modifier = {
+                modifier = resolution_failed_diplomatic_weight
+                days = 2200
+            }
+        }
+        hidden_effect = {
+            set_timed_country_flag = {
+                flag = galactic_community_resolution_failed_mutualdefense
+                days = @resolution_flag_timer
+            }
+        }
+    }
+    allow = {
+        is_active_resolution = "resolution_mutualdefense_the_readied_shield"
+    }
+    breach = {
+        used_naval_capacity_percent < 0.5
+        is_subject = no
+    }
+    ai_weight = {
+        weight = @resolution_weight_popular
+        modifier = {
+            factor = 1.4
+            not = {
+                has_country_flag = str_has_bad_fleet_score
+            }
+        }
+        modifier = {
+            factor = 0.8
+            has_country_flag = str_has_bad_fleet_score
+        }
+        modifier = {
+            factor = 0.625
+            has_country_flag = str_has_terrible_fleet_score
+        }
+        modifier = {
+            factor = 0.9
+            turtler = yes
+        }
+        modifier = {
+            factor = 0.9
+            turtler2 = yes
+        }
+        modifier = {
+            factor = 1.1
+            rusher = yes
+        }
+        modifier = {
+            factor = 1.1
+            rusher2 = yes
+        }
+        modifier = {
+            factor = 2
+            count_country = {
+                count < 4
+                limit = {
+                    is_galactic_community_member = yes
+                    relative_power = {
+                        who = prev
+                        category = fleet
+                        value >= equivalent
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            any_relation = {
+                is_galactic_community_member = yes
+                OR = {
+                    is_rival = prev
+                    is_at_war_with = prev
+                }
+                count_country = {
+                    count < 4
+                    limit = {
+                        is_galactic_community_member = yes
+                        relative_power = {
+                            who = prev
+                            category = fleet
+                            value >= equivalent
+                        }
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            is_militarist = yes
+        }
+        modifier = {
+            factor = 2
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 0
+            in_breach_of = resolution_mutualdefense_military_readiness_act
+        }
+        modifier = {
+            factor = 0.75
+            any_federation_ally = {
+                NOT = {
+                    federation = {
+                        has_federation_type = hegemony_federation
+                    }
+                }
+                in_breach_of = resolution_mutualdefense_military_readiness_act
+            }
+        }
+        modifier = {
+            factor = 2
+            is_civic_militarist = yes
+        }
+        modifier = {
+            factor = 0.5
+            OR = {
+                is_civic_diplomatic_corps = yes
+                is_civic_free_traders = yes
+            }
+        }
+        modifier = {
+            factor = 0.1
+            used_naval_capacity_percent < 0.5
+        }
+        modifier = {
+            factor = 1.2
+            OR = {
+                is_at_war = yes
+                has_crisis = yes
+            }
+        }
+        modifier = {
+            factor = 0
+            is_pacifist = yes
+        }
+    }
+}

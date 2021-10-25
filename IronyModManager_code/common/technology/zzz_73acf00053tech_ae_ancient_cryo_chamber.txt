@@ -1,0 +1,39 @@
+tech_ae_ancient_cryo_chamber = {
+    cost = @acot_tier7cost1
+    area = engineering
+    tier = 7
+    category = {
+        industry
+    }
+    prerequisites = {
+        "tech_dm_ancient_cryo_chamber"
+    }
+    weight = @tier5weight3
+    is_rare = yes
+    potential = {
+        NOT = {
+            has_global_flag = acot_building_forbidden
+        }
+        is_machine_empire = yes
+        has_technology = tech_dark_matter_power_core_ae
+    }
+    weight_modifier = {
+        factor = 1.5
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+}

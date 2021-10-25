@@ -1,0 +1,18 @@
+tech_plentiful_traditions_orbital_trading_beacon = {
+    cost = 0
+    area = physics
+    start_tech = no
+    category = {
+        industry
+    }
+    tier = 0
+    weight = 0
+    weight_modifier = {
+        modifier = {
+            factor = 0
+        }
+    }
+    ai_weight = {
+        factor = 0
+    }
+}

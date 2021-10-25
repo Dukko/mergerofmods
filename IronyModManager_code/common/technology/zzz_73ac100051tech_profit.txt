@@ -1,0 +1,42 @@
+tech_profit = {
+    cost = @acot_tier6cost2
+    area = society
+    tier = 6
+    is_rare = yes
+    category = {
+        statecraft
+    }
+    prerequisites = {
+        "tech_galactic_markets"
+    }
+    weight = 25
+    potential = {
+        has_authority = auth_corporate
+        NOT = {
+            has_global_flag = acot_ethictech_forbidden
+        }
+    }
+    modifier = {
+        country_trade_attractiveness = 0.2
+        planet_districts_upkeep_mult = -0.1
+        country_energy_produces_mult = 0.1
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+}

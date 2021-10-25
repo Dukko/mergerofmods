@@ -1,0 +1,33 @@
+tech_fiiral_tech_mining_4 = {
+    cost = @tier4cost1
+    area = engineering
+    tier = 4
+    category = {
+        industry
+    }
+    prerequisites = {
+        "tech_mining_3"
+    }
+    weight = @tier4weight1
+    modifier = {
+        planet_miners_minerals_produces_mult = 0.2
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+}

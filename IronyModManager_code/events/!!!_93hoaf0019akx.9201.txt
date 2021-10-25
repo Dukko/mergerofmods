@@ -1,0 +1,131 @@
+namespace = akx
+country_event = {
+    id = akx.9201
+    title = akx.9201.name
+    desc = akx.9201.desc
+    picture = GFX_evt_throne_room
+    location = root
+    trackable = yes
+    is_triggered_only = yes
+    immediate = {
+        if = {
+            limit = {
+                any_owned_leader = {
+                    OR = {
+                        is_researching_area = society
+                    }
+                    is_same_species = root
+                }
+            }
+            random_owned_leader = {
+                limit = {
+                    is_researching_area = society
+                    is_same_species = root
+                }
+                save_global_event_target_as = researchingscientist
+            }
+        }
+        else_if = {
+            limit = {
+                any_owned_leader = {
+                    is_researching_area = society
+                }
+            }
+            random_owned_leader = {
+                limit = {
+                    is_researching_area = society
+                }
+                save_global_event_target_as = researchingscientist
+            }
+        }
+        else = {
+            random_owned_leader = {
+                limit = {
+                    leader_class = scientist
+                }
+                save_global_event_target_as = researchingscientist
+            }
+        }
+    }
+    option = {
+        name = akx.9201.militarist.a
+        trigger = {
+            OR = {
+                has_ethic = ethic_fanatic_militarist
+                has_ethic = ethic_militarist
+            }
+        }
+        enable_special_project = {
+            name = MESSENGER_POD_PROJECT_2_UNLEASHED
+            location = capital_scope
+            owner = root
+        }
+        if = {
+            limit = {
+                has_technology = tech_genome_mapping
+            }
+        }
+        else = {
+            add_tech_progress = {
+                tech = tech_genome_mapping
+                progress = 0.15
+            }
+            if = {
+                limit = {
+                    NOT = {
+                        has_tech_option = tech_genome_mapping
+                    }
+                }
+                add_research_option = tech_genome_mapping
+            }
+        }
+    }
+    option = {
+        name = akx.9201.notmilitarist.b
+        enable_special_project = {
+            name = MESSENGER_POD_PROJECT_2_LEASHED
+            location = capital_scope
+            owner = root
+        }
+        if = {
+            limit = {
+                has_technology = tech_genome_mapping
+            }
+            break = yes
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_tech_option = tech_genome_mapping
+                }
+            }
+            add_research_option = tech_genome_mapping
+        }
+        add_tech_progress = {
+            tech = tech_genome_mapping
+            progress = 0.15
+        }
+    }
+    option = {
+        name = akx.9201.c
+        custom_tooltip = akx.9201.c.tooltip
+        if = {
+            limit = {
+                has_technology = tech_genome_mapping
+            }
+            break = yes
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_tech_option = tech_genome_mapping
+                }
+            }
+            add_research_option = tech_genome_mapping
+        }
+        add_tech_progress = {
+            tech = tech_genome_mapping
+            progress = 0.3
+        }
+    }
+}

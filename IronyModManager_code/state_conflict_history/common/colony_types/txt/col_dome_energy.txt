@@ -1,0 +1,66 @@
+col_dome_energy = {
+    icon = GFX_colony_type_habitat_energy
+    potential = {
+        OR = {
+            is_planet_class = pc_pd_barren_cold_hab
+            is_planet_class = pc_pd_barren_hab
+            is_planet_class = pc_pd_frozen_hab
+            is_planet_class = pc_pd_gas_giant_hab
+            is_planet_class = pc_pd_hothouse_hab
+            is_planet_class = pc_pd_toxic_hab
+            is_planet_class = pc_pd_molten_hab
+            is_planet_class = pc_pd_asteroid_hab
+            is_planet_class = pc_gd_hydrocarbon_hab
+        }
+        exists = owner
+    }
+    planet_modifier = {
+        planet_district_hab_energy_build_speed_mult = 0.25
+        planet_technician_produces_mult = 0.1
+    }
+    weight_modifier = {
+        base = 0
+        modifier = {
+            add = 1.8
+            num_districts = {
+                type = district_pdhab_energy
+                value >= 1
+            }
+        }
+        modifier = {
+            add = 1.8
+            num_districts = {
+                type = district_pdhab_energy
+                value >= 2
+            }
+        }
+        modifier = {
+            add = 3.6
+            num_districts = {
+                type = district_pdhab_energy
+                value >= 4
+            }
+        }
+        modifier = {
+            add = 3.6
+            num_districts = {
+                type = district_pdhab_energy
+                value >= 6
+            }
+        }
+        modifier = {
+            factor = 1.16
+            has_building = building_energy_grid
+        }
+        modifier = {
+            factor = 1.33
+            has_building = building_energy_nexus
+        }
+        modifier = {
+            factor = 1.33
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+tech_point_defense_ae = {
+    area = physics
+    category = {
+        computing
+    }
+    cost = @acot_tier7cost1
+    tier = 7
+    weight = @tier5weight1
+    ai_update_type = military
+    prerequisites = {
+        "tech_point_defense_dm"
+        "tech_dark_matter_power_core_ae"
+    }
+    is_rare = yes
+    potential = {
+        NOT = {
+            has_global_flag = acot_weapons_forbidden
+        }
+        NOT = {
+            is_country_type = fallen_empire
+        }
+        has_technology = tech_dark_matter_power_core_ae
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_technology = tech_dark_matter_power_core_ae
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+}

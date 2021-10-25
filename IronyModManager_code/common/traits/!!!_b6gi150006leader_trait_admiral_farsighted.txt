@@ -1,0 +1,23 @@
+leader_trait_admiral_farsighted = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/trait_farsighted.dds"
+    leader_trait = all
+    self_modifier = {
+        leader_age = 80
+    }
+    modifier = {
+        ship_weapon_range_mult = 0.6
+        ship_sensor_range_add = 3
+        ship_hyperlane_range_add = 3
+        ship_speed_mult = 0.3
+    }
+    leader_class = {
+        admiral
+    }
+    initial = no
+    randomized = no
+    ai_weight = {
+        weight = 0
+    }
+}

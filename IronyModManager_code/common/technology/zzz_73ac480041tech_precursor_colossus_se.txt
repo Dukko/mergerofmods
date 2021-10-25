@@ -1,0 +1,49 @@
+tech_precursor_colossus_se = {
+    area = engineering
+    cost = @acot_tier10cost3
+    tier = 10
+    is_rare = yes
+    category = {
+        voidcraft
+    }
+    ai_update_type = military
+    weight = 10
+    prereqfor_desc = {
+        ship = {
+            title = "TECH_UNLOCK_SIGMA_COLOSSUS_TITLE"
+            desc = "TECH_UNLOCK_SIGMA_COLOSSUS_DESC"
+        }
+    }
+    potential = {
+        NOT = {
+            is_country_type = fallen_empire
+        }
+    }
+    modifier = {
+        shipsize_precursor_colossus_hull_add = 100000
+    }
+    prerequisites = {
+        tech_precursor_colossus
+        tech_precursor_colossus_ae
+        tech_stellarite_reactor
+        tech_stelar_advanced_ships
+    }
+    ai_weight = {
+        factor = 5
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+}

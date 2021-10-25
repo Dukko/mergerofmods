@@ -1,0 +1,9 @@
+random_list = {
+    name = "rl_no_atmosphere_planets"
+    planets = {
+        "pc_molten"
+        "pc_barren"
+        "pc_barren_cold"
+        "pc_frozen"
+    }
+}

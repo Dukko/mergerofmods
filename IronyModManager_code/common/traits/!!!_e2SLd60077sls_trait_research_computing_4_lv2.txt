@@ -1,0 +1,23 @@
+sls_trait_research_computing_4_lv2 = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/sls_trait_research_computing.dds"
+    sorting_priority = -40
+    modifier = {
+        ship_tracking_mult = 0.15
+    }
+    initial = no
+    randomized = no
+    leader_trait = {
+        scientist
+    }
+    leader_class = {
+        scientist
+    }
+    ai_categories = {
+        physics
+    }
+    ai_weight = {
+        weight = 150
+    }
+}

@@ -1,0 +1,30 @@
+building_phanon_lab = {
+    base_buildtime = 900
+    can_demolish = no
+    can_be_ruined = no
+    can_be_disabled = no
+    can_build = no
+    category = government
+    potential = {
+        exists = owner
+    }
+    allow = {
+    }
+    show_tech_unlock_if = {
+        is_regular_empire = yes
+    }
+    army_modifier = {
+        army_starting_experience_add = 10000
+    }
+    resources = {
+        category = planet_buildings
+        produces = {
+            unity = 5000
+        }
+        cost = {
+        }
+    }
+    ai_weight = {
+        weight = 100
+    }
+}

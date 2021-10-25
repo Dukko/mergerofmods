@@ -1,0 +1,22 @@
+@giga_ndb_scale = 1.5
+entity = {
+    name = "giga_ndb_firing_5"
+    cull_radius = 1000
+    scale = @giga_ndb_scale
+    locator = {
+        name = "l01"
+        position = {
+            0
+            0
+            0
+        }
+        rotation = {
+            180
+            90
+            0
+        }
+    }
+    attach = {
+        l01 = "giga_ndb_two_beam_entity"
+    }
+}

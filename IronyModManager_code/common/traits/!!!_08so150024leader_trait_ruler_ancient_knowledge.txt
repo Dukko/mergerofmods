@@ -1,0 +1,21 @@
+leader_trait_ruler_ancient_knowledge = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/trait_ancient_knowledge.dds"
+    modifier = {
+        all_technology_research_speed = 1
+        starbase_upgrade_cost_mult = -0.5
+        terraform_speed_mult = 1
+        species_leader_exp_gain = 50
+        station_researchers_produces_mult = 10
+        num_tech_alternatives_add = 15
+    }
+    leader_trait = {
+        ruler
+    }
+    leader_class = {
+        ruler
+    }
+    initial = no
+    randomized = no
+}

@@ -1,0 +1,31 @@
+pw_tech_particle_supercollider_organization = {
+    area = physics
+    category = {
+        particles
+    }
+    cost = @pw_research_tech_cost_1
+    tier = 5
+    prerequisites = {
+        pw_tech_particle_supercollider
+    }
+    weight = 0
+    is_rare = yes
+    potential = {
+        any_owned_planet = {
+            pw_planet_has_particle_supercollider = yes
+        }
+    }
+    modifier = {
+        custom_tooltip = pw_tech_particle_supercollider_organization_tooltip
+    }
+    ai_weight = {
+        factor = @pw_tech_ai_weight
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = leader_trait_expertise_particles
+            }
+        }
+    }
+}

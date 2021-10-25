@@ -1,0 +1,41 @@
+acot_crazed_stellarite = {
+    attack_unarmed_orbital_stations = yes
+    has_difficulty_bonuses = no
+    has_capital = no
+    destroys_starbases = yes
+    pop_growth = no
+    show_in_contacts_list = no
+    enforces_borders = no
+    share_survey_data = no
+    share_communications = no
+    counts_for_victory = no
+    has_complete_sensor = yes
+    can_have_their_comms_shared = yes
+    observable = no
+    needs_survey = no
+    custom_diplomacy = yes
+    faction = {
+        hostile = yes
+        needs_border_access = no
+        generate_borders = no
+        needs_colony = no
+        auto_delete = no
+    }
+    ai = {
+        enabled = yes
+        modules = {
+            berserk_military_minister_module
+        }
+    }
+    modules = {
+        all_technology_module = {
+        }
+        standard_leader_module = {
+        }
+        exclusive_diplomacy_module = {
+            contact_rule = on_action_only
+        }
+        standard_event_module = {
+        }
+    }
+}

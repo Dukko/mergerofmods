@@ -1,0 +1,28 @@
+tech_acot_colonize_fractured_ae = {
+    cost = @acot_tier7cost3
+    area = society
+    tier = 7
+    category = {
+        new_worlds
+    }
+    prerequisites = {
+        tech_dark_matter_power_core_ae
+    }
+    weight = 20
+    potential = {
+    }
+    modifier = {
+        pc_dark_fractured_ae_habitability = 0.2
+    }
+    weight_modifier = {
+        factor = 1
+        modifier = {
+            factor = 0
+            NOT = {
+                any_planet_within_border = {
+                    is_planet_class = pc_dark_fractured_ae
+                }
+            }
+        }
+    }
+}

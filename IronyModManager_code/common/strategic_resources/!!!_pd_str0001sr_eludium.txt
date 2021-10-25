@@ -1,0 +1,11 @@
+sr_eludium = {
+    tradable = no
+    max = 5000
+    deficit_modifier = eludium_deficit
+    visibility_prerequisite = {
+        always = yes
+    }
+    ai_weight = {
+        weight = 100
+    }
+}

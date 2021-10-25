@@ -1,0 +1,48 @@
+utility_component_template = {
+    key = "TITAN_DARK_MATTER_REACTOR"
+    size = small
+    icon = "GFX_ship_part_dark_matter_power_core"
+    icon_frame = 1
+    power = 6000
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = 592
+            sr_dark_matter = 16
+            acot_sr_dark_energy = 16
+        }
+        upkeep = {
+            energy = 5.93
+            alloys = 0.593
+        }
+    }
+    prerequisites = {
+        "tech_dark_matter_power_core"
+    }
+    component_set = "power_core"
+    size_restriction = {
+        titan
+        graygoo_mothership
+        scavenger_bot
+        dreadnought
+        aot_gatekeeper
+    }
+    upgrades_to = "TITAN_DARK_MATTER_REACTOR_AE"
+    ai_weight = {
+        weight = 6
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = sr_dark_matter
+                value <= 50
+            }
+        }
+                modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = acot_sr_dark_energy
+                value <= 50
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+xvcv_mdlc_tech_psi_jump_drive_1 = {
+    icon = "tech_psi_jump_drive_1"
+    cost = @tier5cost2
+    area = physics
+    tier = 5
+    ai_update_type = all
+    is_rare = yes
+    category = {
+        particles
+    }
+    weight = @xvcv_mdlc_special_tech_weight
+    is_reverse_engineerable = no
+    feature_flags = {
+        jump_method
+    }
+    prereqfor_desc = {
+        component = {
+            title = "XVCV_MDLC_TECH_UNLOCK_PSI_JUMPDRIVE_1_TITLE"
+            desc = "XVCV_MDLC_TECH_UNLOCK_PSI_JUMPDRIVE_1_DESC"
+        }
+    }
+    potential = {
+        has_ascension_perk = xvcv_mdlc_ap_abyss
+    }
+    ai_weight = {
+        factor = 5
+        modifier = {
+            factor = 2
+            is_militarist = yes
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+}

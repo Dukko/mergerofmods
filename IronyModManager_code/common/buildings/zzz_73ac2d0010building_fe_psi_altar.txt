@@ -1,0 +1,50 @@
+building_fe_psi_altar = {
+    base_buildtime = 360
+    base_cap_amount = 1
+    category = government
+    planet_modifier = {
+        pop_growth_speed = 0.25
+    }
+    allow = {
+        has_enigmatic_capital = yes
+    }
+    resources = {
+        category = planet_buildings
+        produces = {
+            sr_zro = 5
+            unity = 25
+        }
+        cost = {
+            minerals = 250
+            sr_dark_matter = 100
+            acot_sr_dark_energy = 100
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    NOT = {
+                        has_technology = tech_acot_fractured_autoharvesting
+                    }
+                }
+            }
+            sr_dark_matter = 5
+            acot_sr_dark_energy = 5
+        }
+    }
+    upgrades = {
+        building_ae_psi_altar
+    }
+    prerequisites = {
+        tech_fe_psi_altar
+    }
+    ai_weight = {
+        weight = 10000
+        modifier = {
+            factor = 0
+            OR = {
+                has_building = building_fe_psi_altar
+                has_building = building_ae_psi_altar
+            }
+        }
+    }
+}

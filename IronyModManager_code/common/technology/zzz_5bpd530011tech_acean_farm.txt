@@ -1,0 +1,48 @@
+tech_acean_farm = {
+    icon = tech_acean_farm
+    cost = @tier2cost1
+    area = society
+    tier = 2
+    category = {
+        new_worlds
+    }
+    prerequisites = {
+        "tech_basic_industry"
+        "tech_acean_mine"
+    }
+    weight = @tier2weight1
+    is_rare = yes
+    is_reverse_engineerable = no
+    start_tech = no
+    potential = {
+        country_uses_food = yes
+    }
+    weight_modifier = {
+        factor = 25
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    is_planet_class = pc_crystal
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 5
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+}

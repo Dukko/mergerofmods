@@ -1,0 +1,49 @@
+tech_sensors_enig = {
+    area = physics
+    cost = @tier5cost1
+    tier = 5
+    category = {
+        computing
+    }
+    ai_update_type = all
+    prerequisites = {
+        "tech_sensors_4"
+        "tech_enigmatic_power_core"
+    }
+    weight = @tier5weight1
+    potential = {
+        always = no
+        NOT = {
+            has_global_flag = acot_shipcom_forbidden
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            has_tradition = tr_discovery_adopt
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 1.25
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+    prereqfor_desc = {
+        component = {
+            title = "TECH_UNLOCK_ENIG_SENSOR_TITLE"
+            desc = "TECH_UNLOCK_ENIG_SENSOR_DESC"
+        }
+    }
+}

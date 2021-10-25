@@ -1,0 +1,32 @@
+trait_fleeting_lithoid = {
+    cost = -1
+    potential_crossbreeding_chance = 1
+    modifier = {
+        leader_age = -25
+    }
+    icon = "gfx/interface/icons/traits/trait_fleeting.dds"
+    opposites = {
+        "trait_venerable"
+        "trait_enduring"
+        "trait_fleeting"
+        "trait_additrait_ephemeral"
+        "trait_additrait_ephemeral_lithoid"
+        "trait_additrait_immune"
+    }
+    allowed_archetypes = {
+        LITHOID
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 1
+            exists = from
+            species = {
+                has_citizenship_type = {
+                    type = citizenship_slavery
+                    country = from
+                }
+            }
+        }
+    }
+}

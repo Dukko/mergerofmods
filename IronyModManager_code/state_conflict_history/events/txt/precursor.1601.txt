@@ -1,0 +1,83 @@
+namespace = precursor
+ship_event = {
+    id = precursor.1601
+    title = "precursor.1601.name"
+    desc = "precursor.1601.desc"
+    picture = GFX_evt_dead_city
+    location = from
+    is_triggered_only = yes
+    trigger = {
+        fromfrom = {
+            has_planet_flag = irassian_homeworld
+        }
+        owner = {
+            is_ai = no
+            has_country_flag = irassian_system
+        }
+    }
+    immediate = {
+        owner = {
+            set_country_flag = irassian_world_found
+            set_global_flag = irassian_homeworld_found
+            if = {
+                limit = {
+                    has_event_chain = irassian_chain
+                }
+                end_event_chain = "irassian_chain"
+            }
+            if = {
+                limit = {
+                    has_event_chain = irassian_homeworld_chain
+                }
+                end_event_chain = irassian_homeworld_chain
+            }
+        }
+        every_country = {
+            limit = {
+                OR = {
+                    has_event_chain = irassian_chain
+                    has_event_chain = "irassian_homeworld_chain"
+                }
+            }
+            country_event = {
+                id = precursor.99336
+            }
+        }
+    }
+    option = {
+        name = "FASCINATING"
+        owner = {
+            if = {
+                limit = {
+                    has_ancrel = yes
+                }
+                add_relic = r_pox_sample
+                large_artifact_reward = yes
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 120
+                min = 240
+                max = 9999
+            }
+            add_monthly_resource_mult = {
+                resource = physics_research
+                value = @tier4researchreward
+                min = @tier4researchmin
+                max = @tier4researchmax
+            }
+            add_monthly_resource_mult = {
+                resource = minerals
+                value = @tier4materialreward
+                min = @tier4materialmin
+                max = @tier4materialmax
+            }
+            if = {
+                limit = {
+                    has_ancrel = yes
+                }
+                custom_tooltip = irassian_artifact_research_unlocked
+            }
+        }
+    }
+}

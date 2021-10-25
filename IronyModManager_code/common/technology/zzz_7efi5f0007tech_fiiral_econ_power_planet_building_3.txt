@@ -1,0 +1,35 @@
+tech_fiiral_econ_power_planet_building_3 = {
+    cost = @tier4cost3
+    area = physics
+    tier = 4
+    category = {
+        field_manipulation
+    }
+    prerequisites = {
+        "tech_fiiral_econ_power_planet_building_2"
+    }
+    weight = @tier4weight3
+    weight_modifier = {
+        factor = 2
+        modifier = {
+            factor = 1.25
+            has_tradition = tr_prosperity_adopt
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+}

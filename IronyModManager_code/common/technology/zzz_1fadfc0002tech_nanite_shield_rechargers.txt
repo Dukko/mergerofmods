@@ -1,0 +1,32 @@
+tech_nanite_shield_rechargers = {
+    area = physics
+    cost = @tier5cost3
+    tier = 5
+    category = {
+        field_manipulation
+    }
+    ai_update_type = military
+    prerequisites = {
+        "tech_shields_5"
+    }
+    weight = @tier5weight3
+    potential = {
+        has_global_flag = l_cluster_opened
+        has_resource = {
+            type = nanites
+            amount > 0
+        }
+        NOT = {
+            has_global_flag = ESC_weapons_nanite_forbidden
+        }
+        OR = {
+            NOT = {
+                has_global_flag = distar_overhaul_mod_active
+            }
+            has_country_flag = completed_nanite_technology_mastery_chain
+        }
+    }
+    modifier = {
+        ship_shield_mult = 0.2
+    }
+}

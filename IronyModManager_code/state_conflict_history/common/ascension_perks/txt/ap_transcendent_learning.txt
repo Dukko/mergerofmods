@@ -1,0 +1,5 @@
+ap_transcendent_learning = {
+    potential = {
+        always = no
+    }
+}

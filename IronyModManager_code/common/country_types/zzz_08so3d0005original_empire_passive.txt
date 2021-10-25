@@ -1,0 +1,53 @@
+original_empire_passive = {
+    has_difficulty_bonuses = no
+    has_capital = no
+    custom_diplomacy = yes
+    share_survey_data = no
+    enforces_borders = no
+    needs_survey = no
+    has_complete_sensor = yes
+    observable = yes
+    custom_starbase = origin_super_citadel
+    home_system = original_homeworld_system
+    can_own_empty_planets = yes
+    destroys_starbases = yes
+    pop_growth = no
+    ai = {
+        enabled = yes
+        modules = {
+            anti_crisis_military_minister_module
+        }
+    }
+    faction = {
+        hostile = no
+        needs_border_access = no
+        needs_colony = no
+        generate_borders = yes
+        auto_delete = no
+        neutral = yes
+    }
+    modules = {
+        exclusive_diplomacy_module = {
+            contact_rule = always
+        }
+        all_technology_module = {
+        }
+        standard_event_module = {
+        }
+        standard_leader_module = {
+        }
+    }
+    resources = {
+        category = country_base
+        produces = {
+            energy = 1000
+            minerals = 1000
+            physics_research = 100
+            society_research = 100
+            engineering_research = 100
+            influence = 30
+            unity = 2000
+            alloys = 500
+        }
+    }
+}

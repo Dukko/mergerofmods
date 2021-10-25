@@ -1,0 +1,53 @@
+tech_nanite_living_metal = {
+    cost = @tier5cost1
+    area = engineering
+    tier = 5
+    category = {
+        materials
+    }
+    prerequisites = {
+        "tech_mine_living_metal"
+    }
+    weight = @tier5weight1
+    is_rare = yes
+    potential = {
+        has_global_flag = l_cluster_opened
+        has_resource = {
+            type = nanites
+            amount > 0
+        }
+        OR = {
+            NOT = {
+                has_global_flag = distar_overhaul_mod_active
+            }
+            has_technology = tech_nanite_clouds
+        }
+    }
+    prereqfor_desc = {
+        hide_prereq_for_desc = custom
+        component = {
+            title = "TECH_UNLOCK_NANITE_HULL_2_TITLE"
+            desc = "TECH_UNLOCK_NANITE_HULL_2_DESC"
+        }
+        custom = {
+            title = "tech_nanite_mega_construction"
+            desc = "tech_nanite_mega_construction_desc"
+        }
+    }
+    modifier = {
+        country_resource_max_sr_living_metal_add = 2000
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            has_monthly_income = {
+                resource = nanites
+                value < 1
+            }
+            resource_stockpile_compare = {
+                resource = nanites
+                value < 300
+            }
+        }
+    }
+}

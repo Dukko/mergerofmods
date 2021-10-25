@@ -1,0 +1,85 @@
+nebula_refinery = {
+    icon = "GFX_spaceport_nebula_refinery"
+    construction_days = 360
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = tech_space_mining_1
+        }
+    }
+    possible = {
+        exists = owner
+        owner = {
+            has_technology = tech_space_mining_1
+        }
+        custom_tooltip = {
+            fail_text = "requires_starport"
+            has_starbase_size >= starbase_starport
+        }
+        custom_tooltip = {
+            fail_text = "requires_nebula"
+            OR = {
+                star = {
+                    is_inside_nebula = yes
+                }
+                solar_system = {
+                    OR = {
+                        is_star_class = sc_p_purple
+                        is_star_class = sc_p_green
+                        is_star_class = sc_p_red
+                        is_star_class = sc_nova_1
+                        is_star_class = sc_nova_2
+                        is_star_class = sc_w_azure
+                        is_star_class = sc_w_red
+                        is_star_class = sc_w_green
+                        is_star_class = sc_w_purple
+                        is_star_class = sc_lbv_blue
+                        is_star_class = sc_lbv_green
+                        is_star_class = sc_lbv_red
+                        is_star_class = sc_protostar
+                        is_star_class = sc_tt_red
+                        is_star_class = sc_tt_orange
+                        is_star_class = sc_tt_white
+                        is_star_class = sc_ae
+                    }
+                }
+            }
+        }
+    }
+    resources = {
+        category = starbase_buildings
+        cost = {
+            alloys = 100
+        }
+        produces = {
+            minerals = 10
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = tech_alloys_2
+                }
+            }
+            alloys = 4
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = tech_mine_exotic_gases
+                }
+            }
+            exotic_gases = 1
+        }
+        upkeep = {
+            energy = 2
+        }
+    }
+    show_in_tech = "tech_space_mining_1"
+    ai_build_at_chokepoint = yes
+    ai_build_outside_chokepoint = yes
+    ai_weight = {
+        weight = 150
+    }
+}

@@ -1,0 +1,61 @@
+pw_monument_order = {
+    base_buildtime = @pw_monument_time
+    position_priority = 175
+    category = unity
+    can_build = no
+    potential = {
+        OR = {
+            has_modifier = penal_colony
+            has_modifier = slave_colony
+        }
+        NOT = {
+            has_building = pw_monument_order
+        }
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    destroy_trigger = {
+        NOR = {
+            has_modifier = penal_colony
+            has_modifier = slave_colony
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @pw_monument_cost
+        }
+        upkeep = {
+            energy = @pw_monument_upkeep
+        }
+        produces = {
+            unity = @pw_monument_unity_production
+        }
+    }
+    planet_modifier = {
+        planet_stability_add = 5
+        planet_jobs_worker_produces_mult = 0.1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            pop_ethic_authoritarian_attraction_mult = 0.1
+        }
+    }
+    ai_weight = {
+        weight = 60
+        modifier = {
+            factor = 2
+            exists = owner
+            owner = {
+                is_authoritarian = yes
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+col_dome = {
+    icon = GFX_colony_type_habitat
+    potential = {
+        OR = {
+            is_planet_class = pc_pd_barren_cold_hab
+            is_planet_class = pc_pd_barren_hab
+            is_planet_class = pc_pd_frozen_hab
+            is_planet_class = pc_pd_gas_giant_hab
+            is_planet_class = pc_pd_hothouse_hab
+            is_planet_class = pc_pd_toxic_hab
+            is_planet_class = pc_pd_molten_hab
+            is_planet_class = pc_pd_asteroid_hab
+            is_planet_class = pc_gd_hydrocarbon_hab
+        }
+    }
+    weight_modifier = {
+        base = 1
+    }
+}

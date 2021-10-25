@@ -1,0 +1,17 @@
+tech_gpm_hiveworld_discovery = {
+    area = engineering
+    cost = @tier2cost1
+    category = {
+        materials
+    }
+    tier = 2
+    is_rare = no
+    ai_update_type = all
+    weight = 1
+    modifier = {
+        ship_hull_regen_add_perc = 0.5
+    }
+    weight_modifier = {
+        factor = 0
+    }
+}

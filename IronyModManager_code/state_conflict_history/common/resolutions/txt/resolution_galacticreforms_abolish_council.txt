@@ -1,0 +1,129 @@
+@resolution_weight_hated = 3
+@resolution_cost_t5 = 300
+@resolution_flag_timer = 360
+resolution_galacticreforms_abolish_council = {
+    icon = "GFX_resolution_council_veto"
+    potential = {
+        OR = {
+            has_federations_dlc = yes
+            has_nemesis = yes
+            has_global_flag = galactic_council_formed
+            has_galactic_emperor = no
+        }
+    }
+    resources = {
+        category = resolutions
+        cost = {
+            influence = @resolution_cost_t5
+        }
+    }
+    target = no
+    modifier = {
+    }
+    effect = {
+        hidden_effect = {
+            add_modifier = {
+                modifier = resolution_passed_diplomatic_weight
+                days = 2200
+            }
+        }
+        custom_tooltip = resolution_galacticreforms_abolish_council_tooltip
+        hidden_effect = {
+            set_council_size = 0
+            remove_global_flag = galactic_council_formed
+            set_timed_country_flag = {
+                flag = galactic_community_resolution_passed_general
+                days = @resolution_flag_timer
+            }
+            set_timed_country_flag = {
+                flag = faction_authoritarian_outraged_gc
+                days = 7200
+            }
+        }
+    }
+    fail_effects = {
+        hidden_effect = {
+            add_modifier = {
+                modifier = resolution_failed_diplomatic_weight
+                days = 2200
+            }
+        }
+        hidden_effect = {
+            set_timed_country_flag = {
+                flag = galactic_community_resolution_failed_general
+                days = @resolution_flag_timer
+    }
+        }
+    }
+    ai_weight = {
+        weight = @resolution_weight_hated
+        modifier = {
+            factor = 0
+            is_part_of_galactic_council = yes
+            is_democratic_crusaders = no
+            }
+        modifier = {
+            factor = 2
+            is_part_of_galactic_council = no
+            has_ai_personality = democratic_crusaders
+        }
+        modifier = {
+            factor = 1.5
+            is_part_of_galactic_council = no
+            has_ai_personality = egalitarian_imperialists
+        }
+        modifier = {
+            factor = 0.5
+            is_subject = yes
+            overlord = {
+                opinion_level = {
+                    who = prev
+                    level >= neutral
+                }
+                is_part_of_galactic_council = yes
+            }
+        }
+        modifier = {
+            factor = 0.5
+            OR = {
+                is_civic_diplomatic_corps = yes
+                is_civic_machine_servitor = yes
+            }
+        }
+        modifier = {
+            factor = 1.33
+            is_egalitarian = yes
+        }
+        modifier = {
+            factor = 1.33
+            has_ethic = ethic_fanatic_egalitarian
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+                is_gestalt = yes
+                is_xenophobe = yes
+            }
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_xenophobe
+        }
+        modifier = {
+            factor = 0.8
+            is_xenophile = yes
+        }
+        modifier = {
+            factor = 0.8
+            has_ethic = ethic_fanatic_xenophile
+        }
+        modifier = {
+            factor = 0.5
+            is_authoritarian = yes
+        }
+        modifier = {
+            factor = 0
+            has_ethic = ethic_fanatic_authoritarian
+        }
+    }
+}

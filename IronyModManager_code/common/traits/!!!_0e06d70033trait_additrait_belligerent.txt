@@ -1,0 +1,12 @@
+trait_additrait_belligerent = {
+    cost = 2
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    opposites = {
+        "trait_additrait_competitive"
+        "trait_additrait_aggressive"
+        "trait_additrait_extremely_aggressive"
+    }
+}

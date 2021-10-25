@@ -1,0 +1,17 @@
+xvcv_mdlc_leader_trait_abyss_psi_emulator_admiral = {
+    cost = 0
+    modification = no
+    initial = no
+    randomized = no
+    icon = "gfx/interface/icons/traits/xvcv_mdlc_trait_abyss_psi_emulator.dds"
+    leader_trait = {
+        admiral
+    }
+    leader_class = {
+        admiral
+    }
+    modifier = {
+        ship_weapon_damage = 0.1
+        ship_evasion_mult = 0.15
+    }
+}

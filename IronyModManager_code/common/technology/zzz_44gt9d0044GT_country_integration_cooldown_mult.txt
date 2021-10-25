@@ -1,0 +1,36 @@
+GT_country_integration_cooldown_mult = {
+    cost = @tier3cost3
+    area = society
+    tier = 3
+    category = {
+        statecraft
+    }
+    prerequisites = {
+        "tech_interstellar_campaigns"
+    }
+    weight = @tier4weight3
+    potential = {
+        is_gestalt = no
+    }
+    modifier = {
+        country_integration_cooldown_mult = 0.2
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+}

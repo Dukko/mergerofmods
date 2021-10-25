@@ -1,0 +1,68 @@
+pw_tech_space_elevator_orbital_districts = {
+    area = engineering
+    cost = @pw_tech_cost_4
+    tier = 5
+    category = {
+        voidcraft
+    }
+    prerequisites = {
+        tech_habitat_1
+        pw_tech_space_elevator
+    }
+    weight = @tier5weight1
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            count_owned_planet = {
+                count < 1
+                limit = {
+                    has_active_building = pw_building_space_elevator
+                    has_moon = no
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            count_owned_planet = {
+                count > 2
+                limit = {
+                    has_active_building = pw_building_space_elevator
+                    has_moon = no
+                }
+            }
+        }
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = engineering
+                has_trait = leader_trait_expertise_voidcraft
+            }
+        }
+        modifier = {
+            factor = 1.5
+            has_ascension_perk = ap_master_builders
+        }
+        modifier = {
+            factor = 1.5
+            has_ascension_perk = pw_ap_planetary_wonders
+        }
+        modifier = {
+            factor = 1.5
+            has_ascension_perk = ap_mastery_of_nature
+        }
+        modifier = {
+            factor = 2
+            has_valid_civic = civic_inwards_perfection
+        }
+    }
+    ai_weight = {
+        factor = @pw_tech_ai_weight
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = leader_trait_expertise_voidcraft
+            }
+        }
+    }
+}

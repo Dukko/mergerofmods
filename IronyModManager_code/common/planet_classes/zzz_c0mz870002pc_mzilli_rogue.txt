@@ -1,0 +1,20 @@
+pc_mzilli_rogue = {
+    entity = "frozen_planet"
+    picture = "pc_frozen"
+    entity_scale = @planet_standard_scale
+    icon = GFX_planet_type_frozen
+    star = yes
+    star_gfx = no
+    chance_of_ring = 0.2
+    orbit_lines = yes
+    enable_tilt = no
+    atmosphere_color = hsv {
+        0
+        0
+        0
+    }
+    atmosphere_intensity = 1
+    atmosphere_width = 0.5
+    spawn_odds = 0
+    colonizable = no
+}

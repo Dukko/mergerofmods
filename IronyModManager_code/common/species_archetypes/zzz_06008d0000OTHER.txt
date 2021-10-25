@@ -1,0 +1,3 @@
+OTHER = {
+    uses_modifiers = no
+}

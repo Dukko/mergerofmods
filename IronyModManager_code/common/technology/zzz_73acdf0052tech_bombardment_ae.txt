@@ -1,0 +1,46 @@
+tech_bombardment_ae = {
+    area = society
+    cost = @acot_tier7cost2
+    tier = 7
+    category = {
+        military_theory
+    }
+    ai_update_type = all
+    prerequisites = {
+        "tech_bombardment_dm"
+    }
+    weight = @tier5weight2
+    is_rare = yes
+    potential = {
+        NOT = {
+            has_global_flag = acot_shipcom_forbidden
+        }
+        has_ae_tier_munitions = yes
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            has_tradition = tr_discovery_adopt
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 1.25
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+    }
+    modifier = {
+        description = TECH_UNLOCK_AE_BOMBARD_TITLE
+    }
+}

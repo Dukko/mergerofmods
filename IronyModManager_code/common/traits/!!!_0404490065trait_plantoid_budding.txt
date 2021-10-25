@@ -1,0 +1,24 @@
+trait_plantoid_budding = {
+    host_has_dlc = "Plantoids Species Pack"
+    cost = 2
+    potential_crossbreeding_chance = 0.5
+    opposites = {
+        "trait_slow_breeders"
+        "trait_rapid_breeders"
+        "trait_rapid_breeders_lithoid"
+        "trait_necrophage"
+        "trait_clone_soldier_infertile"
+        "trait_clone_soldier_infertile_full_potential"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    species_class = {
+        PLANT
+        FUN
+    }
+    custom_tooltip = TRAIT_PLANTOID_BUDDING_EFFECT
+    slave_cost = {
+        energy = 250
+    }
+}

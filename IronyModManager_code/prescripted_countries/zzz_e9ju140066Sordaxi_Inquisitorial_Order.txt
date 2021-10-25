@@ -1,0 +1,64 @@
+"Sordaxi Inquisitorial Order" = {
+    key = "Sordaxi Inquisitorial Order"
+    ship_prefix = ""
+    species = {
+        class = "AVI"
+        portrait = "avi13"
+        name = "Sordax"
+        plural = "Sordaxi"
+        adjective = "Sordacian"
+        species_bio = "The all-powerful Inquisition headquartered on the frozen planet Eakuu teaches that the Sordacian mind and body, the latter of which is comparatively quite robust by galactic standards, are divine perfection itself. Their gods demand that this unequaled expression of life stand alone in a celestial paradise over which they will rule eternal. This doctrine will likely bring the Sordaxi into conflict early and often in their history as a galactic power."
+        name_list = "just-name-lists_avian4"
+        trait = "trait_extremely_adaptive"
+        trait = "trait_slow_breeders"
+        trait = "trait_slow_learners"
+    }
+    name = "Sordaxi Inquisitorial Order"
+    adjective = "Sordaxi"
+    authority = "auth_dictatorial"
+    government = "gov_purity_order"
+    planet_name = "Eakuu"
+    planet_class = "pc_snow"
+    system_name = "Carcan"
+    initializer = ""
+    graphical_culture = "avian_01"
+    city_graphical_culture = "avian_01"
+    empire_flag = {
+        icon = {
+            category = "just-more-flags"
+            file = "flag_purifier2.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "fabric_spiral.dds"
+        }
+        colors = {
+            "burgundy"
+            "black"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = male
+        name = "Tlaxtli"
+        portrait = "avi13"
+        texture = 4
+        hair = 0
+        clothes = 0
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "robotic2_room"
+    spawn_enabled = yes
+    ethic = "ethic_authoritarian"
+    ethic = "ethic_fanatic_xenophobe"
+    ethic = "ethic_fanatic_spiritualist"
+    civics = {
+        "civic_fanatic_purifiers"
+        "civic_mining_guilds"
+        "civic_imperial_cult"
+    }
+    origin = "origin_default"
+}

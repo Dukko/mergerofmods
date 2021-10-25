@@ -1,0 +1,17 @@
+giga_tech_blokkat_mega_stage_0 = {
+    cost = 1000000
+    area = engineering
+    tier = 5
+    category = {
+        blokkats
+    }
+    is_rare = yes
+    weight = 0
+    is_reverse_engineerable = no
+    prereqfor_desc = {
+        custom = {
+            title = "giga_tech_blokkat_mega_stage_0_title"
+            desc = "giga_tech_blokkat_mega_stage_0_title"
+        }
+    }
+}

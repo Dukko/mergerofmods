@@ -1,0 +1,49 @@
+tech_dm_combat_computer = {
+    area = physics
+    cost = @acot_tier6cost1
+    tier = 6
+    category = {
+        computing
+    }
+    ai_update_type = all
+    prerequisites = {
+        "tech_dark_matter_power_core"
+    }
+    weight = @tier5weight3
+    is_rare = yes
+    potential = {
+        NOT = {
+            has_global_flag = acot_shipcom_forbidden
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            has_tradition = tr_discovery_adopt
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 1.25
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+    prereqfor_desc = {
+        hide_prereq_for_desc = component
+        custom = {
+            title = "TECH_UNLOCK_DELTA_COMPUTER_TITLE"
+            desc = "TECH_UNLOCK_DELTA_COMPUTER_DESC"
+        }
+    }
+}

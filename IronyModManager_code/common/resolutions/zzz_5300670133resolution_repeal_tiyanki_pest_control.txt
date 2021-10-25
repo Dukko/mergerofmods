@@ -1,0 +1,150 @@
+@resolution_weight_disliked = 4
+@resolution_cost_denounce = 25
+@resolution_flag_timer = 360
+resolution_repeal_tiyanki_pest_control = {
+    icon = "GFX_repeal_red"
+    resources = {
+        category = resolutions
+        cost = {
+            influence = @resolution_cost_denounce
+        }
+    }
+    target = no
+    fire_and_forget = yes
+    effect = {
+        hidden_effect = {
+            add_modifier = {
+                modifier = resolution_passed_diplomatic_weight
+                days = 2200
+            }
+        }
+        custom_tooltip = resolution_repeal_tiyanki_pest_control_effect_success
+        hidden_effect = {
+            set_timed_country_flag = {
+                flag = galactic_community_resolution_passed_ecology_repeal
+                days = @resolution_flag_timer
+            }
+            set_timed_country_flag = {
+                flag = faction_xenophobe_supremacist_outraged_gc
+                days = 7200
+            }
+            add_modifier = {
+                modifier = resolution_passed_diplomatic_weight
+                days = 2200
+            }
+        }
+    }
+    fail_effects = {
+        hidden_effect = {
+            add_modifier = {
+                modifier = resolution_failed_diplomatic_weight
+                days = 2200
+            }
+        }
+        hidden_effect = {
+            set_timed_country_flag = {
+                flag = galactic_community_resolution_failed_ecology_repeal
+                days = @resolution_flag_timer
+            }
+            add_modifier = {
+                modifier = resolution_failed_diplomatic_weight
+                days = 2200
+            }
+        }
+    }
+    potential = {
+        is_active_resolution = "resolution_tiyanki_pest_control"
+    }
+    ai_weight = {
+        weight = @resolution_weight_disliked
+        modifier = {
+            factor = 2.5
+            is_xenophile = yes
+        }
+        modifier = {
+            factor = 2.5
+            has_ethic = ethic_fanatic_xenophile
+        }
+        modifier = {
+            factor = 2
+            is_pacifist = yes
+        }
+        modifier = {
+            factor = 2
+            has_ethic = ethic_fanatic_pacifist
+        }
+        modifier = {
+            factor = 0.5
+            is_militarist = yes
+        }
+        modifier = {
+            factor = 0.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 0.5
+            is_civic_militarist = yes
+        }
+        modifier = {
+            factor = 0.75
+            OR = {
+                is_materialist = yes
+                is_auth_corporate = yes
+                is_civic_mining_guilds = yes
+                has_valid_civic = civic_corporate_dominion
+                has_valid_civic = civic_machine_assimilator
+            }
+        }
+        modifier = {
+            factor = 0
+            has_origin = origin_natural_hunters
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                is_civic_environmentalist = yes
+                is_civic_machine_servitor = yes
+                has_valid_civic = civic_hive_empath
+            }
+        }
+        modifier = {
+            factor = 1.2
+            owner_species = {
+                has_trait = eco_trait_clean
+            }
+        }
+        modifier = {
+            factor = 0.75
+            owner_species = {
+                has_trait = eco_trait_dirty
+            }
+        }
+        modifier = {
+            factor = 0
+            is_xenophobe = yes
+        }
+        modifier = {
+            factor = 0.5
+            is_xenophobic_isolationists = yes
+        }
+        modifier = {
+            factor = 10
+            has_origin = origin_amoeba
+        }
+        modifier = {
+            factor = 10
+            in_breach_of = resolution_tiyanki_pest_control
+        }
+        modifier = {
+            factor = 2
+            any_federation_ally = {
+                NOT = {
+                    federation = {
+                        has_federation_type = hegemony_federation
+                    }
+                }
+                in_breach_of = resolution_tiyanki_pest_control
+            }
+        }
+    }
+}

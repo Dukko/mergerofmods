@@ -1,0 +1,20 @@
+trait_plantoid_phototrophic = {
+    host_has_dlc = "Plantoids Species Pack"
+    cost = 1
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_plantoid_radiotrophic"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    species_class = {
+        PLANT
+        FUN
+    }
+    sorting_priority = 30
+    custom_tooltip = TRAIT_PLANTOID_PHOTOTROPHIC_EFFECT
+    slave_cost = {
+        energy = 100
+    }
+}

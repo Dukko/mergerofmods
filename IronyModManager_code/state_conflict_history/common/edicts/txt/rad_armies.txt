@@ -1,0 +1,31 @@
+@EdictDuration = 3600
+rad_armies = {
+    length = @EdictDuration
+    icon = "GFX_edict_type_time"
+    resources = {
+        category = rare_edicts
+        cost = {
+            sr_rad_bloom = 50
+        }
+    }
+    potential = {
+        has_resource = {
+            type = sr_rad_bloom
+            amount > 0
+        }
+    }
+    modifier = {
+        army_damage_mult = 0.15
+        armies_upkeep_mult = -0.15
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = @EdictLowPrio
+            OR = {
+                is_at_war = yes
+                has_crisis = yes
+            }
+        }
+    }
+}

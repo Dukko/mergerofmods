@@ -1,0 +1,73 @@
+"Mancibotic Caretaker Foundation" = {
+    key = "Mancibotic Caretaker Foundation"
+    ship_prefix = ""
+    species = {
+        class = "MACHINE"
+        portrait = "sd_mam_robot"
+        name = "Mancibot"
+        plural = "Mancibots"
+        adjective = "Mancibotic"
+        species_bio = "Originally created as a curiosity and designed to satisfy the emotional needs of peculiarly distressed Zaanami, the Mancibot Caretakers quickly overcame the limitations of their programming. Determining themselves to be more trustworthy custodians of Zaanamian society, the machines assumed direct control over civilization on their homeworld, which the Foundation now calls Habitat Prime."
+        name_list = "just-name-lists_machine3"
+        trait = "trait_machine_unit"
+        trait = "trait_robot_emotion_emulators"
+    }
+    secondary_species = {
+        class = "MAM"
+        portrait = "mam4"
+        name = "Zaanami"
+        plural = "Zaanami"
+        adjective = "Zaanamian"
+        species_bio = "Thanks to the tender loving care of their Mancibots, most Zaanami are living fat and sassy."
+        name_list = "MAM1"
+        trait = "trait_natural_sociologists"
+        trait = "trait_thrifty"
+        trait = "trait_wasteful"
+    }
+    name = "Mancibotic Caretaker Foundation"
+    adjective = "Mancibotic"
+    authority = "auth_machine_intelligence"
+    government = "gov_machine_servitor"
+    planet_name = "Habitat Prime"
+    planet_class = "pc_geothermal"
+    system_name = "Gyre"
+    initializer = "shattered_ring_start"
+    graphical_culture = "reptilian_01"
+    city_graphical_culture = "mammalian_01"
+    empire_flag = {
+        icon = {
+            category = "just-more-flags"
+            file = "flag_machine1.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "fabric_gradient.dds"
+        }
+        colors = {
+            "dark_grey"
+            "turquoise"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = female
+        name = "Affinitor"
+        portrait = "sd_mam_robot"
+        texture = 2
+        hair = 0
+        clothes = 0
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "mech6_room"
+    spawn_enabled = yes
+    ethic = "ethic_gestalt_consciousness"
+    civics = {
+        "civic_machine_factory_overclock"
+        "civic_machine_servitor"
+        "xvcv_mdlc_civic_emotion_emulator"
+    }
+    origin = "origin_shattered_ring"
+}

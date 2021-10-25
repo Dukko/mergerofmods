@@ -1,0 +1,60 @@
+tech_condensed_qe = {
+    area = physics
+    cost = @tier2cost1
+    weight = @tier2weight1
+    tier = 1
+    category = {
+        field_manipulation
+    }
+    prerequisites = {
+        "tech_physics_1"
+        "tech_power_plant_2"
+    }
+    modifier = {
+        all_technology_research_speed = 0.05
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            has_global_flag = ehof_ai_disabled
+            is_ai = yes
+        }
+        modifier = {
+            factor = 0
+            has_global_flag = ehof_disabled
+        }
+        modifier = {
+            factor = 0.1
+            years_passed < 10
+        }
+        modifier = {
+            factor = 2
+            years_passed > 20
+        }
+        modifier = {
+            factor = 3
+            years_passed > 30
+        }
+        modifier = {
+            factor = 4
+            years_passed > 40
+        }
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+    ai_weight = {
+        factor = @ehof_t1_weight
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+}

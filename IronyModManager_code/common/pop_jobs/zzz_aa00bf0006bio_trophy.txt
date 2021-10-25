@@ -1,0 +1,36 @@
+bio_trophy = {
+    category = bio_trophy
+    clothes_texture_index = 1
+    building_icon = building_organic_sanctuary
+    possible_pre_triggers = {
+        is_sapient = yes
+    }
+    possible = {
+        has_citizenship_type = {
+            type = citizenship_organic_trophy
+        }
+    }
+    resources = {
+        category = planet_bio_trophies
+        produces = {
+            trigger = {
+                happiness >= 0.5
+            }
+            unity = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            happiness >= 0.5
+        }
+        modifier = {
+            planet_jobs_complex_drone_produces_mult = 0.01
+        }
+    }
+    triggered_pop_modifier = {
+        pop_housing_usage_add = -1
+    }
+    weight = {
+        weight = @special_job_weight
+    }
+}

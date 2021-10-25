@@ -1,0 +1,25 @@
+tech_acot_stacking_network = {
+    cost = @acot_tier6cost3
+    area = physics
+    tier = 6
+    category = {
+        computing
+    }
+    prerequisites = {
+        tech_dark_matter_synthersizer
+    }
+    weight = 20
+    potential = {
+        OR = {
+            has_technology = tech_dm_ancient_palace
+            has_technology = tech_dm_ancient_control_center
+            has_technology = tech_dm_ancient_hive_cluster
+        }
+    }
+    modifier = {
+        description = tech_acot_stacking_network_tooltip
+    }
+    weight_modifier = {
+        factor = 4
+    }
+}

@@ -1,0 +1,69 @@
+building_plentiful_traditions_syndicate_quarters = {
+    base_buildtime = 300
+    base_cap_amount = 3
+    category = army
+    potential = {
+        exists = owner
+        NOT = {
+            has_modifier = resort_colony
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+        owner = {
+            has_tradition = tr_plentiful_kleptocracy_5
+        }
+    }
+    allow = {
+        has_major_upgraded_capital = yes
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 225
+            exotic_gases = 50
+        }
+        upkeep = {
+            energy = 1
+            exotic_gases = 1
+        }
+        produces = {
+            unity = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_soldier_add = 1
+            planet_housing_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_warrior_drone_add = 1
+            planet_housing_add = 1
+        }
+    }
+    country_modifier = {
+        country_naval_cap_add = 10
+    }
+    show_tech_unlock_if = {
+        owner = {
+            has_tradition = tr_plentiful_kleptocracy_5
+        }
+    }
+    ai_weight = {
+        weight = 10
+    }
+}

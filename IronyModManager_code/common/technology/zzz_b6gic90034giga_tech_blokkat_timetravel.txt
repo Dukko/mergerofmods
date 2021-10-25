@@ -1,0 +1,21 @@
+giga_tech_blokkat_timetravel = {
+    cost = 4000000
+    area = physics
+    tier = 5
+    category = {
+        blokkats
+    }
+    is_rare = yes
+    weight = 0
+    is_reverse_engineerable = no
+    modifier = {
+        category_blokkats_research_speed_mult = 0.3
+        megastructure_build_speed_mult = 0.25
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "blokkat_timetravel_title"
+            desc = "blokkat_timetravel_title"
+        }
+    }
+}

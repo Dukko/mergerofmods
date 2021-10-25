@@ -1,0 +1,53 @@
+tech_onboard_priest = {
+    cost = @acot_tier6cost2
+    area = society
+    tier = 6
+    is_rare = yes
+    category = {
+        military_theory
+    }
+    prerequisites = {
+        "tech_colonial_centralization"
+        "tech_transcendent_faith"
+    }
+    weight = 25
+    potential = {
+        is_regular_empire = yes
+        NOT = {
+            has_global_flag = acot_ethictech_forbidden
+        }
+    }
+    modifier = {
+        ship_shield_mult = 0.15
+        ship_shield_regen_add_static = 10
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_pop = {
+                    OR = {
+                        has_trait = trait_latent_psionic
+                        has_trait = trait_psionic
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_military_theory"
+            }
+        }
+    }
+}

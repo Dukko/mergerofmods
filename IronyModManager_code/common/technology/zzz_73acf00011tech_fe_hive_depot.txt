@@ -1,0 +1,38 @@
+tech_fe_hive_depot = {
+    cost = @acot_tier6cost1
+    area = society
+    tier = 6
+    category = {
+        biology
+    }
+    prerequisites = {
+        "tech_dark_matter_power_core"
+        "tech_housing_2"
+    }
+    weight = @tier5weight3
+    potential = {
+        NOT = {
+            has_global_flag = acot_building_forbidden
+        }
+        is_hive_empire = yes
+    }
+    weight_modifier = {
+        factor = 1.5
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+    }
+}

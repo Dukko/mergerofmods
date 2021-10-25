@@ -1,0 +1,32 @@
+nnn_tech_repeatable_ascension_perks = {
+    area = society
+    cost = 15000
+    cost_per_level = 500
+    tier = 4
+    category = {
+        statecraft
+    }
+    levels = 10
+    is_rare = yes
+    prerequisites = {
+        "tech_ascension_theory"
+    }
+    weight = 75
+    weight_modifier = {
+        modifier = {
+            factor = 0.5
+        }
+    }
+    ai_weight = {
+        factor = 1
+    }
+    weight_groups = {
+        repeatable
+    }
+    mod_weight_if_group_picked = {
+        repeatable = 0.01
+    }
+    modifier = {
+        ascension_perks_add = 1
+    }
+}

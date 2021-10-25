@@ -1,0 +1,17 @@
+trait_additrait_steadfast = {
+    cost = 1
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    modifier = {
+        leader_age = 5
+        army_morale = 0.5
+    }
+    opposites = {
+        "trait_additrait_weak_willed"
+        "trait_additrait_zealous_defenders"
+        "trait_resilient"
+        "trait_additrait_soft"
+    }
+}

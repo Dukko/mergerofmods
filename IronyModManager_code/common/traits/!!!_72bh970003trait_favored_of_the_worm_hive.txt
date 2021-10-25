@@ -1,0 +1,21 @@
+trait_favored_of_the_worm_hive = {
+    icon = "gfx/interface/icons/traits/trait_favored_of_the_worm.dds"
+    cost = 0
+    initial = no
+    modification = no
+    randomized = no
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    sorting_priority = 32
+    potential_crossbreeding_chance = 1
+    modifier = {
+        species_empire_size_mult = -0.05
+        planet_jobs_unity_produces_mult = 0.05
+        pop_amenities_usage_no_happiness_mult = -0.05
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

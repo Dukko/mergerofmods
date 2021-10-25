@@ -1,0 +1,21 @@
+pw_tech_industrial_hearth_design = {
+    area = physics
+    category = {
+        computing
+    }
+    tier = 5
+    cost = @pw_tech_cost_5
+    prerequisites = {
+        pw_tech_industrial_hearth
+    }
+    weight = 0
+    potential = {
+        has_country_flag = pw_industrial_hearth_built
+    }
+    modifier = {
+        planet_pops_consumer_goods_upkeep_mult = -0.2
+    }
+    ai_weight = {
+        factor = 20
+    }
+}

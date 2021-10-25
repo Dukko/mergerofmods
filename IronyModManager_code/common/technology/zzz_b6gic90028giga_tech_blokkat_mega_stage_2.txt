@@ -1,0 +1,21 @@
+giga_tech_blokkat_mega_stage_2 = {
+    cost = 3500000
+    area = physics
+    tier = 5
+    category = {
+        blokkats
+    }
+    is_rare = yes
+    weight = 0
+    is_reverse_engineerable = no
+    modifier = {
+        country_resource_max_alloys_add = 200000
+        country_resource_max_energy_add = 400000
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "giga_tech_blokkat_mega_stage_2_title"
+            desc = "giga_tech_blokkat_mega_stage_2_title"
+        }
+    }
+}

@@ -1,0 +1,47 @@
+leader_trait_armchair_commander = {
+    cost = -1
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/leader_trait_armchair_commander.dds"
+    modifier = {
+        army_morale = -0.1
+        army_damage_mult = -0.05
+    }
+    leader_potential_add = {
+        NOT = {
+            from = {
+                has_authority = "auth_machine_intelligence"
+            }
+        }
+    }
+    leader_trait = {
+        general
+    }
+    leader_class = {
+        general
+    }
+    opposites = {
+        "leader_trait_butcher"
+        "leader_trait_glory_seeker"
+        "leader_trait_armchair_commander"
+        "leader_trait_substance_abuser"
+        "leader_trait_stubborn"
+        "leader_trait_rigid_programming"
+        "leader_trait_erratic_morality_core"
+        "leader_flaw_greedy"
+        "leader_flaw_terminal"
+        "leader_quirk_enduring"
+        "leader_quirk_sickly"
+        "leader_quirk_smart"
+        "general_flaw_failed_quartermaster"
+        "general_flaw_homebody"
+        "general_flaw_merciful"
+        "general_flaw_reckless"
+        "general_flaw_soft"
+        "general_flaw_weakwilled"
+        "general_quirk_aggressor"
+        "general_quirk_cheap"
+        "general_quirk_fun"
+        "general_quirk_guardsman"
+        "general_quirk_strict"
+    }
+}

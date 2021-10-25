@@ -1,0 +1,3 @@
+NShip = {
+    DEFAULT_SHIELD_RATIO = 0.4
+}

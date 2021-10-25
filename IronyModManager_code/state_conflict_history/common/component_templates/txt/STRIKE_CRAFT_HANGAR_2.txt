@@ -1,0 +1,60 @@
+@attack_range = 2
+@engagement_range = 100
+@launch_time = 1.5
+@speed3 = 650
+@count = 8
+@regen = 1
+@power3 = -45
+strike_craft_component_template = {
+    key = "STRIKE_CRAFT_HANGAR_2"
+    size = LARGE
+    entity = "bomber_entity"
+    weapon_type = point_defence
+    projectile_gfx = "strike_craft_laser_2"
+    power = @power3
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @l_t4_cost
+        }
+        upkeep = {
+            energy = @l_t4_upkeep_energy
+            alloys = @l_t4_upkeep_alloys
+        }
+    }
+    count = @count
+    regeneration_per_day = @regen
+    launch_time = @launch_time
+    damage = {
+        min = 5
+        max = 13
+    }
+    cooldown = 2.3
+    range = @attack_range
+    engagement_range = @engagement_range
+    accuracy = 1
+    tracking = 0.9
+    health = 40
+    armor = 0
+    shield = 20
+    evasion = 0.8
+    speed = @speed3
+    rotation_speed = 0.8
+    acceleration = 1
+    shield_penetration = 1
+    armor_damage = 1.5
+    ship_behavior = "fighters_behavior"
+    icon = "GFX_ship_part_strike_craft_fighter_2"
+    icon_frame = 1
+    component_set = "STRIKE_CRAFT_HANGAR_2"
+    prerequisites = {
+        "tech_strike_craft_2"
+    }
+    upgrades_to = "STRIKE_CRAFT_HANGAR_3"
+    tags = {
+        weapon_type_strike_craft
+    }
+    ai_tags = {
+        weapon_role_point_defense
+    }
+}

@@ -1,0 +1,7 @@
+CmtTriggerIsPlayableEmpire = {
+    OR = {
+        is_country_type = default
+        is_zofe_country = yes
+        is_ai = no
+    }
+}

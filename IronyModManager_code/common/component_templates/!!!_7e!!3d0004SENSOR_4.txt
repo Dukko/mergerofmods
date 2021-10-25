@@ -1,0 +1,31 @@
+@cost4 = 8
+@power4 = -20
+@sensor4 = 3
+@hit4 = 0.08
+@hyperlane4 = 5
+utility_component_template = {
+    key = "SENSOR_4"
+    size = medium
+    icon = "GFX_ship_part_sensor_4"
+    icon_frame = 1
+    power = @power4
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @cost4
+        }
+    }
+    sensor_range = @sensor4
+    hyperlane_range = @hyperlane4
+    ship_modifier = {
+        ship_tracking_mult = @hit4
+    }
+    prerequisites = {
+        "tech_sensors_4"
+    }
+    component_set = "sensor_components"
+    upgrades_to = DM_SENSOR_SHIP
+    ai_weight = {
+        weight = 1000
+    }
+}

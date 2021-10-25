@@ -1,0 +1,58 @@
+district_sofe_omega_city = {
+    base_buildtime = 5
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        OR = {
+            is_planet_class = pc_golden_world
+            is_planet_class = pc_golden_world_habitable
+            is_planet_class = pc_omega_ringworld_habitable
+            is_planet_class = pc_omega_ringworld_tech
+            is_planet_class = pc_omega_ringworld_seam
+            is_planet_class = pc_goodman_gaia_world
+            is_planet_class = pc_golden_fortress
+        }
+    }
+    potential = {
+        OR = {
+            is_planet_class = pc_golden_world
+            is_planet_class = pc_golden_world_habitable
+            is_planet_class = pc_omega_ringworld_habitable
+            is_planet_class = pc_omega_ringworld_tech
+            is_planet_class = pc_omega_ringworld_seam
+            is_planet_class = pc_goodman_gaia_world
+            is_planet_class = pc_golden_fortress
+        }
+        exists = owner
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            trigger = {
+                owner = {
+                    NOR = {
+                        is_progenitor_empires = yes
+                        has_valid_civic = civic_champion_empire
+                    }
+                }
+            }
+            unity = 500
+        }
+        produces = {
+            acot_sr_light_matter = 25
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 50
+    }
+    triggered_planet_modifier = {
+        potential = {
+            owner = {
+                is_progenitor_empires = yes
+            }
+        }
+        job_sofe_lightsmith_add = 1
+    }
+    ai_weight = {
+        weight = 100
+    }
+}

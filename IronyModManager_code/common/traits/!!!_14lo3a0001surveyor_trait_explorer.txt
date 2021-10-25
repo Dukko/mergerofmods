@@ -1,0 +1,50 @@
+surveyor_trait_explorer = {
+    cost = 1
+    modification = no
+    icon = "gfx/interface/icons/traits/surveyor_trait_explorer.dds"
+    modifier = {
+        ship_interstellar_speed_mult = 0.25
+        ship_base_speed_mult = 0.2
+    }
+    leader_trait = {
+        scientist
+    }
+    leader_class = {
+        scientist
+    }
+    ai_categories = {
+        survey
+    }
+    ai_weight = {
+        weight = 100
+    }
+    opposites = {
+        "leader_trait_expertise_biology"
+        "leader_trait_expertise_computing"
+        "leader_trait_expertise_field_manipulation"
+        "leader_trait_expertise_industry"
+        "leader_trait_expertise_materials"
+        "leader_trait_expertise_military_theory"
+        "leader_trait_expertise_new_worlds"
+        "leader_trait_expertise_particles"
+        "leader_trait_expertise_propulsion"
+        "leader_trait_expertise_psionics"
+        "leader_trait_expertise_statecraft"
+        "leader_trait_expertise_voidcraft"
+        "leader_trait_maniacal"
+        "leader_trait_spark_of_genius"
+        "researcher_boon_mastery_biology"
+        "researcher_boon_mastery_computing"
+        "researcher_boon_mastery_field_manipulation"
+        "researcher_boon_mastery_industry"
+        "researcher_boon_mastery_materials"
+        "researcher_boon_mastery_military_theory"
+        "researcher_boon_mastery_new_worlds"
+        "researcher_boon_mastery_particles"
+        "researcher_boon_mastery_propulsion"
+        "researcher_boon_mastery_psionics"
+        "researcher_boon_mastery_statecraft"
+        "researcher_boon_mastery_voidcraft"
+        "researcher_trait_genius"
+    }
+}

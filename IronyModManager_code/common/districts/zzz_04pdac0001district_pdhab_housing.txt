@@ -1,0 +1,50 @@
+@hab_cost = 500
+@hab_maintenance = 2
+district_pdhab_housing = {
+    base_buildtime = 240
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        uses_district_set = pdplanethab
+    }
+    potential = {
+        uses_district_set = pdplanethab
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_city
+        district_nexus
+        district_hive
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @hab_cost
+        }
+        upkeep = {
+            energy = @hab_maintenance
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 8
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_maintenance_drone_add = 2
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_maintenance_drone_effect_desc
+    }
+}

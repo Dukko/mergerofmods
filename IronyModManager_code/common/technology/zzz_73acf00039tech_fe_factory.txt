@@ -1,0 +1,42 @@
+tech_fe_factory = {
+    cost = @acot_tier6cost1
+    area = engineering
+    tier = 6
+    category = {
+        materials
+    }
+    prerequisites = {
+        "tech_luxuries_2"
+        "tech_colonial_centralization"
+        "tech_dark_matter_power_core"
+    }
+    weight = @tier5weight1
+    potential = {
+        OR = {
+            is_gestalt = no
+            has_valid_civic = civic_machine_servitor
+        }
+        NOT = {
+            has_global_flag = acot_building_forbidden
+        }
+    }
+    weight_modifier = {
+        factor = 2
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+}

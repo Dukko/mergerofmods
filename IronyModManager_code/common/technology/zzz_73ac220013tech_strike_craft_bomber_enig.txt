@@ -1,0 +1,38 @@
+tech_strike_craft_bomber_enig = {
+    area = engineering
+    category = {
+        voidcraft
+    }
+    tier = 5
+    cost = @tier5cost1
+    weight = @tier5weight1
+    ai_update_type = military
+    prerequisites = {
+        "tech_strike_craft_3"
+        "tech_enigmatic_power_core"
+    }
+    potential = {
+        always = no
+        NOT = {
+            has_global_flag = acot_weapons_forbidden
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+}

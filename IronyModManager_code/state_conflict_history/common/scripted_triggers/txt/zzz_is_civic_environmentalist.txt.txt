@@ -1,0 +1,21 @@
+is_civic_environmentalist = {
+    OR = {
+        has_valid_civic = civic_environmentalist
+        has_valid_civic = civic_keepers_harmony
+        has_valid_civic = civic_hive_ascetic
+        has_valid_civic = civic_hive_empath
+        has_valid_civic = eco_civic_scavenger
+        has_valid_civic = civic_machine_zero_waste_protocols
+        has_valid_civic = eco_civic_recycler
+        has_valid_civic = civic_memorialist
+        has_valid_civic = civic_memorialist_corp
+        has_valid_civic = civic_hive_memorialist
+        has_valid_civic = civic_machine_memorialist
+        has_origin = origin_life_seeded
+        has_origin = origin_tree_of_life
+        has_origin = origin_delicate_ecosystem
+        has_origin = origin_terraformer
+        has_origin = origin_amoeba # a bit of a stretch
+        has_origin = origin_symbiote
+    }
+}

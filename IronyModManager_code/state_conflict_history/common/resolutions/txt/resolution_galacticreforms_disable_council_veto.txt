@@ -1,0 +1,98 @@
+@resolution_weight_disliked = 4
+@resolution_cost_t4 = 250
+@resolution_flag_timer = 360
+resolution_galacticreforms_disable_council_veto = {
+    icon = "GFX_resolution_council_veto"
+    potential = {
+        has_federations_dlc = yes
+        has_global_flag = galactic_council_formed
+        has_global_flag = galactic_council_veto
+        has_galactic_emperor = no
+    }
+    resources = {
+        category = resolutions
+        cost = {
+            influence = @resolution_cost_t4
+        }
+    }
+    target = no
+    modifier = {
+    }
+    effect = {
+        hidden_effect = {
+            add_modifier = {
+                modifier = resolution_passed_diplomatic_weight
+                days = 2200
+            }
+        }
+        custom_tooltip = resolution_galacticreforms_disable_council_veto_tooltip
+        hidden_effect = {
+            set_council_veto = no
+            remove_global_flag = galactic_council_veto
+            set_timed_country_flag = {
+                flag = galactic_community_resolution_passed_general
+                days = @resolution_flag_timer
+            }
+        }
+    }
+    fail_effects = {
+        hidden_effect = {
+            add_modifier = {
+                modifier = resolution_failed_diplomatic_weight
+                days = 2200
+            }
+        }
+        hidden_effect = {
+            set_timed_country_flag = {
+                flag = galactic_community_resolution_failed_general
+                days = @resolution_flag_timer
+            }
+        }
+    }
+    potential = {
+        has_global_flag = galactic_council_formed
+        has_global_flag = galactic_council_veto
+    }
+    ai_weight = {
+        weight = @resolution_weight_disliked
+        modifier = {
+            factor = 0.7
+            OR = {
+                is_civic_diplomatic_corps = yes
+                is_civic_machine_servitor = yes
+            }
+        }
+        modifier = {
+            factor = 0.8
+            is_authoritarian = yes
+        }
+        modifier = {
+            factor = 0.8
+            has_ethic = ethic_fanatic_authoritarian
+        }
+        modifier = {
+            factor = 1.2
+            is_egalitarian = yes
+        }
+        modifier = {
+            factor = 1.2
+            has_ethic = ethic_fanatic_egalitarian
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                is_part_of_galactic_council = yes
+                AND = {
+                    is_subject = yes
+                    overlord = {
+                        opinion_level = {
+                            who = prev
+                            level >= neutral
+                        }
+                        is_part_of_galactic_council = yes
+                    }
+                }
+            }
+        }
+    }
+}

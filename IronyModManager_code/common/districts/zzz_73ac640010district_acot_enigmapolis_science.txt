@@ -1,0 +1,59 @@
+district_acot_enigmapolis_science = {
+    base_buildtime = 360
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        uses_district_set = ae_enigmapolis
+    }
+    allow = {
+    }
+    potential = {
+        uses_district_set = ae_enigmapolis
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_acot_voidsphere_labman_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_acot_voidsphere_labdrone_add = 2
+        }
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = 10000
+        }
+        produces = {
+            society_research = 200
+            physics_research = 200
+            engineering_research = 200
+        }
+        upkeep = {
+            acot_sr_dark_energy = 25
+            sr_dark_matter = 25
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 10
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 5
+            free_housing < 10
+        }
+    }
+}

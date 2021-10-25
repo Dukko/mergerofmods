@@ -1,0 +1,19 @@
+trait_acot_robot_scv = {
+    cost = 4
+    initial = no
+    randomized = no
+    allowed_archetypes = {
+        ROBOT
+        MACHINE
+    }
+    opposites = {
+        "trait_robot_custom_made"
+        "trait_robot_high_maintenance"
+    }
+    advanced_trait = yes
+    modifier = {
+        planet_jobs_produces_mult = 0.15
+        planet_pops_robotics_upkeep_mult = -0.15
+        pop_assembly_speed = 0.15
+    }
+}

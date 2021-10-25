@@ -1,0 +1,342 @@
+namespace = colony
+planet_event = {
+    id = colony.105
+    title = "PROJECT_COMPLETE"
+    desc = "colony.105.desc"
+    picture = GFX_evt_ground_combat
+    show_sound = event_ground_battle
+    location = ROOT
+    is_triggered_only = yes
+    immediate = {
+        hidden_effect = {
+            switch = {
+                trigger = is_planet_class
+                pc_desert = {
+                    random_list = {
+                        15 = {
+                            change_pc = pc_tropical
+                        }
+                        15 = {
+                            change_pc = pc_arid
+                        }
+                        15 = {
+                            change_pc = pc_continental
+                        }
+                        15 = {
+                            change_pc = pc_ocean
+                        }
+                        15 = {
+                            change_pc = pc_tundra
+                        }
+                        15 = {
+                            change_pc = pc_arctic
+                        }
+                        15 = {
+                            change_pc = pc_alpine
+                        }
+                        15 = {
+                            change_pc = pc_savannah
+                        }
+                    }
+                }
+                pc_arid = {
+                    random_list = {
+                        15 = {
+                            change_pc = pc_desert
+                        }
+                        15 = {
+                            change_pc = pc_tropical
+                        }
+                        15 = {
+                            change_pc = pc_continental
+                        }
+                        15 = {
+                            change_pc = pc_ocean
+                        }
+                        15 = {
+                            change_pc = pc_tundra
+                        }
+                        15 = {
+                            change_pc = pc_arctic
+                        }
+                        15 = {
+                            change_pc = pc_alpine
+                        }
+                        15 = {
+                            change_pc = pc_savannah
+                        }
+                    }
+                }
+                pc_savannah = {
+                    random_list = {
+                        15 = {
+                            change_pc = pc_tropical
+                        }
+                        15 = {
+                            change_pc = pc_arid
+                        }
+                        15 = {
+                            change_pc = pc_continental
+                        }
+                        15 = {
+                            change_pc = pc_ocean
+                        }
+                        15 = {
+                            change_pc = pc_tundra
+                        }
+                        15 = {
+                            change_pc = pc_arctic
+                        }
+                        15 = {
+                            change_pc = pc_alpine
+                        }
+                        15 = {
+                            change_pc = pc_desert
+                        }
+                    }
+                }
+                pc_tropical = {
+                    random_list = {
+                        15 = {
+                            change_pc = pc_desert
+                        }
+                        15 = {
+                            change_pc = pc_arid
+                        }
+                        15 = {
+                            change_pc = pc_continental
+                        }
+                        15 = {
+                            change_pc = pc_ocean
+                        }
+                        15 = {
+                            change_pc = pc_tundra
+                        }
+                        15 = {
+                            change_pc = pc_arctic
+                        }
+                        15 = {
+                            change_pc = pc_alpine
+                        }
+                        15 = {
+                            change_pc = pc_savannah
+                        }
+                    }
+                }
+                pc_ocean = {
+                    random_list = {
+                        15 = {
+                            change_pc = pc_desert
+                        }
+                        15 = {
+                            change_pc = pc_tropical
+                        }
+                        15 = {
+                            change_pc = pc_continental
+                        }
+                        15 = {
+                            change_pc = pc_arid
+                        }
+                        15 = {
+                            change_pc = pc_tundra
+                        }
+                        15 = {
+                            change_pc = pc_arctic
+                        }
+                        15 = {
+                            change_pc = pc_alpine
+                        }
+                        15 = {
+                            change_pc = pc_savannah
+                        }
+                    }
+                }
+                pc_continental = {
+                    random_list = {
+                        15 = {
+                            change_pc = pc_desert
+                        }
+                        15 = {
+                            change_pc = pc_tropical
+                        }
+                        15 = {
+                            change_pc = pc_arid
+                        }
+                        15 = {
+                            change_pc = pc_ocean
+                        }
+                        15 = {
+                            change_pc = pc_tundra
+                        }
+                        15 = {
+                            change_pc = pc_arctic
+                        }
+                        15 = {
+                            change_pc = pc_alpine
+                        }
+                        15 = {
+                            change_pc = pc_savannah
+                        }
+                    }
+                }
+                pc_tundra = {
+                    random_list = {
+                        15 = {
+                            change_pc = pc_desert
+                        }
+                        15 = {
+                            change_pc = pc_tropical
+                        }
+                        15 = {
+                            change_pc = pc_arid
+                        }
+                        15 = {
+                            change_pc = pc_ocean
+                        }
+                        15 = {
+                            change_pc = pc_continental
+                        }
+                        15 = {
+                            change_pc = pc_arctic
+                        }
+                        15 = {
+                            change_pc = pc_alpine
+                        }
+                        15 = {
+                            change_pc = pc_savannah
+                        }
+                    }
+                }
+                pc_arctic = {
+                    random_list = {
+                        15 = {
+                            change_pc = pc_desert
+                        }
+                        15 = {
+                            change_pc = pc_tropical
+                        }
+                        15 = {
+                            change_pc = pc_arid
+                        }
+                        15 = {
+                            change_pc = pc_ocean
+                        }
+                        15 = {
+                            change_pc = pc_tundra
+                        }
+                        15 = {
+                            change_pc = pc_continental
+                        }
+                        15 = {
+                            change_pc = pc_alpine
+                        }
+                        15 = {
+                            change_pc = pc_savannah
+                        }
+                    }
+                }
+                pc_alpine = {
+                    random_list = {
+                        15 = {
+                            change_pc = pc_tropical
+                        }
+                        15 = {
+                            change_pc = pc_arid
+                        }
+                        15 = {
+                            change_pc = pc_continental
+                        }
+                        15 = {
+                            change_pc = pc_ocean
+                        }
+                        15 = {
+                            change_pc = pc_tundra
+                        }
+                        15 = {
+                            change_pc = pc_arctic
+                        }
+                        15 = {
+                            change_pc = pc_desert
+                        }
+                        15 = {
+                            change_pc = pc_savannah
+                        }
+                    }
+                }
+                default = {
+                    random_list = {
+                        15 = {
+                            change_pc = pc_tropical
+                        }
+                        15 = {
+                            change_pc = pc_arid
+                        }
+                        15 = {
+                            change_pc = pc_continental
+                        }
+                        15 = {
+                            change_pc = pc_ocean
+                        }
+                        15 = {
+                            change_pc = pc_tundra
+                        }
+                        15 = {
+                            change_pc = pc_arctic
+                        }
+                        15 = {
+                            change_pc = pc_alpine
+                        }
+                        15 = {
+                            change_pc = pc_desert
+                        }
+                        15 = {
+                            change_pc = pc_savannah
+                        }
+                    }
+                }
+            }
+            remove_modifier = "abandoned_terraforming"
+            owner = {
+                set_country_flag = terraforming_mutants_invade_country
+            }
+            set_planet_flag = terraforming_mutants_invade_planet
+            create_country = {
+                name = "NAME_Deformed_Creatures"
+                type = faction
+                effect = {
+                    establish_communications_no_message = root.owner
+                }
+            }
+            create_army = {
+                name = "NAME_Deformed_Creatures"
+                owner = last_created_country
+                type = "mutant_army"
+            }
+            create_army = {
+                name = "NAME_Twisted_Beasts"
+                owner = last_created_country
+                type = "mutant_army"
+            }
+            create_army = {
+                name = "NAME_Mutated_Horrors"
+                owner = last_created_country
+                type = "mutant_army"
+            }
+            if = {
+                limit = {
+                    NOT = {
+                        gpm_has_precursor_modifiers = yes
+                    }
+                }
+                reroll_planet_modifiers = yes
+                gpm_remove_precursor_modifiers = yes
+                gpm_remove_planetary_features = yes
+                gpm_roll_planetary_features = yes
+            }
+        }
+    }
+    option = {
+        name = colony.105.a
+        custom_tooltip = terraforming_mutants_attack
+    }
+}

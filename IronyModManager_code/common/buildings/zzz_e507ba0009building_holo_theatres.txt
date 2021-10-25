@@ -1,0 +1,145 @@
+building_holo_theatres = {
+    base_buildtime = @b1_time
+    category = amenity
+    potential = {
+        NOT = {
+            has_modifier = slave_colony
+        }
+        owner = {
+            is_regular_empire = yes
+        }
+    }
+    allow = {
+        or = {
+            owner = {
+                is_ai = no
+            }
+            and = {
+                free_amenities < -5
+                num_pops > 11
+            }
+            and = {
+                free_amenities < -4
+                or = {
+                    has_building = building_luxury_residence
+                    has_building = building_communal_housing
+                }
+            }
+            and = {
+                free_amenities < 2
+                or = {
+                    years_passed > 15
+                    free_amenities < -2
+                }
+                owner = {
+                    has_origin = origin_default
+                }
+                is_capital = yes
+                not = {
+                    has_building = building_holo_theatres
+                }
+            }
+        }
+    }
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            owner = {
+                is_regular_empire = no
+            }
+            has_modifier = slave_colony
+            AND = {
+                owner = {
+                    is_ai = yes
+                }
+                free_amenities > 30
+                years_passed > 25
+            }
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                NOT = {
+                    has_valid_civic = civic_warrior_culture
+                }
+            }
+        }
+        modifier = {
+            job_entertainer_add = @b1_jobs
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_warrior_culture
+            }
+        }
+        modifier = {
+            job_duelist_add = @b1_jobs
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            str_force_holotheatre = yes
+        }
+        modifier = {
+            job_starnet_spice_melange_farmer_add = 3
+            job_starnet_spice_melange_antifarmer_add = -3
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b1_minerals
+        }
+        upkeep = {
+            energy = @b1_upkeep
+        }
+    }
+    upgrades = {
+        "building_hyper_entertainment_forum"
+    }
+    prerequisites = {
+        "tech_holo_entertainment"
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                NOT = {
+                    has_valid_civic = civic_warrior_culture
+                }
+            }
+        }
+        text = job_entertainer_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_warrior_culture
+            }
+        }
+        text = job_duelist_effect_desc
+    }
+    ai_resource_production = {
+        alloys = 10
+        trigger = {
+            free_amenities < -11
+        }
+    }
+    ai_resource_production = {
+        energy = 10
+        physics_research = 15
+        trigger = {
+            free_amenities < -11
+        }
+    }
+}

@@ -1,0 +1,9 @@
+action_break_commercial_pact = {
+    icon = "GFX_diplomacy_status_commercial_pact"
+    auto_accepted = yes
+    should_notify_all_communications = no
+    requires_actor_independence = no
+    requires_recipient_independence = no
+    should_show_auto_accept_message_recipient = yes
+    action_type = negative
+}

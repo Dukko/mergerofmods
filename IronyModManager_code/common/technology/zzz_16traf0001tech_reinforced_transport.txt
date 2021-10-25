@@ -1,0 +1,40 @@
+tech_reinforced_transport = {
+    cost = @tier3cost3
+    area = engineering
+    tier = 3
+    category = {
+        voidcraft
+    }
+    prerequisites = {
+        "tech_cruisers"
+    }
+    weight = @tier3weight3
+    prereqfor_desc = {
+        ship = {
+            title = "TECH_UNLOCK_REINFORCED_TRANSPORT_TITLE"
+            desc = "TECH_UNLOCK_REINFORCED_TRANSPORT_DESC"
+        }
+    }
+    modifier = {
+        shipsize_transport_hull_add = 200
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 3
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+}

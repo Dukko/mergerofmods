@@ -1,0 +1,24 @@
+leader_trait_general_symbiotic_bond = {
+    cost = 0
+    icon = "gfx/interface/icons/traits/leader_traits/trait_brainslugged.dds"
+    immortal_leaders = no
+    initial = no
+    modification = no
+    randomized = no
+    leader_class = {
+        general
+    }
+    leader_trait = {
+        general
+    }
+    modifier = {
+        army_experience_gain_mult = 1
+        army_disengage_chance_mult = 0.25
+    }
+    self_modifier = {
+        leader_age = 10
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

@@ -1,0 +1,37 @@
+researcher_trait_genius = {
+    cost = 1
+    modification = no
+    icon = "gfx/interface/icons/traits/researcher_trait_genius.dds"
+    modifier = {
+        all_technology_research_speed = 0.1
+    }
+    leader_trait = {
+        scientist
+    }
+    leader_class = {
+        scientist
+    }
+    ai_categories = {
+        physics
+        society
+        engineering
+    }
+    ai_weight = {
+        weight = 100
+    }
+    opposites = {
+        "leader_trait_archaeologist"
+        "leader_trait_archaeologist_ancrel"
+        "leader_trait_carefree"
+        "leader_trait_meticulous"
+        "leader_trait_roamer"
+        "surveyor_boon_observer"
+        "surveyor_flaw_anxious"
+        "surveyor_flaw_inattentive"
+        "surveyor_flaw_slow"
+        "surveyor_quirk_quick"
+        "surveyor_quirk_thorough"
+        "surveyor_trait_explorer"
+        "surveyor_trait_systems_engineer"
+    }
+}

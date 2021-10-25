@@ -1,0 +1,34 @@
+giga_tech_blokkat_scrap_damage = {
+    cost = 500000
+    cost_per_level = 100000
+    area = engineering
+    tier = 1
+    category = {
+        blokkats
+    }
+    is_rare = yes
+    weight = 1000
+    levels = -1
+    is_reverse_engineerable = no
+    modifier = {
+        ship_weapon_damage = 0.05
+        damage_vs_country_type_blokkat_stripminers_mult = 0.15
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "blokkat_scrap_damage_title"
+            desc = "blokkat_scrap_damage_title"
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = researching_blokkat_scrap_damage
+            }
+        }
+    }
+    ai_weight = {
+        factor = 0
+    }
+}

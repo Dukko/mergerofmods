@@ -1,0 +1,61 @@
+col_dome_food = {
+    icon = GFX_colony_type_habitat_food
+    potential = {
+        OR = {
+            is_planet_class = pc_pd_barren_cold_hab
+            is_planet_class = pc_pd_barren_hab
+            is_planet_class = pc_pd_frozen_hab
+            is_planet_class = pc_pd_gas_giant_hab
+            is_planet_class = pc_pd_hothouse_hab
+            is_planet_class = pc_pd_toxic_hab
+            is_planet_class = pc_pd_molten_hab
+            is_planet_class = pc_pd_asteroid_hab
+            is_planet_class = pc_gd_hydrocarbon_hab
+        }
+        exists = owner
+    }
+    planet_modifier = {
+        planet_farmers_produces_mult = 0.2
+    }
+    weight_modifier = {
+        base = 0
+        modifier = {
+            add = 1.2
+            num_districts = {
+                type = district_pdhab_food
+                value >= 1
+            }
+        }
+        modifier = {
+            add = 1.2
+            num_districts = {
+                type = district_pdhab_food
+                value >= 2
+            }
+        }
+        modifier = {
+            add = 2.4
+            num_districts = {
+                type = district_pdhab_food
+                value >= 4
+            }
+        }
+        modifier = {
+            add = 2.4
+            num_districts = {
+                type = district_pdhab_food
+                value >= 6
+            }
+        }
+        modifier = {
+            factor = 1.33
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            factor = 1.5
+            always = yes
+        }
+    }
+}

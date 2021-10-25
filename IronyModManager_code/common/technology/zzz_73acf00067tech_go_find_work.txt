@@ -1,0 +1,32 @@
+tech_go_find_work = {
+    cost = @acot_tier6cost2
+    area = society
+    tier = 6
+    category = {
+        new_worlds
+    }
+    prerequisites = {
+        "tech_frontier_hospital"
+        "tech_dark_matter_power_core"
+    }
+    weight = @tier5weight1
+    potential = {
+        NOT = {
+            has_global_flag = acot_building_forbidden
+        }
+        has_technology = tech_fe_hospital
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            has_tradition = tr_harmony_adopt
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+}

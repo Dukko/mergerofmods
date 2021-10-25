@@ -1,0 +1,65 @@
+ap_galactic_force_projection = {
+    modifier = {
+        country_naval_cap_add = 20
+        country_naval_cap_mult = 0.15
+        ships_upkeep_mult = -0.15
+    }
+    on_enabled = {
+        if = {
+            limit = {
+                NOT = {
+                    has_technology = tech_doctrine_navy_size_1
+                }
+            }
+            add_research_option = tech_doctrine_navy_size_1
+        }
+    }
+    potential = {
+        NOT = {
+            has_ascension_perk = ap_galactic_force_projection
+        }
+    }
+    ai_weight = {
+        factor = 1
+        modifier = {
+            factor = 2
+            OR = {
+                has_civic = civic_citizen_service
+                has_civic = civic_hive_subspace_ephapse
+                has_civic = civic_naval_contractors
+            }
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                has_civic = civic_fanatic_purifiers
+                has_civic = civic_hive_devouring_swarm
+                has_civic = civic_machine_terminator
+            }
+        }
+        modifier = {
+            factor = 2
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 4
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 0.5
+            has_technology = tech_doctrine_navy_size_1
+        }
+        modifier = {
+            factor = 0.1
+            num_ascension_perks > 1
+        }
+        modifier = {
+            factor = 0.1
+            num_ascension_perks > 2
+        }
+        modifier = {
+            factor = 0.1
+            num_ascension_perks > 3
+        }
+    }
+}

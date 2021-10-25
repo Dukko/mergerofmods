@@ -1,0 +1,29 @@
+trait_acot_robot_superman_engines = {
+    cost = 4
+    initial = no
+    randomized = no
+    allowed_archetypes = {
+        ROBOT
+        MACHINE
+    }
+    advanced_trait = yes
+    species_potential_add = {
+        exists = from
+        from = {
+            OR = {
+                has_authority = auth_machine_intelligence
+                has_technology = tech_synthetic_workers
+            }
+            NOT = {
+                has_policy_flag = ai_outlawed
+            }
+        }
+    }
+    modifier = {
+        planet_jobs_society_research_produces_mult = 0.1
+        planet_jobs_physics_research_produces_mult = 0.1
+        planet_jobs_engineering_research_produces_mult = 0.1
+        planet_researchers_produces_mult = 0.1
+        leader_skill_levels = 2
+    }
+}

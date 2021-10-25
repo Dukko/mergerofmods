@@ -1,0 +1,69 @@
+tr_domination_grand_council = {
+    possible = {
+        has_tradition = tr_domination_imperious_architecture
+        has_tradition = tr_domination_colonial_viceroys
+    }
+    modifier = {
+        country_leader_pool_size = 1
+    }
+    on_enabled = {
+        set_country_flag = exalted_domination_leaders_eager
+        every_pool_leader = {
+            if = {
+                limit = {
+                    NOT = {
+                        has_trait = trait_mechanical
+                    }
+                }
+                if = {
+                    limit = {
+                        has_trait = leader_trait_eager
+                    }
+                    add_trait = leader_trait_adaptable
+                }
+                else = {
+                    add_trait = leader_trait_eager
+                }
+            }
+            else_if = {
+                limit = {
+                    has_trait = trait_mechanical
+                }
+                if = {
+                    limit = {
+                        has_trait = leader_trait_newboot
+                    }
+                    add_trait = leader_trait_flexible_programming
+                }
+                else = {
+                    add_trait = leader_trait_newboot
+                }
+            }
+        }
+    }
+    tradition_swap = {
+        name = tr_domination_multi_thread
+        inherit_effects = yes
+        inherit_icon = yes
+        trigger = {
+            is_machine_empire = yes
+        }
+        weight = {
+            factor = 1
+        }
+    }
+    tradition_swap = {
+        name = tr_domination_synaptic_network
+        inherit_effects = yes
+        inherit_icon = yes
+        trigger = {
+            is_hive_empire = yes
+        }
+        weight = {
+            factor = 1
+        }
+    }
+    ai_weight = {
+        factor = 10
+    }
+}

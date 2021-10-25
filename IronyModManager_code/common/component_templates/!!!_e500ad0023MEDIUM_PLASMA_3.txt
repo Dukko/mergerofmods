@@ -1,0 +1,41 @@
+weapon_component_template = {
+    key = "MEDIUM_PLASMA_3"
+    size = medium
+    type = instant
+    icon = "GFX_ship_part_plasma_3"
+    icon_frame = 1
+    prerequisites = {
+        "tech_plasma_3"
+    }
+    component_set = "PLASMA_3"
+    projectile_gfx = "plasma_cannon_m"
+    tags = {
+        weapon_type_energy
+    }
+    ai_tags = {
+        weapon_role_anti_armor
+    }
+    ai_tag_weight = 3
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @m_t5_cost
+            exotic_gases = @m_t5_rare
+        }
+        upkeep = {
+            energy = @m_t5_upkeep_energy
+            alloys = @m_t5_upkeep_alloys
+        }
+    }
+    upgrades_to = MEDIUM_ACOT_PLASMA_DM
+    ai_weight = {
+        modifier = {
+            factor = 0
+            is_country_type = default
+            resource_stockpile_compare = {
+                resource = exotic_gases
+                value < 10
+            }
+        }
+    }
+}

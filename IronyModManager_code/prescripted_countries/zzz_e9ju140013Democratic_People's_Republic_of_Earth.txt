@@ -1,0 +1,74 @@
+"Democratic People's Republic of Earth" = {
+    key = "Democratic People's Republic of Earth"
+    ship_prefix = "RSF"
+    species = {
+        class = "HUM"
+        portrait = "human"
+        name = "Human"
+        plural = "Humans"
+        adjective = "Human"
+        species_bio = "In the waning days of the Great War, the World Council was conceived as a means of ensuring perpetual peace between the victorious Central Powers. After the nuclear horrors of the Year of Fire, it formed the basis for a successor organization that would oversee the institution of a new breed of authoritarian nationalism across the Human homeworld. By the early 21st Century, the House of Nations grew and evolved to effectively constitute an imperial government ruling all of Earth with its capital in Vienna. In 2050, all remaining pretense was dropped with the declaration of a global Democratic People's Republic: a unified state for a unified species. In the Interstellar Age, the military leaders of the Republic's General Staff openly speak of a grand stratagem to achieve galactic hegemony."
+        name_list = "just-name-lists_human5"
+        trait = "trait_adaptive"
+        trait = "trait_charismatic"
+        trait = "trait_wasteful"
+        trait = "trait_quarrelsome"
+    }
+    name = "Democratic People's Republic of Earth"
+    adjective = "Earth"
+    authority = "auth_oligarchic"
+    flags = {
+        "democratic_peoples_republic_of_earth"
+        "custom_start_screen"
+        "democratic_peoples_republic_of_earth"
+        "custom_start_screen"
+    }
+    government = "gov_military_junta"
+    planet_name = "Earth"
+    planet_class = "pc_continental"
+    system_name = "Sol"
+    initializer = "sol_system_initializer"
+    graphical_culture = "humanoid_01"
+    city_graphical_culture = "humanoid_01"
+    empire_flag = {
+        icon = {
+            category = "just-more-flags"
+            file = "flag_democratic_peoples_republic_of_earth.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "fabric_stripe_negative_rotated.dds"
+        }
+        colors = {
+            "red"
+            "light_blue"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = female
+        name = "Albana Gorev"
+        portrait = "human_female_04"
+        texture = 0
+        hair = 3
+        clothes = 4
+        ruler_title = "Grand Marshal"
+        ruler_title_female = "Grand Marshal"
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "cityscape4_room"
+    spawn_enabled = yes
+    ethic = "ethic_authoritarian"
+    ethic = "ethic_xenophile"
+    ethic = "ethic_fanatic_militarist"
+    ethic = "ethic_capitalism"
+    civics = {
+        "civic_nationalistic_zeal"
+        "civic_shadow_council"
+        "civic_naval_traditions"
+    }
+    origin = "origin_default"
+}

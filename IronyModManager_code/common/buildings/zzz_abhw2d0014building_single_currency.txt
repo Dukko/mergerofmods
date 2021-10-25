@@ -1,0 +1,33 @@
+building_single_currency = {
+    base_buildtime = 1800
+    category = government
+    empire_limit = {
+        base = 1
+    }
+    potential = {
+        exists = owner
+        is_homeworld = yes
+        owner = {
+            or = {
+                has_ethic = ethic_fanatic_egalitarian
+                has_ethic = ethic_egalitarian
+                has_authority = auth_corporate
+                has_valid_civic = civic_corporate_dominion
+            }
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 500
+            influence = 100
+        }
+    }
+    planet_modifier = {
+        job_merchant_per_pop = 0.025
+    }
+    country_modifier = {
+        country_trade_fee = -0.05
+        trade_value_mult = 0.05
+    }
+}

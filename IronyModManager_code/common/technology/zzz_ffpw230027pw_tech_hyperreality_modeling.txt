@@ -1,0 +1,23 @@
+pw_tech_hyperreality_modeling = {
+    area = society
+    cost = @pw_tech_cost_4
+    tier = 5
+    category = {
+        statecraft
+    }
+    prerequisites = {
+        pw_tech_galactic_modeling
+    }
+    weight = 0
+    is_rare = yes
+    ai_weight = {
+        factor = @pw_tech_ai_weight
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = leader_trait_expertise_statecraft
+            }
+        }
+    }
+}

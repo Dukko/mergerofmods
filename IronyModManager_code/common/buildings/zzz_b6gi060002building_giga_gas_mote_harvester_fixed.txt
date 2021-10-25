@@ -1,0 +1,80 @@
+building_giga_gas_mote_harvester_fixed = {
+    base_buildtime = 400
+    is_capped_by_modifier = yes
+    category = manufacturing
+    potential = {
+        planet = {
+            is_planet_class = pc_habitable_gas_giant
+        }
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    ai_weight = {
+        weight = 2
+    }
+    prerequisites = {
+        "giga_tech_terraform_gas"
+    }
+    show_tech_unlock_if = {
+        always = no
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 500
+        }
+        produces = {
+            volatile_motes = 2
+        }
+        upkeep = {
+            energy = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_mote_harvester_per_pop = 0.05
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_mote_harvesting_drone_per_pop = 0.05
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        text = "job_mote_harvester_effect_desc"
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = "job_mote_harvesting_drone_effect_desc"
+    }
+    ai_resource_production = {
+        volatile_motes = 4
+        trigger = {
+            always = yes
+        }
+    }
+}

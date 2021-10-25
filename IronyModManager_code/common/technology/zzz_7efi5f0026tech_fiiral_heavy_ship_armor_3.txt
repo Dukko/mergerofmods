@@ -1,0 +1,40 @@
+tech_fiiral_heavy_ship_armor_3 = {
+    area = engineering
+    cost = @tier2cost2
+    tier = 2
+    category = {
+        materials
+    }
+    ai_update_type = all
+    prerequisites = {
+        "tech_ship_armor_3"
+    }
+    weight = @tier2weight2
+    potential = {
+        OR = {
+            is_active_resolution = "resolution_mutualdefense_enemy_of_my_enemy"
+            has_ethic = ethic_fanatic_militarist
+            has_ethic = ethic_militarist
+            is_homicidal = yes
+        }
+    }
+    weight_modifier = {
+        factor = 1.25
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+}

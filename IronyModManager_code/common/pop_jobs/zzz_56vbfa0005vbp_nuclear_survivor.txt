@@ -1,0 +1,40 @@
+vbp_nuclear_survivor = {
+    category = worker
+    is_capped_by_modifier = no
+    building_icon = building_primitive_farm
+    icon = primitive_laborer
+    clothes_texture_index = 3
+    possible_pre_triggers = {
+        has_owner = yes
+        is_sapient = yes
+    }
+    possible = {
+        exists = owner
+        owner = {
+            is_country_type = primitive
+            has_country_flag = vbp_tomb_primitives
+        }
+    }
+    planet_modifier = {
+        planet_amenities_add = 3
+    }
+    resources = {
+        category = planet_farmers
+        produces = {
+            trigger = {
+                is_lithoid = no
+            }
+            food = 4
+            minerals = 2
+        }
+        produces = {
+            trigger = {
+                is_lithoid = yes
+            }
+            minerals = 4
+        }
+    }
+    weight = {
+        weight = 1
+    }
+}

@@ -1,0 +1,13 @@
+sr_acean = {
+    tradable = yes
+    market_amount = 5
+    market_price = 100
+    max = 15000
+    deficit_modifier = rare_crystals_deficit
+    visibility_prerequisite = {
+        always = yes
+    }
+    ai_weight = {
+        weight = 100
+    }
+}

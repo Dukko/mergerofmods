@@ -1,0 +1,77 @@
+tech_emotion_emulators_1 = {
+    cost = @tier2cost3
+    area = society
+    tier = 2
+    category = {
+        statecraft
+    }
+    prerequisites = {
+        "tech_colonial_centralization"
+    }
+    weight = @tier2weight3
+    potential = {
+        has_authority = auth_machine_intelligence
+    }
+    modifier = {
+        diplo_weight_mult = 0.1
+    }
+    weight_modifier = {
+        factor = 2
+        modifier = {
+            factor = 0
+            NOR = {
+                has_technology = tech_self_aware_logic
+                owner_species = {
+                    has_trait = trait_robot_emotion_emulators
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+        modifier = {
+            factor = 2
+            is_galactic_community_member = yes
+        }
+        modifier = {
+            factor = 2
+            owner_species = {
+                has_trait = trait_robot_emotion_emulators
+            }
+        }
+        modifier = {
+            factor = 0.5
+            owner_species = {
+                has_trait = trait_robot_uncanny
+            }
+        }
+        modifier = {
+            factor = 0.01
+            has_civic = civic_closed_network
+        }
+    }
+    ai_weight = {
+        factor = 2
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+        modifier = {
+            factor = 2
+            owner_species = {
+                has_trait = trait_robot_emotion_emulators
+            }
+        }
+        modifier = {
+            factor = 0.01
+            has_civic = civic_closed_network
+        }
+    }
+}

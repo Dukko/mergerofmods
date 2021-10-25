@@ -1,0 +1,93 @@
+acot_dark_matter_man = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_dark_matter_generator
+    clothes_texture_index = 3
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        specialist_job_check_trigger = yes
+    }
+    resources = {
+        category = planet_jobs
+        produces = {
+            sr_dark_matter = 2
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    is_planet_class = pc_acot_enigmopolis
+                }
+            }
+            sr_dark_matter = 10
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    OR = {
+                        is_planet_class = pc_dark_fractured
+                        is_planet_class = pc_dark_fractured_ae
+                    }
+                }
+            }
+            sr_dark_matter = 2
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_modifier = acot_modifier_supercharged_reactor
+                }
+            }
+            sr_dark_matter = 2
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    OR = {
+                        is_planet_class = pc_dark_fractured
+                        is_planet_class = pc_dark_fractured_ae
+                    }
+                    has_modifier = acot_modifier_supercharged_reactor
+                }
+            }
+            sr_dark_matter = 2
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    has_modifier = acot_modifier_supercharged_reactor
+                }
+            }
+            minerals = 8
+        }
+    }
+    weight = {
+        weight = @specialist_job_weight
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+            NOT = {
+                has_trait = trait_mechanical
+            }
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 1.5
+            has_job = acot_dark_matter_man
+        }
+        modifier = {
+            factor = 1.2
+            is_enslaved = yes
+            has_slavery_type = {
+                type = slavery_indentured
+            }
+        }
+    }
+}

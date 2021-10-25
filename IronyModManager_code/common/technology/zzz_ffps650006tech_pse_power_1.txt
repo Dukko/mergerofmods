@@ -1,0 +1,89 @@
+tech_pse_power_1 = {
+    cost = @tier3cost2
+    area = society
+    tier = 3
+    category = {
+        psionics
+    }
+    prerequisites = {
+        "tech_psionic_theory"
+    }
+    weight = @tier3weight3
+    is_reverse_engineerable = no
+    gateway = psionics
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = pse_access_power
+            }
+        }
+        modifier = {
+            factor = 2
+            has_ascension_perk = ap_mind_over_matter
+        }
+        modifier = {
+            factor = 2
+            research_leader = {
+                area = society
+                OR = {
+                    species = {
+                        has_trait = trait_latent_psionic
+                        has_trait = trait_psionic
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            research_leader = {
+                area = society
+                has_level > 2
+                has_trait = "leader_trait_expertise_psionics"
+            }
+        }
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = society
+                has_level > 3
+                has_trait = "leader_trait_expertise_psionics"
+            }
+        }
+        modifier = {
+            factor = 2
+            research_leader = {
+                area = society
+                has_level > 4
+                has_trait = "leader_trait_expertise_psionics"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_level > 5
+            }
+        }
+        modifier = {
+            factor = 4
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_maniacal"
+            }
+        }
+    }
+    modifier = {
+        description = tech_pse_power_1_tooltip
+    }
+    ai_weight = {
+        factor = 5
+        modifier = {
+            factor = 2.5
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_psionics"
+            }
+        }
+    }
+}

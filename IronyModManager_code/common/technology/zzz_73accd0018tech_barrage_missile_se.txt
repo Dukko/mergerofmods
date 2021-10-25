@@ -1,0 +1,71 @@
+tech_barrage_missile_se = {
+    area = engineering
+    category = {
+        propulsion
+    }
+    tier = 8
+    cost = @acot_tier8cost2
+    weight = 5
+    ai_update_type = military
+    prerequisites = {
+        "tech_barrage_missile_ae"
+        "tech_stellarite_missile"
+    }
+    potential = {
+        NOT = {
+            has_global_flag = acot_weapons_forbidden
+        }
+        has_technology = tech_stellarite_reactor
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0.8
+            has_ethic = ethic_fanatic_pacifist
+        }
+        modifier = {
+            factor = 0.9
+            has_ethic = ethic_pacifist
+        }
+        modifier = {
+            factor = 1.1
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.2
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_propulsion"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 2
+        modifier = {
+            factor = 0.8
+            has_ethic = ethic_fanatic_pacifist
+        }
+        modifier = {
+            factor = 0.9
+            has_ethic = ethic_pacifist
+        }
+        modifier = {
+            factor = 1.1
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.2
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_propulsion"
+            }
+        }
+    }
+}

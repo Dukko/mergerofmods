@@ -1,0 +1,31 @@
+tech_go_sleep_machine = {
+    cost = @acot_tier6cost2
+    area = physics
+    tier = 6
+    category = {
+        computing
+    }
+    prerequisites = {
+        tech_dark_matter_power_core
+    }
+    weight = @tier5weight1
+    potential = {
+        NOT = {
+            has_global_flag = acot_building_forbidden
+        }
+        is_gestalt = yes
+        OR = {
+            has_technology = tech_super_assembly
+            has_technology = tech_fe_hive_depot
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+}

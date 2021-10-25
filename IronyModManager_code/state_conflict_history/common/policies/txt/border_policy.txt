@@ -1,0 +1,74 @@
+border_policy = {
+    potential = {
+        always = yes
+    }
+    option = {
+        name = "border_policy_open"
+        policy_flags = {
+            border_policy_open
+        }
+        valid = {
+            merg_is_default_empire = yes
+            NOR = {
+                has_valid_civic = civic_machine_terminator
+                has_valid_civic = civic_hive_devouring_swarm
+                has_valid_civic = civic_fanatic_purifiers
+                AND = {
+                    has_global_flag = cultural_overhaul_active
+                    NOT = {
+                        has_global_flag = cultural_overhaul_redux_active
+                    }
+                    has_valid_civic = civic_inwards_perfection
+                }
+                has_valid_civic = civic_shadow_state
+                is_country_type = original_empire_active
+            }
+        }
+    }
+    option = {
+        name = "border_policy_closed"
+        policy_flags = {
+            border_policy_closed
+        }
+        modifier = {
+        }
+        valid = {
+            always = yes
+        }
+        AI_weight = {
+            factor = 0.5
+            modifier = {
+                factor = 0
+                AND = {
+                    is_megacorp = yes
+                    NOT = {
+                        has_valid_civic = civic_shadow_state
+                    }
+                }
+            }
+            modifier = {
+                factor = 20
+                has_valid_ai_personality = yes
+                NOR = {
+                    has_ai_personality_behaviour = isolationist
+                    has_ai_personality_behaviour = attack_neutrals
+                }
+                NOT = {
+                    has_crisis_level = crisis_level_5
+                }
+            }
+            modifier = {
+                factor = 5
+                has_valid_ai_personality = no
+                is_xenophobe = no
+                NOT = {
+                    has_crisis_level = crisis_level_5
+                }
+            }
+            modifier = {
+                factor = 10
+                has_crisis_level = crisis_level_5
+            }
+        }
+    }
+}

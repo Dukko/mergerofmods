@@ -1,0 +1,65 @@
+"Harmonious Sondatian Ambit" = {
+    key = "Harmonious Sondatian Ambit"
+    ship_prefix = ""
+    species = {
+        class = "AVI"
+        portrait = "avi3"
+        name = "Trokili"
+        plural = "Trokilii"
+        adjective = "Trokilian"
+        species_bio = "The Archprophets led the Trokilii of Sondat into space in search of spiritual seclusion. They seek a state of mind they call Blessed Stillness, and many of their orthodox followers still believe it can be found in the depths of space. Others are certain that it may only be achieved amid the greatest tumult. These believers dream of vast, teeming, multicultural civilizations among the stars in which they can settle and become a rock amid the storm."
+        name_list = "just-name-lists_avian3"
+        trait = "trait_conformists"
+        trait = "trait_nomadic"
+        trait = "trait_fleeting"
+    }
+    name = "Harmonious Sondatian Ambit"
+    adjective = "Sondatian"
+    authority = "auth_imperial"
+    government = "gov_theocratic_monarchy"
+    planet_name = "Sondat"
+    planet_class = "pc_tropical"
+    system_name = "Kirtor"
+    initializer = ""
+    graphical_culture = "avian_01"
+    city_graphical_culture = "avian_01"
+    empire_flag = {
+        icon = {
+            category = "just-more-flags"
+            file = "flag_nature12.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "fabric_circle.dds"
+        }
+        colors = {
+            "green"
+            "teal"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = female
+        name = "Frym Halkath Kili"
+        portrait = "avi3"
+        texture = 0
+        hair = 0
+        clothes = 0
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "gaia3_room"
+    spawn_enabled = yes
+    ethic = "ethic_authoritarian"
+    ethic = "ethic_xenophile"
+    ethic = "ethic_pacifist"
+    ethic = "ethic_fanatic_spiritualist"
+    civics = {
+        "civic_corvee_system"
+        "civic_efficient_bureaucracy"
+        "civic_exalted_priesthood"
+    }
+    origin = "origin_default"
+}

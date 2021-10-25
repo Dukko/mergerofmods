@@ -1,0 +1,112 @@
+building_fe_alloy_forge = {
+    base_buildtime = 400
+    category = manufacturing
+    country_modifier = {
+        country_resource_max_alloys_add = 7500
+    }
+    allow = {
+        has_enigmatic_capital = yes
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_acot_alloydrone_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_acot_alloydrone_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_acot_alloyman_add = 2
+        }
+    }
+    resources = {
+        category = planet_buildings
+        produces = {
+            trigger = {
+                has_modifier = acot_modifier_ascended_city
+            }
+            alloys = 20
+        }
+        cost = {
+            minerals = 650
+            sr_dark_matter = 50
+        }
+        upkeep = {
+            trigger = {
+                has_modifier = acot_modifier_ascended_city
+            }
+            sr_dark_matter = 2
+        }
+    }
+    prerequisites = {
+        tech_fe_alloy_foundry
+    }
+    ai_weight = {
+        weight = 100000
+        modifier = {
+            factor = 0
+            OR = {
+                num_buildings = {
+                    type = building_fe_alloy_forge
+                    value >= 3
+                }
+                num_buildings = {
+                    type = building_ae_alloy_forge
+                    value >= 3
+                }
+            }
+        }
+        modifier = {
+            factor = 50
+            owner = {
+                has_monthly_income = {
+                    resource = alloys
+                    value < 5
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = sr_dark_matter
+                    value <= 2
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            free_jobs > 0
+        }
+    }
+    ai_resource_production = {
+        alloys = 10
+        trigger = {
+            always = yes
+        }
+    }
+    upgrades = {
+        building_ae_alloy_forge
+    }
+}

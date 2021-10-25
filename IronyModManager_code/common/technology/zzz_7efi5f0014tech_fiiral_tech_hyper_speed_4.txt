@@ -1,0 +1,36 @@
+tech_fiiral_tech_hyper_speed_4 = {
+    cost = @tier5cost1
+    area = physics
+    tier = 5
+    category = {
+        particles
+    }
+    prerequisites = {
+        "tech_jump_drive_1"
+        "tech_fiiral_tech_hyper_speed_3"
+    }
+    weight = @tier5weight1
+    modifier = {
+        ship_interstellar_speed_mult = 0.1
+    }
+    weight_modifier = {
+        factor = 1.25
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+    ai_weight = {
+        weight = 10
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+}

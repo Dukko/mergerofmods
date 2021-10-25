@@ -1,0 +1,56 @@
+building_super_assembly = {
+    base_buildtime = 480
+    base_cap_amount = 1
+    category = pop_assembly
+    allow = {
+        has_enigmatic_capital = yes
+    }
+    potential = {
+        owner = {
+            is_regular_empire = yes
+        }
+    }
+    planet_modifier = {
+        job_acot_roboman_add = 1
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 1000
+            sr_dark_matter = 100
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    NOT = {
+                        has_technology = tech_acot_fractured_autoharvesting
+                    }
+                }
+            }
+            energy = 10
+            sr_dark_matter = 3
+        }
+    }
+    prerequisites = {
+        "tech_super_assembly"
+    }
+    ai_weight = {
+        weight = 10
+        modifier = {
+            factor = 0
+            OR = {
+                num_buildings = {
+                    type = building_super_assembly
+                    value >= 1
+                }
+                num_buildings = {
+                    type = building_ae_super_assembly
+                    value >= 1
+                }
+            }
+        }
+    }
+    upgrades = {
+        building_ae_super_assembly
+    }
+}

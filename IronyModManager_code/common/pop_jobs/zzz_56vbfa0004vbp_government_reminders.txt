@@ -1,0 +1,30 @@
+vbp_government_reminders = {
+    category = ruler
+    is_capped_by_modifier = yes
+    icon = administrator
+    clothes_texture_index = 1
+    building_icon = building_capital
+    possible_pre_triggers = {
+        has_owner = yes
+        is_sapient = yes
+    }
+    possible = {
+        exists = owner
+        owner = {
+            is_country_type = primitive
+            has_country_flag = vbp_tomb_primitives
+        }
+    }
+    pop_modifier = {
+        pop_defense_armies_add = 1
+    }
+    resources = {
+        category = planet_farmers
+        produces = {
+            unity = 3
+        }
+    }
+    weight = {
+        weight = 100
+    }
+}

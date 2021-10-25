@@ -1,0 +1,72 @@
+earth_lab2 = {
+    base_buildtime = 350
+    icon = "earth_lab_a"
+    can_build = no
+    can_demolish = no
+    category = research
+    potential = {
+        planet = {
+            has_modifier = core_planet
+        }
+    }
+    allow = {
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 200
+            minerals = 400
+        }
+        produces = {
+            physics_research = 4
+        }
+        upkeep = {
+            energy = 4
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 2
+        planet_jobs_physics_research_produces_mult = 0.1
+    }
+    country_modifier = {
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_researcher_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_brain_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_calculator_add = 1
+        }
+    }
+    upgrades = {
+        earth_lab3
+    }
+    ai_weight = {
+        weight = 30
+    }
+}

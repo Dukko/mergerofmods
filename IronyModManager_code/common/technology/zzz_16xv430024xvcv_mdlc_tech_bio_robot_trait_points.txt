@@ -1,0 +1,29 @@
+xvcv_mdlc_tech_bio_robot_trait_points = {
+    area = society
+    cost = @repeatableTechBaseCost
+    cost_per_level = @repeatableTechLevelCost
+    tier = @repeatableTechTier
+    category = {
+        biology
+    }
+    levels = 3
+    weight = @repeatableTechWeight
+    potential = {
+        has_ascension_perk = xvcv_mdlc_ap_bio_robot
+    }
+    weight_modifier = {
+        factor = @repatableTechFactor
+    }
+    ai_weight = {
+        factor = 1
+    }
+    weight_groups = {
+        repeatable
+    }
+    mod_weight_if_group_picked = {
+        repeatable = 0.01
+    }
+    modifier = {
+        XVCV_MDLC_BIO_ROBOT_species_trait_points_add = 1
+    }
+}

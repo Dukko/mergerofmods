@@ -1,0 +1,30 @@
+@starbase_power_5 = 19200
+utility_component_template = {
+    key = "STARBASE_ZERO_POINT_REACTOR"
+    size = large
+    icon = "GFX_ship_part_reactor_5"
+    icon_frame = 1
+    power = @starbase_power_5
+    prerequisites = {
+        "tech_zero_point_power"
+    }
+    component_set = "power_core"
+    class_restriction = {
+        shipclass_starbase
+    }
+    size_restriction = {
+        starbase_outpost
+        starbase_starport
+        starbase_starhold
+        starbase_starfortress
+        starbase_citadel
+        starbase_bastion
+        juggernaut
+        starbase_gatebuilders
+        graygoo_factory
+    }
+    upgrades_to = "STARBASE_DARK_MATTER_REACTOR"
+    ai_weight = {
+        weight = 5
+    }
+}

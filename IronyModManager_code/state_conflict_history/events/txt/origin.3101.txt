@@ -1,0 +1,49 @@
+namespace = origin
+planet_event = {
+    id = origin.3101
+    title = "origin.3101.name"
+    desc = "origin.3101.desc"
+    picture = GFX_evt_overgrown_city
+    show_sound = event_alien_nature
+    is_triggered_only = yes
+    trigger = {
+        owner = {
+            has_origin = origin_remnants
+            num_owned_planets < 6
+        }
+        has_planet_flag = prescripted_ideal
+        has_planet_flag = ariphaos_patch_remnants
+        NOT = {
+            has_modifier = colonial_remains
+        }
+    }
+    option = {
+        name = EXCELLENT
+        add_modifier = {
+            modifier = colonial_remains
+        }
+        add_deposit = d_ruined_arcology
+        hidden_effect = {
+            random_list = {
+                10 = {
+                    add_deposit = d_ancient_battlefield
+                }
+                10 = {
+                    add_deposit = d_ancient_bombardment_craters
+                }
+                10 = {
+                    add_deposit = d_mutant_landfill
+                }
+                10 = {
+                    add_deposit = d_wetware_computer
+                }
+                10 = {
+                    add_deposit = d_ancient_particle_accelerator
+                }
+                10 = {
+                    add_deposit = d_irradiated_ruins
+                }
+            }
+        }
+    }
+}

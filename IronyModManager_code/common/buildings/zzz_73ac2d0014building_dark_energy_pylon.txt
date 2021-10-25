@@ -1,0 +1,101 @@
+building_dark_energy_pylon = {
+    base_buildtime = 600
+    can_demolish = yes
+    can_be_disabled = yes
+    category = manufacturing
+    potential = {
+    }
+    allow = {
+        has_enigmatic_capital = yes
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_acot_dark_energy_man_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_acot_dark_energy_drone_add = 2
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 850
+        }
+        produces = {
+            acot_sr_dark_energy = 2
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    NOT = {
+                        has_technology = tech_acot_fractured_autoharvesting
+                    }
+                }
+            }
+            energy = 4
+        }
+    }
+    prerequisites = {
+        "tech_dark_energy_pylon"
+    }
+    ai_weight = {
+        weight = 10
+        modifier = {
+            factor = 100000
+            owner = {
+                has_monthly_income = {
+                    resource = acot_sr_dark_energy
+                    value < 3
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = acot_sr_dark_energy
+                    value > 250
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value <= 10
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                num_buildings = {
+                    type = building_dark_energy_pylon
+                    value >= 2
+                }
+                num_buildings = {
+                    type = building_ae_dark_energy_pylon
+                    value >= 2
+                }
+            }
+        }
+    }
+    upgrades = {
+        building_ae_dark_energy_pylon
+    }
+}

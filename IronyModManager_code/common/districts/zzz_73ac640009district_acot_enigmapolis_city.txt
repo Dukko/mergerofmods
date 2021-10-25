@@ -1,0 +1,96 @@
+district_acot_enigmapolis_city = {
+    base_buildtime = 360
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        uses_district_set = ae_enigmapolis
+    }
+    potential = {
+        uses_district_set = ae_enigmapolis
+    }
+    allow = {
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_acot_overlord_add = 1
+            job_acot_overseer_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_acot_overlord_drone_add = 1
+            job_acot_overseer_drone_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_acot_overlord_droid_add = 1
+            job_acot_overseer_droid_add = 2
+        }
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = 10000
+        }
+        produces = {
+            unity = 50
+        }
+        produces = {
+            trigger = {
+                is_regular_empire = yes
+            }
+            consumer_goods = 50
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    is_machine_empire = no
+                }
+            }
+            food = 50
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    is_machine_empire = yes
+                }
+            }
+            energy = 50
+        }
+        upkeep = {
+            acot_sr_dark_energy = 10
+            sr_dark_matter = 10
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 30
+        planet_amenities_add = 30
+        trade_value_add = 30
+        trade_value_mult = 0.5
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 5
+            free_housing < 10
+        }
+    }
+}

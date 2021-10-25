@@ -1,0 +1,99 @@
+namespace = precursor
+ship_event = {
+    id = precursor.1101
+    title = "precursor.1101.name"
+    desc = "precursor.1101.desc"
+    picture = GFX_evt_dead_city
+    location = from
+    is_triggered_only = yes
+    trigger = {
+        fromfrom = {
+            has_planet_flag = first_league_homeworld
+        }
+        owner = {
+            is_ai = no
+            has_country_flag = first_league_system
+        }
+    }
+    immediate = {
+        owner = {
+            set_country_flag = league_world_found
+            set_global_flag = first_league_homeworld_found
+        }
+    }
+    after = {
+        owner = {
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 120
+                min = 240
+                max = 9999
+            }
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = @tier4researchreward
+                min = @tier4researchmin
+                max = @tier4researchmax
+            }
+            add_monthly_resource_mult = {
+                resource = influence
+                value = @tier4influencereward
+                min = @tier4influencemin
+                max = @tier4influencemax
+            }
+            if = {
+                limit = {
+                    has_ancrel = yes
+                }
+                custom_tooltip = league_artifact_research_unlocked
+            }
+        }
+    }
+    option = {
+        name = "FASCINATING"
+        trigger = {
+            owner = {
+                has_event_chain = "first_league_homeworld_chain"
+            }
+        }
+        owner = {
+            end_event_chain = "first_league_homeworld_chain"
+        }
+        hidden_effect = {
+            every_country = {
+                limit = {
+                    OR = {
+                        has_event_chain = first_league_chain
+                        has_event_chain = "first_league_homeworld_chain"
+                    }
+                }
+                country_event = {
+                    id = precursor.99336
+                }
+            }
+        }
+    }
+    option = {
+        name = "FASCINATING"
+        trigger = {
+            owner = {
+                NOT = {
+                    has_event_chain = "first_league_homeworld_chain"
+                }
+            }
+        }
+        hidden_effect = {
+            every_country = {
+                limit = {
+                    OR = {
+                        has_event_chain = first_league_chain
+                        has_event_chain = "first_league_homeworld_chain"
+                    }
+                }
+                country_event = {
+                    id = precursor.99336
+                }
+            }
+        }
+    }
+}

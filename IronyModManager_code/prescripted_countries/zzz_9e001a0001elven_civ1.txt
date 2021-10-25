@@ -1,0 +1,69 @@
+elven_civ1 = {
+    name = "elven_civ1"
+    adjective = "Ayleian"
+    spawn_enabled = no
+    spawn_as_fallen = no
+    ignore_portrait_duplication = yes
+    ship_prefix = ""
+    species = {
+        class = "ELVEN"
+        portrait = "elven"
+        name = "Ayleid"
+        plural = "Ayleids"
+        adjective = "Ayleian"
+        name_list = "eos_namelist_elf_ayleid"
+        trait = "trait_elven_true"
+        trait = "trait_charismatic"
+        trait = "trait_talented"
+        trait = "trait_wasteful"
+    }
+    room = "personality_spiritual_seekers_room"
+    authority = "auth_imperial"
+    civics = {
+        "civic_elven_craft"
+        "civic_elven_arcane_minded"
+    }
+    government = "gov_theocratic_monarchy"
+    ethic = "ethic_fanatic_militarist"
+    ethic = "ethic_spiritualist"
+    planet_name = "Senalata"
+    planet_class = "pc_tropical"
+    origin = "origin_elven_foundations"
+    initializer = "elven_system_imperial_initializer"
+    system_name = "Anoralas"
+    graphical_culture = "elven_01"
+    city_graphical_culture = "elven_01"
+    advisor_voice_type = "l_xenophile"
+    flags = {
+        ayleid_personality_flag
+    }
+    empire_flag = {
+        icon = {
+            category = "elven"
+            file = "elven_1.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "vertical.dds"
+        }
+        colors = {
+            "dark_teal"
+            "black"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = female
+        name = "Elenya Alloria"
+        portrait = "elven_female_07"
+        texture = 3
+        hair = 0
+        clothes = 3
+        ruler_title = "Grand King"
+        ruler_title_female = "Grand Queen"
+        trait = trait_ruler_architectural_sense
+        trait = trait_ruler_expansionist
+        leader_class = ruler
+    }
+}

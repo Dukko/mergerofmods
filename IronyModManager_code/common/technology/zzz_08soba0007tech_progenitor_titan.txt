@@ -1,0 +1,27 @@
+tech_progenitor_titan = {
+    cost = @acot_tier10cost2
+    area = engineering
+    tier = 10
+    category = {
+        voidcraft
+    }
+    weight = 0
+    is_rare = yes
+    potential = {
+        OR = {
+            is_country_type = original_empire
+            is_country_type = original_empire_passive
+            is_country_type = original_empire_active
+        }
+    }
+    ai_weight = {
+        factor = 3
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+}

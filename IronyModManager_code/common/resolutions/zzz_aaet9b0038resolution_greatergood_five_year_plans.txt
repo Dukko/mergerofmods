@@ -1,0 +1,215 @@
+@resolution_weight_popular = 6.5
+@resolution_cost_t2 = 150
+@resolution_flag_timer = 360
+resolution_greatergood_five_year_plans = {
+    icon = "GFX_resolution_greater_good"
+    resources = {
+        category = resolutions
+        cost = {
+            influence = @resolution_cost_t2
+        }
+    }
+    target = no
+    level = 2
+    modifier = {
+        resolution_greatergood_workers_rights = 1
+        resolution_greatergood_five_year_plans = 1
+    }
+    effect = {
+        hidden_effect = {
+            add_modifier = {
+                modifier = resolution_passed_diplomatic_weight
+                days = 2200
+            }
+        }
+        custom_tooltip = resolution_greatergood_five_year_plans_tooltip
+        hidden_effect = {
+            set_global_flag = resolution_with_breach_effect_passed
+            set_timed_country_flag = {
+                flag = galactic_community_resolution_passed_greatergood
+                days = @resolution_flag_timer
+            }
+            if = {
+                limit = {
+                    OR = {
+                        is_civic_slaver_guilds = yes
+                        is_origin_syncretic_livestock = yes
+                        is_slaver = yes
+                        allows_slavery = yes
+                    }
+                }
+                set_timed_country_flag = {
+                    flag = faction_authoritarian_outraged_gc
+                    days = 7200
+                }
+            }
+            every_playable_country = {
+                limit = {
+                    is_galactic_community_member = yes
+                    is_gestalt = no
+                    any_owned_species = {
+                        is_sapient = yes
+                        has_living_standard = {
+                            type = living_standard_subsistence
+                            country = prev
+                        }
+                    }
+                }
+                country_event = {
+                    id = federations.10200
+                }
+            }
+        }
+    }
+    fail_effects = {
+        hidden_effect = {
+            add_modifier = {
+                modifier = resolution_failed_diplomatic_weight
+                days = 2200
+            }
+        }
+        hidden_effect = {
+            set_timed_country_flag = {
+                flag = galactic_community_resolution_failed_greatergood
+                days = @resolution_flag_timer
+            }
+        }
+    }
+    allow = {
+        is_active_resolution = "resolution_greatergood_workers_rights"
+    }
+    breach = {
+        is_gestalt = no
+        any_owned_species = {
+            is_sapient = yes
+            has_living_standard = {
+                type = living_standard_subsistence
+                country = prev
+            }
+        }
+    }
+    ai_weight = {
+        weight = @resolution_weight_popular
+        modifier = {
+            factor = 2
+            is_socialism = yes
+        }
+        modifier = {
+            factor = 2
+            has_ethic = ethic_fanatic_socialism
+        }
+        modifier = {
+            factor = 1.5
+            NOT = {
+                in_breach_of = resolution_greatergood_five_year_plans
+            }
+            is_xenophile = yes
+            is_authoritarian = no
+        }
+        modifier = {
+            factor = 2
+            NOT = {
+                in_breach_of = resolution_greatergood_five_year_plans
+            }
+            has_ethic = ethic_fanatic_xenophile
+            is_authoritarian = no
+        }
+        modifier = {
+            factor = 0.5
+            is_authoritarian = yes
+        }
+        modifier = {
+            factor = 0
+            in_breach_of = resolution_greatergood_five_year_plans
+        }
+        modifier = {
+            factor = 0
+            has_ethic = ethic_fanatic_authoritarian
+        }
+        modifier = {
+            factor = 0.5
+            is_megacorp = yes
+        }
+        modifier = {
+            factor = 0.5
+            is_capitalism = yes
+        }
+        modifier = {
+            factor = 0.5
+            is_civic_has_elite = yes
+        }
+        modifier = {
+            factor = 1.5
+            is_civic_has_meritocracy = yes
+        }
+        modifier = {
+            factor = 0.5
+            is_pleasure_seeker = yes
+        }
+        modifier = {
+            factor = 0.25
+            has_ai_personality_behaviour = slaver
+        }
+        modifier = {
+            factor = 0
+            in_breach_of = resolution_greatergood_five_year_plans
+        }
+        modifier = {
+            factor = 0.75
+            any_federation_ally = {
+                NOT = {
+                    federation = {
+                        has_federation_type = hegemony_federation
+                    }
+                }
+                in_breach_of = resolution_greatergood_five_year_plans
+            }
+        }
+        modifier = {
+            factor = 3
+            OR = {
+                is_civic_shared_burden = yes
+                is_civic_machine_servitor = yes
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                is_civic_slaver_guilds = yes
+                is_origin_syncretic_livestock = yes
+                is_slaver = yes
+                any_owned_species = {
+                    is_sapient = yes
+                    has_living_standard = {
+                        type = living_standard_subsistence
+                        country = prev
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+                has_valid_civic = civic_agrarian_idyll
+                is_civic_free_haven = yes
+                is_civic_inwards_perfection = yes
+            }
+        }
+        modifier = {
+            factor = 0.8
+            is_gestalt = yes
+        }
+        modifier = {
+            factor = 0.5
+            is_civic_authoritarian = yes
+        }
+        modifier = {
+            factor = 0.8
+            OR = {
+                is_gestalt = yes
+                has_valid_civic = civic_aristocratic_elite
+                has_valid_civic = civic_police_state
+            }
+        }
+    }
+}

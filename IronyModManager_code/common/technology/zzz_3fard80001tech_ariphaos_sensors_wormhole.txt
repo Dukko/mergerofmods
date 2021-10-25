@@ -1,0 +1,65 @@
+tech_ariphaos_sensors_wormhole = {
+    cost = @tier4cost2
+    area = physics
+    tier = 4
+    category = {
+        particles
+    }
+    is_rare = yes
+    is_reverse_engineerable = no
+    weight = @tier4weight2
+    prerequisites = {
+        "tech_wormhole_stabilization"
+    }
+    modifier = {
+        show_only_custom_tooltip = yes
+        custom_tooltip = tech_ariphaos_sensors_wormhole_small
+    }
+    weight_modifier = {
+        factor = 0.5
+        modifier = {
+            factor = 1.25
+            has_tradition = tr_discovery_adopt
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = 2
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_seen_any_bypass = wormhole
+                any_relation = {
+                    is_country_type = default
+                    has_communications = ROOT
+                    has_technology = tech_wormhole_stabilization
+                }
+            }
+        }
+        modifier = {
+            factor = 4
+            owns_any_bypass = wormhole
+        }
+    }
+    ai_weight = {
+        factor = 0.5
+        modifier = {
+            factor = 2
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+        modifier = {
+            factor = 4
+            owns_any_bypass = wormhole
+        }
+    }
+}

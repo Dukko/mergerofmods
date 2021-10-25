@@ -1,0 +1,19 @@
+extra_building_slots_5 = {
+    cost = 8500
+    area = engineering
+    tier = 3
+    prerequisites = {
+        "tech_housing_2"
+        "extra_building_slots_4"
+    }
+    category = {
+        industry
+    }
+    weight = @tier3weight2
+    modifier = {
+        planet_max_buildings_add = 2
+    }
+    ai_weight = {
+        factor = 4
+    }
+}

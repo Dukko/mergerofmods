@@ -1,0 +1,68 @@
+acot_phanon_base = {
+    attack_unarmed_orbital_stations = yes
+    has_difficulty_bonuses = no
+    show_in_contacts_list = yes
+    custom_diplomacy = yes
+    share_survey_data = no
+    enforces_borders = yes
+    needs_survey = no
+    government = yes
+    has_complete_sensor = yes
+    can_have_their_comms_shared = yes
+    custom_starbase = acot_star_commander
+    observable = no
+    uses_special_buildables = yes
+    relations = yes
+    ai = {
+        enabled = no
+        declare_war = no
+        colonizer = no
+        internal_policies = no
+        modification = no
+        construction = no
+        starbase_upgrade = no
+        limited_construction = yes
+        tech = no
+        modules = {
+        }
+    }
+    faction = {
+        hostile = no
+        pirate = no
+        needs_border_access = no
+        generate_borders = yes
+        needs_colony = no
+        auto_delete = no
+    }
+    modules = {
+        exclusive_diplomacy_module = {
+            contact_rule = on_action_only
+        }
+        tiered_technology_module = {
+            tier = 8
+            rare = yes
+        }
+        standard_event_module = {
+        }
+    }
+    resources = {
+        category = country_base
+        produces = {
+            energy = 50000
+            minerals = 50000
+            physics_research = 5000
+            society_research = 5000
+            engineering_research = 5000
+            influence = 1000
+            unity = 50000
+            alloys = 50000
+            sr_dark_matter = 5000
+            acot_sr_dark_energy = 5000
+            sr_zro = 5000
+            nanites = 5000
+            exotic_gases = 5000
+            rare_crystals = 5000
+            volatile_motes = 5000
+        }
+    }
+}

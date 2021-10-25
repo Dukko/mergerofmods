@@ -1,0 +1,15 @@
+giga_tech_aeternite_armor = {
+    cost = 150000
+    area = engineering
+    tier = 5
+    category = {
+        materials
+    }
+    is_rare = yes
+    weight = 0
+    is_reverse_engineerable = no
+    modifier = {
+        ship_armor_mult = 0.1
+        ship_shield_mult = 0.1
+    }
+}

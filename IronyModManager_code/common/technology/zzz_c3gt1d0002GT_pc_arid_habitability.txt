@@ -1,0 +1,127 @@
+GT_pc_arid_habitability = {
+    cost = @tier1cost4
+    area = society
+    tier = 1
+    category = {
+        new_worlds
+    }
+    is_rare = yes
+    prerequisites = {
+        "tech_frontier_health"
+    }
+    weight = @tier2weight2
+    modifier = {
+        pc_arid_habitability = 0.05
+        pc_mesa_habitability = 0.05
+        pc_hadesert_habitability = 0.05
+        pc_outback_habitability = 0.05
+        pc_badlands_habitability = 0.05
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            years_passed > 50
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                any_planet_within_border = {
+                    is_planet_class = pc_arid
+                }
+                any_planet_within_border = {
+                    is_planet_class = pc_mesa
+                }
+                any_planet_within_border = {
+                    is_planet_class = pc_hadesert
+                }
+                any_planet_within_border = {
+                    is_planet_class = pc_outback
+                }
+                any_planet_within_border = {
+                    is_planet_class = pc_badlands
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                species = {
+                    has_trait = trait_pc_arid_preference
+                }
+                species = {
+                    has_trait = trait_pc_mesa_preference
+                }
+                species = {
+                    has_trait = trait_pc_hadesert_preference
+                }
+                species = {
+                    has_trait = trait_pc_outback_preference
+                }
+                species = {
+                    has_trait = trait_pc_badlands_preference
+                }
+            }
+        }
+        factor = 0.1
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 0
+            NOR = {
+                any_planet_within_border = {
+                    is_planet_class = pc_arid
+                }
+                any_planet_within_border = {
+                    is_planet_class = pc_mesa
+                }
+                any_planet_within_border = {
+                    is_planet_class = pc_hadesert
+                }
+                any_planet_within_border = {
+                    is_planet_class = pc_outback
+                }
+                any_planet_within_border = {
+                    is_planet_class = pc_badlands
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                species = {
+                    has_trait = trait_pc_arid_preference
+                }
+                species = {
+                    has_trait = trait_pc_mesa_preference
+                }
+                species = {
+                    has_trait = trait_pc_hadesert_preference
+                }
+                species = {
+                    has_trait = trait_pc_outback_preference
+                }
+                species = {
+                    has_trait = trait_pc_badlands_preference
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+leader_trait_general_bionic_implant = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/trait_bionic_implants.dds"
+    modifier = {
+        army_health = 0.5
+        army_damage_mult = 0.5
+    }
+    leader_trait = {
+        general
+    }
+    leader_class = {
+        general
+    }
+    initial = no
+    randomized = no
+}

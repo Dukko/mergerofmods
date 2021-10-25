@@ -1,0 +1,64 @@
+tech_resized_mass_accelerator_ae = {
+    area = engineering
+    cost = @acot_tier7cost2
+    tier = 7
+    category = {
+        propulsion
+    }
+    ai_update_type = military
+    prerequisites = {
+        "tech_autocannons_ae"
+        "tech_resized_mass_accelerator_dm"
+    }
+    weight = @tier5weight3
+    potential = {
+        NOT = {
+            has_global_flag = acot_weapons_forbidden
+        }
+        NOT = {
+            is_country_type = fallen_empire
+        }
+        has_technology = tech_dark_matter_power_core_ae
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_technology = tech_dark_matter_power_core_ae
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_propulsion"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 2
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_propulsion"
+            }
+        }
+    }
+}

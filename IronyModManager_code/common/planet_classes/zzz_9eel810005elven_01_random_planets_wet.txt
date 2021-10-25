@@ -1,0 +1,8 @@
+random_list = {
+    name = "elven_01_random_planets_wet"
+    planets = {
+        "pc_tropical"
+        "pc_ocean"
+        "pc_continental"
+    }
+}

@@ -1,0 +1,70 @@
+@hab_cost = 500
+district_starborn_starting_preserve = {
+    base_buildtime = 240
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        is_planet_class = pc_starborn_habitat_start
+        has_retile = no
+    }
+    potential = {
+        is_planet_class = pc_starborn_habitat_start
+        has_retile = no
+    }
+    conversion_ratio = 1
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @hab_cost
+        }
+        upkeep = {
+            energy = 1
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_starborn_preserve_ranger_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_agri_drone_add = 2
+            job_synapse_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_agri_drone_add = 1
+            job_calculator_add = 1
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        text = job_starborn_preserve_ranger_effect_desc
+    }
+}
