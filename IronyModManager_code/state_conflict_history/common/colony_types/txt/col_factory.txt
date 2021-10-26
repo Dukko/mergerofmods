@@ -1,3 +1,4 @@
+@built_districts_medium_threshold = 4
 @free_districts_high_threshold = 15
 col_factory = {
     icon = GFX_colony_type_factory

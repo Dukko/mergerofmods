@@ -1,8 +1,8 @@
 pc_mem_vazuran_habitat = {
     habitat = yes
-    tile_set = pc_habitat
+    is_artificial_planet = yes
     entity = "mem_vazuran_habitat"
-    icon_frame = 22
+    icon = GFX_planet_type_habitat
     entity_scale = 1
     enable_tilt = no
     fixed_entity_scale = yes
@@ -23,8 +23,14 @@ pc_mem_vazuran_habitat = {
     planet_size = 25
     moon_size = 1
     colonizable = yes
+    district_set = city_world
     ideal = yes
     starting_planet = no
     orbit_lines = no
     has_colonization_influence_cost = no
+    modifier = {
+        planet_jobs_produces_mult = 0.2
+        pop_growth_speed = 0.5
+        planet_max_buildings_add = 12
+    }
 }

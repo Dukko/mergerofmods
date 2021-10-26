@@ -1,11 +1,12 @@
 col_habitat = {
     icon = GFX_colony_type_habitat
     potential = {
+            is_capital = no
         OR = {
             uses_district_set = habitat
             uses_district_set = pdarchive
+             }
         }
-    }
     planet_modifier = {
         planet_building_build_speed_mult = 0.25
         planet_district_build_speed_mult = 0.25

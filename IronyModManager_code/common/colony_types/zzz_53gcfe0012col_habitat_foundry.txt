@@ -5,6 +5,7 @@ col_habitat_foundry = {
             uses_district_set = habitat
             uses_district_set = pdarchive
         }
+        is_capital = no
     }
     planet_modifier = {
         custom_tooltip = col_habitat_foundry_custom

@@ -4,7 +4,7 @@
 @built_districts_medium_threshold = 4
 @built_districts_high_threshold = 8
 col_rural_gestalt = {
-    icon = 13
+    icon = GFX_colony_type_fringe
     potential = {
         NOR = {
             uses_district_set = habitat

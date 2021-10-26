@@ -1,5 +1,5 @@
 col_fortress = {
-    icon = 9
+    icon = GFX_colony_type_fortress
     potential = {
         exists = owner
         NOR = {

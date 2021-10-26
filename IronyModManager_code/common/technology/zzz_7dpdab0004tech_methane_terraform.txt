@@ -10,7 +10,7 @@ tech_methane_terraform = {
     }
     weight = @tier2weight2
     potential = {
-        has_global_flag = planetarydiversityexotics
+        has_trait = trait_pc_methane_preference
     }
     modifier = {
         custom_tooltip = METHANE_TERRAFORM
@@ -36,8 +36,10 @@ tech_methane_terraform = {
         }
     }
     ai_weight = {
+        factor = 10000
         modifier = {
-            factor = 3
+            factor = 500
+            reroll_society = yes
         }
         modifier = {
             factor = 1.25
@@ -45,10 +47,6 @@ tech_methane_terraform = {
                 area = society
                 has_trait = "leader_trait_expertise_new_worlds"
             }
-        }
-        modifier = {
-            factor = 0
-            num_owned_planets < 2
         }
     }
 }

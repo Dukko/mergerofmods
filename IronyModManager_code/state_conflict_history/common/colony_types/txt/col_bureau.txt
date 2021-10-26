@@ -1,5 +1,5 @@
 col_bureau = {
-    icon = 28
+    icon = GFX_colony_type_bureaucratic
     potential = {
         exists = owner
         owner = {

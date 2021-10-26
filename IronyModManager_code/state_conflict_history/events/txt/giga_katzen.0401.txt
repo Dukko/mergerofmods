@@ -1,0 +1,76 @@
+namespace = giga_katzen
+namespace = giga_flusion_terraform
+planet_event = {
+    id = giga_katzen.0401
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        any_country = {
+            is_country_type = katzenartig_imperium
+        }
+    }
+    immediate = {
+        if = {
+            limit = {
+                OR = {
+                    is_planet_class = pc_barren
+                    is_planet_class = pc_barren_cold
+                }
+            }
+            solar_system = {
+                spawn_megastructure = {
+                    type = terraform_barren_0
+                    planet = ROOT
+                    owner = event_target:flusion_primitives_country
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                OR = {
+                    is_planet_class = pc_toxic
+                    is_planet_class = pc_hothouse
+                }
+            }
+            solar_system = {
+                spawn_megastructure = {
+                    type = terraform_toxic_0
+                    planet = ROOT
+                    owner = event_target:flusion_primitives_country
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                OR = {
+                    is_planet_class = pc_molten
+                    is_planet_class = pc_volcanic
+                }
+            }
+            solar_system = {
+                spawn_megastructure = {
+                    type = terraform_molten_0
+                    planet = ROOT
+                    owner = event_target:flusion_primitives_country
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                OR = {
+                    is_planet_class = pc_shattered
+                    is_planet_class = pc_broken
+                    is_planet_class = pc_shattered_2
+                    is_planet_class = pc_egg_cracked
+                }
+            }
+            solar_system = {
+                spawn_megastructure = {
+                    type = terraform_shattered_0
+                    planet = ROOT
+                    owner = event_target:flusion_primitives_country
+                }
+            }
+        }
+    }
+}

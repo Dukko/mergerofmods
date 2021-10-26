@@ -13,7 +13,7 @@ tech_ash_terraform = {
         custom_tooltip = ASH_TERRAFORM
     }
     potential = {
-        has_global_flag = planetarydiversityexotics
+        has_trait = trait_pc_ash_preference
     }
     weight_modifier = {
         modifier = {
@@ -40,8 +40,10 @@ tech_ash_terraform = {
         }
     }
     ai_weight = {
+        factor = 10000
         modifier = {
-            factor = 3
+            factor = 500
+            reroll_society = yes
         }
         modifier = {
             factor = 1.25
@@ -49,10 +51,6 @@ tech_ash_terraform = {
                 area = society
                 has_trait = "leader_trait_expertise_new_worlds"
             }
-        }
-        modifier = {
-            factor = 0
-            num_owned_planets < 2
         }
     }
 }

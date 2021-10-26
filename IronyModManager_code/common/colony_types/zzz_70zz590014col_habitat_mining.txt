@@ -6,6 +6,7 @@ col_habitat_mining = {
             uses_district_set = pdarchive
         }
         has_planet_flag = mining_habitat
+        is_capital = no
     }
     planet_modifier = {
         planet_district_hab_mining_build_speed_mult = 0.25

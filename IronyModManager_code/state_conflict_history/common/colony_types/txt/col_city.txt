@@ -1,3 +1,8 @@
+@free_districts_low_threshold = 5
+@free_districts_medium_threshold = 10
+@free_districts_high_threshold = 15
+@built_districts_low_threshold = 3
+@built_districts_high_threshold = 8
 col_city = {
     icon = GFX_colony_type_urban
     potential = {
@@ -26,9 +31,24 @@ col_city = {
         is_special_colony_type = no
     }
     planet_modifier = {
-        planet_structures_upkeep_mult = -0.1
         planet_district_city_build_speed_mult = 0.25
+        planet_structures_upkeep_mult = -0.1
         trade_value_mult = 0.2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_galactic_community_member = yes
+            }
+            OR = {
+                is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
+                is_active_resolution = "resolution_industry_project_cornucopia"
+            }
+        }
+        modifier = {
+            planet_jobs_specialist_produces_mult = 0.05
+        }
     }
     weight_modifier = {
         base = 0

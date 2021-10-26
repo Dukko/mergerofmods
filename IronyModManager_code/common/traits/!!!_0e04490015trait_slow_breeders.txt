@@ -5,7 +5,6 @@ trait_slow_breeders = {
         "trait_rapid_breeders"
         "trait_fertile"
         "trait_rapid_breeders_lithoid"
-        "trait_plantoid_budding"
         "trait_additrait_very_slow_breeders"
         "trait_additrait_passionate"
     }

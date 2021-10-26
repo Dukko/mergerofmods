@@ -6,6 +6,7 @@ col_habitat_factory = {
             uses_district_set = pdarchive
         }
         exists = owner
+        is_capital = no
         owner = {
             country_uses_consumer_goods = yes
         }

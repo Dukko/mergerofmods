@@ -1,3 +1,4 @@
+namespace = utopia
 namespace = akx
 planet_event = {
     id = akx.10020
@@ -7,8 +8,10 @@ planet_event = {
     show_sound = event_activating_unknown_technology
     location = root
     is_triggered_only = yes
-    pre_triggers = {
-        is_ai = no
+    trigger = {
+        owner = {
+            is_ai = no
+        }
     }
     immediate = {
         solar_system = {
@@ -22,6 +25,7 @@ planet_event = {
                         is_planet_class = pc_ringworld_tech_damaged
                         is_planet_class = pc_ringworld_seam
                         is_planet_class = pc_ringworld_seam_damaged
+                        is_planet_class = pc_shattered_ring_habitable
                         is_planet_class = pc_habitat
                         is_planet_class = pc_asteroid
                         is_planet_class = pc_ice_asteroid

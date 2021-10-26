@@ -12,7 +12,7 @@ col_ecu_mix = {
         }
     }
     planet_modifier = {
-        planet_structures_upkeep_mult = -0.25
+        planet_structures_upkeep_mult = -0.1
         planet_jobs_upkeep_mult = -0.1
         trade_value_mult = 0.2
     }

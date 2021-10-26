@@ -1,5 +1,5 @@
 col_ecu_foundry = {
-    icon = 5
+    icon = GFX_colony_type_foundry
     potential = {
         OR = {
             uses_district_set = city_world

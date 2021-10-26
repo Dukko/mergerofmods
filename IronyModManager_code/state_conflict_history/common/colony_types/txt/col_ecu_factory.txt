@@ -1,5 +1,5 @@
 col_ecu_factory = {
-    icon = 6
+    icon = GFX_colony_type_factory
     potential = {
         OR = {
             uses_district_set = city_world
@@ -7,13 +7,8 @@ col_ecu_factory = {
             uses_district_set = pdshroudarc
         }
         exists = owner
-        OR = {
-            owner = {
-                is_regular_empire = yes
-            }
-            owner = {
-                has_civic = civic_machine_servitor
-            }
+        owner = {
+            country_uses_consumer_goods = yes
         }
     }
     planet_modifier = {

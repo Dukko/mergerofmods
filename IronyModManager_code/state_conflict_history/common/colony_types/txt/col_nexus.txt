@@ -3,7 +3,7 @@
 @free_districts_high_threshold = 15
 @built_districts_high_threshold = 8
 col_nexus = {
-    icon = 1
+    icon = GFX_colony_type_urban
     potential = {
         NOR = {
             uses_district_set = machine_world
@@ -31,8 +31,8 @@ col_nexus = {
     }
     planet_modifier = {
         planet_district_city_build_speed_mult = 0.25
-        planet_district_industrial_build_speed_mult = 0.25
-        planet_jobs_upkeep_mult = -0.1
+        planet_structures_upkeep_mult = -0.1
+        planet_jobs_complex_drone_produces_mult = 0.05
     }
     triggered_planet_modifier = {
         potential = {
