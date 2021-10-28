@@ -32,9 +32,34 @@ population_controls = {
             }
         }
         valid = {
-            NOR = {
-                has_valid_civic = civic_beacon_of_liberty
-                has_valid_civic = civic_spiritual_democracy
+            OR = {
+                NOT = {
+                    has_global_flag = cultural_overhaul_active
+                }
+                NOR = {
+                    AND = {
+                        is_ethics_classic = yes
+                        OR = {
+                            has_valid_civic = civic_anarchy_ideals
+                            has_valid_civic = civic_spiritual_democracy
+                        }
+                    }
+                    AND = {
+                        has_global_flag = cultural_overhaul_redux_active
+                        OR = {
+                            has_valid_civic = civic_beacon_of_liberty
+                            has_valid_civic = civic_spiritual_democracy
+                        }
+                    }
+                    AND = {
+                        has_global_flag = bugbranch_global_flag
+                        OR = {
+                            has_valid_civic = civic_beacon_of_liberty
+                            has_valid_civic = civic_beacon_of_liberty_corpo
+                            has_valid_civic = civic_theocratic_republic
+                        }
+                    }
+                }
             }
         }
         policy_flags = {

@@ -1,0 +1,7 @@
+asteroid_belt = {
+    planet_miners_produces_mult = 0.1
+    district_mining_max = 3
+    station_gatherers_produces_mult = 0.1
+    icon = "gfx/interface/icons/planet_modifiers/pm_asteroid_belt.dds"
+    icon_frame = 1
+}

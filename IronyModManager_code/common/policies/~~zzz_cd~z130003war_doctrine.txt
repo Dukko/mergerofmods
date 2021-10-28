@@ -1,6 +1,6 @@
 war_doctrine = {
     potential = {
-        merg_is_default_empire = yes
+        merg_is_default_empire_not_ev = yes
         has_tradition = tr_supremacy_finish
     }
     option = {
