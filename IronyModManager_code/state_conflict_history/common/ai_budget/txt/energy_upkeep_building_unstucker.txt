@@ -1,0 +1,11 @@
+energy_upkeep_building_unstucker = {
+    resource = energy
+    type = upkeep
+    category = planets
+    potential = {
+        has_country_flag = str_planet_buildings_unstuck
+    }
+    fraction = {
+        weight = 2
+    }
+}

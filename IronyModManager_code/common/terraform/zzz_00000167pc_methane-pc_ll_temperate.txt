@@ -1,0 +1,22 @@
+@terraforming_cost_level_3 = 10000
+@terraforming_duration_level_3 = 5400
+terraform_link = {
+    from = pc_methane
+    to = pc_ll_temperate
+    energy = @terraforming_cost_level_3
+    duration = @terraforming_duration_level_3
+    condition = {
+        has_technology = tech_climate_restoration
+    }
+    ai_weight = {
+        weight = 0
+    }
+    effect = {
+        from = {
+            remove_modifier = methane
+            add_modifier = {
+                modifier = lifeless_temperate
+            }
+        }
+    }
+}

@@ -1,0 +1,8 @@
+opinion_traitor_to_empire = {
+    opinion = {
+        base = -200
+    }
+    decay = {
+        base = 1
+    }
+}

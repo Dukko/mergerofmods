@@ -1,0 +1,59 @@
+ship_section_template = {
+    key = "OMEGA_PRECURSOR_TITAN_CORE_KEY"
+    ship_size = precursor_titan
+    fits_on_slot = core
+    should_draw_components = yes
+    entity = "precursor_titan_stern_entity"
+    icon = "GFX_ship_part_core_mid"
+    prerequisites = {
+        "tech_omega_titan"
+    }
+    component_slot = {
+        name = "LARGE_GUN_01"
+        template = "invisible_large_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_02"
+        template = "invisible_large_turret"
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "LARGE_GUN_03"
+        template = "invisible_large_turret"
+        locatorname = "medium_gun_03"
+    }
+    component_slot = {
+        name = "LARGE_GUN_04"
+        template = "invisible_large_turret"
+        locatorname = "medium_gun_04"
+    }
+    component_slot = {
+        name = "LARGE_GUN_05"
+        template = "invisible_large_turret"
+        locatorname = "medium_gun_05"
+    }
+    component_slot = {
+        name = "LARGE_GUN_06"
+        template = "invisible_large_turret"
+        locatorname = "medium_gun_06"
+    }
+    component_slot = {
+        name = "LARGE_GUN_07"
+        template = "invisible_large_turret"
+        locatorname = "medium_gun_07"
+    }
+    component_slot = {
+        name = "LARGE_GUN_08"
+        template = "invisible_large_turret"
+        locatorname = "medium_gun_08"
+    }
+    large_utility_slots = 10
+    aux_utility_slots = 2
+    resources = {
+        category = ship_sections
+        cost = {
+            acot_sr_light_matter = 15
+        }
+    }
+}

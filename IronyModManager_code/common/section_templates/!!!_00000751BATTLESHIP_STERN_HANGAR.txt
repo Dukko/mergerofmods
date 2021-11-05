@@ -1,0 +1,41 @@
+@adv_section_cost = 120
+ship_section_template = {
+    key = "BATTLESHIP_STERN_HANGAR"
+    ship_size = battleship
+    fits_on_slot = stern
+    should_draw_components = yes
+    entity = "battleship_stern_L1_entity"
+    icon = "GFX_ship_part_core_stern"
+    prerequisites = {
+        tech_battleship_hull_2
+    }
+    ai_weight = {
+        modifier = {
+            factor = 20
+            is_preferred_weapons = weapon_type_strike_craft
+        }
+        modifier = {
+            factor = 10
+            is_preferred_weapons = weapon_type_explosive
+        }
+        modifier = {
+            factor = 2
+            NOR = {
+                is_preferred_weapons = weapon_type_strike_craft
+                is_preferred_weapons = weapon_type_explosive
+            }
+        }
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_01"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_locator_01"
+    }
+    large_utility_slots = 2
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @adv_section_cost
+        }
+    }
+}

@@ -1,0 +1,7 @@
+mem_sadrell_void_home_wrecker = {
+    opinion = {
+        base = -25
+    }
+    accumulative = yes
+    min = -500
+}

@@ -1,0 +1,10 @@
+cc_ignored_ally = {
+    opinion = {
+        base = -25
+    }
+    accumulative = yes
+    min = -500
+    decay = {
+        base = 4
+    }
+}

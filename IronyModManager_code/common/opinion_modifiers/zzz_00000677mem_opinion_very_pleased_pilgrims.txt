@@ -1,0 +1,8 @@
+mem_opinion_very_pleased_pilgrims = {
+    opinion = {
+        base = 80
+    }
+    decay = {
+        base = 10
+    }
+}

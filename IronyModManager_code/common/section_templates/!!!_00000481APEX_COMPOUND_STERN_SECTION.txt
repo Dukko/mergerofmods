@@ -1,0 +1,24 @@
+ship_section_template = {
+    key = "APEX_COMPOUND_STERN_SECTION"
+    ship_size = apex
+    fits_on_slot = stern
+    should_draw_components = no
+    entity = "ehof_01_apex_core_entity"
+    icon = "GFX_ship_part_core_stern"
+    component_slot = {
+        name = "COMPOUND_MEDIUM_1"
+        template = giga_invisible_medium_fixed
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "COMPOUND_MEDIUM_2"
+        template = giga_invisible_medium_fixed
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "COMPOUND_MEDIUM_3"
+        template = giga_invisible_medium_fixed
+        locatorname = "medium_gun_03"
+    }
+    large_utility_slots = 2
+}

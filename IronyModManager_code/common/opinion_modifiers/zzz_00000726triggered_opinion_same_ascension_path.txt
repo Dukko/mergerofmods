@@ -1,0 +1,80 @@
+triggered_opinion_same_ascension_path = {
+    trigger = {
+        OR = {
+            is_country_type = default
+            is_country_type = ascended_empire
+            is_country_type = lost_empire
+        }
+        OR = {
+            AND = {
+                has_ascension_perk = ap_engineered_evolution
+                FROM = {
+                    has_ascension_perk = ap_engineered_evolution
+                }
+            }
+            AND = {
+                has_ascension_perk = ap_the_flesh_is_weak
+                FROM = {
+                    has_ascension_perk = ap_the_flesh_is_weak
+                }
+            }
+            AND = {
+                has_ascension_perk = ap_mind_over_matter
+                FROM = {
+                    has_ascension_perk = ap_mind_over_matter
+                }
+            }
+        }
+    }
+    opinion = {
+        base = 10
+        modifier = {
+            add = 10
+            OR = {
+                AND = {
+                    has_ascension_perk = ap_engineered_evolution
+                    FROM = {
+                        has_ascension_perk = ap_engineered_evolution
+                    }
+                    FROM = {
+                        has_ascension_perk = ap_evolutionary_mastery
+                    }
+                }
+                AND = {
+                    has_ascension_perk = ap_the_flesh_is_weak
+                    FROM = {
+                        has_ascension_perk = ap_the_flesh_is_weak
+                    }
+                    FROM = {
+                        has_ascension_perk = ap_synthetic_evolution
+                    }
+                }
+                AND = {
+                    has_ascension_perk = ap_mind_over_matter
+                    FROM = {
+                        has_ascension_perk = ap_mind_over_matter
+                    }
+                    FROM = {
+                        has_ascension_perk = ap_transcendence
+                    }
+                }
+            }
+        }
+        modifier = {
+            add = 5
+            has_ascension_perk = ap_the_flesh_is_weak
+            FROM = {
+                has_ascension_perk = ap_the_flesh_is_weak
+            }
+            is_materialist = yes
+        }
+        modifier = {
+            add = 5
+            has_ascension_perk = ap_mind_over_matter
+            FROM = {
+                has_ascension_perk = ap_mind_over_matter
+            }
+            is_spiritualist = yes
+        }
+    }
+}

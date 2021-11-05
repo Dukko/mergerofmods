@@ -1,0 +1,12 @@
+opinion_broke_planet_buildings = {
+    opinion = {
+        base = -30
+        modifier = {
+            add = 25
+            is_country_type = fallen_empire
+        }
+    }
+    decay = {
+        base = 1
+    }
+}

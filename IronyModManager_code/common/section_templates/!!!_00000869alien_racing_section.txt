@@ -1,0 +1,10 @@
+ship_section_template = {
+    key = "alien_racing_section"
+    ship_size = alien_racing_ship
+    fits_on_slot = mid
+    entity = "eventship_06_entity"
+    icon = "GFX_ship_part_core_mid"
+    small_utility_slots = 2
+    medium_utility_slots = 2
+    large_utility_slots = 1
+}

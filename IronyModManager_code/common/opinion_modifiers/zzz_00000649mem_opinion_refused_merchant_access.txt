@@ -1,0 +1,8 @@
+mem_opinion_refused_merchant_access = {
+    opinion = {
+        base = -40
+    }
+    decay = {
+        base = 5
+    }
+}

@@ -1,0 +1,8 @@
+ship_section_template = {
+    key = "shadowgate_cargo_drone_section"
+    ship_size = shadowgate_cargo_drone
+    fits_on_slot = mid
+    entity = "ancient_destroyer_hull_entity"
+    icon = "GFX_ship_part_core_mid"
+    small_utility_slots = 3
+}

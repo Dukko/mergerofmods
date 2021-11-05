@@ -1,0 +1,5 @@
+opinion_destroying_galaxy = {
+    opinion = {
+        base = -1000
+    }
+}

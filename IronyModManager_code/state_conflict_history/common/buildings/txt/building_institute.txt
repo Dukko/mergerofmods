@@ -49,7 +49,7 @@ building_institute = {
                 resource = physics_research
                 value > 60
             }
-            has_designation = col_research
+            str_is_col_research = yes
         }
     }
     resources = {

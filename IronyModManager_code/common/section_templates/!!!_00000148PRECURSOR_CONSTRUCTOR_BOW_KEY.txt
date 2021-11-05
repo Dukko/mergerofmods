@@ -1,0 +1,17 @@
+ship_section_template = {
+    key = "PRECURSOR_CONSTRUCTOR_BOW_KEY"
+    ship_size = precursor_constructor
+    fits_on_slot = bow
+    should_draw_components = yes
+    entity = "precursor_constructor_bow_entity"
+    icon = "GFX_ship_part_core_mid"
+    large_utility_slots = 2
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = 20
+            sr_dark_matter = 2.5
+            acot_sr_dark_energy = 2.5
+        }
+    }
+}

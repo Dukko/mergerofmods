@@ -1,0 +1,46 @@
+@adv_section_cost = 45
+ship_section_template = {
+    key = "DESTROYER_BOW_TORPEDO"
+    ship_size = destroyer
+    fits_on_slot = bow
+    should_draw_components = yes
+    entity = "destroyer_bow_M1S2_entity"
+    icon = "GFX_ship_part_core_bow"
+    prerequisites = {
+        tech_destroyer_hull_2
+    }
+    ai_weight = {
+        modifier = {
+            factor = 20
+            is_preferred_weapons = weapon_type_explosive
+        }
+        modifier = {
+            factor = 0.1
+            has_technology = tech_battleships
+        }
+        modifier = {
+            factor = 0.1
+            NOT = {
+                is_preferred_weapons = weapon_type_explosive
+            }
+        }
+    }
+    component_slot = {
+        name = "TORPEDO_01"
+        template = "medium_missile_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_02"
+        template = "medium_missile_turret"
+        locatorname = "small_gun_01"
+    }
+    small_utility_slots = 3
+    aux_utility_slots = 1
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @adv_section_cost
+        }
+    }
+}

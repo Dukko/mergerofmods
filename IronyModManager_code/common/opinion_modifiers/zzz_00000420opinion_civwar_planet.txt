@@ -1,0 +1,8 @@
+opinion_civwar_planet = {
+    opinion = {
+        base = -400
+    }
+    decay = {
+        base = 2
+    }
+}

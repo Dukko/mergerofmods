@@ -1,0 +1,17 @@
+ver_triggered_opinion_burdensome_overlord_taxes = {
+    trigger = {
+        is_subject = yes
+        NOT = {
+            has_ethic = ethic_gestalt_consciousness
+        }
+        FROM = {
+            any_subject = {
+                is_same_value = ROOT
+            }
+            has_policy_flag = ver_burdensome_taxes
+        }
+    }
+    opinion = {
+        base = -200
+    }
+}

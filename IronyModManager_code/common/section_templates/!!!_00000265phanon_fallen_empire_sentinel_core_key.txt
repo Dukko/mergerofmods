@@ -1,0 +1,34 @@
+ship_section_template = {
+    key = "phanon_fallen_empire_sentinel_core_key"
+    ship_size = sentinel_sphere
+    fits_on_slot = core
+    entity = "sentinel_hull_core_entity"
+    icon = "GFX_ship_part_core_mid"
+    prerequisites = {
+        tech_precursor_phanon_design
+    }
+    component_slot = {
+        name = "XL_GUN_01"
+        template = "invisible_extra_large_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "XL_GUN_02"
+        template = "invisible_extra_large_turret"
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "XL_GUN_03"
+        template = "invisible_extra_large_turret"
+        locatorname = "small_gun_01"
+    }
+    large_utility_slots = 16
+    aux_utility_slots = 2
+    resources = {
+        category = ship_sections
+        cost = {
+            sr_dark_matter = 90
+            acot_sr_dark_energy = 90
+        }
+    }
+}

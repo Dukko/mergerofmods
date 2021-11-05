@@ -1,0 +1,13 @@
+triggered_opinion_achievement_02 = {
+    trigger = {
+        from = {
+            has_country_flag = giga_achievement_02
+            NOT = {
+                has_country_flag = giga_achievement_03
+            }
+        }
+    }
+    opinion = {
+        base = 25
+    }
+}

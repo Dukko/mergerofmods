@@ -1,0 +1,58 @@
+ship_section_template = {
+    key = "giga_cradle_medium_ship_section_key"
+    ship_size = large_ship_fallen_empire
+    fits_on_slot = "mid"
+    entity = "giga_cradle_ship_medium_entity"
+    icon = "GFX_ship_part_core_mid"
+    component_slot = {
+        name = "STRIKE_CRAFT_01"
+        template = "large_strike_craft"
+        locatorname = "medium_gun_01"
+        rotation = 90
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_02"
+        template = "large_strike_craft"
+        locatorname = "medium_gun_02"
+        rotation = 90
+    }
+    component_slot = {
+        name = "LARGE_GUN_01"
+        template = "giga_invisible_large_fixed"
+        locatorname = "large_gun_02"
+        is_side_slot = yes
+    }
+    component_slot = {
+        name = "LARGE_GUN_02"
+        template = "giga_invisible_large_fixed"
+        locatorname = "large_gun_02"
+        is_side_slot = yes
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_01"
+        template = "invisible_extra_large_fixed"
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_01"
+        template = "giga_invisible_medium_fixed"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_02"
+        template = "giga_invisible_medium_fixed"
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_03"
+        template = "giga_invisible_medium_fixed"
+        locatorname = "medium_gun_03"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_04"
+        template = "giga_invisible_medium_fixed"
+        locatorname = "medium_gun_04"
+    }
+    large_utility_slots = 8
+    aux_utility_slots = 2
+}

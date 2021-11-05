@@ -1,0 +1,8 @@
+opinion_emperor_gave_council_seat = {
+    opinion = {
+        base = 100
+    }
+    decay = {
+        base = 2
+    }
+}

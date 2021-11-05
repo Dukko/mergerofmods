@@ -1,0 +1,9 @@
+pw_opinion_HR_diplomacy_impressing_devotion = {
+    opinion = {
+        base = 150
+    }
+    unique = yes
+    decay = {
+        base = 2
+    }
+}

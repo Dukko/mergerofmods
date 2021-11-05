@@ -1,0 +1,8 @@
+opinion_harshly_rejected_marriage_proposal = {
+    opinion = {
+        base = -100
+    }
+    decay = {
+        base = 3
+    }
+}

@@ -1,0 +1,5 @@
+opinion_tecdawn_share = {
+    opinion = {
+        base = 50
+    }
+}

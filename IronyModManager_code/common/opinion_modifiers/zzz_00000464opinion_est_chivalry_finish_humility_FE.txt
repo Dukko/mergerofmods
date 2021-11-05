@@ -1,0 +1,13 @@
+opinion_est_chivalry_finish_humility_FE = {
+    trigger = {
+        from = {
+            has_modifier = mod_est_chivalry_finish_humility
+        }
+        root = {
+            is_country_type = fallen_empire
+        }
+    }
+    opinion = {
+        base = 10
+    }
+}

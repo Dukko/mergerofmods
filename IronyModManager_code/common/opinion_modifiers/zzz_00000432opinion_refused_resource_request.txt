@@ -1,0 +1,20 @@
+opinion_refused_resource_request = {
+    opinion = {
+        base = -40
+        modifier = {
+            add = -12
+            is_ethics_aligned = {
+                ARG1 = authoritarian
+            }
+        }
+        modifier = {
+            add = 15
+            is_ethics_aligned = {
+                ARG1 = egalitarian
+            }
+        }
+    }
+    decay = {
+        base = 6
+    }
+}

@@ -1,0 +1,8 @@
+mem_opinion_hive_encounter_dishonourable = {
+    opinion = {
+        base = -100
+    }
+    decay = {
+        base = 3
+    }
+}

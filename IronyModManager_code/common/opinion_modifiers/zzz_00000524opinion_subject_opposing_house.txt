@@ -1,0 +1,7 @@
+opinion_subject_opposing_house = {
+    opinion = {
+        base = -5
+    }
+    accumulative = yes
+    unique = no
+}

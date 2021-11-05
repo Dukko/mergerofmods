@@ -1,0 +1,25 @@
+triggered_opinion_consecrated_worlds = {
+    trigger = {
+        FROM = {
+            has_ascension_perk = ap_consecrated_worlds
+        }
+        OR = {
+            is_country_type = default
+            is_country_type = awakened_fallen_empire
+            is_country_type = fallen_empire
+            is_country_type = ascended_empire
+            is_country_type = lost_empire
+        }
+    }
+    opinion = {
+        base = 0
+        modifier = {
+            add = 5
+            has_ethic = ethic_spiritualist
+        }
+        modifier = {
+            add = 10
+            has_ethic = ethic_fanatic_spiritualist
+        }
+    }
+}

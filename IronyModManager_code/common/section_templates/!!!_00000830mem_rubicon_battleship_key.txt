@@ -1,0 +1,44 @@
+ship_section_template = {
+    key = "mem_rubicon_battleship_key"
+    ship_size = mem_rubicon_battleship
+    fits_on_slot = mid
+    entity = "empty_section_entity"
+    icon = "GFX_ship_part_core_mid"
+    component_slot = {
+        name = "EXTRA_LARGE_GUN_01"
+        template = "invisible_extra_large_fixed"
+        locatorname = "root"
+    }
+    component_slot = {
+        name = "LARGE_GUN_01"
+        template = "mem_invisible_large_turret"
+        locatorname = "root"
+    }
+    component_slot = {
+        name = "LARGE_GUN_02"
+        template = "mem_invisible_large_turret"
+        locatorname = "root"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_01"
+        template = "invisible_medium_turret"
+        locatorname = "root"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_02"
+        template = "invisible_medium_turret"
+        locatorname = "root"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_01"
+        template = "large_strike_craft"
+        locatorname = "root"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_02"
+        template = "large_strike_craft"
+        locatorname = "root"
+    }
+    medium_utility_slots = 4
+    large_utility_slots = 4
+}

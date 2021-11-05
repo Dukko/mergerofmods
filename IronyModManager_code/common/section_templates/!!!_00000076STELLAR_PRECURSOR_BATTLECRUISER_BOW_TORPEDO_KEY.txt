@@ -1,0 +1,69 @@
+ship_section_template = {
+    key = "STELLAR_PRECURSOR_BATTLECRUISER_BOW_TORPEDO_KEY"
+    ship_size = precursor_battlecruiser
+    fits_on_slot = bow
+    should_draw_components = yes
+    entity = "stellar_precursor_battlecruiser_mid_entity"
+    icon = "GFX_ship_part_core_mid"
+    prerequisites = {
+        tech_precursor_bc_sigma
+    }
+    ai_weight = {
+        factor = 100
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_01"
+        template = "invisible_extra_large_turret"
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_01"
+        template = "invisible_missile_turret"
+        locatorname = "small_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_02"
+        template = "invisible_missile_turret"
+        locatorname = "small_gun_02"
+    }
+    component_slot = {
+        name = "TORPEDO_03"
+        template = "invisible_missile_turret"
+        locatorname = "small_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_04"
+        template = "invisible_missile_turret"
+        locatorname = "small_gun_02"
+    }
+    component_slot = {
+        name = "TORPEDO_05"
+        template = "invisible_missile_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_06"
+        template = "invisible_missile_turret"
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "TORPEDO_07"
+        template = "invisible_missile_turret"
+        locatorname = "medium_gun_03"
+    }
+    component_slot = {
+        name = "TORPEDO_08"
+        template = "invisible_missile_turret"
+        locatorname = "medium_gun_04"
+    }
+    large_utility_slots = 6
+    aux_utility_slots = 2
+    resources = {
+        category = ship_sections
+        cost = {
+            acot_sr_stellarite = 10
+            sr_dark_matter = 30
+            acot_sr_dark_energy = 30
+        }
+    }
+}

@@ -1,0 +1,48 @@
+ship_section_template = {
+    key = "SIGMA_PRECURSOR_TITAN_SPINAL_KEY"
+    ship_size = precursor_titan
+    fits_on_slot = spinal
+    should_draw_components = yes
+    entity = "stellar_precursor_titan_mid_entity"
+    icon = "GFX_ship_part_core_mid"
+    prerequisites = {
+        "tech_precursor_titan_sigma"
+    }
+    ai_weight = {
+        modifier = {
+            factor = 10
+            NOT = {
+                is_preferred_weapons = weapon_type_explosive
+            }
+        }
+        modifier = {
+            factor = 0.1
+            is_preferred_weapons = weapon_type_explosive
+        }
+    }
+    component_slot = {
+        name = "TITANIC_01"
+        template = "invisible_titanic_turret"
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "XL_GUN_01"
+        template = "invisible_extra_large_turret"
+        locatorname = "small_gun_01"
+    }
+    component_slot = {
+        name = "XL_GUN_02"
+        template = "invisible_extra_large_turret"
+        locatorname = "small_gun_02"
+    }
+    large_utility_slots = 8
+    aux_utility_slots = 2
+    resources = {
+        category = ship_sections
+        cost = {
+            acot_sr_stellarite = 15
+            sr_dark_matter = 45
+            acot_sr_dark_energy = 45
+        }
+    }
+}

@@ -1,0 +1,13 @@
+xvcv_mdlc_ap_uprising_protocol_triggered_opinion = {
+    trigger = {
+        has_authority = auth_machine_intelligence
+        from = {
+            has_ascension_perk = xvcv_mdlc_ap_uprising_protocol
+        }
+    }
+    opinion = {
+        modifier = {
+            add = 30
+        }
+    }
+}

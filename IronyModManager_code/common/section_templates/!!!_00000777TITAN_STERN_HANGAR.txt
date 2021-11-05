@@ -1,0 +1,42 @@
+@adv_section_cost = 240
+ship_section_template = {
+    key = "TITAN_STERN_HANGAR"
+    ship_size = titan
+    fits_on_slot = stern
+    should_draw_components = yes
+    entity = "titan_stern_entity"
+    icon = "GFX_ship_part_core_stern"
+    prerequisites = {
+        tech_titan_hull_1
+    }
+    ai_weight = {
+        modifier = {
+            factor = 80
+            is_preferred_weapons = weapon_type_strike_craft
+        }
+        modifier = {
+            factor = 1
+            NOT = {
+                is_preferred_weapons = weapon_type_strike_craft
+            }
+        }
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_01"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_locator_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_02"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_locator_02"
+    }
+    large_utility_slots = 3
+    aux_utility_slots = 1
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @adv_section_cost
+        }
+    }
+}

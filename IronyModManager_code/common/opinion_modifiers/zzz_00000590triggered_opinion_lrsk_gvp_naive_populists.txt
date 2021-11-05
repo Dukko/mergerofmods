@@ -1,0 +1,14 @@
+triggered_opinion_lrsk_gvp_naive_populists = {
+    trigger = {
+        has_valid_civic = lrsk_gov_var_civic_royal_absolutism
+        from = {
+            OR = {
+                has_valid_civic = lrsk_gov_var_civic_republicanism
+                has_valid_civic = lrsk_gov_var_civic_republicanism_oli
+            }
+        }
+    }
+    opinion = {
+        base = -15
+    }
+}

@@ -1,0 +1,45 @@
+r_supercomputeriii = {
+    activation_duration = 3600
+    portrait = "GFX_relic_supercomputer"
+    sound = "relic_activation_the_omnicodex"
+    resources = {
+        category = relics
+        cost = {
+            energy = 10000
+        }
+    }
+    ai_weight = {
+        weight = 100
+    }
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+        intel_encryption_add = 3
+        pop_ethic_materialist_attraction_mult = 0.5
+        country_admin_cap_add = 150
+        planet_stability_add = 7
+    }
+    score = 0
+    active_effect = {
+        add_modifier = {
+            modifier = "sapient_intervention_reliciii"
+            days = 3600
+        }
+        custom_tooltip = relic_triumph_cooldown
+        hidden_effect = {
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                days = 3600
+            }
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_relic_no_cooldown"
+            NOT = {
+                has_modifier = relic_activation_cooldown
+            }
+        }
+    }
+}

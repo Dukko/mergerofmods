@@ -1,0 +1,9 @@
+opinion_changed_alliance = {
+    opinion = {
+        base = -200
+    }
+    accumulative = yes
+    decay = {
+        base = 4
+    }
+}

@@ -1,0 +1,8 @@
+triggered_opinion_refuse_dm_friendly = {
+    opinion = {
+        base = -150
+    }
+    decay = {
+        base = 1
+    }
+}

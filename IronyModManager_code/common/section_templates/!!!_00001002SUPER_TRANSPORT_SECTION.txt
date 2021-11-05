@@ -1,0 +1,18 @@
+ship_section_template = {
+    key = "SUPER_TRANSPORT_SECTION"
+    ship_size = transport
+    fits_on_slot = mid
+    entity = "transport_ship_entity"
+    icon = "GFX_ship_part_core_mid"
+    ai_weight = {
+        modifier = {
+            factor = 8
+        }
+    }
+    prerequisites = {
+        tech_noah_transport
+    }
+    small_utility_slots = 4
+    large_utility_slots = 2
+    aux_utility_slots = 4
+}

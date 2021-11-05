@@ -1,0 +1,8 @@
+opinion_ceded_starbase = {
+    opinion = {
+        base = 100
+    }
+    decay = {
+        base = 1
+    }
+}

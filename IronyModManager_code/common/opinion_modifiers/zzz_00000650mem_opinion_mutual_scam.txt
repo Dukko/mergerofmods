@@ -1,0 +1,8 @@
+mem_opinion_mutual_scam = {
+    opinion = {
+        base = 50
+    }
+    decay = {
+        base = 5
+    }
+}

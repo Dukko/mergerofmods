@@ -1,0 +1,11 @@
+opinion_subject_forced_to_contribute_pops = {
+    opinion = {
+        base = -50
+    }
+    accumulative = yes
+    unique = no
+    monthly = yes
+    decay = {
+        base = 2
+    }
+}

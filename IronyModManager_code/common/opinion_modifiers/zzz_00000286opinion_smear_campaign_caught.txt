@@ -1,0 +1,8 @@
+opinion_smear_campaign_caught = {
+    opinion = {
+        base = -50
+    }
+    accumulative = yes
+    min = -250
+    decay = 1
+}

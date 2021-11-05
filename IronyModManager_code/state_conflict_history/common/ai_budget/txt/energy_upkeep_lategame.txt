@@ -1,0 +1,24 @@
+energy_upkeep_lategame = {
+    resource = energy
+    type = upkeep
+    category = country
+    potential = {
+        years_passed > 150
+        resource_income_compare = {
+            resource = energy
+            value > -40
+        }
+        nand = {
+            has_ascension_perk = ap_world_shaper
+            has_country_flag = str_has_terraformables
+            used_naval_capacity_percent > 0.9
+            resource_stockpile_compare = {
+                resource = energy
+                value < 8000
+            }
+        }
+    }
+    fraction = {
+        weight = 0.1
+    }
+}

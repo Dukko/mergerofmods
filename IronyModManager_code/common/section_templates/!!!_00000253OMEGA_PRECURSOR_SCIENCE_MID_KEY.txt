@@ -1,0 +1,37 @@
+ship_section_template = {
+    key = "OMEGA_PRECURSOR_SCIENCE_MID_KEY"
+    ship_size = precursor_science
+    fits_on_slot = mid
+    should_draw_components = yes
+    entity = "omega_precursor_science_bow_entity"
+    icon = "GFX_ship_part_core_mid"
+    component_slot = {
+        name = "SMALL_GUN_01"
+        template = "invisible_small_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "SMALL_GUN_02"
+        template = "invisible_small_turret"
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "SMALL_GUN_03"
+        template = "invisible_small_turret"
+        locatorname = "small_gun_01"
+    }
+    component_slot = {
+        name = "SMALL_GUN_04"
+        template = "invisible_small_turret"
+        locatorname = "small_gun_02"
+    }
+    medium_utility_slots = 8
+    prerequisites = {
+        tech_precursor_science_omega
+    }
+    resources = {
+        category = ship_sections
+        cost = {
+        }
+    }
+}

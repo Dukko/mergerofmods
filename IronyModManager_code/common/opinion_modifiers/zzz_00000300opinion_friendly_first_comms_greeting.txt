@@ -1,0 +1,8 @@
+opinion_friendly_first_comms_greeting = {
+    opinion = {
+        base = 30
+    }
+    decay = {
+        base = 1
+    }
+}

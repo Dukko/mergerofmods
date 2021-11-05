@@ -1,0 +1,11 @@
+opinion_trade_enclave_vs_globalism = {
+    trigger = {
+        has_valid_civic = civic_trading_conglomerate
+        FROM = {
+            has_valid_civic = "civic_globalism"
+        }
+    }
+    opinion = {
+        base = 50
+    }
+}

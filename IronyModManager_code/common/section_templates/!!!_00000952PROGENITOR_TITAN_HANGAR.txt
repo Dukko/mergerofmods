@@ -1,0 +1,60 @@
+ship_section_template = {
+    key = "PROGENITOR_TITAN_HANGAR"
+    ship_size = progenitor_titan
+    entity = "progenitor_titan_mid_entity"
+    fits_on_slot = hangar
+    icon = "GFX_ship_part_core_stern"
+    component_slot = {
+        name = "LARGE_GUN_01"
+        template = "invisible_large_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_02"
+        template = "invisible_large_turret"
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "LARGE_GUN_03"
+        template = "invisible_large_turret"
+        locatorname = "medium_gun_03"
+    }
+    component_slot = {
+        name = "LARGE_GUN_04"
+        template = "invisible_large_turret"
+        locatorname = "medium_gun_04"
+    }
+    component_slot = {
+        name = "LARGE_GUN_05"
+        template = "invisible_large_turret"
+        locatorname = "medium_gun_05"
+    }
+    component_slot = {
+        name = "LARGE_GUN_06"
+        template = "invisible_large_turret"
+        locatorname = "medium_gun_06"
+    }
+    component_slot = {
+        name = "LARGE_GUN_07"
+        template = "invisible_large_turret"
+        locatorname = "medium_gun_07"
+    }
+    component_slot = {
+        name = "LARGE_GUN_08"
+        template = "invisible_large_turret"
+        locatorname = "medium_gun_08"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_01"
+        template = "large_strike_craft"
+        rotation = 90
+        locatorname = "small_gun_03"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_02"
+        template = "large_strike_craft"
+        rotation = 90
+        locatorname = "small_gun_04"
+    }
+    aux_utility_slots = 2
+}

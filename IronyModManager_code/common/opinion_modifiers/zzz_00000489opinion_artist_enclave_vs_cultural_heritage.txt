@@ -1,0 +1,11 @@
+opinion_artist_enclave_vs_cultural_heritage = {
+    trigger = {
+        has_valid_civic = civic_artist_collective
+        FROM = {
+            has_valid_civic = "civic_enlightment"
+        }
+    }
+    opinion = {
+        base = 50
+    }
+}

@@ -1,0 +1,22 @@
+opinion_raidresources_2 = {
+    opinion = {
+        base = 0
+        modifier = {
+            add = -5
+            FROM = {
+                has_policy_flag = "policy_raidresource_light"
+            }
+        }
+        modifier = {
+            add = -15
+            FROM = {
+                has_policy_flag = "policy_raidresource_heavy"
+            }
+        }
+    }
+    min = -200
+    accumulative = yes
+    decay = {
+        base = 1
+    }
+}

@@ -1,0 +1,84 @@
+ship_section_template = {
+    key = "strategic_defence_command_platform_mid1_01_key"
+    ship_size = strategic_defence_command_platform
+    fits_on_slot = "mid1"
+    entity = "giga_maginot_orbital_defence_platform_entity"
+    icon = "GFX_ship_part_core_mid"
+    component_slot = {
+        name = "LARGE_GUN_01"
+        template = "maginot_large_turret"
+        locatorname = "large_turret_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_02"
+        template = "maginot_large_turret"
+        locatorname = "large_turret_02"
+    }
+    component_slot = {
+        name = "LARGE_GUN_03"
+        template = "maginot_large_turret"
+        locatorname = "large_turret_03"
+    }
+    component_slot = {
+        name = "LARGE_GUN_04"
+        template = "maginot_large_turret"
+        locatorname = "large_turret_04"
+    }
+    component_slot = {
+        name = "LARGE_GUN_05"
+        template = "maginot_large_turret"
+        locatorname = "large_turret_05"
+    }
+    component_slot = {
+        name = "LARGE_GUN_06"
+        template = "maginot_large_turret"
+        locatorname = "large_turret_06"
+    }
+    component_slot = {
+        name = "LARGE_GUN_07"
+        template = "maginot_large_turret"
+        locatorname = "large_turret_07"
+    }
+    component_slot = {
+        name = "LARGE_GUN_08"
+        template = "maginot_large_turret"
+        locatorname = "large_turret_08"
+    }
+    component_slot = {
+        name = "LARGE_GUN_09"
+        template = "maginot_large_turret"
+        locatorname = "large_turret_09"
+    }
+    component_slot = {
+        name = "LARGE_GUN_10"
+        template = "maginot_large_turret"
+        locatorname = "large_turret_10"
+    }
+    component_slot = {
+        name = "LARGE_GUN_11"
+        template = "maginot_large_turret"
+        locatorname = "large_turret_11"
+    }
+    component_slot = {
+        name = "LARGE_GUN_12"
+        template = "maginot_large_turret"
+        locatorname = "large_turret_12"
+    }
+    component_slot = {
+        name = "LARGE_GUN_13"
+        template = "maginot_large_turret"
+        locatorname = "large_turret_13"
+    }
+    component_slot = {
+        name = "LARGE_GUN_14"
+        template = "maginot_large_turret"
+        locatorname = "large_turret_14"
+    }
+    component_slot = {
+        name = "LARGE_GUN_15"
+        template = "maginot_large_turret"
+        locatorname = "large_turret_15"
+    }
+    large_utility_slots = 10
+    aux_utility_slots = 2
+}

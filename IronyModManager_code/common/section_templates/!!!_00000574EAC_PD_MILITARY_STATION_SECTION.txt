@@ -1,0 +1,77 @@
+@eac_medium_utility_slots = 6
+@eac_aux_ulility_slots = 2
+@section_cost = 40
+ship_section_template = {
+    key = "EAC_PD_MILITARY_STATION_SECTION"
+    ship_size = eac_military_station_heavy_small
+    ship_size = military_station_medium
+    fits_on_slot = "north"
+    fits_on_slot = "west"
+    fits_on_slot = "east"
+    fits_on_slot = "south"
+    entity = "eac_military_station_section_light_entity"
+    icon = "GFX_ship_part_core_mid"
+    prerequisites = {
+        tech_pd_tracking_1
+        tech_pd_tracking_2
+        tech_pd_tracking_3
+        tech_flak_batteries_1
+        tech_flak_batteries_2
+        tech_flak_batteries_3
+    }
+    component_slot = {
+        name = "SMALL_GUN_01"
+        template = "point_defence_turret"
+        locatorname = "small_gun_01"
+    }
+    component_slot = {
+        name = "SMALL_GUN_02"
+        template = "point_defence_turret"
+        locatorname = "small_gun_02"
+    }
+    component_slot = {
+        name = "SMALL_GUN_03"
+        template = "point_defence_turret"
+        locatorname = "small_gun_03"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "SMALL_GUN_04"
+        template = "point_defence_turret"
+        locatorname = "small_gun_04"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "SMALL_GUN_05"
+        template = "point_defence_turret"
+        locatorname = "eac_underside_small_turret_01"
+    }
+    component_slot = {
+        name = "SMALL_GUN_06"
+        template = "point_defence_turret"
+        locatorname = "eac_underside_small_turret_02"
+    }
+    component_slot = {
+        name = "SMALL_GUN_07"
+        template = "point_defence_turret"
+        locatorname = "eac_underside_small_turret_03"
+        is_side_slot = no
+    }
+    component_slot = {
+        name = "SMALL_GUN_08"
+        template = "point_defence_turret"
+        locatorname = "eac_underside_small_turret_04"
+        is_side_slot = no
+    }
+    medium_utility_slots = @eac_medium_utility_slots
+    aux_utility_slots = @eac_aux_ulility_slots
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @section_cost
+        }
+    }
+    ai_weight = {
+        factor = 1
+    }
+}

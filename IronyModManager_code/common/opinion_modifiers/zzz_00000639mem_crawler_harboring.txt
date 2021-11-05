@@ -1,0 +1,12 @@
+mem_crawler_harboring = {
+    opinion = {
+        base = -50
+        modifier = {
+            factor = 0.5
+            is_xenophile = yes
+        }
+    }
+    decay = {
+        base = 2
+    }
+}

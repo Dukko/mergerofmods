@@ -1,0 +1,11 @@
+triggered_opinion_xenophile_resolution_3 = {
+    trigger = {
+        FROM = {
+            is_galactic_community_member = yes
+        }
+        is_active_resolution = "resolution_charter_of_sentient_rights"
+    }
+    opinion = {
+        base = 20
+    }
+}

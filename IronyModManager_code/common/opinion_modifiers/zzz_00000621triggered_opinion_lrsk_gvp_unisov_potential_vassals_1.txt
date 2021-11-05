@@ -1,0 +1,15 @@
+triggered_opinion_lrsk_gvp_unisov_potential_vassals_1 = {
+    trigger = {
+        is_subject = no
+        from = {
+            relative_power = {
+                who = root
+                value = superior
+            }
+            has_valid_civic = lrsk_gov_var_civic_universal_sovereignty
+        }
+    }
+    opinion = {
+        base = 75
+    }
+}

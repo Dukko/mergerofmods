@@ -1,0 +1,14 @@
+@terraforming_cost_gaia = 7500
+@terraforming_duration_gaia = 3600
+terraform_link = {
+    from = pc_ll_foggy
+    to = pc_aquatic
+    energy = @terraforming_cost_gaia
+    duration = @terraforming_duration_gaia
+    condition = {
+        has_technology = tech_climate_restoration
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

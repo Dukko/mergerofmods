@@ -1,0 +1,8 @@
+opinion_outrageous_demands = {
+    opinion = {
+        base = -50
+    }
+    decay = {
+        base = 3
+    }
+}

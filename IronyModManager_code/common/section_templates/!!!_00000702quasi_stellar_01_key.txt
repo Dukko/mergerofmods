@@ -1,0 +1,9 @@
+ship_section_template = {
+    key = "quasi_stellar_01_key"
+    ship_size = quasi_stellar_calibrator
+    fits_on_slot = "mid"
+    entity = "ai_01_blue_warship_large_entity"
+    icon = "GFX_ship_part_core_mid"
+    large_utility_slots = 0
+    aux_utility_slots = 0
+}

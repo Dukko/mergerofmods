@@ -1,0 +1,11 @@
+ship_section_template = {
+    key = "caravaneer_cargoship_section"
+    ship_size = caravaneer_cargoship_01
+    fits_on_slot = mid
+    entity = "caravaneer_cargoship_01_section_entity"
+    icon = "GFX_ship_part_core_mid"
+    small_utility_slots = 1
+    medium_utility_slots = 1
+    large_utility_slots = 1
+    aux_utility_slots = 1
+}

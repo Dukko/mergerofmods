@@ -1,0 +1,58 @@
+@terraforming_cost_level_3 = 10000
+@terraforming_duration_level_3 = 5400
+terraform_link = {
+    from = pc_pd_hothouse_hab
+    to = pc_ll_foggy
+    energy = @terraforming_cost_level_3
+    duration = @terraforming_duration_level_3
+    potential = {
+        AND = {
+            from = {
+                has_modifier = hab_terraforming_candidate
+            }
+            has_global_flag = planetarydiversityhabitats
+        }
+    }
+    condition = {
+        has_technology = "tech_climate_restoration"
+        has_modifier = terraforming_candidate
+    }
+    effect = {
+        from = {
+            remove_modifier = terraforming_candidate
+            remove_modifier = gd_convert_hothouse_phase_1
+            remove_modifier = gd_convert_hothouse_phase_2
+            remove_modifier = gd_convert_hothouse_phase_3
+            remove_modifier = gd_convert_hothouse_phase_4
+            remove_deposit = d_expanded_dome_system
+            remove_deposit = d_expanded_dome_system_1
+            remove_modifier = terraforming_ash
+            remove_modifier = terraforming_ammonia
+            remove_modifier = terraforming_methane
+            remove_modifier = pdammoniaatmosphere
+            remove_modifier = pdsulfuratmosphere
+            remove_modifier = pdmethaneatmosphere
+            remove_modifier = pdashatmosphere
+            remove_modifier = hab_terraforming_candidate
+            remove_modifier = terraforming_candidate
+            reroll_planet = yes
+            remove_modifier = master_builders_habitats
+            remove_modifier = master_builders_habitats
+            remove_modifier = gpm_habitat_engineering
+            remove_modifier = gpm_habitat_engineering_mastery
+            remove_modifier = gpm_habitat_engineering_void_mastery
+            remove_building = building_hab_capital
+            add_building = building_major_capital
+            add_modifier = {
+                modifier = lifeless_foggy
+            }
+            add_modifier = {
+                modifier = lifeless_foggy_gases
+                days = 1800
+            }
+        }
+    }
+    ai_weight = {
+        weight = 5
+    }
+}

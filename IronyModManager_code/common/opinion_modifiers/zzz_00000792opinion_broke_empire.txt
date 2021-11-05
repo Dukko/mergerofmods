@@ -1,0 +1,9 @@
+opinion_broke_empire = {
+    opinion = {
+        base = -100
+    }
+    accumulative = yes
+    decay = {
+        base = 1
+    }
+}

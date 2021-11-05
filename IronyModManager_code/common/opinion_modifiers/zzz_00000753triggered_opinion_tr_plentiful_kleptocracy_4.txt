@@ -1,0 +1,10 @@
+triggered_opinion_tr_plentiful_kleptocracy_4 = {
+    trigger = {
+        FROM = {
+            has_tradition = tr_plentiful_kleptocracy_4
+        }
+    }
+    opinion = {
+        base = 10
+    }
+}

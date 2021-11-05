@@ -1,0 +1,11 @@
+ship_section_template = {
+    key = "civilian_tanker_section"
+    ship_size = civilian_tanker
+    fits_on_slot = mid
+    entity = "cargo_transport_tanker_entity"
+    icon = "GFX_ship_part_core_mid"
+    small_utility_slots = 3
+    medium_utility_slots = 3
+    large_utility_slots = 3
+    aux_utility_slots = 1
+}

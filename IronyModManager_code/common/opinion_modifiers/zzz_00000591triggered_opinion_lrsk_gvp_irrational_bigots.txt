@@ -1,0 +1,11 @@
+triggered_opinion_lrsk_gvp_irrational_bigots = {
+    trigger = {
+        has_valid_civic = lrsk_gov_var_civic_universal_sovereignty
+        from = {
+            has_valid_civic = lrsk_gov_var_civic_supremacist_demagoguery
+        }
+    }
+    opinion = {
+        base = -10
+    }
+}

@@ -1,0 +1,45 @@
+r_shadowgate_crwt_active = {
+    activation_duration = 0
+    portrait = "GFX_relic_shadowgate_crwt_active"
+    sound = "deactive_builing"
+    resources = {
+        category = relics
+        cost = {
+            influence = 25
+        }
+    }
+    ai_weight = {
+        weight = 100
+        modifier = {
+            factor = 10000
+            any_owned_planet = {
+                is_colonized_shadowgate = yes
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    is_colonized_shadowgate = yes
+                }
+            }
+        }
+    }
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+        custom_tooltip = shadowgate.crw.transmitter.passive
+    }
+    score = 200
+    active_effect = {
+        custom_tooltip = shadowgate.crw.transmitter.active
+        hidden_effect = {
+            remove_relic = r_shadowgate_crwt_active
+            add_relic = r_shadowgate_crwt
+        }
+    }
+    possible = {
+        always = yes
+    }
+}

@@ -1,0 +1,9 @@
+dpe_spirmission_accused_us = {
+    opinion = {
+        base = -30
+    }
+    accumulative = no
+    decay = {
+        base = 3
+    }
+}

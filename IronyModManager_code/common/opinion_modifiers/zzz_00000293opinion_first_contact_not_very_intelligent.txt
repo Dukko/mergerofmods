@@ -1,0 +1,8 @@
+opinion_first_contact_not_very_intelligent = {
+    opinion = {
+        base = -25
+    }
+    decay = {
+        base = 1
+    }
+}

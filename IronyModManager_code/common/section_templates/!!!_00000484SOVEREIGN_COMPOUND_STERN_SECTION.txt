@@ -1,0 +1,24 @@
+ship_section_template = {
+    key = "SOVEREIGN_COMPOUND_STERN_SECTION"
+    ship_size = sovereign
+    fits_on_slot = stern
+    should_draw_components = no
+    entity = "ehof_01_sovereign_core_entity"
+    icon = "GFX_ship_part_core_stern"
+    component_slot = {
+        name = "COMPOUND_LARGE_1"
+        template = giga_invisible_large_fixed
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "COMPOUND_LARGE_2"
+        template = giga_invisible_large_fixed
+        locatorname = "large_gun_02"
+    }
+    component_slot = {
+        name = "COMPOUND_LARGE_3"
+        template = giga_invisible_large_fixed
+        locatorname = "large_gun_03"
+    }
+    large_utility_slots = 3
+}

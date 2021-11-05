@@ -1,0 +1,44 @@
+@activation_cost = 1500
+@triumph_duration = 3600
+r_ehof_cryo_core = {
+    activation_duration = @triumph_duration
+    portrait = "GFX_relic_cryo_core"
+    sound = "relic_activation_yuht_cryo_core"
+    score = 0
+    resources = {
+        category = relics
+        cost = {
+            ehof_sr_negative_mass = @activation_cost
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_relic_no_cooldown"
+            NOT = {
+                has_modifier = relic_activation_cooldown
+            }
+        }
+    }
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+        colony_start_num_pops_add = 1
+        custom_tooltip = tr_expansion_colonization_fever_desc
+    }
+    active_effect = {
+        add_modifier = {
+            modifier = "yuht_cryo_core"
+            days = @triumph_duration
+        }
+        custom_tooltip = relic_triumph_cooldown
+        hidden_effect = {
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                days = @triumph_duration
+            }
+            remove_country_flag = ehof_has_cryo_core
+            remove_relic = r_ehof_cryo_core
+        }
+    }
+}

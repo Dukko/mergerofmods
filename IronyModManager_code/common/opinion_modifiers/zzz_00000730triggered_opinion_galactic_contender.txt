@@ -1,0 +1,48 @@
+triggered_opinion_galactic_contender = {
+    trigger = {
+        OR = {
+            is_country_type = awakened_fallen_empire
+            is_country_type = fallen_empire
+        }
+        FROM = {
+            OR = {
+                is_country_type = default
+                is_country_type = ascended_empire
+                is_country_type = lost_empire
+            }
+            OR = {
+                has_ascension_perk = ap_galactic_contender
+                any_owned_planet = {
+                    has_planet_flag = fallen_empire_world
+                }
+            }
+        }
+    }
+    opinion = {
+        base = -20
+        modifier = {
+            add = -30
+            FROM = {
+                any_owned_planet = {
+                    has_planet_flag = fallen_empire_world
+                }
+            }
+        }
+        modifier = {
+            add = -20
+            has_ethic = ethic_fanatic_xenophobe
+        }
+        modifier = {
+            add = -10
+            FROM = {
+                fleet_power > 50000
+            }
+        }
+        modifier = {
+            add = -15
+            FROM = {
+                fleet_power > 75000
+            }
+        }
+    }
+}

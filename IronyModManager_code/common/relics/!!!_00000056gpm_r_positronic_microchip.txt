@@ -1,0 +1,60 @@
+@activation_cost = 150
+@triumph_duration = 3600
+gpm_r_positronic_microchip = {
+    activation_duration = @triumph_duration
+    portrait = "GFX_gpm_r_positronic_microchip"
+    sound = "relic_activation_the_omnicodex"
+    resources = {
+        category = relics
+        cost = {
+            influence = @activation_cost
+        }
+    }
+    ai_weight = {
+        weight = 0
+    }
+    triggered_country_modifier = {
+        potential = {
+            is_machine_empire = yes
+        }
+        MACHINE_species_trait_points_add = 3
+    }
+    triggered_country_modifier = {
+        potential = {
+            is_hive_empire = yes
+        }
+        BIOLOGICAL_species_trait_points_add = 2
+        LITHOID_species_trait_points_add = 2
+    }
+    triggered_country_modifier = {
+        potential = {
+            is_machine_empire = no
+            is_hive_empire = no
+        }
+        ROBOT_species_trait_points_add = 2
+        BIOLOGICAL_species_trait_points_add = 2
+        LITHOID_species_trait_points_add = 2
+    }
+    score = 1000
+    active_effect = {
+        add_modifier = {
+            modifier = "gpm_r_positronic_nervious_system_active_effect"
+            days = @triumph_duration
+        }
+        custom_tooltip = relic_triumph_cooldown
+        hidden_effect = {
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                days = @triumph_duration
+            }
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_relic_no_cooldown"
+            NOT = {
+                has_modifier = relic_activation_cooldown
+            }
+        }
+    }
+}

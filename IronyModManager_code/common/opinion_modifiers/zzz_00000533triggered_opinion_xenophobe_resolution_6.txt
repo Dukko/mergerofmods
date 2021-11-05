@@ -1,0 +1,11 @@
+triggered_opinion_xenophobe_resolution_6 = {
+    trigger = {
+        FROM = {
+            is_galactic_community_member = yes
+        }
+        is_active_resolution = "resolution_closed_society"
+    }
+    opinion = {
+        base = -80
+    }
+}

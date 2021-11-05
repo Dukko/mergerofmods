@@ -1,0 +1,43 @@
+@activation_cost = 1500
+@triumph_duration = 3600
+r_ehof_galaxy = {
+    activation_duration = @triumph_duration
+    portrait = "GFX_relic_galaxy"
+    sound = "relic_activation_miniature_galaxy"
+    score = 0
+    resources = {
+        category = relics
+        cost = {
+            ehof_sr_negative_mass = @activation_cost
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_relic_no_cooldown"
+            NOT = {
+                has_modifier = relic_activation_cooldown
+            }
+        }
+    }
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+        all_technology_research_speed = 0.05
+    }
+    active_effect = {
+        custom_tooltip = relic_galaxy_active
+        custom_tooltip = relic_triumph_cooldown
+        hidden_effect = {
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                days = @triumph_duration
+            }
+            country_event = {
+                id = ancrel.7007
+            }
+            remove_country_flag = ehof_has_galaxy
+            remove_relic = r_ehof_galaxy
+        }
+    }
+}

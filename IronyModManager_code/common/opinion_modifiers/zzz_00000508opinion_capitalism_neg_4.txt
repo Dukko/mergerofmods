@@ -1,0 +1,13 @@
+opinion_capitalism_neg_4 = {
+    trigger = {
+        OR = {
+            has_ethic = "ethic_fanatic_socialism"
+        }
+        from = {
+            has_ethic = "ethic_fanatic_capitalism"
+        }
+    }
+    opinion = {
+        base = -50
+    }
+}

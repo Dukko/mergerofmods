@@ -1,0 +1,20 @@
+@terraforming_cost_ll = 5000
+@terraforming_duration_level_3 = 5400
+terraform_link = {
+    from = pc_ll_foggy
+    to = pc_antarctic
+    energy = @terraforming_cost_ll
+    duration = @terraforming_duration_level_3
+    condition = {
+        has_technology = tech_climate_restoration
+    }
+    effect = {
+        from = {
+            remove_modifier = lifeless_foggy
+            remove_modifier = lifeless_foggy_gases
+        }
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

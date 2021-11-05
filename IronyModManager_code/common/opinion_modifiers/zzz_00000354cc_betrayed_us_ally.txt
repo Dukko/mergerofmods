@@ -1,0 +1,10 @@
+cc_betrayed_us_ally = {
+    opinion = {
+        base = -100
+    }
+    accumulative = yes
+    min = -1000
+    decay = {
+        base = 4
+    }
+}

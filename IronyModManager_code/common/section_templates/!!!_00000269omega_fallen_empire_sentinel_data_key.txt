@@ -1,0 +1,48 @@
+ship_section_template = {
+    key = "omega_fallen_empire_sentinel_data_key"
+    ship_size = sentinel_sphere
+    fits_on_slot = data
+    entity = "sentinel_hull_core_entity"
+    icon = "GFX_ship_part_core_mid"
+    prerequisites = {
+        tech_omege_sentinel
+    }
+    component_slot = {
+        name = "XL_GUN_01"
+        template = "invisible_extra_large_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "XL_GUN_02"
+        template = "invisible_extra_large_turret"
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "XL_GUN_03"
+        template = "invisible_extra_large_turret"
+        locatorname = "small_gun_01"
+    }
+    component_slot = {
+        name = "XL_GUN_04"
+        template = "invisible_extra_large_turret"
+        locatorname = "small_gun_02"
+    }
+    component_slot = {
+        name = "HANGER_01"
+        template = "large_strike_craft"
+        locatorname = "small_gun_01"
+    }
+    component_slot = {
+        name = "HANGER_02"
+        template = "large_strike_craft"
+        locatorname = "small_gun_02"
+    }
+    large_utility_slots = 12
+    aux_utility_slots = 2
+    resources = {
+        category = ship_sections
+        cost = {
+            acot_sr_light_matter = 15
+        }
+    }
+}

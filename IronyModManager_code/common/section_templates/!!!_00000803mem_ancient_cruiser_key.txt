@@ -1,0 +1,62 @@
+ship_section_template = {
+    key = "mem_ancient_cruiser_key"
+    ship_size = mem_ancient_cruiser
+    fits_on_slot = mid
+    entity = "mem_ancient_cruiser_hull_entity"
+    icon = "GFX_ship_part_core_mid"
+    component_slot = {
+        name = "EXTRA_LARGE_01"
+        template = "invisible_extra_large_fixed"
+        locatorname = "core_front"
+    }
+    component_slot = {
+        name = "TORPEDO_01"
+        template = "large_missile_fixed"
+        locatorname = "fin_l_top"
+    }
+    component_slot = {
+        name = "TORPEDO_02"
+        template = "large_missile_fixed"
+        locatorname = "fin_r_top"
+    }
+    component_slot = {
+        name = "TORPEDO_03"
+        template = "large_missile_fixed"
+        locatorname = "fin_c_bottom"
+    }
+    component_slot = {
+        name = "SMALL_GUN_01"
+        template = "small_turret"
+        locatorname = "ring_c_top"
+    }
+    component_slot = {
+        name = "SMALL_GUN_02"
+        template = "small_turret"
+        locatorname = "ring_l_bottom"
+    }
+    component_slot = {
+        name = "SMALL_GUN_03"
+        template = "small_turret"
+        locatorname = "ring_r_bottom"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_01"
+        template = "large_strike_craft"
+        rotation = 0
+        locatorname = "ring_f_r_bottom"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_02"
+        template = "large_strike_craft"
+        rotation = 0
+        locatorname = "ring_f_l_bottom"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_03"
+        template = "large_strike_craft"
+        rotation = 0
+        locatorname = "ring_f_c_top"
+    }
+    large_utility_slots = 10
+    aux_utility_slots = 3
+}

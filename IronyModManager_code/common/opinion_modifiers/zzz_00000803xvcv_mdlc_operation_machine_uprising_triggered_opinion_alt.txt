@@ -1,0 +1,8 @@
+xvcv_mdlc_operation_machine_uprising_triggered_opinion_alt = {
+    opinion = {
+        base = -200
+    }
+    decay = {
+        base = 2
+    }
+}

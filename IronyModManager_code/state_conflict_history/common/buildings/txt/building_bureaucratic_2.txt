@@ -10,14 +10,35 @@ building_bureaucratic_2 = {
     }
     allow = {
         has_upgraded_capital = yes
+        or = {
+            owner = {
+                is_ai = no
+            }
+            str_bureaucratic_allow = yes
+        }
+        or = {
+            owner = {
+                is_ai = no
+            }
+            and = {
+                free_building_slots = 0
+                free_district_slots < 3
+                free_jobs < 3
+                or = {
+                    str_is_col_bureau = yes
+                    num_unemployed > 2
+                }
+                free_housing > 5
+            }
+        }
     }
     destroy_trigger = {
         exists = owner
-        OR = {
-            buildings_no_crystals = yes
+        or = {
             owner = {
                 is_regular_empire = no
             }
+            str_bureaucratic_destroy = yes
         }
     }
     resources = {
@@ -48,9 +69,6 @@ building_bureaucratic_2 = {
             job_bureaucrat_add = 3
         }
     }
-    upgrades = {
-        "building_bureaucratic_3"
-    }
     prerequisites = {
         "tech_colonial_bureaucracy"
     }
@@ -59,5 +77,13 @@ building_bureaucratic_2 = {
     }
     triggered_desc = {
         text = job_bureaucrat_effect_desc
+    }
+    on_queued = {
+        planet = {
+            set_timed_planet_flag = {
+                flag = recent_admin_building_built
+                days = 720
+            }
+        }
     }
 }

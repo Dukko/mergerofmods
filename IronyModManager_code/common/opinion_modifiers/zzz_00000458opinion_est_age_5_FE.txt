@@ -1,0 +1,13 @@
+opinion_est_age_5_FE = {
+    trigger = {
+        from = {
+            has_active_tradition = tr_est_venerability_5
+        }
+        root = {
+            is_country_type = fallen_empire
+        }
+    }
+    opinion = {
+        base = 5
+    }
+}

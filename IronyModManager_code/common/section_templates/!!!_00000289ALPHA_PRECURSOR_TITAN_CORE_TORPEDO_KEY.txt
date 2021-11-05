@@ -1,0 +1,70 @@
+ship_section_template = {
+    key = "ALPHA_PRECURSOR_TITAN_CORE_TORPEDO_KEY"
+    ship_size = precursor_titan
+    fits_on_slot = core
+    should_draw_components = yes
+    entity = "precursor_titan_stern_entity"
+    icon = "GFX_ship_part_core_mid"
+    prerequisites = {
+        "tech_precursor_titan_alpha"
+    }
+    component_slot = {
+        name = "LARGE_GUN_01"
+        template = "invisible_large_turret"
+        locatorname = "small_gun_03"
+    }
+    component_slot = {
+        name = "LARGE_GUN_02"
+        template = "invisible_large_turret"
+        locatorname = "small_gun_04"
+    }
+    component_slot = {
+        name = "TORPEDO_01"
+        template = "invisible_missile_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_02"
+        template = "invisible_missile_turret"
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "TORPEDO_03"
+        template = "invisible_missile_turret"
+        locatorname = "medium_gun_03"
+    }
+    component_slot = {
+        name = "TORPEDO_04"
+        template = "invisible_missile_turret"
+        locatorname = "small_gun_04"
+    }
+    component_slot = {
+        name = "TORPEDO_05"
+        template = "invisible_missile_turret"
+        locatorname = "medium_gun_05"
+    }
+    component_slot = {
+        name = "TORPEDO_06"
+        template = "invisible_missile_turret"
+        locatorname = "medium_gun_06"
+    }
+    component_slot = {
+        name = "TORPEDO_07"
+        template = "invisible_missile_turret"
+        locatorname = "medium_gun_07"
+    }
+    component_slot = {
+        name = "TORPEDO_08"
+        template = "invisible_missile_turret"
+        locatorname = "medium_gun_08"
+    }
+    large_utility_slots = 6
+    aux_utility_slots = 1
+    resources = {
+        category = ship_sections
+        cost = {
+            sr_dark_matter = 40
+            acot_sr_dark_energy = 40
+        }
+    }
+}

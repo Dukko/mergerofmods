@@ -1,0 +1,24 @@
+ship_section_template = {
+    key = "HUMILIATOR_COMPOUND_STERN_SECTION"
+    ship_size = humiliator
+    fits_on_slot = stern
+    should_draw_components = no
+    entity = "ehof_01_humiliator_core_entity"
+    icon = "GFX_ship_part_core_stern"
+    component_slot = {
+        name = "COMPOUND_SMALL_1"
+        template = giga_invisible_small_fixed
+        locatorname = "small_gun_01"
+    }
+    component_slot = {
+        name = "COMPOUND_SMALL_2"
+        template = giga_invisible_small_fixed
+        locatorname = "small_gun_02"
+    }
+    component_slot = {
+        name = "COMPOUND_SMALL_3"
+        template = giga_invisible_small_fixed
+        locatorname = "small_gun_03"
+    }
+    medium_utility_slots = 2
+}

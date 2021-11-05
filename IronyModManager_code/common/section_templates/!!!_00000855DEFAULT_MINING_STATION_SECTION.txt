@@ -1,0 +1,7 @@
+ship_section_template = {
+    key = "DEFAULT_MINING_STATION_SECTION"
+    ship_size = mining_station
+    fits_on_slot = mid
+    entity = "mining_station_section_entity"
+    icon = "GFX_ship_part_core_mid"
+}

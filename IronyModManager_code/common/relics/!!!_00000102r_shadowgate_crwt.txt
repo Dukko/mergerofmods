@@ -1,0 +1,123 @@
+r_shadowgate_crwt = {
+    activation_duration = 3600
+    portrait = "GFX_relic_shadowgate_crwt"
+    sound = "sfx_relic_activation_shadowgate_crwt"
+    resources = {
+        category = relics
+        cost = {
+            influence = 150
+        }
+    }
+    ai_weight = {
+        weight = 100
+        modifier = {
+            factor = 0
+            any_owned_planet = {
+                is_colonized_shadowgate = yes
+            }
+        }
+    }
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+        custom_tooltip = shadowgate.crw.transmitter.passive
+    }
+    score = 200
+    active_effect = {
+        custom_tooltip = shadowgate.crw.transmitter.active
+        custom_tooltip = relic_triumph_cooldown
+        hidden_effect = {
+            remove_relic = r_shadowgate_crwt
+            add_relic = r_shadowgate_crwt_active
+            every_system_within_border = {
+                limit = {
+                    OR = {
+                        has_star_flag = shadowgate_solar_system
+                        has_star_flag = has_shadowrift
+                    }
+                }
+                if = {
+                    limit = {
+                        has_star_flag = shadowgate_solar_system
+                        NOT = {
+                            any_system_planet = {
+                                has_modifier = pm_shadowgate_disabled
+                            }
+                        }
+                    }
+                    save_event_target_as = shadowrift_vd_rift_system
+                    random_system_planet = {
+                        limit = {
+                            has_planet_flag = shadowgate_planet
+                        }
+                        planet_event = {
+                            id = shadowgate_galactic.230
+                        }
+                    }
+                }
+                else_if = {
+                    limit = {
+                        NOT = {
+                            has_star_flag = has_shadow_mooring_rift
+                        }
+                    }
+                    save_event_target_as = shadowrift_vd_rift_system
+                    switch = {
+                        trigger = has_star_flag
+                        has_shadowrift_a = {
+                            event_target:shadowgate_planet_a = {
+                                planet_event = {
+                                    id = shadowgate_galactic.230
+                                }
+                            }
+                        }
+                        has_shadowrift_b = {
+                            event_target:shadowgate_planet_b = {
+                                planet_event = {
+                                    id = shadowgate_galactic.230
+                                }
+                            }
+                        }
+                        has_shadowrift_c = {
+                            event_target:shadowgate_planet_c = {
+                                planet_event = {
+                                    id = shadowgate_galactic.230
+                                }
+                            }
+                        }
+                        has_shadowrift_d = {
+                            event_target:shadowgate_planet_d = {
+                                planet_event = {
+                                    id = shadowgate_galactic.230
+                                }
+                            }
+                        }
+                        has_shadowrift_e = {
+                            event_target:shadowgate_planet_e = {
+                                planet_event = {
+                                    id = shadowgate_galactic.230
+                                }
+                            }
+                        }
+                    }
+                }
+                else = {
+                    remove_system_shadowrift = yes
+                }
+            }
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                days = 3600
+            }
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_relic_no_cooldown"
+            NOT = {
+                has_modifier = relic_activation_cooldown
+            }
+        }
+    }
+}

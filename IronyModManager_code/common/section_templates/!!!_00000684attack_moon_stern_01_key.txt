@@ -1,0 +1,59 @@
+ship_section_template = {
+    key = "attack_moon_stern_01_key"
+    ship_size = giga_massive_planet
+    fits_on_slot = "stern"
+    entity = "giga_moon_thrusters_ai_fe"
+    icon = "GFX_ship_part_core_mid"
+    component_slot = {
+        name = "STRIKE_CRAFT_01"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_02"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_02"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_03"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_04"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_02"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_05"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_06"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_02"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_07"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_08"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_02"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_09"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_10"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_02"
+    }
+    large_utility_slots = 8
+    aux_utility_slots = 2
+}

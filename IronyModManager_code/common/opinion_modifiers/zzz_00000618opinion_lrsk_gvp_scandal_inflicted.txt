@@ -1,0 +1,8 @@
+opinion_lrsk_gvp_scandal_inflicted = {
+    opinion = {
+        base = -25
+    }
+    decay = {
+        base = 1
+    }
+}

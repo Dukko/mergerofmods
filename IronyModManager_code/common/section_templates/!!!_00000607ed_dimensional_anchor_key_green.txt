@@ -1,0 +1,89 @@
+ship_section_template = {
+    key = "ed_dimensional_anchor_key_green"
+    ship_size = starbase_exd
+    fits_on_slot = core
+    entity = "empty_section_entity"
+    icon = "GFX_ship_part_core_mid"
+    component_slot = {
+        name = "EXTRA_LARGE_GUN_01"
+        template = "invisible_extra_large_fixed"
+        locatorname = "root"
+    }
+    component_slot = {
+        name = "LARGE_GUN_01"
+        template = "large_turret"
+        locatorname = "root"
+    }
+    component_slot = {
+        name = "LARGE_GUN_02"
+        template = "large_turret"
+        locatorname = "root"
+    }
+    component_slot = {
+        name = "LARGE_GUN_03"
+        template = "large_turret"
+        locatorname = "root"
+    }
+    component_slot = {
+        name = "LARGE_GUN_04"
+        template = "large_turret"
+        locatorname = "root"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_01"
+        template = "medium_turret"
+        locatorname = "root"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_02"
+        template = "medium_turret"
+        locatorname = "root"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_03"
+        template = "medium_turret"
+        locatorname = "root"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_04"
+        template = "medium_turret"
+        locatorname = "root"
+    }
+    component_slot = {
+        name = "PD_01"
+        template = "point_defence_turret"
+        locatorname = "root"
+        is_side_slot = yes
+    }
+    component_slot = {
+        name = "PD_02"
+        template = "point_defence_turret"
+        locatorname = "root"
+        is_side_slot = yes
+    }
+    component_slot = {
+        name = "PD_03"
+        template = "point_defence_turret"
+        locatorname = "root"
+        is_side_slot = yes
+    }
+    component_slot = {
+        name = "PD_04"
+        template = "point_defence_turret"
+        locatorname = "root"
+        is_side_slot = yes
+    }
+    component_slot = {
+        name = "PD_05"
+        template = "point_defence_turret"
+        locatorname = "root"
+        is_side_slot = yes
+    }
+    component_slot = {
+        name = "PD_06"
+        template = "point_defence_turret"
+        locatorname = "root"
+        is_side_slot = yes
+    }
+    large_utility_slots = 12
+}

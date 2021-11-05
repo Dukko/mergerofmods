@@ -1,0 +1,10 @@
+dpe_honourable_in_war = {
+    opinion = {
+        base = 30
+    }
+    accumulative = yes
+    max = 50
+    decay = {
+        base = 3
+    }
+}

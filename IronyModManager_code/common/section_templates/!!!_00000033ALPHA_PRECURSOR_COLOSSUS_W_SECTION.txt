@@ -1,0 +1,74 @@
+ship_section_template = {
+    key = "ALPHA_PRECURSOR_COLOSSUS_W_SECTION"
+    ship_size = precursor_colossus
+    fits_on_slot = "ship"
+    entity = "alpha_precursor_colossus_ship_entity"
+    icon = "GFX_ship_part_core_mid"
+    prerequisites = {
+        tech_precursor_colossus_ae
+    }
+    component_slot = {
+        name = "PLANET_KILLER_GUN_01"
+        template = "invisible_planet_killer_fixed"
+        locatorname = "planet_killer_gun_01"
+    }
+    component_slot = {
+        name = "TITANIC_01"
+        template = "invisible_titanic_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "TITANIC_02"
+        template = "invisible_titanic_turret"
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "TITANIC_03"
+        template = "invisible_titanic_turret"
+        locatorname = "medium_gun_03"
+    }
+    component_slot = {
+        name = "TITANIC_04"
+        template = "invisible_titanic_turret"
+        locatorname = "medium_gun_04"
+    }
+    component_slot = {
+        name = "TITANIC_05"
+        template = "invisible_titanic_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "TITANIC_06"
+        template = "invisible_titanic_turret"
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "TITANIC_07"
+        template = "invisible_titanic_turret"
+        locatorname = "medium_gun_03"
+    }
+    component_slot = {
+        name = "TITANIC_08"
+        template = "invisible_titanic_turret"
+        locatorname = "medium_gun_04"
+    }
+    component_slot = {
+        name = "TITANIC_09"
+        template = "invisible_titanic_turret"
+        locatorname = "medium_gun_04"
+    }
+    component_slot = {
+        name = "TITANIC_10"
+        template = "invisible_titanic_turret"
+        locatorname = "medium_gun_01"
+    }
+    large_utility_slots = 15
+    aux_utility_slots = 5
+    resources = {
+        category = ship_sections
+        cost = {
+            sr_dark_matter = 400
+            acot_sr_dark_energy = 400
+        }
+    }
+}

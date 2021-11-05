@@ -1,0 +1,8 @@
+vbp_machine_destroyed_negative = {
+    opinion = {
+        base = -40
+    }
+    decay = {
+        base = 1
+    }
+}

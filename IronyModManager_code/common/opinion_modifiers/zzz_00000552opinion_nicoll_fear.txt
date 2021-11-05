@@ -1,0 +1,12 @@
+opinion_nicoll_fear = {
+    opinion = {
+        base = 100
+        modifier = {
+            add = -150
+            is_country_type = fallen_empire
+        }
+    }
+    decay = {
+        base = -1
+    }
+}

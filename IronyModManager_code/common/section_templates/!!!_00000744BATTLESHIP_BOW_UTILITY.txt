@@ -1,0 +1,45 @@
+@adv_section_cost = 120
+ship_section_template = {
+    key = "BATTLESHIP_BOW_UTILITY"
+    ship_size = battleship
+    fits_on_slot = bow
+    should_draw_components = yes
+    entity = "battleship_bow_L1M1S2_entity"
+    icon = "GFX_ship_part_core_bow"
+    prerequisites = {
+        tech_battleship_hull_1
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1
+        }
+    }
+    component_slot = {
+        name = "TORPEDO_01"
+        template = "medium_missile_turret"
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_02"
+        template = "medium_missile_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "SMALL_GUN_01"
+        template = "point_defence_turret"
+        locatorname = "small_gun_01"
+    }
+    component_slot = {
+        name = "SMALL_GUN_02"
+        template = "point_defence_turret"
+        locatorname = "small_gun_02"
+    }
+    large_utility_slots = 2
+    aux_utility_slots = 2
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @adv_section_cost
+        }
+    }
+}

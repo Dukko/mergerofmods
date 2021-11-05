@@ -1,0 +1,136 @@
+ship_section_template = {
+    key = "gray_warship_key"
+    ship_size = graygoo_mothership
+    fits_on_slot = mid
+    should_draw_components = no
+    entity = "gatebuilder_01_mothership_section_entity"
+    icon = "GFX_ship_part_core_mid"
+    prerequisites = {
+        tech_nanite_mega_construction
+    }
+    ai_weight = {
+        factor = 10
+        modifier = {
+            factor = 4
+            is_preferred_weapons = weapon_type_kinetic
+        }
+        modifier = {
+            factor = 0.2
+            NOT = {
+                is_preferred_weapons = weapon_type_kinetic
+            }
+        }
+        modifier = {
+            factor = 2
+            is_preferred_weapons = weapon_type_point_defense
+        }
+        modifier = {
+            factor = 0.5
+            NOT = {
+                is_preferred_weapons = weapon_type_point_defense
+            }
+        }
+    }
+    component_slot = {
+        name = "TITAN_01"
+        template = "invisible_titanic_fixed"
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_01"
+        template = "invisible_missile_turret"
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_02"
+        template = "invisible_missile_turret"
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_03"
+        template = "invisible_missile_turret"
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_04"
+        template = "invisible_missile_turret"
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_05"
+        template = "invisible_missile_turret"
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_01"
+        template = "medium_turret"
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_02"
+        template = "medium_turret"
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_03"
+        template = "medium_turret"
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_04"
+        template = "medium_turret"
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_05"
+        template = "medium_turret"
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_06"
+        template = "medium_turret"
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_01"
+        template = "large_turret"
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_02"
+        template = "large_turret"
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_03"
+        template = "large_turret"
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_04"
+        template = "large_turret"
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_01"
+        template = "large_strike_craft"
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_02"
+        template = "large_strike_craft"
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "PD_01"
+        template = "point_defence_turret"
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "PD_02"
+        template = "point_defence_turret"
+        locatorname = "xl_gun_01"
+    }
+    large_utility_slots = 16
+    aux_utility_slots = 4
+}

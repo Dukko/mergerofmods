@@ -1,0 +1,299 @@
+ship_section_template = {
+    key = "BLOKKAT_CUSTODIAN"
+    ship_size = giga_blokkat_custodian
+    fits_on_slot = "mid"
+    entity = "blokkat_custodian_entity"
+    icon = "GFX_ship_part_core_mid"
+    component_slot = {
+        name = "TITANIC_GUN_01"
+        template = "invisible_titanic_fixed"
+        locatorname = "light_locator_01"
+    }
+    component_slot = {
+        name = "TITANIC_GUN_02"
+        template = "invisible_titanic_fixed"
+        locatorname = "light_locator_02"
+    }
+    component_slot = {
+        name = "TITANIC_GUN_03"
+        template = "invisible_titanic_fixed"
+        locatorname = "light_locator_03"
+    }
+    component_slot = {
+        name = "TITANIC_GUN_04"
+        template = "invisible_titanic_fixed"
+        locatorname = "light_locator_04"
+    }
+    component_slot = {
+        name = "TITANIC_GUN_05"
+        template = "invisible_titanic_fixed"
+        locatorname = "light_locator_05"
+    }
+    component_slot = {
+        name = "TITANIC_GUN_06"
+        template = "invisible_titanic_fixed"
+        locatorname = "light_locator_06"
+    }
+    component_slot = {
+        name = "TITANIC_GUN_07"
+        template = "invisible_titanic_fixed"
+        locatorname = "light_locator_07"
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_GUN_01"
+        template = "invisible_extra_large_fixed"
+        locatorname = "light_locator_01"
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_GUN_02"
+        template = "invisible_extra_large_fixed"
+        locatorname = "light_locator_02"
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_GUN_03"
+        template = "invisible_extra_large_fixed"
+        locatorname = "light_locator_03"
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_GUN_04"
+        template = "invisible_extra_large_fixed"
+        locatorname = "light_locator_04"
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_GUN_05"
+        template = "invisible_extra_large_fixed"
+        locatorname = "light_locator_05"
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_GUN_06"
+        template = "invisible_extra_large_fixed"
+        locatorname = "light_locator_06"
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_GUN_07"
+        template = "invisible_extra_large_fixed"
+        locatorname = "light_locator_07"
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_GUN_08"
+        template = "invisible_extra_large_fixed"
+        locatorname = "light_locator_02"
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_GUN_09"
+        template = "invisible_extra_large_fixed"
+        locatorname = "light_locator_03"
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_GUN_10"
+        template = "invisible_extra_large_fixed"
+        locatorname = "light_locator_04"
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_GUN_11"
+        template = "invisible_extra_large_fixed"
+        locatorname = "light_locator_05"
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_GUN_12"
+        template = "invisible_extra_large_fixed"
+        locatorname = "light_locator_06"
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_GUN_13"
+        template = "invisible_extra_large_fixed"
+        locatorname = "light_locator_07"
+    }
+    component_slot = {
+        name = "LARGE_GUN_01"
+        template = "giga_invisible_large_fixed"
+        locatorname = "light_locator_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_02"
+        template = "giga_invisible_large_fixed"
+        locatorname = "light_locator_02"
+    }
+    component_slot = {
+        name = "LARGE_GUN_03"
+        template = "giga_invisible_large_fixed"
+        locatorname = "light_locator_03"
+    }
+    component_slot = {
+        name = "LARGE_GUN_04"
+        template = "giga_invisible_large_fixed"
+        locatorname = "light_locator_04"
+    }
+    component_slot = {
+        name = "LARGE_GUN_05"
+        template = "giga_invisible_large_fixed"
+        locatorname = "light_locator_05"
+    }
+    component_slot = {
+        name = "LARGE_GUN_06"
+        template = "giga_invisible_large_fixed"
+        locatorname = "light_locator_06"
+    }
+    component_slot = {
+        name = "LARGE_GUN_07"
+        template = "giga_invisible_large_fixed"
+        locatorname = "light_locator_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_08"
+        template = "giga_invisible_large_fixed"
+        locatorname = "light_locator_02"
+    }
+    component_slot = {
+        name = "LARGE_GUN_09"
+        template = "giga_invisible_large_fixed"
+        locatorname = "light_locator_03"
+    }
+    component_slot = {
+        name = "LARGE_GUN_10"
+        template = "giga_invisible_large_fixed"
+        locatorname = "light_locator_04"
+    }
+    component_slot = {
+        name = "LARGE_GUN_11"
+        template = "giga_invisible_large_fixed"
+        locatorname = "light_locator_05"
+    }
+    component_slot = {
+        name = "LARGE_GUN_12"
+        template = "giga_invisible_large_fixed"
+        locatorname = "light_locator_06"
+    }
+    component_slot = {
+        name = "MISSILE_01"
+        template = "medium_missile_turret"
+        locatorname = "light_locator_07"
+    }
+    component_slot = {
+        name = "MISSILE_02"
+        template = "medium_missile_turret"
+        locatorname = "light_locator_08"
+    }
+    component_slot = {
+        name = "MISSILE_03"
+        template = "medium_missile_turret"
+        locatorname = "light_locator_01"
+    }
+    component_slot = {
+        name = "MISSILE_04"
+        template = "medium_missile_turret"
+        locatorname = "light_locator_02"
+    }
+    component_slot = {
+        name = "MISSILE_05"
+        template = "medium_missile_turret"
+        locatorname = "light_locator_07"
+    }
+    component_slot = {
+        name = "MISSILE_06"
+        template = "medium_missile_turret"
+        locatorname = "light_locator_08"
+    }
+    component_slot = {
+        name = "MISSILE_07"
+        template = "medium_missile_turret"
+        locatorname = "light_locator_01"
+    }
+    component_slot = {
+        name = "MISSILE_08"
+        template = "medium_missile_turret"
+        locatorname = "light_locator_02"
+    }
+    component_slot = {
+        name = "MISSILE_09"
+        template = "medium_missile_turret"
+        locatorname = "light_locator_07"
+    }
+    component_slot = {
+        name = "MISSILE_10"
+        template = "medium_missile_turret"
+        locatorname = "light_locator_08"
+    }
+    component_slot = {
+        name = "MISSILE_11"
+        template = "medium_missile_turret"
+        locatorname = "light_locator_01"
+    }
+    component_slot = {
+        name = "MISSILE_12"
+        template = "medium_missile_turret"
+        locatorname = "light_locator_02"
+    }
+    component_slot = {
+        name = "HANGAR_01"
+        template = "large_strike_craft"
+        locatorname = "loc100"
+    }
+    component_slot = {
+        name = "HANGAR_02"
+        template = "large_strike_craft"
+        locatorname = "loc100"
+    }
+    component_slot = {
+        name = "HANGAR_03"
+        template = "large_strike_craft"
+        locatorname = "loc100"
+    }
+    component_slot = {
+        name = "HANGAR_04"
+        template = "large_strike_craft"
+        locatorname = "loc100"
+    }
+    component_slot = {
+        name = "HANGAR_05"
+        template = "large_strike_craft"
+        locatorname = "loc100"
+    }
+    component_slot = {
+        name = "HANGAR_06"
+        template = "large_strike_craft"
+        locatorname = "loc100"
+    }
+    component_slot = {
+        name = "POINT_DEFENCE_01"
+        template = "point_defence_turret"
+        locatorname = "light_locator_03"
+    }
+    component_slot = {
+        name = "POINT_DEFENCE_02"
+        template = "point_defence_turret"
+        locatorname = "light_locator_04"
+    }
+    component_slot = {
+        name = "POINT_DEFENCE_03"
+        template = "point_defence_turret"
+        locatorname = "light_locator_05"
+    }
+    component_slot = {
+        name = "POINT_DEFENCE_04"
+        template = "point_defence_turret"
+        locatorname = "light_locator_06"
+    }
+    component_slot = {
+        name = "POINT_DEFENCE_05"
+        template = "point_defence_turret"
+        locatorname = "light_locator_03"
+    }
+    component_slot = {
+        name = "POINT_DEFENCE_06"
+        template = "point_defence_turret"
+        locatorname = "light_locator_04"
+    }
+    component_slot = {
+        name = "POINT_DEFENCE_07"
+        template = "point_defence_turret"
+        locatorname = "light_locator_05"
+    }
+    component_slot = {
+        name = "POINT_DEFENCE_08"
+        template = "point_defence_turret"
+        locatorname = "light_locator_06"
+    }
+    large_utility_slots = 24
+    aux_utility_slots = 8
+}

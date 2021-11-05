@@ -1,0 +1,87 @@
+ship_section_template = {
+    key = "nanite_interdictor_combat_key"
+    ship_size = graygoo_interdictor
+    fits_on_slot = mid
+    should_draw_components = no
+    entity = "gatebuilder_01_cruiser_section_entity"
+    icon = "GFX_ship_part_core_mid"
+    ai_weight = {
+        modifier = {
+            factor = 0.1
+            is_preferred_weapons = weapon_type_strike_craft
+        }
+        modifier = {
+            factor = 10
+            NOT = {
+                is_preferred_weapons = weapon_type_strike_craft
+            }
+        }
+        modifier = {
+            factor = 2
+            is_preferred_weapons = weapon_type_explosive
+        }
+        modifier = {
+            factor = 0.1
+            NOT = {
+                is_preferred_weapons = weapon_type_explosive
+            }
+        }
+        modifier = {
+            factor = 2
+            is_preferred_weapons = weapon_type_energy
+        }
+        modifier = {
+            factor = 0.5
+            NOT = {
+                is_preferred_weapons = weapon_type_energy
+            }
+        }
+        modifier = {
+            factor = 0.1
+            is_preferred_weapons = weapon_type_kinetic
+        }
+        modifier = {
+            factor = 2
+            NOT = {
+                is_preferred_weapons = weapon_type_kinetic
+            }
+        }
+    }
+    component_slot = {
+        name = "TORPEDO_01"
+        template = "invisible_missile_turret"
+        locatorname = "turret_01"
+    }
+    component_slot = {
+        name = "TORPEDO_02"
+        template = "invisible_missile_turret"
+        locatorname = "turret_01"
+    }
+    component_slot = {
+        name = "TORPEDO_03"
+        template = "invisible_missile_turret"
+        locatorname = "turret_01"
+    }
+    component_slot = {
+        name = "TORPEDO_04"
+        template = "invisible_missile_turret"
+        locatorname = "turret_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_01"
+        template = "medium_turret"
+        locatorname = "turret_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_02"
+        template = "medium_turret"
+        locatorname = "turret_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_03"
+        template = "medium_turret"
+        locatorname = "turret_01"
+    }
+    medium_utility_slots = 8
+    aux_utility_slots = 2
+}

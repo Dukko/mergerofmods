@@ -1,0 +1,99 @@
+ship_section_template = {
+    key = "BASTION_STARBASE_SECTION"
+    ship_size = starbase_ehof_03
+    fits_on_slot = "core"
+    should_draw_components = yes
+    entity = "ehof_01_starbase_ehof_03_section_entity"
+    icon = "GFX_ship_part_core_mid"
+    component_slot = {
+        name = "LARGE_GUN_01"
+        template = "giga_small"
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "LARGE_GUN_02"
+        template = "giga_small"
+        locatorname = "medium_gun_04"
+    }
+    component_slot = {
+        name = "LARGE_GUN_03"
+        template = "giga_small"
+        locatorname = "medium_gun_05"
+    }
+    component_slot = {
+        name = "LARGE_GUN_04"
+        template = "giga_small"
+        locatorname = "medium_gun_06"
+    }
+    component_slot = {
+        name = "LARGE_GUN_05"
+        template = "giga_small"
+        locatorname = "medium_gun_07"
+    }
+    component_slot = {
+        name = "LARGE_GUN_06"
+        template = "giga_small"
+        locatorname = "medium_gun_08"
+    }
+    component_slot = {
+        name = "LARGE_GUN_07"
+        template = "giga_small"
+        locatorname = "medium_gun_010"
+    }
+    component_slot = {
+        name = "LARGE_GUN_08"
+        template = "giga_small"
+        locatorname = "medium_gun_012"
+    }
+    component_slot = {
+        name = "LARGE_GUN_09"
+        template = "giga_medium"
+        locatorname = "medium_gun_013"
+    }
+    component_slot = {
+        name = "LARGE_GUN_10"
+        template = "giga_medium"
+        locatorname = "medium_gun_014"
+    }
+    component_slot = {
+        name = "LARGE_GUN_11"
+        template = "giga_medium"
+        locatorname = "medium_gun_015"
+    }
+    component_slot = {
+        name = "LARGE_GUN_12"
+        template = "giga_medium"
+        locatorname = "medium_gun_016"
+    }
+    component_slot = {
+        name = "LARGE_GUN_13"
+        template = "giga_medium"
+        locatorname = "medium_gun_017"
+    }
+    component_slot = {
+        name = "LARGE_GUN_14"
+        template = "giga_medium"
+        locatorname = "medium_gun_018"
+    }
+    component_slot = {
+        name = "LARGE_GUN_15"
+        template = "giga_large"
+        locatorname = "medium_gun_019"
+    }
+    component_slot = {
+        name = "LARGE_GUN_16"
+        template = "giga_large"
+        locatorname = "medium_gun_020"
+    }
+    component_slot = {
+        name = "LARGE_GUN_17"
+        template = "giga_large"
+        locatorname = "medium_gun_023"
+    }
+    component_slot = {
+        name = "LARGE_GUN_18"
+        template = "giga_large"
+        locatorname = "medium_gun_024"
+    }
+    large_utility_slots = 15
+}

@@ -1,0 +1,93 @@
+ship_section_template = {
+    key = "mem_vazuran_small_military_station_key"
+    ship_size = mem_vazuran_small_military_station
+    fits_on_slot = mid
+    entity = "mem_ancient_small_military_station_hull_entity"
+    icon = "GFX_ship_part_core_mid"
+    component_slot = {
+        name = "LARGE_GUN_01"
+        template = "large_turret"
+        locatorname = "top_tip"
+    }
+    component_slot = {
+        name = "LARGE_GUN_02"
+        template = "large_turret"
+        locatorname = "bottom_tip"
+    }
+    component_slot = {
+        name = "SMALL_GUN_01"
+        template = "small_turret"
+        locatorname = "top_tip"
+    }
+    component_slot = {
+        name = "SMALL_GUN_02"
+        template = "small_turret"
+        locatorname = "bottom_tip"
+    }
+    component_slot = {
+        name = "PD_01"
+        template = "point_defence_turret"
+        locatorname = "top_tip"
+    }
+    component_slot = {
+        name = "PD_02"
+        template = "point_defence_turret"
+        locatorname = "bottom_tip"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_01"
+        template = "large_strike_craft"
+        rotation = 0
+        locatorname = "blade_tip_1"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_02"
+        template = "large_strike_craft"
+        rotation = 0
+        locatorname = "blade_tip_2"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_03"
+        template = "large_strike_craft"
+        rotation = 0
+        locatorname = "blade_tip_3"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_04"
+        template = "large_strike_craft"
+        rotation = 0
+        locatorname = "blade_core_1"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_05"
+        template = "large_strike_craft"
+        rotation = 0
+        locatorname = "blade_core_2"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_06"
+        template = "large_strike_craft"
+        rotation = 0
+        locatorname = "blade_core_3"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_07"
+        template = "large_strike_craft"
+        rotation = 0
+        locatorname = "blade_core_4"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_08"
+        template = "large_strike_craft"
+        rotation = 0
+        locatorname = "blade_core_5"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_09"
+        template = "large_strike_craft"
+        rotation = 0
+        locatorname = "blade_core_6"
+    }
+    large_utility_slots = 20
+    aux_utility_slots = 4
+}

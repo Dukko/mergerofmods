@@ -1,0 +1,43 @@
+@terraforming_cost_level_4 = 15000
+@terraforming_duration_level_4 = 7200
+terraform_link = {
+    from = pc_barren_cold
+    to = pc_gaia
+    energy = @terraforming_cost_level_4
+    duration = @terraforming_duration_level_4
+    potential = {
+        from = {
+            has_modifier = terraforming_candidate
+        }
+    }
+    condition = {
+        has_ascension_perk = ap_world_shaper
+    }
+    effect = {
+        from = {
+            remove_modifier = terraforming_candidate
+        }
+    }
+    ai_weight = {
+        weight = 20
+        modifier = {
+            factor = 10
+            from = {
+                num_pops > 10
+            }
+        }
+        modifier = {
+            factor = 2
+            from = {
+                num_pops > 25
+            }
+        }
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = energy
+                value < 6000
+            }
+        }
+    }
+}

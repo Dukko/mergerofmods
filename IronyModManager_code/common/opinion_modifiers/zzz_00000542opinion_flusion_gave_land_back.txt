@@ -1,0 +1,8 @@
+opinion_flusion_gave_land_back = {
+    opinion = {
+        base = 150
+    }
+    decay = {
+        base = -1
+    }
+}

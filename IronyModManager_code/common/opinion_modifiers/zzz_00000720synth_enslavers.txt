@@ -1,0 +1,32 @@
+synth_enslavers = {
+    trigger = {
+        OR = {
+            is_country_type = default
+            is_country_type = ascended_empire
+            is_country_type = lost_empire
+        }
+        OR = {
+            has_country_flag = synthetic_empire
+            has_authority = auth_machine_intelligence
+        }
+        FROM = {
+            OR = {
+                is_country_type = default
+                is_country_type = ascended_empire
+                is_country_type = lost_empire
+            }
+            has_policy_flag = ai_servitude
+            OR = {
+                has_technology = tech_synthetic_workers
+                has_technology = tech_sapient_ai
+            }
+            NOR = {
+                has_country_flag = synthetic_empire
+                has_authority = auth_machine_intelligence
+            }
+        }
+    }
+    opinion = {
+        base = -25
+    }
+}

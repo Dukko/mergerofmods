@@ -1,0 +1,8 @@
+opinion_falsely_punished = {
+    opinion = {
+        base = -60
+    }
+    decay = {
+        base = 5
+    }
+}

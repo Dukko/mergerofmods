@@ -1,0 +1,55 @@
+r_shadowgate_shadowforge = {
+    activation_duration = 3600
+    portrait = "GFX_relic_shadowgate_shadowforge"
+    sound = "sfx_relic_activation_shadowgate_shadowforge"
+    resources = {
+        category = relics
+        cost = {
+            influence = 150
+        }
+    }
+    ai_weight = {
+        weight = 100
+        modifier = {
+            factor = 1.5
+            any_owned_planet = {
+                is_colonized_shadowgate = yes
+            }
+        }
+    }
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+        custom_tooltip = shadowgate.shadowforge.passive
+    }
+    score = 500
+    active_effect = {
+        custom_tooltip = shadowgate.shadowforge.active
+        custom_tooltip = relic_triumph_cooldown
+        hidden_effect = {
+            change_variable = {
+                which = ShadowgateLodestonesOwned
+                value = 1
+            }
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                days = 3600
+            }
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_relic_no_cooldown"
+            NOT = {
+                has_modifier = relic_activation_cooldown
+            }
+        }
+        custom_tooltip = {
+            fail_text = "shadowgate.crw.fail.antiresonant.void"
+            NOT = {
+                has_relic = r_shadowgate_crwt_active
+            }
+        }
+    }
+}

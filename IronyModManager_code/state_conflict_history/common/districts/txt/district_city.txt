@@ -141,6 +141,7 @@ district_city = {
             owner = {
                 has_active_tradition = tr_prosperity_interstellar_franchising
             }
+            str_enable_clerks = yes
         }
         modifier = {
             job_clerk_add = 1
@@ -189,8 +190,9 @@ district_city = {
             num_pops > 15
             free_building_slots = 0
             nor = {
-                has_designation = col_factory
-                has_designation = col_foundry
+                str_is_col_factory = yes
+                str_is_col_foundry = yes
+                str_is_col_industrial = yes
             }
             or = {
                 owner = {
@@ -238,8 +240,9 @@ district_city = {
             free_housing < 20
             free_building_slots = 0
             or = {
-                has_designation = col_factory
-                has_designation = col_foundry
+                str_is_col_factory = yes
+                str_is_col_foundry = yes
+                str_is_col_industrial = yes
             }
             free_jobs > 0
             owner = {

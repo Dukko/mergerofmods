@@ -1,0 +1,8 @@
+opinion_denied_to_leave_empire = {
+    opinion = {
+        base = -50
+    }
+    decay = {
+        base = 1
+    }
+}

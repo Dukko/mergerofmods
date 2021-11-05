@@ -1,0 +1,18 @@
+ship_section_template = {
+    key = "MEDIUM_TRANSPORT_SECTION"
+    ship_size = transport
+    fits_on_slot = mid
+    entity = "transport_ship_entity"
+    icon = "GFX_ship_part_core_mid"
+    ai_weight = {
+        modifier = {
+            factor = 3
+        }
+    }
+    prerequisites = {
+        tech_reinforced_transport
+    }
+    medium_utility_slots = 1
+    small_utility_slots = 2
+    aux_utility_slots = 1
+}

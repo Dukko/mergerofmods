@@ -1,0 +1,56 @@
+triggered_opinion_nihilistic_acquisition = {
+    trigger = {
+        OR = {
+            OR = {
+                is_country_type = default
+                is_country_type = ascended_empire
+                is_country_type = lost_empire
+            }
+            AND = {
+                OR = {
+                    is_country_type = awakened_fallen_empire
+                    is_country_type = fallen_empire
+                }
+                has_ethic = ethic_fanatic_xenophile
+                is_mechanical_empire = no
+                is_cyborg_empire = no
+            }
+        }
+        NOT = {
+            has_civic = civic_barbaric_despoilers
+        }
+        NOT = {
+            has_ascension_perk = ap_nihilistic_acquisition
+        }
+        OR = {
+            has_intel_level = {
+                who = FROM
+                category = diplomacy
+                level >= 1
+            }
+            has_intel_level = {
+                who = FROM
+                category = military
+                level >= 1
+            }
+        }
+        FROM = {
+            has_ascension_perk = ap_nihilistic_acquisition
+        }
+    }
+    opinion = {
+        base = -40
+        modifier = {
+            add = 30
+            is_militarist = yes
+        }
+        modifier = {
+            add = 10
+            is_authoritarian = yes
+        }
+        modifier = {
+            add = -30
+            is_pacifist = yes
+        }
+    }
+}

@@ -1,0 +1,8 @@
+mem_opinion_peaceful_trade = {
+    opinion = {
+        base = 100
+    }
+    decay = {
+        base = 5
+    }
+}

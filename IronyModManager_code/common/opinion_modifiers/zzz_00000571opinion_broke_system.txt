@@ -1,0 +1,12 @@
+opinion_broke_system = {
+    opinion = {
+        base = -300
+        modifier = {
+            add = 280
+            is_country_type = fallen_empire
+        }
+    }
+    decay = {
+        base = 1
+    }
+}

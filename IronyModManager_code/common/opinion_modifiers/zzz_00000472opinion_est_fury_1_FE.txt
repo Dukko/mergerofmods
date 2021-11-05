@@ -1,0 +1,13 @@
+opinion_est_fury_1_FE = {
+    trigger = {
+        from = {
+            has_policy_flag = est_fury_1
+        }
+        root = {
+            is_country_type = fallen_empire
+        }
+    }
+    opinion = {
+        base = -5
+    }
+}

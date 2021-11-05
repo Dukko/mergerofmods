@@ -1,0 +1,30 @@
+opinion_ex_sapient_intervention_civic = {
+    trigger = {
+        FROM = {
+            has_relic = r_supercomputer
+        }
+    }
+    opinion = {
+        base = 0
+        modifier = {
+            add = 25
+            AND = {
+                is_country_type = fallen_empire
+                has_ethic = "ethic_fanatic_materialist"
+            }
+        }
+        modifier = {
+            add = 40
+            OR = {
+                has_authority = auth_machine_intelligence
+            }
+        }
+        modifier = {
+            add = -25
+            AND = {
+                is_country_type = fallen_empire
+                has_ethic = "ethic_fanatic_spiritualist"
+            }
+        }
+    }
+}

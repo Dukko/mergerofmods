@@ -1,0 +1,8 @@
+dpe_helping_with_elections = {
+    opinion = {
+        base = 100
+    }
+    decay = {
+        base = 3
+    }
+}

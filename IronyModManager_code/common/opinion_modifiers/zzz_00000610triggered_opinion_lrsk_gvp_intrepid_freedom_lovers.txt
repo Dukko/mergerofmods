@@ -1,0 +1,11 @@
+triggered_opinion_lrsk_gvp_intrepid_freedom_lovers = {
+    trigger = {
+        has_valid_civic = lrsk_gov_var_civic_enlightened_liberalism
+        from = {
+            has_valid_civic = lrsk_gov_var_civic_enlightened_liberalism
+        }
+    }
+    opinion = {
+        base = 15
+    }
+}

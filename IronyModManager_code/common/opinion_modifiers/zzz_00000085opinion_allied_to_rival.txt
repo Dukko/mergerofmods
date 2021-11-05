@@ -1,0 +1,6 @@
+opinion_allied_to_rival = {
+    opinion = {
+        base = -150
+    }
+    unique = yes
+}

@@ -1,0 +1,41 @@
+ship_section_template = {
+    key = "giga_warship_large_key"
+    ship_size = giga_large_ship
+    fits_on_slot = mid
+    entity = "giga_warship_large_entity"
+    icon = "GFX_ship_part_core_mid"
+    component_slot = {
+        name = "TORPEDO_01"
+        template = "invisible_missile_fixed"
+        locatorname = "large_gun_01"
+        is_side_slot = yes
+        rotation = 90
+    }
+    component_slot = {
+        name = "TORPEDO_02"
+        template = "invisible_missile_fixed"
+        locatorname = "large_gun_02"
+        is_side_slot = yes
+    }
+    component_slot = {
+        name = "TORPEDO_03"
+        template = "invisible_missile_fixed"
+        locatorname = "large_gun_03"
+        is_side_slot = yes
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_01"
+        template = "invisible_medium_turret"
+        locatorname = "large_gun_01"
+        is_side_slot = yes
+        rotation = 90
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_02"
+        template = "invisible_medium_turret"
+        locatorname = "large_gun_01"
+        is_side_slot = yes
+        rotation = 90
+    }
+    aux_utility_slots = 1
+}

@@ -1,0 +1,17 @@
+triggered_opinion_lrsk_gvp_civic_minded_spirit = {
+    trigger = {
+        OR = {
+            has_valid_civic = lrsk_gov_var_civic_republicanism
+            has_valid_civic = lrsk_gov_var_civic_republicanism_oli
+        }
+        from = {
+            OR = {
+                has_valid_civic = lrsk_gov_var_civic_republicanism
+                has_valid_civic = lrsk_gov_var_civic_republicanism_oli
+            }
+        }
+    }
+    opinion = {
+        base = 15
+    }
+}

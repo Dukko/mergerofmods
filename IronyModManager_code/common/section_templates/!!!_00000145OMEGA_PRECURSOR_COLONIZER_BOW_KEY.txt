@@ -1,0 +1,23 @@
+ship_section_template = {
+    key = "OMEGA_PRECURSOR_COLONIZER_BOW_KEY"
+    ship_size = precursor_colonizer
+    fits_on_slot = bow
+    should_draw_components = yes
+    entity = "omega_precursor_colonizer_bow_entity"
+    icon = "GFX_ship_part_core_mid"
+    component_slot = {
+        name = "LARGE_GUN_01"
+        template = "invisible_planet_killer_fixed"
+        locatorname = "large_gun_01"
+    }
+    large_utility_slots = 8
+    aux_utility_slots = 3
+    prerequisites = {
+        tech_precursor_colonizer_omega
+    }
+    resources = {
+        category = ship_sections
+        cost = {
+        }
+    }
+}

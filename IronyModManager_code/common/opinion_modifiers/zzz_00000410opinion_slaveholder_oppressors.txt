@@ -1,0 +1,17 @@
+opinion_slaveholder_oppressors = {
+    trigger = {
+        has_valid_civic = civic_broken_shackles
+        FROM = {
+            has_policy_flag = slavery_allowed
+        }
+    }
+    opinion = {
+        base = -500
+        modifier = {
+            add = -750
+            FROM = {
+                has_valid_civic = civic_slaver_guilds
+            }
+        }
+    }
+}

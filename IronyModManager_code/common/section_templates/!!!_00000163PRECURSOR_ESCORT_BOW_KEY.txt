@@ -1,0 +1,35 @@
+ship_section_template = {
+    key = "PRECURSOR_ESCORT_BOW_KEY"
+    ship_size = precursor_escort
+    fits_on_slot = bow
+    should_draw_components = yes
+    entity = "precursor_escort_bow_entity"
+    icon = "GFX_ship_part_core_mid"
+    ai_weight = {
+        modifier = {
+            factor = 10
+            NOT = {
+                is_preferred_weapons = weapon_type_explosive
+            }
+        }
+        modifier = {
+            factor = 0.1
+            is_preferred_weapons = weapon_type_explosive
+        }
+    }
+    component_slot = {
+        name = "LARGE_GUN_01"
+        template = "invisible_large_turret"
+        locatorname = "large_gun_01"
+    }
+    medium_utility_slots = 2
+    aux_utility_slots = 2
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = 20
+            sr_dark_matter = 5
+            acot_sr_dark_energy = 5
+        }
+    }
+}

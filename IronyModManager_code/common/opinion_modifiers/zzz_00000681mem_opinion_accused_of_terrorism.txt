@@ -1,0 +1,8 @@
+mem_opinion_accused_of_terrorism = {
+    opinion = {
+        base = -75
+    }
+    decay = {
+        base = 10
+    }
+}

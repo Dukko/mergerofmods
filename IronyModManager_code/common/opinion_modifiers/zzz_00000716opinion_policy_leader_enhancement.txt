@@ -1,0 +1,47 @@
+opinion_policy_leader_enhancement = {
+    opinion = {
+        base = 0
+        modifier = {
+            add = 5
+            is_authoritarian = yes
+            FROM = {
+                OR = {
+                    has_policy_flag = leader_enhancement_selected_lineages
+                    has_policy_flag = leader_enhancement_capacity_boosters
+                }
+            }
+        }
+        modifier = {
+            add = -5
+            has_ethic = ethic_egalitarian
+            NOR = {
+                has_policy_flag = leader_enhancement_selected_lineages
+                has_policy_flag = leader_enhancement_capacity_boosters
+                is_active_resolution = "resolution_galacticstudies_ethical_guideline_refactoring"
+                is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+            }
+            FROM = {
+                OR = {
+                    has_policy_flag = leader_enhancement_selected_lineages
+                    has_policy_flag = leader_enhancement_capacity_boosters
+                }
+            }
+        }
+        modifier = {
+            add = -10
+            has_ethic = ethic_fanatic_egalitarian
+            NOR = {
+                has_policy_flag = leader_enhancement_selected_lineages
+                has_policy_flag = leader_enhancement_capacity_boosters
+                is_active_resolution = "resolution_galacticstudies_ethical_guideline_refactoring"
+                is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+            }
+            FROM = {
+                OR = {
+                    has_policy_flag = leader_enhancement_selected_lineages
+                    has_policy_flag = leader_enhancement_capacity_boosters
+                }
+            }
+        }
+    }
+}

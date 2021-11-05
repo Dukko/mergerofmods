@@ -1,0 +1,47 @@
+ship_section_template = {
+    key = "shadowgate_shadowrift_section"
+    ship_size = shadowgate_shadowrift
+    fits_on_slot = mid
+    entity = "shadowgate_invisible"
+    icon = "GFX_ship_part_core_mid"
+    component_slot = {
+        name = SHADOWRIFT_01
+        template = shadowrift_turret
+        locatorname = root
+    }
+    component_slot = {
+        name = SHADOWRIFT_02
+        template = shadowrift_turret
+        locatorname = root
+    }
+    component_slot = {
+        name = SHADOWRIFT_03
+        template = shadowrift_turret
+        locatorname = root
+    }
+    component_slot = {
+        name = SHADOWRIFT_04
+        template = shadowrift_turret
+        locatorname = root
+    }
+    component_slot = {
+        name = SHADOWRIFT_05
+        template = shadowrift_turret
+        locatorname = root
+    }
+    component_slot = {
+        name = SHADOWRIFT_06
+        template = shadowrift_turret
+        locatorname = root
+    }
+    component_slot = {
+        name = SHADOWRIFT_07
+        template = shadowrift_turret
+        locatorname = root
+    }
+    component_slot = {
+        name = SHADOWRIFT_08
+        template = shadowrift_turret
+        locatorname = root
+    }
+}

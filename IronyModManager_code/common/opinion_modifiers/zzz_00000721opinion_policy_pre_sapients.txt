@@ -1,0 +1,75 @@
+opinion_policy_pre_sapients = {
+    trigger = {
+        is_country_type = default
+        FROM = {
+            is_country_type = default
+        }
+    }
+    opinion = {
+        base = 0
+        modifier = {
+            add = 10
+            OR = {
+                has_ethic = ethic_fanatic_xenophile
+                has_civic = civic_machine_servitor
+            }
+            FROM = {
+                has_policy_flag = pre_sapients_protect
+            }
+        }
+        modifier = {
+            add = 5
+            has_ethic = ethic_xenophile
+            FROM = {
+                has_policy_flag = pre_sapients_protect
+            }
+        }
+        modifier = {
+            add = -5
+            has_ethic = ethic_xenophile
+            FROM = {
+                has_policy_flag = pre_sapients_purge
+            }
+        }
+        modifier = {
+            add = -10
+            has_ethic = ethic_fanatic_xenophile
+            FROM = {
+                has_policy_flag = pre_sapients_purge
+            }
+        }
+        modifier = {
+            add = -20
+            has_civic = civic_machine_servitor
+            NOT = {
+                has_policy_flag = pre_sapients_purge
+            }
+            FROM = {
+                has_policy_flag = pre_sapients_purge
+            }
+        }
+        modifier = {
+            add = 3
+            is_xenophobe = yes
+            NOT = {
+                has_policy_flag = pre_sapients_protect
+            }
+            FROM = {
+                OR = {
+                    has_policy_flag = pre_sapients_eat
+                    has_policy_flag = pre_sapients_purge
+                }
+            }
+        }
+        modifier = {
+            add = -3
+            is_xenophobe = yes
+            NOT = {
+                has_policy_flag = pre_sapients_protect
+            }
+            FROM = {
+                has_policy_flag = pre_sapients_protect
+            }
+        }
+    }
+}

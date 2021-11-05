@@ -1,0 +1,89 @@
+@activation_cost = 150
+@triumph_duration = 3600
+gpm_r_soul_gem = {
+    activation_duration = @triumph_duration
+    portrait = "GFX_gpm_r_soul_gem"
+    sound = "relic_activation_intact_zro_soulstone"
+    resources = {
+        category = relics
+        cost = {
+            influence = @activation_cost
+        }
+    }
+    ai_weight = {
+        weight = 0
+    }
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+        leader_age = 25
+    }
+    score = 1000
+    active_effect = {
+        custom_tooltip = "gpm_r_soul_gem_active_effect"
+        hidden_effect = {
+            random_list = {
+                10 = {
+                    create_leader = {
+                        class = admiral
+                        species = owner_main_species
+                        skill = 5
+                        name = random
+                        traits = {
+                            trait = leader_trait_gpm_shared_soul
+                        }
+                    }
+                }
+                10 = {
+                    create_leader = {
+                        class = general
+                        species = owner_main_species
+                        skill = 5
+                        name = random
+                        traits = {
+                            trait = leader_trait_gpm_shared_soul
+                        }
+                    }
+                }
+                10 = {
+                    create_leader = {
+                        class = governor
+                        species = owner_main_species
+                        skill = 5
+                        name = random
+                        traits = {
+                            trait = leader_trait_gpm_shared_soul
+                        }
+                    }
+                }
+                10 = {
+                    create_leader = {
+                        class = scientist
+                        species = owner_main_species
+                        skill = 5
+                        name = random
+                        traits = {
+                            trait = leader_trait_gpm_shared_soul
+                        }
+                    }
+                }
+            }
+        }
+        custom_tooltip = relic_triumph_cooldown
+        hidden_effect = {
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                days = @triumph_duration
+            }
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_relic_no_cooldown"
+            NOT = {
+                has_modifier = relic_activation_cooldown
+            }
+        }
+    }
+}

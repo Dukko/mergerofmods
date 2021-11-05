@@ -1,0 +1,8 @@
+opinion_first_contact_very_insulting = {
+    opinion = {
+        base = -50
+    }
+    decay = {
+        base = 1
+    }
+}

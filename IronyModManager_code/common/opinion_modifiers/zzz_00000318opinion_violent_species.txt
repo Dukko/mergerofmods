@@ -1,0 +1,15 @@
+opinion_violent_species = {
+    trigger = {
+        FROM = {
+            exists = ruler
+            ruler = {
+                species = {
+                    has_trait = "trait_additrait_violent"
+                }
+            }
+        }
+    }
+    opinion = {
+        base = -10
+    }
+}

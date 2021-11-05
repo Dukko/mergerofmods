@@ -1,0 +1,8 @@
+opinion_smear_campaign_deceived = {
+    opinion = {
+        base = -80
+    }
+    accumulative = yes
+    min = -400
+    decay = 1
+}

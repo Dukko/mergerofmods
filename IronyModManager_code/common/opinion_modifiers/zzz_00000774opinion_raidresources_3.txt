@@ -1,0 +1,26 @@
+opinion_raidresources_3 = {
+    opinion = {
+        base = 0
+        modifier = {
+            add = -1
+            NOR = {
+                has_ethic = "ethic_pacifist"
+                has_ethic = "ethic_fanatic_pacifist"
+            }
+            is_country_type = default
+        }
+        modifier = {
+            add = -2
+            OR = {
+                has_ethic = "ethic_pacifist"
+                has_ethic = "ethic_fanatic_pacifist"
+            }
+            is_country_type = default
+        }
+    }
+    min = -200
+    accumulative = yes
+    decay = {
+        base = 2
+    }
+}

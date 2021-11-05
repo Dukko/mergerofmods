@@ -1,0 +1,125 @@
+opinion_policy_refugee = {
+    trigger = {
+        is_country_type = default
+        NOT = {
+            has_ethic = ethic_gestalt_consciousness
+        }
+        FROM = {
+            is_country_type = default
+        }
+    }
+    opinion = {
+        base = 0
+        modifier = {
+            add = 10
+            has_ethic = ethic_fanatic_xenophile
+            NOT = {
+                has_policy_flag = refugees_not_allowed
+            }
+            FROM = {
+                has_policy_flag = refugees_allowed
+            }
+        }
+        modifier = {
+            add = 5
+            has_ethic = ethic_xenophile
+            NOT = {
+                has_policy_flag = refugees_not_allowed
+            }
+            FROM = {
+                has_policy_flag = refugees_allowed
+            }
+        }
+        modifier = {
+            add = -3
+            has_ethic = ethic_xenophile
+            has_policy_flag = refugees_allowed
+            FROM = {
+                has_policy_flag = refugees_not_allowed
+            }
+        }
+        modifier = {
+            add = -6
+            has_ethic = ethic_fanatic_xenophile
+            has_policy_flag = refugees_allowed
+            FROM = {
+                has_policy_flag = refugees_not_allowed
+            }
+        }
+        modifier = {
+            add = 5
+            is_egalitarian = yes
+            is_xenophobe = no
+            NOT = {
+                has_policy_flag = refugees_not_allowed
+            }
+            FROM = {
+                OR = {
+                    has_policy_flag = refugees_allowed
+                    has_policy_flag = refugees_only_citizens
+                }
+            }
+        }
+        modifier = {
+            add = 10
+            has_ethic = ethic_fanatic_pacifist
+            is_xenophobe = no
+            NOT = {
+                has_policy_flag = refugees_not_allowed
+            }
+            FROM = {
+                has_policy_flag = refugees_allowed
+            }
+        }
+        modifier = {
+            add = 5
+            has_ethic = ethic_pacifist
+            is_xenophobe = no
+            NOT = {
+                has_policy_flag = refugees_not_allowed
+            }
+            FROM = {
+                has_policy_flag = refugees_allowed
+            }
+        }
+        modifier = {
+            add = -5
+            is_pacifist = yes
+            is_xenophobe = no
+            has_policy_flag = refugees_allowed
+            FROM = {
+                has_policy_flag = refugees_not_allowed
+            }
+        }
+        modifier = {
+            add = 5
+            OR = {
+                has_policy_flag = purge_allowed
+                has_policy_flag = slavery_allowed
+            }
+            FROM = {
+                has_policy_flag = refugees_not_allowed
+            }
+        }
+        modifier = {
+            add = -5
+            has_policy_flag = slavery_allowed
+            FROM = {
+                OR = {
+                    has_policy_flag = refugees_allowed
+                    has_policy_flag = refugees_only_citizens
+                }
+            }
+        }
+        modifier = {
+            add = -10
+            has_policy_flag = purge_allowed
+            FROM = {
+                OR = {
+                    has_policy_flag = refugees_allowed
+                    has_policy_flag = refugees_only_citizens
+                }
+            }
+        }
+    }
+}

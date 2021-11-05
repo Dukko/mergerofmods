@@ -1,0 +1,70 @@
+opinion_is_slaving_despot = {
+    trigger = {
+        OR = {
+            is_country_type = default
+            has_ethic = ethic_fanatic_egalitarian
+            has_ethic = ethic_fanatic_xenophile
+        }
+        OR = {
+            is_country_type = default
+            is_country_type = ascended_empire
+            is_country_type = lost_empire
+        }
+        NOR = {
+            has_ai_personality = slaving_despots
+            has_valid_civic = "civic_indentured_assets"
+            has_valid_civic = "civic_slaver_guilds"
+            is_same_species = FROM
+        }
+        FROM = {
+            is_country_type = default
+            OR = {
+                has_ai_personality = slaving_despots
+                AND = {
+                    allows_slavery = yes
+                    has_valid_civic = "civic_indentured_assets"
+                    is_authoritarian = yes
+                    is_militarist = yes
+                }
+                AND = {
+                    is_ai = no
+                    allows_slavery = yes
+                    has_valid_civic = "civic_slaver_guilds"
+                    is_authoritarian = yes
+                    is_pacifist = no
+                }
+            }
+        }
+    }
+    opinion = {
+        base = -15
+        modifier = {
+            add = -10
+            has_ethic = ethic_egalitarian
+            NOT = {
+                has_policy_flag = slavery_allowed
+            }
+        }
+        modifier = {
+            add = -25
+            has_ethic = ethic_fanatic_egalitarian
+            NOT = {
+                has_policy_flag = slavery_allowed
+            }
+        }
+        modifier = {
+            add = -5
+            has_ethic = ethic_xenophile
+            NOT = {
+                has_policy_flag = slavery_allowed
+            }
+        }
+        modifier = {
+            add = -15
+            has_ethic = ethic_fanatic_xenophile
+            NOT = {
+                has_policy_flag = slavery_allowed
+            }
+        }
+    }
+}

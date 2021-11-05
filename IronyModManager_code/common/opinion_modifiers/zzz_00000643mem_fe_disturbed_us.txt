@@ -1,0 +1,8 @@
+mem_fe_disturbed_us = {
+    opinion = {
+        base = -25
+    }
+    decay = {
+        base = 2
+    }
+}

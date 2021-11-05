@@ -1,0 +1,9 @@
+ship_section_template = {
+    key = "primitive_space_station_section"
+    ship_size = primitive_space_station
+    fits_on_slot = mid
+    entity = "primitive_space_station_entity"
+    icon = "GFX_ship_part_core_mid"
+    small_utility_slots = 1
+    aux_utility_slots = 1
+}

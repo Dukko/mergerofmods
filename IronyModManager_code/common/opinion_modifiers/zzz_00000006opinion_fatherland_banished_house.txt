@@ -1,0 +1,5 @@
+opinion_fatherland_banished_house = {
+    opinion = {
+        base = -50
+    }
+}

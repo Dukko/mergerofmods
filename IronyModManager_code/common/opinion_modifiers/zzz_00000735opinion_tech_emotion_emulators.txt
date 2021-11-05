@@ -1,0 +1,20 @@
+opinion_tech_emotion_emulators = {
+    trigger = {
+        OR = {
+            is_country_type = default
+            is_country_type = ascended_empire
+            is_country_type = lost_empire
+        }
+        NOR = {
+            has_country_flag = synthetic_empire
+            has_authority = auth_machine_intelligence
+        }
+        FROM = {
+            has_authority = auth_machine_intelligence
+            has_technology = tech_emotion_emulators_2
+        }
+    }
+    opinion = {
+        base = 20
+    }
+}

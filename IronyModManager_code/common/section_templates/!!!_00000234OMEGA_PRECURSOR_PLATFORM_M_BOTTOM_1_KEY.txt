@@ -1,0 +1,45 @@
+ship_section_template = {
+    key = "OMEGA_PRECURSOR_PLATFORM_M_BOTTOM_1_KEY"
+    ship_size = precursor_platform_m
+    fits_on_slot = bottom
+    entity = "omega_acot_precursor_platform_m_invisible_entity"
+    icon = "GFX_ship_part_core_mid"
+    prerequisites = {
+        tech_precursor_construcor_omega
+    }
+    component_slot = {
+        name = "LARGE_GUN_01"
+        template = "invisible_large_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_02"
+        template = "invisible_large_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_03"
+        template = "invisible_large_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_04"
+        template = "invisible_large_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_05"
+        template = "invisible_large_turret"
+        locatorname = "medium_gun_01"
+    }
+    large_utility_slots = 5
+    aux_utility_slots = 2
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = 45
+            sr_dark_matter = 15
+            acot_sr_dark_energy = 15
+        }
+    }
+}

@@ -1,0 +1,8 @@
+mem_blacksite_breach = {
+    opinion = {
+        base = -10
+    }
+    decay = {
+        base = 1
+    }
+}

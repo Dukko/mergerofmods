@@ -1,0 +1,27 @@
+@triumph_duration = 3600
+gpm_r_mars_rover = {
+    activation_duration = @triumph_duration
+    portrait = "GFX_gpm_r_mars_rover"
+    sound = "relic_activation_the_surveyor"
+    resources = {
+        category = relics
+        cost = {
+            energy = 10
+        }
+    }
+    ai_weight = {
+        weight = 0
+    }
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+        country_base_unity_produces_add = 25
+    }
+    score = 1000
+    active_effect = {
+        custom_tooltip = gpm_r_mars_rover_active_tooltip
+    }
+    possible = {
+    }
+}

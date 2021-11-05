@@ -1,0 +1,208 @@
+orbital_bombardment = {
+    potential = {
+        OR = {
+            merg_is_default_empire = yes
+            is_country_type_with_subjects = yes
+            is_country_type = vol
+        }
+    }
+    option = {
+        name = "orbital_bombardment_selective"
+        policy_flags = {
+            orbital_bombardment_selective
+        }
+        potential = {
+            NAND = {
+                has_global_flag = prob_global_flag
+                prob_forced_armageddon_bombardment = yes
+            }
+        }
+        AI_weight = {
+            modifier = {
+                factor = 0
+                is_pacifist = no
+                NOR = {
+                    AND = {
+                        is_galactic_community_member = yes
+                        OR = {
+                            is_active_resolution = "resolution_rulesofwar_independent_tribunals"
+                            is_active_resolution = "resolution_rulesofwar_last_resort_doctrine"
+                            is_active_resolution = "resolution_rulesofwar_demobilization_initiative"
+                        }
+                    }
+                    has_ethic = "ethic_green"
+                    has_ethic = "ethic_fanatic_green"
+                }
+            }
+        }
+    }
+    option = {
+        name = "orbital_bombardment_indiscriminate"
+        in_breach_of = {
+             {
+                key = resolution_rulesofwar_independent_tribunals
+            }
+        }
+        potential = {
+            OR = {
+                NOT = {
+                    has_global_flag = prob_global_flag
+                }
+                AND = {
+                    has_global_flag = prob_global_flag
+                    prob_forced_armageddon_bombardment = no
+                    OR = {
+                        has_country_flag = prob_enable_indiscriminate_bombardment
+                        has_country_flag = prob_enable_full_bombardment
+                        has_country_flag = prob_enable_armageddon_bombardment
+                        has_tradition = tr_supremacy_finish
+                    }
+                }
+            }
+        }
+        policy_flags = {
+            orbital_bombardment_indiscriminate
+        }
+        modifier = {
+        }
+        valid = {
+            is_pacifist = no
+            NOR = {
+                has_valid_civic = "civic_xeno_militarist"
+                has_valid_civic = "civic_interventionalist"
+                has_valid_civic = "civic_interventionalist_corpo"
+                has_valid_civic = civic_mutualistic_behavior
+            }
+        }
+        AI_weight = {
+            modifier = {
+                factor = 0.1
+                is_galactic_community_member = yes
+                OR = {
+                    is_active_resolution = "resolution_galacticstudies_ethical_guideline_refactoring"
+                    is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+                }
+            }
+        }
+    }
+    option = {
+        name = "orbital_bombardment_full"
+        policy_flags = {
+            orbital_bombardment_indiscriminate
+            orbital_bombardment_full
+        }
+        potential = {
+            prob_forced_armageddon_bombardment = no
+            OR = {
+                has_country_flag = prob_enable_full_bombardment
+                has_country_flag = prob_enable_armageddon_bombardment
+                AND = {
+                    is_pacifist = no
+                    OR = {
+                        has_ethic = ethic_gestalt_consciousness
+                        is_militarist = yes
+                        is_xenophobe = yes
+                        has_tradition = tr_supremacy_finish
+                        AND = {
+                            has_ascension_perk = ap_become_the_crisis
+                            has_menace_perk = menp_death_from_above
+                        }
+                    }
+                }
+            }
+            has_global_flag = prob_global_flag
+        }
+        valid = {
+            is_pacifist = no
+        }
+        AI_weight = {
+            weight = 3
+            modifier = {
+                factor = 0.1
+                is_galactic_community_member = yes
+                OR = {
+                    is_active_resolution = "resolution_galacticstudies_ethical_guideline_refactoring"
+                    is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+                }
+            }
+        }
+    }
+    option = {
+        name = "orbital_bombardment_armageddon"
+        in_breach_of = {
+             {
+                key = resolution_rulesofwar_independent_tribunals
+            }
+        }
+        potential = {
+            OR = {
+                has_civic = civic_fanatic_purifiers
+                has_civic = civic_machine_terminator
+                is_country_type = ascended_empire
+                has_valid_civic = civic_bringers_of_death
+                AND = {
+                    has_global_flag = prob_global_flag
+                    OR = {
+                        has_country_flag = prob_enable_armageddon_bombardment
+                        prob_forced_armageddon_bombardment = yes
+                        AND = {
+                            has_ascension_perk = ap_become_the_crisis
+                            has_menace_perk = menp_death_from_above
+                        }
+                    }
+                }
+            }
+        }
+        policy_flags = {
+            orbital_bombardment_armageddon
+        }
+        modifier = {
+        }
+        AI_weight = {
+            modifier = {
+                factor = 10
+                OR = {
+                    has_civic = civic_fanatic_purifiers
+                    has_civic = civic_machine_terminator
+                    has_ascension_perk = ap_become_the_crisis
+                    has_valid_civic = civic_galactic_superpower
+                }
+            }
+            modifier = {
+                factor = 10
+                has_global_flag = prob_global_flag
+                prob_forced_armageddon_bombardment = yes
+            }
+        }
+    }
+    option = {
+        name = "orbital_bombardment_redtoxin"
+        in_breach_of = {
+             {
+                key = resolution_rulesofwar_independent_tribunals
+            }
+        }
+        potential = {
+            has_global_flag = gigastructures_enabled
+            OR = {
+                ehof_default_country = yes
+                is_country_type_with_subjects = yes
+                is_country_type = vol
+            }
+        }
+        prerequisites = {
+            tech_scourge_deployment
+        }
+        policy_flags = {
+            orbital_bombardment_redtoxin
+        }
+        valid = {
+            NOR = {
+                is_pacifist = yes
+                has_ethic = "ethic_green"
+                has_ethic = "ethic_fanatic_green"
+                has_valid_civic = "civic_xeno_militarist"
+            }
+        }
+    }
+}

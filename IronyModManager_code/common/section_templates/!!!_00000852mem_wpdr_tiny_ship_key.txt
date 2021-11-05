@@ -1,0 +1,13 @@
+ship_section_template = {
+    key = mem_wpdr_tiny_ship_key
+    entity = mem_wpdr_small_hull
+    icon = "GFX_ship_part_core_mid"
+    ship_size = mem_wpdr_tiny_ship
+    component_slot = {
+        name = EXTRA_LARGE_01
+        template = "invisible_extra_large_fixed"
+        locatorname = root
+    }
+    small_utility_slots = 3
+    aux_utility_slots = 1
+}

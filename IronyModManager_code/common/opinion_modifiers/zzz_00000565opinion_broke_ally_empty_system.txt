@@ -1,0 +1,8 @@
+opinion_broke_ally_empty_system = {
+    opinion = {
+        base = -50
+    }
+    decay = {
+        base = 1
+    }
+}

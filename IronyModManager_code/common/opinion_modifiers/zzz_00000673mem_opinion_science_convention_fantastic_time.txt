@@ -1,0 +1,8 @@
+mem_opinion_science_convention_fantastic_time = {
+    opinion = {
+        base = 25
+    }
+    decay = {
+        base = 1
+    }
+}

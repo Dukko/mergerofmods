@@ -1,0 +1,8 @@
+triggered_opinion_give_dm_with_assist_neighbour = {
+    opinion = {
+        base = 50
+    }
+    decay = {
+        base = 3
+    }
+}

@@ -1,0 +1,35 @@
+@adv_section_cost = 60
+ship_section_template = {
+    key = "CRUISER_STERN_PICKET"
+    ship_size = cruiser
+    fits_on_slot = stern
+    should_draw_components = yes
+    entity = "cruiser_stern_S2_entity"
+    icon = "GFX_ship_part_core_stern"
+    prerequisites = {
+        tech_cruiser_hull_1
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1
+        }
+    }
+    component_slot = {
+        name = "SMALL_GUN_01"
+        template = "point_defence_turret"
+        locatorname = "small_gun_01"
+    }
+    component_slot = {
+        name = "SMALL_GUN_02"
+        template = "point_defence_turret"
+        locatorname = "small_gun_02"
+    }
+    medium_utility_slots = 2
+    aux_utility_slots = 1
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @adv_section_cost
+        }
+    }
+}

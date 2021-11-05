@@ -1,0 +1,5 @@
+opinion_fatherland_free_prole = {
+    opinion = {
+        base = -200
+    }
+}

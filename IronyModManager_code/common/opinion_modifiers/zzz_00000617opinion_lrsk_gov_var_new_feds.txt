@@ -1,0 +1,5 @@
+opinion_lrsk_gov_var_new_feds = {
+    opinion = {
+        base = 80
+    }
+}

@@ -1,0 +1,13 @@
+terraform_link = {
+    from = "pc_continental"
+    to = "pc_nuked"
+    energy = 1000
+    duration = 2400
+    condition = {
+        has_technology = "tech_climate_restoration"
+        has_tradition = tr_plentiful_transformation_5
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

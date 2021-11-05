@@ -1,0 +1,69 @@
+ship_section_template = {
+    key = "ASTEROID_ARTILLERY_MID"
+    ship_size = asteroid_artillery
+    fits_on_slot = "mid"
+    entity = "giga_asteroid_artillery_core_entity"
+    icon = "GFX_ship_part_core_mid"
+    component_slot = {
+        name = "MEDIUM_GUN_01"
+        template = "giga_invisible_medium_fixed"
+        locatorname = "gun1"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_02"
+        template = "giga_invisible_medium_fixed"
+        locatorname = "gun2"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_03"
+        template = "giga_invisible_medium_fixed"
+        locatorname = "gun3"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_04"
+        template = "giga_invisible_medium_fixed"
+        locatorname = "gun4"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_05"
+        template = "giga_invisible_medium_fixed"
+        locatorname = "gun5"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_06"
+        template = "giga_invisible_medium_fixed"
+        locatorname = "gun6"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_07"
+        template = "giga_invisible_medium_fixed"
+        locatorname = "gun7"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_08"
+        template = "giga_invisible_medium_fixed"
+        locatorname = "gun8"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_09"
+        template = "giga_invisible_medium_fixed"
+        locatorname = "gun2"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_10"
+        template = "giga_invisible_medium_fixed"
+        locatorname = "gun3"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_11"
+        template = "giga_invisible_medium_fixed"
+        locatorname = "gun4"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_12"
+        template = "giga_invisible_medium_fixed"
+        locatorname = "gun5"
+    }
+    large_utility_slots = 6
+    aux_utility_slots = 1
+}

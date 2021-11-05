@@ -1,0 +1,6 @@
+opinion_friction = {
+    opinion = {
+        base = -3
+    }
+    unique = yes
+}

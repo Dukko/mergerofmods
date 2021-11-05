@@ -1,0 +1,35 @@
+@eac_medium_utility_slots = 6
+@eac_aux_ulility_slots = 2
+@section_cost = 40
+ship_section_template = {
+    key = "EAC_HEAVY_MILITARY_STATION_SECTION"
+    ship_size = eac_military_station_heavy_small
+    ship_size = military_station_medium
+    fits_on_slot = "north"
+    fits_on_slot = "west"
+    fits_on_slot = "east"
+    fits_on_slot = "south"
+    entity = "eac_military_station_section_heavy_entity"
+    icon = "GFX_ship_part_core_mid"
+    component_slot = {
+        name = "LARGE_GUN_01"
+        template = "large_turret"
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_02"
+        template = "large_turret"
+        locatorname = "eac_underside_large_turret"
+    }
+    medium_utility_slots = @eac_medium_utility_slots
+    aux_utility_slots = @eac_aux_ulility_slots
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @section_cost
+        }
+    }
+    ai_weight = {
+        factor = 1
+    }
+}

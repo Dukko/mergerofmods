@@ -1,0 +1,5 @@
+opinion_fatherland_liberated_biotrophy = {
+    opinion = {
+        base = -1000
+    }
+}

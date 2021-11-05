@@ -1,0 +1,15 @@
+opinion_est_benevolence_3 = {
+    trigger = {
+        from = {
+            has_active_tradition = tr_est_benevolence_3
+        }
+        root = {
+            Not = {
+                is_country_type = fallen_empire
+            }
+        }
+    }
+    opinion = {
+        base = 30
+    }
+}

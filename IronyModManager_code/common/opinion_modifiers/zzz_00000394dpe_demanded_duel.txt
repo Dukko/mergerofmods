@@ -1,0 +1,8 @@
+dpe_demanded_duel = {
+    opinion = {
+        base = -20
+    }
+    decay = {
+        base = 3
+    }
+}

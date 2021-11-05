@@ -1,0 +1,47 @@
+@activation_cost = 1500
+@triumph_duration = 3600
+@triumph_duration_veryshort = 900
+r_ehof_war_forge = {
+    activation_duration = @triumph_duration
+    portrait = "GFX_relic_war_forge"
+    sound = "relic_activation_cybrex_war_forge"
+    score = 0
+    resources = {
+        category = relics
+        cost = {
+            ehof_sr_negative_mass = @activation_cost
+            minerals = 10000
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_relic_no_cooldown"
+            NOT = {
+                has_modifier = relic_activation_cooldown
+            }
+        }
+    }
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+        country_alloys_produces_mult = 0.05
+        show_only_custom_tooltip = no
+        custom_tooltip = relic_cybrex_passive
+    }
+    active_effect = {
+        custom_tooltip = relic_cybrex_active
+        custom_tooltip = "relic_triumph_cooldown_veryshort"
+        hidden_effect = {
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                days = @triumph_duration_veryshort
+            }
+            add_resource = {
+                alloys = 5000
+            }
+            remove_country_flag = ehof_has_war_forge
+            remove_relic = r_ehof_war_forge
+        }
+    }
+}

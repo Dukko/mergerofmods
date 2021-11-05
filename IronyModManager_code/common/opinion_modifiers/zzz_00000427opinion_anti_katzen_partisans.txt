@@ -1,0 +1,5 @@
+opinion_anti_katzen_partisans = {
+    opinion = {
+        base = 50
+    }
+}

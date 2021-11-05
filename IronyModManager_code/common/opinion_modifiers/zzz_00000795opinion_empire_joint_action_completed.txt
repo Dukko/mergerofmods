@@ -1,0 +1,8 @@
+opinion_empire_joint_action_completed = {
+    opinion = {
+        base = 10
+    }
+    decay = {
+        base = 2
+    }
+}

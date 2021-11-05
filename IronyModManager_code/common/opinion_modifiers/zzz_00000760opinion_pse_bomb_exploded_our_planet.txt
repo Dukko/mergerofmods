@@ -1,0 +1,10 @@
+opinion_pse_bomb_exploded_our_planet = {
+    opinion = {
+        base = -50
+    }
+    decay = {
+        base = 5
+    }
+    min = -500
+    accumulative = yes
+}

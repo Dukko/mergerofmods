@@ -1,0 +1,9 @@
+opinion_broke_barren_rock = {
+    opinion = {
+        base = -10
+        modifier = {
+            add = 10
+            is_country_type = fallen_empire
+        }
+    }
+}

@@ -1,0 +1,8 @@
+opinion_refused_justice = {
+    opinion = {
+        base = -20
+    }
+    decay = {
+        base = 5
+    }
+}

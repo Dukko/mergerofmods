@@ -1,0 +1,9 @@
+opinion_was_in_trade = {
+    opinion = {
+        base = -1
+    }
+    min = -200
+    decay = {
+        base = 2
+    }
+}

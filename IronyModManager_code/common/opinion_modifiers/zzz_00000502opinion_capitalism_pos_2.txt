@@ -1,0 +1,15 @@
+opinion_capitalism_pos_2 = {
+    trigger = {
+        OR = {
+            has_ethic = "ethic_capitalism"
+        }
+        from = {
+            OR = {
+                has_ethic = "ethic_fanatic_capitalism"
+            }
+        }
+    }
+    opinion = {
+        base = 10
+    }
+}

@@ -1,0 +1,9 @@
+opinion_plentiful_deeds = {
+    opinion = {
+        base = 30
+    }
+    unique = yes
+    decay = {
+        base = 3
+    }
+}

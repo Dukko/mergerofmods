@@ -1,0 +1,8 @@
+opinion_destroyed_ps_pacifist = {
+    opinion = {
+        base = -15
+    }
+    decay = {
+        base = 2
+    }
+}

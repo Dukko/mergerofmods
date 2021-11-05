@@ -114,5 +114,15 @@ ap_become_the_crisis = {
                 }
             }
         }
+        modifier = {
+            factor = 0
+            count_country = {
+                count > 1
+                limit = {
+                    has_ascension_perk = ap_become_the_crisis
+                }
+            }
+            num_ascension_perks < 4
+        }
     }
 }

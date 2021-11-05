@@ -1,0 +1,8 @@
+opinion_helped_us_revolt_from_katzen = {
+    opinion = {
+        base = 150
+    }
+    decay = {
+        base = -1
+    }
+}

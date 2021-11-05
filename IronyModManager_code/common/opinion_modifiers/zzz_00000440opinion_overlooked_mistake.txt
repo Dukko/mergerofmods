@@ -1,0 +1,8 @@
+opinion_overlooked_mistake = {
+    opinion = {
+        base = 20
+    }
+    decay = {
+        base = 5
+    }
+}

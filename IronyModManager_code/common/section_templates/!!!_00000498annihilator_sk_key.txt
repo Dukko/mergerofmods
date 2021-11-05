@@ -1,0 +1,9 @@
+ship_section_template = {
+    key = "annihilator_sk_key"
+    ship_size = annihilator_sk
+    fits_on_slot = mid
+    should_draw_components = no
+    entity = "creators_01_annihilator_core_mesh"
+    icon = "GFX_ship_part_core_mid"
+    large_utility_slots = 50
+}

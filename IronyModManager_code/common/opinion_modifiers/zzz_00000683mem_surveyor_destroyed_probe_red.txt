@@ -1,0 +1,8 @@
+mem_surveyor_destroyed_probe_red = {
+    opinion = {
+        base = 50
+    }
+    decay = {
+        base = 1
+    }
+}

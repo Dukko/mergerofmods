@@ -1,0 +1,31 @@
+opinion_ex_data_liberators_civic = {
+    trigger = {
+        FROM = {
+            has_valid_civic = civic_data_liberators
+        }
+    }
+    opinion = {
+        base = -20
+        modifier = {
+            add = -25
+            OR = {
+                has_authority = auth_corporate
+            }
+        }
+        modifier = {
+            add = 60
+            OR = {
+                has_valid_civic = civic_data_liberators
+            }
+        }
+        modifier = {
+            add = -25
+            OR = {
+                has_ethic = "ethic_authoritarian"
+                has_ethic = "ethic_fanatic_authoritarian"
+                has_ethic = "ethic_xenophobe"
+                has_ethic = "ethic_fanatic_xenophobe"
+            }
+        }
+    }
+}

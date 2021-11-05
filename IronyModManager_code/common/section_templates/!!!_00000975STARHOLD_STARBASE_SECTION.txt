@@ -1,0 +1,77 @@
+ship_section_template = {
+    key = "STARHOLD_STARBASE_SECTION"
+    ship_size = starbase_starhold
+    fits_on_slot = "core"
+    entity = "starbase_starhold_section_entity"
+    icon = "GFX_ship_part_core_mid"
+    component_slot = {
+        name = "SMALL_GUN_01"
+        template = "point_defence_turret"
+        locatorname = "small_gun_01"
+    }
+    component_slot = {
+        name = "SMALL_GUN_02"
+        template = "point_defence_turret"
+        locatorname = "small_gun_02"
+    }
+    component_slot = {
+        name = "SMALL_GUN_03"
+        template = "point_defence_turret"
+        locatorname = "small_gun_03"
+    }
+    component_slot = {
+        name = "SMALL_GUN_04"
+        template = "point_defence_turret"
+        locatorname = "small_gun_04"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_01"
+        template = "large_strike_craft"
+        rotation = 90
+        locatorname = "strike_craft_locator_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_01"
+        template = "medium_missile_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_02"
+        template = "medium_turret"
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_03"
+        template = "medium_turret"
+        locatorname = "medium_gun_03"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_04"
+        template = "medium_turret"
+        locatorname = "medium_gun_04"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_05"
+        template = "medium_turret"
+        locatorname = "medium_gun_05"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_06"
+        template = "medium_turret"
+        locatorname = "medium_gun_06"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_07"
+        template = "medium_missile_turret"
+        locatorname = "medium_gun_07"
+    }
+    component_slot = {
+        name = "LARGE_GUN_01"
+        template = "large_turret"
+        locatorname = "large_gun_01"
+    }
+    small_utility_slots = 0
+    medium_utility_slots = 0
+    large_utility_slots = 12
+    aux_utility_slots = 1
+}

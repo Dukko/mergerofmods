@@ -1,0 +1,14 @@
+triggered_opinion_eap_universal_transactions = {
+    trigger = {
+        exists = overlord
+        overlord = {
+            is_same_value = FROM
+        }
+        FROM = {
+            has_ascension_perk = eap_universal_transactions
+        }
+    }
+    opinion = {
+        base = 200
+    }
+}

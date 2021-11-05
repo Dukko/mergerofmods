@@ -1,0 +1,5 @@
+opinion_fatherland_holy_land = {
+    opinion = {
+        base = 40
+    }
+}

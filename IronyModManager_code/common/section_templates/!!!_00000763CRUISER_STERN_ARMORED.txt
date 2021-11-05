@@ -1,0 +1,25 @@
+@adv_section_cost = 60
+ship_section_template = {
+    key = "CRUISER_STERN_ARMORED"
+    ship_size = cruiser
+    fits_on_slot = stern
+    should_draw_components = yes
+    entity = "cruiser_stern_M1_entity"
+    icon = "GFX_ship_part_core_stern"
+    prerequisites = {
+        tech_cruiser_hull_1
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1
+        }
+    }
+    medium_utility_slots = 2
+    aux_utility_slots = 2
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @adv_section_cost
+        }
+    }
+}

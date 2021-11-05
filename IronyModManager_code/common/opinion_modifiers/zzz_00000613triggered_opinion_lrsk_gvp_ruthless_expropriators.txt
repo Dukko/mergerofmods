@@ -1,0 +1,18 @@
+triggered_opinion_lrsk_gvp_ruthless_expropriators = {
+    trigger = {
+        OR = {
+            has_authority = auth_corporate
+            has_valid_civic = civic_merchant_guilds
+        }
+        from = {
+            has_valid_civic = lrsk_gov_var_civic_institutionalized_collectivism
+        }
+    }
+    opinion = {
+        base = -20
+        modifier = {
+            add = -20
+            has_authority = auth_corporate
+        }
+    }
+}

@@ -1,0 +1,39 @@
+opinion_betrayed_trust = {
+    opinion = {
+        base = -40
+        modifier = {
+            add = 5
+            has_ethic = ethic_xenophile
+        }
+        modifier = {
+            add = 10
+            has_ethic = ethic_fanatic_xenophobe
+        }
+        modifier = {
+            add = 5
+            has_ethic = ethic_pacifist
+        }
+        modifier = {
+            add = 10
+            has_ethic = ethic_fanatic_pacifist
+        }
+        modifier = {
+            add = -5
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            add = -10
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            add = -10
+            OR = {
+                is_xenophile = yes
+                is_xenophobic_isolationists = yes
+            }
+        }
+    }
+    decay = {
+        base = 1
+    }
+}

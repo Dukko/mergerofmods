@@ -1,0 +1,10 @@
+triggered_opinion_ex_scorched_earth_policy = {
+    trigger = {
+        FROM = {
+            has_policy_flag = ex_scorched_earth
+        }
+    }
+    opinion = {
+        base = -50
+    }
+}

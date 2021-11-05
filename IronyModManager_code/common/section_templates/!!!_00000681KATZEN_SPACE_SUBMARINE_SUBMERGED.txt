@@ -1,0 +1,9 @@
+ship_section_template = {
+    key = "KATZEN_SPACE_SUBMARINE_SUBMERGED"
+    ship_size = giga_katzen_submarine_submerged
+    fits_on_slot = "mid"
+    entity = "giga_katzen_submarine_submerged_entity"
+    icon = "GFX_ship_part_core_mid"
+    large_utility_slots = 0
+    aux_utility_slots = 0
+}

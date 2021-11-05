@@ -1,0 +1,14 @@
+triggered_opinion_lrsk_gvp_corporate_nightmare = {
+    trigger = {
+        has_valid_civic = lrsk_gov_var_civic_workers_councils
+        from = {
+            has_authority = auth_corporate
+            NOT = {
+                has_valid_civic = lrsk_gov_var_civic_mc_workers_councils
+            }
+        }
+    }
+    opinion = {
+        base = -20
+    }
+}

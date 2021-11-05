@@ -1,0 +1,74 @@
+ship_section_template = {
+    key = "ed_large_titan_key"
+    ship_size = titan_ship_ed
+    fits_on_slot = mid
+    entity = "extra_dimensional_01_warship_titan_entity"
+    icon = "GFX_ship_part_core_mid"
+    component_slot = {
+        name = "TITANIC_01"
+        template = "invisible_titanic_fixed"
+        locatorname = "large_gun_02"
+        is_side_slot = yes
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_GUN_01"
+        template = "invisible_extra_large_fixed"
+        locatorname = "large_gun_02"
+        is_side_slot = yes
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_GUN_02"
+        template = "invisible_extra_large_fixed"
+        locatorname = "large_gun_03"
+        is_side_slot = yes
+    }
+    component_slot = {
+        name = "LARGE_GUN_01"
+        template = "large_turret"
+        locatorname = "large_gun_01"
+        is_side_slot = yes
+    }
+    component_slot = {
+        name = "LARGE_GUN_02"
+        template = "large_turret"
+        locatorname = "large_gun_02"
+        is_side_slot = yes
+    }
+    component_slot = {
+        name = "LARGE_GUN_03"
+        template = "large_turret"
+        locatorname = "large_gun_03"
+        is_side_slot = yes
+    }
+    component_slot = {
+        name = "LARGE_GUN_04"
+        template = "large_turret"
+        locatorname = "large_gun_01"
+        is_side_slot = yes
+    }
+    component_slot = {
+        name = "LARGE_GUN_05"
+        template = "large_turret"
+        locatorname = "large_gun_02"
+        is_side_slot = yes
+    }
+    component_slot = {
+        name = "LARGE_GUN_06"
+        template = "large_turret"
+        locatorname = "large_gun_03"
+        is_side_slot = yes
+    }
+    component_slot = {
+        name = "PD_01"
+        template = "point_defence_turret"
+        locatorname = "large_gun_02"
+        is_side_slot = yes
+    }
+    component_slot = {
+        name = "PD_02"
+        template = "point_defence_turret"
+        locatorname = "large_gun_03"
+        is_side_slot = yes
+    }
+    large_utility_slots = 12
+}

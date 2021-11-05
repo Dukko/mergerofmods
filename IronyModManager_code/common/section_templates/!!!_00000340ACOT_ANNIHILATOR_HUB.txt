@@ -1,0 +1,75 @@
+ship_section_template = {
+    key = "ACOT_ANNIHILATOR_HUB"
+    ship_size = acot_star_annihilator
+    fits_on_slot = hub
+    should_draw_components = yes
+    entity = "acot_star_annihilator_starbase_citadel_section_entity"
+    icon = "GFX_ship_part_core_mid"
+    component_slot = {
+        name = "MEDIUM_GUN_01"
+        template = "extra_large_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_02"
+        template = "large_turret"
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_03"
+        template = "large_turret"
+        locatorname = "medium_gun_03"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_04"
+        template = "large_turret"
+        locatorname = "medium_gun_04"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_05"
+        template = "large_turret"
+        locatorname = "medium_gun_05"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_06"
+        template = "large_turret"
+        locatorname = "medium_gun_06"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_07"
+        template = "large_turret"
+        locatorname = "medium_gun_07"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_08"
+        template = "large_turret"
+        locatorname = "medium_gun_08"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_09"
+        template = "large_turret"
+        locatorname = "medium_gun_09"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_010"
+        template = "large_turret"
+        locatorname = "medium_gun_010"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_011"
+        template = "large_turret"
+        locatorname = "medium_gun_011"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_012"
+        template = "large_turret"
+        locatorname = "medium_gun_012"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_013"
+        template = "large_turret"
+        locatorname = "medium_gun_013"
+    }
+    large_utility_slots = 10
+    aux_utility_slots = 8
+}

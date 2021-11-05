@@ -1,0 +1,12 @@
+opinion_broke_empty_planet = {
+    opinion = {
+        base = -50
+        modifier = {
+            add = 45
+            is_country_type = fallen_empire
+        }
+    }
+    decay = {
+        base = 1
+    }
+}

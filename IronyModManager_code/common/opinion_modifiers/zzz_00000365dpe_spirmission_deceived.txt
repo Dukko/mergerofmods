@@ -1,0 +1,9 @@
+dpe_spirmission_deceived = {
+    opinion = {
+        base = -30
+    }
+    accumulative = no
+    decay = {
+        base = 2
+    }
+}

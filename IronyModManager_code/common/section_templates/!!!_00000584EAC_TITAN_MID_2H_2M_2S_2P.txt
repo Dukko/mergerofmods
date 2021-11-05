@@ -1,0 +1,58 @@
+@section_cost = 160
+ship_section_template = {
+    key = "EAC_TITAN_MID_2H_2M_2S_2P"
+    ship_size = titan
+    fits_on_slot = mid
+    should_draw_components = yes
+    entity = "titan_mid_entity"
+    icon = "GFX_ship_part_core_mid"
+    component_slot = {
+        name = "MEDIUM_GUN_01"
+        template = "medium_turret"
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_02"
+        template = "medium_turret"
+        locatorname = "large_gun_02"
+    }
+    component_slot = {
+        name = "SMALL_GUN_01"
+        template = "invisible_small_turret"
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "SMALL_GUN_02"
+        template = "invisible_small_turret"
+        locatorname = "large_gun_02"
+    }
+    component_slot = {
+        name = "PD_01"
+        template = "point_defence_turret"
+        locatorname = "large_gun_03"
+    }
+    component_slot = {
+        name = "PD_02"
+        template = "point_defence_turret"
+        locatorname = "large_gun_04"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_01"
+        template = "large_strike_craft"
+        rotation = 45
+        locatorname = "large_gun_03"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_02"
+        template = "large_strike_craft"
+        rotation = -45
+        locatorname = "large_gun_04"
+    }
+    large_utility_slots = 6
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @section_cost
+        }
+    }
+}

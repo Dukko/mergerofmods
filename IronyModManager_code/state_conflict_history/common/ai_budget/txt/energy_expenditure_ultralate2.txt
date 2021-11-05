@@ -1,0 +1,12 @@
+energy_expenditure_ultralate2 = {
+    resource = energy
+    type = upkeep
+    category = country
+    potential = {
+        years_passed > 150
+        has_country_flag = fallback_is_needed
+    }
+    fraction = {
+        weight = 0.4
+    }
+}

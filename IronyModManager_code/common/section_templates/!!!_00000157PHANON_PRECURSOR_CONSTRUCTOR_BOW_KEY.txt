@@ -1,0 +1,23 @@
+ship_section_template = {
+    key = "PHANON_PRECURSOR_CONSTRUCTOR_BOW_KEY"
+    ship_size = precursor_constructor
+    fits_on_slot = bow
+    should_draw_components = yes
+    entity = "phanon_precursor_constructor_bow_entity"
+    icon = "GFX_ship_part_core_mid"
+    component_slot = {
+        name = "MEDIUM_GUN_01"
+        template = "invisible_medium_turret"
+        locatorname = "large_gun_01"
+    }
+    large_utility_slots = 12
+    prerequisites = {
+        tech_precursor_phanon_design
+    }
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = 240
+        }
+    }
+}

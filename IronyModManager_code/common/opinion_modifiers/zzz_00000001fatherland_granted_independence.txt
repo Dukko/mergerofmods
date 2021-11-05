@@ -1,0 +1,5 @@
+fatherland_granted_independence = {
+    opinion = {
+        base = 100
+    }
+}

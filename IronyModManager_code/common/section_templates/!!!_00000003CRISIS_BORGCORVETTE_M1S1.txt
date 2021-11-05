@@ -1,0 +1,23 @@
+ship_section_template = {
+    key = "CRISIS_BORGCORVETTE_M1S1"
+    ship_size = crisis_corvette
+    fits_on_slot = mid
+    should_draw_components = yes
+    entity = "theborg_01_corvette_M1S1_entity"
+    icon = "GFX_ship_part_core_mid"
+    prerequisites = {
+        tech_borg_crisis
+    }
+    component_slot = {
+        name = "SMALL_GUN_01"
+        template = "small_turret"
+        locatorname = "small_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_01"
+        template = "medium_turret"
+        locatorname = "medium_gun_01"
+    }
+    small_utility_slots = 3
+    aux_utility_slots = 2
+}

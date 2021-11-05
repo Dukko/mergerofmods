@@ -1,0 +1,21 @@
+triggered_opinion_lrsk_gvp_fledgling_comrades = {
+    trigger = {
+        has_valid_civic = civic_shared_burden
+        from = {
+            OR = {
+                has_valid_civic = lrsk_gov_var_civic_workers_councils
+                has_valid_civic = lrsk_gov_var_civic_institutionalized_collectivism
+            }
+        }
+    }
+    opinion = {
+        base = 10
+        modifier = {
+            add = 5
+            from = {
+                has_valid_civic = lrsk_gov_var_civic_workers_councils
+                has_valid_civic = lrsk_gov_var_civic_institutionalized_collectivism
+            }
+        }
+    }
+}

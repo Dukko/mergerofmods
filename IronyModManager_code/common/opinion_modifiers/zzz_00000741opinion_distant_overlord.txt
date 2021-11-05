@@ -1,0 +1,39 @@
+opinion_distant_overlord = {
+    trigger = {
+        OR = {
+            is_country_type = default
+            is_country_type = ascended_empire
+            is_country_type = lost_empire
+        }
+        NOT = {
+            any_neighbor_country = {
+                is_same_value = FROM
+            }
+        }
+        exists = overlord
+        overlord = {
+            is_same_value = FROM
+        }
+    }
+    opinion = {
+        base = -10
+        modifier = {
+            add = -5
+            has_ethic = ethic_xenophobe
+        }
+        modifier = {
+            add = -10
+            has_ethic = ethic_fanatic_xenophobe
+        }
+        modifier = {
+            add = -10
+            NOT = {
+                any_neighbor_country = {
+                    any_neighbor_country = {
+                        is_same_value = FROM
+                    }
+                }
+            }
+        }
+    }
+}

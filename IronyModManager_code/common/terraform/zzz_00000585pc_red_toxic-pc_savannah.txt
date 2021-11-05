@@ -1,0 +1,21 @@
+terraform_link = {
+    from = pc_red_toxic
+    to = pc_savannah
+    energy = 5000
+    duration = 3600
+    ai_weight = {
+        weight = 5
+        modifier = {
+            factor = 2
+            ideal_planet_class = pc_savannah
+        }
+    }
+    condition = {
+        has_technology = tech_climate_restoration
+    }
+    effect = {
+        from = {
+            remove_modifier = ehof_red_toxic_world
+        }
+    }
+}

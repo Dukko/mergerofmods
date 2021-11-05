@@ -1,0 +1,158 @@
+opinion_policy_AI = {
+    trigger = {
+        is_country_type = default
+        NOR = {
+            has_country_flag = synthetic_empire
+            has_authority = auth_machine_intelligence
+        }
+        FROM = {
+            is_country_type = default
+        }
+    }
+    opinion = {
+        base = 0
+        modifier = {
+            add = 10
+            has_ethic = ethic_fanatic_materialist
+            OR = {
+                AND = {
+                    is_xenophobe = no
+                    is_authoritarian = no
+                }
+                has_policy_flag = ai_full_rights
+            }
+            FROM = {
+                has_policy_flag = ai_full_rights
+            }
+        }
+        modifier = {
+            add = 5
+            has_ethic = ethic_materialist
+            OR = {
+                AND = {
+                    is_xenophobe = no
+                    is_authoritarian = no
+                }
+                has_policy_flag = ai_full_rights
+            }
+            FROM = {
+                has_policy_flag = ai_full_rights
+            }
+        }
+        modifier = {
+            add = 5
+            is_materialist = yes
+            OR = {
+                is_xenophobe = yes
+                is_authoritarian = yes
+            }
+            FROM = {
+                has_policy_flag = ai_servitude
+            }
+        }
+        modifier = {
+            add = -5
+            has_ethic = ethic_materialist
+            is_xenophobe = no
+            is_authoritarian = no
+            OR = {
+                is_egalitarian = yes
+                is_xenophile = yes
+            }
+            NOR = {
+                has_policy_flag = ai_servitude
+                is_active_resolution = resolution_divinity_a_defined_purpose
+            }
+            FROM = {
+                has_policy_flag = ai_servitude
+            }
+        }
+        modifier = {
+            add = -5
+            has_ethic = ethic_materialist
+            FROM = {
+                has_policy_flag = ai_outlawed
+            }
+        }
+        modifier = {
+            add = -10
+            has_ethic = ethic_fanatic_materialist
+            FROM = {
+                has_policy_flag = ai_outlawed
+            }
+        }
+        modifier = {
+            add = 5
+            is_materialist = no
+            is_xenophobe = no
+            is_authoritarian = no
+            OR = {
+                is_egalitarian = yes
+                is_xenophile = yes
+            }
+            has_policy_flag = ai_full_rights
+            FROM = {
+                has_policy_flag = ai_full_rights
+            }
+        }
+        modifier = {
+            add = -5
+            is_materialist = no
+            is_xenophobe = no
+            is_authoritarian = no
+            OR = {
+                is_egalitarian = yes
+                is_xenophile = yes
+            }
+            has_policy_flag = ai_full_rights
+            NOT = {
+                is_active_resolution = resolution_divinity_a_defined_purpose
+            }
+            FROM = {
+                has_policy_flag = ai_servitude
+            }
+        }
+        modifier = {
+            add = 10
+            has_ethic = ethic_fanatic_spiritualist
+            FROM = {
+                has_policy_flag = ai_outlawed
+            }
+        }
+        modifier = {
+            add = 5
+            has_ethic = ethic_spiritualist
+            FROM = {
+                has_policy_flag = ai_outlawed
+            }
+        }
+        modifier = {
+            add = -5
+            has_ethic = ethic_spiritualist
+            FROM = {
+                has_policy_flag = ai_full_rights
+            }
+        }
+        modifier = {
+            add = -10
+            has_ethic = ethic_fanatic_spiritualist
+            FROM = {
+                has_policy_flag = ai_full_rights
+            }
+        }
+        modifier = {
+            add = 5
+            OR = {
+                has_ethic = ethic_spiritualist
+                has_ethic = ethic_fanatic_spiritualist
+            }
+            OR = {
+                is_megacorp = yes
+                has_valid_civic = civic_corporate_dominion
+            }
+            FROM = {
+                has_policy_flag = ai_full_rights
+            }
+        }
+    }
+}

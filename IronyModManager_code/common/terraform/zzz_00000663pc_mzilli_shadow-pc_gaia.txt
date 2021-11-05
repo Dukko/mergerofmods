@@ -1,0 +1,37 @@
+@gaiaCost = 7500
+@gaiaTime = 3600
+terraform_link = {
+    to = "pc_gaia"
+    from = "pc_mzilli_shadow"
+    energy = @gaiaCost
+    duration = @gaiaTime
+    potential = {
+        has_ascension_perk = "ap_world_shaper"
+    }
+    effect = {
+        from = {
+            set_planet_entity = {
+                entity = "shadow_world_01_entity"
+                picture = "pc_mzilli_shadow"
+            }
+        }
+    }
+    ai_weight = {
+        weight = 1
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = energy
+                value < 40000
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = auth_machine_intelligence
+            }
+        }
+    }
+}

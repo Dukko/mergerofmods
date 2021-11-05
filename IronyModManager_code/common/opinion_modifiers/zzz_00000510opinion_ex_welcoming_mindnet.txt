@@ -1,0 +1,10 @@
+opinion_ex_welcoming_mindnet = {
+    trigger = {
+        FROM = {
+            has_policy_flag = ex_welcoming_mindnet
+        }
+    }
+    opinion = {
+        base = 25
+    }
+}

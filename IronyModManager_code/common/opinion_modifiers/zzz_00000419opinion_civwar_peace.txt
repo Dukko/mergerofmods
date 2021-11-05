@@ -1,0 +1,8 @@
+opinion_civwar_peace = {
+    opinion = {
+        base = -300
+    }
+    decay = {
+        base = 2
+    }
+}

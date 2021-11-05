@@ -1,9 +1,0 @@
-influence = {
-    max = 2500
-    tooltip_decimals = 1
-    fixed_max_amount = yes
-    deficit_modifier = influence_deficit
-    ai_weight = {
-        weight = 1
-    }
-}

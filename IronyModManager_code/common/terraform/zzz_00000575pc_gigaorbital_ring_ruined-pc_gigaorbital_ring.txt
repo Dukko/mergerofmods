@@ -1,0 +1,20 @@
+terraform_link = {
+    from = "pc_gigaorbital_ring_ruined"
+    to = "pc_gigaorbital_ring"
+    energy = 10000
+    duration = 3600
+    condition = {
+        has_technology = "tech_mega_engineering"
+    }
+    ai_weight = {
+        weight = 100
+    }
+    effect = {
+        from = {
+            add_modifier = {
+                modifier = "orbital_elysium"
+                days = -1
+            }
+        }
+    }
+}

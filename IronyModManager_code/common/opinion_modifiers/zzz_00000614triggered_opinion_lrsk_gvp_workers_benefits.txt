@@ -1,0 +1,39 @@
+triggered_opinion_lrsk_gvp_workers_benefits = {
+    trigger = {
+        OR = {
+            AND = {
+                OR = {
+                    AND = {
+                        has_authority = auth_corporate
+                        has_valid_civic = lrsk_gov_var_civic_mc_workers_councils
+                    }
+                    AND = {
+                        has_valid_civic = lrsk_gov_var_civic_workers_councils
+                        has_valid_civic = civic_merchant_guilds
+                    }
+                }
+                from = {
+                    has_valid_civic = lrsk_gov_var_civic_institutionalized_collectivism
+                }
+            }
+            AND = {
+                has_valid_civic = lrsk_gov_var_civic_institutionalized_collectivism
+                from = {
+                    OR = {
+                        AND = {
+                            has_authority = auth_corporate
+                            has_valid_civic = lrsk_gov_var_civic_mc_workers_councils
+                        }
+                        AND = {
+                            has_valid_civic = lrsk_gov_var_civic_workers_councils
+                            has_valid_civic = civic_merchant_guilds
+                        }
+                    }
+                }
+            }
+        }
+    }
+    opinion = {
+        base = 10
+    }
+}

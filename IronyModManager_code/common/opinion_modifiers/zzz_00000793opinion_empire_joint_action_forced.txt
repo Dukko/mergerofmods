@@ -1,0 +1,8 @@
+opinion_empire_joint_action_forced = {
+    opinion = {
+        base = -60
+    }
+    decay = {
+        base = 2
+    }
+}

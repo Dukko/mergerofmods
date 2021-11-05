@@ -1,0 +1,10 @@
+triggered_opinion_tr_plentiful_aspiration_3 = {
+    trigger = {
+        FROM = {
+            has_tradition = tr_plentiful_aspiration_1
+        }
+    }
+    opinion = {
+        base = 20
+    }
+}

@@ -1,0 +1,40 @@
+purging_our_pops = {
+    trigger = {
+        has_intel_level = {
+            who = FROM
+            category = economy
+            level >= 1
+        }
+        FROM = {
+            any_owned_pop = {
+                has_citizenship_type = {
+                    type = citizenship_purge
+                    country = from
+                }
+                NOT = {
+                    has_purge_type = {
+                        type = purge_displacement
+                        country = from
+                    }
+                }
+                has_citizenship_type = {
+                    type = citizenship_full
+                    country = prevprev
+                }
+            }
+        }
+    }
+    opinion = {
+        base = -100
+        modifier = {
+            add = -25
+            OR = {
+                has_ethic = ethic_xenophobe
+                has_ethic = ethic_fanatic_xenophobe
+            }
+            NOT = {
+                is_same_species = FROM
+            }
+        }
+    }
+}

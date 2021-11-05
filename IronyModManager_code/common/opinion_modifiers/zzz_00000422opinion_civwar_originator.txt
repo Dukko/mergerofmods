@@ -1,0 +1,8 @@
+opinion_civwar_originator = {
+    opinion = {
+        base = -500
+    }
+    decay = {
+        base = 2
+    }
+}

@@ -1,0 +1,25 @@
+ship_section_template = {
+    key = "ANCIENT_STATION_L"
+    ship_size = station_l
+    fits_on_slot = mid
+    should_draw_components = yes
+    entity = "station_l_hull_entity"
+    icon = "GFX_ship_part_core_mid"
+    component_slot = {
+        name = "LARGE_GUN_01"
+        template = "large_turret"
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "SMALL_GUN_01"
+        template = "small_turret"
+        locatorname = "small_gun_01"
+    }
+    component_slot = {
+        name = "SMALL_GUN_02"
+        template = "small_turret"
+        locatorname = "small_gun_02"
+    }
+    large_utility_slots = 12
+    aux_utility_slots = 2
+}

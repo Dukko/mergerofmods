@@ -1,0 +1,11 @@
+triggered_opinion_lrsk_gvp_foolish_tolerance = {
+    trigger = {
+        has_valid_civic = lrsk_gov_var_civic_supremacist_demagoguery
+        from = {
+            has_valid_civic = lrsk_gov_var_civic_universal_sovereignty
+        }
+    }
+    opinion = {
+        base = -10
+    }
+}

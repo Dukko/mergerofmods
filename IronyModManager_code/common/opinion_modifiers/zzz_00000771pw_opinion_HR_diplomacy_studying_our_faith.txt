@@ -1,0 +1,9 @@
+pw_opinion_HR_diplomacy_studying_our_faith = {
+    opinion = {
+        base = 50
+    }
+    unique = yes
+    decay = {
+        base = 2
+    }
+}

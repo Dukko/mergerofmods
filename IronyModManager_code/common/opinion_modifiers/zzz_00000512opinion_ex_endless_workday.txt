@@ -1,0 +1,36 @@
+opinion_ex_endless_workday = {
+    trigger = {
+        FROM = {
+            has_policy_flag = ex_endless_workday
+        }
+    }
+    opinion = {
+        base = -10
+        modifier = {
+            add = 20
+            AND = {
+                has_ethic = "ethic_authoritarian"
+                has_ethic = "ethic_fanatic_materialist"
+            }
+        }
+        modifier = {
+            add = 20
+            AND = {
+                has_ethic = "ethic_fanatic_authoritarian"
+                has_ethic = "ethic_materialist"
+            }
+        }
+        modifier = {
+            add = -20
+            AND = {
+                has_ethic = "ethic_egalitarian"
+            }
+        }
+        modifier = {
+            add = -40
+            AND = {
+                has_ethic = "ethic_fanatic_egalitarian"
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+opinion_rebelled_from_rival = {
+    opinion = {
+        base = 30
+        modifier = {
+            add = -10
+            has_policy_flag = slavery_allowed
+            FROM = {
+                has_valid_civic = civic_broken_shackles
+            }
+        }
+    }
+    decay = {
+        base = 1
+    }
+}

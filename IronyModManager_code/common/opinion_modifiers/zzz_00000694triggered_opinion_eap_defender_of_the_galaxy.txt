@@ -1,0 +1,10 @@
+triggered_opinion_eap_defender_of_the_galaxy = {
+    trigger = {
+        FROM = {
+            has_ascension_perk = eap_defender_of_the_galaxy
+        }
+    }
+    opinion = {
+        base = 80
+    }
+}

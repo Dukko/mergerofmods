@@ -1,0 +1,16 @@
+opinion_ejected_envoy = {
+    opinion = {
+        base = -25
+        modifier = {
+            add = 5
+            is_xenophile = yes
+        }
+        modifier = {
+            add = -5
+            is_xenophobe = yes
+        }
+    }
+    decay = {
+        base = 1
+    }
+}

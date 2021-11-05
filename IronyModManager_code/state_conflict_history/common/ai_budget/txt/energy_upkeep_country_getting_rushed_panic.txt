@@ -1,0 +1,11 @@
+energy_upkeep_country_getting_rushed_panic = {
+    resource = energy
+    type = upkeep
+    category = country
+    potential = {
+        str_make_fleet_against_rush = yes
+    }
+    fraction = {
+        weight = 0.3
+    }
+}

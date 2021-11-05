@@ -116,8 +116,8 @@ building_stronghold = {
         physics_research = 15
         trigger = {
             nor = {
-                has_designation = col_bureau
-                has_designation = col_research
+                str_is_col_bureau = yes
+                str_is_col_research = yes
             }
             years_passed > 80
             owner = {
@@ -145,8 +145,8 @@ building_stronghold = {
         alloys = 6
         trigger = {
             nor = {
-                has_designation = col_bureau
-                has_designation = col_research
+                str_is_col_bureau = yes
+                str_is_col_research = yes
             }
             years_passed > 80
             owner = {
@@ -170,8 +170,8 @@ building_stronghold = {
                 has_planet_flag = str_bad_habitability
             }
             nor = {
-                has_designation = col_bureau
-                has_designation = col_research
+                str_is_col_bureau = yes
+                str_is_col_research = yes
             }
             years_passed > 80
             owner = {
@@ -195,8 +195,8 @@ building_stronghold = {
                 has_planet_flag = str_bad_habitability
             }
             nor = {
-                has_designation = col_bureau
-                has_designation = col_research
+                str_is_col_bureau = yes
+                str_is_col_research = yes
             }
             years_passed > 80
             owner = {

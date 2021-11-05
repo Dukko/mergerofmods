@@ -1,0 +1,15 @@
+opinion_sociable_species = {
+    trigger = {
+        FROM = {
+            exists = ruler
+            ruler = {
+                species = {
+                    has_trait = "trait_additrait_sociable"
+                }
+            }
+        }
+    }
+    opinion = {
+        base = 20
+    }
+}

@@ -1,0 +1,42 @@
+@adv_section_cost = 240
+ship_section_template = {
+    key = "TITAN_STERN_HEAVY_WEAPONS"
+    ship_size = titan
+    fits_on_slot = stern
+    should_draw_components = yes
+    entity = "titan_stern_entity"
+    icon = "GFX_ship_part_core_stern"
+    prerequisites = {
+        tech_titan_hull_2
+    }
+    ai_weight = {
+        modifier = {
+            factor = 10
+            is_preferred_weapons = weapon_type_strike_craft
+        }
+        modifier = {
+            factor = 10
+            is_preferred_weapons = weapon_type_explosive
+        }
+        modifier = {
+            factor = 80
+            NOR = {
+                is_preferred_weapons = weapon_type_strike_craft
+                is_preferred_weapons = weapon_type_explosive
+            }
+        }
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_01"
+        template = "invisible_extra_large_fixed"
+        locatorname = "large_gun_01"
+    }
+    large_utility_slots = 2
+    aux_utility_slots = 2
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @adv_section_cost
+        }
+    }
+}

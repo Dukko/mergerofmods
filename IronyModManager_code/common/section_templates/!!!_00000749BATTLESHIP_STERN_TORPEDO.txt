@@ -1,0 +1,46 @@
+@adv_section_cost = 120
+ship_section_template = {
+    key = "BATTLESHIP_STERN_TORPEDO"
+    ship_size = battleship
+    fits_on_slot = stern
+    should_draw_components = yes
+    entity = "battleship_stern_M2_entity"
+    icon = "GFX_ship_part_core_stern"
+    prerequisites = {
+        tech_battleship_hull_1
+    }
+    ai_weight = {
+        modifier = {
+            factor = 70
+            is_preferred_weapons = weapon_type_explosive
+        }
+        modifier = {
+            factor = 30
+            is_preferred_weapons = weapon_type_strike_craft
+        }
+        modifier = {
+            factor = 3
+            NOT = {
+                is_preferred_weapons = weapon_type_explosive
+            }
+        }
+    }
+    component_slot = {
+        name = "TORPEDO_01"
+        template = "medium_missile_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_02"
+        template = "medium_missile_turret"
+        locatorname = "medium_gun_02"
+    }
+    large_utility_slots = 1
+    aux_utility_slots = 1
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @adv_section_cost
+        }
+    }
+}

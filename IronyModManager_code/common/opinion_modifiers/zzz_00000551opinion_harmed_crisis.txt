@@ -1,0 +1,12 @@
+opinion_harmed_crisis = {
+    opinion = {
+        base = 10
+        modifier = {
+            add = -9
+            is_country_type = fallen_empire
+        }
+    }
+    decay = {
+        base = -1
+    }
+}

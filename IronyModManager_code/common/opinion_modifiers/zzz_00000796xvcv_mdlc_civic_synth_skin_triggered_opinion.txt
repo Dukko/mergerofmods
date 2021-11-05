@@ -1,0 +1,16 @@
+xvcv_mdlc_civic_synth_skin_triggered_opinion = {
+    trigger = {
+        is_country_type = default
+        NOT = {
+            has_authority = auth_machine_intelligence
+        }
+        from = {
+            has_valid_civic = xvcv_mdlc_civic_synth_skin
+        }
+    }
+    opinion = {
+        modifier = {
+            add = 30
+        }
+    }
+}

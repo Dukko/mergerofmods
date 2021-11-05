@@ -1,0 +1,18 @@
+opinion_est_philosophy_3 = {
+    trigger = {
+        from = {
+            has_active_tradition = tr_est_philosophy_3
+        }
+        root = {
+            Not = {
+                has_ethic = ethic_gestalt_consciousness
+            }
+            Not = {
+                is_country_type = fallen_empire
+            }
+        }
+    }
+    opinion = {
+        base = 20
+    }
+}

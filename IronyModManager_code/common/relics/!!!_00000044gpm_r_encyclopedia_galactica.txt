@@ -1,0 +1,55 @@
+@activation_cost = 150
+@triumph_duration = 3600
+gpm_r_encyclopedia_galactica = {
+    activation_duration = @triumph_duration
+    portrait = "GFX_gpm_r_encyclopedia_galactica"
+    sound = "relic_activation_generic"
+    resources = {
+        category = relics
+        cost = {
+            influence = @activation_cost
+        }
+    }
+    ai_weight = {
+        weight = 0
+    }
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+        planet_jobs_unity_produces_mult = 0.2
+    }
+    score = 1000
+    active_effect = {
+        custom_tooltip = gpm_r_encyclopedia_galactica_active_effect_tooltip
+        hidden_effect = {
+            every_country = {
+                limit = {
+                    OR = {
+                        is_country_type = fallen_empire
+                        is_country_type = awakened_fallen_empire
+                    }
+                }
+                add_opinion_modifier = {
+                    who = root
+                    modifier = opinion_intellectual_promise
+                }
+            }
+        }
+        custom_tooltip = relic_triumph_cooldown
+        hidden_effect = {
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                days = @triumph_duration
+            }
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_relic_no_cooldown"
+            NOT = {
+                has_modifier = relic_activation_cooldown
+            }
+        }
+    }
+}

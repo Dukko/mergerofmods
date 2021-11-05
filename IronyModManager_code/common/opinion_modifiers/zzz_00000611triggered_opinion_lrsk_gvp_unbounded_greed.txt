@@ -1,0 +1,11 @@
+triggered_opinion_lrsk_gvp_unbounded_greed = {
+    trigger = {
+        has_valid_civic = lrsk_gov_var_civic_institutionalized_collectivism
+        from = {
+            has_authority = auth_corporate
+        }
+    }
+    opinion = {
+        base = -20
+    }
+}

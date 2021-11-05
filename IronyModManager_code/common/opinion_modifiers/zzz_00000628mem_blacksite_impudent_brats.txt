@@ -1,0 +1,12 @@
+mem_blacksite_impudent_brats = {
+    opinion = {
+        base = -25
+        modifier = {
+            add = 10
+            has_ethic = ethic_fanatic_xenophile
+        }
+    }
+    decay = {
+        base = 1
+    }
+}

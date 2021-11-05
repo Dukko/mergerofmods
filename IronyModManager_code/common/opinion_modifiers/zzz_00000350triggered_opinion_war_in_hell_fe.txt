@@ -1,0 +1,8 @@
+triggered_opinion_war_in_hell_fe = {
+    opinion = {
+        base = -10000
+    }
+    decay = {
+        base = 1
+    }
+}

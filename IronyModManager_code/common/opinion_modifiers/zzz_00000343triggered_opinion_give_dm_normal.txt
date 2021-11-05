@@ -1,0 +1,8 @@
+triggered_opinion_give_dm_normal = {
+    opinion = {
+        base = 100
+    }
+    decay = {
+        base = 5
+    }
+}

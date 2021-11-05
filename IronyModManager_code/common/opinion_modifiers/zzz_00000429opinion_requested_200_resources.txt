@@ -1,0 +1,22 @@
+opinion_requested_200_resources = {
+    opinion = {
+        base = -15
+        modifier = {
+            add = -7
+            is_ethics_aligned = {
+                ARG1 = egalitarian
+            }
+        }
+        modifier = {
+            add = 7
+            has_ethic = "ethic_authoritarian"
+        }
+        modifier = {
+            add = 15
+            has_ethic = "ethic_fanatic_authoritarian"
+        }
+    }
+    decay = {
+        base = 6
+    }
+}

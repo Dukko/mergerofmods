@@ -1,0 +1,8 @@
+mem_blacksite_returned_subject = {
+    opinion = {
+        base = 50
+    }
+    decay = {
+        base = 2
+    }
+}

@@ -1,0 +1,5 @@
+opinion_ended_kaiser = {
+    opinion = {
+        base = -150
+    }
+}

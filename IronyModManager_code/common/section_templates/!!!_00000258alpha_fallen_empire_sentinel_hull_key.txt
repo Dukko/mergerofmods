@@ -1,0 +1,29 @@
+ship_section_template = {
+    key = "alpha_fallen_empire_sentinel_hull_key"
+    ship_size = sentinel_sphere
+    fits_on_slot = mid
+    entity = "alpha_sentinel_hull_entity"
+    icon = "GFX_ship_part_core_mid"
+    prerequisites = {
+        tech_fe_tower_offense_alpha
+    }
+    component_slot = {
+        name = "TITANIC_01"
+        template = "invisible_titanic_turret"
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "TITANIC_02"
+        template = "invisible_titanic_turret"
+        locatorname = "large_gun_01"
+    }
+    large_utility_slots = 8
+    aux_utility_slots = 2
+    resources = {
+        category = ship_sections
+        cost = {
+            sr_dark_matter = 40
+            acot_sr_dark_energy = 40
+        }
+    }
+}

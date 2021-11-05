@@ -1,0 +1,13 @@
+opinion_demanded_subjectization = {
+    opinion = {
+        base = -50
+        modifier = {
+            factor = 2
+            is_country_type = awakened_fallen_empire
+        }
+    }
+    decay = {
+        base = 5
+    }
+    accumulative = yes
+}

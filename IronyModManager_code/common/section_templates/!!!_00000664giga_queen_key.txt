@@ -1,0 +1,58 @@
+ship_section_template = {
+    key = "giga_queen_key"
+    ship_size = giga_queen
+    fits_on_slot = mid
+    entity = "empty_section_entity"
+    icon = "GFX_ship_part_core_mid"
+    component_slot = {
+        name = "TORPEDO_01"
+        template = "giga_invisible_large_fixed"
+        locatorname = "root"
+    }
+    component_slot = {
+        name = "TORPEDO_02"
+        template = "giga_invisible_large_fixed"
+        locatorname = "root"
+    }
+    component_slot = {
+        name = "TORPEDO_03"
+        template = "giga_invisible_large_fixed"
+        locatorname = "root"
+    }
+    component_slot = {
+        name = "TORPEDO_04"
+        template = "giga_invisible_large_fixed"
+        locatorname = "root"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_01"
+        template = "invisible_medium_turret"
+        locatorname = "root"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_02"
+        template = "invisible_medium_turret"
+        locatorname = "root"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_03"
+        template = "invisible_medium_turret"
+        locatorname = "root"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_01"
+        template = "large_strike_craft"
+        locatorname = "root"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_02"
+        template = "large_strike_craft"
+        locatorname = "root"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_03"
+        template = "large_strike_craft"
+        locatorname = "root"
+    }
+    aux_utility_slots = 1
+}

@@ -1,0 +1,8 @@
+opinion_broke_ally_planet = {
+    opinion = {
+        base = -500
+    }
+    decay = {
+        base = 1
+    }
+}

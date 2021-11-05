@@ -1,0 +1,10 @@
+opinion_mutual_assistance_gave_aid = {
+    opinion = {
+        base = 2
+    }
+    accumulative = yes
+    max = 100
+    decay = {
+        base = 1
+    }
+}

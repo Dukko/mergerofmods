@@ -1,0 +1,10 @@
+opinion_ex_second_universe = {
+    trigger = {
+        FROM = {
+            has_policy_flag = ex_second_universe
+        }
+    }
+    opinion = {
+        base = 30
+    }
+}

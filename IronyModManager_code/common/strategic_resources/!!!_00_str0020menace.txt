@@ -1,6 +1,0 @@
-menace = {
-    tradable = no
-    ai_weight = {
-        weight = 1
-    }
-}

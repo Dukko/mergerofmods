@@ -1,0 +1,40 @@
+ship_section_template = {
+    key = "ALPHA_PRECURSOR_BATTLECRUISER_MID_ARTILLERY_KEY"
+    ship_size = precursor_battlecruiser
+    fits_on_slot = mid
+    should_draw_components = yes
+    entity = "precursor_battlecruiser_stern_entity"
+    icon = "GFX_ship_part_core_mid"
+    prerequisites = {
+        tech_precursor_bc_alpha
+    }
+    component_slot = {
+        name = "LARGE_GUN_01"
+        template = "invisible_large_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_02"
+        template = "invisible_large_turret"
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "LARGE_GUN_03"
+        template = "invisible_large_turret"
+        locatorname = "medium_gun_03"
+    }
+    component_slot = {
+        name = "LARGE_GUN_04"
+        template = "invisible_large_turret"
+        locatorname = "medium_gun_04"
+    }
+    large_utility_slots = 4
+    aux_utility_slots = 1
+    resources = {
+        category = ship_sections
+        cost = {
+            sr_dark_matter = 20
+            acot_sr_dark_energy = 20
+        }
+    }
+}

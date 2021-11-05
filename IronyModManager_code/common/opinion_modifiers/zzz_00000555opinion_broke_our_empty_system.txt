@@ -1,0 +1,8 @@
+opinion_broke_our_empty_system = {
+    opinion = {
+        base = -100
+    }
+    decay = {
+        base = 1
+    }
+}

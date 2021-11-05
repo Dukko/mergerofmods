@@ -1,0 +1,45 @@
+ship_section_template = {
+    key = "ALPHA_PRECURSOR_ESCORT_BOW_TORPEDO_KEY"
+    ship_size = precursor_escort
+    fits_on_slot = bow
+    should_draw_components = yes
+    entity = "alpha_precursor_escort_bow_entity"
+    icon = "GFX_ship_part_core_mid"
+    prerequisites = {
+        tech_precursor_escort_alpha
+    }
+    component_slot = {
+        name = "TORPEDO_01"
+        template = "invisible_missile_turret"
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_02"
+        template = "invisible_missile_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_03"
+        template = "invisible_missile_turret"
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "TORPEDO_04"
+        template = "invisible_missile_turret"
+        locatorname = "small_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_05"
+        template = "invisible_missile_turret"
+        locatorname = "small_gun_02"
+    }
+    medium_utility_slots = 4
+    aux_utility_slots = 1
+    resources = {
+        category = ship_sections
+        cost = {
+            sr_dark_matter = 10
+            acot_sr_dark_energy = 10
+        }
+    }
+}

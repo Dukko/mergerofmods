@@ -1,0 +1,45 @@
+ship_section_template = {
+    key = "PHANON_SOFE_GATEKEEPER_WARDEN_SPINAL_KEY"
+    ship_size = sofe_gatekeeper_warden
+    fits_on_slot = spinal
+    should_draw_components = yes
+    entity = "phanon_sofe_gatekeeper_warden_spinal_entity"
+    icon = "GFX_ship_part_core_mid"
+    prerequisites = {
+        tech_dark_matter_power_core_pe
+    }
+    component_slot = {
+        name = "TITANIC_01"
+        template = "invisible_titanic_fixed"
+        locatorname = "titan_gun_01"
+    }
+    component_slot = {
+        name = "XL_GUN_01"
+        template = "invisible_titanic_fixed"
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "XL_GUN_02"
+        template = "invisible_titanic_fixed"
+        locatorname = "xl_gun_02"
+    }
+    component_slot = {
+        name = "XL_GUN_03"
+        template = "invisible_extra_large_fixed"
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "XL_GUN_04"
+        template = "invisible_extra_large_fixed"
+        locatorname = "xl_gun_02"
+    }
+    large_utility_slots = 15
+    aux_utility_slots = 2
+    resources = {
+        category = ship_sections
+        cost = {
+            sr_dark_matter = 400
+            acot_sr_dark_energy = 400
+        }
+    }
+}

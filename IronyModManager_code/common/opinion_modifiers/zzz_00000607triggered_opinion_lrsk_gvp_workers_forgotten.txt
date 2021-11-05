@@ -1,0 +1,23 @@
+triggered_opinion_lrsk_gvp_workers_forgotten = {
+    trigger = {
+        OR = {
+            AND = {
+                has_authority = auth_corporate
+                has_valid_civic = lrsk_gov_var_civic_mc_workers_councils
+                from = {
+                    has_valid_civic = lrsk_gov_var_civic_enlightened_liberalism
+                }
+            }
+            AND = {
+                has_valid_civic = civic_merchant_guilds
+                has_valid_civic = lrsk_gov_var_civic_workers_councils
+                from = {
+                    has_valid_civic = lrsk_gov_var_civic_enlightened_liberalism
+                }
+            }
+        }
+    }
+    opinion = {
+        base = -5
+    }
+}

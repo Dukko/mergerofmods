@@ -1,0 +1,26 @@
+@terraforming_cost_level_1 = 2000
+@terraforming_duration_level_1 = 1800
+terraform_link = {
+    from = pc_antarctic
+    to = pc_mud
+    energy = @terraforming_cost_level_1
+    duration = @terraforming_duration_level_1
+    condition = {
+        has_technology = tech_terrestrial_sculpting
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 10
+            from = {
+                has_planet_flag = strpd_terraform_mud
+                num_pops > 8
+            }
+            NOR = {
+                has_ascension_perk = ap_hive_worlds
+                has_ascension_perk = ap_machine_worlds
+                has_ascension_perk = ap_world_shaper
+            }
+        }
+    }
+}

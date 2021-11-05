@@ -1,0 +1,8 @@
+cc_opinion_stole_our_technology = {
+    opinion = {
+        base = -50
+    }
+    decay = {
+        base = 5
+    }
+}

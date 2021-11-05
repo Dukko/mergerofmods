@@ -1,0 +1,15 @@
+opinion_est_friendship_1 = {
+    trigger = {
+        from = {
+            has_active_tradition = tr_est_friendship_1
+        }
+        root = {
+            Not = {
+                is_country_type = fallen_empire
+            }
+        }
+    }
+    opinion = {
+        base = 30
+    }
+}

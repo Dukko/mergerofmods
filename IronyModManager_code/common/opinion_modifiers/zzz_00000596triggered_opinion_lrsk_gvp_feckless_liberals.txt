@@ -1,0 +1,11 @@
+triggered_opinion_lrsk_gvp_feckless_liberals = {
+    trigger = {
+        has_valid_civic = lrsk_gov_var_civic_workers_councils
+        from = {
+            has_valid_civic = lrsk_gov_var_civic_enlightened_liberalism
+        }
+    }
+    opinion = {
+        base = -15
+    }
+}

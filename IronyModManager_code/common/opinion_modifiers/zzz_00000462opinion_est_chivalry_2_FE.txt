@@ -1,0 +1,13 @@
+opinion_est_chivalry_2_FE = {
+    trigger = {
+        from = {
+            has_active_tradition = tr_est_chivalry_2
+        }
+        root = {
+            is_country_type = fallen_empire
+        }
+    }
+    opinion = {
+        base = 10
+    }
+}

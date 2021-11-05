@@ -1,0 +1,8 @@
+dpe_cancelled_electoral_aid = {
+    opinion = {
+        base = -50
+    }
+    decay = {
+        base = 6
+    }
+}

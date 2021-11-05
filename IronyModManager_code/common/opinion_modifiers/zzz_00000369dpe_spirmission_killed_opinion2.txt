@@ -1,0 +1,8 @@
+dpe_spirmission_killed_opinion2 = {
+    opinion = {
+        base = -150
+    }
+    decay = {
+        base = 2
+    }
+}

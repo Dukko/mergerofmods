@@ -1,0 +1,36 @@
+@terraforming_cost_gaia = 7500
+@terraforming_duration_gaia = 3600
+terraform_link = {
+    from = pc_forest
+    to = pc_gaia
+    energy = @terraforming_cost_gaia
+    duration = @terraforming_duration_gaia
+    potential = {
+        has_ascension_perk = ap_world_shaper
+    }
+    condition = {
+        has_ascension_perk = ap_world_shaper
+    }
+    ai_weight = {
+        weight = 5
+        modifier = {
+            factor = 10
+            from = {
+                num_pops > 10
+            }
+        }
+        modifier = {
+            factor = 2
+            from = {
+                num_pops > 25
+            }
+        }
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = energy
+                value < 6000
+            }
+        }
+    }
+}

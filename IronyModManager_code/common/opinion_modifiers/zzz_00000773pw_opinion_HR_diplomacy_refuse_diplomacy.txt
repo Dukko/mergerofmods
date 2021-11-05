@@ -1,0 +1,9 @@
+pw_opinion_HR_diplomacy_refuse_diplomacy = {
+    opinion = {
+        base = -75
+    }
+    unique = yes
+    decay = {
+        base = 5
+    }
+}

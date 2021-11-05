@@ -1,0 +1,14 @@
+opinion_crime_corp_branch_offices = {
+    min = -200
+    block_triggered = yes
+    trigger = {
+        is_gestalt = no
+        is_megacorp = no
+        FROM = {
+            is_criminal_syndicate = yes
+        }
+    }
+    opinion = {
+        base = -10
+    }
+}

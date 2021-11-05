@@ -1,0 +1,8 @@
+opinion_civwar_helper = {
+    opinion = {
+        base = 250
+    }
+    decay = {
+        base = 2
+    }
+}

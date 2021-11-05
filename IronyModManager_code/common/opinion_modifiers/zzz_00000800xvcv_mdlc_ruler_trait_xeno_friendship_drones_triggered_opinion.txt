@@ -1,0 +1,15 @@
+xvcv_mdlc_ruler_trait_xeno_friendship_drones_triggered_opinion = {
+    trigger = {
+        is_country_type = default
+        from = {
+            any_owned_leader = {
+                has_trait = xvcv_mdlc_ruler_trait_xeno_friendship_drones
+            }
+        }
+    }
+    opinion = {
+        modifier = {
+            add = 10
+        }
+    }
+}

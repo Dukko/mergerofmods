@@ -1,0 +1,44 @@
+@activation_cost = 1500
+@triumph_duration = 3600
+r_ehof_pox_sample = {
+    activation_duration = @triumph_duration
+    portrait = "GFX_relic_pox_sample"
+    sound = "relic_activation_javorian_pox_sample"
+    score = 0
+    resources = {
+        category = relics
+        cost = {
+            ehof_sr_negative_mass = @activation_cost
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_relic_no_cooldown"
+            NOT = {
+                has_modifier = relic_activation_cooldown
+            }
+        }
+    }
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+        leader_age = 20
+    }
+    active_effect = {
+        custom_tooltip = relic_javorian_pox
+        custom_tooltip = relic_triumph_cooldown
+        hidden_effect = {
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                days = @triumph_duration
+            }
+            add_modifier = {
+                modifier = "javorian_pox"
+                days = @triumph_duration
+            }
+            remove_country_flag = ehof_has_pox_sample
+            remove_relic = r_ehof_pox_sample
+        }
+    }
+}

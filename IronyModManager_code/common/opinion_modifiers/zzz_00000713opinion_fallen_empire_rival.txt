@@ -1,0 +1,71 @@
+opinion_fallen_empire_rival = {
+    trigger = {
+        OR = {
+            is_country_type = fallen_empire
+            is_country_type = awakened_fallen_empire
+            is_country_type = ascended_empire
+            is_country_type = lost_empire
+        }
+        OR = {
+            AND = {
+                is_authoritarian = yes
+                FROM = {
+                    is_egalitarian = yes
+                }
+            }
+            AND = {
+                is_egalitarian = yes
+                FROM = {
+                    is_authoritarian = yes
+                }
+            }
+            AND = {
+                is_spiritualist = yes
+                FROM = {
+                    is_materialist = yes
+                }
+            }
+            AND = {
+                is_materialist = yes
+                FROM = {
+                    is_spiritualist = yes
+                }
+            }
+            AND = {
+                is_xenophile = yes
+                FROM = {
+                    is_xenophobe = yes
+                }
+            }
+            AND = {
+                is_xenophobe = yes
+                FROM = {
+                    is_xenophile = yes
+                }
+            }
+            AND = {
+                is_militarist = yes
+                FROM = {
+                    is_pacifist = yes
+                }
+            }
+            AND = {
+                is_pacifist = yes
+                FROM = {
+                    is_militarist = yes
+                }
+            }
+        }
+        FROM = {
+            OR = {
+                is_country_type = fallen_empire
+                is_country_type = awakened_fallen_empire
+                is_country_type = ascended_empire
+                is_country_type = lost_empire
+            }
+        }
+    }
+    opinion = {
+        base = -50
+    }
+}

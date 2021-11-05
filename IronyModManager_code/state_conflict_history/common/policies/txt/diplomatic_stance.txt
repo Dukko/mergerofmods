@@ -1,13 +1,12 @@
 diplomatic_stance = {
     potential = {
         OR = {
-            merg_is_default_empire_not_ev = yes
+            merg_is_default_empire = yes
             is_country_type = primitive
             is_country_type = awakened_marauders
             is_country_type = kuat_fallen_empire
             is_country_type = kuat_awakened_fallen_empire
             is_country_type = awakened_return_kuat_empire
-            is_country_type = default_ev
             is_country_type = fallen_empire_ev
             is_country_type = awakened_fallen_empire_ev
         }
@@ -20,12 +19,11 @@ diplomatic_stance = {
         icon = "GFX_diplomatic_stance_belligerent"
         potential = {
             OR = {
-                merg_is_default_empire_not_ev = yes
+                merg_is_default_empire = yes
                 is_country_type = awakened_fallen_empire
                 is_country_type = ascended_empire
                 is_country_type = kuat_awakened_fallen_empire
                 is_country_type = awakened_return_kuat_empire
-                is_country_type = default_ev
                 is_country_type = awakened_fallen_empire_ev
             }
         }
@@ -152,11 +150,10 @@ diplomatic_stance = {
         icon = "GFX_diplomatic_stance_cooperative"
         potential = {
             OR = {
-                merg_is_default_empire_not_ev = yes
+                merg_is_default_empire = yes
                 is_country_type = awakened_fallen_empire
                 is_country_type = kuat_awakened_fallen_empire
                 is_country_type = awakened_return_kuat_empire
-                is_country_type = default_ev
                 is_country_type = awakened_fallen_empire_ev
             }
         }
@@ -269,7 +266,7 @@ diplomatic_stance = {
         icon = "GFX_diplomatic_stance_isolationist"
         potential = {
             OR = {
-                merg_is_default_empire_not_ev = yes
+                merg_is_default_empire = yes
                 is_country_type = awakened_fallen_empire
                 is_country_type = kuat_awakened_fallen_empire
                 is_country_type = awakened_return_kuat_empire
@@ -330,10 +327,7 @@ diplomatic_stance = {
                 factor = 100
                 has_valid_civic = civic_inwards_perfection
                 AND = {
-                    OR = {
-                        has_global_flag = cultural_overhaul_redux_active
-                        has_global_flag = stellarisevolved
-                    }
+                    has_global_flag = cultural_overhaul_redux_active
                     has_valid_civic = civic_isolationism
                 }
             }
@@ -368,7 +362,7 @@ diplomatic_stance = {
         icon = "GFX_diplomatic_stance_expansionist"
         potential = {
             OR = {
-                merg_is_default_empire_not_ev = yes
+                merg_is_default_empire = yes
                 is_country_type = awakened_fallen_empire
                 is_country_type = kuat_awakened_fallen_empire
                 is_country_type = awakened_return_kuat_empire
@@ -416,7 +410,7 @@ diplomatic_stance = {
         icon = "GFX_diplomatic_stance_mercantile"
         potential = {
             OR = {
-                merg_is_default_empire_not_ev = yes
+                merg_is_default_empire = yes
                 is_country_type = awakened_fallen_empire
                 is_country_type = kuat_awakened_fallen_empire
                 is_country_type = awakened_return_kuat_empire
@@ -437,10 +431,7 @@ diplomatic_stance = {
             NOR = {
                 has_valid_civic = civic_inwards_perfection
                 AND = {
-                    OR = {
-                        has_global_flag = cultural_overhaul_redux_active
-                        has_global_flag = stellarisevolved
-                    }
+                    has_global_flag = cultural_overhaul_redux_active
                     has_valid_civic = civic_isolationism
                 }
             }
@@ -519,7 +510,7 @@ diplomatic_stance = {
             OR = {
                 is_country_type = awakened_fallen_empire
                 is_country_type = awakened_marauders
-                merg_is_default_empire_not_ev = yes
+                merg_is_default_empire = yes
                 is_country_type = ascended_empire
                 is_country_type = kuat_awakened_fallen_empire
                 is_country_type = awakened_return_kuat_empire
@@ -542,7 +533,7 @@ diplomatic_stance = {
                 fail_text = "requires_supremacy_traditions"
                 OR = {
                     has_tradition = tr_supremacy_finish
-                    merg_is_default_empire_not_ev = no
+                    merg_is_default_empire = no
                 }
             }
             is_subject = no
@@ -658,7 +649,7 @@ diplomatic_stance = {
                 any_relation = {
                     has_communications = root
                     has_policy_flag = diplo_stance_supremacist
-                    merg_is_default_empire_not_ev = yes
+                    merg_is_default_empire = yes
                     is_subject = no
                     relative_power = {
                         who = root
@@ -671,7 +662,7 @@ diplomatic_stance = {
                 factor = 0.25
                 any_neighbor_country = {
                     has_communications = root
-                    merg_is_default_empire_not_ev = yes
+                    merg_is_default_empire = yes
                     is_subject = no
                     relative_power = {
                         who = root
@@ -788,164 +779,12 @@ diplomatic_stance = {
         }
     }
     option = {
-        name = "diplo_stance_evangelist"
-        icon = "GFX_diplomatic_stance_evangelist"
-        potential = {
-            has_global_flag = stellarisevolved
-            always = no
-            is_unfriendly = no
-            NOR = {
-                has_valid_civic = civic_inwards_perfection
-                has_valid_civic = civic_tec_propagandistic
-                has_valid_civic = civic_brand_loyalty
-            }
-            OR = {
-                has_valid_civic = civic_evangelism
-            }
-        }
-        policy_flags = {
-            diplo_stance_evangelist
-        }
-        modifier = {
-            envoy_improve_relations_mult = -1
-            envoy_harm_relations_mult = -1
-        }
-        on_enabled = {
-            hidden_effect = {
-                country_event = {
-                    id = techaul_evangelist.1
-                }
-            }
-        }
-        ai_weight = {
-            weight = 10
-            modifier = {
-                factor = 0
-                NOT = {
-                    has_country_flag = has_encountered_other_empire
-                }
-            }
-            modifier = {
-                factor = 0
-                has_ethic = ethic_fanatic_xenophobe
-            }
-            modifier = {
-                factor = 0.5
-                has_ethic = ethic_fanatic_authoritarian
-            }
-            modifier = {
-                factor = 2
-                has_ethic = ethic_fanatic_spiritualist
-            }
-            modifier = {
-                factor = 2
-                has_ethic = ethic_fanatic_xenophile
-            }
-            modifier = {
-                factor = 1.3
-                has_ethic = ethic_fanatic_pacifist
-            }
-            modifier = {
-                factor = 1.3
-                has_ethic = ethic_fanatic_egalitarian
-            }
-            modifier = {
-                factor = 1.1
-                has_ethic = ethic_fanatic_materialist
-            }
-            modifier = {
-                factor = 1.25
-                has_ai_personality_behaviour = multispecies
-            }
-            modifier = {
-                factor = 3
-                has_ai_personality = federation_builders
-            }
-        }
-    }
-    option = {
-        name = "diplo_stance_propaganda"
-        icon = "GFX_diplomatic_stance_propaganda"
-        potential = {
-            has_global_flag = stellarisevolved
-            always = no
-            is_unfriendly = no
-            NOR = {
-                has_valid_civic = civic_inwards_perfection
-                has_valid_civic = civic_evangelism
-            }
-            OR = {
-                has_valid_civic = civic_tec_propagandistic
-                has_valid_civic = civic_brand_loyalty
-            }
-        }
-        policy_flags = {
-            diplo_stance_propaganda
-        }
-        modifier = {
-            envoy_improve_relations_mult = -1
-            envoy_harm_relations_mult = -1
-        }
-        on_enabled = {
-            hidden_effect = {
-                country_event = {
-                    id = techaul_evangelist.1
-                }
-            }
-        }
-        ai_weight = {
-            weight = 10
-            modifier = {
-                factor = 0
-                NOT = {
-                    has_country_flag = has_encountered_other_empire
-                }
-            }
-            modifier = {
-                factor = 0
-                has_ethic = ethic_fanatic_xenophobe
-            }
-            modifier = {
-                factor = 0.5
-                has_ethic = ethic_fanatic_authoritarian
-            }
-            modifier = {
-                factor = 2
-                has_ethic = ethic_fanatic_spiritualist
-            }
-            modifier = {
-                factor = 2
-                has_ethic = ethic_fanatic_xenophile
-            }
-            modifier = {
-                factor = 1.3
-                has_ethic = ethic_fanatic_pacifist
-            }
-            modifier = {
-                factor = 1.3
-                has_ethic = ethic_fanatic_egalitarian
-            }
-            modifier = {
-                factor = 1.1
-                has_ethic = ethic_fanatic_materialist
-            }
-            modifier = {
-                factor = 1.25
-                has_ai_personality_behaviour = multispecies
-            }
-            modifier = {
-                factor = 3
-                has_ai_personality = federation_builders
-            }
-        }
-    }
-    option = {
         name = "diplo_stance_shadow"
         icon = "GFX_diplomatic_stance_shadow"
         potential = {
             has_global_flag = has_mod_espionage_extended
             OR = {
-                merg_is_default_empire_not_ev = yes
+                merg_is_default_empire = yes
             }
         }
         valid = {

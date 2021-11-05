@@ -1,0 +1,16 @@
+triggered_opinion_pspmod_diary_of_innovo = {
+    trigger = {
+        FROM = {
+            has_modifier = mod_r_pspmod_diary_of_innovo
+        }
+        NOR = {
+            is_country_type = fallen_empire
+            is_country_type = awakened_fallen_empire
+        }
+    }
+    opinion = {
+        modifier = {
+            add = 60
+        }
+    }
+}

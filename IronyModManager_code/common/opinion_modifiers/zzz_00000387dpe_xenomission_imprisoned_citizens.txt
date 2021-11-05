@@ -1,0 +1,8 @@
+dpe_xenomission_imprisoned_citizens = {
+    opinion = {
+        base = -125
+    }
+    decay = {
+        base = 2
+    }
+}

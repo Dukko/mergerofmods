@@ -1,0 +1,29 @@
+ship_section_template = {
+    key = "mem_dread_pirate_small_warship_key"
+    ship_size = small_ship_ai
+    fits_on_slot = mid
+    entity = "mem_dread_pirate_ship_small_entity"
+    icon = "GFX_ship_part_core_mid"
+    component_slot = {
+        name = "TORPEDO_01"
+        template = "large_missile_fixed"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_01"
+        template = "medium_turret"
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_02"
+        template = "medium_turret"
+        locatorname = "medium_gun_03"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_03"
+        template = "medium_turret"
+        locatorname = "medium_gun_03"
+    }
+    medium_utility_slots = 8
+    aux_utility_slots = 1
+}

@@ -1,0 +1,11 @@
+triggered_opinion_lrsk_gvp_greedy_peddlers = {
+    trigger = {
+        has_valid_civic = lrsk_gov_var_civic_institutionalized_collectivism
+        from = {
+            has_valid_civic = civic_merchant_guilds
+        }
+    }
+    opinion = {
+        base = -20
+    }
+}

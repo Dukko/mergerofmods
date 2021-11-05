@@ -1,0 +1,9 @@
+xvcv_mdlc_civic_trading_machine_triggered_opinion = {
+    opinion = {
+        base = 5
+    }
+    decay = {
+        base = 1
+    }
+    accumulative = yes
+}

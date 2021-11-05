@@ -1,0 +1,8 @@
+dpe_xenomission_denied_tech = {
+    opinion = {
+        base = -20
+    }
+    decay = {
+        base = 2
+    }
+}

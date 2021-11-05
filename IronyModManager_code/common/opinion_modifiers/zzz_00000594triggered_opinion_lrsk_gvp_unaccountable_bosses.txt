@@ -1,0 +1,17 @@
+triggered_opinion_lrsk_gvp_unaccountable_bosses = {
+    trigger = {
+        has_valid_civic = lrsk_gov_var_civic_workers_councils
+        NOT = {
+            has_valid_civic = civic_merchant_guilds
+        }
+        from = {
+            has_valid_civic = civic_merchant_guilds
+            NOT = {
+                has_valid_civic = lrsk_gov_var_civic_workers_councils
+            }
+        }
+    }
+    opinion = {
+        base = -15
+    }
+}

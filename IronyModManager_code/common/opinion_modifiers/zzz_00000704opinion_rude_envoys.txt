@@ -1,0 +1,8 @@
+opinion_rude_envoys = {
+    opinion = {
+        base = -25
+    }
+    decay = {
+        base = 2
+    }
+}

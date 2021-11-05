@@ -1,0 +1,14 @@
+triggered_opinion_eap_shared_destiny = {
+    trigger = {
+        exists = overlord
+        overlord = {
+            is_same_value = FROM
+        }
+        FROM = {
+            has_ascension_perk = eap_shared_destiny
+        }
+    }
+    opinion = {
+        base = 200
+    }
+}

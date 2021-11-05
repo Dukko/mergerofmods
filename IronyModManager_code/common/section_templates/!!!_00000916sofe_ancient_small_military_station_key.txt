@@ -1,0 +1,104 @@
+ship_section_template = {
+    key = "sofe_ancient_small_military_station_key"
+    ship_size = sofe_ancient_small_military_station
+    fits_on_slot = mid
+    entity = "sofe_ancient_small_military_station_hull_entity"
+    icon = "GFX_ship_part_core_mid"
+    component_slot = {
+        name = "XL_GUN_01"
+        template = "invisible_extra_large_turret"
+        locatorname = "top_tip"
+    }
+    component_slot = {
+        name = "XL_GUN_02"
+        template = "invisible_extra_large_turret"
+        locatorname = "bottom_tip"
+    }
+    component_slot = {
+        name = "LARGE_GUN_01"
+        template = "invisible_large_turret"
+        locatorname = "top_tip"
+    }
+    component_slot = {
+        name = "LARGE_GUN_02"
+        template = "invisible_large_turret"
+        locatorname = "bottom_tip"
+    }
+    component_slot = {
+        name = "LARGE_GUN_03"
+        template = "invisible_large_turret"
+        locatorname = "top_tip"
+    }
+    component_slot = {
+        name = "LARGE_GUN_04"
+        template = "invisible_large_turret"
+        locatorname = "bottom_tip"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_01"
+        template = "invisible_medium_turret"
+        locatorname = "top_tip"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_02"
+        template = "invisible_medium_turret"
+        locatorname = "bottom_tip"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_03"
+        template = "invisible_medium_turret"
+        locatorname = "top_tip"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_04"
+        template = "invisible_medium_turret"
+        locatorname = "bottom_tip"
+    }
+    component_slot = {
+        name = "PD_01"
+        template = "invisible_point_defence_turret"
+        locatorname = "top_tip"
+    }
+    component_slot = {
+        name = "PD_02"
+        template = "invisible_point_defence_turret"
+        locatorname = "bottom_tip"
+    }
+    component_slot = {
+        name = "PD_03"
+        template = "invisible_point_defence_turret"
+        locatorname = "top_tip"
+    }
+    component_slot = {
+        name = "PD_04"
+        template = "invisible_point_defence_turret"
+        locatorname = "bottom_tip"
+    }
+    component_slot = {
+        name = "PD_05"
+        template = "invisible_point_defence_turret"
+        locatorname = "top_tip"
+    }
+    component_slot = {
+        name = "PD_06"
+        template = "invisible_point_defence_turret"
+        locatorname = "bottom_tip"
+    }
+    component_slot = {
+        name = "PD_07"
+        template = "invisible_point_defence_turret"
+        locatorname = "top_tip"
+    }
+    component_slot = {
+        name = "PD_08"
+        template = "invisible_point_defence_turret"
+        locatorname = "bottom_tip"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_01"
+        template = "large_strike_craft"
+        rotation = 0
+        locatorname = "blade_tip_1"
+    }
+    aux_utility_slots = 2
+}

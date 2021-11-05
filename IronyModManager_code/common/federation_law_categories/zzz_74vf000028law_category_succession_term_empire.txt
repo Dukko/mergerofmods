@@ -1,9 +1,0 @@
-law_category_succession_term_empire = {
-    potential = {
-        has_federation_type = vf_ef_federation
-    }
-    show_succession_date = yes
-    laws = {
-        succession_term_status_change_empire
-    }
-}

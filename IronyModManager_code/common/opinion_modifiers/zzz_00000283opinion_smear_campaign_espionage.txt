@@ -1,0 +1,8 @@
+opinion_smear_campaign_espionage = {
+    opinion = {
+        base = -100
+    }
+    accumulative = yes
+    min = -500
+    decay = 1
+}

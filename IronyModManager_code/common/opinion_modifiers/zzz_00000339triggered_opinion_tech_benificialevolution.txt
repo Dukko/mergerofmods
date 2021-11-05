@@ -1,0 +1,10 @@
+triggered_opinion_tech_benificialevolution = {
+    trigger = {
+        FROM = {
+            has_technology = tech_benificialevolution
+        }
+    }
+    opinion = {
+        base = 30
+    }
+}

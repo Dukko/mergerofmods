@@ -1,0 +1,100 @@
+@triumph_duration = 3600
+gpm_r_q_storage_compressor = {
+    activation_duration = @triumph_duration
+    portrait = "GFX_gpm_r_q_storage_compressor"
+    sound = "relic_activation_vultaum_real_perforator"
+    resources = {
+        category = relics
+        cost = {
+            energy = 10000
+        }
+    }
+    ai_weight = {
+        weight = 0
+    }
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+        country_resource_max_add = 50000
+    }
+    score = 1000
+    active_effect = {
+        random_list = {
+            10 = {
+                add_resource = {
+                    minerals = 10000
+                }
+            }
+            10 = {
+                add_resource = {
+                    consumer_goods = 5000
+                }
+                modifier = {
+                    factor = 0
+                    is_machine_empire = yes
+                }
+            }
+            10 = {
+                add_resource = {
+                    alloys = 5000
+                }
+            }
+            10 = {
+                add_resource = {
+                    rare_crystals = 1000
+                }
+            }
+            10 = {
+                add_resource = {
+                    volatile_motes = 1000
+                }
+            }
+            10 = {
+                add_resource = {
+                    exotic_gases = 1000
+                }
+            }
+            10 = {
+                add_resource = {
+                    sr_living_metal = 200
+                }
+            }
+            10 = {
+                add_resource = {
+                    sr_zro = 200
+                }
+            }
+            10 = {
+                add_resource = {
+                    sr_dark_matter = 200
+                }
+            }
+            10 = {
+                add_resource = {
+                    nanites = 200
+                }
+            }
+            10 = {
+                add_resource = {
+                    minor_artifacts = 200
+                }
+            }
+        }
+        custom_tooltip = relic_triumph_cooldown
+        hidden_effect = {
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                days = @triumph_duration
+            }
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_relic_no_cooldown"
+            NOT = {
+                has_modifier = relic_activation_cooldown
+            }
+        }
+    }
+}

@@ -14,7 +14,7 @@ building_bureaucratic_3 = {
             and = {
                 free_building_slots = 0
                 free_district_slots < 3
-                has_designation = col_bureau
+                str_is_col_bureau = yes
             }
         }
     }

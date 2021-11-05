@@ -1,0 +1,8 @@
+opinion_destroyed_ps_militarist_trade = {
+    opinion = {
+        base = -30
+    }
+    decay = {
+        base = 2
+    }
+}

@@ -1,0 +1,8 @@
+opinion_lrsk_gvp_casino_corp_approval = {
+    opinion = {
+        base = 40
+    }
+    decay = {
+        base = 10
+    }
+}

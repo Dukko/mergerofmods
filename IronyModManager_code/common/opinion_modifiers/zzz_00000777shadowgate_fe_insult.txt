@@ -1,0 +1,8 @@
+shadowgate_fe_insult = {
+    opinion = -25
+    unique = yes
+    accumulative = yes
+    decay = {
+        base = 5
+    }
+}

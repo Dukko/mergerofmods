@@ -1,0 +1,30 @@
+ship_section_template = {
+    key = "PHANON_PRECURSOR_PLATFORM_L_TOP_1_KEY"
+    ship_size = precursor_platform_l
+    fits_on_slot = top
+    entity = "acot_phanon_precursor_platform_l_key_entity"
+    icon = "GFX_ship_part_core_mid"
+    prerequisites = {
+        tech_precursor_phanon_design
+    }
+    component_slot = {
+        name = "XL_GUN_01"
+        template = "invisible_extra_large_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "XL_GUN_02"
+        template = "invisible_extra_large_turret"
+        locatorname = "medium_gun_01"
+    }
+    large_utility_slots = 8
+    aux_utility_slots = 2
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = 45
+            sr_dark_matter = 15
+            acot_sr_dark_energy = 15
+        }
+    }
+}

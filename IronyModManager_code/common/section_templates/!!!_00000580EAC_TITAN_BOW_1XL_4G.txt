@@ -1,0 +1,53 @@
+@section_cost = 160
+ship_section_template = {
+    key = "EAC_TITAN_BOW_1XL_4G"
+    ship_size = titan
+    fits_on_slot = bow
+    should_draw_components = yes
+    entity = "titan_bow_entity"
+    icon = "GFX_ship_part_core_bow"
+    ai_weight = {
+        modifier = {
+            factor = 10
+            NOT = {
+                is_preferred_weapons = weapon_type_explosive
+            }
+        }
+        modifier = {
+            factor = 0.1
+            is_preferred_weapons = weapon_type_explosive
+        }
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_01"
+        template = "invisible_extra_large_fixed"
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_01"
+        template = "invisible_missile_fixed"
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_02"
+        template = "invisible_missile_fixed"
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_03"
+        template = "invisible_missile_fixed"
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_04"
+        template = "invisible_missile_fixed"
+        locatorname = "xl_gun_01"
+    }
+    large_utility_slots = 6
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @section_cost
+        }
+    }
+}

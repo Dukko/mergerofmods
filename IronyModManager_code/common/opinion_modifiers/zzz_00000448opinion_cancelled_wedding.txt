@@ -1,0 +1,8 @@
+opinion_cancelled_wedding = {
+    opinion = {
+        base = -30
+    }
+    decay = {
+        base = 3
+    }
+}

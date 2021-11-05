@@ -1,0 +1,30 @@
+namespace = akx
+planet_event = {
+    id = akx.9499
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        NOR = {
+            is_planet_class = pc_habitat
+            is_planet_class = pc_ringworld_habitable
+            is_planet_class = pc_city
+            is_planet_class = pc_relic
+        }
+        has_owner = yes
+        owner = {
+            has_country_flag = worm_events_available
+            NOT = {
+                has_country_flag = waiting_world
+            }
+        }
+    }
+    immediate = {
+        owner = {
+            set_country_flag = waiting_world
+        }
+        planet_event = {
+            id = akx.9500
+            days = 30
+        }
+    }
+}

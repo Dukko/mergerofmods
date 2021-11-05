@@ -1,0 +1,41 @@
+ship_section_template = {
+    key = "CRISIS_BORGCRUISER_SECTION"
+    ship_size = crisis_cruiser
+    fits_on_slot = mid
+    should_draw_components = yes
+    entity = "theborg_01_battleship_mid_S4LHB_entity"
+    icon = "GFX_ship_part_core_mid"
+    prerequisites = {
+        "tech_borg_crisis"
+    }
+    component_slot = {
+        name = "LARGE_GUN_01"
+        template = "large_turret"
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_01"
+        template = "medium_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_02"
+        template = "medium_turret"
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "SMALL_GUN_01"
+        template = "small_turret"
+        locatorname = "small_gun_01"
+    }
+    component_slot = {
+        name = "SMALL_GUN_02"
+        template = "small_turret"
+        locatorname = "small_gun_02"
+    }
+    ai_weight = {
+        weight = 1000
+    }
+    medium_utility_slots = 6
+    aux_utility_slots = 2
+}

@@ -1,0 +1,12 @@
+opinion_maniac_monopoly_vs_megacorp = {
+    trigger = {
+        has_authority = auth_corporate
+        has_valid_civic = civic_maniac_monopoly
+        FROM = {
+            has_authority = auth_corporate
+        }
+    }
+    opinion = {
+        base = -1000
+    }
+}

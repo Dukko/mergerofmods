@@ -1,0 +1,8 @@
+mem_blacksite_belated_cooperation = {
+    opinion = {
+        base = 25
+    }
+    decay = {
+        base = 1
+    }
+}

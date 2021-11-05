@@ -1,0 +1,9 @@
+opinion_hostile_first_contact_vivisection = {
+    opinion = {
+        base = -150
+    }
+    accumulative = yes
+    decay = {
+        base = 1
+    }
+}

@@ -1,0 +1,19 @@
+energy_expenditure_slums = {
+    resource = energy
+    type = expenditure
+    category = deposit_blockers
+    potential = {
+        years_passed < 15
+        years_passed > 3
+    }
+    fraction = {
+        weight = 0.7
+    }
+    static_min = {
+        base = 0
+        modifier = {
+            add = 400
+            years_passed > 3
+        }
+    }
+}

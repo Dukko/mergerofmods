@@ -1,0 +1,94 @@
+ship_section_template = {
+    key = "ALPHA_PRECURSOR_COLOSSUS_XL_SECTION"
+    ship_size = precursor_colossus
+    fits_on_slot = "weapon2"
+    entity = "precursor_colossus_core_entity"
+    icon = "GFX_ship_part_core_mid"
+    prerequisites = {
+        tech_precursor_colossus_ae
+    }
+    component_slot = {
+        name = "XL_01"
+        template = "invisible_extra_large_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "XL_02"
+        template = "invisible_extra_large_turret"
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "XL_03"
+        template = "invisible_extra_large_turret"
+        locatorname = "medium_gun_03"
+    }
+    component_slot = {
+        name = "XL_04"
+        template = "invisible_extra_large_turret"
+        locatorname = "medium_gun_04"
+    }
+    component_slot = {
+        name = "XL_05"
+        template = "invisible_extra_large_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "XL_06"
+        template = "invisible_extra_large_turret"
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "XL_07"
+        template = "invisible_extra_large_turret"
+        locatorname = "medium_gun_03"
+    }
+    component_slot = {
+        name = "XL_08"
+        template = "invisible_extra_large_turret"
+        locatorname = "medium_gun_04"
+    }
+    component_slot = {
+        name = "XL_09"
+        template = "invisible_extra_large_turret"
+        locatorname = "medium_gun_03"
+    }
+    component_slot = {
+        name = "XL_10"
+        template = "invisible_extra_large_turret"
+        locatorname = "medium_gun_04"
+    }
+    component_slot = {
+        name = "XL_11"
+        template = "invisible_extra_large_turret"
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "XL_12"
+        template = "invisible_extra_large_turret"
+        locatorname = "medium_gun_03"
+    }
+    component_slot = {
+        name = "XL_13"
+        template = "invisible_extra_large_turret"
+        locatorname = "medium_gun_04"
+    }
+    component_slot = {
+        name = "XL_14"
+        template = "invisible_extra_large_turret"
+        locatorname = "medium_gun_03"
+    }
+    component_slot = {
+        name = "XL_15"
+        template = "invisible_extra_large_turret"
+        locatorname = "medium_gun_04"
+    }
+    large_utility_slots = 15
+    aux_utility_slots = 5
+    resources = {
+        category = ship_sections
+        cost = {
+            sr_dark_matter = 400
+            acot_sr_dark_energy = 400
+        }
+    }
+}

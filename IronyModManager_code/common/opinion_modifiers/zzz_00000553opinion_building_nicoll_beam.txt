@@ -1,0 +1,9 @@
+opinion_building_nicoll_beam = {
+    opinion = {
+        base = -50
+        modifier = {
+            add = 25
+            is_country_type = fallen_empire
+        }
+    }
+}

@@ -1,0 +1,23 @@
+triggered_opinion_lrsk_gvp_peculiar_enterprise = {
+    trigger = {
+        OR = {
+            AND = {
+                has_valid_civic = lrsk_gov_var_civic_enlightened_liberalism
+                from = {
+                    has_authority = auth_corporate
+                    has_valid_civic = lrsk_gov_var_civic_mc_workers_councils
+                }
+            }
+            AND = {
+                has_valid_civic = lrsk_gov_var_civic_enlightened_liberalism
+                from = {
+                    has_valid_civic = civic_merchant_guilds
+                    has_valid_civic = lrsk_gov_var_civic_workers_councils
+                }
+            }
+        }
+    }
+    opinion = {
+        base = -5
+    }
+}

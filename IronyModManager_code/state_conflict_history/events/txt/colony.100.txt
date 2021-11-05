@@ -11,15 +11,13 @@ planet_event = {
         has_owner = yes
         is_homeworld = no
         original_owner = yes
+        is_ai = no
         has_ground_combat = no
         is_capital = no
         is_occupied_flag = no
     }
     trigger = {
         num_pops > 0
-        owner = {
-            is_ai = no
-        }
         habitable_planet = yes
         uses_district_set = standard
         NOR = {
@@ -60,6 +58,7 @@ planet_event = {
             is_planet_class = pc_necrohive
             is_planet_class = pc_irradiated
             is_planet_class = pc_karst
+            is_planet_class = pc_reef
             is_planet_class = pc_primal
             is_planet_class = pc_aquatic
             is_planet_class = pc_salt

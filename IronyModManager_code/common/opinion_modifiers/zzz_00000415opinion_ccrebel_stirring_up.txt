@@ -1,0 +1,10 @@
+opinion_ccrebel_stirring_up = {
+    opinion = {
+        base = -25
+    }
+    accumulative = yes
+    min = -150
+    decay = {
+        base = 2
+    }
+}

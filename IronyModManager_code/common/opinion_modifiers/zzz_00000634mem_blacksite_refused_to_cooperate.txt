@@ -1,0 +1,8 @@
+mem_blacksite_refused_to_cooperate = {
+    opinion = {
+        base = -30
+    }
+    decay = {
+        base = 1
+    }
+}

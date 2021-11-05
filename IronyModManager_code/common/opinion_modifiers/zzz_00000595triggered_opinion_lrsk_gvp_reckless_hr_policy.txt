@@ -1,0 +1,17 @@
+triggered_opinion_lrsk_gvp_reckless_hr_policy = {
+    trigger = {
+        has_valid_civic = civic_merchant_guilds
+        NOT = {
+            has_valid_civic = lrsk_gov_var_civic_workers_councils
+        }
+        from = {
+            has_valid_civic = lrsk_gov_var_civic_workers_councils
+            NOT = {
+                has_valid_civic = civic_merchant_guilds
+            }
+        }
+    }
+    opinion = {
+        base = -15
+    }
+}

@@ -1,0 +1,5 @@
+opinion_threatening_all_life = {
+    opinion = {
+        base = -500
+    }
+}

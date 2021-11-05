@@ -1,0 +1,12 @@
+opinion_irradiated_planet = {
+    opinion = {
+        base = -10
+        modifier = {
+            add = 10
+            is_country_type = fallen_empire
+        }
+    }
+    decay = {
+        base = 1
+    }
+}

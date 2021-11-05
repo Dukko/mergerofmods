@@ -1,0 +1,39 @@
+namespace = akx
+planet_event = {
+    id = akx.9399
+    hide_window = yes
+    trigger = {
+        has_observation_outpost = yes
+        has_owner = yes
+        owner = {
+            is_country_type = primitive
+            OR = {
+                has_country_flag = renaissance_age
+                has_country_flag = steam_age
+                has_country_flag = industrial_age
+                has_country_flag = machine_age
+                has_country_flag = atomic_age
+                has_country_flag = early_space_age
+            }
+        }
+        observation_outpost_owner = {
+            is_ai = no
+            has_country_flag = worm_events_available
+            NOT = {
+                has_country_flag = coils_of_god
+            }
+        }
+    }
+    mean_time_to_happen = {
+        months = 600
+    }
+    immediate = {
+        save_global_event_target_as = coils_planet
+        observation_outpost_owner = {
+            set_country_flag = coils_of_god
+            country_event = {
+                id = akx.9400
+            }
+        }
+    }
+}

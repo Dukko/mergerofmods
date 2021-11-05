@@ -1,0 +1,12 @@
+is_emperor_chance_20 = {
+    weight = {
+        modifier = {
+            target = {
+                target = {
+                    is_galactic_emperor = yes
+                }
+            }
+            weight = 20
+        }
+    }
+}

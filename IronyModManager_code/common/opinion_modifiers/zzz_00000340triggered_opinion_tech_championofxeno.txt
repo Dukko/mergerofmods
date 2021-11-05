@@ -1,0 +1,10 @@
+triggered_opinion_tech_championofxeno = {
+    trigger = {
+        FROM = {
+            has_technology = tech_championofxeno
+        }
+    }
+    opinion = {
+        base = 20
+    }
+}

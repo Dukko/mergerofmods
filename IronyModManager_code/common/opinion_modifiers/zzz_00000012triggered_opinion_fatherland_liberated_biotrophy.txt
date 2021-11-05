@@ -1,0 +1,16 @@
+triggered_opinion_fatherland_liberated_biotrophy = {
+    trigger = {
+        has_valid_civic = civic_liberated_biotrophies
+        from = {
+            has_valid_civic = civic_machine_servitor
+            any_owned_pop = {
+                has_living_standard = {
+                    type = living_standard_organic_trophy
+                }
+            }
+        }
+    }
+    opinion = {
+        base = -1000
+    }
+}

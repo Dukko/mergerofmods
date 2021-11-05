@@ -1,0 +1,12 @@
+opinion_freed_pops = {
+    opinion = {
+        base = -40
+        modifier = {
+            add = -20
+            is_civic_machine_assimilator = yes
+        }
+    }
+    decay = {
+        base = 1
+    }
+}

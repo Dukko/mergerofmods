@@ -1,0 +1,13 @@
+xvcv_mdlc_civic_division_by_zero_triggered_opinion = {
+    trigger = {
+        has_authority = auth_machine_intelligence
+        from = {
+            has_valid_civic = xvcv_mdlc_civic_division_by_zero
+        }
+    }
+    opinion = {
+        modifier = {
+            add = -20
+        }
+    }
+}

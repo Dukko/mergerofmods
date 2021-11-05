@@ -1,0 +1,36 @@
+ship_section_template = {
+    key = "KATZEN_SPACE_PANZER"
+    ship_size = giga_katzen_panzer
+    fits_on_slot = "mid"
+    entity = "katzen_panzer_full_entity"
+    icon = "GFX_ship_part_core_mid"
+    component_slot = {
+        name = "KINETIC_GUN_01"
+        template = "giga_invisible_large_fixed"
+        locatorname = "gun"
+    }
+    component_slot = {
+        name = "POINT_DEFENCE_01"
+        template = "point_defence_turret"
+        locatorname = "loc102"
+    }
+    component_slot = {
+        name = "AUTOCANNON_01"
+        template = "giga_invisible_medium_fixed"
+        rotation = 180
+        locatorname = "loc102"
+    }
+    component_slot = {
+        name = "AUTOCANNON_02"
+        template = "giga_invisible_medium_fixed"
+        rotation = 180
+        locatorname = "loc102"
+    }
+    component_slot = {
+        name = "KINETIC_BATTERY_01"
+        template = "giga_invisible_medium_fixed"
+        locatorname = "loc102"
+    }
+    large_utility_slots = 0
+    aux_utility_slots = 0
+}

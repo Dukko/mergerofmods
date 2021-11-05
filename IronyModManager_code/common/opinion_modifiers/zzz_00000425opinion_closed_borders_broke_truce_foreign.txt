@@ -1,0 +1,8 @@
+opinion_closed_borders_broke_truce_foreign = {
+    opinion = {
+        base = -25
+    }
+    decay = {
+        base = 2
+    }
+}

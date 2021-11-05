@@ -1,0 +1,383 @@
+terraform_link = {
+    from = "pc_ringworld_habitable"
+    to = "pc_ringworld_machine"
+    energy = 10000
+    duration = 1800
+    condition = {
+        has_ascension_perk = "ap_machine_worlds"
+    }
+    potential = {
+        is_machine_empire = yes
+        NOT = {
+            has_global_flag = machinering_disabled
+        }
+    }
+    ai_weight = {
+        weight = 20
+        modifier = {
+            factor = 0
+            from = {
+                any_owned_pop = {
+                    NOR = {
+                        has_trait = trait_machine_unit
+                        has_trait = trait_mechanical
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            from = {
+                is_colony = no
+            }
+        }
+    }
+    effect = {
+        from = {
+            set_planet_flag = giga_rw_machine
+        }
+        if = {
+            limit = {
+                from = {
+                    has_planet_flag = giga_ringworld_gar
+                }
+            }
+            switch = {
+                trigger = graphical_culture
+                humanoid_01 = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "humanoid_01_gargantuan_machine_habitable_sector_01_entity"
+                        }
+                    }
+                }
+                plantoid_01 = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "plantoid_01_gargantuan_machine_habitable_sector_01_entity"
+                        }
+                    }
+                }
+                mammalian_01 = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "mammalian_01_gargantuan_machine_habitable_sector_01_entity"
+                        }
+                    }
+                }
+                reptilian_01 = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "reptilian_01_gargantuan_machine_habitable_sector_01_entity"
+                        }
+                    }
+                }
+                avian_01 = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "avian_01_gargantuan_machine_habitable_sector_01_entity"
+                        }
+                    }
+                }
+                molluscoid_01 = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "molluscoid_01_gargantuan_machine_habitable_sector_01_entity"
+                        }
+                    }
+                }
+                fungoid_01 = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "fungoid_01_gargantuan_machine_habitable_sector_01_entity"
+                        }
+                    }
+                }
+                arthropoid_01 = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "arthropoid_01_gargantuan_machine_habitable_sector_01_entity"
+                        }
+                    }
+                }
+                lithoid_01 = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "lithoid_01_gargantuan_machine_habitable_sector_01_entity"
+                        }
+                    }
+                }
+                necroid_01 = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "necroid_01_gargantuan_machine_habitable_sector_01_entity"
+                        }
+                    }
+                }
+                default = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "mammalian_01_gargantuan_machine_habitable_sector_01_entity"
+                        }
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    has_planet_flag = giga_ringworld_beh
+                }
+            }
+            switch = {
+                trigger = graphical_culture
+                humanoid_01 = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "humanoid_01_behemoth_machine_habitable_sector_entity"
+                        }
+                    }
+                }
+                plantoid_01 = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "plantoid_01_behemoth_machine_habitable_sector_entity"
+                        }
+                    }
+                }
+                mammalian_01 = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "mammalian_01_behemoth_machine_habitable_sector_entity"
+                        }
+                    }
+                }
+                reptilian_01 = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "reptilian_01_behemoth_machine_habitable_sector_entity"
+                        }
+                    }
+                }
+                avian_01 = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "avian_01_behemoth_machine_habitable_sector_entity"
+                        }
+                    }
+                }
+                molluscoid_01 = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "molluscoid_01_behemoth_machine_habitable_sector_entity"
+                        }
+                    }
+                }
+                fungoid_01 = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "fungoid_01_behemoth_machine_habitable_sector_entity"
+                        }
+                    }
+                }
+                arthropoid_01 = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "arthropoid_01_behemoth_machine_habitable_sector_entity"
+                        }
+                    }
+                }
+                lithoid_01 = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "lithoid_01_behemoth_machine_habitable_sector_entity"
+                        }
+                    }
+                }
+                necroid_01 = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "necroid_01_behemoth_machine_habitable_sector_entity"
+                        }
+                    }
+                }
+                default = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "mammalian_01_behemoth_machine_habitable_sector_entity"
+                        }
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                from = {
+                    has_planet_flag = giga_ringworld_tit
+                }
+            }
+            switch = {
+                trigger = graphical_culture
+                humanoid_01 = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "humanoid_01_titanic_machine_habitable_sector_entity"
+                        }
+                    }
+                }
+                plantoid_01 = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "plantoid_01_titanic_machine_habitable_sector_entity"
+                        }
+                    }
+                }
+                mammalian_01 = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "mammalian_01_titanic_machine_habitable_sector_entity"
+                        }
+                    }
+                }
+                reptilian_01 = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "reptilian_01_titanic_machine_habitable_sector_entity"
+                        }
+                    }
+                }
+                avian_01 = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "avian_01_titanic_machine_habitable_sector_entity"
+                        }
+                    }
+                }
+                molluscoid_01 = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "molluscoid_01_titanic_machine_habitable_sector_entity"
+                        }
+                    }
+                }
+                fungoid_01 = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "fungoid_01_titanic_machine_habitable_sector_entity"
+                        }
+                    }
+                }
+                arthropoid_01 = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "arthropoid_01_titanic_machine_habitable_sector_entity"
+                        }
+                    }
+                }
+                lithoid_01 = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "lithoid_01_titanic_machine_habitable_sector_entity"
+                        }
+                    }
+                }
+                necroid_01 = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "necroid_01_titanic_machine_habitable_sector_entity"
+                        }
+                    }
+                }
+                default = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "mammalian_01_titanic_machine_habitable_sector_entity"
+                        }
+                    }
+                }
+            }
+        }
+        else = {
+            switch = {
+                trigger = graphical_culture
+                humanoid_01 = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "humanoid_01_vanilla_machine_habitable_entity"
+                        }
+                    }
+                }
+                plantoid_01 = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "plantoid_01_vanilla_machine_habitable_entity"
+                        }
+                    }
+                }
+                mammalian_01 = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "mammalian_01_vanilla_machine_habitable_entity"
+                        }
+                    }
+                }
+                reptilian_01 = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "reptilian_01_vanilla_machine_habitable_entity"
+                        }
+                    }
+                }
+                avian_01 = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "avian_01_vanilla_machine_habitable_entity"
+                        }
+                    }
+                }
+                molluscoid_01 = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "molluscoid_01_vanilla_machine_habitable_entity"
+                        }
+                    }
+                }
+                fungoid_01 = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "fungoid_01_vanilla_machine_habitable_entity"
+                        }
+                    }
+                }
+                arthropoid_01 = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "arthropoid_01_vanilla_machine_habitable_entity"
+                        }
+                    }
+                }
+                lithoid_01 = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "lithoid_01_vanilla_machine_habitable_entity"
+                        }
+                    }
+                }
+                necroid_01 = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "necroid_01_vanilla_machine_habitable_entity"
+                        }
+                    }
+                }
+                default = {
+                    from = {
+                        set_planet_entity = {
+                            entity = "mammalian_01_vanilla_machine_habitable_entity"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

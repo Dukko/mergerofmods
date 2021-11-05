@@ -1,0 +1,29 @@
+ship_section_template = {
+    key = "KATZEN_APC"
+    ship_size = katzen_troop_ship
+    fits_on_slot = "mid"
+    entity = "katzen_constructor_entity"
+    icon = "GFX_ship_part_core_mid"
+    component_slot = {
+        name = "MISSILE_01"
+        template = "giga_invisible_medium_fixed"
+        locatorname = "loc101"
+    }
+    component_slot = {
+        name = "KINETIC_01"
+        template = "giga_invisible_large_fixed"
+        locatorname = "loc101"
+    }
+    component_slot = {
+        name = "KINETIC_02"
+        template = "giga_invisible_medium_fixed"
+        locatorname = "loc101"
+    }
+    component_slot = {
+        name = "KINETIC_03"
+        template = "giga_invisible_medium_fixed"
+        locatorname = "loc101"
+    }
+    large_utility_slots = 0
+    aux_utility_slots = 0
+}

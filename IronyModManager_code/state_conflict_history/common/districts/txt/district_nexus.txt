@@ -29,25 +29,7 @@ district_nexus = {
         NOT = {
             has_modifier = resort_colony
         }
-        exists = owner
-        OR = {
-            owner = {
-                is_ai = no
-            }
-            AND = {
-                num_districts = {
-                    type = district_nexus
-                    value < 3
-                }
-            }
-            AND = {
-                num_districts = {
-                    type = district_nexus
-                    value < 6
-                }
-                is_capital = yes
-            }
-        }
+        str_nexus_district_allow = yes
     }
     conversion_ratio = 1
     convert_to = {

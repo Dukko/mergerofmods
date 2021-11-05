@@ -1,0 +1,8 @@
+mem_opinion_hive_encounter_help_refused = {
+    opinion = {
+        base = -30
+    }
+    decay = {
+        base = 1
+    }
+}

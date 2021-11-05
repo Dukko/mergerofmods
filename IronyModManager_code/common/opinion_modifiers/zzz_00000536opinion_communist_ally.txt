@@ -1,0 +1,5 @@
+opinion_communist_ally = {
+    opinion = {
+        base = 125
+    }
+}

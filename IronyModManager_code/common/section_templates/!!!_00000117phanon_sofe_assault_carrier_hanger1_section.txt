@@ -1,0 +1,68 @@
+ship_section_template = {
+    key = "phanon_sofe_assault_carrier_hanger1_section"
+    ship_size = fe_assault_carrier
+    fits_on_slot = hanger1
+    entity = "fe_assault_carrier_hanger1_entity"
+    icon = "GFX_ship_part_core_mid"
+    prerequisites = {
+        tech_precursor_phanon_design
+    }
+    component_slot = {
+        name = "LARGE_GUN_01"
+        template = "invisible_large_turret"
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_02"
+        template = "invisible_large_turret"
+        locatorname = "large_gun_02"
+    }
+    component_slot = {
+        name = "HANGER_01"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_locator_01"
+    }
+    component_slot = {
+        name = "HANGER_02"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_locator_02"
+    }
+    component_slot = {
+        name = "HANGER_03"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_locator_03"
+    }
+    component_slot = {
+        name = "HANGER_04"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_locator_04"
+    }
+    component_slot = {
+        name = "HANGER_05"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_locator_03"
+    }
+    component_slot = {
+        name = "HANGER_06"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_locator_04"
+    }
+    component_slot = {
+        name = "PD_01"
+        template = "invisible_point_defence_turret"
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "PD_02"
+        template = "invisible_point_defence_turret"
+        locatorname = "large_gun_02"
+    }
+    large_utility_slots = 14
+    aux_utility_slots = 2
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = 360
+        }
+    }
+}

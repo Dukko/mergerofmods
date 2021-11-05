@@ -1,0 +1,34 @@
+@section_cost = 80
+ship_section_template = {
+    key = "BATTLESHIP_MID_L3"
+    ship_size = battleship
+    fits_on_slot = mid
+    should_draw_components = yes
+    entity = "battleship_mid_L3_entity"
+    icon = "GFX_ship_part_core_mid"
+    ai_weight = {
+        weight = 9000
+    }
+    component_slot = {
+        name = "LARGE_GUN_01"
+        template = "large_turret"
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_02"
+        template = "large_turret"
+        locatorname = "large_gun_02"
+    }
+    component_slot = {
+        name = "LARGE_GUN_03"
+        template = "large_turret"
+        locatorname = "large_gun_03"
+    }
+    large_utility_slots = 3
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @section_cost
+        }
+    }
+}

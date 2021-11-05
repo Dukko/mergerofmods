@@ -1,0 +1,11 @@
+triggered_opinion_pspmod_ture_identity = {
+    opinion = {
+        modifier = {
+            add = -200
+        }
+    }
+    monthly = yes
+    decay = {
+        base = 2
+    }
+}

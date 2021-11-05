@@ -1,0 +1,128 @@
+ap_become_the_crisis = {
+    potential = {
+        has_nemesis = yes
+        NOT = {
+            has_ascension_perk = ap_become_the_crisis
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_ascension_perks_2"
+            num_ascension_perks > 1
+        }
+        custom_tooltip = {
+            fail_text = "requires_independence"
+            is_subject = no
+        }
+        custom_tooltip = {
+            fail_text = "must_not_be_custodian"
+            is_galactic_custodian = no
+        }
+        custom_tooltip = {
+            fail_text = "must_not_be_emperor"
+            is_galactic_emperor = no
+        }
+        NOR = {
+            has_ethic = ethic_xenophile
+            has_ethic = ethic_fanatic_xenophile
+            has_ethic = ethic_pacifist
+            has_ethic = ethic_fanatic_pacifist
+            has_ethic = ethic_egalitarian
+            has_ethic = ethic_fanatic_egalitarian
+            has_civic = civic_machine_servitor
+        }
+    }
+    on_enabled = {
+        hidden_effect = {
+            set_ai_personality = became_the_crisis
+        }
+        activate_crisis_progression = yes
+    }
+    ai_weight = {
+        factor = 7.5
+        modifier = {
+            factor = 0
+            nor = {
+                is_militarist = yes
+                is_xenophobe = yes
+                is_gestalt = yes
+                and = {
+                    is_authoritarian = yes
+                    is_spiritualist = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 10
+            is_homicidal = yes
+        }
+        modifier = {
+            factor = 0
+            or = {
+                fleet_power < 100000
+                and = {
+                    has_country_flag = str_has_bad_economy_score
+                    has_country_flag = str_has_bad_fleet_score
+                }
+                has_country_flag = str_has_terrible_economy_score
+                has_country_flag = str_has_terrible_fleet_score
+                has_country_flag = str_has_terrible_tech_score
+            }
+        }
+        modifier = {
+            factor = 2
+            has_tradition = tr_supremacy_finish
+        }
+        modifier = {
+            factor = 10
+            num_ascension_perks > 2
+            resource_income_compare = {
+                resource = alloys
+                value > 200
+            }
+            resource_income_compare = {
+                resource = physics_research
+                value > 500
+            }
+            rusher2 = yes
+        }
+        modifier = {
+            factor = 0
+            galaxy_percentage < 0.05
+            minilategame = no
+        }
+        modifier = {
+            factor = 5
+            galaxy_percentage > 0.2
+        }
+        modifier = {
+            factor = 100
+            minilategame = yes
+            rusher = yes
+            num_ascension_perks > 3
+            resource_income_compare = {
+                resource = alloys
+                value > 200
+            }
+        }
+        modifier = {
+            factor = 0
+            count_country = {
+                count > 2
+                limit = {
+                    has_ascension_perk = ap_become_the_crisis
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            count_country = {
+                count > 1
+                limit = {
+                    has_ascension_perk = ap_become_the_crisis
+                }
+            }
+            num_ascension_perks < 4
+        }
+    }
+}

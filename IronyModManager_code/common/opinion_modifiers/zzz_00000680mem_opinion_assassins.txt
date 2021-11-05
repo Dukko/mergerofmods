@@ -1,0 +1,8 @@
+mem_opinion_assassins = {
+    opinion = {
+        base = -100
+    }
+    decay = {
+        base = 15
+    }
+}

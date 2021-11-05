@@ -1,0 +1,68 @@
+@section_cost = 160
+ship_section_template = {
+    key = "EAC_TITAN_MID_2L_2M_4S"
+    ship_size = titan
+    fits_on_slot = mid
+    should_draw_components = yes
+    entity = "titan_mid_entity"
+    icon = "GFX_ship_part_core_mid"
+    ai_weight = {
+        modifier = {
+            factor = 10
+            is_preferred_weapons = weapon_type_kinetic
+        }
+        modifier = {
+            factor = 0.1
+            NOT = {
+                is_preferred_weapons = weapon_type_kinetic
+            }
+        }
+    }
+    component_slot = {
+        name = "LARGE_GUN_01"
+        template = "large_turret"
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_02"
+        template = "large_turret"
+        locatorname = "large_gun_02"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_01"
+        template = "medium_turret"
+        locatorname = "large_gun_03"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_02"
+        template = "medium_turret"
+        locatorname = "large_gun_04"
+    }
+    component_slot = {
+        name = "SMALL_GUN_01"
+        template = "invisible_small_turret"
+        locatorname = "large_gun_03"
+    }
+    component_slot = {
+        name = "SMALL_GUN_02"
+        template = "invisible_small_turret"
+        locatorname = "large_gun_03"
+    }
+    component_slot = {
+        name = "SMALL_GUN_03"
+        template = "invisible_small_turret"
+        locatorname = "large_gun_04"
+    }
+    component_slot = {
+        name = "SMALL_GUN_04"
+        template = "invisible_small_turret"
+        locatorname = "large_gun_04"
+    }
+    large_utility_slots = 6
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @section_cost
+        }
+    }
+}

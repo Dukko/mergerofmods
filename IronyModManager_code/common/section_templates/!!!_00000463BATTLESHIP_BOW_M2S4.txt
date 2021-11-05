@@ -1,0 +1,51 @@
+@section_cost = 80
+ship_section_template = {
+    key = "BATTLESHIP_BOW_M2S4"
+    ship_size = battleship
+    fits_on_slot = bow
+    should_draw_components = yes
+    entity = "battleship_bow_XL1_entity"
+    icon = "GFX_ship_part_core_bow"
+    prerequisites = {
+        tech_energy_lance_1
+        tech_energy_lance_2
+        tech_arc_emitter_1
+        tech_arc_emitter_2
+        tech_mass_accelerator_1
+        tech_mass_accelerator_2
+    }
+    ai_weight = {
+        weight = 10000
+        modifier = {
+            factor = 0
+            NOR = {
+                and = {
+                    has_technology = tech_mass_accelerator_1
+                    resource_stockpile_compare = {
+                        resource = volatile_motes
+                        value > 50
+                    }
+                }
+                and = {
+                    has_technology = tech_energy_lance_1
+                    resource_stockpile_compare = {
+                        resource = rare_crystals
+                        value > 50
+                    }
+                }
+            }
+        }
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_01"
+        template = "invisible_extra_large_fixed"
+        locatorname = "xl_gun_01"
+    }
+    large_utility_slots = 3
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @section_cost
+        }
+    }
+}

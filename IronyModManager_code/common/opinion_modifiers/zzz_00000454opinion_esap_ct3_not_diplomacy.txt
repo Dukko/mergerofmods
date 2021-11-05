@@ -1,0 +1,10 @@
+opinion_esap_ct3_not_diplomacy = {
+    trigger = {
+        from = {
+            has_ascension_perk = ap_esap_ct3_not_diplomacy
+        }
+    }
+    opinion = {
+        base = -50
+    }
+}

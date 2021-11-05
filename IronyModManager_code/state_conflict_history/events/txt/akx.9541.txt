@@ -1,0 +1,89 @@
+namespace = akx
+planet_event = {
+    id = akx.9541
+    title = akx.9541.name
+    desc = akx.9541.desc
+    picture = GFX_evt_colony_settlement
+    location = root
+    is_triggered_only = yes
+    immediate = {
+        random_owned_pop = {
+            limit = {
+                exists = planet
+                planet = {
+                    is_same_value = root
+                }
+            }
+            save_event_target_as = purged_species
+        }
+        every_country = {
+            limit = {
+                has_communications = root.owner
+                NOT = {
+                    is_country = root.owner
+                }
+                NOT = {
+                    is_same_species = root.owner
+                }
+                NOT = {
+                    has_ai_personality_behaviour = purger
+                }
+                OR = {
+                    is_country_type = default
+                    has_ai_personality = awakened_fallen_empire_xenophile
+                }
+            }
+            add_opinion_modifier = {
+                who = root.owner
+                modifier = opinion_genocidal
+            }
+        }
+        every_country = {
+            limit = {
+                has_communications = root.owner
+                NOT = {
+                    is_country = root.owner
+                }
+                is_same_species = event_target:purged_species
+            }
+            add_opinion_modifier = {
+                who = root.owner
+                modifier = opinion_genocidal_our_species
+            }
+        }
+    }
+    after = {
+        hidden_effect = {
+            every_owned_pop = {
+                kill_pop = yes
+            }
+            remove_all_districts = yes
+            remove_all_buildings = yes
+            destroy_colony = yes
+        }
+    }
+    option = {
+        name = akx.9541.a
+        owner = {
+            add_monthly_resource_mult = {
+                resource = unity
+                value = @tier3unityreward
+            }
+        }
+    }
+    option = {
+        name = akx.9541.b
+        owner = {
+            add_monthly_resource_mult = {
+                resource = influence
+                value = 24
+                min = 200
+                max = 1000
+            }
+            add_modifier = {
+                modifier = unity_reduction_akx_9541
+                days = 1800
+            }
+        }
+    }
+}

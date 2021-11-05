@@ -1,0 +1,10 @@
+dpe_spiritualist_mission_insult = {
+    opinion = {
+        base = -50
+    }
+    accumulative = yes
+    min = -60
+    decay = {
+        base = 5
+    }
+}

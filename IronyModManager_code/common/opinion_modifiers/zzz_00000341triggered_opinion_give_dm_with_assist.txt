@@ -1,0 +1,8 @@
+triggered_opinion_give_dm_with_assist = {
+    opinion = {
+        base = 250
+    }
+    decay = {
+        base = 3
+    }
+}

@@ -1,0 +1,5 @@
+mem_lunar_age_tried_annexation = {
+    opinion = {
+        base = -100
+    }
+}

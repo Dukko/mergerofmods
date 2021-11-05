@@ -1,0 +1,75 @@
+nerve_stapled_pops = {
+    trigger = {
+        has_intel_level = {
+            who = FROM
+            category = economy
+            level >= 2
+        }
+        FROM = {
+            any_owned_pop = {
+                has_trait = trait_nerve_stapled
+            }
+        }
+    }
+    opinion = {
+        base = 0
+        modifier = {
+            add = -20
+            OR = {
+                has_ethic = ethic_egalitarian
+                has_ethic = ethic_xenophile
+            }
+            NOR = {
+                has_ethic = ethic_fanatic_egalitarian
+                has_ethic = ethic_fanatic_xenophile
+            }
+            is_xenophobe = no
+        }
+        modifier = {
+            add = -40
+            OR = {
+                has_ethic = ethic_fanatic_egalitarian
+                has_ethic = ethic_fanatic_xenophile
+            }
+            is_xenophobe = no
+        }
+        modifier = {
+            add = -40
+            FROM = {
+                any_owned_pop = {
+                    has_trait = trait_nerve_stapled
+                    has_citizenship_type = {
+                        type = citizenship_full
+                        country = prevprev
+                    }
+                }
+            }
+        }
+        modifier = {
+            add = -20
+            has_ethic = ethic_xenophobe
+            FROM = {
+                any_owned_pop = {
+                    has_trait = trait_nerve_stapled
+                    has_citizenship_type = {
+                        type = citizenship_full
+                        country = prevprev
+                    }
+                }
+            }
+        }
+        modifier = {
+            add = -40
+            has_ethic = ethic_fanatic_xenophobe
+            FROM = {
+                any_owned_pop = {
+                    has_trait = trait_nerve_stapled
+                    has_citizenship_type = {
+                        type = citizenship_full
+                        country = prevprev
+                    }
+                }
+            }
+        }
+    }
+}

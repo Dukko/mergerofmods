@@ -1,0 +1,11 @@
+ship_section_template = {
+    key = "passenger_liner_section"
+    ship_size = passenger_liner
+    fits_on_slot = mid
+    entity = "abandoned_ship_entity"
+    icon = "GFX_ship_part_core_mid"
+    small_utility_slots = 1
+    medium_utility_slots = 1
+    large_utility_slots = 1
+    aux_utility_slots = 1
+}

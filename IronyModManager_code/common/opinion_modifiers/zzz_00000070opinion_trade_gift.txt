@@ -1,0 +1,10 @@
+opinion_trade_gift = {
+    opinion = {
+        base = 0.1
+    }
+    accumulative = yes
+    max = 1000
+    decay = {
+        base = 5
+    }
+}

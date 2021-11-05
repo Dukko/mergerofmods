@@ -1,0 +1,63 @@
+r_shadowgate_st = {
+    activation_duration = 1800
+    portrait = "GFX_relic_shadowgate_st"
+    sound = "sfx_relic_activation_shadowgate_st"
+    resources = {
+        category = relics
+        cost = {
+            influence = 75
+        }
+        produces = {
+            trigger = {
+                NOT = {
+                    exists = event_target:shadowgate_ap_country
+                }
+            }
+            unity = 5
+        }
+    }
+    ai_weight = {
+        weight = 100
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = event_target:shadowgate_ap_country
+        }
+        custom_tooltip = shadowgate.st.passive
+    }
+    triggered_country_modifier = {
+        potential = {
+            has_modifier = shadowgate_cpc_unspoiled
+        }
+        custom_tooltip = shadowgate.st.cpc.digsite.passive
+    }
+    score = 100
+    active_effect = {
+        custom_tooltip = shadowgate.st.active
+        custom_tooltip = relic_triumph_cooldown_short
+        hidden_effect = {
+            set_timed_country_flag = {
+                flag = shadowgate_st_active
+                days = 1800
+            }
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                days = 1800
+            }
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_relic_no_cooldown"
+            NOT = {
+                has_modifier = relic_activation_cooldown
+            }
+        }
+        custom_tooltip = {
+            fail_text = "shadowgate.crw.fail.antiresonant.void"
+            NOT = {
+                has_relic = r_shadowgate_crwt_active
+            }
+        }
+    }
+}

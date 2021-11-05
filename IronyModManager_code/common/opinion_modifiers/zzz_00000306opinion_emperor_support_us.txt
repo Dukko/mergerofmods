@@ -1,0 +1,8 @@
+opinion_emperor_support_us = {
+    opinion = {
+        base = 100
+    }
+    decay = {
+        base = 1
+    }
+}

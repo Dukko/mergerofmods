@@ -1,0 +1,68 @@
+@activation_cost = 150
+@triumph_duration = 3600
+gpm_r_venerable_dreadnaught = {
+    activation_duration = @triumph_duration
+    portrait = "GFX_gpm_r_venerable_dreadnaught"
+    sound = "relic_activation_khans_throne"
+    resources = {
+        category = relics
+        cost = {
+            influence = @activation_cost
+        }
+    }
+    ai_weight = {
+        weight = 0
+    }
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+        army_defense_health_mult = 0.5
+        show_only_custom_tooltip = no
+        custom_tooltip = "gpm_r_venerable_dreadnaught_passive_effect_tooltip"
+    }
+    score = 1000
+    active_effect = {
+        custom_tooltip = "gpm_r_venerable_dreadnaught_active_effect_tooltip"
+        hidden_effect = {
+            capital_scope = {
+                create_fleet = {
+                    name = "NAME_venerable_dreadnaught_fleet"
+                    effect = {
+                        set_owner = root
+                        create_army_transport = {
+                            ship_name = "NAME_venerable_dreadnaught_ship"
+                            army_name = "NAME_venerable_dreadnaught"
+                            army_type = gpm_venerable_dreadnaught_army
+                        }
+                        set_location = {
+                            target = prev
+                            distance = 5
+                            angle = random
+                        }
+                    }
+                    settings = {
+                        can_change_leader = yes
+                        uses_naval_capacity = no
+                        spawn_debris = no
+                    }
+                }
+            }
+        }
+        custom_tooltip = relic_triumph_cooldown
+        hidden_effect = {
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                days = @triumph_duration
+            }
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_relic_no_cooldown"
+            NOT = {
+                has_modifier = relic_activation_cooldown
+            }
+        }
+    }
+}

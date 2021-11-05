@@ -1,0 +1,8 @@
+has_event_chance_5 = {
+    weight = {
+        modifier = {
+            has_global_flag = expanded_events_active
+            weight = 5
+        }
+    }
+}

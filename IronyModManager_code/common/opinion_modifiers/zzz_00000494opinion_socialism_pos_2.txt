@@ -1,0 +1,15 @@
+opinion_socialism_pos_2 = {
+    trigger = {
+        OR = {
+            has_ethic = "ethic_socialism"
+        }
+        from = {
+            OR = {
+                has_ethic = "ethic_fanatic_socialism"
+            }
+        }
+    }
+    opinion = {
+        base = 10
+    }
+}

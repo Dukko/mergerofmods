@@ -1,0 +1,10 @@
+opinion_caught_hacking = {
+    opinion = {
+        base = -75
+    }
+    accumulative = yes
+    min = -375
+    decay = {
+        base = 1
+    }
+}

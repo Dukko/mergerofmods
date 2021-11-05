@@ -1,0 +1,10 @@
+dpe_electoral_help_auth_1 = {
+    opinion = {
+        base = 50
+    }
+    decay = {
+        base = 6
+    }
+    accumulative = yes
+    max = 100
+}

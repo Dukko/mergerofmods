@@ -1,0 +1,14 @@
+triggered_opinion_lrsk_gvp_unaccountable_tyrants = {
+    trigger = {
+        OR = {
+            has_valid_civic = lrsk_gov_var_civic_republicanism
+            has_valid_civic = lrsk_gov_var_civic_republicanism_oli
+        }
+        from = {
+            has_valid_civic = lrsk_gov_var_civic_royal_absolutism
+        }
+    }
+    opinion = {
+        base = -15
+    }
+}

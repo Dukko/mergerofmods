@@ -1,0 +1,11 @@
+triggered_opinion_lrsk_gvp_collectivist_nightmare = {
+    trigger = {
+        has_valid_civic = lrsk_gov_var_civic_enlightened_liberalism
+        from = {
+            has_valid_civic = civic_shared_burden
+        }
+    }
+    opinion = {
+        base = -20
+    }
+}

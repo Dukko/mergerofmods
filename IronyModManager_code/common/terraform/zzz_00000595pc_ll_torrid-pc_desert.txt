@@ -1,0 +1,21 @@
+terraform_link = {
+    from = pc_ll_torrid
+    to = pc_desert
+    energy = 3500
+    duration = 2700
+    ai_weight = {
+        weight = 5
+        modifier = {
+            factor = 2
+            ideal_planet_class = pc_desert
+        }
+    }
+    condition = {
+        has_technology = tech_climate_restoration
+    }
+    effect = {
+        from = {
+            remove_modifier = lifeless_torrid
+        }
+    }
+}

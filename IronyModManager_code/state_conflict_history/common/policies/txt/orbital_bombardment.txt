@@ -1,7 +1,7 @@
 orbital_bombardment = {
     potential = {
         OR = {
-            merg_is_default_empire_not_ev = yes
+            merg_is_default_empire = yes
             is_country_type_with_subjects = yes
             is_country_type = vol
         }

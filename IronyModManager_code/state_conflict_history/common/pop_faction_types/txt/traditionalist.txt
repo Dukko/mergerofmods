@@ -130,7 +130,7 @@ traditionalist = {
             exists = owner
             owner = {
                 can_set_ai_policy = yes
-                NAND = {
+                NOR = {
                     has_policy_flag = ai_full_rights
                     has_valid_civic = civic_machine_cult
                 }

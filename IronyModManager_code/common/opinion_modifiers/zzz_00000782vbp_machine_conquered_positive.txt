@@ -1,0 +1,8 @@
+vbp_machine_conquered_positive = {
+    opinion = {
+        base = 20
+    }
+    decay = {
+        base = 1
+    }
+}

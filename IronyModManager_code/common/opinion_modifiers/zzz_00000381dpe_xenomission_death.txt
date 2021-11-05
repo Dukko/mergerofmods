@@ -1,0 +1,8 @@
+dpe_xenomission_death = {
+    opinion = {
+        base = -250
+    }
+    decay = {
+        base = 1
+    }
+}

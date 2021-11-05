@@ -1,0 +1,46 @@
+@adv_section_cost = 60
+ship_section_template = {
+    key = "CRUISER_MID_CARRIER"
+    ship_size = cruiser
+    fits_on_slot = mid
+    should_draw_components = yes
+    entity = "cruiser_mid_S2HB_entity"
+    icon = "GFX_ship_part_core_mid"
+    prerequisites = {
+        tech_cruiser_hull_1
+    }
+    ai_weight = {
+        modifier = {
+            factor = 10
+            is_preferred_weapons = weapon_type_explosive
+        }
+        modifier = {
+            factor = 40
+            is_preferred_weapons = weapon_type_strike_craft
+        }
+        modifier = {
+            factor = 1
+            NOR = {
+                is_preferred_weapons = weapon_type_strike_craft
+                is_preferred_weapons = weapon_type_explosive
+            }
+        }
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_01"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_locator_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_02"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_locator_02"
+    }
+    large_utility_slots = 1
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @adv_section_cost
+        }
+    }
+}

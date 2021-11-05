@@ -1,0 +1,13 @@
+opinion_est_confederacy_4 = {
+    trigger = {
+        from = {
+            Or = {
+                has_active_tradition = tr_est_confederacy_4
+            }
+            is_overlord_to = root
+        }
+    }
+    opinion = {
+        base = 50
+    }
+}

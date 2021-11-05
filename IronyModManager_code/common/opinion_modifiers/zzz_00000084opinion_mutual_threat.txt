@@ -1,0 +1,6 @@
+opinion_mutual_threat = {
+    opinion = {
+        base = 1.6
+    }
+    unique = yes
+}

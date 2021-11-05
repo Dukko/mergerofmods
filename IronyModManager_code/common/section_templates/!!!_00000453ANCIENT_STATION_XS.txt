@@ -1,0 +1,16 @@
+ship_section_template = {
+    key = "ANCIENT_STATION_XS"
+    ship_size = station_xs
+    fits_on_slot = mid
+    should_draw_components = yes
+    entity = "station_xs_hull_entity"
+    icon = "GFX_ship_part_core_mid"
+    component_slot = {
+        name = "SMALL_GUN_01"
+        template = "small_turret"
+        locatorname = "small_gun_01"
+    }
+    large_utility_slots = 1
+    medium_utility_slots = 4
+    aux_utility_slots = 1
+}

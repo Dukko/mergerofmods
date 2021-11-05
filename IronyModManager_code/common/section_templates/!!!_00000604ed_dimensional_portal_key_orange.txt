@@ -1,0 +1,7 @@
+ship_section_template = {
+    key = "ed_dimensional_portal_key_orange"
+    ship_size = dimensional_portal_ed
+    fits_on_slot = mid
+    entity = "extra_dimensional_03_dimensional_portal_core_entity"
+    icon = "GFX_ship_part_core_mid"
+}

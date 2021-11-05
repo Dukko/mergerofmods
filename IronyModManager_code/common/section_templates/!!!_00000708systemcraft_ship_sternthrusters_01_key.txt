@@ -1,0 +1,134 @@
+ship_section_template = {
+    key = "systemcraft_ship_sternthrusters_01_key"
+    ship_size = giga_systemcraft
+    fits_on_slot = "sternthrusters"
+    entity = "war_system_locators_entity"
+    icon = "GFX_ship_part_core_mid"
+    component_slot = {
+        name = "STRIKE_CRAFT_01"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_02"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_03"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_04"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_05"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_06"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_07"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_02"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_08"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_02"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_09"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_02"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_10"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_02"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_11"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_02"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_12"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_02"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_13"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_03"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_14"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_03"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_15"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_03"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_16"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_03"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_17"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_03"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_18"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_03"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_19"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_04"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_20"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_04"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_21"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_04"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_22"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_04"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_23"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_04"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_24"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_04"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_25"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_04"
+    }
+    large_utility_slots = 15
+    aux_utility_slots = 5
+}

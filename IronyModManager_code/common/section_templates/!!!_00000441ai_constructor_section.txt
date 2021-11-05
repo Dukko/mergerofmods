@@ -1,0 +1,10 @@
+ship_section_template = {
+    key = "ai_constructor_section"
+    ship_size = construction_ship_ai
+    fits_on_slot = mid
+    entity = "empty_section_entity"
+    icon = "GFX_ship_part_core_mid"
+    small_utility_slots = 4
+    medium_utility_slots = 1
+    aux_utility_slots = 1
+}

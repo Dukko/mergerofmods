@@ -1,0 +1,10 @@
+opinion_ccrebel_subsidised = {
+    opinion = {
+        base = 15
+    }
+    accumulative = yes
+    max = 150
+    decay = {
+        base = 2
+    }
+}

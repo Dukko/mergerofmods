@@ -1,0 +1,10 @@
+dpe_electoral_betrayal = {
+    opinion = {
+        base = -100
+    }
+    decay = {
+        base = 3
+    }
+    accumulative = yes
+    min = -1000
+}

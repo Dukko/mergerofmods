@@ -184,6 +184,66 @@ building_system_capital = {
                 is_ai = yes
             }
             num_districts = {
+                type = district_mining
+                value > 0
+            }
+            str_force_district_mining = yes
+        }
+        job_starnet_spice_melange_farmer_add = -2
+        job_starnet_spice_melange_antifarmer_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            num_districts = {
+                type = district_mining
+                value > 2
+            }
+            str_force_district_mining = yes
+        }
+        job_starnet_spice_melange_farmer_add = -2
+        job_starnet_spice_melange_antifarmer_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            num_districts = {
+                type = district_mining
+                value > 4
+            }
+            str_force_district_mining = yes
+        }
+        job_starnet_spice_melange_farmer_add = -2
+        job_starnet_spice_melange_antifarmer_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            num_districts = {
+                type = district_mining
+                value > 6
+            }
+            str_force_district_mining = yes
+        }
+        job_starnet_spice_melange_farmer_add = -2
+        job_starnet_spice_melange_antifarmer_add = 2
+    }
+triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            num_districts = {
                 type = district_city
                 value > 0
             }

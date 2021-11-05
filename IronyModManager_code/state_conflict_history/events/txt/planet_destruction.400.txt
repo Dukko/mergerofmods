@@ -505,6 +505,9 @@ planet_event = {
                 pc_karst = {
                     change_pc = pc_karst
                 }
+                pc_reef = {
+                    change_pc = pc_reef
+                }
                 pc_ash = {
                     change_pc = pc_ash
                 }

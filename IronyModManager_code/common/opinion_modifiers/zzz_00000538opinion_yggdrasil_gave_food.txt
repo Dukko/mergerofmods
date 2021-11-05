@@ -1,0 +1,8 @@
+opinion_yggdrasil_gave_food = {
+    opinion = {
+        base = 100
+    }
+    decay = {
+        base = -1
+    }
+}

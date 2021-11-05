@@ -1,0 +1,9 @@
+dpe_spiritualist_mission_hive_listened = {
+    opinion = {
+        base = 30
+    }
+    accumulative = no
+    decay = {
+        base = 2
+    }
+}

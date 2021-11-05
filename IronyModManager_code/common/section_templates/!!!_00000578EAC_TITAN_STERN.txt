@@ -1,0 +1,51 @@
+@section_cost = 200
+ship_section_template = {
+    key = "EAC_TITAN_STERN"
+    ship_size = titan
+    fits_on_slot = stern
+    should_draw_components = yes
+    entity = "titan_stern_entity"
+    icon = "GFX_ship_part_core_stern"
+    prerequisites = {
+        "eac_aw_tech_advanced_carrier"
+    }
+    ai_weight = {
+        modifier = {
+            factor = 20
+            is_preferred_weapons = weapon_type_strike_craft
+        }
+        modifier = {
+            factor = 0.1
+            NOT = {
+                is_preferred_weapons = weapon_type_strike_craft
+            }
+        }
+    }
+    component_slot = {
+        name = "TORPEDO_01"
+        template = "medium_missile_turret"
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_02"
+        template = "medium_missile_turret"
+        locatorname = "large_gun_02"
+    }
+    component_slot = {
+        name = "SMALL_GUN_01"
+        template = "invisible_point_defence_turret"
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "SMALL_GUN_02"
+        template = "invisible_point_defence_turret"
+        locatorname = "large_gun_02"
+    }
+    aux_utility_slots = 3
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @section_cost
+        }
+    }
+}

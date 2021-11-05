@@ -1,0 +1,33 @@
+pc_reef = {
+    entity = "reef_planet"
+    entity_scale = @planet_standard_scale
+    icon = GFX_planet_type_pdreef
+    climate = "wet"
+    picture = pc_reef
+    atmosphere_color = hsv {
+        0.58
+        0.3
+        0.7
+    }
+    atmosphere_intensity = 1
+    atmosphere_width = 0.5
+    city_color_lut = "gfx/portraits/misc/colorcorrection_ocean.dds"
+    colonizable = yes
+    initial = yes
+    planet_size = {
+        min = @habitable_planet_min_size
+        max = @habitable_planet_max_size
+    }
+    moon_size = {
+        min = @habitable_moon_min_size
+        max = @habitable_moon_max_size
+    }
+    district_set = standard
+    carry_cap_per_free_district = @carry_cap_normal
+    modifier = {
+        planet_jobs_produces_mult = 0.05
+        biological_pop_happiness = 0.05
+        lithoid_pop_happiness = 0.05
+    }
+    uses_alternative_skies_for_moons = yes
+}

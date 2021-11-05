@@ -1,0 +1,6 @@
+dpe_spirmission_succeeded = {
+    opinion = {
+        base = 20
+    }
+    unique = yes
+}

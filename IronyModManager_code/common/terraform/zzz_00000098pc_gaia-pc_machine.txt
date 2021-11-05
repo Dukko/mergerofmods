@@ -1,0 +1,43 @@
+@machineCost = 10000
+@machineTime = 7200
+terraform_link = {
+    to = "pc_machine"
+    from = "pc_gaia"
+    energy = @machineCost
+    duration = @machineTime
+    potential = {
+        has_ascension_perk = ap_machine_worlds
+    }
+    ai_weight = {
+        weight = 10
+        modifier = {
+            factor = 10
+            from = {
+                num_pops > 10
+            }
+        }
+        modifier = {
+            factor = 2
+            from = {
+                num_pops > 25
+            }
+        }
+        modifier = {
+            factor = 0
+            from = {
+                any_owned_pop = {
+                    NOR = {
+                        has_trait = trait_machine_unit
+                        has_trait = trait_mechanical
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            from = {
+                is_colony = no
+            }
+        }
+    }
+}

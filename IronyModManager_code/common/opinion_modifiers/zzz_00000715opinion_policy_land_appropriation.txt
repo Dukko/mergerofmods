@@ -1,0 +1,35 @@
+opinion_policy_land_appropriation = {
+    opinion = {
+        base = 0
+        modifier = {
+            add = -5
+            is_egalitarian = yes
+            NOT = {
+                has_policy_flag = appropriation_allowed
+            }
+            FROM = {
+                has_policy_flag = appropriation_allowed
+            }
+        }
+        modifier = {
+            add = -5
+            has_ethic = ethic_xenophile
+            NOT = {
+                has_policy_flag = appropriation_allowed
+            }
+            FROM = {
+                has_policy_flag = appropriation_allowed
+            }
+        }
+        modifier = {
+            add = -10
+            has_ethic = ethic_fanatic_xenophile
+            NOT = {
+                has_policy_flag = appropriation_allowed
+            }
+            FROM = {
+                has_policy_flag = appropriation_allowed
+            }
+        }
+    }
+}

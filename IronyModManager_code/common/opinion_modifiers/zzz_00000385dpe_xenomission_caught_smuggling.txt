@@ -1,0 +1,10 @@
+dpe_xenomission_caught_smuggling = {
+    opinion = {
+        base = -50
+    }
+    decay = {
+        base = 2
+    }
+    accumulative = yes
+    min = -500
+}

@@ -19,10 +19,4 @@ tr_domination_adopt = {
             num_ascension_perks > 3
         }
     }
-    ai_weight = {
-        modifier = {
-            factor = 0
-            num_ascension_perks < 2
-        }
-    }
 }

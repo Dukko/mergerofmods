@@ -1,0 +1,8 @@
+opinion_broke_our_planet = {
+    opinion = {
+        base = -1000
+    }
+    decay = {
+        base = 1
+    }
+}

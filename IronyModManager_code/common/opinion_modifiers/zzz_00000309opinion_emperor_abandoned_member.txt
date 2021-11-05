@@ -1,0 +1,8 @@
+opinion_emperor_abandoned_member = {
+    opinion = {
+        base = -25
+    }
+    decay = {
+        base = 1
+    }
+}

@@ -1,0 +1,13 @@
+triggered_opinion_hegira_earth_sibling = {
+    trigger = {
+        has_origin = origin_hegira_colony
+        has_country_flag = fatherland_hegiran_from_earth
+        from = {
+            has_origin = origin_hegira_colony
+            has_country_flag = fatherland_hegiran_from_earth
+        }
+    }
+    opinion = {
+        base = 10
+    }
+}

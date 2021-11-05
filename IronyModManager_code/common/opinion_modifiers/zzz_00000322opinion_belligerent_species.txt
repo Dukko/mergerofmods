@@ -1,0 +1,29 @@
+opinion_belligerent_species = {
+    trigger = {
+        FROM = {
+            exists = ruler
+            ruler = {
+                species = {
+                    has_trait = "trait_additrait_belligerent"
+                }
+            }
+        }
+        NOT = {
+            AND = {
+                exists = ruler
+                ruler = {
+                    species = {
+                        has_trait = "trait_additrait_belligerent"
+                    }
+                }
+            }
+        }
+    }
+    opinion = {
+        base = -5
+        modifier = {
+            add = 10
+            has_trait = "trait_additrait_belligerent"
+        }
+    }
+}

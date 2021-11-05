@@ -1,0 +1,11 @@
+triggered_opinion_lrsk_gvp_uppity_underlings = {
+    trigger = {
+        has_valid_civic = lrsk_gov_var_civic_enlightened_liberalism
+        from = {
+            has_valid_civic = lrsk_gov_var_civic_workers_councils
+        }
+    }
+    opinion = {
+        base = -15
+    }
+}

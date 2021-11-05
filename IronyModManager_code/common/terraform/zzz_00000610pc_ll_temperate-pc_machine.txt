@@ -1,0 +1,24 @@
+terraform_link = {
+    from = pc_ll_temperate
+    to = pc_machine
+    energy = 10000
+    duration = 7200
+    ai_weight = {
+        weight = 15
+        modifier = {
+            factor = 3
+            is_machine_empire = yes
+        }
+    }
+    condition = {
+        has_ascension_perk = ap_machine_worlds
+    }
+    potential = {
+        is_machine_empire = yes
+    }
+    effect = {
+        from = {
+            remove_modifier = lifeless_temperate
+        }
+    }
+}

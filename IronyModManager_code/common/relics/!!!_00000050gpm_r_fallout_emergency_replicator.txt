@@ -1,0 +1,81 @@
+@triumph_duration = 3600
+gpm_r_fallout_emergency_replicator = {
+    activation_duration = @triumph_duration
+    portrait = "GFX_gpm_r_fallout_emergency_replicator"
+    sound = "relic_activation_the_galatron"
+    resources = {
+        category = relics
+        cost = {
+            energy = 10000
+        }
+    }
+    ai_weight = {
+        weight = 0
+    }
+    triggered_country_modifier = {
+        potential = {
+            is_gestalt = yes
+        }
+        country_base_minerals_produces_add = 50
+        country_base_food_produces_add = 50
+        country_base_alloys_produces_add = 20
+    }
+    triggered_country_modifier = {
+        potential = {
+            is_gestalt = no
+        }
+        country_base_minerals_produces_add = 50
+        country_base_food_produces_add = 50
+        country_base_alloys_produces_add = 10
+        country_base_consumer_goods_produces_add = 10
+    }
+    score = 1000
+    active_effect = {
+        if = {
+            limit = {
+                is_gestalt = yes
+            }
+            add_resource = {
+                minerals = 4000
+            }
+            add_resource = {
+                food = 4000
+            }
+            add_resource = {
+                alloys = 2000
+            }
+        }
+        else_if = {
+            limit = {
+                is_gestalt = no
+            }
+            add_resource = {
+                minerals = 3000
+            }
+            add_resource = {
+                food = 3000
+            }
+            add_resource = {
+                alloys = 1500
+            }
+            add_resource = {
+                consumer_goods = 1500
+            }
+        }
+        custom_tooltip = relic_triumph_cooldown
+        hidden_effect = {
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                days = @triumph_duration
+            }
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_relic_no_cooldown"
+            NOT = {
+                has_modifier = relic_activation_cooldown
+            }
+        }
+    }
+}

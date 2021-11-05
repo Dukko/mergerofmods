@@ -1,0 +1,44 @@
+@triumph_duration = 3600
+r_ehof_prethoryn_queen = {
+    activation_duration = @triumph_duration
+    portrait = "GFX_relic_prethoryn_queen"
+    sound = "relic_activation_prethoryn_blood_queen"
+    score = 0
+    resources = {
+        category = relics
+        cost = {
+            food = 10000
+        }
+        produces = {
+            society_research = 30
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_relic_no_cooldown"
+            NOT = {
+                has_modifier = relic_activation_cooldown
+            }
+        }
+    }
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+    }
+    active_effect = {
+        custom_tooltip = relic_queen_spawn
+        custom_tooltip = relic_triumph_cooldown
+        hidden_effect = {
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                days = @triumph_duration
+            }
+            country_event = {
+                id = crisis.250
+            }
+            remove_country_flag = ehof_has_prethoryn_queen
+            remove_relic = r_ehof_prethoryn_queen
+        }
+    }
+}

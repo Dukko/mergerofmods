@@ -1,0 +1,10 @@
+opinion_pse_bomb_uprooting_our_planet = {
+    opinion = {
+        base = -10
+    }
+    decay = {
+        base = 5
+    }
+    min = -200
+    accumulative = yes
+}

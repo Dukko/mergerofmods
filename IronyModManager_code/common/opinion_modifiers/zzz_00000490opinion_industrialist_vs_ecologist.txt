@@ -1,0 +1,20 @@
+opinion_industrialist_vs_ecologist = {
+    trigger = {
+        OR = {
+            has_valid_civic = "civic_consumerism"
+            has_origin = "origin_mechanists"
+            has_valid_civic = "civic_industrial_economy"
+        }
+        OR = {
+            FROM = {
+                has_valid_civic = "civic_environmentalist"
+            }
+            FROM = {
+                has_valid_civic = "civic_keepers_harmony"
+            }
+        }
+    }
+    opinion = {
+        base = -50
+    }
+}

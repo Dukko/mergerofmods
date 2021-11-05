@@ -1,0 +1,42 @@
+r_aspmod_synthetic_god_mummy = {
+    activation_duration = 3600
+    portrait = "GFX_relic_synthetic_god_mummy"
+    sound = "relic_activation_head_of_zarqlan"
+    resources = {
+        category = relics
+        cost = {
+            influence = 150
+        }
+    }
+    ai_weight = {
+        weight = 100
+    }
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+        country_base_influence_produces_add = 1
+    }
+    score = 2000
+    active_effect = {
+        add_modifier = {
+            modifier = aspmod_synthetic_god_mummy_relic_activated
+            days = 3600
+        }
+        custom_tooltip = relic_triumph_cooldown
+        hidden_effect = {
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                days = 3600
+            }
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_relic_no_cooldown"
+            NOT = {
+                has_modifier = relic_activation_cooldown
+            }
+        }
+    }
+}

@@ -1,0 +1,84 @@
+ship_section_template = {
+    key = "strategic_defence_command_platform_bow_01_key"
+    ship_size = strategic_defence_command_platform
+    fits_on_slot = "bow"
+    entity = "giga_maginot_orbital_defence_platform_entity"
+    icon = "GFX_ship_part_core_mid"
+    component_slot = {
+        name = "OMEGA_GUN_01"
+        template = "invisible_titanic_fixed"
+        locatorname = "omega_gun_01"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_01"
+        template = "maginot_extra_large_turret"
+        locatorname = "xl_turret_01"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_02"
+        template = "maginot_extra_large_turret"
+        locatorname = "xl_turret_02"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_03"
+        template = "maginot_extra_large_turret"
+        locatorname = "xl_turret_03"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_04"
+        template = "maginot_extra_large_turret"
+        locatorname = "xl_turret_04"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_05"
+        template = "giga_xl"
+        locatorname = "xl_turret_05"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_06"
+        template = "giga_xl"
+        locatorname = "xl_turret_06"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_07"
+        template = "giga_xl"
+        locatorname = "xl_turret_07"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_08"
+        template = "giga_xl"
+        locatorname = "xl_turret_08"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_09"
+        template = "giga_xl"
+        locatorname = "xl_turret_05"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_10"
+        template = "giga_xl"
+        locatorname = "xl_turret_06"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_11"
+        template = "giga_xl"
+        locatorname = "xl_turret_07"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_12"
+        template = "giga_xl"
+        locatorname = "xl_turret_08"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_13"
+        template = "giga_xl"
+        locatorname = "xl_turret_05"
+    }
+    component_slot = {
+        name = "EXTRALARGE_GUN_14"
+        template = "giga_xl"
+        locatorname = "xl_turret_06"
+    }
+    large_utility_slots = 10
+    aux_utility_slots = 2
+}

@@ -1,0 +1,38 @@
+ship_section_template = {
+    key = "NANITE_BULWARK_HANGAR"
+    ship_size = military_station_nanite_bulwark
+    entity = "gatebuilder_01_bulwark_section_entity"
+    icon = "GFX_ship_part_core_mid"
+    fits_on_slot = "north"
+    fits_on_slot = "west"
+    fits_on_slot = "east"
+    fits_on_slot = "south"
+    should_draw_components = yes
+    component_slot = {
+        name = "STRIKE_CRAFT_01"
+        template = "large_strike_craft"
+        locatorname = "strike_craft_locator_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_02"
+        template = "large_strike_craft"
+        rotation = 90
+        locatorname = "strike_craft_locator_02"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_03"
+        template = "large_strike_craft"
+        rotation = 180
+        locatorname = "strike_craft_locator_03"
+    }
+    small_utility_slots = 0
+    medium_utility_slots = 0
+    large_utility_slots = 7
+    aux_utility_slots = 2
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = 0
+        }
+    }
+}

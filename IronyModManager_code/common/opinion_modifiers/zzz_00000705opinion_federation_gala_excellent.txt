@@ -1,0 +1,16 @@
+opinion_federation_gala_excellent = {
+    opinion = {
+        base = 100
+    }
+    decay = {
+        base = 2
+        modifier = {
+            add = -1
+            is_xenophile = yes
+        }
+        modifier = {
+            add = 1
+            is_xenophobe = yes
+        }
+    }
+}

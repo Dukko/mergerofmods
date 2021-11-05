@@ -1,0 +1,35 @@
+@adv_section_cost = 60
+ship_section_template = {
+    key = "CRUISER_MID_ARTILLERY"
+    ship_size = cruiser
+    fits_on_slot = mid
+    should_draw_components = yes
+    entity = "cruiser_mid_L1M1_entity"
+    icon = "GFX_ship_part_core_mid"
+    ai_weight = {
+        modifier = {
+            factor = 8
+        }
+    }
+    prerequisites = {
+        tech_cruiser_hull_2
+    }
+    component_slot = {
+        name = "LARGE_GUN_01"
+        template = "large_turret"
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_02"
+        template = "large_turret"
+        locatorname = "medium_gun_01"
+    }
+    large_utility_slots = 1
+    aux_utility_slots = 1
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @adv_section_cost
+        }
+    }
+}

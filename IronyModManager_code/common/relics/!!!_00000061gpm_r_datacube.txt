@@ -1,0 +1,102 @@
+@activation_cost = 150
+@triumph_duration = 3600
+gpm_r_datacube = {
+    activation_duration = @triumph_duration
+    portrait = "GFX_gpm_r_datacube"
+    sound = "relic_activation_vultaum_real_perforator"
+    resources = {
+        category = relics
+        cost = {
+            trigger = {
+                has_ancrel = no
+            }
+            influence = @activation_cost
+        }
+        cost = {
+            trigger = {
+                has_ancrel = yes
+            }
+            minor_artifacts = 50
+        }
+    }
+    ai_weight = {
+        weight = 0
+    }
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+        all_technology_research_speed = 0.1
+    }
+    score = 1000
+    active_effect = {
+        custom_tooltip = gpm_r_datacube_active_effect_tooltip
+        hidden_effect = {
+            while = {
+                count = 5
+                random_list = {
+                    10 = {
+                        add_random_research_option = {
+                            add_progress = 0.5
+                            area = engineering
+                            ignore_prereqs = no
+                            fail_effects = {
+                                add_monthly_resource_mult = {
+                                    resource = engineering_research
+                                    value = @tier5researchreward
+                                    min = @tier5researchmin
+                                    max = @tier5researchmax
+                                }
+                            }
+                        }
+                    }
+                    10 = {
+                        add_random_research_option = {
+                            add_progress = 0.5
+                            area = physics
+                            ignore_prereqs = no
+                            fail_effects = {
+                                add_monthly_resource_mult = {
+                                    resource = physics_research
+                                    value = @tier5researchreward
+                                    min = @tier5researchmin
+                                    max = @tier5researchmax
+                                }
+                            }
+                        }
+                    }
+                    10 = {
+                        add_random_research_option = {
+                            add_progress = 0.5
+                            area = society
+                            ignore_prereqs = no
+                            fail_effects = {
+                                add_monthly_resource_mult = {
+                                    resource = society_research
+                                    value = @tier5researchreward
+                                    min = @tier5researchmin
+                                    max = @tier5researchmax
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        custom_tooltip = relic_triumph_cooldown
+        hidden_effect = {
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                days = @triumph_duration
+            }
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_relic_no_cooldown"
+            NOT = {
+                has_modifier = relic_activation_cooldown
+            }
+        }
+    }
+}

@@ -1,0 +1,7 @@
+opinion_trust = {
+    opinion = {
+        base = 1
+    }
+    max = 100
+    unique = yes
+}

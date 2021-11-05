@@ -1,0 +1,11 @@
+triggered_opinion_lrsk_gvp_respectable_sovereigns = {
+    trigger = {
+        has_valid_civic = lrsk_gov_var_civic_royal_absolutism
+        from = {
+            has_valid_civic = lrsk_gov_var_civic_royal_absolutism
+        }
+    }
+    opinion = {
+        base = 15
+    }
+}

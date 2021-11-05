@@ -1,0 +1,10 @@
+triggered_opinion_ap_plentiful_traditions_ghazalian_revelations = {
+    trigger = {
+        FROM = {
+            has_ascension_perk = ap_plentiful_traditions_ghazalian_revelations
+        }
+    }
+    opinion = {
+        base = 20
+    }
+}

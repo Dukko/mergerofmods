@@ -1,0 +1,8 @@
+opinion_first_contact_cowardly = {
+    opinion = {
+        base = -30
+    }
+    decay = {
+        base = 1
+    }
+}

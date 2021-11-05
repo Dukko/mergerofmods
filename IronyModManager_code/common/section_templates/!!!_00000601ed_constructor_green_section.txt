@@ -1,0 +1,8 @@
+ship_section_template = {
+    key = "ed_constructor_green_section"
+    ship_size = construction_ship_ed
+    fits_on_slot = mid
+    entity = "extra_dimensional_02_constructor_ed_entity"
+    icon = "GFX_ship_part_core_mid"
+    small_utility_slots = 2
+}

@@ -1,0 +1,43 @@
+@activation_cost = 1500
+@triumph_duration = 3600
+r_ehof_zro_crystal = {
+    activation_duration = @triumph_duration
+    portrait = "GFX_relic_zro_crystal"
+    sound = "relic_activation_intact_zro_soulstone"
+    score = 0
+    resources = {
+        category = relics
+        cost = {
+            ehof_sr_negative_mass = @activation_cost
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_relic_no_cooldown"
+            NOT = {
+                has_modifier = relic_activation_cooldown
+            }
+        }
+    }
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+        custom_tooltip = relic_zro_crystal_passive
+    }
+    active_effect = {
+        custom_tooltip = relic_zro_crystal_active
+        custom_tooltip = relic_triumph_cooldown
+        hidden_effect = {
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                days = @triumph_duration
+            }
+            country_event = {
+                id = ancrel.7006
+            }
+            remove_country_flag = ehof_has_zro_crystal
+            remove_relic = r_ehof_zro_crystal
+        }
+    }
+}

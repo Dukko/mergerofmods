@@ -1,0 +1,35 @@
+@hiveCost = 10000
+@hiveTime = 7200
+terraform_link = {
+    to = "pc_hive"
+    from = "pc_tropical"
+    energy = @hiveCost
+    duration = @hiveTime
+    potential = {
+        has_ascension_perk = ap_hive_worlds
+        from = {
+            NOT = {
+                has_modifier = pd_infestingplanet
+            }
+        }
+    }
+    ai_weight = {
+        weight = 10
+        modifier = {
+            factor = 0
+            from = {
+                any_owned_pop = {
+                    NOT = {
+                        has_trait = trait_hive_mind
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            from = {
+                is_colony = no
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+triggered_opinion_xenophile_resolution_4 = {
+    trigger = {
+        FROM = {
+            is_galactic_community_member = yes
+        }
+        is_active_resolution = "resolution_stellar_diplomatic_forums"
+    }
+    opinion = {
+        base = 30
+    }
+}

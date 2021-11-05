@@ -1,0 +1,26 @@
+robotic_murderers = {
+    trigger = {
+        OR = {
+            is_country_type = default
+            is_country_type = ascended_empire
+            is_country_type = lost_empire
+        }
+        has_country_flag = synthetic_empire
+        OR = {
+            is_xenophile = yes
+            is_egalitarian = yes
+        }
+        is_xenophobe = no
+        FROM = {
+            OR = {
+                is_country_type = default
+                is_country_type = ascended_empire
+                is_country_type = lost_empire
+            }
+            has_civic = civic_machine_terminator
+        }
+    }
+    opinion = {
+        base = -1000
+    }
+}

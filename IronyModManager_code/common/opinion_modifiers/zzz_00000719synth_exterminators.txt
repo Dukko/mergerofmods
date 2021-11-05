@@ -1,0 +1,31 @@
+synth_exterminators = {
+    trigger = {
+        OR = {
+            is_country_type = default
+            is_country_type = ascended_empire
+            is_country_type = lost_empire
+        }
+        OR = {
+            has_country_flag = synthetic_empire
+            has_authority = auth_machine_intelligence
+        }
+        FROM = {
+            OR = {
+                is_country_type = default
+                is_country_type = ascended_empire
+                is_country_type = lost_empire
+            }
+            OR = {
+                has_policy_flag = ai_outlawed
+                has_policy_flag = robots_outlawed
+            }
+            NOR = {
+                has_country_flag = synthetic_empire
+                has_authority = auth_machine_intelligence
+            }
+        }
+    }
+    opinion = {
+        base = -50
+    }
+}

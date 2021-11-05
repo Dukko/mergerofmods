@@ -1,0 +1,20 @@
+is_seditionist_chance_20 = {
+    weight = {
+        modifier = {
+            target = {
+                OR = {
+                    is_rival = root.owner
+                    root.owner = {
+                        is_rival = prev
+                    }
+                    any_envoy = {
+                        has_envoy_task = {
+                            task = undermine_imperial_authority
+                        }
+                    }
+                }
+            }
+            weight = 20
+        }
+    }
+}

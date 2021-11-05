@@ -1,0 +1,11 @@
+triggered_opinion_lrsk_gvp_irrational_privatization = {
+    trigger = {
+        has_valid_civic = lrsk_gov_var_civic_institutionalized_collectivism
+        from = {
+            has_valid_civic = lrsk_gov_var_civic_enlightened_liberalism
+        }
+    }
+    opinion = {
+        base = -15
+    }
+}

@@ -1,0 +1,8 @@
+mem_opinion_science_convention_waste_of_time = {
+    opinion = {
+        base = -5
+    }
+    decay = {
+        base = 1
+    }
+}

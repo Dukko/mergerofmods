@@ -17,7 +17,7 @@ building_uplink_node = {
             }
             nor = {
                 is_capital = yes
-                has_designation = col_research
+                str_is_col_research = yes
             }
         }
     }
@@ -34,7 +34,7 @@ building_uplink_node = {
                 years_passed > 5
                 or = {
                     is_capital = yes
-                    has_designation = col_research
+                    str_is_col_research = yes
                 }
             }
         }

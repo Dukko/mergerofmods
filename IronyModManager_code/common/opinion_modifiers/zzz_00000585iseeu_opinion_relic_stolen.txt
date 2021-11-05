@@ -1,0 +1,10 @@
+iseeu_opinion_relic_stolen = {
+    opinion = {
+        base = -360
+    }
+    accumulative = yes
+    decay = {
+        base = 1
+    }
+    monthly = yes
+}

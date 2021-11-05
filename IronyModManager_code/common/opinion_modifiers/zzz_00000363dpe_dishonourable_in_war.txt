@@ -1,0 +1,10 @@
+dpe_dishonourable_in_war = {
+    opinion = {
+        base = -30
+    }
+    accumulative = yes
+    min = -100
+    decay = {
+        base = 3
+    }
+}

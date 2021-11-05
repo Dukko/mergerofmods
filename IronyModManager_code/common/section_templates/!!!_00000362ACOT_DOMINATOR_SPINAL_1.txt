@@ -1,0 +1,19 @@
+ship_section_template = {
+    key = "ACOT_DOMINATOR_SPINAL_1"
+    ship_size = acot_star_dominator
+    fits_on_slot = spinal_1
+    should_draw_components = yes
+    entity = "acot_megadreadnought_spinal_entity"
+    icon = "GFX_ship_part_core_bow"
+    component_slot = {
+        name = "TITANIC_01"
+        template = "invisible_titanic_fixed"
+        locatorname = "xl_gun_01"
+    }
+    large_utility_slots = 4
+    resources = {
+        category = ship_sections
+        cost = {
+        }
+    }
+}

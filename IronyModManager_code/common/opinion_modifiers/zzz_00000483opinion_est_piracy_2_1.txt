@@ -1,0 +1,10 @@
+opinion_est_piracy_2_1 = {
+    trigger = {
+        from = {
+            has_policy_flag = est_piracy_2_raiding_1
+        }
+    }
+    opinion = {
+        base = -15
+    }
+}

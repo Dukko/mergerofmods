@@ -1,0 +1,8 @@
+mem_opinion_science_convention_good_time = {
+    opinion = {
+        base = 15
+    }
+    decay = {
+        base = 1
+    }
+}

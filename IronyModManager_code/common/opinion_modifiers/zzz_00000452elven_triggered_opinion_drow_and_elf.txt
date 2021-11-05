@@ -1,0 +1,11 @@
+elven_triggered_opinion_drow_and_elf = {
+    trigger = {
+        is_species_class = DROW
+        FROM = {
+            is_species_class = ELVEN
+        }
+    }
+    opinion = {
+        base = 30
+    }
+}

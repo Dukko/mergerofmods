@@ -1,0 +1,19 @@
+ship_section_template = {
+    key = "ACOT_DEVASTATOR_BOW_2"
+    ship_size = acot_star_devastator
+    fits_on_slot = spinal_2
+    should_draw_components = yes
+    entity = "acot_star_devastator_spinal_entity"
+    icon = "GFX_ship_part_core_bow"
+    component_slot = {
+        name = "TITANIC_01"
+        template = "invisible_titanic_fixed"
+        locatorname = "xl_gun_01"
+    }
+    large_utility_slots = 6
+    resources = {
+        category = ship_sections
+        cost = {
+        }
+    }
+}

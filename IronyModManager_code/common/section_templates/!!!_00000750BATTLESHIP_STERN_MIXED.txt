@@ -1,0 +1,40 @@
+@adv_section_cost = 120
+ship_section_template = {
+    key = "BATTLESHIP_STERN_MIXED"
+    ship_size = battleship
+    fits_on_slot = stern
+    should_draw_components = yes
+    entity = "battleship_stern_M2_entity"
+    icon = "GFX_ship_part_core_stern"
+    prerequisites = {
+        tech_battleship_hull_1
+    }
+    ai_weight = {
+        modifier = {
+            factor = 2
+        }
+    }
+    component_slot = {
+        name = "TORPEDO_01"
+        template = "medium_missile_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "SMALL_GUN_01"
+        template = "point_defence_turret"
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "SMALL_GUN_02"
+        template = "point_defence_turret"
+        locatorname = "medium_gun_02"
+    }
+    large_utility_slots = 1
+    aux_utility_slots = 1
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @adv_section_cost
+        }
+    }
+}

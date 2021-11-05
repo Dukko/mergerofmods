@@ -1,0 +1,8 @@
+opinion_flusion_betrayed_us = {
+    opinion = {
+        base = -500
+    }
+    decay = {
+        base = 2
+    }
+}

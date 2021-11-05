@@ -1,0 +1,33 @@
+opinion_competitive_species = {
+    trigger = {
+        FROM = {
+            OR = {
+                is_country_type = default
+                is_country_type = awakened_fallen_empire
+            }
+            exists = ruler
+            ruler = {
+                species = {
+                    has_trait = "trait_additrait_competitive"
+                }
+            }
+        }
+        NOT = {
+            AND = {
+                exists = ruler
+                ruler = {
+                    species = {
+                        has_trait = "trait_additrait_competitive"
+                    }
+                }
+            }
+        }
+    }
+    opinion = {
+        base = -5
+        modifier = {
+            add = 10
+            has_trait = "trait_additrait_competitive"
+        }
+    }
+}

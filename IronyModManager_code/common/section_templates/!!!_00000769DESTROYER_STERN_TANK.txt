@@ -1,0 +1,34 @@
+@adv_section_cost = 45
+ship_section_template = {
+    key = "DESTROYER_STERN_TANK"
+    ship_size = destroyer
+    fits_on_slot = stern
+    should_draw_components = yes
+    entity = "destroyer_stern_S2_entity"
+    icon = "GFX_ship_part_core_stern"
+    prerequisites = {
+        tech_destroyer_hull_1
+    }
+    ai_weight = {
+        modifier = {
+            factor = 3
+        }
+    }
+    component_slot = {
+        name = "SMALL_GUN_01"
+        template = "small_turret"
+        locatorname = "small_gun_01"
+    }
+    component_slot = {
+        name = "SMALL_GUN_02"
+        template = "point_defence_turret"
+        locatorname = "small_gun_02"
+    }
+    medium_utility_slots = 2
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @adv_section_cost
+        }
+    }
+}

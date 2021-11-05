@@ -1,0 +1,8 @@
+triggered_opinion_beat_the_fe = {
+    opinion = {
+        base = 250
+    }
+    decay = {
+        base = 5
+    }
+}

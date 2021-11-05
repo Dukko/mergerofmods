@@ -1,0 +1,8 @@
+opinion_gave_flusion_back = {
+    opinion = {
+        base = 300
+    }
+    decay = {
+        base = -1
+    }
+}

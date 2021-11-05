@@ -1,0 +1,8 @@
+opinion_katzenland_my_planet = {
+    opinion = {
+        base = -100
+    }
+    decay = {
+        base = 1
+    }
+}

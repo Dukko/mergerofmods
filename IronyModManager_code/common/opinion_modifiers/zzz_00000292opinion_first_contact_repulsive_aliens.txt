@@ -1,0 +1,8 @@
+opinion_first_contact_repulsive_aliens = {
+    opinion = {
+        base = -30
+    }
+    decay = {
+        base = 1
+    }
+}

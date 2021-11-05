@@ -1,0 +1,59 @@
+ship_section_template = {
+    key = "attack_moon_sternthrusters_01_key"
+    ship_size = giga_massive_planet
+    fits_on_slot = "sternthrusters"
+    entity = "giga_moon_thrusters_ai_fe"
+    icon = "GFX_ship_part_core_mid"
+    component_slot = {
+        name = "MISSILE_01"
+        template = "invisible_missile_turret"
+        locatorname = "missile_gun_01"
+    }
+    component_slot = {
+        name = "MISSILE_02"
+        template = "invisible_missile_turret"
+        locatorname = "missile_gun_02"
+    }
+    component_slot = {
+        name = "MISSILE_03"
+        template = "invisible_missile_turret"
+        locatorname = "missile_gun_03"
+    }
+    component_slot = {
+        name = "MISSILE_04"
+        template = "invisible_missile_turret"
+        locatorname = "missile_gun_04"
+    }
+    component_slot = {
+        name = "MISSILE_05"
+        template = "invisible_missile_turret"
+        locatorname = "missile_gun_01"
+    }
+    component_slot = {
+        name = "PD_01"
+        template = "point_defence_turret"
+        locatorname = "strike_craft_02"
+    }
+    component_slot = {
+        name = "PD_02"
+        template = "point_defence_turret"
+        locatorname = "strike_craft_01"
+    }
+    component_slot = {
+        name = "PD_03"
+        template = "point_defence_turret"
+        locatorname = "strike_craft_02"
+    }
+    component_slot = {
+        name = "PD_04"
+        template = "point_defence_turret"
+        locatorname = "strike_craft_02"
+    }
+    component_slot = {
+        name = "PD_05"
+        template = "point_defence_turret"
+        locatorname = "strike_craft_01"
+    }
+    large_utility_slots = 8
+    aux_utility_slots = 2
+}

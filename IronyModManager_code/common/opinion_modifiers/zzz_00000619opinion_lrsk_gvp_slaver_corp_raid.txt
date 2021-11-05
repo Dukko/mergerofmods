@@ -1,0 +1,8 @@
+opinion_lrsk_gvp_slaver_corp_raid = {
+    opinion = {
+        base = -200
+    }
+    decay = {
+        base = 4
+    }
+}

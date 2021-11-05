@@ -1,0 +1,57 @@
+@activation_cost = 150
+@triumph_duration = 3600
+r_elven_flaming_pearl = {
+    activation_duration = @triumph_duration
+    portrait = "GFX_relic_elven_flaming_pearl"
+    sound = relic_activation_intact_zro_soulstone
+    resources = {
+        category = relics
+        cost = {
+            influence = @activation_cost
+        }
+    }
+    ai_weight = {
+        weight = 100
+        modifier = {
+            factor = 2
+            resource_stockpile_compare = {
+                resource = influence
+                value > 800
+            }
+        }
+    }
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+        country_edict_cap_add = 1
+    }
+    score = 1000
+    active_effect = {
+        custom_tooltip = elven_relic_flaming_pearl_active
+        custom_tooltip = relic_triumph_cooldown
+        hidden_effect = {
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                days = @triumph_duration
+            }
+            country_event = {
+                id = elven_relic_events.0100
+            }
+            remove_modifier = elven_celestial_favor_factor_used_pearl
+            add_modifier = {
+                modifier = elven_celestial_favor_factor_used_pearl
+                years = 10
+            }
+            elven_evaluate_celestial_favor = yes
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_relic_no_cooldown"
+            NOT = {
+                has_modifier = relic_activation_cooldown
+            }
+        }
+    }
+}

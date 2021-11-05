@@ -1,0 +1,27 @@
+ship_section_template = {
+    key = "acemod_ed_warship_point_defense_section_template_key"
+    ship_size = small_ship_ed
+    fits_on_slot = mid
+    entity = "extra_dimensional_01_warship_small_entity"
+    icon = "GFX_ship_part_core_mid"
+    component_slot = {
+        name = "MEDIUM_GUN_01"
+        template = "medium_turret"
+        locatorname = "medium_gun_01"
+        is_side_slot = yes
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_02"
+        template = "medium_turret"
+        locatorname = "medium_gun_02"
+        is_side_slot = yes
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_03"
+        template = "point_defence_turret"
+        locatorname = "medium_gun_03"
+        is_side_slot = yes
+    }
+    small_utility_slots = 5
+    aux_utility_slots = 1
+}

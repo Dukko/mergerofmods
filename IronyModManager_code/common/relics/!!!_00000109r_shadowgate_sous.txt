@@ -1,0 +1,73 @@
+r_shadowgate_sous = {
+    activation_duration = 3600
+    portrait = "GFX_relic_shadowgate_sous"
+    sound = "shadowgate_click"
+    resources = {
+        category = relics
+        cost = {
+            influence = 150
+        }
+    }
+    ai_weight = {
+        weight = 100
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    is_colonized_shadowgate = yes
+                }
+            }
+        }
+    }
+    score = 300
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+        custom_tooltip = shadowgate.sous.passive
+    }
+    active_effect = {
+        custom_tooltip = shadowgate.sous.active
+        custom_tooltip = relic_triumph_cooldown
+        hidden_effect = {
+            set_global_flag = shadowgate_sous_in_use
+            country_event = {
+                id = shadowgate_galactic.625
+            }
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                days = -1
+            }
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_relic_no_cooldown"
+            NOT = {
+                has_modifier = relic_activation_cooldown
+            }
+        }
+        custom_tooltip = {
+            fail_text = "no_shadowgate_sous_accessed"
+            NOT = {
+                has_global_flag = shadowgate_sous_in_use
+            }
+        }
+        custom_tooltip = {
+            fail_text = "no_shadowgate_sous_black_holes"
+            any_system_within_border = {
+                is_star_class = sc_black_hole
+                NOR = {
+                    has_star_flag = shadowgate_exclude_sous
+                    has_star_flag = shadowgate_hidden_system
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "shadowgate.crw.fail.antiresonant.void"
+            NOT = {
+                has_relic = r_shadowgate_crwt_active
+            }
+        }
+    }
+}

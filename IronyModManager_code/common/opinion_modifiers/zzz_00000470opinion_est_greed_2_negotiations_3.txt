@@ -1,0 +1,10 @@
+opinion_est_greed_2_negotiations_3 = {
+    trigger = {
+        from = {
+            has_policy_flag = est_greed_2_negotiations_3
+        }
+    }
+    opinion = {
+        base = -45
+    }
+}

@@ -1,0 +1,5 @@
+opinion_fatherland_mutual_banished_house = {
+    opinion = {
+        base = 10
+    }
+}

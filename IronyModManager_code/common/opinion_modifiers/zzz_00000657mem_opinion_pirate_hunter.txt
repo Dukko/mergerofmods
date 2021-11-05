@@ -1,0 +1,8 @@
+mem_opinion_pirate_hunter = {
+    opinion = {
+        base = 10
+    }
+    decay = {
+        base = 1
+    }
+}

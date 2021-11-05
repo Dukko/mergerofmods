@@ -1,0 +1,49 @@
+r_shadowgate_ae = {
+    activation_duration = 3600
+    portrait = "GFX_relic_shadowgate_ae"
+    sound = "sfx_relic_activation_shadowgate_ae"
+    resources = {
+        category = relics
+        cost = {
+            influence = 150
+        }
+    }
+    ai_weight = {
+        weight = 0
+    }
+    score = 200
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+        custom_tooltip = shadowgate.ae.passive
+    }
+    active_effect = {
+        custom_tooltip = shadowgate.ae.active
+        custom_tooltip = relic_triumph_cooldown
+        hidden_effect = {
+            set_timed_country_flag = {
+                flag = shadowgate_ae_active
+                days = 3600
+            }
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                days = 3600
+            }
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_relic_no_cooldown"
+            NOT = {
+                has_modifier = relic_activation_cooldown
+            }
+        }
+        custom_tooltip = {
+            fail_text = "shadowgate.crw.fail.antiresonant.void"
+            NOT = {
+                has_relic = r_shadowgate_crwt_active
+            }
+        }
+    }
+}

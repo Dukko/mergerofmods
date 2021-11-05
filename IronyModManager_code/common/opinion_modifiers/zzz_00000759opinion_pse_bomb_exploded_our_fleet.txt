@@ -1,0 +1,10 @@
+opinion_pse_bomb_exploded_our_fleet = {
+    opinion = {
+        base = -2
+    }
+    decay = {
+        base = 4
+    }
+    min = -100
+    accumulative = yes
+}

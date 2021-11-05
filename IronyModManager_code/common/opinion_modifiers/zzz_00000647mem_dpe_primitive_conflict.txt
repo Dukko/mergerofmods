@@ -1,0 +1,12 @@
+mem_dpe_primitive_conflict = {
+    opinion = {
+        base = -100
+        modifier = {
+            add = -150
+            has_country_flag = mem_dpe_hostile_contact
+        }
+    }
+    decay = {
+        base = 1
+    }
+}

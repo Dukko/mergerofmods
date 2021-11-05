@@ -1,0 +1,7 @@
+opinion_lia_diplo_plus = {
+    opinion = {
+        base = 100
+    }
+    decay = 20
+    accumulative = yes
+}

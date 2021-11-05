@@ -1,0 +1,87 @@
+namespace = akx
+fleet_event = {
+    id = akx.9300
+    title = akx.9300.name
+    desc = akx.9300.desc
+    picture = GFX_evt_metropolis
+    show_sound = event_ship_bridge
+    location = root
+    is_triggered_only = yes
+    trigger = {
+        owner = {
+            has_country_flag = worm_events_available
+            NOT = {
+                has_country_flag = syzygy_encountered
+            }
+            any_owned_leader = {
+                leader_class = admiral
+                is_same_species = root.owner
+            }
+        }
+    }
+    immediate = {
+        from = {
+            save_global_event_target_as = syzygy_system
+        }
+        owner = {
+            random_owned_leader = {
+                limit = {
+                    leader_class = admiral
+                    is_same_species = root.owner
+                }
+                save_global_event_target_as = mirrored_syzygy_admiral
+            }
+            set_country_flag = syzygy_encountered
+        }
+    }
+    option = {
+        name = akx.9300.a.admiralabsent
+        custom_tooltip = akx.9300.a.admiralabsent.tooltip
+        trigger = {
+            OR = {
+                NOT = {
+                    exists = leader
+                }
+                NOT = {
+                    leader = {
+                        is_same_value = event_target:mirrored_syzygy_admiral
+                    }
+                }
+            }
+        }
+        hidden_effect = {
+            owner = {
+                country_event = {
+                    id = akx.9310
+                }
+            }
+        }
+    }
+    option = {
+        name = akx.9300.a.admiralpresent
+        custom_tooltip = akx.9300.a.admiralabsent.tooltip
+        trigger = {
+            exists = leader
+            leader = {
+                is_same_value = event_target:mirrored_syzygy_admiral
+            }
+        }
+        hidden_effect = {
+            owner = {
+                country_event = {
+                    id = akx.9310
+                }
+            }
+        }
+    }
+    option = {
+        name = akx.9300.b
+        hidden_effect = {
+            owner = {
+                country_event = {
+                    id = akx.9315
+                }
+            }
+        }
+    }
+}

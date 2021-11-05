@@ -1,0 +1,30 @@
+gpm_r_machine_world_core = {
+    activation_duration = 1
+    portrait = "GFX_gpm_r_machine_world_core"
+    sound = "relic_activation_isolated_contingency_core"
+    resources = {
+        category = relics
+        cost = {
+            energy = 20000
+        }
+    }
+    ai_weight = {
+        weight = 0
+    }
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+        planet_jobs_robotic_produces_mult = 0.05
+    }
+    score = 1000
+    active_effect = {
+        custom_tooltip = gpm_r_machine_world_core_active_tooltip
+        remove_relic = gpm_r_machine_world_core
+        hidden_effect = {
+            set_country_flag = relic_machine_world_core_activated
+        }
+    }
+    possible = {
+    }
+}

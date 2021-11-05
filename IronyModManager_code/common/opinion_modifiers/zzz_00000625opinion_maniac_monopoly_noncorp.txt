@@ -1,0 +1,13 @@
+opinion_maniac_monopoly_noncorp = {
+    trigger = {
+        NOT = {
+            has_authority = auth_corporate
+        }
+        FROM = {
+            has_valid_civic = civic_maniac_monopoly
+        }
+    }
+    opinion = {
+        base = -10
+    }
+}

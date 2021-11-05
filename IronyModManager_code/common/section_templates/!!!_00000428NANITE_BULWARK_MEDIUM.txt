@@ -1,0 +1,38 @@
+ship_section_template = {
+    key = "NANITE_BULWARK_MEDIUM"
+    ship_size = military_station_nanite_bulwark
+    entity = "gatebuilder_01_bulwark_section_entity"
+    icon = "GFX_ship_part_core_mid"
+    fits_on_slot = "north"
+    fits_on_slot = "west"
+    fits_on_slot = "south"
+    should_draw_components = yes
+    component_slot = {
+        name = "MEDIUM_GUN_01"
+        template = "invisible_medium_turret"
+        locatorname = "strike_craft_locator_03"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_02"
+        template = "invisible_medium_turret"
+        locatorname = "strike_craft_locator_04"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_03"
+        template = "invisible_medium_turret"
+        locatorname = "strike_craft_locator_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_04"
+        template = "invisible_medium_turret"
+        locatorname = "strike_craft_locator_02"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_04"
+        template = "large_strike_craft"
+        rotation = 90
+        locatorname = "strike_craft_locator_04"
+    }
+    large_utility_slots = 7
+    aux_utility_slots = 2
+}

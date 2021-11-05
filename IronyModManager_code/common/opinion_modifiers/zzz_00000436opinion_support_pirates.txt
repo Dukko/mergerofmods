@@ -1,0 +1,8 @@
+opinion_support_pirates = {
+    opinion = {
+        base = -100
+    }
+    decay = {
+        base = 5
+    }
+}

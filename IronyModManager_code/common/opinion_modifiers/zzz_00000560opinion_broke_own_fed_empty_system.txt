@@ -1,0 +1,8 @@
+opinion_broke_own_fed_empty_system = {
+    opinion = {
+        base = -75
+    }
+    decay = {
+        base = 1
+    }
+}

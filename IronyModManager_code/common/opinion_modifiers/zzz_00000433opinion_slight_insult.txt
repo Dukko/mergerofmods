@@ -1,0 +1,8 @@
+opinion_slight_insult = {
+    opinion = {
+        base = -10
+    }
+    decay = {
+        base = 5
+    }
+}

@@ -1,0 +1,11 @@
+triggered_opinion_hegira_sibling = {
+    trigger = {
+        has_origin = origin_hegira_colony
+        from = {
+            has_origin = origin_hegira_colony
+        }
+    }
+    opinion = {
+        base = 10
+    }
+}

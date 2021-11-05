@@ -1,0 +1,11 @@
+triggered_opinion_lrsk_gvp_captains_of_industry = {
+    trigger = {
+        has_valid_civic = civic_merchant_guilds
+        from = {
+            has_valid_civic = lrsk_gov_var_civic_enlightened_liberalism
+        }
+    }
+    opinion = {
+        base = 15
+    }
+}

@@ -1,0 +1,3 @@
+opinion_royal_marriage = {
+    opinion = 50
+}

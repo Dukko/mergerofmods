@@ -1,0 +1,10 @@
+opinion_ccrebel_subsidising_our_rebels = {
+    opinion = {
+        base = -25
+    }
+    accumulative = yes
+    max = -150
+    decay = {
+        base = 1
+    }
+}

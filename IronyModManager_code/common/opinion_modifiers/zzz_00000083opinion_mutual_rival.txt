@@ -1,0 +1,6 @@
+opinion_mutual_rival = {
+    opinion = {
+        base = 50
+    }
+    unique = yes
+}

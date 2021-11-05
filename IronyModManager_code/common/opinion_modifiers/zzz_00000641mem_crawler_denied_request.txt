@@ -1,0 +1,8 @@
+mem_crawler_denied_request = {
+    opinion = {
+        base = -25
+    }
+    decay = {
+        base = 1
+    }
+}

@@ -1,0 +1,11 @@
+triggered_opinion_lrsk_gvp_entrepreneurial_spirit = {
+    trigger = {
+        has_authority = auth_corporate
+        from = {
+            has_valid_civic = lrsk_gov_var_civic_enlightened_liberalism
+        }
+    }
+    opinion = {
+        base = 15
+    }
+}

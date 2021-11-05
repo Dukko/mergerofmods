@@ -1,0 +1,14 @@
+ship_section_template = {
+    key = "KATZEN_CRUISER_BOW"
+    ship_size = giga_katzen_cruiser
+    fits_on_slot = bow
+    should_draw_components = yes
+    entity = "katzen_cruiser_bow_entity"
+    icon = "GFX_ship_part_core_bow"
+    component_slot = {
+        name = "EXTRA_LARGE_01"
+        template = "invisible_extra_large_fixed"
+        locatorname = "xl_gun_01"
+    }
+    large_utility_slots = 4
+}

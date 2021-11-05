@@ -1,0 +1,25 @@
+ship_section_template = {
+    key = "ancient_combat_drone_section"
+    ship_size = ancient_corvette
+    fits_on_slot = mid
+    entity = "ancient_corvette_hull_entity"
+    icon = "GFX_ship_part_core_mid"
+    should_draw_components = no
+    component_slot = {
+        name = "MEDIUM_GUN_01"
+        template = "medium_turret"
+        locatorname = "root"
+    }
+    component_slot = {
+        name = "SMALL_GUN_01"
+        template = "small_turret"
+        locatorname = "root"
+    }
+    component_slot = {
+        name = "SMALL_GUN_02"
+        template = "small_turret"
+        locatorname = "root"
+    }
+    medium_utility_slots = 2
+    large_utility_slots = 1
+}

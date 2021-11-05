@@ -8,7 +8,7 @@ border_policy = {
             border_policy_open
         }
         valid = {
-            merg_is_default_empire_not_ev = yes
+            merg_is_default_empire = yes
             NOR = {
                 has_valid_civic = civic_machine_terminator
                 has_valid_civic = civic_hive_devouring_swarm

@@ -1,0 +1,10 @@
+dpe_deceitful = {
+    opinion = {
+        base = -25
+    }
+    decay = {
+        base = 1
+    }
+    accumulative = yes
+    min = -100
+}

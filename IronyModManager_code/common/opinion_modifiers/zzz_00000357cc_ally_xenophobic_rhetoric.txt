@@ -1,0 +1,10 @@
+cc_ally_xenophobic_rhetoric = {
+    opinion = {
+        base = -30
+    }
+    accumulative = yes
+    min = -300
+    decay = {
+        base = 3
+    }
+}

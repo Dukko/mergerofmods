@@ -1,0 +1,8 @@
+dpe_spurned_our_help = {
+    opinion = {
+        base = -25
+    }
+    decay = {
+        base = 2
+    }
+}

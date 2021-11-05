@@ -1,0 +1,8 @@
+opinion_disavowed_agent_caught = {
+    opinion = {
+        base = -80
+    }
+    accumulative = yes
+    min = -400
+    decay = 1
+}

@@ -1,0 +1,13 @@
+ver_triggered_opinion_serfdom = {
+    trigger = {
+        is_subject_type = verserf
+        FROM = {
+            any_subject = {
+                is_same_value = ROOT
+            }
+        }
+    }
+    opinion = {
+        base = -100
+    }
+}

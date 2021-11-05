@@ -1,0 +1,38 @@
+opinion_ex_false_world = {
+    trigger = {
+        FROM = {
+            has_policy_flag = ex_false_world
+        }
+    }
+    opinion = {
+        base = 0
+        modifier = {
+            add = 40
+            AND = {
+                has_ethic = "ethic_authoritarian"
+                has_ethic = "ethic_fanatic_materialist"
+            }
+        }
+        modifier = {
+            add = 40
+            AND = {
+                has_ethic = "ethic_fanatic_authoritarian"
+                has_ethic = "ethic_materialist"
+            }
+        }
+        modifier = {
+            add = -30
+            AND = {
+                has_ethic = "ethic_fanatic_egalitarian"
+                has_ethic = "ethic_spiritualist"
+            }
+        }
+        modifier = {
+            add = -30
+            AND = {
+                has_ethic = "ethic_fanatic_spiritualist"
+                has_ethic = "ethic_egalitarian"
+            }
+        }
+    }
+}

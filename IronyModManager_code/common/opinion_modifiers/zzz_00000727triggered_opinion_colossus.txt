@@ -1,0 +1,55 @@
+triggered_opinion_colossus = {
+    trigger = {
+        OR = {
+            is_country_type = default
+            is_country_type = awakened_fallen_empire
+            is_country_type = fallen_empire
+            is_country_type = ascended_empire
+            is_country_type = lost_empire
+        }
+        NOT = {
+            has_ascension_perk = ap_colossus
+        }
+        has_intel_level = {
+            who = FROM
+            category = military
+            level >= 2
+        }
+        FROM = {
+            has_ascension_perk = ap_colossus
+        }
+    }
+    opinion = {
+        base = -10
+        modifier = {
+            add = 5
+            is_militarist = no
+            FROM = {
+                is_pacifist = yes
+            }
+        }
+        modifier = {
+            add = 5
+            is_militarist = yes
+        }
+        modifier = {
+            add = -20
+            is_pacifist = yes
+        }
+        modifier = {
+            add = -20
+            OR = {
+                is_country_type = awakened_fallen_empire
+                is_country_type = fallen_empire
+            }
+        }
+        modifier = {
+            add = -20
+            OR = {
+                is_country_type = awakened_fallen_empire
+                is_country_type = fallen_empire
+            }
+            has_ethic = ethic_fanatic_xenophile
+        }
+    }
+}

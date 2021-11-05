@@ -1,0 +1,55 @@
+@section_cost = 200
+ship_section_template = {
+    key = "EAC_TITAN_BOW"
+    ship_size = titan
+    fits_on_slot = bow
+    should_draw_components = yes
+    entity = "titan_bow_entity"
+    icon = "GFX_ship_part_core_bow"
+    prerequisites = {
+        "eac_aw_tech_advanced_carrier"
+    }
+    ai_weight = {
+        modifier = {
+            factor = 20
+            is_preferred_weapons = weapon_type_strike_craft
+        }
+        modifier = {
+            factor = 0.1
+            NOT = {
+                is_preferred_weapons = weapon_type_strike_craft
+            }
+        }
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_01"
+        template = "large_strike_craft"
+        rotation = 45
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_02"
+        template = "large_strike_craft"
+        rotation = -45
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_03"
+        template = "large_strike_craft"
+        rotation = 22
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_04"
+        template = "large_strike_craft"
+        rotation = -22
+        locatorname = "xl_gun_01"
+    }
+    large_utility_slots = 6
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @section_cost
+        }
+    }
+}

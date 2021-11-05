@@ -1,0 +1,11 @@
+triggered_opinion_fatherland_hegira_children = {
+    trigger = {
+        has_origin = origin_doomsday
+        from = {
+            has_origin = origin_hegira_colony
+        }
+    }
+    opinion = {
+        base = 10
+    }
+}

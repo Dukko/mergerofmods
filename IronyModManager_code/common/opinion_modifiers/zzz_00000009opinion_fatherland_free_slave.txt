@@ -1,0 +1,5 @@
+opinion_fatherland_free_slave = {
+    opinion = {
+        base = -250
+    }
+}

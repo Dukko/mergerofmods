@@ -1,0 +1,65 @@
+@activation_cost = 150
+@triumph_duration = 3600
+gpm_r_manufactorium_ship = {
+    activation_duration = @triumph_duration
+    portrait = "GFX_gpm_r_manufactorium_ship"
+    sound = "relic_activation_vultaum_real_perforator"
+    resources = {
+        category = relics
+        cost = {
+            trigger = {
+                has_ancrel = no
+            }
+            influence = @activation_cost
+        }
+        cost = {
+            trigger = {
+                has_ancrel = yes
+            }
+            minor_artifacts = 50
+        }
+    }
+    ai_weight = {
+        weight = 0
+    }
+    triggered_country_modifier = {
+        potential = {
+            is_gestalt = no
+        }
+        planet_jobs_consumer_goods_produces_mult = 0.1
+        planet_jobs_alloys_produces_mult = 0.1
+    }
+    triggered_country_modifier = {
+        potential = {
+            is_gestalt = yes
+        }
+        planet_jobs_alloys_produces_mult = 0.2
+    }
+    score = 1000
+    active_effect = {
+        add_resource = {
+            rare_crystals = 500
+        }
+        add_resource = {
+            volatile_motes = 500
+        }
+        add_resource = {
+            exotic_gases = 500
+        }
+        custom_tooltip = relic_triumph_cooldown
+        hidden_effect = {
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                days = @triumph_duration
+            }
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_relic_no_cooldown"
+            NOT = {
+                has_modifier = relic_activation_cooldown
+            }
+        }
+    }
+}

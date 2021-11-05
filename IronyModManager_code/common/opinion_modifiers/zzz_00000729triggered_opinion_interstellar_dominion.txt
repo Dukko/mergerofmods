@@ -1,0 +1,97 @@
+triggered_opinion_interstellar_dominion = {
+    trigger = {
+        OR = {
+            is_country_type = default
+            is_country_type = ascended_empire
+            is_country_type = lost_empire
+        }
+        FROM = {
+            OR = {
+                has_ascension_perk = ap_interstellar_dominion
+                galaxy_percentage > 0.4
+            }
+        }
+    }
+    opinion = {
+        base = -5
+        modifier = {
+            add = -5
+            is_xenophobe = yes
+        }
+        modifier = {
+            add = -5
+            is_pacifist = yes
+        }
+        modifier = {
+            add = -5
+            OR = {
+                AND = {
+                    is_authoritarian = yes
+                    FROM = {
+                        is_egalitarian = yes
+                    }
+                }
+                AND = {
+                    is_egalitarian = yes
+                    FROM = {
+                        is_authoritarian = yes
+                    }
+                }
+                AND = {
+                    is_xenophile = yes
+                    FROM = {
+                        is_xenophobe = yes
+                    }
+                }
+                AND = {
+                    is_xenophobe = yes
+                    FROM = {
+                        is_xenophile = yes
+                    }
+                }
+                AND = {
+                    is_spiritualist = yes
+                    FROM = {
+                        is_materialist = yes
+                    }
+                }
+                AND = {
+                    is_materialist = yes
+                    FROM = {
+                        is_spiritualist = yes
+                    }
+                }
+                AND = {
+                    is_militarist = yes
+                    FROM = {
+                        is_pacifist = yes
+                    }
+                }
+                AND = {
+                    is_pacifist = yes
+                    FROM = {
+                        is_militarist = yes
+                    }
+                }
+            }
+        }
+        modifier = {
+            add = -10
+            any_neighbor_country = {
+                is_same_value = FROM
+            }
+        }
+        modifier = {
+            add = -5
+            galaxy_percentage > 0.5
+        }
+        modifier = {
+            add = -5
+            galaxy_percentage > 0.6
+        }
+        modifier = {
+            add = -5
+            galaxy_percentage > 0.7
+        }
+    }
+}

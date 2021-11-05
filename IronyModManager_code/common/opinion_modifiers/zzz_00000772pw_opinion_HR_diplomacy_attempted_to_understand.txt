@@ -1,0 +1,17 @@
+pw_opinion_HR_diplomacy_attempted_to_understand = {
+    opinion = {
+        base = 25
+    }
+    unique = yes
+    decay = {
+        base = 3
+        modifier = {
+            add = -1
+            has_ethic = ethic_pacifist
+        }
+        modifier = {
+            add = -2
+            has_ethic = ethic_fanatic_pacifist
+        }
+    }
+}

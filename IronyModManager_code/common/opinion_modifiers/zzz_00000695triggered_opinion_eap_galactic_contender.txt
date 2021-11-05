@@ -1,0 +1,13 @@
+triggered_opinion_eap_galactic_contender = {
+    trigger = {
+        OR = {
+            is_country_type = awakened_fallen_empire
+        }
+        FROM = {
+            has_ascension_perk = eap_galactic_contender
+        }
+    }
+    opinion = {
+        base = -1000
+    }
+}

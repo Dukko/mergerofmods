@@ -1,0 +1,8 @@
+triggered_opinion_refuse_dm_neutral = {
+    opinion = {
+        base = -50
+    }
+    decay = {
+        base = 1
+    }
+}

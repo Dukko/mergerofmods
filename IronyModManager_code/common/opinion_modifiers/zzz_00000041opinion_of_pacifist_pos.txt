@@ -1,0 +1,33 @@
+opinion_of_pacifist_pos = {
+    opinion = {
+        base = 0
+        modifier = {
+            add = 15
+            has_ethic = "ethic_fanatic_pacifist"
+            FROM = {
+                has_ethic = "ethic_fanatic_pacifist"
+            }
+        }
+        modifier = {
+            add = 5
+            has_ethic = "ethic_fanatic_pacifist"
+            FROM = {
+                has_ethic = "ethic_pacifist"
+            }
+        }
+        modifier = {
+            add = 5
+            has_ethic = "ethic_pacifist"
+            FROM = {
+                has_ethic = "ethic_fanatic_pacifist"
+            }
+        }
+        modifier = {
+            add = 5
+            has_ethic = "ethic_pacifist"
+            FROM = {
+                has_ethic = "ethic_pacifist"
+            }
+        }
+    }
+}

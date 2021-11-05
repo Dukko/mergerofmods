@@ -1,0 +1,12 @@
+mem_lunar_age_supported_rebels = {
+    opinion = {
+        base = -50
+    }
+    decay = {
+        base = 1
+        modifier = {
+            factor = 0
+            is_country_type = primitive
+        }
+    }
+}

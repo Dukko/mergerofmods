@@ -1,0 +1,33 @@
+opinion_headquarters = {
+    trigger = {
+        OR = {
+            is_country_type = default
+            is_country_type = ascended_empire
+            is_country_type = lost_empire
+        }
+        has_global_flag = galactic_headquarter_founded
+        is_galactic_community_member = yes
+        FROM = {
+            is_galactic_community_member = yes
+        }
+    }
+    opinion = {
+        base = 25
+        modifier = {
+            add = 10
+            has_ethic = ethic_fanatic_xenophile
+        }
+        modifier = {
+            add = 5
+            has_ethic = ethic_xenophile
+        }
+        modifier = {
+            add = -5
+            has_ethic = ethic_xenophobe
+        }
+        modifier = {
+            add = -10
+            has_ethic = ethic_fanatic_xenophobe
+        }
+    }
+}

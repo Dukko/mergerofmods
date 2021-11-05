@@ -1,0 +1,23 @@
+terraform_link = {
+    from = "pc_alderson_slice_ecu"
+    to = "pc_alderson_slice_pc"
+    energy = 50000
+    duration = 3600
+    ai_weight = {
+        weight = 0
+    }
+    effect = {
+        from = {
+            add_modifier = {
+                modifier = "giga_planetary_computer"
+                days = -1
+            }
+            remove_planet_flag = giga_alderson_ecu
+            set_planet_flag = giga_alderson_pc
+        }
+    }
+    condition = {
+        has_technology = giga_tech_alderson_disk
+        has_technology = giga_tech_planetary_computer
+    }
+}

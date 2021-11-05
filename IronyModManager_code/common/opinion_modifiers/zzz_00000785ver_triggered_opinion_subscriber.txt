@@ -1,0 +1,13 @@
+ver_triggered_opinion_subscriber = {
+    trigger = {
+        is_subject_type = versubscriber
+        From = {
+            any_subject = {
+                is_same_value = ROOT
+            }
+        }
+    }
+    opinion = {
+        base = 50
+    }
+}

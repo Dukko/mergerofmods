@@ -1,0 +1,5 @@
+opinion_fatherland_dissident = {
+    opinion = {
+        base = -10
+    }
+}

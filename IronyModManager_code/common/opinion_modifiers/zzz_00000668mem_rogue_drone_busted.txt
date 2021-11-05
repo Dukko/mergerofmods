@@ -1,0 +1,8 @@
+mem_rogue_drone_busted = {
+    opinion = {
+        base = -20
+    }
+    decay = {
+        base = 1
+    }
+}
