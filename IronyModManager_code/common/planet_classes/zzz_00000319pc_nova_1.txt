@@ -2,13 +2,14 @@ pc_nova_1 = {
     entity = "nova_1_entity"
     entity_scale = 8
     picture = "pc_nova"
+    icon_frame = 30
     atmosphere_color = hsv {
         0.6
         0.3
         0.6
     }
-    atmosphere_intensity = 3
-    atmosphere_width = 10
+    atmosphere_intensity = 1.5
+    atmosphere_width = 3.5
     star = yes
     min_distance_from_sun = 0
     max_distance_from_sun = 0

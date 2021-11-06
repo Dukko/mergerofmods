@@ -1,0 +1,21 @@
+food_expenditure_decisions = {
+    resource = food
+    type = expenditure
+    category = decisions
+    potential = {
+        always = yes
+    }
+    fraction = {
+        weight = 0.6
+    }
+    static_min = {
+        base = 0
+        modifier = {
+            add = 1100
+            resource_income_compare = {
+                resource = food
+                value > 10
+            }
+        }
+    }
+}

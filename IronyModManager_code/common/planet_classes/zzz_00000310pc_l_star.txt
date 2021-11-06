@@ -2,6 +2,7 @@ pc_l_star = {
     entity = "l_star_class_star_entity"
     entity_scale = @star_browndwarf_scale
     picture = "pc_l_star"
+    icon_frame = 14
     atmosphere_color = hsv {
         0.96
         0.7

@@ -2,10 +2,11 @@ pc_microquasar_1 = {
     entity = "microquasar_1_entity"
     entity_scale = @star_dwarf_scale
     picture = "pc_microquasar"
+    icon_frame = 32
     atmosphere_color = hsv {
         0.075
         0.13
-        0.9
+        1.5
     }
     atmosphere_intensity = 1
     atmosphere_width = 1

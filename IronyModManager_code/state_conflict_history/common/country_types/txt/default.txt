@@ -40,8 +40,8 @@ default = {
                 system_mult = 0.1
             }
             science = {
-                min = 4
-                max = 7
+                min = 6
+                max = 8
             }
             colonizer = {
                 min = 2
@@ -70,79 +70,41 @@ default = {
             battleship = {
                 fraction = {
                     modifier = {
-                        add = 25
-                        NOT = {
-                            has_global_flag = str_enabled_flag
-                        }
+                        add = 90
                         has_technology = tech_battleships
                     }
                     modifier = {
-                        add = 95
-                        has_global_flag = str_enabled_flag
+                        add = -30
                         has_technology = tech_battleships
+                        has_country_flag = str_need_to_counter_corvettes
                     }
                 }
             }
             cruiser = {
                 fraction = {
                     modifier = {
-                        add = 35
-                        NOT = {
-                            has_global_flag = str_enabled_flag
-                        }
+                        add = 90
                         has_technology = tech_cruisers
                     }
                     modifier = {
-                        add = -10
-                        NOT = {
-                            has_global_flag = str_enabled_flag
-                        }
+                        add = -90
                         has_technology = tech_battleships
                     }
                     modifier = {
-                        add = 95
-                        has_global_flag = str_enabled_flag
-                        has_technology = tech_cruisers
-                    }
-                    modifier = {
-                        add = -95
-                        has_global_flag = str_enabled_flag
+                        add = 30
                         has_technology = tech_battleships
+                        has_country_flag = str_need_to_counter_corvettes
                     }
                 }
             }
             destroyer = {
                 fraction = {
                     modifier = {
-                        add = 50
-                        NOT = {
-                            has_global_flag = str_enabled_flag
-                        }
+                        add = 90
                         has_technology = tech_destroyers
                     }
                     modifier = {
-                        add = -15
-                        NOT = {
-                            has_global_flag = str_enabled_flag
-                        }
-                        has_technology = tech_cruisers
-                    }
-                    modifier = {
-                        add = -10
-                        NOT = {
-                            has_global_flag = str_enabled_flag
-                        }
-                        has_technology = tech_battleships
-                    }
-                    modifier = {
-                        add = 95
-                        has_global_flag = str_enabled_flag
-                        can_kill_turtles = yes
-                    }
-                    modifier = {
-                        add = -95
-                        has_global_flag = str_enabled_flag
-                        can_kill_turtles = yes
+                        add = -90
                         has_technology = tech_cruisers
                     }
                 }
@@ -151,41 +113,12 @@ default = {
                 fraction = {
                     base = 100
                     modifier = {
-                        add = -25
-                        NOT = {
-                            has_global_flag = str_enabled_flag
-                        }
+                        add = -90
+                        has_technology = tech_cruisers
+                    }
+                    modifier = {
+                        add = -90
                         has_technology = tech_destroyers
-                    }
-                    modifier = {
-                        add = -45
-                        NOT = {
-                            has_global_flag = str_enabled_flag
-                        }
-                        has_technology = tech_cruisers
-                    }
-                    modifier = {
-                        add = -5
-                        NOT = {
-                            has_global_flag = str_enabled_flag
-                        }
-                        has_technology = tech_battleships
-                    }
-                    modifier = {
-                        add = -95
-                        has_global_flag = str_enabled_flag
-                        has_technology = tech_cruisers
-                    }
-                    modifier = {
-                        add = 95
-                        has_global_flag = str_enabled_flag
-                        has_technology = tech_cruisers
-                        can_kill_turtles = yes
-                    }
-                    modifier = {
-                        add = -95
-                        has_global_flag = str_enabled_flag
-                        can_kill_turtles = yes
                     }
                 }
             }
@@ -193,6 +126,7 @@ default = {
                 fraction = {
                     modifier = {
                         add = 35
+                        str_dont_build_menacing_ships = no
                         has_crisis_level = crisis_level_4
                     }
                 }
@@ -200,17 +134,14 @@ default = {
             crisis_destroyer = {
                 fraction = {
                     modifier = {
-                        add = 50
+                        add = 75
+                        str_dont_build_menacing_ships = no
                         has_crisis_level = crisis_level_3
                     }
                     modifier = {
                         add = -15
+                        str_dont_build_menacing_ships = no
                         has_crisis_level = crisis_level_4
-                    }
-                    modifier = {
-                        add = 25
-                        has_crisis_level = crisis_level_3
-                        has_global_flag = str_enabled_flag
                     }
                 }
             }
@@ -218,25 +149,18 @@ default = {
                 fraction = {
                     modifier = {
                         add = 100
+                        str_dont_build_menacing_ships = no
                         has_crisis_level = crisis_level_2
                     }
                     modifier = {
-                        add = -25
+                        add = -75
+                        str_dont_build_menacing_ships = no
                         has_crisis_level = crisis_level_3
                     }
                     modifier = {
-                        add = -45
+                        add = -20
+                        str_dont_build_menacing_ships = no
                         has_crisis_level = crisis_level_4
-                    }
-                    modifier = {
-                        add = -50
-                        has_crisis_level = crisis_level_3
-                        has_global_flag = str_enabled_flag
-                    }
-                    modifier = {
-                        add = 25
-                        has_crisis_level = crisis_level_4
-                        has_global_flag = str_enabled_flag
                     }
                 }
             }
@@ -422,13 +346,6 @@ default = {
         }
     }
     trade_routes_available = {
-        NOR = {
-            has_global_flag = z_pf2_flg_glbl_trade_ban
-            AND = {
-                is_ai = yes
-                has_global_flag = z_pf2_flg_glbl_trade_opt
-            }
-        }
         is_gestalt = no
     }
     modules = {
