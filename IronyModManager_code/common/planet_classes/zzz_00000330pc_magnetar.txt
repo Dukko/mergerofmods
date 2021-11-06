@@ -1,7 +1,6 @@
 pc_magnetar = {
     entity = "magnetar_entity"
     entity_scale = 10
-    icon_frame = 30
     star = yes
     min_distance_from_sun = 0
     max_distance_from_sun = 0

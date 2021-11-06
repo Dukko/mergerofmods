@@ -1,0 +1,1 @@
+@giant_standard_scale = 37

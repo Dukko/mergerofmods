@@ -2,14 +2,13 @@ pc_f_super_star = {
     entity = "f_super_star_class_star_entity"
     entity_scale = @star_super_scale
     picture = "pc_f_star"
-    icon_frame = 27
     atmosphere_color = hsv {
         0.6
         0.3
         0.6
     }
-    atmosphere_intensity = 1
-    atmosphere_width = 0.5
+    atmosphere_intensity = 4
+    atmosphere_width = 1000
     star = yes
     min_distance_from_sun = 0
     max_distance_from_sun = 0
@@ -18,8 +17,8 @@ pc_f_super_star = {
     extra_planet_count = 0
     chance_of_ring = 0
     planet_size = {
-        min = 25
-        max = 30
+        min = 115
+        max = 180
     }
     colonizable = no
 }

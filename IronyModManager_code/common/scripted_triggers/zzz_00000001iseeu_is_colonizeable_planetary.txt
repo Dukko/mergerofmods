@@ -1,0 +1,4 @@
+iseeu_is_colonizeable_planetary = {
+    colonizable_planet = yes
+    habitable_structure = no
+}

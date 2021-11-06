@@ -2,14 +2,13 @@ pc_d_star = {
     entity = "d_star_class_star_entity"
     entity_scale = @star_dwarf_scale
     picture = "pc_d_star"
-    icon_frame = 29
     atmosphere_color = hsv {
         0.6
+        0.3
         1
-        0.5
     }
-    atmosphere_intensity = 0.4
-    atmosphere_width = 0.5
+    atmosphere_intensity = 0.3
+    atmosphere_width = 8
     star = yes
     min_distance_from_sun = 0
     max_distance_from_sun = 0

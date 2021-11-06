@@ -1,0 +1,1 @@
+@star_browndwarf_scale = 58

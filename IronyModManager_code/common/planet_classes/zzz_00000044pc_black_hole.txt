@@ -1,7 +1,6 @@
 pc_black_hole = {
     entity = "black_hole_entity"
     entity_scale = @star_dwarf_scale
-    icon_frame = 32
     atmosphere_color = hsv {
         0.075
         0.13
