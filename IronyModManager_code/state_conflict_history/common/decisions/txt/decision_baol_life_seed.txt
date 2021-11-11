@@ -99,6 +99,14 @@ decision_baol_life_seed = {
             remove_modifier = lifeless_foggy_gases
             remove_modifier = lifeless_torrid
             remove_modifier = lifeless_torrid_tectonics
+            remove_modifier = lifeless_methane
+            remove_modifier = lifeless_ammonia
+            remove_modifier = lifeless_ash
+            remove_modifier = lifeless_sulfur
+            remove_modifier = lifeless_ocean
+            remove_modifier = lifeless_rogue
+            remove_modifier = lifeless_tidallylocked
+            remove_modifier = lifeless_tidallylocked_cold
             planet_event = {
                 id = ancrel.2025
             }

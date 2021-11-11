@@ -1,0 +1,85 @@
+district_giga_alderson_farming = {
+    base_buildtime = @giga_alderson_district_buildtime
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        uses_district_set = giga_alderson
+        exists = from
+        from = {
+            OR = {
+                country_uses_food = yes
+                is_lithoid_empire = yes
+            }
+        }
+        has_planet_flag = giga_alderson_gaia
+    }
+    potential = {
+        uses_district_set = giga_alderson
+        exists = owner
+        owner = {
+            OR = {
+                country_uses_food = yes
+                is_lithoid_empire = yes
+            }
+        }
+        has_planet_flag = giga_alderson_gaia
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @giga_alderson_cost
+            volatile_motes = @giga_alderson_cost_sr
+        }
+        upkeep = {
+            energy = @giga_alderson_maintenance
+            volatile_motes = @giga_alderson_maintenance_sr
+        }
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_giga_alderson_city
+        district_giga_alderson_hive
+        district_giga_alderson_nexus
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            planet_housing_add = @alderson_auto_housing
+            job_ald_superfarmer_add = @alderson_auto_jobs
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            planet_housing_add = @alderson_auto_housing
+            job_ald_superfarmer_drone_add = @alderson_auto_jobs_hive
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            planet_housing_add = @alderson_auto_housing_mach
+            job_ald_superfarmer_drone_add = @alderson_auto_jobs
+        }
+    }
+    ai_resource_production = {
+        food = 500
+        trigger = {
+            always = yes
+        }
+    }
+}

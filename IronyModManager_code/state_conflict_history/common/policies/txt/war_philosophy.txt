@@ -193,19 +193,19 @@ war_philosophy = {
             }
             modifier = {
                 factor = 1.5
-                has_global_flag = cultural_overhaul_active
+                has_expanded_pops = yes
                 has_ethic = ethic_fanatic_xenophile
                 is_authoritarian = no
                 is_militarist = no
             }
             modifier = {
                 factor = 1.5
-                has_global_flag = cultural_overhaul_active
+                has_expanded_pops = yes
                 has_ethic = "ethic_pacifist"
             }
             modifier = {
                 factor = 1.5
-                has_global_flag = cultural_overhaul_active
+                has_expanded_pops = yes
                 OR = {
                     has_valid_civic = civic_diplomatic_corps
                     has_valid_civic = civic_public_relations_specialists
@@ -217,7 +217,7 @@ war_philosophy = {
             }
             modifier = {
                 factor = 0
-                has_global_flag = cultural_overhaul_active
+                has_expanded_pops = yes
                 NOR = {
                     is_pacifist = yes
                     AND = {
@@ -238,7 +238,7 @@ war_philosophy = {
         }
         potential = {
             has_valid_civic = civic_mutualistic_behavior
-            has_global_flag = complex_hive
+            has_expanded_gestalts = yes
         }
         on_enabled = {
             hidden_effect = {

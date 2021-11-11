@@ -1,0 +1,77 @@
+district_giga_alderson_refineries = {
+    base_buildtime = @giga_alderson_district_buildtime
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        uses_district_set = giga_alderson
+        OR = {
+            has_planet_flag = giga_alderson_ecu
+            has_planet_flag = giga_alderson_hive
+            has_planet_flag = giga_alderson_machine
+        }
+    }
+    potential = {
+        uses_district_set = giga_alderson
+        OR = {
+            has_planet_flag = giga_alderson_ecu
+            has_planet_flag = giga_alderson_hive
+            has_planet_flag = giga_alderson_machine
+        }
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_giga_alderson_city
+        district_giga_alderson_hive
+        district_giga_alderson_nexus
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @giga_alderson_cost
+        }
+        upkeep = {
+            energy = @giga_alderson_maintenance
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            planet_housing_add = @alderson_auto_housing_ecu
+            job_ald_gases_add = @alderson_auto_jobs_refiners
+            job_ald_motes_add = @alderson_auto_jobs_refiners
+            job_ald_crystals_add = @alderson_auto_jobs_refiners
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            planet_housing_add = @alderson_auto_housing_ecu
+            job_ald_gases_drone_add = @alderson_auto_jobs_refiners
+            job_ald_motes_drone_add = @alderson_auto_jobs_refiners
+            job_ald_crystals_drone_add = @alderson_auto_jobs_refiners
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            planet_housing_add = @alderson_auto_housing_ecu
+            job_ald_gases_drone_add = @alderson_auto_jobs_refiners
+            job_ald_motes_drone_add = @alderson_auto_jobs_refiners
+            job_ald_crystals_drone_add = @alderson_auto_jobs_refiners
+        }
+    }
+}

@@ -1,7 +1,7 @@
 pc_ai = {
     entity = "ai_planet"
     entity_scale = @planet_standard_scale
-    icon_frame = 15
+    icon = GFX_planet_type_machine
     atmosphere_color = hsv {
         0.09
         0.8

@@ -285,6 +285,15 @@ acot_sr_light_matter = {
         weight = 100
     }
 }
+larva = {
+    tradable = no
+    visibility_prerequisite = {
+        always = yes
+    }
+    ai_weight = {
+        weight = 1
+    }
+}
 sr_iodizium = {
     tradable = no
     max = 10000

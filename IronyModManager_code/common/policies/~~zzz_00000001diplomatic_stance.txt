@@ -327,7 +327,7 @@ diplomatic_stance = {
                 factor = 100
                 has_valid_civic = civic_inwards_perfection
                 AND = {
-                    has_global_flag = cultural_overhaul_redux_active
+                    has_ethics_redux = yes
                     has_valid_civic = civic_isolationism
                 }
             }
@@ -431,7 +431,7 @@ diplomatic_stance = {
             NOR = {
                 has_valid_civic = civic_inwards_perfection
                 AND = {
-                    has_global_flag = cultural_overhaul_redux_active
+                    has_ethics_redux = yes
                     has_valid_civic = civic_isolationism
                 }
             }
@@ -524,7 +524,7 @@ diplomatic_stance = {
                 has_valid_civic = civic_inwards_perfection
                 has_modifier = humiliated
                 AND = {
-                    has_global_flag = cultural_overhaul_redux_active
+                    has_ethics_redux = yes
                     has_valid_civic = civic_isolationism
                 }
             }
@@ -624,7 +624,7 @@ diplomatic_stance = {
                     has_valid_civic = civic_private_military_companies
                     has_valid_civic = civic_warrior_culture
                     AND = {
-                        has_global_flag = expanded_pops_active
+                        has_expanded_pops = yes
                         OR = {
                             has_valid_civic = civic_barbaric_despoilers
                             has_valid_civic = civic_crusaders
@@ -782,7 +782,7 @@ diplomatic_stance = {
         name = "diplo_stance_shadow"
         icon = "GFX_diplomatic_stance_shadow"
         potential = {
-            has_global_flag = has_mod_espionage_extended
+            has_espionage_extended = yes
             OR = {
                 merg_is_default_empire = yes
             }

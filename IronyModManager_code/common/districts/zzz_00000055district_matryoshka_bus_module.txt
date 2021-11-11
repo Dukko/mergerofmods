@@ -1,0 +1,47 @@
+district_matryoshka_bus_module = {
+    base_buildtime = 600
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        uses_district_set = matryoshka
+    }
+    potential = {
+        uses_district_set = matryoshka
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_city
+        district_nexus
+        district_hive
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = 1000
+            volatile_motes = 50
+        }
+        upkeep = {
+            energy = 5
+            volatile_motes = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_coordinator_add = 1
+            job_patrol_drone_add = 10
+            job_maintenance_drone_add = 10
+        }
+    }
+    ai_weight = {
+        weight = 1
+        modifier = {
+            factor = 0
+            free_jobs > 0
+        }
+    }
+}

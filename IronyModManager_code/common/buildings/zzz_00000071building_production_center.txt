@@ -31,12 +31,9 @@ building_production_center = {
                 resource = consumer_goods
                 value > 80
             }
-            has_designation = col_foundry
-            has_designation = col_factory
-            has_designation = col_ecu_foundry
-            has_designation = col_mac_foundry
-            has_designation = col_habitat_factory
-            has_designation = col_habitat_foundry
+            str_is_col_foundry = yes
+            str_is_col_factory = yes
+            str_is_col_industrial = yes
         }
     }
     planet_modifier = {

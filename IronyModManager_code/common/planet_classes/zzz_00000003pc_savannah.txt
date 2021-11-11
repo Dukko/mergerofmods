@@ -1,7 +1,7 @@
 pc_savannah = {
     entity = "savannah_planet"
     entity_scale = @planet_standard_scale
-    icon_frame = 20
+    icon = GFX_planet_type_savannah
     climate = "dry"
     initial = yes
     atmosphere_color = hsv {

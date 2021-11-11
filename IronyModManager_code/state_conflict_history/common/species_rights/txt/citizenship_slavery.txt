@@ -27,7 +27,7 @@ citizenship_slavery = {
                 from = {
                     has_authority = auth_hive_mind
                 }
-                is_same_species = from
+                has_trait = trait_hive_mind
             }
         }
         custom_tooltip = {
@@ -39,6 +39,14 @@ citizenship_slavery = {
         custom_tooltip = {
             fail_text = "lonely_hive_mind_pops_kill_themselves_citizenship"
             is_lonely_hive_mind_pop = no
+        }
+        custom_tooltip = {
+            fail_text = MUTUALISTIC_BAHAVIOUR_CANNOT_ENSLAVE
+            from = {
+                NOT = {
+                    has_valid_civic = civic_mutualistic_behavior
+                }
+            }
         }
         custom_tooltip = {
             fail_text = SERVITORS_CANNOT_ENSLAVE

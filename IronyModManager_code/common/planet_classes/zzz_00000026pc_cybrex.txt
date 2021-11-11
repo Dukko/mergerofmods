@@ -2,7 +2,7 @@ pc_cybrex = {
     ringworld = yes
     entity = "ringworld_habitable_entity"
     picture = pc_ai
-    icon_frame = 21
+    icon = GFX_planet_type_ringworld
     entity_scale = 1
     enable_tilt = no
     fixed_entity_scale = yes
@@ -25,4 +25,5 @@ pc_cybrex = {
     can_be_invaded = no
     district_set = ring_world
     show_health_bar_in_planet_view = yes
+    is_artificial_planet = yes
 }

@@ -21,10 +21,11 @@ district_industrial = {
             has_modifier = slave_colony
         }
     }
-    conversion_ratio = 1
+    conversion_ratio = 0.5
     convert_to = {
         district_arcology_arms_industry
         district_rw_industrial
+        district_subterranean_network
     }
     resources = {
         category = planet_districts_industrial

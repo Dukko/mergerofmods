@@ -1,0 +1,61 @@
+@tier5cost3 = 20000
+@tier5weight3 = 20
+tech_pk_digest = {
+    area = society
+    cost = @tier5cost3
+    tier = 5
+    is_rare = yes
+    is_reverse_engineerable = no
+    category = {
+        particles
+    }
+    prerequisites = {
+        "tech_colossus"
+    }
+    ai_update_type = military
+    weight = @tier5weight3
+    potential = {
+        host_has_dlc = "Apocalypse"
+        has_country_flag = colossus_project
+        has_authority = auth_hive_mind
+    }
+    weight_modifier = {
+        factor = 0.5
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = 0.2
+            NOR = {
+                research_leader = {
+                    area = physics
+                    has_trait = "leader_trait_maniacal"
+                }
+                research_leader = {
+                    area = physics
+                    has_trait = "leader_trait_curator"
+                }
+                research_leader = {
+                    area = physics
+                    has_trait = "leader_trait_expertise_particles"
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            is_materialist = yes
+        }
+    }
+    ai_weight = {
+        factor = 0.25
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_materialist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_materialist
+        }
+    }
+}

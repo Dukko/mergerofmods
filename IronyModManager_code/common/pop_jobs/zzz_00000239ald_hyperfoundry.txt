@@ -1,0 +1,72 @@
+ald_hyperfoundry = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_foundry_3
+    icon = foundry
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        specialist_job_check_trigger = yes
+    }
+    resources = {
+        category = planet_metallurgists
+        produces = {
+            alloys = 30
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_catalytic_empire = no
+                }
+            }
+            minerals = 60
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_catalytic_empire = yes
+                }
+            }
+            food = 90
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_valid_civic = civic_ornamentarian
+                }
+            }
+            unity = 20
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_ornamentarian
+            }
+        }
+        modifier = {
+            planet_amenities_add = 2
+        }
+    }
+    weight = {
+        weight = @specialist_job_weight
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+            NOT = {
+                has_trait = trait_mechanical
+            }
+        }
+        modifier = {
+            factor = 1.5
+            always = yes
+        }
+    }
+}

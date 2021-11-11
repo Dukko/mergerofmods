@@ -1,0 +1,59 @@
+weapon_component_template = {
+    key = "NANITE_BASE_BEAM"
+    size = titanic
+    entity = "invisible_turret_entity"
+    type = instant
+    prio_projectile = yes
+    icon = "GFX_ship_part_nanite_beam_titanic"
+    icon_frame = 1
+    damage = {
+        min = 1
+        max = 9999
+    }
+    windup = {
+        min = 2
+        max = 20
+    }
+    total_fire_time = 115
+    range = 30
+    accuracy = 0.85
+    tracking = 0
+    hull_damage = 1
+    shield_penetration = 1
+    armor_penetration = 1
+    power = -150
+    resources = {
+        category = ship_components
+        cost = {
+            nanites = 100
+        }
+        upkeep = {
+            nanites = 1
+        }
+    }
+    prerequisites = {
+        "tech_adt_gg_beam"
+    }
+    component_set = "NANITE_BEAM"
+    class_restriction = {
+        shipclass_military_station
+        shipclass_starbase
+    }
+    tags = {
+        weapon_type_energy
+    }
+    projectile_gfx = "gatebuilder_titan_weapon"
+    ai_tags = {
+        weapon_role_artillery
+    }
+    ai_tag_weight = 2
+    ai_weight = {
+        weight = 2
+        modifier = {
+            factor = 0
+            no_resource_for_component = {
+                RESOURCE = nanites
+            }
+        }
+    }
+}

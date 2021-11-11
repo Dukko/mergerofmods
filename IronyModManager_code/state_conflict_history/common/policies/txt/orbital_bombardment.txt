@@ -13,7 +13,7 @@ orbital_bombardment = {
         }
         potential = {
             NAND = {
-                has_global_flag = prob_global_flag
+                has_power_bombard = yes
                 prob_forced_armageddon_bombardment = yes
             }
         }
@@ -45,11 +45,9 @@ orbital_bombardment = {
         }
         potential = {
             OR = {
-                NOT = {
-                    has_global_flag = prob_global_flag
-                }
+                has_power_bombard = no
                 AND = {
-                    has_global_flag = prob_global_flag
+                    has_power_bombard = yes
                     prob_forced_armageddon_bombardment = no
                     OR = {
                         has_country_flag = prob_enable_indiscriminate_bombardment
@@ -110,7 +108,7 @@ orbital_bombardment = {
                     }
                 }
             }
-            has_global_flag = prob_global_flag
+            has_power_bombard = yes
         }
         valid = {
             is_pacifist = no
@@ -141,7 +139,7 @@ orbital_bombardment = {
                 is_country_type = ascended_empire
                 has_valid_civic = civic_bringers_of_death
                 AND = {
-                    has_global_flag = prob_global_flag
+                    has_power_bombard = yes
                     OR = {
                         has_country_flag = prob_enable_armageddon_bombardment
                         prob_forced_armageddon_bombardment = yes
@@ -170,7 +168,7 @@ orbital_bombardment = {
             }
             modifier = {
                 factor = 10
-                has_global_flag = prob_global_flag
+                has_power_bombard = yes
                 prob_forced_armageddon_bombardment = yes
             }
         }
@@ -183,7 +181,7 @@ orbital_bombardment = {
             }
         }
         potential = {
-            has_global_flag = gigastructures_enabled
+            has_gigastructures = yes
             OR = {
                 ehof_default_country = yes
                 is_country_type_with_subjects = yes

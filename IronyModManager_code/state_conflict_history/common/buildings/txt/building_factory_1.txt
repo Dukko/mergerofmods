@@ -49,6 +49,18 @@ building_factory_1 = {
         potential = {
             exists = owner
             owner = {
+                is_regular_empire = yes
+                is_crafter_empire = no
+            }
+        }
+        modifier = {
+            job_artisan_add = @b1_jobs
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
                 is_ai = yes
             }
             str_force_building_factory = yes
@@ -56,18 +68,6 @@ building_factory_1 = {
         modifier = {
             job_starnet_spice_melange_farmer_add = 1
             job_starnet_spice_melange_antifarmer_add = -1
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_regular_empire = yes
-                is_crafter_empire = no
-            }
-        }
-        modifier = {
-            job_artisan_add = @b1_jobs
         }
     }
     triggered_planet_modifier = {
@@ -86,6 +86,19 @@ building_factory_1 = {
         potential = {
             exists = owner
             owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_artisan_drone_add = @b1_jobs
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                is_crafter_empire = no
                 has_valid_civic = civic_consumerism
             }
         }
@@ -97,11 +110,13 @@ building_factory_1 = {
         potential = {
             exists = owner
             owner = {
-                is_gestalt = yes
+                is_regular_empire = yes
+                is_crafter_empire = yes
+                has_valid_civic = civic_consumerism
             }
         }
         modifier = {
-            job_artisan_drone_add = @b1_jobs
+            job_artificer_add_add = 1
         }
     }
     resources = {

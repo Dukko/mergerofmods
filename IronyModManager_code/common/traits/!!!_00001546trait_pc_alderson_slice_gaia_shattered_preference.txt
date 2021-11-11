@@ -1,0 +1,17 @@
+trait_pc_alderson_slice_gaia_shattered_preference = {
+    icon = "gfx/interface/icons/traits/trait_pc_ring_preference.dds"
+    modification = no
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+        LITHOID
+    }
+    sorting_priority = 30
+    modifier = {
+        pc_alderson_slice_gaia_habitability = 1
+        pc_alderson_slice_gaia_shattered_habitability = 1
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

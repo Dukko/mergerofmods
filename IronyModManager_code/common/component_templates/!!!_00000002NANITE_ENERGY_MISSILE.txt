@@ -1,0 +1,59 @@
+weapon_component_template = {
+    key = "NANITE_ENERGY_MISSILE"
+    size = torpedo
+    entity = "invisible_turret_entity"
+    type = missile
+    prio_projectile = yes
+    icon = "GFX_ship_part_nanite_energymissiles_1"
+    icon_frame = 1
+    damage = {
+        min = 100
+        max = 150
+    }
+    windup = {
+        min = 2
+        max = 20
+    }
+    total_fire_time = 10
+    range = 17
+    accuracy = 1
+    tracking = 0.5
+    hull_damage = 1
+    shield_damage = 0.75
+    armor_damage = 2
+    missile_speed = 14
+    missile_health = 20
+    missile_evasion = 1
+    missile_retarget_range = 120
+    power = -30
+    resources = {
+        category = ship_components
+        cost = {
+            nanites = 10
+        }
+        upkeep = {
+            nanites = 0.01
+        }
+    }
+    prerequisites = {
+        "tech_adt_energymissiles"
+    }
+    component_set = "NANITE_ENERGY_MISSILE"
+    tags = {
+        weapon_type_energy
+    }
+    projectile_gfx = "gatebuilder_torpedo"
+    ai_tags = {
+        weapon_role_artillery
+    }
+    ai_tag_weight = 1
+    ai_weight = {
+        weight = 1
+        modifier = {
+            factor = 0
+            no_resource_for_component = {
+                RESOURCE = nanites
+            }
+        }
+    }
+}

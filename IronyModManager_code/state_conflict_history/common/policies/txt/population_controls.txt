@@ -6,6 +6,11 @@ population_controls = {
     }
     option = {
         name = "population_controls_not_allowed"
+        valid = {
+            NOT = {
+                has_origin = origin_vb_psi_soul_eater
+            }
+        }
         on_enabled = {
             hidden_effect = {
                 every_owned_planet = {
@@ -33,26 +38,24 @@ population_controls = {
         }
         valid = {
             OR = {
-                NOT = {
-                    has_global_flag = cultural_overhaul_active
-                }
+                has_any_ethics_mod = no
                 NOR = {
                     AND = {
-                        is_ethics_classic = yes
+                        has_ethics_classic = yes
                         OR = {
                             has_valid_civic = civic_anarchy_ideals
                             has_valid_civic = civic_spiritual_democracy
                         }
                     }
                     AND = {
-                        has_global_flag = cultural_overhaul_redux_active
+                        has_ethics_redux = yes
                         OR = {
                             has_valid_civic = civic_beacon_of_liberty
                             has_valid_civic = civic_spiritual_democracy
                         }
                     }
                     AND = {
-                        has_global_flag = bugbranch_global_flag
+                        has_ethics_bug = yes
                         OR = {
                             has_valid_civic = civic_beacon_of_liberty
                             has_valid_civic = civic_beacon_of_liberty_corpo

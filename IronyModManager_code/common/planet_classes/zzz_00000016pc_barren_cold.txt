@@ -1,7 +1,7 @@
 pc_barren_cold = {
     entity = "cold_barren_planet"
     entity_scale = @planet_standard_scale
-    icon_frame = 9
+    icon = GFX_planet_type_barren_cold
     atmosphere_color = hsv {
         0.55
         0.3

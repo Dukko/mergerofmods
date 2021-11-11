@@ -1,0 +1,32 @@
+trait_hyperosmia = {
+    cost = 2
+    sorting_priority = 19
+    initial = no
+    randomized = no
+    modification = no
+    modifier = {
+        planet_jobs_exotic_gases_produces_mult = 0.2
+    }
+    species_potential_add = {
+        always = no
+        exists = from
+        from = {
+            has_ascension_perk = ap_life_masters
+            OR = {
+                has_modifier = life_masters_4_trait
+                has_modifier = life_masters_5_trait
+                has_modifier = life_masters_6_trait
+                has_modifier = life_masters_7_trait
+                has_modifier = life_masters_8_trait
+                has_modifier = life_masters_9_trait
+                has_modifier = life_masters_10_trait
+            }
+        }
+    }
+    potential_crossbreeding_chance = 0.5
+    icon = "gfx/interface/icons/traits/trait_hyperosmia.dds"
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+}

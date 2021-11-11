@@ -1,0 +1,135 @@
+namespace = giga_mega
+event = {
+    id = giga_mega.8100
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        every_country = {
+            clear_giga_mega_balance_modifiers = yes
+        }
+        every_country = {
+            limit = {
+                is_ai = yes
+            }
+            set_variable = {
+                which = giga_mega_output_ai_real
+                value = event_target:global_event_country.giga_mega_output_ai_real
+            }
+            if = {
+                limit = {
+                    NOT = {
+                        check_variable = {
+                            which = giga_mega_output_ai_real
+                            value = 0
+                        }
+                    }
+                }
+                add_modifier = {
+                    modifier = giga_mega_output_balance
+                    days = -1
+                    multiplier = giga_mega_output_ai_real
+                }
+            }
+            set_variable = {
+                which = giga_mega_cost_ai_real
+                value = event_target:global_event_country.giga_mega_cost_ai_real
+            }
+            if = {
+                limit = {
+                    NOT = {
+                        check_variable = {
+                            which = giga_mega_cost_ai_real
+                            value = 0
+                        }
+                    }
+                }
+                add_modifier = {
+                    modifier = giga_mega_cost_balance
+                    days = -1
+                    multiplier = giga_mega_cost_ai_real
+                }
+            }
+            set_variable = {
+                which = giga_mega_upkeep_ai_real
+                value = event_target:global_event_country.giga_mega_upkeep_ai_real
+            }
+            if = {
+                limit = {
+                    NOT = {
+                        check_variable = {
+                            which = giga_mega_upkeep_ai_real
+                            value = 0
+                        }
+                    }
+                }
+                add_modifier = {
+                    modifier = giga_mega_upkeep_balance
+                    days = -1
+                    multiplier = giga_mega_upkeep_ai_real
+                }
+            }
+        }
+        every_country = {
+            limit = {
+                is_ai = no
+            }
+            set_variable = {
+                which = giga_mega_output_real
+                value = event_target:global_event_country.giga_mega_output_real
+            }
+            if = {
+                limit = {
+                    NOT = {
+                        check_variable = {
+                            which = giga_mega_output_real
+                            value = 0
+                        }
+                    }
+                }
+                add_modifier = {
+                    modifier = giga_mega_output_balance
+                    days = -1
+                    multiplier = giga_mega_output_real
+                }
+            }
+            set_variable = {
+                which = giga_mega_cost_real
+                value = event_target:global_event_country.giga_mega_cost_real
+            }
+            if = {
+                limit = {
+                    NOT = {
+                        check_variable = {
+                            which = giga_mega_cost_real
+                            value = 0
+                        }
+                    }
+                }
+                add_modifier = {
+                    modifier = giga_mega_cost_balance
+                    days = -1
+                    multiplier = giga_mega_cost_real
+                }
+            }
+            set_variable = {
+                which = giga_mega_upkeep_real
+                value = event_target:global_event_country.giga_mega_upkeep_real
+            }
+            if = {
+                limit = {
+                    NOT = {
+                        check_variable = {
+                            which = giga_mega_upkeep_real
+                            value = 0
+                        }
+                    }
+                }
+                add_modifier = {
+                    modifier = giga_mega_upkeep_balance
+                    days = -1
+                    multiplier = giga_mega_upkeep_real
+                }
+            }
+        }
+    }
+}

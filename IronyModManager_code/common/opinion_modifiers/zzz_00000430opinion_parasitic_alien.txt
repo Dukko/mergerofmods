@@ -1,0 +1,17 @@
+opinion_parasitic_alien = {
+    trigger = {
+        is_country_type = default
+        from = {
+            has_valid_civic = "civic_hive_parasitic"
+        }
+        NOR = {
+            has_valid_civic = civic_fanatic_purifiers
+            is_gestalt = yes
+        }
+    }
+    opinion = {
+        modifier = {
+            add = -150
+        }
+    }
+}

@@ -1,0 +1,69 @@
+ald_duelists = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_corporate_vault
+    icon = duelist
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        battle_thrall_job_check_trigger = yes
+    }
+    resources = {
+        category = planet_entertainers
+        produces = {
+            unity = 30
+        }
+        upkeep = {
+            alloys = 10
+        }
+    }
+    planet_modifier = {
+        planet_amenities_add = 12
+    }
+    country_modifier = {
+        country_naval_cap_add = 20
+    }
+    triggered_planet_modifier = {
+        potential = {
+            OR = {
+                has_trait = trait_robot_domestic_protocols
+                has_trait = trait_charismatic
+            }
+        }
+        modifier = {
+            planet_amenities_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_trait = trait_repugnant
+        }
+        modifier = {
+            planet_amenities_add = -2
+        }
+    }
+    weight = {
+        weight = @specialist_job_weight
+        modifier = {
+            factor = 0.1
+            has_ethic = ethic_pacifist
+            NOT = {
+                has_job = duelist
+            }
+        }
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+            NOT = {
+                has_trait = trait_mechanical
+            }
+        }
+        modifier = {
+            factor = 1.5
+            always = yes
+        }
+    }
+}

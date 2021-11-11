@@ -1,0 +1,83 @@
+district_giga_alderson_admin = {
+    base_buildtime = @giga_alderson_district_buildtime
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        uses_district_set = giga_alderson
+        has_planet_flag = giga_alderson_pc
+    }
+    potential = {
+        uses_district_set = giga_alderson
+        has_planet_flag = giga_alderson_pc
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @giga_alderson_cost
+        }
+        upkeep = {
+            energy = @giga_alderson_maintenance
+        }
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_giga_alderson_city
+        district_giga_alderson_hive
+        district_giga_alderson_nexus
+    }
+    triggered_planet_modifier = {
+        modifier = {
+            planet_housing_add = @alderson_auto_housing
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_bureaucrat_add = @alderson_auto_jobs
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_synapse_drone_add = @alderson_auto_jobs
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_coordinator_add = @alderson_auto_jobs
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = "job_bureaucrat_effect_desc"
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = "job_coordinator_effect_desc"
+    }
+}

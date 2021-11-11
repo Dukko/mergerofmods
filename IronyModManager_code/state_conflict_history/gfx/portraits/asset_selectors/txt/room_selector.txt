@@ -1,6 +1,14 @@
 room_selector = {
     default = "command2_room"
     game_setup = {
+        "dlc_hive_room" = {
+        }
+        "dlc_hive2_room" = {
+        }
+        "dlc_hive3_room" = {
+        }
+        "horrorworm_room" = {
+        }
         "pse_shroud_room" = {
             always = no
         }

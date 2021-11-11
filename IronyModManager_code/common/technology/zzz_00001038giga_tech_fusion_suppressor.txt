@@ -1,0 +1,70 @@
+giga_tech_fusion_suppressor = {
+    cost = 40000
+    area = physics
+    tier = 5
+    category = {
+        particles
+    }
+    is_rare = yes
+    prerequisites = {
+        "tech_zero_point_power"
+        "tech_battleships"
+        "giga_tech_particle_accelerator"
+        "giga_tech_substellar_compressor"
+    }
+    weight = @tier4weight3
+    prereqfor_desc = {
+        custom = {
+            title = "allow_fusion_suppressor"
+            desc = "desc_fusion_suppressor"
+        }
+    }
+    modifier = {
+        weapon_type_energy_weapon_damage_mult = 0.05
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+        modifier = {
+            factor = 0
+            has_utopia = no
+        }
+        modifier = {
+            factor = 0
+            has_galactic_wonders = no
+        }
+        modifier = {
+            factor = 1.5
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = 2
+            has_federation = yes
+            federation = {
+                has_federation_perk = rare_tech_boost
+                any_member = {
+                    has_technology = giga_tech_fusion_suppressor
+                }
+            }
+        }
+    }
+    ai_weight = {
+        factor = @giga_aiweight_multiplier
+        modifier = {
+            factor = 0
+            has_galactic_wonders = no
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+}

@@ -165,13 +165,125 @@ event = {
                         }
                     }
                     if = {
-                        limit = {
-                            has_trait = trait_self_modified
+                            limit = {
+                                has_trait = trait_self_modified
+                                prev = {
+                                    NOT = {
+                                        has_ascension_perk = ap_omnipresence
+                                    }
+                                }
+                            }
+                            modify_species = {
+                                species = this
+                                add_trait = trait_hive_mind
+                                remove_trait = trait_self_modified
+                                change_scoped_species = no
+                                effect = {
+                                    set_timed_species_flag = {
+                                        flag = assimilation_species_of_species@prev
+                                        days = 30
+                                    }
+                                    set_timed_species_flag = {
+                                        flag = assimilation_species_of_empire@prevprev
+                                        days = 30
+                                    }
+                                }
+                            }
                         }
-                        modify_species = {
-                            species = this
-                            add_trait = trait_hive_mind
-                            remove_trait = trait_self_modified
+                        else_if = {
+                            limit = {
+                                has_trait = trait_self_modified
+                                prev = {
+                                    has_ascension_perk = ap_omnipresence
+                                }
+                                NOR = {
+                                    has_trait = trait_psionic
+                                    has_trait = trait_latent_psionic
+                                }
+                            }
+                            modify_species = {
+                                species = this
+                                add_trait = trait_hive_mind
+                                remove_trait = trait_self_modified
+                                change_scoped_species = no
+                                effect = {
+                                    save_event_target_as = hive_base
+                                }
+                            }
+                            modify_species = {
+                                species = event_target:hive_base
+                                add_trait = trait_psionic
+                                change_scoped_species = no
+                                effect = {
+                                    set_timed_species_flag = {
+                                        flag = assimilation_species_of_species@prev
+                                        days = 30
+                                    }
+                                    set_timed_species_flag = {
+                                        flag = assimilation_species_of_empire@prevprev
+                                        days = 30
+                                    }
+                                }
+                            }
+                        }
+                        else_if = {
+                            limit = {
+                                has_trait = trait_self_modified
+                                prev = {
+                                    has_ascension_perk = ap_omnipresence
+                                }
+                                NOT = {
+                                    has_trait = trait_psionic
+                                }
+                                has_trait = trait_latent_psionic
+                            }
+                            modify_species = {
+                                species = this
+                                add_trait = trait_hive_mind
+                                remove_trait = trait_self_modified
+                                change_scoped_species = no
+                                effect = {
+                                    save_event_target_as = hive_base
+                                }
+                            }
+                            modify_species = {
+                                species = event_target:hive_base
+                                remove_trait = trait_latent_psionic
+                                add_trait = trait_psionic
+                                change_scoped_species = no
+                                effect = {
+                                    set_timed_species_flag = {
+                                        flag = assimilation_species_of_species@prev
+                                        days = 30
+                                    }
+                                    set_timed_species_flag = {
+                                        flag = assimilation_species_of_empire@prevprev
+                                        days = 30
+                                    }
+                                }
+                            }
+                        }
+                        else_if = {
+                            limit = {
+                                prev = {
+                                    has_ascension_perk = ap_omnipresence
+                                }
+                                NOR = {
+                                    has_trait = trait_psionic
+                                    has_trait = trait_latent_psionic
+                                }
+                            }
+                            modify_species = {
+                                species = this
+                                add_trait = trait_hive_mind
+                                change_scoped_species = no
+                                effect = {
+                                    save_event_target_as = hive_base
+                                }
+                            }
+                            modify_species = {
+                                species = event_target:hive_base
+                                add_trait = trait_psionic
                             change_scoped_species = no
                             effect = {
                                 set_timed_species_flag = {
@@ -185,7 +297,42 @@ event = {
                             }
                         }
                     }
-                    else = {
+                        else_if = {
+                            limit = {
+                                prev = {
+                                    has_ascension_perk = ap_omnipresence
+                                }
+                                NOT = {
+                                    has_trait = trait_psionic
+                                }
+                                has_trait = trait_latent_psionic
+                            }
+                            modify_species = {
+                                species = this
+                                add_trait = trait_hive_mind
+                                change_scoped_species = no
+                                effect = {
+                                    save_event_target_as = hive_base
+                                }
+                            }
+                            modify_species = {
+                                species = event_target:hive_base
+                                add_trait = trait_psionic
+                                remove_trait = trait_latent_psionic
+                                change_scoped_species = no
+                                effect = {
+                                    set_timed_species_flag = {
+                                        flag = assimilation_species_of_species@prev
+                                        days = 30
+                                    }
+                                    set_timed_species_flag = {
+                                        flag = assimilation_species_of_empire@prevprev
+                                        days = 30
+                                    }
+                                }
+                            }
+                        }
+                        else = {
                         modify_species = {
                             species = this
                             add_trait = trait_hive_mind

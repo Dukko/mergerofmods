@@ -1,0 +1,32 @@
+ald_megascience_robot = {
+    category = complex_drone
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_research_lab_3
+    icon = calculator
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        specialist_job_check_trigger = yes
+    }
+    resources = {
+        category = planet_researchers
+        produces = {
+            physics_research = 16
+            engineering_research = 16
+            society_research = 16
+        }
+        upkeep = {
+            energy = 16
+        }
+    }
+    weight = {
+        weight = @complex_drone_job_weight
+        modifier = {
+            factor = 1.5
+            always = yes
+        }
+    }
+}

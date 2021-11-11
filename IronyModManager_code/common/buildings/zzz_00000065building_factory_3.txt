@@ -93,11 +93,26 @@ building_factory_3 = {
         potential = {
             exists = owner
             owner = {
+                is_regular_empire = yes
+                is_crafter_empire = no
                 has_valid_civic = civic_consumerism
             }
         }
         modifier = {
             job_artisan_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                is_crafter_empire = yes
+                has_valid_civic = civic_consumerism
+            }
+        }
+        modifier = {
+            job_artificer_add = 3
         }
     }
     resources = {

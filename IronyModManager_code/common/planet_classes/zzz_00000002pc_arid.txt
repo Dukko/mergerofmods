@@ -1,7 +1,7 @@
 pc_arid = {
     entity = "arid_planet"
     entity_scale = @planet_standard_scale
-    icon_frame = 2
+    icon = GFX_planet_type_arid
     climate = "dry"
     initial = yes
     atmosphere_color = hsv {

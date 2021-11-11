@@ -1,0 +1,65 @@
+giga_tech_succ = {
+    cost = 60000
+    area = engineering
+    tier = 4
+    category = {
+        voidcraft
+    }
+    is_rare = yes
+    prerequisites = {
+        "tech_mega_engineering"
+        "tech_power_plant_4"
+        "tech_mine_exotic_gases"
+    }
+    weight = @tier4weight3
+    prereqfor_desc = {
+        custom = {
+            title = "allow_succ"
+            desc = "desc_succ"
+        }
+    }
+    modifier = {
+        country_exotic_gases_produces_mult = 0.1
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 0
+            has_utopia = no
+        }
+        modifier = {
+            factor = 1.5
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = 2
+            has_federation = yes
+            federation = {
+                has_federation_perk = rare_tech_boost
+                any_member = {
+                    has_technology = giga_tech_succ
+                }
+            }
+        }
+    }
+    ai_weight = {
+        factor = @giga_aiweight_multiplier
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+        modifier = {
+            factor = 0
+            has_utopia = no
+        }
+    }
+}

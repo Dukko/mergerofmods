@@ -1,7 +1,7 @@
 pc_shielded = {
     entity = "shielded_planet"
     overlay_entity = "planet_shield_effect_entity"
-    icon_frame = 1
+    icon = GFX_planet_type_desert
     entity_scale = @planet_standard_scale
     atmosphere_color = hsv {
         0.25

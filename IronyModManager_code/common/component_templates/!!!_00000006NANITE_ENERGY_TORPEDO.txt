@@ -1,0 +1,76 @@
+weapon_component_template = {
+    key = "NANITE_ENERGY_TORPEDO"
+    size = torpedo
+    entity = "turret_energy_torpedo_entity"
+    type = instant
+    prio_projectile = yes
+    icon = "GFX_ship_part_nanite_energy_torpedo"
+    icon_frame = 1
+    power = -90
+    damage = {
+        min = 468
+        max = 1040
+    }
+    windup = {
+        min = 2
+        max = 20
+    }
+    total_fire_time = 150
+    range = 20
+    accuracy = 0.9
+    tracking = 0.5
+    hull_damage = 1.75
+    shield_damage = 0.5
+    shield_penetration = 1.5
+    armor_damage = 1
+    prerequisites = {
+        "tech_nanite_torpedo"
+    }
+    component_set = "NANITE_ENERGY_TORPEDO"
+    size_restriction = {
+        titan
+        graygoo_mothership
+        colossus
+        juggernaut
+        scavenger_bot
+        dreadnought
+        nanite_dragon
+    }
+    tags = {
+        weapon_type_energy
+    }
+    projectile_gfx = "gatebuilder_torpedoes"
+    ai_tags = {
+        weapon_role_artillery
+        weapon_role_anti_hull
+        weapon_role_anti_shield
+        weapon_role_anti_armor
+    }
+    ai_tag_weight = 1
+    resources = {
+        category = ship_components
+        cost = {
+            nanites = 5
+            alloys = 10
+            exotic_gases = 1
+        }
+        upkeep = {
+            nanites = 0.01
+        }
+    }
+    ai_weight = {
+        weight = 1
+        modifier = {
+            factor = 0
+            is_country_type_with_subjects = yes
+            has_monthly_income = {
+                resource = exotic_gases
+                value < 1
+            }
+            has_monthly_income = {
+                resource = nanites
+                value < 1
+            }
+        }
+    }
+}

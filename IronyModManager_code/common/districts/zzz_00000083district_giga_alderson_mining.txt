@@ -1,0 +1,79 @@
+district_giga_alderson_mining = {
+    base_buildtime = @giga_alderson_district_buildtime
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        uses_district_set = giga_alderson
+        OR = {
+            has_planet_flag = giga_alderson_gaia
+            has_planet_flag = giga_alderson_hive
+            has_planet_flag = giga_alderson_machine
+        }
+    }
+    potential = {
+        uses_district_set = giga_alderson
+        OR = {
+            has_planet_flag = giga_alderson_gaia
+            has_planet_flag = giga_alderson_hive
+            has_planet_flag = giga_alderson_machine
+        }
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_giga_alderson_city
+        district_giga_alderson_hive
+        district_giga_alderson_nexus
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @giga_alderson_cost
+            exotic_gases = @giga_alderson_cost_sr
+        }
+        upkeep = {
+            energy = @giga_alderson_maintenance
+            exotic_gases = @giga_alderson_maintenance_sr
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            planet_housing_add = @alderson_auto_housing
+            job_ald_matter_synthesizer_add = @alderson_auto_jobs
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            planet_housing_add = @alderson_auto_housing
+            job_ald_matter_synthesizer_drone_add = @alderson_auto_jobs_hive
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            planet_housing_add = @alderson_auto_housing_mach
+            job_ald_matter_synthesizer_drone_add = @alderson_auto_jobs
+        }
+    }
+    ai_resource_production = {
+        minerals = 500
+        trigger = {
+            always = yes
+        }
+    }
+}

@@ -1,0 +1,21 @@
+opinion_mutualistic_behavior = {
+    trigger = {
+        is_country_type = default
+        OR = {
+            has_valid_civic = "civic_mutualistic_behavior"
+            AND = {
+                from = {
+                    has_valid_civic = "civic_mutualistic_behavior"
+                }
+                NOT = {
+                    has_valid_civic = civic_fanatic_purifiers
+                }
+            }
+        }
+    }
+    opinion = {
+        modifier = {
+            add = 20
+        }
+    }
+}

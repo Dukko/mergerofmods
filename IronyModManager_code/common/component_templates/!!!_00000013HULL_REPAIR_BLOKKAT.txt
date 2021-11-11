@@ -1,0 +1,28 @@
+utility_component_template = {
+    key = "HULL_REPAIR_BLOKKAT"
+    size = aux
+    icon = "GFX_ship_part_hull_repair_blokkat"
+    icon_frame = 1
+    power = -200
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = 500
+            energy = 1000
+        }
+        upkeep = {
+            energy = 25
+        }
+    }
+    modifier = {
+        ship_hull_mult = 0.15
+        ship_armor_mult = 0.1
+    }
+    component_set = "HULL_REPAIR_BLOKKAT"
+    prerequisites = {
+        "giga_tech_blokkat_hullrepair"
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

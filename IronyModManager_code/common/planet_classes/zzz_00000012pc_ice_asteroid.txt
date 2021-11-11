@@ -1,7 +1,7 @@
 pc_ice_asteroid = {
     entity = "asteroid_ice_large"
-    entity_scale = @asteroid_standard_scale
-    icon_frame = 18
+    entity_scale = 1.5
+    icon = GFX_planet_type_asteroid
     asteroid = yes
     spawn_odds = 10
     extra_orbit_size = 0

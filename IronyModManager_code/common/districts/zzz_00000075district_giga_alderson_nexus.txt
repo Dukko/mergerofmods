@@ -1,0 +1,39 @@
+district_giga_alderson_nexus = {
+    base_buildtime = @giga_alderson_district_buildtime
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        exists = from
+        from = {
+            is_machine_empire = yes
+        }
+        uses_district_set = giga_alderson
+    }
+    potential = {
+        exists = owner
+        owner = {
+            is_machine_empire = yes
+        }
+        uses_district_set = giga_alderson
+    }
+    conversion_ratio = 0.5
+    convert_to = {
+        district_giga_alderson_hive
+        district_giga_alderson_city
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @giga_alderson_cost
+        }
+        upkeep = {
+            energy = @giga_alderson_maintenance
+        }
+    }
+    triggered_planet_modifier = {
+        modifier = {
+            planet_housing_add = 60
+            job_patrol_drone_add = 2
+            job_maintenance_drone_add = 15
+        }
+    }
+}

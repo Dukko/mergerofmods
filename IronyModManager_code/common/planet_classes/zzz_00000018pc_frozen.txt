@@ -1,7 +1,7 @@
 pc_frozen = {
     entity = "frozen_planet"
     entity_scale = @planet_standard_scale
-    icon_frame = 13
+    icon = GFX_planet_type_frozen
     atmosphere_color = hsv {
         0.55
         0.15

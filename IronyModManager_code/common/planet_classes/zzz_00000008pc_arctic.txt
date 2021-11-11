@@ -1,7 +1,7 @@
 pc_arctic = {
     entity = "arctic_planet"
     entity_scale = @planet_standard_scale
-    icon_frame = 7
+    icon = GFX_planet_type_arctic
     climate = "cold"
     initial = yes
     atmosphere_color = hsv {

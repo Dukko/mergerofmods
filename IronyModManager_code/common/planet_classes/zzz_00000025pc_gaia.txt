@@ -1,7 +1,7 @@
 pc_gaia = {
     entity = "gaia_planet"
     entity_scale = @planet_standard_scale
-    icon_frame = 8
+    icon = GFX_planet_type_gaia
     atmosphere_color = hsv {
         0.58
         0.3
@@ -33,6 +33,6 @@ pc_gaia = {
     district_set = standard
     ideal = yes
     starting_planet = no
-    uses_alternative_skies_for_moons = yes
+    uses_alternative_skies_for_moons = no
     carry_cap_per_free_district = @carry_cap_high
 }

@@ -1,0 +1,28 @@
+trait_panners = {
+    cost = 2
+    sorting_priority = 19
+    initial = no
+    randomized = no
+    modification = no
+    modifier = {
+        planet_jobs_volatile_motes_produces_mult = 0.2
+    }
+    species_potential_add = {
+        always = no
+        exists = from
+        from = {
+            has_ascension_perk = ap_life_masters
+            OR = {
+                has_modifier = life_masters_8_trait
+                has_modifier = life_masters_9_trait
+                has_modifier = life_masters_10_trait
+            }
+        }
+    }
+    potential_crossbreeding_chance = 0.5
+    icon = "gfx/interface/icons/traits/trait_panners.dds"
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+}

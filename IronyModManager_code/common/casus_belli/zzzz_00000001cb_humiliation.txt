@@ -1,0 +1,52 @@
+cb_humiliation = {
+    show_in_diplomacy = no
+    show_notification = no
+    potential = {
+        OR = {
+            is_country_type_with_subjects = yes
+            is_country_type = fallen_empire
+        }
+    }
+    is_valid = {
+        exists = from
+        OR = {
+            AND = {
+                NOT = {
+                    from = {
+                        has_relation_flag = {
+                            who = root
+                            flag = vivisectors
+                        }
+                    }
+                }
+                OR = {
+                NOR = {
+                        has_policy_flag = liberation_wars
+                    has_policy_flag = protection_wars
+                    }
+                    from = {
+                        has_ethic = ethic_gestalt_consciousness
+                    }
+                }
+            }
+            from = {
+                has_relation_flag = {
+                    who = root
+                    flag = vivisectors
+                }
+            }
+        }
+        has_total_war_cb = no
+        NOT = {
+            is_overlord_to = from
+        }
+        OR = {
+            is_subject = no
+            overlord = {
+                NOT = {
+                    is_same_empire = from
+                }
+            }
+        }
+    }
+}

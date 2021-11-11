@@ -9,6 +9,7 @@ colonization_control_no = {
             NOR = {
                 has_trait = trait_machine_unit
                 has_trait = trait_mechanical
+                has_trait = trait_machine_replica
                 AND = {
                     has_trait = trait_cybernetic
                     from = {
@@ -65,6 +66,7 @@ colonization_control_no = {
         }
         custom_tooltip = {
             fail_text = "SPECIES_CANNOT_COLONIZE"
+            is_sapient = yes
             NOR = {
                 has_trait = trait_syncretic_proles
                 has_trait = trait_nerve_stapled

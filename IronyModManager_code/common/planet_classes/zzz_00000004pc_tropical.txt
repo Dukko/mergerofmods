@@ -1,7 +1,7 @@
 pc_tropical = {
     entity = "tropical_planet"
     entity_scale = @planet_standard_scale
-    icon_frame = 5
+    icon = GFX_planet_type_tropical
     climate = "wet"
     initial = yes
     atmosphere_color = hsv {
@@ -28,6 +28,6 @@ pc_tropical = {
     }
     colonizable = yes
     district_set = standard
-    uses_alternative_skies_for_moons = yes
+    uses_alternative_skies_for_moons = no
     carry_cap_per_free_district = @carry_cap_normal
 }

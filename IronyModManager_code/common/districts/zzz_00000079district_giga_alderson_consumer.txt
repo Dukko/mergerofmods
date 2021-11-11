@@ -1,0 +1,74 @@
+district_giga_alderson_consumer = {
+    base_buildtime = @giga_alderson_district_buildtime
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        uses_district_set = giga_alderson
+        has_planet_flag = giga_alderson_ecu
+    }
+    potential = {
+        uses_district_set = giga_alderson
+        has_planet_flag = giga_alderson_ecu
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_giga_alderson_city
+        district_giga_alderson_hive
+        district_giga_alderson_nexus
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @giga_alderson_cost
+            rare_crystals = @giga_alderson_cost_sr
+        }
+        upkeep = {
+            energy = @giga_alderson_maintenance
+            rare_crystals = @giga_alderson_maintenance_sr
+        }
+    }
+    triggered_planet_modifier = {
+        modifier = {
+            planet_housing_add = @alderson_auto_housing_ecu
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_crafter_empire = no
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_ald_hyperfactorio_add = @alderson_auto_jobs_ecu
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_crafter_empire = yes
+            }
+        }
+        modifier = {
+            job_ald_hyperartificer_add = @alderson_auto_jobs_ecu
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_ald_hyperfactorio_drone_add = @alderson_auto_jobs_ecu
+        }
+    }
+    ai_resource_production = {
+        consumer_goods = 500
+        trigger = {
+            always = yes
+        }
+    }
+}

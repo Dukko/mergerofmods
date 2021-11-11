@@ -31,12 +31,13 @@ district_nexus = {
         }
         str_nexus_district_allow = yes
     }
-    conversion_ratio = 1
+    conversion_ratio = 0.5
     convert_to = {
         district_arcology_housing
         district_rw_nexus
         district_city
         district_hive
+        district_matryoshka_housing
     }
     resources = {
         category = planet_districts_cities

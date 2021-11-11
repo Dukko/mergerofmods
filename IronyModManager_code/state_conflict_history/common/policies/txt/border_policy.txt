@@ -14,10 +14,8 @@ border_policy = {
                 has_valid_civic = civic_hive_devouring_swarm
                 has_valid_civic = civic_fanatic_purifiers
                 AND = {
-                    has_global_flag = cultural_overhaul_active
-                    NOT = {
-                        has_global_flag = cultural_overhaul_redux_active
-                    }
+                    has_any_ethics_mod = yes
+                    has_ethics_redux = no
                     has_valid_civic = civic_inwards_perfection
                 }
                 has_valid_civic = civic_shadow_state
