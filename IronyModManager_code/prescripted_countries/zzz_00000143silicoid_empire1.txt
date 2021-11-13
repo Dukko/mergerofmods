@@ -1,0 +1,63 @@
+silicoid_empire1 = {
+    playable = has_lithoids
+    ship_prefix = "Xot-"
+    species = {
+        class = SLCOD
+        portrait = silicoid_02
+        name = "Taclariot"
+        plural = "Taclariota"
+        adjective = "Taclariotan"
+        name_list = SLCOD1
+        trait = trait_silicoid
+        trait = trait_idealized_structure
+        trait = trait_sparkly
+        trait = trait_sharp
+        trait = trait_brittle
+    }
+    name = "Taclariotan Influence"
+    adjective = "Taclariotan"
+    authority = auth_imperial
+    government = gov_illuminated_autocracy
+    advisor_voice_type = "l_xenophobe"
+    planet_name = "Taclaarat"
+    planet_class = pc_arid
+    system_name = "Batkyn"
+    initializer = ""
+    graphical_culture = silicoid_01
+    city_graphical_culture = silicoid_01
+    empire_flag = {
+        icon = {
+            category = "domination"
+            file = "domination_15.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "v.dds"
+        }
+        colors = {
+            "red_orange"
+            "yellow"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = male
+        name = "Zec-Ta"
+        portrait = silicoid_02
+        texture = 5
+        hair = 0
+        clothes = 0
+        leader_class = ruler
+    }
+    spawn_as_fallen = no
+    room = "personality_federation_builders_room"
+    spawn_enabled = yes
+    ignore_portrait_duplication = yes
+    ethic = ethic_authoritarian
+    ethic = ethic_fanatic_materialist
+    civics = {
+        "civic_terraformers"
+        "civic_technocracy"
+    }
+}

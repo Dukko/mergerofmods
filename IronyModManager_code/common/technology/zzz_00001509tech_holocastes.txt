@@ -1,0 +1,17 @@
+tech_holocastes = {
+    cost = 100
+    area = society
+    tier = 1
+    category = {
+        biology
+    }
+    weight = 1
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = is_holofrixit
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+trait_asari_age = {
+    icon = gfx/interface/icons/traits/trait_asari.dds
+    cost = 0
+    potential_crossbreeding_chance = 0
+    sorting_priority = 20
+    initial = no
+    randomized = no
+    modification = no
+    forced_happiness = no
+    immortal_leaders = no
+    leader_age_min = 90
+    leader_age_max = 120
+    modifier = {
+        leader_age = 70
+    }
+    custom_tooltip = TRAIT_ASARI_AGE_EFFECT
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

@@ -18,27 +18,10 @@ roboticist = {
     resources = {
         category = planet_pop_assemblers
         upkeep = {
-            trigger = {
-                planet = {
-                    NOR = {
-                        has_modifier = planet_robot_assembly_control
-                        has_modifier = planet_population_control_gestalt
-                    }
-                }
-            }
             alloys = 2
         }
     }
     weight = {
         weight = 500
-        modifier = {
-            factor = 1.5
-            has_job = roboticist
-        }
-        modifier = {
-            factor = 1.2
-            is_unemployed = yes
-            is_pop_category = specialist
-        }
     }
 }

@@ -3,7 +3,7 @@ military_service_full = {
     potential = {
         if = {
             limit = {
-                from = {
+                FROM = {
                     has_authority = auth_machine_intelligence
                 }
             }
@@ -16,13 +16,13 @@ military_service_full = {
     }
     allow = {
         hidden_trigger = {
-            exists = from
+            exists = FROM
         }
         custom_tooltip = {
             fail_text = MACHINE_NO_PURE_ORGANIC_SOLDIERS
             if = {
                 limit = {
-                    from = {
+                    FROM = {
                         has_authority = auth_machine_intelligence
                     }
                 }
@@ -31,7 +31,7 @@ military_service_full = {
                     has_trait = trait_machine_unit
                     AND = {
                         has_trait = trait_cybernetic
-                        from = {
+                        FROM = {
                             has_civic = civic_machine_assimilator
                         }
                     }
@@ -42,21 +42,27 @@ military_service_full = {
             fail_text = is_undesirables_tooltip
             NOR = {
                 has_citizenship_type = {
-                    country = from
+                    country = FROM
                     type = citizenship_purge_machine
                 }
                 has_citizenship_type = {
-                    country = from
+                    country = FROM
                     type = citizenship_purge
                 }
             }
         }
         custom_tooltip = {
             fail_text = is_slaves_tooltip
-            NOT = {
-                has_citizenship_type = {
-                    country = from
-                    type = citizenship_slavery
+            OR = {
+                NOT = {
+                    has_citizenship_type = {
+                        country = FROM
+                        type = citizenship_slavery
+                    }
+                }
+                has_slavery_type = {
+                    country = FROM
+                    type = slavery_military
                 }
             }
         }
@@ -64,7 +70,7 @@ military_service_full = {
             fail_text = is_servitude_tooltip
             NOT = {
                 has_citizenship_type = {
-                    country = from
+                    country = FROM
                     type = citizenship_robot_servitude
                 }
             }
@@ -73,7 +79,6 @@ military_service_full = {
             fail_text = too_alien
             OR = {
                 is_same_species = FROM
-                has_trait = trait_mechanical
                 has_species_flag = allow_military_leaders_honored_protectors@FROM
                 FROM = {
                     is_xenophobe = no
@@ -81,10 +86,9 @@ military_service_full = {
             }
         }
         custom_tooltip = {
-            fail_text = too_alien
+            fail_text = necrophage_only_allows_necrophage_leaders
             OR = {
                 is_same_species = FROM
-                has_trait = trait_mechanical
                 has_species_flag = allow_military_leaders_honored_protectors@FROM
                 FROM = {
                     NAND = {
@@ -95,10 +99,10 @@ military_service_full = {
             }
         }
         custom_tooltip = {
-            fail_text = "HIVE_MIND_SPECIES_CITIZENS_ONLY"
+            fail_text = HIVE_MIND_SPECIES_CITIZENS_ONLY
             OR = {
                 NOT = {
-                    from = {
+                    FROM = {
                         has_authority = auth_hive_mind
                     }
                 }
@@ -114,10 +118,10 @@ military_service_full = {
                         has_trait = trait_machine_unit
                     }
                 }
-                from = {
+                FROM = {
                     OR = {
                         has_authority = auth_machine_intelligence
-                        has_technology = tech_droid_workers
+                        has_technology = tech_synthetic_leaders
                     }
                 }
             }
@@ -146,17 +150,27 @@ military_service_full = {
             }
         }
     }
+    triggered_pop_modifier = {
+        potential = {
+            has_slavery_type = {
+                type = slavery_military
+            }
+        }
+        modifier = {
+            pop_cat_slave_happiness = 0.1
+        }
+    }
     ai_will_do = {
         factor = 5
         modifier = {
             factor = 0
-            from = {
+            FROM = {
                 has_valid_ai_personality = no
             }
         }
         modifier = {
             factor = 0
-            from = {
+            FROM = {
                 has_valid_ai_personality = yes
                 NOT = {
                     has_ai_personality_behaviour = multispecies

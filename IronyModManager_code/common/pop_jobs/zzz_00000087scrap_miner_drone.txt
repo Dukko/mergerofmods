@@ -58,5 +58,13 @@ scrap_miner_drone = {
             factor = 0.65
             has_trait = trait_necrophage
         }
+        modifier = {
+            factor = 0
+            OR = {
+                has_trait = trait_holofrixigram
+                has_trait = trait_holofrixigram_2
+                has_trait = trait_holofrixigram_3
+            }
+        }
     }
 }

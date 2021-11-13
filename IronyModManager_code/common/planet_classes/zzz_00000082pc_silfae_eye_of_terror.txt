@@ -1,0 +1,25 @@
+pc_silfae_eye_of_terror = {
+    entity = "silfae_eye_of_terror"
+    entity_scale = 20
+    icon = GFX_planet_type_pulsar
+    picture = pc_shrouded
+    atmosphere_color = hsv {
+        0.075
+        0.13
+        1.5
+    }
+    atmosphere_intensity = 1
+    atmosphere_width = 1
+    star = yes
+    min_distance_from_sun = 0
+    max_distance_from_sun = 0
+    spawn_odds = 0
+    extra_orbit_size = 0
+    extra_planet_count = 0
+    chance_of_ring = 0
+    planet_size = {
+        min = 20
+        max = 35
+    }
+    colonizable = no
+}

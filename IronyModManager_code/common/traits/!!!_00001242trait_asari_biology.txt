@@ -1,0 +1,20 @@
+trait_asari_biology = {
+    cost = 6
+    potential_crossbreeding_chance = 0.2
+    initial = yes
+    modification = yes
+    randomized = no
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    modifier = {
+        leader_age = 850
+        species_leader_exp_gain = -0.25
+        pop_environment_tolerance = 0.01
+    }
+    opposites = {
+        trait_venerable
+        trait_enduring
+        trait_robust
+    }
+}

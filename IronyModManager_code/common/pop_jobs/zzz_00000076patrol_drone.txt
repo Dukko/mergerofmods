@@ -36,6 +36,13 @@ patrol_drone = {
             weight = 20
             exists = owner
             owner = {
+                is_ai = yes
+            }
+        }
+        modifier = {
+            weight = 20
+            exists = owner
+            owner = {
                 is_at_war = yes
             }
         }
@@ -75,6 +82,21 @@ patrol_drone = {
         modifier = {
             factor = 1.2
             has_trait = trait_cybernetic
+        }
+        modifier = {
+            factor = 0.5
+            has_trait = trait_holofrixit
+            NOR = {
+                has_trait = trait_holowarrior
+                has_trait = trait_holowarrior_2
+            }
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                has_trait = trait_holowarrior
+                has_trait = trait_holowarrior_2
+            }
         }
     }
 }

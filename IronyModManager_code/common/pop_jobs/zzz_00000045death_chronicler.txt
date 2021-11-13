@@ -112,14 +112,5 @@ death_chronicler = {
             factor = 1.5
             has_trait = trait_necrophage
         }
-        modifier = {
-            factor = 1.5
-            has_job = death_chronicler
-        }
-        modifier = {
-            factor = 1.2
-            is_unemployed = yes
-            is_pop_category = specialist
-        }
     }
 }

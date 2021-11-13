@@ -80,5 +80,9 @@ artificer = {
                 is_artificial = no
             }
         }
+        modifier = {
+            factor = 1.25
+            has_trait = trait_hologanglion
+        }
     }
 }

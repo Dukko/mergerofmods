@@ -1,0 +1,62 @@
+silicoid_empire2 = {
+    playable = has_lithoids
+    ship_prefix = "MU"
+    species = {
+        class = SLCOD
+        portrait = silicoid_b_01
+        name = "Gogrod"
+        plural = "Gogrodes"
+        adjective = "Gogrodan"
+        name_list = FUN2
+        trait = trait_silicoid
+        trait = trait_eternal
+        trait = trait_solid_shape
+        trait = trait_grotesque
+        trait = trait_rooted
+    }
+    name = "Mandate of Druerd"
+    adjective = "Druerd"
+    authority = auth_dictatorial
+    government = gov_theocratic_dictatorship
+    planet_name = "Druerd"
+    planet_class = pc_arctic
+    system_name = "Dim One"
+    initializer = ""
+    graphical_culture = mammalian_01
+    city_graphical_culture = molluscoid_01
+    empire_flag = {
+        icon = {
+            category = "blocky"
+            file = "flag_blocky_8.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "00_solid.dds"
+        }
+        colors = {
+            "indigo"
+            "black"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = male
+        name = "Grabaam"
+        portrait = silicoid_b_01
+        texture = 1
+        hair = 0
+        clothes = 0
+        leader_class = ruler
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = yes
+    room = "personality_xenophobic_isolationists_room"
+    spawn_enabled = yes
+    ethic = ethic_fanatic_authoritarian
+    ethic = ethic_spiritualist
+    civics = {
+        "civic_living_world"
+        "civic_functional_architecture"
+    }
+}

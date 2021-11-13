@@ -1,0 +1,22 @@
+trait_genetic_degradation = {
+    cost = -2
+    potential_crossbreeding_chance = 0.5
+    initial = no
+    randomized = no
+    advanced_trait = yes
+    opposites = {
+        trait_venerable
+        trait_enduring
+        trait_fleeting
+        trait_robust
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    modifier = {
+        leader_age = -40
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

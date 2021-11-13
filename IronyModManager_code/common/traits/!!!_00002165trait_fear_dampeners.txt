@@ -1,0 +1,15 @@
+trait_fear_dampeners = {
+    cost = 1
+    potential_crossbreeding_chance = 0.5
+    initial = no
+    randomized = no
+    advanced_trait = yes
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    modifier = {
+        army_morale = 0.2
+        army_defense_health_mult = -0.1
+    }
+}

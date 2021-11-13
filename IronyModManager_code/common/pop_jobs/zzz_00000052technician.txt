@@ -43,7 +43,7 @@ technician = {
             factor = 8
             is_enslaved = yes
             can_take_servant_job = no
-            NOR = {
+            OR = {
                 has_trait = trait_syncretic_proles
                 has_trait = trait_nuumismatic_administration
                 has_trait = trait_robot_superconductive
@@ -121,6 +121,22 @@ technician = {
             exists = planet
             planet = {
                 is_artificial = no
+            }
+        }
+        modifier = {
+            weight = @specialist_job_weight
+            OR = {
+                has_trait = trait_holofrixigram
+                has_trait = trait_holofrixigram_2
+                has_trait = trait_holofrixigram_3
+            }
+        }
+        modifier = {
+            factor = 5
+            OR = {
+                has_trait = trait_holofrixigram
+                has_trait = trait_holofrixigram_2
+                has_trait = trait_holofrixigram_3
             }
         }
         modifier = {

@@ -1,19 +1,19 @@
 @battleship_collision_radius_1 = 3
-@battleship_collision_radius_10 = 3
-@battleship_collision_radius_11 = 3
+@battleship_collision_radius_10 = 36
+@battleship_collision_radius_11 = 36
 @battleship_collision_radius_12 = 6
 @battleship_collision_radius_13 = 6
 @battleship_collision_radius_14 = 3
 @battleship_collision_radius_15 = 3
 @battleship_collision_radius_16 = 6
-@battleship_collision_radius_2 = 6
-@battleship_collision_radius_3 = 36
-@battleship_collision_radius_4 = 36
-@battleship_collision_radius_5 = 6
-@battleship_collision_radius_6 = 6
+@battleship_collision_radius_2 = 3
+@battleship_collision_radius_3 = 6
+@battleship_collision_radius_4 = 6
+@battleship_collision_radius_5 = 3
+@battleship_collision_radius_6 = 3
 @battleship_collision_radius_7 = 3
 @battleship_collision_radius_8 = 3
-@battleship_collision_radius_9 = 3
+@battleship_collision_radius_9 = 6
 @battleship_formation_priority_1 = 5
 @battleship_formation_priority_2 = 5
 @battleship_formation_priority_3 = 5
@@ -74,6 +74,8 @@
 @build_block_radius_starbase_20 = 20
 @build_block_radius_starbase_21 = 20
 @build_block_radius_starbase_22 = 20
+@build_block_radius_starbase_23 = 20
+@build_block_radius_starbase_24 = 20
 @build_block_radius_starbase_3 = 20
 @build_block_radius_starbase_4 = 20
 @build_block_radius_starbase_5 = 20
@@ -172,7 +174,7 @@
 @destroyer_hp_7 = 650
 @destroyer_hp_8 = 650
 @speed_crawl_1 = 30
-@speed_default_1 = 100
+@speed_default_1 = 120
 @speed_default_10 = 100
 @speed_default_11 = 120
 @speed_default_12 = 120
@@ -181,24 +183,24 @@
 @speed_default_15 = 120
 @speed_default_2 = 120
 @speed_default_3 = 120
-@speed_default_4 = 100
-@speed_default_5 = 120
+@speed_default_4 = 120
+@speed_default_5 = 100
 @speed_default_6 = 120
 @speed_default_7 = 120
-@speed_default_8 = 120
+@speed_default_8 = 100
 @speed_default_9 = 100
 @speed_fast_1 = 140
 @speed_fast_10 = 120
 @speed_fast_11 = 140
 @speed_fast_12 = 140
-@speed_fast_13 = 140
-@speed_fast_14 = 140
-@speed_fast_15 = 140
-@speed_fast_16 = 140
+@speed_fast_13 = 120
+@speed_fast_14 = 120
+@speed_fast_15 = 120
+@speed_fast_16 = 120
 @speed_fast_17 = 140
 @speed_fast_18 = 140
 @speed_fast_19 = 140
-@speed_fast_2 = 120
+@speed_fast_2 = 140
 @speed_fast_20 = 140
 @speed_fast_21 = 140
 @speed_fast_22 = 140
@@ -209,7 +211,7 @@
 @speed_fast_27 = 140
 @speed_fast_28 = 140
 @speed_fast_29 = 140
-@speed_fast_3 = 120
+@speed_fast_3 = 140
 @speed_fast_30 = 140
 @speed_fast_31 = 140
 @speed_fast_32 = 140
@@ -218,10 +220,10 @@
 @speed_fast_35 = 140
 @speed_fast_36 = 140
 @speed_fast_37 = 140
-@speed_fast_4 = 120
+@speed_fast_4 = 140
 @speed_fast_5 = 140
 @speed_fast_6 = 140
-@speed_fast_7 = 120
+@speed_fast_7 = 140
 @speed_fast_8 = 120
 @speed_fast_9 = 120
 @speed_slow_1 = 100
@@ -321,6 +323,8 @@
 @starbase_formation_priority_24 = 1
 @starbase_formation_priority_25 = 1
 @starbase_formation_priority_26 = 1
+@starbase_formation_priority_27 = 1
+@starbase_formation_priority_28 = 1
 @starbase_formation_priority_3 = 1
 @starbase_formation_priority_4 = 1
 @starbase_formation_priority_5 = 1
@@ -329,10 +333,10 @@
 @starbase_formation_priority_8 = 1
 @starbase_formation_priority_9 = 1
 @titan_collision_radius_1 = 15
-@titan_collision_radius_2 = 15
-@titan_collision_radius_3 = 15
-@titan_collision_radius_4 = 12
-@titan_collision_radius_5 = 12
+@titan_collision_radius_2 = 12
+@titan_collision_radius_3 = 12
+@titan_collision_radius_4 = 15
+@titan_collision_radius_5 = 15
 @titan_collision_radius_6 = 15
 @titan_collision_radius_7 = 15
 @titan_collision_radius_8 = 12
@@ -1825,8 +1829,8 @@ starbase_bastion = {
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
     required_component_set = "ftl_inhibitor"
-    build_block_radius = @build_block_radius_starbase_20
-    formation_priority = @starbase_formation_priority_20
+    build_block_radius = @build_block_radius_starbase_19
+    formation_priority = @starbase_formation_priority_19
     icon_frame = 5
     icon = ship_size_military_station
 }
@@ -5587,8 +5591,8 @@ starbase_caravaneer = {
     required_component_set = "power_core"
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
-    build_block_radius = @build_block_radius_starbase_22
-    formation_priority = @starbase_formation_priority_26
+    build_block_radius = @build_block_radius_starbase_24
+    formation_priority = @starbase_formation_priority_28
     icon_frame = -1
     icon = ship_size_military_station
 }
@@ -6328,6 +6332,144 @@ star_eater = {
         }
     }
 }
+starbase_faux_outpost = {
+    entity = starbase_outpost_entity
+    max_speed = 0
+    acceleration = 0
+    rotation_speed = 0
+    modifier = {
+        ship_evasion_mult = -1
+        ship_armor_add = 1000
+        starbase_defense_platform_capacity_add = 3
+        ship_sensor_range_add = 1
+    }
+    ship_modifier = {
+        ship_fire_rate_mult = 0.5
+        ship_weapon_range_mult = 0.2
+    }
+    max_hitpoints = 5000
+    base_buildtime = 360
+    resources = {
+        category = starbase_stations
+        cost = {
+            trigger = {
+                from = {
+                    is_machine_empire = no
+                }
+            }
+            alloys = 100
+        }
+        cost = {
+            trigger = {
+                from = {
+                    is_machine_empire = yes
+                }
+            }
+            alloys = 150
+        }
+        upkeep = {
+            energy = 1
+        }
+    }
+    combat_size_multiplier = 5
+    size_multiplier = 4
+    fleet_slot_size = 2
+    section_slots = {
+        "core" = {
+            locator = "part1"
+        }
+    }
+    is_designable = no
+    num_target_locators = 0
+    is_space_station = yes
+    can_have_federation_design = no
+    is_civilian = no
+    components_add_to_cost = no
+    can_disable = yes
+    flip_control_on_disable = no
+    enable_default_design = yes
+    prerequisites = {
+        "tech_faux_starbase_1"
+    }
+    class = shipclass_starbase
+    required_component_set = "power_core"
+    required_component_set = "sensor_components"
+    required_component_set = "combat_computers"
+    build_block_radius = @build_block_radius_starbase_23
+    formation_priority = @starbase_formation_priority_27
+    icon_frame = 1
+    icon = ship_size_military_station
+    potential_construction = {
+        owner = {
+            has_technology = tech_faux_starbase_1
+        }
+    }
+}
+starbase_faux_starport = {
+    max_speed = 0
+    acceleration = 0
+    rotation_speed = 0
+    modifier = {
+        ship_evasion_mult = -1
+        ship_armor_add = 2000
+        starbase_defense_platform_capacity_add = 6
+        starbase_trade_collection_range_add = 1
+        starbase_trade_protection_range_add = 1
+        starbase_trade_protection_add = 8
+        ship_sensor_range_add = 1
+        starbase_shipyard_capacity_add = 2
+        ship_orbit_upkeep_mult = -0.25
+    }
+    ship_modifier = {
+        ship_fire_rate_mult = 0.5
+        ship_weapon_range_mult = 0.2
+    }
+    max_hitpoints = 10000
+    base_buildtime = 900
+    resources = {
+        category = starbase_stations
+        cost = {
+            alloys = 350
+        }
+        upkeep = {
+            energy = 4
+        }
+    }
+    combat_size_multiplier = 20
+    size_multiplier = 4
+    fleet_slot_size = 2
+    section_slots = {
+        "core" = {
+            locator = "part1"
+        }
+    }
+    is_designable = no
+    num_target_locators = 0
+    is_space_station = yes
+    can_have_federation_design = no
+    is_civilian = no
+    components_add_to_cost = no
+    can_disable = yes
+    flip_control_on_disable = no
+    enable_default_design = yes
+    prerequisites = {
+        "tech_faux_starbase_2"
+    }
+    class = shipclass_starbase
+    required_component_set = "power_core"
+    required_component_set = "sensor_components"
+    required_component_set = "combat_computers"
+    required_component_set = "ftl_inhibitor"
+    build_block_radius = @build_block_radius_starbase_22
+    formation_priority = @starbase_formation_priority_26
+    icon_frame = 2
+    icon = ship_size_military_station
+    potential_construction = {
+        owner = {
+            has_technology = tech_faux_starbase_2
+        }
+    }
+}
 acemod_ai_colossus = {
     formation_priority = @colossus_formation_priority
     max_speed = @speed_default
@@ -6424,10 +6566,10 @@ titan_ship_ai = {
     graphical_culture = {
         "ai_01"
     }
-    max_speed = @speed_slow_8
+    max_speed = @speed_slow_6
     acceleration = 0.2
     rotation_speed = 0.15
-    collision_radius = @battleship_collision_radius_10
+    collision_radius = @battleship_collision_radius_8
     modifier = {
         ship_evasion_add = 5
     }
@@ -6450,7 +6592,7 @@ construction_ship_ai = {
         "ai_01"
     }
     is_space_object = yes
-    max_speed = @speed_very_fast_7
+    max_speed = @speed_very_fast_6
     acceleration = 0.3
     rotation_speed = 0.2
     modifier = {
@@ -6478,7 +6620,7 @@ colony_ship_ai = {
         "ai_01"
     }
     is_space_object = yes
-    max_speed = @speed_very_fast_6
+    max_speed = @speed_very_fast_5
     acceleration = 0.3
     rotation_speed = 0.2
     modifier = {
@@ -6506,7 +6648,7 @@ transport_ship_ai = {
         "ai_01"
     }
     is_space_object = yes
-    max_speed = @speed_very_fast_5
+    max_speed = @speed_very_fast_4
     acceleration = 0.3
     rotation_speed = 0.2
     modifier = {
@@ -6533,7 +6675,7 @@ titan_ship_ed = {
         "extra_dimensional_02"
         "extra_dimensional_03"
     }
-    max_speed = @speed_slow_7
+    max_speed = @speed_slow_5
     acceleration = 0.2
     rotation_speed = 0.15
     collision_radius = 15
@@ -6561,7 +6703,7 @@ construction_ship_ed = {
         "extra_dimensional_03"
     }
     is_space_object = yes
-    max_speed = @speed_fast_13
+    max_speed = @speed_fast_6
     acceleration = 0.3
     rotation_speed = 0.2
     modifier = {
@@ -7360,7 +7502,7 @@ acot_star_overwatcher = {
     }
     num_target_locators = 0
     is_space_station = yes
-    build_block_radius = @build_block_radius_civilian_6
+    build_block_radius = @build_block_radius_civilian_5
     class = shipclass_military_station
     is_designable = no
     prerequisites = {
@@ -7455,7 +7597,7 @@ acot_star_overseer = {
     base_buildtime = 3500
     num_target_locators = 0
     is_space_station = yes
-    build_block_radius = @build_block_radius_civilian_5
+    build_block_radius = @build_block_radius_civilian_4
     class = shipclass_military_station
     is_designable = no
     prerequisites = {
@@ -7468,10 +7610,10 @@ acot_star_overseer = {
 }
 precursor_escort = {
     formation_priority = 3
-    max_speed = @speed_fast_16
+    max_speed = @speed_fast_3
     acceleration = 0.3
     rotation_speed = 0.3
-    collision_radius = @destroyer_collision_radius_9
+    collision_radius = @destroyer_collision_radius_4
     modifier = {
         ship_evasion_add = 35
         ship_hull_regen_add_perc = 0.1
@@ -7542,10 +7684,10 @@ precursor_escort = {
 }
 precursor_battlecruiser = {
     formation_priority = 6
-    max_speed = @speed_default_8
+    max_speed = @speed_default_4
     acceleration = 0.2
     rotation_speed = 0.2
-    collision_radius = @battleship_collision_radius_13
+    collision_radius = @battleship_collision_radius_4
     modifier = {
         ship_evasion_add = 10
         ship_hull_regen_add_perc = 0.1
@@ -7616,10 +7758,10 @@ precursor_battlecruiser = {
 }
 precursor_titan = {
     formation_priority = 9
-    max_speed = @speed_default_7
+    max_speed = @speed_default_3
     acceleration = 0.15
     rotation_speed = 0.15
-    collision_radius = @titan_collision_radius_5
+    collision_radius = @titan_collision_radius_3
     modifier = {
         ship_evasion_add = 10
         ship_hull_regen_add_perc = 0.25
@@ -7691,10 +7833,10 @@ precursor_titan = {
 }
 fe_assault_carrier = {
     formation_priority = 12
-    max_speed = @speed_default_6
+    max_speed = @speed_default_2
     acceleration = 0.15
     rotation_speed = 0.15
-    collision_radius = @titan_collision_radius_4
+    collision_radius = @titan_collision_radius_2
     modifier = {
         ship_evasion_add = 5
         ship_hull_regen_add_perc = 0.25
@@ -7792,7 +7934,7 @@ precursor_guardian = {
     }
     num_target_locators = 0
     is_space_station = yes
-    build_block_radius = @build_block_radius_military_8
+    build_block_radius = @build_block_radius_military_4
     uses_name_prefix = no
     takes_name_from_ship_design = yes
     is_space_object = yes
@@ -7865,7 +8007,7 @@ sentinel_sphere = {
     }
     num_target_locators = 0
     is_space_station = yes
-    build_block_radius = @build_block_radius_military_7
+    build_block_radius = @build_block_radius_military_3
     uses_name_prefix = no
     takes_name_from_ship_design = yes
     is_space_object = yes
@@ -7929,7 +8071,7 @@ precursor_platform_l = {
     uses_name_prefix = no
     takes_name_from_ship_design = yes
     is_space_object = yes
-    build_block_radius = @build_block_radius_civilian_4
+    build_block_radius = @build_block_radius_civilian_3
     prerequisites = {
         tech_precursor_construcor
     }
@@ -7981,7 +8123,7 @@ precursor_platform_m = {
     takes_name_from_ship_design = yes
     is_space_object = yes
     auto_upgrade = no
-    build_block_radius = @build_block_radius_civilian_3
+    build_block_radius = @build_block_radius_civilian_2
     prerequisites = {
         tech_precursor_construcor
     }
@@ -8478,8 +8620,8 @@ acot_precusor_starbase = {
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
     required_component_set = "ftl_inhibitor"
-    build_block_radius = @build_block_radius_starbase_19
-    formation_priority = @starbase_formation_priority_19
+    build_block_radius = @build_block_radius_starbase_18
+    formation_priority = @starbase_formation_priority_18
     icon_frame = 4
     prerequisites = {
         tech_precursor_citadel
@@ -8596,8 +8738,8 @@ acot_precusor_starfortress = {
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
     required_component_set = "ftl_inhibitor"
-    build_block_radius = @build_block_radius_starbase_18
-    formation_priority = @starbase_formation_priority_18
+    build_block_radius = @build_block_radius_starbase_17
+    formation_priority = @starbase_formation_priority_17
     icon_frame = 4
 }
 acot_precusor_starcitadel = {
@@ -8711,8 +8853,8 @@ acot_precusor_starcitadel = {
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
     required_component_set = "ftl_inhibitor"
-    build_block_radius = @build_block_radius_starbase_17
-    formation_priority = @starbase_formation_priority_17
+    build_block_radius = @build_block_radius_starbase_16
+    formation_priority = @starbase_formation_priority_16
     icon_frame = 4
 }
 acot_precusor_sigma_starbase = {
@@ -8825,8 +8967,8 @@ acot_precusor_sigma_starbase = {
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
     required_component_set = "ftl_inhibitor"
-    build_block_radius = @build_block_radius_starbase_16
-    formation_priority = @starbase_formation_priority_16
+    build_block_radius = @build_block_radius_starbase_15
+    formation_priority = @starbase_formation_priority_15
     icon_frame = 4
     prerequisites = {
         tech_precursor_sigma_citadel
@@ -8942,8 +9084,8 @@ acot_precusor_sigma_starfortress = {
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
     required_component_set = "ftl_inhibitor"
-    build_block_radius = @build_block_radius_starbase_15
-    formation_priority = @starbase_formation_priority_15
+    build_block_radius = @build_block_radius_starbase_14
+    formation_priority = @starbase_formation_priority_14
     icon_frame = 4
 }
 acot_precusor_sigma_starcitadel = {
@@ -9056,8 +9198,8 @@ acot_precusor_sigma_starcitadel = {
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
     required_component_set = "ftl_inhibitor"
-    build_block_radius = @build_block_radius_starbase_14
-    formation_priority = @starbase_formation_priority_14
+    build_block_radius = @build_block_radius_starbase_13
+    formation_priority = @starbase_formation_priority_13
     icon_frame = 4
 }
 acot_precusor_phanon_starcitadel = {
@@ -9168,8 +9310,8 @@ acot_precusor_phanon_starcitadel = {
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
     required_component_set = "ftl_inhibitor"
-    build_block_radius = @build_block_radius_starbase_13
-    formation_priority = @starbase_formation_priority_13
+    build_block_radius = @build_block_radius_starbase_12
+    formation_priority = @starbase_formation_priority_12
     icon_frame = 4
 }
 acot_curators_enclave_station = {
@@ -9192,16 +9334,16 @@ acot_curators_enclave_station = {
     }
     num_target_locators = 0
     is_space_station = yes
-    build_block_radius = @build_block_radius_civilian_2
+    build_block_radius = @build_block_radius_civilian_1
     class = shipclass_military_station
     is_designable = no
 }
 acot_curators_bc = {
-    formation_priority = @battleship_formation_priority_4
-    max_speed = @speed_slow_9
+    formation_priority = @battleship_formation_priority_1
+    max_speed = @speed_slow_1
     acceleration = 0.2
     rotation_speed = 0.15
-    collision_radius = @battleship_collision_radius_12
+    collision_radius = @battleship_collision_radius_3
     modifier = {
         ship_evasion_add = 10
     }
@@ -9228,11 +9370,11 @@ acot_curators_bc = {
     is_designable = no
 }
 acot_curators_escort = {
-    formation_priority = @destroyer_formation_priority_5
-    max_speed = @speed_fast_15
+    formation_priority = @destroyer_formation_priority_2
+    max_speed = @speed_fast_2
     acceleration = 0.3
     rotation_speed = 0.2
-    collision_radius = @destroyer_collision_radius_8
+    collision_radius = @destroyer_collision_radius_3
     modifier = {
         ship_evasion_add = 35
     }
@@ -9259,11 +9401,11 @@ acot_curators_escort = {
     is_designable = no
 }
 acot_curators_oracle = {
-    formation_priority = @destroyer_formation_priority_4
-    max_speed = @speed_fast_14
+    formation_priority = @destroyer_formation_priority_1
+    max_speed = @speed_fast_1
     acceleration = 0.3
     rotation_speed = 0.2
-    collision_radius = @destroyer_collision_radius_7
+    collision_radius = @destroyer_collision_radius_2
     modifier = {
         ship_evasion_add = 35
     }
@@ -9585,10 +9727,10 @@ large_ship_swarm = {
     graphical_culture = {
         "swarm_01"
     }
-    max_speed = @speed_slow_6
+    max_speed = @speed_slow_4
     acceleration = 0.2
     rotation_speed = 0.15
-    collision_radius = @battleship_collision_radius_9
+    collision_radius = @battleship_collision_radius_7
     modifier = {
         ship_evasion_add = 5
         ship_armor_add = 3000
@@ -9613,10 +9755,10 @@ large_ship_carrier_swarm = {
     graphical_culture = {
         "swarm_01"
     }
-    max_speed = @speed_slow_5
+    max_speed = @speed_slow_3
     acceleration = 0.2
     rotation_speed = 0.15
-    collision_radius = @battleship_collision_radius_8
+    collision_radius = @battleship_collision_radius_6
     modifier = {
         ship_evasion_add = 5
         ship_armor_add = 3000
@@ -9641,7 +9783,7 @@ small_ship_swarm = {
     graphical_culture = {
         "swarm_01"
     }
-    max_speed = @speed_fast_12
+    max_speed = @speed_fast_5
     acceleration = 0.3
     rotation_speed = 0.2
     collision_radius = @destroyer_collision_radius_5
@@ -9669,10 +9811,10 @@ queen_swarm = {
     graphical_culture = {
         "swarm_01"
     }
-    max_speed = @speed_slow_4
+    max_speed = @speed_slow_2
     acceleration = 0.2
     rotation_speed = 0.15
-    collision_radius = @battleship_collision_radius_7
+    collision_radius = @battleship_collision_radius_5
     modifier = {
         ship_evasion_add = 5
         ship_armor_add = 6000
@@ -9697,7 +9839,7 @@ construction_ship_swarm = {
         "swarm_01"
     }
     is_space_object = yes
-    max_speed = @speed_very_fast_4
+    max_speed = @speed_very_fast_3
     acceleration = 0.3
     rotation_speed = 0.2
     modifier = {
@@ -9727,7 +9869,7 @@ colony_ship_swarm = {
         "swarm_01"
     }
     is_space_object = yes
-    max_speed = @speed_very_fast_3
+    max_speed = @speed_very_fast_2
     acceleration = 0.3
     rotation_speed = 0.2
     modifier = {
@@ -9757,7 +9899,7 @@ transport_ship_swarm = {
         "swarm_01"
     }
     is_space_object = yes
-    max_speed = @speed_fast_11
+    max_speed = @speed_fast_4
     acceleration = 0.3
     rotation_speed = 0.2
     modifier = {
@@ -9868,7 +10010,7 @@ eac_military_station_heavy_small = {
     required_component_set = "power_core"
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
-    build_block_radius = @build_block_radius_military_9
+    build_block_radius = @build_block_radius_military_5
 }
 seed_ship = {
     graphical_culture = no
@@ -11935,7 +12077,7 @@ starbase_ehof_01 = {
     num_target_locators = 0
     is_space_station = yes
     build_block_radius = @build_block_radius_civilian
-    formation_priority = @starbase_formation_priority_25
+    formation_priority = @starbase_formation_priority_24
     icon_frame = -1
     class = shipclass_military_station
     required_component_set = "power_core"
@@ -11968,7 +12110,7 @@ starbase_ehof_02 = {
     num_target_locators = 0
     is_space_station = yes
     build_block_radius = @build_block_radius_civilian
-    formation_priority = @starbase_formation_priority_24
+    formation_priority = @starbase_formation_priority_23
     icon_frame = -1
     class = shipclass_military_station
     required_component_set = "power_core"
@@ -12001,7 +12143,7 @@ starbase_ehof_03 = {
     num_target_locators = 0
     is_space_station = yes
     build_block_radius = @build_block_radius_civilian
-    formation_priority = @starbase_formation_priority_23
+    formation_priority = @starbase_formation_priority_22
     icon_frame = -1
     class = shipclass_military_station
     required_component_set = "power_core"
@@ -12034,7 +12176,7 @@ starbase_ehof_04 = {
     num_target_locators = 0
     is_space_station = yes
     build_block_radius = @build_block_radius_civilian
-    formation_priority = @starbase_formation_priority_22
+    formation_priority = @starbase_formation_priority_21
     icon_frame = -1
     class = shipclass_military_station
     required_component_set = "power_core"
@@ -12074,8 +12216,8 @@ starbase_ehof_05 = {
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
     required_component_set = "COMPOUND_COMMUNICATIONS_JAMMER"
-    build_block_radius = @build_block_radius_starbase_21
-    formation_priority = @starbase_formation_priority_21
+    build_block_radius = @build_block_radius_starbase_20
+    formation_priority = @starbase_formation_priority_20
     icon_frame = -1
 }
 gpm_crystal_ship_large_blue_elite = {
@@ -12275,6 +12417,56 @@ gpm_ego = {
     class = shipclass_military
     is_designable = no
 }
+dimensional_horrorworm = {
+    formation_priority = 3
+    graphical_culture = no
+    is_space_object = yes
+    max_speed = @speed_default
+    acceleration = 0.5
+    rotation_speed = 0.5
+    collision_radius = 1.5
+    modifier = {
+        ship_evasion_mult = 0.25
+        ship_evasion_add = 80
+    }
+    max_hitpoints = 150
+    size_multiplier = 1
+    fleet_slot_size = 1
+    section_slots = {
+        "mid" = {
+            locator = "part1"
+        }
+    }
+    num_target_locators = 2
+    is_space_station = no
+    icon_frame = 5
+    base_buildtime = 50
+    can_have_federation_design = no
+    prerequisites = {
+        tech_hollowrift
+    }
+    combat_disengage_chance = 1
+    class = shipclass_military
+    required_component_set = "power_core"
+    required_component_set = "ftl_components"
+    required_component_set = "combat_computers"
+    required_component_set = "thruster_components"
+    required_component_set = "sensor_components"
+    is_designable = yes
+    enable_default_design = yes
+    default_behavior = line
+    construction_type = starbase_shipyard
+    resources = {
+        category = ships
+        upkeep = {
+            energy = @corvette_upkeep_energy
+            alloys = @corvette_upkeep_alloys
+        }
+    }
+    min_upgrade_cost = {
+        alloys = 1
+    }
+}
 npc_galleon_01 = {
     graphical_culture = {
         "npf_01_dirty"
@@ -12468,7 +12660,7 @@ mem_ancient_weapon = {
     max_speed = @speed_very_slow_10
     acceleration = 0.2
     rotation_speed = 0.15
-    collision_radius = @titan_collision_radius_2
+    collision_radius = @titan_collision_radius_5
     modifier = {
         ship_evasion_add = 20
         ship_hull_regen_add_perc = 0.5
@@ -12492,16 +12684,16 @@ mem_ancient_weapon = {
     is_designable = no
 }
 mem_ancient_cruiser = {
-    formation_priority = @battleship_formation_priority_3
+    formation_priority = @battleship_formation_priority_4
     graphical_culture = {
         "mem_ancient_01"
         "mem_ancient_02"
     }
     is_space_object = yes
-    max_speed = @speed_default_4
+    max_speed = @speed_default_8
     acceleration = 0.25
     rotation_speed = 0.175
-    collision_radius = @battleship_collision_radius_6
+    collision_radius = @battleship_collision_radius_13
     modifier = {
         ship_evasion_add = 20
         ship_hull_regen_add_perc = 0.5
@@ -12525,16 +12717,16 @@ mem_ancient_cruiser = {
     is_designable = no
 }
 mem_ancient_escort = {
-    formation_priority = @destroyer_formation_priority_3
+    formation_priority = @destroyer_formation_priority_5
     graphical_culture = {
         "mem_ancient_01"
         "mem_ancient_02"
     }
     is_space_object = yes
-    max_speed = @speed_fast_10
+    max_speed = @speed_fast_16
     acceleration = 0.3
     rotation_speed = 0.2
-    collision_radius = @destroyer_collision_radius_4
+    collision_radius = @destroyer_collision_radius_9
     modifier = {
         ship_evasion_add = 40
         ship_hull_regen_add_perc = 0.5
@@ -12564,7 +12756,7 @@ mem_ancient_control_drone = {
         "mem_ancient_02"
     }
     is_space_object = yes
-    max_speed = @speed_fast_9
+    max_speed = @speed_fast_15
     acceleration = 0.35
     rotation_speed = 0.1
     collision_radius = @corvette_collision_radius_6
@@ -12597,7 +12789,7 @@ mem_ancient_combat_drone = {
         "mem_ancient_02"
     }
     is_space_object = yes
-    max_speed = @speed_fast_8
+    max_speed = @speed_fast_14
     acceleration = 0.35
     rotation_speed = 0.1
     collision_radius = @corvette_collision_radius_5
@@ -12648,7 +12840,7 @@ mem_ancient_large_military_station = {
     }
     num_target_locators = 0
     is_space_station = yes
-    build_block_radius = @build_block_radius_military_5
+    build_block_radius = @build_block_radius_military_9
     uses_name_prefix = no
     takes_name_from_ship_design = yes
     class = shipclass_military_station
@@ -12680,7 +12872,7 @@ mem_ancient_small_military_station = {
     }
     num_target_locators = 0
     is_space_station = yes
-    build_block_radius = @build_block_radius_military_4
+    build_block_radius = @build_block_radius_military_8
     uses_name_prefix = no
     takes_name_from_ship_design = yes
     class = shipclass_military_station
@@ -12693,7 +12885,7 @@ mem_ancient_alt_science = {
         "mem_ancient_02"
     }
     is_space_object = yes
-    max_speed = @speed_fast_7
+    max_speed = @speed_fast_13
     acceleration = 0.3
     rotation_speed = 0.2
     modifier = {
@@ -12775,7 +12967,7 @@ mem_charmak_ship_size = {
 mem_colony_ship_size = {
     graphical_culture = no
     entity = abandoned_ship_section_entity
-    max_speed = @speed_slow_3
+    max_speed = @speed_slow_9
     acceleration = 0.3
     rotation_speed = 0.2
     modifier = {
@@ -12862,7 +13054,7 @@ mem_doom_dragon_ship = {
 mem_dpe_proto_corvette = {
     entity = mammalian_01_corvette_entity
     formation_priority = @corvette_formation_priority_1
-    max_speed = @speed_fast_1
+    max_speed = @speed_fast_7
     acceleration = 0.32
     rotation_speed = 0.1
     collision_radius = @corvette_collision_radius_1
@@ -12918,12 +13110,12 @@ mem_dread_pirate_gigawarform = {
 }
 mem_food_constructor_large_ship = {
     entity = fallen_empire_02_large_ship_fallen_empire_entity
-    formation_priority = @battleship_formation_priority_2
+    formation_priority = @battleship_formation_priority_3
     graphical_culture = no
-    max_speed = @speed_slow_2
+    max_speed = @speed_slow_8
     acceleration = 0.2
     rotation_speed = 0.15
-    collision_radius = @battleship_collision_radius_5
+    collision_radius = @battleship_collision_radius_12
     modifier = {
         ship_evasion_add = 10
         ship_hull_regen_add_perc = 0.25
@@ -12953,12 +13145,12 @@ mem_food_constructor_large_ship = {
 }
 mem_food_constructor_small_ship = {
     entity = fallen_empire_02_small_ship_fallen_empire_entity
-    formation_priority = @destroyer_formation_priority_2
+    formation_priority = @destroyer_formation_priority_4
     graphical_culture = no
-    max_speed = @speed_fast_6
+    max_speed = @speed_fast_12
     acceleration = 0.3
     rotation_speed = 0.2
-    collision_radius = @destroyer_collision_radius_3
+    collision_radius = @destroyer_collision_radius_8
     modifier = {
         ship_evasion_add = 35
         ship_hull_regen_add_perc = 0.25
@@ -13230,10 +13422,10 @@ mem_rubicon_fortress = {
 mem_rubicon_battleship = {
     graphical_culture = no
     entity = "mem_rubicon_battleship_entity"
-    max_speed = @speed_slow_1
+    max_speed = @speed_slow_7
     acceleration = 0.2
     rotation_speed = 0.15
-    collision_radius = @battleship_collision_radius_4
+    collision_radius = @battleship_collision_radius_11
     max_hitpoints = 2000
     modifier = {
         ship_evasion_add = 5
@@ -13253,7 +13445,7 @@ mem_rubicon_battleship = {
 mem_rubicon_cruiser = {
     graphical_culture = no
     entity = "mem_rubicon_cruiser_entity"
-    max_speed = @speed_default_3
+    max_speed = @speed_default_7
     acceleration = 0.25
     rotation_speed = 0.175
     collision_radius = @cruiser_collision_radius_1
@@ -13276,10 +13468,10 @@ mem_rubicon_cruiser = {
 mem_rubicon_destroyer = {
     graphical_culture = no
     entity = "mem_rubicon_destroyer_entity"
-    max_speed = @speed_fast_5
+    max_speed = @speed_fast_11
     acceleration = 0.3
     rotation_speed = 0.2
-    collision_radius = @destroyer_collision_radius_2
+    collision_radius = @destroyer_collision_radius_7
     max_hitpoints = 500
     modifier = {
         ship_evasion_add = 35
@@ -13299,7 +13491,7 @@ mem_rubicon_destroyer = {
 mem_rubicon_corvette = {
     graphical_culture = no
     entity = "mem_rubicon_corvette_entity"
-    max_speed = @speed_very_fast_2
+    max_speed = @speed_very_fast_7
     acceleration = 0.35
     rotation_speed = 0.1
     collision_radius = @corvette_collision_radius_4
@@ -13322,10 +13514,10 @@ mem_rubicon_corvette = {
 mem_rubicon_mender = {
     graphical_culture = no
     entity = "eventship_03_entity"
-    max_speed = @speed_default_2
+    max_speed = @speed_default_6
     acceleration = 0.25
     rotation_speed = 0.175
-    collision_radius = @battleship_collision_radius_3
+    collision_radius = @battleship_collision_radius_10
     max_hitpoints = 15000
     modifier = {
         ship_evasion_add = 5
@@ -13398,7 +13590,7 @@ mem_sadrell_void_home = {
     }
     num_target_locators = 0
     is_space_station = yes
-    build_block_radius = @build_block_radius_civilian_1
+    build_block_radius = @build_block_radius_civilian_6
     class = shipclass_military_station
     is_designable = no
 }
@@ -13614,8 +13806,8 @@ mem_surveyor_outpost = {
     required_component_set = "power_core"
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
-    build_block_radius = @build_block_radius_starbase_9
-    formation_priority = @starbase_formation_priority_9
+    build_block_radius = @build_block_radius_starbase_21
+    formation_priority = @starbase_formation_priority_25
     icon_frame = -1
 }
 mem_vazuran_weapon = {
@@ -13627,7 +13819,7 @@ mem_vazuran_weapon = {
     max_speed = @speed_very_slow_7
     acceleration = 0.2
     rotation_speed = 0.15
-    collision_radius = @titan_collision_radius_1
+    collision_radius = @titan_collision_radius_4
     modifier = {
         ship_evasion_add = 10
         ship_hull_regen_add_perc = 0.5
@@ -13651,15 +13843,15 @@ mem_vazuran_weapon = {
     is_designable = no
 }
 mem_vazuran_cruiser = {
-    formation_priority = @battleship_formation_priority_1
+    formation_priority = @battleship_formation_priority_2
     graphical_culture = {
         "mem_ancient_02"
     }
     is_space_object = yes
-    max_speed = @speed_default_1
+    max_speed = @speed_default_5
     acceleration = 0.25
     rotation_speed = 0.175
-    collision_radius = @battleship_collision_radius_2
+    collision_radius = @battleship_collision_radius_9
     modifier = {
         ship_evasion_add = 10
         ship_hull_regen_add_perc = 0.5
@@ -13683,15 +13875,15 @@ mem_vazuran_cruiser = {
     is_designable = no
 }
 mem_vazuran_escort = {
-    formation_priority = @destroyer_formation_priority_1
+    formation_priority = @destroyer_formation_priority_3
     graphical_culture = {
         "mem_ancient_02"
     }
     is_space_object = yes
-    max_speed = @speed_fast_4
+    max_speed = @speed_fast_10
     acceleration = 0.3
     rotation_speed = 0.2
-    collision_radius = @destroyer_collision_radius_1
+    collision_radius = @destroyer_collision_radius_6
     modifier = {
         ship_evasion_add = 20
         ship_hull_regen_add_perc = 0.5
@@ -13720,7 +13912,7 @@ mem_vazuran_control_drone = {
         "mem_ancient_02"
     }
     is_space_object = yes
-    max_speed = @speed_fast_3
+    max_speed = @speed_fast_9
     acceleration = 0.35
     rotation_speed = 0.1
     collision_radius = @corvette_collision_radius_3
@@ -13752,7 +13944,7 @@ mem_vazuran_combat_drone = {
         "mem_ancient_02"
     }
     is_space_object = yes
-    max_speed = @speed_fast_2
+    max_speed = @speed_fast_8
     acceleration = 0.35
     rotation_speed = 0.1
     collision_radius = @corvette_collision_radius_2
@@ -13803,7 +13995,7 @@ mem_vazuran_large_military_station = {
     }
     num_target_locators = 0
     is_space_station = yes
-    build_block_radius = @build_block_radius_military_3
+    build_block_radius = @build_block_radius_military_7
     uses_name_prefix = no
     takes_name_from_ship_design = yes
     class = shipclass_military_station
@@ -13835,7 +14027,7 @@ mem_vazuran_small_military_station = {
     }
     num_target_locators = 0
     is_space_station = yes
-    build_block_radius = @build_block_radius_military_2
+    build_block_radius = @build_block_radius_military_6
     uses_name_prefix = no
     takes_name_from_ship_design = yes
     class = shipclass_military_station
@@ -14529,7 +14721,7 @@ sofe_ancient_small_military_station = {
     num_target_locators = 0
     is_space_station = yes
     takes_name_from_ship_design = yes
-    build_block_radius = @build_block_radius_military_6
+    build_block_radius = @build_block_radius_military_2
     base_buildtime = 5
     auto_upgrade = no
     uses_name_prefix = no
@@ -14594,7 +14786,7 @@ progenitor_escort = {
     is_space_object = yes
     acceleration = 0.4
     rotation_speed = 0.4
-    collision_radius = @destroyer_collision_radius_6
+    collision_radius = @destroyer_collision_radius_1
     modifier = {
         ship_evasion_add = 90
         ship_hull_regen_add_static = 40000
@@ -14652,7 +14844,7 @@ progenitor_battlecruiser = {
     acceleration = 0.35
     rotation_speed = 0.35
     is_space_object = yes
-    collision_radius = @battleship_collision_radius_11
+    collision_radius = @battleship_collision_radius_2
     modifier = {
         ship_evasion_add = 70
         ship_hull_regen_add_static = 120000
@@ -14710,7 +14902,7 @@ progenitor_titan = {
     acceleration = 0.22
     rotation_speed = 0.2
     is_space_object = yes
-    collision_radius = @titan_collision_radius_3
+    collision_radius = @titan_collision_radius_1
     modifier = {
         ship_evasion_add = 50
         ship_hull_regen_add_static = 360000
@@ -14831,7 +15023,7 @@ progenitor_avatar = {
 sofe_gatekeeper_warden = {
     formation_priority = 15
     is_space_object = yes
-    max_speed = @speed_default_5
+    max_speed = @speed_default_1
     acceleration = 0.2
     rotation_speed = 0.2
     collision_radius = 12
@@ -14927,8 +15119,8 @@ origin_citadel = {
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
     required_component_set = "ftl_inhibitor"
-    build_block_radius = @build_block_radius_starbase_12
-    formation_priority = @starbase_formation_priority_12
+    build_block_radius = @build_block_radius_starbase_11
+    formation_priority = @starbase_formation_priority_11
     icon_frame = 5
 }
 origin_super_citadel = {
@@ -14971,8 +15163,8 @@ origin_super_citadel = {
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
     required_component_set = "ftl_inhibitor"
-    build_block_radius = @build_block_radius_starbase_11
-    formation_priority = @starbase_formation_priority_11
+    build_block_radius = @build_block_radius_starbase_10
+    formation_priority = @starbase_formation_priority_10
     icon_frame = 5
 }
 origin_super_citadel_playable = {
@@ -15090,8 +15282,8 @@ origin_super_citadel_playable = {
     required_component_set = "sensor_components"
     required_component_set = "combat_computers"
     required_component_set = "ftl_inhibitor"
-    build_block_radius = @build_block_radius_starbase_10
-    formation_priority = @starbase_formation_priority_10
+    build_block_radius = @build_block_radius_starbase_9
+    formation_priority = @starbase_formation_priority_9
     icon_frame = 5
 }
 terraform_station = {

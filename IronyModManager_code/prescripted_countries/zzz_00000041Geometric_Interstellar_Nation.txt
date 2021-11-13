@@ -1,0 +1,68 @@
+"Geometric Interstellar Nation" = {
+    key = "Geometric Interstellar Nation"
+    ship_prefix = "GIN"
+    species = {
+        class = "ESHA"
+        portrait = "eshape"
+        name = "Geometry"
+        plural = "Geometric"
+        adjective = "Geometry"
+        species_bio = "The Geometry, a dark self-conscious shapes with a hard carapace, and a squishy inside full of brain matter. They float a few meters of the ground via unkown means, and it is constantly being followed by orb creatures that shine and act as their limbs.
+The Geometry is a race that strives for equality for all sides, they thirst for knowledge, and love colorful lights."
+        name_list = "GEO01"
+        trait = "trait_lithoid"
+        trait = "trait_lithoid_scintillating"
+        trait = "trait_natural_engineers"
+        trait = "trait_weak"
+    }
+    name = "Geometric Interstellar Nation"
+    adjective = "Geometry"
+    authority = "auth_democratic"
+    government = "gov_moral_democracy"
+    advisor_voice_type = "l_the_diplomat"
+    planet_name = "Mother Orb"
+    planet_class = "pc_arctic"
+    system_name = "Light Sphere"
+    initializer = ""
+    graphical_culture = "lithoid_01"
+    city_graphical_culture = "eshape_01"
+    empire_flag = {
+        icon = {
+            category = "human"
+            file = "flag_human_1.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "00_solid.dds"
+        }
+        colors = {
+            "black"
+            "black"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = female
+        name = "Light"
+        portrait = "eshape_female_01"
+        texture = 1
+        hair = 52
+        clothes = 0
+        ruler_title = "The Guide"
+        ruler_title_female = "The Guide"
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "default_room"
+    spawn_enabled = yes
+    ethic = "ethic_egalitarian"
+    ethic = "ethic_xenophile"
+    ethic = "ethic_pacifist"
+    civics = {
+        "civic_functional_architecture"
+        "civic_diplomatic_corps"
+    }
+    origin = "origin_default"
+}

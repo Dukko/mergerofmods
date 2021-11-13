@@ -72,6 +72,8 @@ turtle_miner = {
             OR = {
                 has_trait = trait_robot_harvesters
                 has_trait = trait_agrarian
+                has_trait = trait_robot_power_drills
+                has_trait = trait_industrious
             }
         }
         modifier = {
@@ -129,6 +131,14 @@ turtle_miner = {
                     resource = food
                     value >= 0
                 }
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_trait = trait_holofrixigram
+                has_trait = trait_holofrixigram_2
+                has_trait = trait_holofrixigram_3
             }
         }
     }

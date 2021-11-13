@@ -1,0 +1,25 @@
+trait_brittle = {
+    cost = -2
+    potential_crossbreeding_chance = 1
+    allowed_archetypes = {
+        LITHOID
+    }
+    opposites = {
+        trait_solid_shape
+        trait_resilient
+    }
+    modifier = {
+        army_defense_health_mult = -0.8
+        army_defense_morale_mult = -0.25
+        army_disengage_chance_mult = 0.25
+    }
+    slave_cost = {
+        energy = -50
+    }
+    ai_weight = {
+        weight = 0
+    }
+    species_class = {
+        SLCOD
+    }
+}

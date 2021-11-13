@@ -1,0 +1,34 @@
+trait_axiomatic_synapses = {
+    cost = -2
+    potential_crossbreeding_chance = 1
+    allowed_archetypes = {
+        LITHOID
+    }
+    opposites = {
+        trait_fluid_synapses
+        trait_intelligent
+        trait_erudite
+        trait_natural_physicists
+        trait_natural_sociologists
+        trait_natural_engineers
+        trait_enigmatic_intelligence
+        trait_enigmatic_intelligence_poor
+        trait_presapient_natural_intellectuals
+        trait_quick_learners
+    }
+    modifier = {
+        species_leader_exp_gain = -0.25
+        planet_jobs_physics_research_produces_mult = -0.05
+        planet_jobs_society_research_produces_mult = -0.05
+        planet_jobs_engineering_research_produces_mult = -0.05
+    }
+    slave_cost = {
+        energy = -100
+    }
+    ai_weight = {
+        weight = 0
+    }
+    species_class = {
+        SLCOD
+    }
+}

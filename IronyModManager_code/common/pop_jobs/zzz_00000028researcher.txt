@@ -162,9 +162,21 @@ researcher = {
             has_trait = trait_necrophage
         }
         modifier = {
+            factor = 0
+            has_trait = trait_holofrixigram
+        }
+        modifier = {
+            factor = 0.5
+            has_trait = trait_holofrixigram_2
+        }
+        modifier = {
             factor = 1.2
             is_unemployed = yes
             is_pop_category = specialist
+        }
+        modifier = {
+            factor = 5
+            has_trait = trait_hologanglion
         }
     }
 }

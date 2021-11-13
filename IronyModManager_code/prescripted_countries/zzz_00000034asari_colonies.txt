@@ -1,0 +1,66 @@
+asari_colonies = {
+    name = asari_colonies
+    adjective = "Asari"
+    spawn_enabled = yes
+    ignore_portrait_duplication = yes
+    ship_prefix = ""
+    species = {
+        class = ASA
+        portrait = asari
+        name = "Asari"
+        plural = "Asari"
+        adjective = "Asari"
+        name_list = ASA1
+        trait = trait_asari_age
+        trait = trait_asari_biology
+        trait = trait_unruly
+        trait = trait_deviants
+        trait = trait_slow_learners
+    }
+    room = personality_decadent_hierarchy_room
+    advisor_voice_type = l_xenophile
+    authority = auth_democratic
+    civics = {
+        "civic_free_haven"
+        "civic_parliamentary_system"
+    }
+    government = gov_direct_democracy
+    ethic = ethic_materialist
+    ethic = ethic_fanatic_xenophile
+    planet_name = "New Thessia"
+    planet_class = pc_continental
+    system_name = "Elempar"
+    graphical_culture = asari_01
+    city_graphical_culture = asari_01
+    origin = origin_default
+    empire_flag = {
+        icon = {
+            category = "ornate"
+            file = "flag_asari_1.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "00_solid.dds"
+        }
+        colors = {
+            "blue"
+            "blue"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        leader_class = ruler
+        gender = female
+        name = "Sarannae T'lariki"
+        portrait = asari_female_01
+        texture = 1
+        hair = 1
+        clothes = 0
+        ruler_title = "Matriarch"
+        ruler_title_female = "Matriarch"
+    }
+    flags = {
+        is_silfae_asari
+    }
+}

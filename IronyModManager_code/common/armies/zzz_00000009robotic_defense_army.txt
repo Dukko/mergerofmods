@@ -1,0 +1,29 @@
+robotic_defense_army = {
+    defensive = yes
+    is_pop_spawned = yes
+    damage = 1
+    health = 1.25
+    morale_damage = 1
+    collateral_damage = 0
+    war_exhaustion = 0
+    has_morale = no
+    icon = GFX_army_type_robot
+    has_species = yes
+    potential = {
+        from = {
+            has_trait = "trait_mechanical"
+        }
+        owner = {
+            NOT = {
+                has_authority = auth_machine_intelligence
+            }
+        }
+    }
+    allow = {
+        owner = {
+            NOT = {
+                has_policy_flag = robots_outlawed
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+gene_warrior_army = {
+    damage = 2
+    health = 2.5
+    morale = 2.5
+    morale_damage = 1
+    collateral_damage = 0.75
+    war_exhaustion = 3
+    time = 150
+    icon = GFX_army_type_gene_warrior
+    resources = {
+        category = armies
+        cost = {
+            minerals = 300
+        }
+        upkeep = {
+            energy = 3
+        }
+    }
+    prerequisites = {
+        "tech_gene_seed_purification"
+    }
+    potential = {
+        from = {
+            NOR = {
+                has_trait = "trait_mechanical"
+                has_trait = "trait_machine_unit"
+                is_sapient = no
+            }
+        }
+        owner = {
+            NOT = {
+                has_authority = auth_machine_intelligence
+            }
+        }
+    }
+}

@@ -123,6 +123,10 @@ administrator = {
             }
         }
         modifier = {
+            factor = 3
+            has_trait = trait_holooverseer
+        }
+        modifier = {
             factor = 0.01
             exists = planet
             exists = planet.controller

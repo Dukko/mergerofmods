@@ -184,14 +184,5 @@ necro_apprentice = {
                 }
             }
         }
-        modifier = {
-            factor = 1.5
-            has_job = necro_apprentice
-        }
-        modifier = {
-            factor = 1.2
-            is_unemployed = yes
-            is_pop_category = specialist
-        }
     }
 }

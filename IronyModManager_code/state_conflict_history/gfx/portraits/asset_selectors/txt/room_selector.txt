@@ -1,6 +1,24 @@
 room_selector = {
     default = "command2_room"
     game_setup = {
+        "horrorworm_room" = {
+            always = yes
+        }
+        "octeelan_room" = {
+            always = yes
+        }
+        "octeelan_static_room" = {
+            always = yes
+        }
+        "quarian_flotilla_room" = {
+            always = yes
+        }
+        "sharkanian_static_room" = {
+            always = yes
+        }
+        "slreptilian_room" = {
+            always = yes
+        }
         "dlc_hive_room" = {
         }
         "dlc_hive2_room" = {
@@ -1020,6 +1038,36 @@ room_selector = {
                     is_species_class = DROW
                     is_country_type = fallen_empire
                 }
+            }
+        }
+        "horrorworm_room" = {
+            exists = owner
+            owner.owner_species = {
+                species_portrait = horrorworm
+            }
+        }
+        "quarian_flotilla_room" = {
+            exists = owner
+            owner = {
+                has_trait = trait_quarian
+            }
+        }
+        "octeelan_static_room" = {
+            exists = owner
+            owner = {
+                has_country_flag = is_octeelans
+            }
+        }
+        "sharkanian_static_room" = {
+            exists = owner
+            owner = {
+                has_country_flag = is_sharkanians
+            }
+        }
+        "slreptilian_room" = {
+            exists = owner
+            owner = {
+                has_country_flag = is_slreptilians
             }
         }
         "crisis_room" = {

@@ -151,6 +151,7 @@ specialist = {
                 is_organic_species = yes
                 is_phototrophic = no
                 is_lithoid = no
+                is_holofrixit = no
                 has_shared_burden_living_standard_type = yes
                 owner = {
                     is_primitive = no
@@ -172,8 +173,7 @@ specialist = {
         }
         upkeep = {
             trigger = {
-                is_organic_species = yes
-                is_lithoid = yes
+                is_lithoid_species = yes
                 has_shared_burden_living_standard_type = yes
                 owner = {
                     is_primitive = no
@@ -184,9 +184,49 @@ specialist = {
         }
         upkeep = {
             trigger = {
+                is_silicoid_species = yes
+                NOT = {
+                    has_trait = trait_electroid
+                }
+                has_shared_burden_living_standard_type = yes
+                owner = {
+                    is_primitive = no
+                }
+            }
+            minerals = @living_standard_minerals_normal_silicoid
+            food = @living_standard_food_normal_silicoid
+            consumer_goods = @living_standard_luxuries_shared_burden
+        }
+        upkeep = {
+            trigger = {
+                is_silicoid_species = yes
+                has_trait = trait_electroid
+                has_shared_burden_living_standard_type = yes
+                owner = {
+                    is_primitive = no
+                }
+            }
+            energy = @living_standard_energy_normal_electroid
+            food = @living_standard_food_normal_silicoid
+            consumer_goods = @living_standard_luxuries_shared_burden
+        }
+        upkeep = {
+            trigger = {
+                is_holofrixit = yes
+                has_shared_burden_living_standard_type = yes
+                owner = {
+                    is_primitive = no
+                }
+            }
+            energy = @living_standard_energy_normal
+            consumer_goods = @living_standard_luxuries_shared_burden
+        }
+        upkeep = {
+            trigger = {
                 is_organic_species = yes
                 is_phototrophic = no
                 is_lithoid = no
+                is_holofrixit = no
                 owner = {
                     is_primitive = no
                 }
@@ -214,8 +254,7 @@ specialist = {
         }
         upkeep = {
             trigger = {
-                is_organic_species = yes
-                is_lithoid = yes
+                is_lithoid_species = yes
                 owner = {
                     is_primitive = no
                 }
@@ -229,9 +268,58 @@ specialist = {
         }
         upkeep = {
             trigger = {
+                is_silicoid_species = yes
+                NOT = {
+                    has_trait = trait_electroid
+                }
+                owner = {
+                    is_primitive = no
+                }
+                OR = {
+                    has_academic_living_standard_type = yes
+                    has_very_high_living_standard_type = yes
+                }
+            }
+            minerals = @living_standard_minerals_normal_silicoid
+            food = @living_standard_food_normal_silicoid
+            consumer_goods = @living_standard_luxuries_very_high
+        }
+        upkeep = {
+            trigger = {
+                is_silicoid_species = yes
+                has_trait = trait_electroid
+                owner = {
+                    is_primitive = no
+                }
+                OR = {
+                    has_academic_living_standard_type = yes
+                    has_very_high_living_standard_type = yes
+                }
+            }
+            energy = @living_standard_energy_normal_electroid
+            food = @living_standard_food_normal_silicoid
+            consumer_goods = @living_standard_luxuries_very_high
+        }
+        upkeep = {
+            trigger = {
+                is_holofrixit = yes
+                owner = {
+                    is_primitive = no
+                }
+                OR = {
+                    has_academic_living_standard_type = yes
+                    has_very_high_living_standard_type = yes
+                }
+            }
+            energy = @living_standard_energy_normal
+            consumer_goods = @living_standard_luxuries_very_high
+        }
+        upkeep = {
+            trigger = {
                 is_organic_species = yes
                 is_phototrophic = no
                 is_lithoid = no
+                is_holofrixit = no
                 owner = {
                     is_primitive = no
                 }
@@ -263,8 +351,7 @@ specialist = {
         }
         upkeep = {
             trigger = {
-                is_organic_species = yes
-                is_lithoid = yes
+                is_lithoid_species = yes
                 owner = {
                     is_primitive = no
                 }
@@ -280,9 +367,64 @@ specialist = {
         }
         upkeep = {
             trigger = {
+                is_silicoid_species = yes
+                NOT = {
+                    has_trait = trait_electroid
+                }
+                owner = {
+                    is_primitive = no
+                }
+                OR = {
+                    has_high_living_standard_type = yes
+                    has_normal_living_standard_type = yes
+                    has_stratified_living_standard_type = yes
+                    has_decadent_living_standard_type = yes
+                }
+            }
+            minerals = @living_standard_minerals_normal_silicoid
+            food = @living_standard_food_normal_silicoid
+            consumer_goods = @living_standard_luxuries_high
+        }
+        upkeep = {
+            trigger = {
+                is_silicoid_species = yes
+                has_trait = trait_electroid
+                owner = {
+                    is_primitive = no
+                }
+                OR = {
+                    has_high_living_standard_type = yes
+                    has_normal_living_standard_type = yes
+                    has_stratified_living_standard_type = yes
+                    has_decadent_living_standard_type = yes
+                }
+            }
+            energy = @living_standard_energy_normal_electroid
+            food = @living_standard_food_normal_silicoid
+            consumer_goods = @living_standard_luxuries_high
+        }
+        upkeep = {
+            trigger = {
+                is_holofrixit = yes
+                owner = {
+                    is_primitive = no
+                }
+                OR = {
+                    has_high_living_standard_type = yes
+                    has_normal_living_standard_type = yes
+                    has_stratified_living_standard_type = yes
+                    has_decadent_living_standard_type = yes
+                }
+            }
+            energy = @living_standard_energy_normal
+            consumer_goods = @living_standard_luxuries_high
+        }
+        upkeep = {
+            trigger = {
                 is_organic_species = yes
                 is_phototrophic = no
                 is_lithoid = no
+                is_holofrixit = no
                 has_low_living_standard_type = yes
                 owner = {
                     is_primitive = no
@@ -304,8 +446,7 @@ specialist = {
         }
         upkeep = {
             trigger = {
-                is_organic_species = yes
-                is_lithoid = yes
+                is_lithoid_species = yes
                 has_low_living_standard_type = yes
                 owner = {
                     is_primitive = no
@@ -316,8 +457,49 @@ specialist = {
         }
         upkeep = {
             trigger = {
-                is_lithoid = no
+                is_silicoid_species = yes
+                NOT = {
+                    has_trait = trait_electroid
+                }
+                has_low_living_standard_type = yes
+                owner = {
+                    is_primitive = no
+                }
+            }
+            minerals = @living_standard_minerals_normal_silicoid
+            food = @living_standard_food_normal_silicoid
+            consumer_goods = @living_standard_luxuries_normal
+        }
+        upkeep = {
+            trigger = {
+                is_silicoid_species = yes
+                has_trait = trait_electroid
+                has_low_living_standard_type = yes
+                owner = {
+                    is_primitive = no
+                }
+            }
+            energy = @living_standard_energy_normal_electroid
+            food = @living_standard_food_normal_silicoid
+            consumer_goods = @living_standard_luxuries_normal
+        }
+        upkeep = {
+            trigger = {
+                is_holofrixit = yes
+                has_low_living_standard_type = yes
+                owner = {
+                    is_primitive = no
+                }
+            }
+            energy = @living_standard_energy_normal
+            consumer_goods = @living_standard_luxuries_normal
+        }
+        upkeep = {
+            trigger = {
+                is_organic_species = yes
                 is_phototrophic = no
+                is_lithoid = no
+                is_holofrixit = no
                 owner = {
                     is_primitive = yes
                 }
@@ -326,7 +508,6 @@ specialist = {
         }
         upkeep = {
             trigger = {
-                is_lithoid = no
                 is_phototrophic = yes
                 owner = {
                     is_primitive = yes
@@ -336,16 +517,50 @@ specialist = {
         }
         upkeep = {
             trigger = {
-                is_lithoid = yes
+                is_lithoid_species = yes
                 owner = {
                     is_primitive = yes
                 }
             }
             minerals = @living_standard_food_normal
+        }
+        upkeep = {
+            trigger = {
+                is_silicoid_species = yes
+                NOT = {
+                    has_trait = trait_electroid
+                }
+                owner = {
+                    is_primitive = yes
+                }
+            }
+            minerals = @living_standard_minerals_normal_silicoid
+            food = @living_standard_food_normal_silicoid
+        }
+        upkeep = {
+            trigger = {
+                is_silicoid_species = yes
+                has_trait = trait_electroid
+                owner = {
+                    is_primitive = yes
+                }
+            }
+            energy = @living_standard_energy_normal_electroid
+            food = @living_standard_food_normal_silicoid
+        }
+        upkeep = {
+            trigger = {
+                is_holofrixit = yes
+                owner = {
+                    is_primitive = yes
+                }
+            }
+            energy = @living_standard_energy_normal
         }
         upkeep = {
             trigger = {
                 is_robotic_species = yes
+                is_holofrixit = no
                 has_shared_burden_living_standard_type = yes
             }
             energy = @living_standard_energy_normal
@@ -354,6 +569,7 @@ specialist = {
         upkeep = {
             trigger = {
                 is_robotic_species = yes
+                is_holofrixit = no
                 OR = {
                     has_academic_living_standard_type = yes
                     has_very_high_living_standard_type = yes
@@ -365,7 +581,12 @@ specialist = {
         upkeep = {
             trigger = {
                 is_robotic_species = yes
-                has_high_living_standard_type = yes
+                OR = {
+                    has_high_living_standard_type = yes
+                    has_normal_living_standard_type = yes
+                    has_stratified_living_standard_type = yes
+                    has_decadent_living_standard_type = yes
+                }
             }
             energy = @living_standard_energy_normal
             consumer_goods = @living_standard_luxuries_high
@@ -373,22 +594,7 @@ specialist = {
         upkeep = {
             trigger = {
                 is_robotic_species = yes
-                has_normal_living_standard_type = yes
-            }
-            energy = @living_standard_energy_normal
-            consumer_goods = @living_standard_luxuries_high
-        }
-        upkeep = {
-            trigger = {
-                is_robotic_species = yes
-                has_stratified_living_standard_type = yes
-            }
-            energy = @living_standard_energy_normal
-            consumer_goods = @living_standard_luxuries_high
-        }
-        upkeep = {
-            trigger = {
-                is_robotic_species = yes
+                is_holofrixit = no
                 has_low_living_standard_type = yes
             }
             energy = @living_standard_energy_normal

@@ -1,0 +1,10 @@
+@species_trait_points = 2
+@species_max_traits = 5
+HOLOARCH = {
+    inherit_traits_from = {
+        BIOLOGICAL
+    }
+    species_trait_points = @species_trait_points
+    species_max_traits = @species_max_traits
+    robotic = yes
+}

@@ -1,0 +1,16 @@
+trait_eternal = {
+    cost = 2
+    potential_crossbreeding_chance = 1
+    allowed_archetypes = {
+        LITHOID
+    }
+    opposites = {
+        trait_degrading
+    }
+    modifier = {
+        leader_age = 100
+    }
+    species_class = {
+        SLCOD
+    }
+}

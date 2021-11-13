@@ -234,5 +234,9 @@ dimensional_portal_researcher_gestalt = {
             factor = 0.1
             can_take_servant_job = yes
         }
+        modifier = {
+            factor = 2
+            has_trait = trait_hologanglion
+        }
     }
 }

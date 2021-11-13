@@ -187,5 +187,17 @@ dimensional_portal_researcher = {
             factor = 1.5
             has_trait = trait_necrophage
         }
+        modifier = {
+            factor = 2
+            has_trait = trait_hologanglion
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_trait = trait_holofrixigram
+                has_trait = trait_holofrixigram_2
+                has_trait = trait_holofrixigram_3
+            }
+        }
     }
 }

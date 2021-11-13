@@ -1,0 +1,49 @@
+trait_horrorworm = {
+    cost = 4
+    randomized = no
+    modification = no
+    advanced_trait = yes
+    potential_crossbreeding_chance = 0
+    species_potential_add = {
+        exists = ROOT
+        ROOT = {
+            is_scope_type = species
+            has_trait = trait_hive_mind
+            has_trait = trait_repugnant
+        }
+        exists = FROM
+        FROM = {
+            is_scope_type = country
+            has_country_flag = is_horrorworms
+            has_valid_civic = civic_hive_devouring_swarm
+        }
+    }
+    species_possible_remove = {
+        always = no
+    }
+    forced_happiness = yes
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    modifier = {
+        army_attack_damage_mult = 0.01
+        army_defense_damage_mult = 0.01
+        army_defense_morale_mult = 0.01
+        army_health = 0.05
+        army_morale = 0.05
+        armies_upkeep_mult = 0.15
+        planet_jobs_minerals_produces_mult = 0.01
+        planet_livestock_food_produces_add = -4
+        pop_growth_speed = 0.4
+    }
+    opposites = {
+        trait_delicious
+        trait_rapid_breeders
+        trait_slow_breeders
+        trait_fertile
+        trait_charismatic
+    }
+    species_class = {
+        HRWRM
+    }
+}

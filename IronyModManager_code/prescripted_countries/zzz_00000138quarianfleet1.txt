@@ -1,0 +1,71 @@
+quarianfleet1 = {
+    playable = has_federations_dlc
+    ship_prefix = ""
+    spawn_enabled = yes
+    ignore_portrait_duplication = yes
+    species = {
+        class = QRN
+        portrait = quarian
+        name = "Quarian"
+        plural = "Quarians"
+        adjective = "Quarian"
+        name_list = QRN1
+        trait = trait_void_dweller_1
+        trait = trait_wanderers
+        trait = trait_intelligent
+        trait = trait_quarian
+        trait = trait_nonadaptive
+        trait = trait_deviants
+    }
+    name = "Migrant Fleet"
+    adjective = "Quarian"
+    planet_name = "Varlarand"
+    planet_class = pc_arid
+    system_name = "Kealer"
+    initializer = void_dweller_quarian_system
+    graphical_culture = mammalian_01
+    city_graphical_culture = mammalian_01
+    government = gov_citizen_stratocracy
+    authority = auth_oligarchic
+    civics = {
+        civic_distinguished_admiralty
+        civic_citizen_service
+    }
+    origin = origin_void_dwellers
+    empire_flag = {
+        icon = {
+            category = "ornate"
+            file = "flag_quarian_1.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "circle.dds"
+        }
+        colors = {
+            "black"
+            "purple"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        leader_class = ruler
+        gender = female
+        name = "Iliara vas Varlarand"
+        portrait = quarian_female_01
+        texture = 1
+        hair = 1
+        clothes = 2
+        ruler_title = "High Admiral"
+        ruler_title_female = "High Admiral"
+        trait = trait_ruler_home_in_the_sky
+        trait = trait_ruler_space_miner
+    }
+    ethic = ethic_xenophobe
+    ethic = ethic_spiritualist
+    ethic = ethic_militarist
+    room = quarian_flotilla_room
+    flags = {
+        is_silfae_quarian
+    }
+}

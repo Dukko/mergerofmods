@@ -22,7 +22,7 @@ priest = {
             trigger = {
                 exists = owner
                 owner = {
-                    is_theocracy = yes
+                    has_valid_civic = civic_exalted_priesthood
                 }
             }
             unity = 1
@@ -66,7 +66,7 @@ priest = {
             factor = 2
             exists = owner
             owner = {
-                is_theocracy = yes
+                has_civic = civic_exalted_priesthood
             }
         }
         modifier = {
@@ -106,17 +106,13 @@ priest = {
         modifier = {
             factor = 0.1
             has_ethic = ethic_materialist
-            NOR = {
+            NOT = {
                 has_job = priest
-                has_job = death_priest
             }
         }
         modifier = {
             factor = 1.5
-            OR = {
-                has_job = priest
-                has_job = death_priest
-            }
+            has_job = priest
         }
         modifier = {
             factor = 1.5
@@ -189,11 +185,6 @@ priest = {
         modifier = {
             factor = 1.5
             has_trait = trait_necrophage
-        }
-        modifier = {
-            factor = 1.2
-            is_unemployed = yes
-            is_pop_category = specialist
         }
     }
 }

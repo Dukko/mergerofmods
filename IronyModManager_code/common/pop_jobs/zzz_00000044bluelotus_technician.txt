@@ -109,14 +109,5 @@ bluelotus_technician = {
             factor = 1.5
             has_trait = trait_necrophage
         }
-        modifier = {
-            factor = 1.5
-            has_job = bluelotus_technician
-        }
-        modifier = {
-            factor = 1.2
-            is_unemployed = yes
-            is_pop_category = specialist
-        }
     }
 }

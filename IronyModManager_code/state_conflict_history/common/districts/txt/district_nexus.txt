@@ -31,7 +31,7 @@ district_nexus = {
         }
         str_nexus_district_allow = yes
     }
-    conversion_ratio = 0.5
+    conversion_ratio = 1
     convert_to = {
         district_arcology_housing
         district_rw_nexus

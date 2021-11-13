@@ -23,6 +23,14 @@ miner = {
         produces = {
             minerals = 4
         }
+        produces = {
+            trigger = {
+                owner = {
+                    is_lithoid_empire = yes
+                }
+            }
+            minerals = 2
+        }
     }
     weight = {
         weight = @worker_job_weight
@@ -118,6 +126,14 @@ miner = {
             planet = {
                 is_artificial = no
             }
+        }
+        modifier = {
+            factor = 0
+            has_trait = trait_holofrixigram
+        }
+        modifier = {
+            factor = 0.5
+            has_trait = trait_holofrixigram_2
         }
         modifier = {
             factor = 1.1

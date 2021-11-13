@@ -45,6 +45,18 @@ calculator = {
             }
         }
         modifier = {
+            factor = 0
+            has_trait = trait_holofrixigram
+        }
+        modifier = {
+            factor = 0.5
+            has_trait = trait_holofrixigram_2
+        }
+        modifier = {
+            factor = 2
+            has_trait = trait_hologanglion
+        }
+        modifier = {
             factor = 0.9
             exists = owner
             years_passed < 1

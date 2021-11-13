@@ -1,0 +1,174 @@
+necromancer = {
+    category = specialist
+    condition_string = BATTLE_THRALL_JOB_TRIGGER
+    building_icon = building_dread_encampment
+    clothes_texture_index = 3
+    country_modifier = {
+        country_naval_cap_add = 2
+    }
+    triggered_country_modifier = {
+        potential = {
+            exists = planet
+            planet = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_ground_defense_planning"
+                }
+            }
+        }
+        modifier = {
+            country_naval_cap_add = 2
+        }
+    }
+    pop_modifier = {
+        pop_defense_armies_add = 3
+    }
+    triggered_pop_modifier = {
+        potential = {
+            exists = planet
+            planet = {
+                has_modifier = martial_law
+            }
+        }
+        modifier = {
+            pop_defense_armies_add = 2
+        }
+    }
+    resources = {
+        category = planet_researchers
+        produces = {
+            physics_research = 6
+            society_research = 6
+        }
+        upkeep = {
+            consumer_goods = 2
+        }
+    }
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible = {
+        battle_thrall_job_check_trigger = yes
+    }
+    weight = {
+        weight = @specialist_job_weight
+        modifier = {
+            factor = 10
+            exists = planet
+            planet = {
+                has_modifier = martial_law
+            }
+        }
+        modifier = {
+            factor = 2
+            has_trait = trait_resilient
+        }
+        modifier = {
+            factor = 2
+            has_trait = trait_very_strong
+        }
+        modifier = {
+            factor = 1.5
+            has_trait = trait_strong
+        }
+        modifier = {
+            factor = 0.5
+            has_trait = trait_weak
+        }
+        modifier = {
+            factor = 1.1
+            has_trait = trait_cybernetic
+        }
+        modifier = {
+            factor = 2
+            has_trait = trait_presapient_earthbound
+        }
+        modifier = {
+            factor = 1.1
+            has_trait = trait_limited_regeneration
+        }
+        modifier = {
+            factor = 1.1
+            has_trait = trait_brainslug
+        }
+        modifier = {
+            factor = 1.35
+            OR = {
+                has_trait = trait_presapient_natural_intellectuals
+                has_trait = trait_natural_physicists
+                has_trait = trait_natural_sociologists
+                has_trait = trait_intelligent
+            }
+        }
+        modifier = {
+            factor = 1.75
+            has_trait = trait_erudite
+        }
+        modifier = {
+            factor = 1.05
+            OR = {
+                has_trait = trait_robust
+                has_trait = trait_robot_efficient_processors
+            }
+        }
+        modifier = {
+            factor = 0.9
+            has_trait = trait_quarrelsome
+        }
+        modifier = {
+            factor = 0
+            species = {
+                can_be_soldier = no
+            }
+        }
+        modifier = {
+            factor = 1.5
+            has_trait = trait_void_dweller_1
+            exists = planet
+            planet = {
+                is_planet_class = pc_habitat
+            }
+        }
+        modifier = {
+            factor = 0.85
+            has_trait = trait_void_dweller_1
+            exists = planet
+            planet = {
+                is_artificial = no
+            }
+        }
+        modifier = {
+            factor = 2
+            has_trait = trait_lithoid
+        }
+        modifier = {
+            factor = 1.5
+            has_job = necromancer
+        }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = specialist
+        }
+        modifier = {
+            factor = 2
+            has_trait = trait_necrophage
+        }
+        modifier = {
+            factor = 0.5
+            has_trait = trait_holofrixit
+            NOR = {
+                has_trait = trait_holowarrior
+                has_trait = trait_holowarrior_2
+                has_trait = trait_hologanglion
+            }
+        }
+        modifier = {
+            factor = 1.5
+            has_trait = trait_hologanglion
+        }
+    }
+}

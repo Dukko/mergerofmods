@@ -74,6 +74,10 @@ noble = {
             }
         }
         modifier = {
+            factor = 2
+            has_trait = trait_holooverseer
+        }
+        modifier = {
             factor = 0.01
             exists = planet
             exists = planet.controller

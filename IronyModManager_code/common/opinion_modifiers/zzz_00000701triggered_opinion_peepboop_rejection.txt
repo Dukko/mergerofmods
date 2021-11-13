@@ -1,0 +1,8 @@
+triggered_opinion_peepboop_rejection = {
+    trigger = {
+        has_country_flag = is_peepboops@FROM
+    }
+    opinion = {
+        base = -1000
+    }
+}

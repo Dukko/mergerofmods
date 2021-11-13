@@ -5,8 +5,29 @@ d_alien_pets_deposit = {
     potential = {
         can_have_habitable_deposits = yes
     }
-    planet_modifier = {
-        building_xeno_zoo_max = 1
+    triggered_planet_modifier = {
+        potential = {
+            OR = {
+                has_owner = no
+                owner = {
+                    is_gestalt = no
+                }
+            }
+        }
+        modifier = {
+            building_xeno_zoo_max = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_owner = yes
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            building_xeno_zoo_gestalt_max = 1
+        }
     }
     triggered_planet_modifier = {
         potential = {

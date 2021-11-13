@@ -1,0 +1,28 @@
+machine_assault_3 = {
+    damage = 4
+    health = 6
+    has_morale = no
+    morale_damage = 1.5
+    collateral_damage = 4
+    war_exhaustion = 4
+    time = 500
+    has_species = no
+    icon = GFX_army_type_machine_assault
+    resources = {
+        category = armies
+        cost = {
+            minerals = 800
+        }
+        upkeep = {
+            energy = 8
+        }
+    }
+    potential = {
+        owner = {
+            has_authority = auth_machine_intelligence
+        }
+    }
+    prerequisites = {
+        "tech_biomechanics"
+    }
+}

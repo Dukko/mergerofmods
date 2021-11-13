@@ -50,6 +50,14 @@ cave_cleaner = {
         }
         modifier = {
             factor = 0
+            OR = {
+                has_trait = trait_holofrixigram
+                has_trait = trait_holofrixigram_2
+                has_trait = trait_holofrixigram_3
+            }
+            }
+        modifier = {
+            factor = 0
             NOT = {
                 planet = {
                     any_owned_pop = {

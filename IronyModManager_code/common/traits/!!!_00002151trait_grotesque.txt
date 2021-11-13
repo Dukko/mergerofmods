@@ -1,0 +1,20 @@
+trait_grotesque = {
+    cost = -1
+    potential_crossbreeding_chance = 1
+    allowed_archetypes = {
+        LITHOID
+    }
+    opposites = {
+        trait_sparkly
+        trait_decadent
+    }
+    modifier = {
+        pop_amenities_usage_add = 0.2
+    }
+    species_class = {
+        SLCOD
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

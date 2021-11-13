@@ -10,7 +10,7 @@ colonist = {
         is_sapient = yes
     }
     possible = {
-        complex_specialist_job_check_trigger = yes
+        specialist_job_check_trigger = yes
     }
     pop_modifier = {
         pop_defense_armies_add = 1
@@ -38,15 +38,7 @@ colonist = {
         }
     }
     resources = {
-        category = planet_administrators
-        produces = {
-            trigger = {
-                owner = {
-                    has_valid_civic = civic_star_settlers
-                }
-            }
-            unity = 5
-        }
+        category = planet_jobs
         produces = {
             trigger = {
                 is_lithoid = no
@@ -124,11 +116,6 @@ colonist = {
             planet = {
                 is_artificial = no
             }
-        }
-        modifier = {
-            factor = 1.2
-            is_unemployed = yes
-            is_pop_category = specialist
         }
     }
 }

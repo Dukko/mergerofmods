@@ -36,6 +36,14 @@ cave_cleaner_gestalt = {
     weight = {
         weight = @simple_drone_job_weight
         modifier = {
+            factor = 0
+            OR = {
+                has_trait = trait_holofrixigram
+                has_trait = trait_holofrixigram_2
+                has_trait = trait_holofrixigram_3
+            }
+        }
+        modifier = {
             factor = 10
             planet = {
                 any_owned_pop = {

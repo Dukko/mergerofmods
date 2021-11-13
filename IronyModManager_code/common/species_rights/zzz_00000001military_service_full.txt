@@ -1,0 +1,181 @@
+military_service_full = {
+    token = military_service_full
+    potential = {
+        if = {
+            limit = {
+                FROM = {
+                    has_authority = auth_machine_intelligence
+                }
+            }
+            OR = {
+                has_trait = trait_machine_unit
+                has_trait = trait_mechanical
+                has_trait = trait_cybernetic
+            }
+        }
+    }
+    allow = {
+        hidden_trigger = {
+            exists = FROM
+        }
+        custom_tooltip = {
+            fail_text = MACHINE_NO_PURE_ORGANIC_SOLDIERS
+            if = {
+                limit = {
+                    FROM = {
+                        has_authority = auth_machine_intelligence
+                    }
+                }
+                OR = {
+                    has_trait = trait_mechanical
+                    has_trait = trait_machine_unit
+                    AND = {
+                        has_trait = trait_cybernetic
+                        FROM = {
+                            has_civic = civic_machine_assimilator
+                        }
+                    }
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = is_undesirables_tooltip
+            NOR = {
+                has_citizenship_type = {
+                    country = FROM
+                    type = citizenship_purge_machine
+                }
+                has_citizenship_type = {
+                    country = FROM
+                    type = citizenship_purge
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = is_slaves_tooltip
+            OR = {
+                NOT = {
+                    has_citizenship_type = {
+                        country = FROM
+                        type = citizenship_slavery
+                    }
+                }
+                has_slavery_type = {
+                    country = FROM
+                    type = slavery_military
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = is_servitude_tooltip
+            NOT = {
+                has_citizenship_type = {
+                    country = FROM
+                    type = citizenship_robot_servitude
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = too_alien
+            OR = {
+                is_same_species = FROM
+                has_species_flag = allow_military_leaders_honored_protectors@FROM
+                FROM = {
+                    is_xenophobe = no
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = necrophage_only_allows_necrophage_leaders
+            OR = {
+                is_same_species = FROM
+                has_species_flag = allow_military_leaders_honored_protectors@FROM
+                FROM = {
+                    NAND = {
+                        has_origin = origin_necrophage
+                        has_trait = trait_necrophage
+                    }
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = HIVE_MIND_SPECIES_CITIZENS_ONLY
+            OR = {
+                NOT = {
+                    FROM = {
+                        has_authority = auth_hive_mind
+                    }
+                }
+                has_trait = trait_hive_mind
+            }
+        }
+        custom_tooltip = {
+            fail_text = NON_MACHINE_SPECIES_NEED_PREREQ_TECH
+            if = {
+                limit = {
+                    OR = {
+                        has_trait = trait_mechanical
+                        has_trait = trait_machine_unit
+                    }
+                }
+                FROM = {
+                    OR = {
+                        has_authority = auth_machine_intelligence
+                        has_technology = tech_synthetic_leaders
+                    }
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = nerve_stapled_cannot_lead_armies
+            is_sapient = yes
+            NOR = {
+                has_trait = trait_syncretic_proles
+                has_trait = trait_nerve_stapled
+            }
+        }
+        custom_tooltip = {
+            fail_text = SPECIES_MUST_NOT_BE_ASSIMILATING
+            if = {
+                limit = {
+                    has_global_flag = deassimilate_machines_installed
+                }
+                NAND = {
+                    has_trait = trait_machine_unit
+                    has_living_standard = {
+                        country = FROM
+                        type = living_standard_deassimilation
+                    }
+                }
+            }
+        }
+    }
+    triggered_pop_modifier = {
+        potential = {
+            has_slavery_type = {
+                type = slavery_military
+            }
+        }
+        modifier = {
+            pop_cat_slave_happiness = 0.1
+        }
+    }
+    ai_will_do = {
+        factor = 5
+        modifier = {
+            factor = 0
+            FROM = {
+                has_valid_ai_personality = no
+            }
+        }
+        modifier = {
+            factor = 0
+            FROM = {
+                has_valid_ai_personality = yes
+                NOT = {
+                    has_ai_personality_behaviour = multispecies
+                }
+            }
+        }
+    }
+}

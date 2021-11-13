@@ -1,0 +1,23 @@
+trait_eldar_age = {
+    cost = 0
+    potential_crossbreeding_chance = 0
+    sorting_priority = 20
+    initial = no
+    randomized = no
+    modification = no
+    forced_happiness = no
+    immortal_leaders = no
+    leader_age_min = 60
+    leader_age_max = 90
+    modifier = {
+        leader_age = 40
+    }
+    custom_tooltip = TRAIT_ELDAR_AGE_EFFECT
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    ai_weight = {
+        weight = 0
+    }
+    icon = gfx/interface/icons/traits/leader_traits/leader_trait_archaeologist.dds
+}

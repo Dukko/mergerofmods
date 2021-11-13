@@ -1,0 +1,66 @@
+"Kriken Empire" = {
+    key = "Kriken Empire"
+    ship_prefix = "KRII"
+    species = {
+        class = "EKRI"
+        portrait = "kriken"
+        name = "Kriken"
+        plural = "Krikens"
+        adjective = "Kriken"
+        species_bio = "The Kriken Empire is an advanced imperialistic civilization of the Kriken species. When a member of their species becomes of age, they are exiled until they can locate a suitable planet for their race to conquer (and consume) as a part of their own rite of passage. Many attempt to locate the most precious and habitable worlds and those who discover such galactic treasures gain a higher status within the Kriken Empire; some even being hailed as heroes, but advanced alien technology sometimes is accepted in place of a new world."
+        name_list = "ART3"
+        trait = "trait_hive_mind"
+        trait = "trait_survivor"
+        trait = "trait_extremely_adaptive"
+        trait = "trait_unruly"
+        trait = "trait_nomadic"
+        trait = "trait_quarrelsome"
+    }
+    name = "Kriken Empire"
+    adjective = "Kriken"
+    authority = "auth_hive_mind"
+    government = "gov_devouring_swarm"
+    advisor_voice_type = "l_hivemind"
+    planet_name = "Triskelion"
+    planet_class = "pc_tundra"
+    system_name = "Eva"
+    initializer = ""
+    graphical_culture = "avian_01"
+    city_graphical_culture = "arthropoid_01"
+    empire_flag = {
+        icon = {
+            category = "pointy"
+            file = "flag_pointy_23.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "00_solid.dds"
+        }
+        colors = {
+            "red"
+            "red_orange"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = female
+        name = "Eva"
+        portrait = "kriken_female_01"
+        texture = 8
+        hair = 0
+        clothes = 0
+        ruler_title = "Origin"
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = "personality_fanatic_purifier_room"
+    spawn_enabled = yes
+    ethic = "ethic_gestalt_consciousness"
+    civics = {
+        "civic_hive_divided_attention"
+        "civic_hive_devouring_swarm"
+    }
+    origin = "origin_post_apocalyptic"
+}

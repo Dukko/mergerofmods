@@ -1,0 +1,25 @@
+tech_faux_starbase_2 = {
+    icon = tech_starbase_2
+    cost = @tier1cost2
+    area = engineering
+    start_tech = no
+    category = {
+        voidcraft
+    }
+    tier = 1
+    prerequisites = {
+        tech_starbase_2
+    }
+    prereqfor_desc = {
+        ship = {
+            title = "TECH_UNLOCK_FAUX_STARPORT_CONSTRUCTION_TITLE"
+            desc = "TECH_UNLOCK_FAUX_STARPORT_CONSTRUCTION_DESC"
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            always = yes
+        }
+    }
+}

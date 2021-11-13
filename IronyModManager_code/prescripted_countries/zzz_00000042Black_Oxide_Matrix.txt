@@ -1,0 +1,66 @@
+"Black Oxide Matrix" = {
+    key = "Black Oxide Matrix"
+    ship_prefix = "GIN"
+    species = {
+        class = "ESHA1"
+        portrait = "eshape"
+        name = "Black Oxide"
+        plural = "Black Oxides"
+        adjective = "Black Oxidan"
+        species_bio = "Black Oxide, Geometric Machines that float wondering about there Existence."
+        name_list = "MACHINE4"
+        trait = "trait_machine_unit"
+        trait = "trait_robot_durable"
+        trait = "trait_robot_logic_engines"
+        trait = "trait_robot_luxurious"
+        trait = "trait_robot_high_bandwidth"
+        trait = "trait_robot_superconductive"
+    }
+    name = "Black Oxide Matrix"
+    adjective = "Black Oxidan"
+    authority = "auth_machine_intelligence"
+    government = "gov_machine_research"
+    advisor_voice_type = "l_machine"
+    planet_name = "Mother Orb"
+    planet_class = "pc_alpine"
+    system_name = "Light Sphere"
+    initializer = "custom_starting_init_05"
+    graphical_culture = "eshape_01"
+    city_graphical_culture = "eshape_01"
+    empire_flag = {
+        icon = {
+            category = "legion"
+            file = "flag_mp_beta_03.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "v.dds"
+        }
+        colors = {
+            "black"
+            "black"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        gender = female
+        name = "Computer Prism"
+        portrait = "eshape_female_01"
+        texture = 0
+        hair = 63
+        clothes = 0
+        ruler_title = "The Guide"
+        leader_class = "ruler"
+    }
+    spawn_as_fallen = yes
+    ignore_portrait_duplication = no
+    room = "synthetic_ascension_room"
+    spawn_enabled = yes
+    ethic = "ethic_gestalt_consciousness"
+    civics = {
+        "civic_machine_unitary_cohesion"
+        "civic_machine_introspective"
+    }
+    origin = "origin_machine"
+}
