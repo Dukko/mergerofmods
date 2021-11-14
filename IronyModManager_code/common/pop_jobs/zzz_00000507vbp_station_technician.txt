@@ -1,0 +1,26 @@
+vbp_station_technician = {
+    category = worker
+    is_capped_by_modifier = yes
+    icon = technician
+    clothes_texture_index = 2
+    possible_pre_triggers = {
+        has_owner = yes
+        is_sapient = yes
+    }
+    possible = {
+        exists = owner
+        owner = {
+            is_country_type = primitive
+            has_country_flag = vbp_voidbound_civilisation
+        }
+    }
+    resources = {
+        category = planet_farmers
+        produces = {
+            energy = 3
+        }
+    }
+    weight = {
+        weight = 10
+    }
+}

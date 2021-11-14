@@ -18,6 +18,7 @@ building_mineral_purification_hub = {
     category = resource
     allow = {
         has_upgraded_capital = yes
+        buildings_has_motes = yes
         NOT = {
             has_modifier = resort_colony
         }
@@ -219,22 +220,20 @@ building_mineral_purification_hub = {
         }
     }
     ai_resource_production = {
-        minerals = 6
+        minerals = 10
         trigger = {
-            planet_resource_compare = {
-                resource = minerals
-                value >= 24
-                type = produces
+            str_num_districts_mining = {
+                operator = > num
+                 = 2
             }
         }
     }
     ai_resource_production = {
-        minerals = 6
+        minerals = 20
         trigger = {
-            planet_resource_compare = {
-                resource = minerals
-                value >= 48
-                type = produces
+            str_num_districts_mining = {
+                operator = > num
+                 = 4
             }
         }
     }

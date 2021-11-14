@@ -1,0 +1,86 @@
+entity = {
+    name = "interstellar_ringworld_01_entity"
+    scale = 6
+    pdxmesh = "giga_vanilla_habitable_mesh"
+    cull_radius = 500
+    game_data = {
+        size = 50
+        shader_type = ship
+        emissive_recolor_crunch = 50
+    }
+    default_state = "idle"
+    state = {
+        name = "idle"
+        state_time = 5
+    }
+    state = {
+        name = "construction"
+    }
+    meshsettings = {
+        name = "ringworld_vanilla_habitable"
+        index = 0
+        texture_diffuse = "giga_ringworld_habitable_diffuse.dds"
+        texture_normal = "giga_ringworld_habitable_normal.dds"
+        texture_specular = "ringworld_habitable_specular.dds"
+        shader = "PdxMeshTerra"
+    }
+    meshsettings = {
+        name = "ringworld_vanilla_habitable"
+        index = 1
+        texture_diffuse = "giga_interstellar_diffuse.dds"
+        texture_normal = "ai_01_normals.dds"
+        texture_specular = "ai_01_specular.dds"
+        shader = "PdxMeshTerra"
+    }
+    attach = {
+        root = "vanilla_clouds_entity"
+    }
+    locator = {
+        name = "locator0"
+        position = {
+            0
+            0
+            0
+        }
+        rotation = {
+            0
+            0
+            0
+        }
+    }
+    locator = {
+        name = "locator2"
+        position = {
+            -225
+            0
+            -60.289
+        }
+        rotation = {
+            -30
+            0
+            0
+        }
+    }
+    locator = {
+        name = "locator3"
+        position = {
+            225
+            0
+            -60.289
+        }
+        rotation = {
+            30
+            0
+            0
+        }
+    }
+    attach = {
+        locator0 = "giga_ringworld_habitable_entity_01_clouds_entity"
+    }
+    attach = {
+        locator2 = "vanilla_tech_entity"
+    }
+    attach = {
+        locator3 = "vanilla_tech_entity"
+    }
+}

@@ -12,6 +12,7 @@ building_food_processing_facility = {
     destroy_trigger = {
         exists = owner
         OR = {
+            str_food_processing_destroy = yes
             owner = {
                 is_ai = yes
                 country_uses_food = no
@@ -21,7 +22,7 @@ building_food_processing_facility = {
         }
     }
     allow = {
-        buildings_simple_allow = yes
+        str_food_processing_allow = yes
     }
     planet_modifier = {
         planet_farmers_food_produces_add = 1
@@ -69,6 +70,19 @@ building_food_processing_facility = {
             energy = 2
         }
     }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            str_force_food_processing = yes
+        }
+        modifier = {
+            job_starnet_spice_melange_farmer_add = 1
+            job_starnet_spice_melange_antifarmer_add = -1
+        }
+    }
     triggered_desc = {
         trigger = {
             exists = owner
@@ -110,22 +124,20 @@ building_food_processing_facility = {
         }
     }
     ai_resource_production = {
-        food = 3
+        food = 10
         trigger = {
-            planet_resource_compare = {
-                resource = food
-                value >= 20
-                type = produces
+            str_num_districts_farming = {
+                operator = > num
+                 = 3
             }
         }
     }
     ai_resource_production = {
-        food = 3
+        food = 20
         trigger = {
-            planet_resource_compare = {
-                resource = food
-                value >= 40
-                type = produces
+            str_num_districts_farming = {
+                operator = > num
+                 = 5
             }
         }
     }

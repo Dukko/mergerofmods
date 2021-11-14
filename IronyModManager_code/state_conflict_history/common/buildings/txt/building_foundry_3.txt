@@ -294,30 +294,27 @@ building_foundry_3 = {
     ai_resource_production = {
         alloys = 16
         trigger = {
-            planet_resource_compare = {
-                resource = alloys
-                value >= 16
-                type = produces
+            str_num_districts_milindustry = {
+                operator = > num
+                 = 2
             }
         }
     }
     ai_resource_production = {
         alloys = 16
         trigger = {
-            planet_resource_compare = {
-                resource = alloys
-                value >= 32
-                type = produces
+            str_num_districts_milindustry = {
+                operator = > num
+                 = 3
             }
         }
     }
     ai_resource_production = {
         alloys = 16
         trigger = {
-            planet_resource_compare = {
-                resource = alloys
-                value >= 48
-                type = produces
+            str_num_districts_milindustry = {
+                operator = > num
+                 = 4
             }
         }
     }

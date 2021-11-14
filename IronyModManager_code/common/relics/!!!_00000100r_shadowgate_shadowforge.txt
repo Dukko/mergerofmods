@@ -5,7 +5,7 @@ r_shadowgate_shadowforge = {
     resources = {
         category = relics
         cost = {
-            influence = 150
+            influence = @shadowgate_relic_cost_shadowforge
         }
     }
     ai_weight = {

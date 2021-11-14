@@ -1,0 +1,26 @@
+vbp_technician_drone = {
+    category = complex_drone
+    is_capped_by_modifier = yes
+    icon = technician_drone
+    building_icon = building_primitive_power_plant
+    possible_pre_triggers = {
+        has_owner = yes
+        is_sapient = yes
+    }
+    possible = {
+        exists = owner
+        owner = {
+            is_country_type = vbp_hive
+            has_country_flag = vbp_hive_superego_stage
+        }
+    }
+    resources = {
+        category = planet_farmers
+        produces = {
+            energy = 2
+        }
+    }
+    weight = {
+        weight = 1
+    }
+}

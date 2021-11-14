@@ -11,10 +11,19 @@ col_ring_research = {
     weight_modifier = {
         modifier = {
             add = 150
-            planet_resource_compare = {
-                resource = physics_research
-                value > 60
-                type = produces
+            or = {
+                num_buildings = {
+                    type = building_research_lab_1
+                    value > 4
+                }
+                num_buildings = {
+                    type = building_research_lab_2
+                    value > 2
+                }
+                num_buildings = {
+                    type = building_research_lab_3
+                    value > 1
+                }
             }
         }
         modifier = {

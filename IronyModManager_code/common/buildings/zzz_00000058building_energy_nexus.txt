@@ -137,20 +137,18 @@ building_energy_nexus = {
     ai_resource_production = {
         energy = 10
         trigger = {
-            planet_resource_compare = {
-                resource = energy
-                value >= 24
-                type = produces
+            str_num_districts_generator = {
+                operator = > num
+                 = 2
             }
         }
     }
     ai_resource_production = {
         energy = 20
         trigger = {
-            planet_resource_compare = {
-                resource = energy
-                value >= 48
-                type = produces
+            str_num_districts_generator = {
+                operator = > num
+                 = 4
             }
         }
     }

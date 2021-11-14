@@ -1,0 +1,25 @@
+vbp_miner_drone_machine = {
+    category = simple_drone
+    is_capped_by_modifier = yes
+    building_icon = building_primitive_mine
+    icon = mining_drone
+    possible_pre_triggers = {
+        has_owner = yes
+        is_sapient = yes
+    }
+    possible = {
+        exists = owner
+        owner = {
+            is_country_type = vbp_machine
+        }
+    }
+    resources = {
+        category = planet_farmers
+        produces = {
+            minerals = 2
+        }
+    }
+    weight = {
+        weight = 10
+    }
+}

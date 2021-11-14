@@ -5,7 +5,7 @@ r_shadowgate_br = {
     resources = {
         category = relics
         cost = {
-            influence = 75
+            influence = @shadowgate_relic_cost_br
         }
         produces = {
             physics_research = 5
@@ -28,12 +28,12 @@ r_shadowgate_br = {
         custom_tooltip = shadowgate.br.active
         custom_tooltip = relic_triumph_cooldown_veryshort
         hidden_effect = {
-            country_event = {
-                id = shadowgate_galactic.620
-            }
             add_modifier = {
                 modifier = "relic_activation_cooldown"
                 days = -1
+            }
+            country_event = {
+                id = shadowgate_galactic.621
             }
         }
     }
@@ -42,45 +42,6 @@ r_shadowgate_br = {
             fail_text = "requires_relic_no_cooldown"
             NOT = {
                 has_modifier = relic_activation_cooldown
-            }
-        }
-        custom_tooltip = {
-            fail_text = "no_allied_shadowgate"
-            OR = {
-                AND = {
-                    exists = event_target:shadowgate_ap_country
-                    event_target:shadowgate_ap_country = {
-                        has_communications = prev
-                        NOT = {
-                            is_hostile = prev
-                        }
-                    }
-                }
-                any_owned_planet = {
-                    is_colonized_shadowgate = yes
-                    check_variable = {
-                        which = ShadowgateRP
-                        value > ShadowgateRPMin
-                    }
-                    controller = {
-                        is_same_value = prevprev
-                    }
-                }
-                if = {
-                    limit = {
-                        count_federation_ally = {
-                            count > 0
-                        }
-                    }
-                    any_federation_ally = {
-                        any_owned_planet = {
-                            is_colonized_shadowgate = yes
-                            controller = {
-                                is_same_value = prevprev
-                            }
-                        }
-                    }
-                }
             }
         }
         custom_tooltip = {

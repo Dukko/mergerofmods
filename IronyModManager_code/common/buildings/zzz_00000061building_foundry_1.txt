@@ -293,10 +293,9 @@ building_foundry_1 = {
         alloys = 3
         trigger = {
             str_is_col_foundry = yes
-            planet_resource_compare = {
-                resource = alloys
-                value >= 20
-                type = produces
+            str_num_districts_milindustry = {
+                operator = > num
+                 = 2
             }
         }
     }
@@ -304,10 +303,9 @@ building_foundry_1 = {
         alloys = 3
         trigger = {
             str_is_col_foundry = yes
-            planet_resource_compare = {
-                resource = alloys
-                value >= 40
-                type = produces
+            str_num_districts_milindustry = {
+                operator = > num
+                 = 3
             }
         }
     }
@@ -315,10 +313,9 @@ building_foundry_1 = {
         alloys = 3
         trigger = {
             str_is_col_foundry = yes
-            planet_resource_compare = {
-                resource = alloys
-                value >= 50
-                type = produces
+            str_num_districts_milindustry = {
+                operator = > num
+                 = 4
             }
         }
     }

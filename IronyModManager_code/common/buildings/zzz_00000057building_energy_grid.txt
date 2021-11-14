@@ -167,20 +167,18 @@ building_energy_grid = {
     ai_resource_production = {
         energy = 15
         trigger = {
-            planet_resource_compare = {
-                resource = energy
-                value >= 20
-                type = produces
+            str_num_districts_generator = {
+                operator = > num
+                 = 2
             }
         }
     }
     ai_resource_production = {
         energy = 30
         trigger = {
-            planet_resource_compare = {
-                resource = energy
-                value >= 40
-                type = produces
+            str_num_districts_generator = {
+                operator = > num
+                 = 4
             }
         }
     }

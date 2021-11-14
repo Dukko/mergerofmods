@@ -1,0 +1,33 @@
+vbp_station_engineer = {
+    category = specialist
+    is_capped_by_modifier = yes
+    icon = artisan
+    clothes_texture_index = 2
+    possible_pre_triggers = {
+        has_owner = yes
+        is_sapient = yes
+    }
+    possible = {
+        exists = owner
+        owner = {
+            is_country_type = primitive
+            has_country_flag = vbp_voidbound_civilisation
+        }
+    }
+    planet_modifier = {
+        planet_amenities_add = 8
+    }
+    resources = {
+        category = planet_farmers
+        produces = {
+            alloys = 1
+            consumer_goods = 1
+        }
+        upkeep = {
+            minerals = 2
+        }
+    }
+    weight = {
+        weight = 10
+    }
+}

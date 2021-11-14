@@ -5,7 +5,7 @@ r_shadowgate_crwt_active = {
     resources = {
         category = relics
         cost = {
-            influence = 25
+            influence = @shadowgate_relic_cost_crwt_active
         }
     }
     ai_weight = {

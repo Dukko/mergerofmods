@@ -1,0 +1,30 @@
+vbp_wasteland_ruler = {
+    category = ruler
+    is_capped_by_modifier = yes
+    building_icon = building_primitive_farm
+    icon = noble
+    clothes_texture_index = 2
+    possible_pre_triggers = {
+        has_owner = yes
+        is_sapient = yes
+    }
+    possible = {
+        exists = owner
+        owner = {
+            is_country_type = primitive
+            has_country_flag = vbp_tomb_primitives
+        }
+    }
+    planet_modifier = {
+        planet_stability_add = 10
+    }
+    resources = {
+        category = planet_farmers
+        produces = {
+            unity = 3
+        }
+    }
+    weight = {
+        weight = 100
+    }
+}

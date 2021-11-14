@@ -45,9 +45,19 @@ building_institute = {
             owner = {
                 is_ai = no
             }
-            planet_resource_compare = {
-                resource = physics_research
-                value > 60
+            or = {
+                num_buildings = {
+                    type = building_research_lab_1
+                    value > 3
+                }
+                num_buildings = {
+                    type = building_research_lab_2
+                    value > 1
+                }
+                num_buildings = {
+                    type = building_research_lab_3
+                    value > 1
+                }
             }
             str_is_col_research = yes
         }
@@ -97,9 +107,19 @@ building_institute = {
     }
     ai_resource_production = {
         trigger = {
-            planet_resource_compare = {
-                resource = physics_research
-                value >= 20
+            or = {
+                num_buildings = {
+                    type = building_research_lab_1
+                    value > 2
+                }
+                num_buildings = {
+                    type = building_research_lab_2
+                    value > 1
+                }
+                num_buildings = {
+                    type = building_research_lab_3
+                    value > 1
+                }
             }
         }
         physics_research = 3
@@ -108,9 +128,19 @@ building_institute = {
     }
     ai_resource_production = {
         trigger = {
-            planet_resource_compare = {
-                resource = physics_research
-                value >= 40
+            or = {
+                num_buildings = {
+                    type = building_research_lab_1
+                    value > 4
+                }
+                num_buildings = {
+                    type = building_research_lab_2
+                    value > 2
+                }
+                num_buildings = {
+                    type = building_research_lab_3
+                    value > 1
+                }
             }
         }
         physics_research = 3

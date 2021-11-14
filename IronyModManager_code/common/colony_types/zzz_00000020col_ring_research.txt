@@ -1,0 +1,42 @@
+col_ring_research = {
+    icon = GFX_colony_type_research
+    potential = {
+        uses_district_set = ring_world
+    }
+    planet_modifier = {
+        planet_building_research_lab_1_build_speed_mult = 0.25
+        planet_researchers_upkeep_mult = -0.1
+        planet_researchers_produces_mult = 0.1
+    }
+    weight_modifier = {
+        modifier = {
+            add = 150
+            or = {
+                num_buildings = {
+                    type = building_research_lab_1
+                    value > 4
+                }
+                num_buildings = {
+                    type = building_research_lab_2
+                    value > 2
+                }
+                num_buildings = {
+                    type = building_research_lab_3
+                    value > 1
+                }
+            }
+        }
+        modifier = {
+            add = 100
+            has_designation = col_ring_research
+        }
+        modifier = {
+            add = 200
+            is_capital = no
+            num_districts = {
+                type = district_rw_science
+                value >= 1
+            }
+        }
+    }
+}

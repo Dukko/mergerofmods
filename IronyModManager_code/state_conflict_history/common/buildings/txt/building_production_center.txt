@@ -23,13 +23,9 @@ building_production_center = {
             owner = {
                 is_ai = no
             }
-            planet_resource_compare = {
-                resource = alloys
-                value > 40
-            }
-            planet_resource_compare = {
-                resource = consumer_goods
-                value > 80
+            str_num_districts_allindustry = {
+                operator = > num
+                 = 3
             }
             str_is_col_foundry = yes
             str_is_col_factory = yes
@@ -159,40 +155,36 @@ building_production_center = {
     ai_resource_production = {
         alloys = 3
         trigger = {
-            planet_resource_compare = {
-                resource = alloys
-                value >= 20
-                type = produces
+            str_num_districts_allindustry = {
+                operator = > num
+                 = 2
             }
         }
     }
     ai_resource_production = {
         alloys = 3
         trigger = {
-            planet_resource_compare = {
-                resource = alloys
-                value >= 40
-                type = produces
+            str_num_districts_allindustry = {
+                operator = > num
+                 = 3
             }
         }
     }
     ai_resource_production = {
         consumer_goods = 5
         trigger = {
-            planet_resource_compare = {
-                resource = consumer_goods
-                value >= 33
-                type = produces
+            str_num_districts_allindustry = {
+                operator = > num
+                 = 2
             }
         }
     }
     ai_resource_production = {
         consumer_goods = 5
         trigger = {
-            planet_resource_compare = {
-                resource = consumer_goods
-                value >= 66
-                type = produces
+            str_num_districts_allindustry = {
+                operator = > num
+                 = 3
             }
         }
     }

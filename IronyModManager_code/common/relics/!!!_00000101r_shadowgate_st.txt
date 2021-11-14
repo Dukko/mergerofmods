@@ -5,7 +5,7 @@ r_shadowgate_st = {
     resources = {
         category = relics
         cost = {
-            influence = 75
+            influence = @shadowgate_relic_cost_st
         }
         produces = {
             trigger = {

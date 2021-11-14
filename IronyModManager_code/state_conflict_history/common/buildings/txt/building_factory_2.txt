@@ -170,30 +170,27 @@ building_factory_2 = {
     ai_resource_production = {
         consumer_goods = 16
         trigger = {
-            planet_resource_compare = {
-                resource = consumer_goods
-                value >= 16
-                type = produces
+            str_num_districts_civindustry = {
+                operator = > num
+                 = 3
             }
         }
     }
     ai_resource_production = {
         consumer_goods = 16
         trigger = {
-            planet_resource_compare = {
-                resource = consumer_goods
-                value >= 32
-                type = produces
+            str_num_districts_civindustry = {
+                operator = > num
+                 = 4
             }
         }
     }
     ai_resource_production = {
         consumer_goods = 16
         trigger = {
-            planet_resource_compare = {
-                resource = consumer_goods
-                value >= 48
-                type = produces
+            str_num_districts_civindustry = {
+                operator = > num
+                 = 5
             }
         }
     }

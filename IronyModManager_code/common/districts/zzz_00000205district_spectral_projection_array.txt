@@ -61,8 +61,25 @@ district_spectral_projection_array = {
         }
         text = shadowgate_district_demolish
     }
-    planet_modifier = {
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                NOT = {
+                    is_gestalt = yes
+                }
+            }
+        }
         job_shadowgate_researcher_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        job_shadowgate_researcher_drone_add = 2
     }
     ai_weight = {
         weight = 100000

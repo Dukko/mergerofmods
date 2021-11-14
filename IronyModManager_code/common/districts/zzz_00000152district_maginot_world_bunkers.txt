@@ -33,7 +33,7 @@ district_maginot_world_bunkers = {
         }
         modifier = {
             job_maginot_bunker_officer_add = 1
-            job_soldier_add = 3
+            job_soldier_add = 1
             job_maginot_military_police_add = 1
         }
     }
@@ -46,7 +46,7 @@ district_maginot_world_bunkers = {
         }
         modifier = {
             job_maginot_bunker_officer_gestalt_add = 1
-            job_warrior_drone_add = 3
+            job_warrior_drone_add = 1
             job_patrol_drone_add = 1
         }
     }

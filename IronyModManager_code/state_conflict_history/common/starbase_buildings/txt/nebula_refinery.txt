@@ -18,30 +18,11 @@ nebula_refinery = {
         }
         custom_tooltip = {
             fail_text = "requires_nebula"
-            OR = {
-                star = {
+            star = {
+                Or = {
                     is_inside_nebula = yes
-                }
-                solar_system = {
-                    OR = {
-                        is_star_class = sc_p_purple
-                        is_star_class = sc_p_green
-                        is_star_class = sc_p_red
-                        is_star_class = sc_nova_1
-                        is_star_class = sc_nova_2
-                        is_star_class = sc_w_azure
-                        is_star_class = sc_w_red
-                        is_star_class = sc_w_green
-                        is_star_class = sc_w_purple
-                        is_star_class = sc_lbv_blue
-                        is_star_class = sc_lbv_green
-                        is_star_class = sc_lbv_red
-                        is_star_class = sc_protostar
-                        is_star_class = sc_tt_red
-                        is_star_class = sc_tt_orange
-                        is_star_class = sc_tt_white
-                        is_star_class = sc_ae
-                    }
+                    is_nebula_star = yes
+                    is_disk_star = yes
                 }
             }
         }

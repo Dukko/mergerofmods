@@ -5,7 +5,7 @@ r_shadowgate_es = {
     resources = {
         category = relics
         cost = {
-            influence = 75
+            influence = @shadowgate_relic_cost_es
         }
     }
     ai_weight = {
@@ -43,12 +43,12 @@ r_shadowgate_es = {
         custom_tooltip = shadowgate.es.active
         custom_tooltip = relic_triumph_cooldown_short
         hidden_effect = {
-            country_event = {
-                id = shadowgate_galactic.610
-            }
             add_modifier = {
                 modifier = "relic_activation_cooldown"
                 days = -1
+            }
+            country_event = {
+                id = shadowgate_galactic.612
             }
         }
     }
@@ -68,23 +68,6 @@ r_shadowgate_es = {
                 check_variable = {
                     which = ShadowgateESStored
                     value > 0
-                }
-            }
-        }
-        custom_tooltip = {
-            fail_text = "no_nonhostile_shadowgate"
-            OR = {
-                any_owned_planet = {
-                    is_colonized_shadowgate = yes
-                }
-                any_relation = {
-                    NOR = {
-                        is_country_type = shadowgate_ap
-                        is_hostile = prev
-                    }
-                    any_owned_planet = {
-                        is_colonized_shadowgate = yes
-                    }
                 }
             }
         }

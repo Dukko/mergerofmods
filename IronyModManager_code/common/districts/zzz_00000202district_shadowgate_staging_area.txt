@@ -20,7 +20,26 @@ district_shadowgate_staging_area = {
         planet_housing_add = 4
         planet_amenities_add = 3
         planet_max_buildings_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                NOT = {
+                    is_gestalt = yes
+                }
+            }
+        }
         job_shadowgate_researcher_add = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        job_shadowgate_researcher_drone_add = 1
     }
     ai_weight = {
         weight = 0
