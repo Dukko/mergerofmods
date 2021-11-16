@@ -7,7 +7,6 @@ giga_tech_yggdrasil_orchid = {
     }
     is_rare = yes
     prerequisites = {
-        "tech_gene_expressions"
         "tech_battleships"
         "tech_mega_engineering"
         "tech_terrestrial_sculpting"

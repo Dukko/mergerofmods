@@ -59,6 +59,18 @@ district_void_birch_matrioshka = {
         potential = {
             exists = owner
             owner = {
+                is_country_type = dormant_aeternum
+            }
+        }
+        modifier = {
+            job_acot_enforcer_add = 15
+            job_acot_voidsphere_labman_add = 60
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
                 is_hive_empire = yes
             }
         }

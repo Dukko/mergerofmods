@@ -9,7 +9,6 @@ Edit - Just More Empires 3.0.x (Expanded)
 [v1.0] Insults and Injuries
 Amazing Space Battles
 Guilli's Planet Modifiers and Features
-War Name Variety | Redux
 Shadowrun Name List
 More Federation Names
 Lithoid Namelist
@@ -21,13 +20,35 @@ Extra Fallen Empires
 [3.1.*] Planet States
 [3.1.*] New Enclaves
 Talking Non-Humanoid Portraits
+Silfae's city sets updated
 Segek's Animated Portraits
 Restored Content: Fungoids
 Mass Effect Civilizations - Asari
+Holosphere Rising
 Enhanced - Vulcan Portraits
 Enhanced - Plavalaguna Portraits
 Elves of Stellaris
+Diamont Species
 Dimorphism+SF
+Animated Valbaran Species
+Animated Xirmian Portraits
+Animated Silicoid Portraits
+Animated Shark Portraits
+Animated Serpentoid Portraits
+Animated Raptor Portraits
+Animated Quarian Portraits - Mass Effect
+Animated Portraits - The Hidden Eye
+Animated Pardus Species
+Animated Octee-lan Portraits
+Animated Lykos Species
+Animated Kriken Species
+Animated Hollow Portraits
+Animated Hyena Portraits
+Animated Geometry Species
+Animated Eldar Portraits - Warhammer 40K
+Animated Budgie Species
+Animated Asari Portraits - Mass Effect
+Animated Aquilese Portraits
 Another Animated Avali
 Zro Lithoid Trait
 Young Leaders
@@ -46,6 +67,7 @@ Starborn Disable Normal Habitats
 Shadowgate
 Psionic Species Expansion
 Precursor Story Pack
+Guillified Precursor Story Pack (Compat Patch)
 Planetary Wonders
 Origins Extended
 More Events Mod
@@ -54,6 +76,7 @@ Inflection Point
 Gods & Guardians (3.1)
 Fatal Foundations Story Pack [3.1]
 Extra Events 3.1
+Expanded Gestalts: Forgotten Queens
 Even More Origins
 Endless Frontier: An Event Mod
 Dynamic Political Events
@@ -141,9 +164,11 @@ United Fleet Shipset
 Machine Shipset
 Kurogane Expanded (New)
 Formidable Star Eater - The Companion Cube
+Enigmatic Shipset
 Deprecated Humanoid Ship Sections Patch
 Borg Shipset 3.0
 Arkchitecture Shipsets
+Aesthetic Terraform Stations
 Wormhole Generation (3.1)
 Start with AutoExplore
 Sensor Expansion
@@ -201,6 +226,7 @@ Planetary Diversity
 Planetary Diversity - Exotic Worlds
 Planetary Diversity - Gaia Worlds
 Planetary Diversity - More Arcologies
+Planetary Diversity - Planetary Habitats
 Planetary Diversity - Reworked Habitability
 Planetary Diversity - Ringworlds
 Planetary Diversity - Shroud Worlds
@@ -235,9 +261,7 @@ VF EF - Federations Expanded Patch
 VF EF - Exalted Domination Patch
 Vassals Expanded and Reworked - Exalted Domination Patch
 Starnet + Planetary Collection
-Shattered Ring Shipset Fix
 RLS + Dark UI Patch
-Ringworld lights fix
 Retextured Ships
 Realistic Species Growth
 Psionic Species Expansion - Gigastructural Engineering
@@ -248,10 +272,11 @@ Loyal Subjects Have Nothing to Fear (From the Colossus)[3.1]
 Habitat AI colonisation fix
 Governance Patch
 Giga-Ship in Scaling Lite Patch
-Giga_Real_Space
+Gigastructural Engineering / System Scale Compatibility Patch
 Giga Diversity
 Galactic Market Foundation Tweak
 Galactic Community Expanded Defines
+Full Military Service for Battle Thralls
 Fleet Formation Mod v3.0.+ (Real Space -System Scale)
 Fishbowl Robot Head Fix
 Federations - No Hard Feelings for Declined Votes
@@ -264,7 +289,11 @@ Caravaneers and Nomads coexist
 Automated Dreadnought Fix - 2.8 Compatible
 Ancient Cache of Technologies: Extra Defines and Changes
 A Deadly Tempest 3.0 - Real Space Ships in Scaling Patch
+ANZ Patch: Forgotten Queens / Expanded Stellaris Ascension Perks
+ANZ Patch: Forgotten Queens (3.1.c Compatibility)
+!!!Unofficial Hive DLC: Forgotten Queens + Just More Traits 3.0.x
 Stellaris Enhanced Sound Project
+Ringworld Graphical Enhancements
 Silent Galaxy-Ambient-Sound
 !Yet Another Districts Patch for Starnet AI
 !StartPopsPatch
@@ -282,12 +311,21 @@ Silent Galaxy-Ambient-Sound
 !Patch - Cubemap Fix
 !Patch - At War - Ships in Scaling Lite
 !Patch - ACoT Combined Ships in Scaling Lite Patch
+Machine Shipset Add-on: Shattered Ring and Habitat Appearance
+Machine Shipset Add-on: Aesthetic Terraform Station Compatibility
+Enigmatic Shipset Add-on: Aesthetic Terraform Station Compatibility
+Zeta / Map Modes
+Silfae's Portraits: Revisited
+Starlight
+Complex Bright Stars
 3.1 Mod Fixes
 !Colossus Hiveworld Fix
 !Additional Traits AI Patch
 !!Universal Modifier Patch (3.1.*)
 !!!Universal Resource Patch [2.4+]
 !! K !! - Realistic Asteroids
+! Dark Blue UI Universial Patch
+Absolutely no prescripted countries pls
 ! The Merger of Rules 3.1
 ! Reworked Advanced Ascension
 ! Camera & Galaxy Map Tweaks

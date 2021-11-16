@@ -55,6 +55,18 @@ district_void_birch_nidavellir = {
         potential = {
             exists = owner
             owner = {
+                is_country_type = dormant_aeternum
+            }
+        }
+        modifier = {
+            job_acot_enforcer_add = 15
+            job_acot_voidsphere_siloman_add = 60
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
                 is_hive_empire = yes
             }
         }

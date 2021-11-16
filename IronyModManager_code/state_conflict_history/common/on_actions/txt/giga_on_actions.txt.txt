@@ -158,6 +158,11 @@ on_planet_attackers_win = {
         giga_flavor_systems.2100
     }
 }
+on_ship_disabled = {
+    events = {
+        giga_aeternum.6000
+    }
+}
 on_entering_system_first_time = {
     events = {
         giga_dialog.104
