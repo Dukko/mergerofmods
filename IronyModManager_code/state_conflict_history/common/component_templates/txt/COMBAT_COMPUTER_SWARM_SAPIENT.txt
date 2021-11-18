@@ -1,0 +1,48 @@
+@cost3 = 20
+@power3 = -25
+utility_component_template = {
+    key = "COMBAT_COMPUTER_SWARM_SAPIENT"
+    size = small
+    icon = "GFX_ship_part_computer_swarm_sapient"
+    icon_frame = 1
+    power = @power3
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @cost3
+        }
+    }
+    class_restriction = {
+        shipclass_military
+    }
+    size_restriction = {
+        corvette
+        crisis_corvette
+        pirate_corvette
+        marauder_corvette
+    }
+    component_set = "combat_computers"
+    ship_behavior = "swarm"
+    prerequisites = {
+        "tech_combat_computers_3"
+    }
+    modifier = {
+        ship_evasion_mult = 0.25
+    }
+    ship_modifier = {
+        ship_fire_rate_mult = 0.15
+    }
+    ai_weight = {
+        weight = 5
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = ghost_signal_5_flag
+                has_global_flag = ghost_signal_4_flag
+                has_global_flag = ghost_signal_3_flag
+                has_global_flag = ghost_signal_2_flag
+                has_global_flag = ghost_signal_1_flag
+            }
+        }
+    }
+}

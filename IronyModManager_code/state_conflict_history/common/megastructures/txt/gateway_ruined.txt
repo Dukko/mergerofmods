@@ -7,6 +7,11 @@ gateway_ruined = {
     show_galactic_map_icon = no
     construction_blocks_others = no
     construction_blocked_by_others = no
+    upgrade_desc = hide
+    build_time = 0
+    upgrade_from = {
+        ariphaos_gateway_ruined_temp
+    }
     potential = {
         always = no
     }

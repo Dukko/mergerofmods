@@ -1,8 +1,8 @@
 @resolution_weight_disliked = 4
 @resolution_cost_denounce = 25
 @resolution_flag_timer = 360
-resolution_galactic_market_ban_sentient_slave_trade = {
-    icon = "GFX_resolution_galactic_market_slave_trade"
+resolution_galactic_market_allow_sentient_slave_trade = {
+    icon = "GFX_repeal_orange"
     resources = {
         category = resolutions
         cost = {
@@ -13,19 +13,15 @@ resolution_galactic_market_ban_sentient_slave_trade = {
     modifier = {
     }
     effect = {
-        custom_tooltip = resolution_galactic_market_ban_sentient_slave_trade_effect_success
+        custom_tooltip = resolution_galactic_market_allow_sentient_slave_trade_effect_success
         hidden_effect = {
-            set_global_flag = sentient_slave_trade_banned_flag
+            remove_global_flag = sentient_slave_trade_banned_flag
             set_timed_country_flag = {
                 flag = galactic_community_resolution_passed_general
                 days = @resolution_flag_timer
             }
             set_timed_country_flag = {
-                flag = faction_authoritarian_outraged_gc
-                days = 7200
-            }
-            set_timed_country_flag = {
-                flag = faction_xenophobe_supremacist_outraged_gc
+                flag = faction_egalitarian_outraged_gc
                 days = 7200
             }
             add_modifier = {
@@ -49,23 +45,31 @@ resolution_galactic_market_ban_sentient_slave_trade = {
     potential = {
         has_federations_dlc = yes
         has_megacorp = yes
-        has_global_flag = organic_slave_trade_banned_flag
-        is_active_resolution = "resolution_galactic_market_ban_sentient_organic_slave_trade"
+        has_global_flag = sentient_slave_trade_banned_flag
+        is_active_resolution = "resolution_galactic_market_ban_sentient_slave_trade"
     }
     ai_weight = {
         weight = @resolution_weight_disliked
         modifier = {
-            factor = 1.5
+            factor = 0.5
             is_xenophile = yes
         }
         modifier = {
-            factor = 2
+            factor = 0.5
             is_egalitarian = yes
         }
         modifier = {
-            factor = 2
+            factor = 0
+            is_egalitarian = yes
+            allows_slavery = no
+        }
+        modifier = {
+            factor = 0
             NOT = {
                 has_ai_personality_behaviour = slaver
+            }
+            NOT = {
+                has_ai_personality_behaviour = robot_exploiter
             }
             OR = {
                 has_ethic = ethic_fanatic_egalitarian
@@ -73,22 +77,23 @@ resolution_galactic_market_ban_sentient_slave_trade = {
             }
         }
         modifier = {
-            factor = 0.5
+            factor = 1.5
             is_xenophobe = yes
         }
         modifier = {
-            factor = 0.5
+            factor = 1.5
+            has_ethic = ethic_fanatic_xenophobe
+        }
+        modifier = {
+            factor = 1.5
             is_authoritarian = yes
         }
         modifier = {
-            factor = 0
-            OR = {
-                has_ethic = ethic_fanatic_authoritarian
-                has_ethic = ethic_fanatic_xenophobe
-            }
+            factor = 1.5
+            has_ethic = ethic_fanatic_authoritarian
         }
         modifier = {
-            factor = 0
+            factor = 2
             has_ai_personality_behaviour = slaver
             OR = {
                 has_ethic = ethic_fanatic_authoritarian
@@ -96,25 +101,42 @@ resolution_galactic_market_ban_sentient_slave_trade = {
             }
         }
         modifier = {
-            factor = 1.25
+            factor = 2
+            has_origin = origin_mechanists
+            is_auth_corporate = yes
+        }
+        modifier = {
+            factor = 4
+            has_ai_personality_behaviour = robot_exploiter
+        }
+        modifier = {
+            factor = 0.5
+            has_ai_personality_behaviour = robot_liberator
+        }
+        modifier = {
+            factor = 0
+            is_robot_empire = yes
+        }
+        modifier = {
+            factor = 0.75
             NOT = {
                 has_ai_personality_behaviour = slaver
             }
         }
         modifier = {
-            factor = 0.75
+            factor = 1.25
             is_spiritualist = yes
         }
         modifier = {
-            factor = 0.5
+            factor = 2
             has_ai_personality_behaviour = slaver
         }
         modifier = {
-            factor = 0
+            factor = 5
             is_slaver = yes
         }
         modifier = {
-            factor = 0
+            factor = 10
             is_civic_slaver_guilds = yes
         }
     }

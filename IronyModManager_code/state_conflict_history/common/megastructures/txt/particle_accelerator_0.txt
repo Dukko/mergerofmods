@@ -1,0 +1,342 @@
+particle_accelerator_0 = {
+    entity = "giga_consite_7_7_entity"
+    construction_entity = "giga_consite_7_7_entity"
+    portrait = "GFX_megastructure_construction_background"
+    place_entity_on_planet_plane = no
+    prerequisites = {
+        giga_tech_particle_accelerator
+    }
+    build_time = 1800
+    resources = {
+        category = megastructures
+        cost = {
+            alloys = 5000
+            influence = 75
+        }
+        upkeep = {
+            energy = 5
+        }
+    }
+    potential = {
+        has_technology = giga_tech_particle_accelerator
+        NOT = {
+            has_global_flag = accelerator_disabled
+        }
+        OR = {
+            check_variable = {
+                which = giga_accelerator_cap
+                value = 0
+            }
+            check_variable = {
+                which = giga_current_accelerator
+                value < giga_accelerator_cap
+            }
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_inside_border"
+            is_inside_border = from
+        }
+        custom_tooltip = {
+            fail_text = "requires_surveyed_system"
+            giga_system_is_surveyed = yes
+        }
+        custom_tooltip = {
+            fail_text = "requires_no_existing_accelerator"
+            giga_has_particle_accelerator = no
+        }
+        custom_tooltip = {
+            fail_text = "requires_not_capped"
+            from = {
+                OR = {
+                    check_variable = {
+                        which = giga_accelerator_cap
+                        value = 0
+                    }
+                    check_variable = {
+                        which = giga_current_accelerator
+                        value < giga_accelerator_cap
+                    }
+                }
+            }
+        }
+    }
+    placement_rules = {
+        planet_possible = {
+            custom_tooltip = {
+                fail_text = "requires_no_existing_megastructure"
+                planet_has_no_megastructure = yes
+            }
+            custom_tooltip = {
+                fail_text = "must_build_around_star"
+                is_star = yes
+            }
+            custom_tooltip = {
+                fail_text = "requires_no_anomaly"
+                has_anomaly = no
+            }
+            custom_tooltip = {
+                fail_text = "requires_standard_planet_class"
+                giga_is_standard_star = yes
+            }
+        }
+    }
+    ai_weight = {
+        weight = 100
+        modifier = {
+            factor = 1
+            chk_afford_energy_10 = yes
+        }
+        modifier = {
+            factor = 0.9
+            chk_afford_energy_09 = yes
+        }
+        modifier = {
+            factor = 0.8
+            chk_afford_energy_08 = yes
+        }
+        modifier = {
+            factor = 0.7
+            chk_afford_energy_07 = yes
+        }
+        modifier = {
+            factor = 0.6
+            chk_afford_energy_06 = yes
+        }
+        modifier = {
+            factor = 0.5
+            chk_afford_energy_05 = yes
+        }
+        modifier = {
+            factor = 0.4
+            chk_afford_energy_04 = yes
+        }
+        modifier = {
+            factor = 0.3
+            chk_afford_energy_03 = yes
+        }
+        modifier = {
+            factor = 0.2
+            chk_afford_energy_25 = yes
+        }
+        modifier = {
+            factor = 0.1
+            chk_afford_energy_02 = yes
+        }
+        modifier = {
+            factor = 0
+            chk_afford_energy_15 = yes
+        }
+        modifier = {
+            factor = 3.75
+            chk_needs_physics_10 = yes
+        }
+        modifier = {
+            factor = 3.5
+            chk_needs_physics_09 = yes
+        }
+        modifier = {
+            factor = 3.25
+            chk_needs_physics_08 = yes
+        }
+        modifier = {
+            factor = 3
+            chk_needs_physics_07 = yes
+        }
+        modifier = {
+            factor = 2.75
+            chk_needs_physics_06 = yes
+        }
+        modifier = {
+            factor = 2.5
+            chk_needs_physics_05 = yes
+        }
+        modifier = {
+            factor = 2.25
+            chk_needs_physics_04 = yes
+        }
+        modifier = {
+            factor = 2
+            chk_needs_physics_03 = yes
+        }
+        modifier = {
+            factor = 1.75
+            chk_needs_physics_25 = yes
+        }
+        modifier = {
+            factor = 1.5
+            chk_needs_physics_02 = yes
+        }
+        modifier = {
+            factor = 1.25
+            chk_needs_physics_15 = yes
+        }
+        modifier = {
+            factor = 0.5
+            any_neighbor_system = {
+                exists = owner
+                NOT = {
+                    owner = {
+                        is_same_value = from
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            from = {
+                has_federation = yes
+                federation = {
+                    has_federation_type = research_federation
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            from = {
+                has_ethic = ethic_fanatic_materialist
+            }
+        }
+        modifier = {
+            factor = 1.5
+            from = {
+                has_ethic = ethic_materialist
+            }
+        }
+        modifier = {
+            factor = 1.25
+            from = {
+                has_civic = civic_technocracy
+            }
+        }
+        modifier = {
+            factor = 0
+            from = {
+                has_country_flag = has_recently_built_particle_accelerator
+            }
+        }
+        modifier = {
+            factor = 0
+            from = {
+                count_owned_megastructure = {
+                    limit = {
+                        OR = {
+                            is_megastructure_type = particle_accelerator_1
+                            is_megastructure_type = particle_accelerator_restored
+                        }
+                    }
+                    count > 5
+                }
+            }
+        }
+        modifier = {
+            factor = 0.15
+            from = {
+                count_owned_megastructure = {
+                    limit = {
+                        OR = {
+                            is_megastructure_type = particle_accelerator_1
+                            is_megastructure_type = particle_accelerator_restored
+                        }
+                    }
+                    count = 5
+                }
+            }
+        }
+        modifier = {
+            factor = 0.3
+            from = {
+                count_owned_megastructure = {
+                    limit = {
+                        OR = {
+                            is_megastructure_type = particle_accelerator_1
+                            is_megastructure_type = particle_accelerator_restored
+                        }
+                    }
+                    count = 4
+                }
+            }
+        }
+        modifier = {
+            factor = 0.45
+            from = {
+                count_owned_megastructure = {
+                    limit = {
+                        OR = {
+                            is_megastructure_type = particle_accelerator_1
+                            is_megastructure_type = particle_accelerator_restored
+                        }
+                    }
+                    count = 3
+                }
+            }
+        }
+        modifier = {
+            factor = 0.6
+            from = {
+                count_owned_megastructure = {
+                    limit = {
+                        OR = {
+                            is_megastructure_type = particle_accelerator_1
+                            is_megastructure_type = particle_accelerator_restored
+                        }
+                    }
+                    count = 2
+                }
+            }
+        }
+        modifier = {
+            factor = 0.75
+            from = {
+                count_owned_megastructure = {
+                    limit = {
+                        OR = {
+                            is_megastructure_type = particle_accelerator_1
+                            is_megastructure_type = particle_accelerator_restored
+                        }
+                    }
+                    count = 1
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            from = {
+                OR = {
+                    has_megastructure = particle_accelerator_0
+                    has_megastructure = particle_accelerator_ruined
+                }
+            }
+        }
+    }
+    on_build_complete = {
+        save_event_target_as = giga_system
+        fromfrom.planet = {
+            save_event_target_as = giga_planet
+            if = {
+                limit = {
+                    exists = orbital_station
+                }
+                orbital_station = {
+                    dismantle = yes
+                }
+            }
+            set_planet_flag = megastructure
+            set_planet_flag = has_megastructure
+        }
+        from = {
+            set_timed_country_flag = {
+                flag = has_recently_built_particle_accelerator
+                years = 20
+            }
+            country_event = {
+                id = giga_dialog.1801
+            }
+            change_variable = {
+                which = giga_current_accelerator
+                value = 1
+            }
+        }
+    }
+}

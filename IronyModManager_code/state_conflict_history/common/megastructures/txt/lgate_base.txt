@@ -4,9 +4,44 @@ lgate_base = {
     portrait = "GFX_megastructure_construction_background"
     place_entity_on_planet_plane = no
     show_galactic_map_icon = no
+    bypass_type = lgate
+    build_time = 500
+    resources = {
+        category = megastructures
+        cost = {
+            nanites = 100
+        }
+        upkeep = {
+        }
+        produces = {
+        }
+    }
+    entity_offset = {
+        x = 8
+        y = 8
+    }
+    construction_blocks_others = no
+    upgrade_from = {
+        lgate_disabled
+    }
+    prerequisites = {
+        "tech_lgate_construction"
+    }
     potential = {
         always = no
     }
-    construction_blocks_others = no
-    bypass_type = lgate
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_tech_lgate_construction"
+            from = {
+                has_technology = tech_lgate_construction
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_inside_border"
+            is_inside_border = from
+        }
+    }
+    placement_rules = {
+    }
 }

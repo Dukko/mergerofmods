@@ -1,0 +1,41 @@
+nicoll_beam_3 = {
+    entity = "giga_ndb_phase3_entity"
+    construction_entity = "giga_ndb_phase3_construction_entity"
+    portrait = "GFX_megastructure_construction_background"
+    upgrade_from = {
+        nicoll_beam_2
+    }
+    build_time = 5400
+    resources = {
+        category = megastructures
+        cost = {
+            alloys = 30000
+        }
+        upkeep = {
+            alloys = 150
+        }
+    }
+    potential = {
+        NOT = {
+            has_global_flag = ndb_disabled
+        }
+    }
+    possible = {
+        from = {
+            has_ascension_perk = ap_gigastructural_constructs
+            has_technology = giga_tech_ndb_3
+        }
+    }
+    on_build_complete = {
+        save_event_target_as = giga_system
+        star = {
+            save_event_target_as = giga_planet
+        }
+        from = {
+            country_event = {
+                id = giga_dialog.3204
+            }
+        }
+        giga_ndb_close_gate = yes
+    }
+}

@@ -1,0 +1,73 @@
+matrioshka_brain_5_f_star = {
+    entity = "matrioshka_brain_05_entity"
+    construction_entity = "matrioshka_brain_05_construction_entity"
+    portrait = "GFX_megastructure_sentient_AI"
+    upgrade_from = {
+        matrioshka_brain_4_f_star
+    }
+    ai_weight = {
+        factor = 10
+    }
+    country_modifier = {
+        all_technology_research_speed = 0.2
+    }
+    build_time = @matrioshka_p5_buildtime_f_star
+    resources = {
+        category = megastructures
+        cost = {
+            alloys = @matrioshka_p5_cost_alloys_f_star
+        }
+        produces = {
+            physics_research = @matrioshka_p5_produces_research_f_star
+            society_research = @matrioshka_p5_produces_research_f_star
+            engineering_research = @matrioshka_p5_produces_research_f_star
+        }
+        upkeep = {
+            trigger = {
+                NOT = {
+                    has_global_flag = giga_disable_influence_upkeep
+                }
+            }
+            influence = @matrioshka_p5_upkeep_influence_f_star
+        }
+        upkeep = {
+            alloys = @matrioshka_p5_upkeep_alloys_f_star
+        }
+    }
+    potential = {
+        NOT = {
+            has_global_flag = matrioshka_brain_disabled
+        }
+    }
+    possible = {
+        from = {
+            has_ascension_perk = ap_gigastructural_constructs
+            has_technology = giga_tech_matrioshka_brain_1
+        }
+    }
+    on_build_complete = {
+        save_event_target_as = giga_system
+        fromfrom.planet = {
+            save_event_target_as = giga_planet
+        }
+        from = {
+            country_event = {
+                id = giga_dialog.506
+            }
+            if = {
+                limit = {
+                    NOR = {
+                        has_global_flag = giga_achievements_disabled
+                        has_country_flag = giga_achievement_85
+                    }
+                }
+                set_country_flag = giga_achievement_85
+                set_timed_country_flag = {
+                    flag = giga_achievement_85_notification
+                    days = 30
+                }
+                giga_achievement_sound = yes
+            }
+        }
+    }
+}

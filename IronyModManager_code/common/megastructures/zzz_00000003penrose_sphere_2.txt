@@ -1,0 +1,59 @@
+penrose_sphere_2 = {
+    entity = "penrose_sphere_entity"
+    construction_entity = "penrose_sphere_entity"
+    portrait = "GFX_megastructure_construction_background"
+    upgrade_from = {
+        penrose_sphere_1
+    }
+    build_time = 2700
+    resources = {
+        category = megastructures
+        cost = {
+            alloys = 7500
+        }
+        upkeep = {
+            alloys = 5
+            energy = 25
+        }
+    }
+    potential = {
+        NOT = {
+            has_global_flag = penrose_sphere_disabled
+        }
+    }
+    possible = {
+        from = {
+            has_technology = giga_tech_penrose_sphere_1
+        }
+    }
+    ai_weight = {
+        factor = 10
+    }
+    on_build_complete = {
+        save_event_target_as = giga_system
+        fromfrom.planet = {
+            save_event_target_as = giga_planet
+        }
+        set_star_flag = penrose_detonate_system
+        save_global_event_target_as = penrose_detonate_system_location
+        from = {
+            country_event = {
+                id = giga_dialog.1207
+            }
+            if = {
+                limit = {
+                    NOR = {
+                        has_global_flag = giga_achievements_disabled
+                        has_country_flag = giga_achievement_65
+                    }
+                }
+                set_country_flag = giga_achievement_65
+                set_timed_country_flag = {
+                    flag = giga_achievement_65_notification
+                    days = 30
+                }
+                giga_achievement_sound = yes
+            }
+        }
+    }
+}

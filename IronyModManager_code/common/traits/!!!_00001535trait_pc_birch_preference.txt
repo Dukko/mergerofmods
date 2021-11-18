@@ -71,7 +71,6 @@ trait_pc_birch_preference = {
         pc_relic_habitability = 0.4
         pc_aquatichot_habitability = 0.4
         pc_aquaticcold_habitability = 0.4
-        pc_aquatichot_habitability = 0.4
         pc_aquaticcity_habitability = 0.4
         pc_acid_habitability = 0.4
         pc_rogue_habitability = 0.4

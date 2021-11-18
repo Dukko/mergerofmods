@@ -115,13 +115,28 @@ amaryllian_district_arcology_trade_industry = {
             job_clerk_add = 1
         }
     }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_active_tradition = tr_mercantile_commercial_enterprise
+            }
+        }
+        modifier = {
+            job_merchant_add = 1
+        }
+    }
     triggered_desc = {
         text = job_clerk_effect_desc
     }
     triggered_desc = {
         trigger = {
+            exists = owner
             owner = {
-                has_ascension_perk = ap_amaryllian_voidchildren
+                OR = {
+                    has_ascension_perk = ap_amaryllian_voidchildren
+                    has_active_tradition = tr_mercantile_commercial_enterprise
+                }
             }
         }
         text = job_merchant_effect_desc

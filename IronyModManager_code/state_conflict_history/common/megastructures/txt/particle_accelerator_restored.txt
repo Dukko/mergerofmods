@@ -1,0 +1,72 @@
+particle_accelerator_restored = {
+    entity = "particle_accelerator_1"
+    construction_entity = "particle_accelerator_1"
+    portrait = "GFX_megastructure_physics_research"
+    upgrade_from = {
+        particle_accelerator_ruined
+    }
+    build_time = 1800
+    resources = {
+        category = megastructures
+        cost = {
+            alloys = 5000
+        }
+        upkeep = {
+            energy = 25
+            alloys = 5
+        }
+        produces = {
+            physics_research = 150
+        }
+    }
+    potential = {
+        NOT = {
+            has_global_flag = accelerator_disabled
+        }
+    }
+    possible = {
+        exists = from
+        from = {
+            has_technology = giga_tech_particle_accelerator
+        }
+    }
+    ai_weight = {
+        factor = 10
+    }
+    on_build_complete = {
+        from = {
+            set_country_flag = giga_repaired_mega_no_dialog
+        }
+        set_global_flag = managing_giga_megastructure
+        fromfrom.planet = {
+            set_variable = {
+                which = acc_intensity
+                value = 3
+            }
+            set_variable = {
+                which = acc_spec
+                value = 1
+            }
+            set_variable = {
+                which = giga_failure_chance
+                value = 5
+            }
+            save_global_event_target_as = giga_mega_manage_planet
+            solar_system = {
+                spawn_megastructure = {
+                    type = particle_accelerator_1
+                    planet = event_target:giga_mega_manage_planet
+                    owner = space_owner
+                }
+            }
+        }
+        remove_global_flag = managing_giga_megastructure
+        from = {
+            country_event = {
+                id = giga_dialog.1804
+            }
+            remove_country_flag = giga_repaired_mega_no_dialog
+        }
+        remove_megastructure = fromfrom
+    }
+}

@@ -188,10 +188,6 @@ spy_orb_0 = {
             }
         }
     }
-    on_build_start = {
-    }
-    on_build_cancel = {
-    }
     on_build_complete = {
         set_star_flag = spy_orb_built
         from = {

@@ -1,0 +1,113 @@
+nicoll_beam_target_marker_1 = {
+    entity = ""
+    portrait = "GFX_megastructure_construction_background"
+    entity_offset = {
+        x = 0
+        y = 0
+    }
+    ai_weight = {
+        factor = 0
+    }
+    build_time = 0
+    resources = {
+        category = megastructures
+        cost = {
+            energy = 1000
+            influence = 150
+        }
+    }
+    potential = {
+        NOT = {
+            has_global_flag = ndb_disabled
+        }
+        has_country_flag = giga_ndb_completed
+    }
+    possible = {
+        from = {
+            has_ascension_perk = ap_gigastructural_constructs
+            has_technology = giga_tech_ndb_4
+        }
+        custom_tooltip = {
+            fail_text = "requires_ndb_mega"
+            from = {
+                any_owned_megastructure = {
+                    is_megastructure_type = nicoll_beam_4
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "already_have_target"
+            NOT = {
+                from = {
+                    has_country_flag = giga_ndb_target_acquired@root
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "cant_build_here_ehof"
+            NOT = {
+                any_system_planet = {
+                    has_planet_flag = cant_build_here
+                }
+            }
+        }
+    }
+    placement_rules = {
+        planet_possible = {
+            custom_tooltip = {
+                fail_text = "requires_no_contingency"
+                NOT = {
+                    is_planet_class = pc_ai
+                }
+            }
+            custom_tooltip = {
+                fail_text = "requires_no_quberine"
+                NOT = {
+                    is_planet_class = pc_squareworld_habitable
+                }
+            }
+            custom_tooltip = {
+                fail_text = "must_build_around_planet"
+                is_star = no
+            }
+            custom_tooltip = {
+                fail_text = "requires_smaller_planet"
+                NOR = {
+                    is_planet_class = pc_birch
+                    is_planet_class = pc_alderson_slice_ecu
+                    is_planet_class = pc_alderson_slice_gaia
+                    is_planet_class = pc_alderson_slice_pc
+                }
+            }
+            custom_tooltip = {
+                fail_text = "requires_habitable"
+                OR = {
+                    colonizable_planet = yes
+                    is_planet_class = pc_machine
+                    is_planet_class = pc_infested
+                    is_planet_class = pc_ll_temperate
+                    is_planet_class = pc_ll_foggy
+                    is_planet_class = pc_gigaorbital_ring
+                    is_planet_class = pc_habitable_gas_giant
+                }
+            }
+        }
+    }
+    on_build_complete = {
+        save_event_target_as = giga_system
+        fromfrom.planet = {
+            save_event_target_as = giga_planet
+        }
+        set_star_flag = giga_ndb_system_target@root.from
+        from = {
+            set_country_flag = giga_ndb_target_acquired@root.from
+        }
+        fromfrom.planet = {
+            set_planet_flag = giga_ndb_planet_target@root.from
+            add_modifier = {
+                modifier = "nicoll_target"
+                days = -1
+            }
+        }
+    }
+}
