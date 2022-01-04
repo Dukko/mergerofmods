@@ -1,0 +1,47 @@
+tech_phanon_enigmatic_lab = {
+    area = physics
+    category = {
+        computing
+    }
+    tier = 9
+    cost = @acot_tier10cost2
+    prerequisites = {
+        tech_stellarite_enigmatic_lab
+        tech_civil_phanon_application
+    }
+    weight = @tier5weight1
+    potential = {
+        NOR = {
+            is_fallen_empire = yes
+            has_global_flag = aot_phanon_content_OFF
+        }
+        has_technology = tech_civil_phanon_application
+    }
+    weight_modifier = {
+        factor = 2
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_technology = tech_phanon_control_center
+                has_technology = tech_phanon_palace
+                has_technology = tech_phanon_hive_cluster
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+}

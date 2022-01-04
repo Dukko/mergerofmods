@@ -1,0 +1,51 @@
+weapon_component_template = {
+    key = "PLANET_LANCE_BLOKKAT"
+    size = titanic
+    type = instant
+    icon = "GFX_ship_part_planet_lance_blokkat"
+    icon_frame = 1
+    power = -80000
+    damage = {
+        min = 3500000
+        max = 9000000
+    }
+    windup = {
+        min = 50
+        max = 60
+    }
+    total_fire_time = 150
+    range = 59
+    accuracy = 1
+    hull_damage = 1
+    armor_penetration = 0
+    shield_penetration = 1
+    armor_damage = 1.4
+    tracking = 0.2
+    firing_arc = 50
+    component_set = "PLANET_LANCE_BLOKKAT"
+    projectile_gfx = "giga_super_omega_laser_blokkat"
+    tags = {
+        weapon_type_energy
+    }
+    size_restriction = {
+        giga_planet_behemoth
+        giga_systemcraft
+        giga_o_systemcraft
+    }
+    prerequisites = {
+        "giga_tech_blokkat_obliterator"
+    }
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = 15000
+            energy = 50000
+        }
+        upkeep = {
+            energy = 2000
+        }
+    }
+    ai_tags = {
+        weapon_role_anti_armor
+    }
+}

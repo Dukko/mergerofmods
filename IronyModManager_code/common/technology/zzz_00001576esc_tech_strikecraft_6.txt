@@ -1,0 +1,57 @@
+esc_tech_strikecraft_6 = {
+    area = engineering
+    category = {
+        voidcraft
+    }
+    tier = 6
+    cost = @ESC_TECH_tier6_cost2
+    weight = @ESC_TECH_tier6_weight2
+    ai_update_type = military
+    prerequisites = {
+        "esc_tech_strikecraft_5"
+    }
+    is_rare = yes
+    is_reverse_engineerable = no
+    potential = {
+        NOT = {
+            has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_strikecrafts_forbidden
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_technology = esc_tech_precursor_armaments
+                has_technology = esc_tech_sensors_precursor
+                has_technology = esc_tech_jump_drive_precursor
+            }
+        }
+    }
+    ai_weight = {
+        factor = @ESC_AI_tech_weight_multiplier
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_technology = esc_tech_precursor_armaments
+                has_technology = esc_tech_sensors_precursor
+                has_technology = esc_tech_jump_drive_precursor
+            }
+        }
+    }
+}

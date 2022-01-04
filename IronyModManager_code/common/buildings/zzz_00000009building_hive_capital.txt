@@ -50,12 +50,57 @@ building_hive_capital = {
         potential = {
             exists = owner
             owner = {
+                is_ai = yes
+            }
+            num_districts = {
+                type = district_hive
+                value > 1
+            }
+            str_force_city_district = yes
+        }
+        job_starnet_spice_melange_farmer_add = -2
+        job_starnet_spice_melange_antifarmer_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            num_districts = {
+                type = district_hive
+                value > 3
+            }
+            str_force_city_district = yes
+        }
+        job_starnet_spice_melange_farmer_add = -2
+        job_starnet_spice_melange_antifarmer_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_ai = yes
+            }
+            num_districts = {
+                type = district_hive
+                value > 5
+            }
+            str_force_city_district = yes
+        }
+        job_starnet_spice_melange_farmer_add = -2
+        job_starnet_spice_melange_antifarmer_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
                 has_technology = tech_capital_productivity_1
             }
         }
         modifier = {
-            planet_jobs_upkeep_mult = 0.1
-            planet_jobs_produces_mult = 0.1
+            planet_jobs_productive_upkeep_mult = 0.1
+            planet_jobs_productive_produces_mult = 0.1
         }
     }
     resources = {

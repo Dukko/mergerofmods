@@ -1,0 +1,61 @@
+@apsr15part1cost_energy = 1000
+@apsr15part1cost_minerals = 1500
+@apsr15part1cost_time = 500
+@apsr15part1upkeep_energy = 1
+@apsr15part1upkeep_minerals = 0
+apsr15_building_part1 = {
+    base_buildtime = @apsr15part1cost_time
+    icon = apsr15_building_part1
+    base_cap_amount = 1
+    is_capped_by_modifier = no
+    category = government
+    can_demolish = no
+    position_priority = 49
+    allow = {
+        apsr_buildings_allow = yes
+    }
+    potential = {
+        AND = {
+            has_modifier = "apsr15_planet_modifier"
+            NOT = {
+                OR = {
+                    has_building = apsr15_building_part21
+                    has_building = apsr15_building_part22
+                    has_building = apsr15_building_part31
+                    has_building = apsr15_building_part32
+                    has_building = apsr15_building_part33
+                    has_building = apsr15_building_part34
+                    has_building = apsr15_building_part41
+                    has_building = apsr15_building_part42
+                    has_building = apsr15_building_part43
+                    has_building = apsr15_building_part44
+                    has_building = apsr15_building_part45
+                }
+            }
+        }
+    }
+    resources = {
+        category = planet_apsr_buildings
+        cost = {
+            energy = @apsr15part1cost_energy
+            minerals = @apsr15part1cost_minerals
+        }
+        upkeep = {
+            energy = @apsr15part1upkeep_energy
+            minerals = @apsr15part1upkeep_minerals
+        }
+        produces = {
+            apsr_knowledge = 0.1
+        }
+    }
+    upgrades = {
+        "apsr15_building_part21"
+        "apsr15_building_part22"
+    }
+    prerequisites = {
+        "tech_apsr15_building_part1"
+    }
+    show_tech_unlock_if = {
+        always = no
+    }
+}

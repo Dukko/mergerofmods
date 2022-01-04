@@ -1,113 +1,6 @@
 room_selector = {
     default = "command2_room"
     game_setup = {
-        "horrorworm_room" = {
-            always = yes
-        }
-        "octeelan_room" = {
-            always = yes
-        }
-        "octeelan_static_room" = {
-            always = yes
-        }
-        "quarian_flotilla_room" = {
-            always = yes
-        }
-        "sharkanian_static_room" = {
-            always = yes
-        }
-        "slreptilian_room" = {
-            always = yes
-        }
-        "dlc_hive_room" = {
-        }
-        "dlc_hive2_room" = {
-        }
-        "dlc_hive3_room" = {
-        }
-        "horrorworm_room" = {
-        }
-        "pse_shroud_room" = {
-            always = no
-        }
-        "rls_blank_room" = {
-            always = no
-        }
-        "ego_nice_room" = {
-            always = no
-        }
-        "ego_angry_room" = {
-            always = no
-        }
-        "drow_tulshar_room" = {
-            always = yes
-        }
-        "lunari_silvermoon_room" = {
-            always = yes
-        }
-        "theborg_01_room" = {
-            always = yes
-        }
-        "personality_hegemonic_imperialists_room" = {
-            always = yes
-        }
-        "personality_federation_builders_room" = {
-            always = yes
-        }
-        "personality_democratic_crusaders_room" = {
-            always = yes
-        }
-        "personality_evangelizing_zealots_room" = {
-            always = yes
-        }
-        "personality_migrating_flock_room" = {
-            always = yes
-        }
-        "personality_spiritual_seekers_room" = {
-            always = yes
-        }
-        "personality_decadent_hierarchy_room" = {
-            always = yes
-        }
-        "personality_slaving_despots_room" = {
-            always = yes
-        }
-        "personality_erudite_explorers_room" = {
-            always = yes
-        }
-        "personality_fanatic_purifier_room" = {
-            always = yes
-        }
-        "personality_metalheads_room" = {
-            always = yes
-        }
-        "personality_harmonious_hierarchy_room" = {
-            always = yes
-        }
-        "personality_peaceful_traders_room" = {
-            always = yes
-        }
-        "personality_xenophobic_isolationists_room" = {
-            always = yes
-        }
-        "personality_ruthless_capitalists_room" = {
-            always = yes
-        }
-        "personality_honorbound_warriors_room" = {
-            always = yes
-        }
-        "personality_fanatic_befrienders_room" = {
-            always = yes
-        }
-        "personality_hive_mind_room" = {
-            always = yes
-        }
-        "personality_transaprent_original_empire_room" = {
-            always = yes
-        }
-        "personality_original_empire_room" = {
-            always = yes
-        }        
         "awakened_room" = {
             always = yes
         }
@@ -153,19 +46,16 @@ room_selector = {
         "fixed_swarm_room" = {
             always = yes
         }
-        "barren1_room" = {
+        "personality_transaprent_original_empire_room" = {
             always = yes
         }
-        "cave1_room" = {
+        "personality_original_empire_room" = {
             always = yes
         }
-        "cave3_room" = {
-            always = yes
+        "theborg_01_room" = {
+            graphical_culture = theborg_01
         }
-        "cave5_room" = {
-            always = yes
-        }
-        "cave6_room" = {
+        "personality_darkhumanoid_room" = {
             always = yes
         }
         "barren1_room" = {
@@ -214,6 +104,21 @@ room_selector = {
             always = yes
         }
         "underwater3_room" = {
+            always = yes
+        }
+        "underwater4_room" = {
+            always = yes
+        }
+        "underwater5_room" = {
+            always = yes
+        }
+        "underwater6_room" = {
+            always = yes
+        }
+        "underwater7_room" = {
+            always = yes
+        }
+        "underwater8_room" = {
             always = yes
         }
         "cityscape1_room" = {
@@ -412,6 +317,9 @@ room_selector = {
             always = yes
         }
         "frozen6_room" = {
+            always = yes
+        }
+        "frozen7_room" = {
             always = yes
         }
         "fungus1_room" = {
@@ -711,6 +619,12 @@ room_selector = {
         "outdoor22_room" = {
             always = yes
         }
+        "outdoor23_room" = {
+            always = yes
+        }
+        "outdoor24_room" = {
+            always = yes
+        }
         "plantoid1_room" = {
             always = yes
         }
@@ -954,12 +868,6 @@ room_selector = {
         "xenomorph3_room" = {
             always = yes
         }
-        "xenomorph4_room" = {
-            always = yes
-        }
-        "xenomorph5_room" = {
-            always = yes
-        }
         "warp1_room" = {
             always = yes
         }
@@ -1026,48 +934,141 @@ room_selector = {
         "enclave_trader_room" = {
             always = yes
         }
+        "rls_blank_room" = {
+            always = no
+        }
+        "sharkanian_static_room" = {
+            always = yes
+        }
+        "drow_tulshar_room" = {
+            always = yes
+        }
+        "lunari_silvermoon_room" = {
+            always = yes
+        }
+        "quarian_flotilla_room" = {
+            always = yes
+        }
+        "slreptilian_room" = {
+            always = yes
+        }
+        "octeelan_room" = {
+            always = yes
+        }
+        "horrorworm_room" = {
+            always = yes
+        }
+        "ego_nice_room" = {
+            always = no
+    }
+        "ego_angry_room" = {
+            always = no
+        }
+        "silicoid_v1_room" = {
+            always = yes
+        }
+        "runic_lithoid_room" = {
+            always = yes
+        }
+        "default_room" = {
+            always = yes
+        }
+        "personality_hegemonic_imperialists_room" = {
+            always = yes
+        }
+        "personality_federation_builders_room" = {
+            always = yes
+        }
+        "personality_democratic_crusaders_room" = {
+            always = yes
+        }
+        "personality_evangelizing_zealots_room" = {
+            always = yes
+        }
+        "personality_migrating_flock_room" = {
+            always = yes
+        }
+        "personality_spiritual_seekers_room" = {
+            always = yes
+        }
+        "personality_decadent_hierarchy_room" = {
+            always = yes
+        }
+        "personality_slaving_despots_room" = {
+            always = yes
+        }
+        "personality_erudite_explorers_room" = {
+            always = yes
+        }
+        "personality_fanatic_purifier_room" = {
+            always = yes
+        }
+        "personality_metalheads_room" = {
+            always = yes
+        }
+        "personality_harmonious_hierarchy_room" = {
+            always = yes
+        }
+        "personality_peaceful_traders_room" = {
+            always = yes
+        }
+        "personality_xenophobic_isolationists_room" = {
+            always = yes
+        }
+        "personality_ruthless_capitalists_room" = {
+            always = yes
+        }
+        "personality_honorbound_warriors_room" = {
+            always = yes
+        }
+        "personality_fanatic_befrienders_room" = {
+            always = yes
+        }
+        "personality_hive_mind_room" = {
+            always = yes
+        }
+        "runic_room" = {
+            always = yes
+        }
+        "scrappy_room" = {
+            always = yes
+        }
+        "crystalline_room" = {
+            always = yes
+        }
+        "organic_room" = {
+            always = yes
+        }
+        "gilded_room" = {
+            always = yes
+        }
+        "machine_room" = {
+            always = yes
+        }
+        "lithoid_room" = {
+            local_has_dlc = "Lithoids Species Pack"
+        }
+        "necroids_room" = {
+            local_has_dlc = "Necroids Species Pack"
+        }
+        "aquatics_room" = {
+            local_has_dlc = "Aquatics Species Pack"
+        }
     }
     ruler = {
         "default_room" = {
             always = no
         }
-        "drow_tulshar_room" = {
+        "personality_original_empire_room" = {
             exists = owner
             owner = {
-                AND = {
-                    is_species_class = DROW
-                    is_country_type = fallen_empire
-                }
+                has_ai_personality = original_empire_ascended_personality
             }
         }
-        "horrorworm_room" = {
-            exists = owner
-            owner.owner_species = {
-                species_portrait = horrorworm
-            }
-        }
-        "quarian_flotilla_room" = {
+        "silicoid_v1_room" = {
             exists = owner
             owner = {
-                has_trait = trait_quarian
-            }
-        }
-        "octeelan_static_room" = {
-            exists = owner
-            owner = {
-                has_country_flag = is_octeelans
-            }
-        }
-        "sharkanian_static_room" = {
-            exists = owner
-            owner = {
-                has_country_flag = is_sharkanians
-            }
-        }
-        "slreptilian_room" = {
-            exists = owner
-            owner = {
-                has_country_flag = is_slreptilians
+                lithoids_portrait = yes
             }
         }
         "crisis_room" = {
@@ -1088,19 +1089,22 @@ room_selector = {
                 is_galactic_custodian = yes
             }
         }
-        "theborg_01_room" = {
-            always = yes
-        }
-        "personality_original_empire_room" = {
-            exists = owner
-            owner = {
-                has_ai_personality = original_empire_ascended_personality
-            }
-        }
         "lithoid_room" = {
             exists = owner
             owner = {
                 lithoids_portrait = yes
+            }
+        }
+        "necroids_room" = {
+            exists = owner
+            owner = {
+                necroids_portrait = yes
+            }
+        }
+        "aquatics_room" = {
+            exists = owner
+            owner = {
+                aquatics_portrait = yes
             }
         }
         "runic_room" = {
@@ -1312,7 +1316,7 @@ room_selector = {
                     has_ai_personality = map_storytelling_aficionados
                     has_ai_personality = map_inspired_dreamers
                     has_ai_personality = map_xenial_merrymakers
-                    map_elitist_snobs
+                    has_ai_personality = map_elitist_snobs
                 }
             }
         }
@@ -1330,62 +1334,6 @@ room_selector = {
             owner = {
                 has_authority = auth_machine_intelligence
                 is_fallen_machine_empire = no
-            }
-        }
-        "tree_dwellers_room" = {
-            exists = owner
-            owner = {
-                has_origin = origin_tree_dwellers
-                has_ai_standard_personality = yes
-            }
-        }
-        "children_of_dunes_room" = {
-            exists = owner
-            owner = {
-                has_origin = origin_children_of_dunes
-                has_ai_standard_personality = yes
-            }
-        }
-        "subterranean_room" = {
-            exists = owner
-            owner = {
-                has_origin = origin_subterranean
-                has_ai_standard_personality = yes
-            }
-        }
-        "mariners_room" = {
-            exists = owner
-            owner = {
-                has_origin = origin_mariners
-                has_ai_standard_personality = yes
-            }
-        }
-        "postglacial_room" = {
-            exists = owner
-            owner = {
-                has_origin = origin_postglacial
-                has_ai_standard_personality = yes
-            }
-        }
-        "scavengers_room" = {
-            exists = owner
-            owner = {
-                has_origin = origin_scavengers
-                has_ai_standard_personality = yes
-            }
-        }
-        "twilight_denizens_room" = {
-            exists = owner
-            owner = {
-                has_origin = origin_twilight_denizens
-                has_ai_standard_personality = yes
-            }
-        }
-        "awakened_room" = {
-            exists = owner
-            owner = {
-                has_origin = origin_awakened
-                has_ai_standard_personality = yes
             }
         }
         "personality_fallen_empire_machine_room" = {
@@ -1430,6 +1378,9 @@ room_selector = {
                 }
             }
         }
+        "personality_darkhumanoid_room" = {
+            always = yes
+        }
         "ethic_light_side_room" = {
             exists = owner
             owner = {
@@ -1452,6 +1403,45 @@ room_selector = {
             exists = owner
             owner = {
                 has_authority = auth_hive_mind
+            }
+        }
+        "sharkanian_static_room" = {
+            exists = owner
+            owner = {
+                has_country_flag = is_sharkanians
+            }
+        }
+        "drow_tulshar_room" = {
+            exists = owner
+            owner = {
+                AND = {
+                    is_species_class = DROW
+                    is_country_type = fallen_empire
+                }
+            }
+        }
+        "quarian_flotilla_room" = {
+            exists = owner
+            owner = {
+                has_trait = trait_quarian
+            }
+        }
+        "slreptilian_room" = {
+            exists = owner
+            owner = {
+                has_country_flag = is_slreptilians
+            }
+        }
+        "octeelan_room" = {
+            exists = owner
+            owner = {
+                has_country_flag = is_octeelans
+            }
+        }
+        "horrorworm_room" = {
+            exists = owner
+            owner = {
+                has_trait = trait_horrorworm
             }
         }
     }

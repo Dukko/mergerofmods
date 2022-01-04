@@ -13,7 +13,7 @@ tech_autonomous_agents = {
         has_ethic = ethic_gestalt_consciousness
     }
     modifier = {
-        country_base_influence_produces_add = 1
+        country_tech_influence_produces_add = 1
         envoys_add = 1
     }
     weight_modifier = {
@@ -42,7 +42,16 @@ tech_autonomous_agents = {
         }
     }
     ai_weight = {
-        weight = 3
+        weight = 3000
+        factor = 5
+        modifier = {
+            factor = 500
+            has_technology = tech_energy_torpedoes_2
+        }
+        modifier = {
+            factor = 500
+            reroll_society = yes
+        }
         modifier = {
             factor = 1.25
             research_leader = {

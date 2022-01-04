@@ -1,0 +1,39 @@
+tech_advanced_drilling_mechanics = {
+    cost = @tier1cost1
+    area = engineering
+    tier = 1
+    category = {
+        industry
+    }
+    prerequisites = {
+        "tech_mechanized_mining"
+    }
+    weight = @tier1weight1
+    weight_modifier = {
+        factor = 5
+        modifier = {
+            factor = 2
+            is_lithoid = yes
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 2.5
+            is_lithoid = yes
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+}

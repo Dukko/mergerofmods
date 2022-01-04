@@ -35,7 +35,7 @@ building_production_center = {
     planet_modifier = {
         planet_metallurgists_produces_mult = 0.15
         planet_artisans_produces_mult = 0.15
-        planet_cultivation_drones_produces_mult = 0.15
+        planet_cultivators_produces_mult = 0.15
     }
     resources = {
         category = planet_buildings

@@ -1,0 +1,186 @@
+@apsr17part1cost_minerals = 2500
+@apsr17part1cost_time = 750
+@apsr17part1upkeep_energy = 4
+@apsr17part1upkeep_minerals = 4
+@apsr17part1upkeep_fake = 1
+@apsr17part1job = 0
+apsr17_building_part1 = {
+    base_buildtime = @apsr17part1cost_time
+    icon = apsr17_building_part1
+    base_cap_amount = 1
+    is_capped_by_modifier = no
+    category = resource
+    can_demolish = no
+    position_priority = 49
+    allow = {
+        apsr_buildings_allow = yes
+    }
+    potential = {
+        has_modifier = "apsr17_planet_modifier"
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+                has_technology = tech_apsr17_building_part1
+            }
+        }
+        modifier = {
+            job_apsr17_power_engineer_hive_add = @apsr17part1job
+            district_generator_max = 4
+            planet_jobs_energy_produces_mult = 0.05
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+                has_technology = tech_apsr17_building_part1
+            }
+        }
+        modifier = {
+            job_apsr17_power_engineer_machine_add = @apsr17part1job
+            district_generator_max = 4
+            planet_jobs_energy_produces_mult = 0.05
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                has_technology = tech_apsr17_building_part1
+            }
+        }
+        modifier = {
+            job_apsr17_power_engineer_normal_add = @apsr17part1job
+            district_generator_max = 4
+            planet_jobs_energy_produces_mult = 0.05
+        }
+    }
+    resources = {
+        category = planet_apsr_buildings
+        cost = {
+            minerals = @apsr17part1cost_minerals
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr17_building_part1
+                }
+            }
+            energy = @apsr17part1upkeep_energy
+            minerals = @apsr17part1upkeep_minerals
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    NOT = {
+                        has_technology = tech_apsr17_building_part1
+                    }
+                }
+            }
+            energy = @apsr17part1upkeep_fake
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr17_building_part1
+                }
+            }
+            apsr_knowledge = 0.3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_apsr17_advanced_1
+            }
+        }
+        modifier = {
+            district_generator_max = 3
+            planet_max_districts_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_apsr17_advanced_2
+            }
+        }
+        modifier = {
+            district_generator_max = 3
+            planet_max_districts_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_apsr17_advanced_3
+            }
+        }
+        modifier = {
+            district_generator_max = 3
+            planet_max_districts_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_apsr17_advanced_4
+            }
+        }
+        modifier = {
+            district_generator_max = 3
+            planet_max_districts_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_technology = tech_apsr17_advanced_5
+            }
+        }
+        modifier = {
+            district_generator_max = 3
+            planet_max_districts_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_deposit = apsr_relic_cube_deposit
+        }
+        modifier = {
+            district_generator_max = 10
+            planet_max_districts_add = 5
+        }
+    }
+    upgrades = {
+        "apsr17_building_part2"
+    }
+    prerequisites = {
+        "tech_apsr17_building_part1"
+    }
+    show_tech_unlock_if = {
+        always = no
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                NOT = {
+                    has_technology = tech_apsr17_building_part1
+                }
+            }
+        }
+        text = apsr_building_fake_desc
+    }
+}

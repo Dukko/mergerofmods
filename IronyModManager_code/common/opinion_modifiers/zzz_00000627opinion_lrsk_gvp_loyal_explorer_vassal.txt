@@ -1,0 +1,8 @@
+opinion_lrsk_gvp_loyal_explorer_vassal = {
+    opinion = {
+        base = 50
+    }
+    decay = {
+        base = 1
+    }
+}

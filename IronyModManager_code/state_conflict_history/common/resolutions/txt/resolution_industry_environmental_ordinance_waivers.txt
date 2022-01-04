@@ -167,6 +167,10 @@ resolution_industry_environmental_ordinance_waivers = {
             }
         }
         modifier = {
+            factor = 0.1
+            has_origin = origin_terraformer
+        }
+        modifier = {
             factor = 0.5
             owner_species = {
                 has_trait = eco_trait_clean

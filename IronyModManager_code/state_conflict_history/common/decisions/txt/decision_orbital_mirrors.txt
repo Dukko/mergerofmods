@@ -1,0 +1,50 @@
+decision_orbital_mirrors = {
+    icon = decision_pd_orbital_mirrors
+    owned_planets_only = yes
+    prerequisites = {
+        "tech_solar_reflectrion"
+    }
+    enactment_time = 1800
+    resources = {
+        category = decisions
+        cost = {
+            energy = 1000
+            minerals = 1000
+        }
+    }
+    potential = {
+        is_artificial = no
+        is_pd_arcology = no
+        NOT = {
+            has_modifier = resort_colony
+        }
+        NOT = {
+            is_planet_class = pc_city
+        }
+        NOT = {
+            is_planet_class = pc_crucible
+        }
+        NOT = {
+            has_deposit = d_pd_orbital_mirrors
+        }
+        NOT = {
+            has_deposit = d_snowball_wasteland_1
+        }
+        NOT = {
+            is_planet_class = pc_relic
+        }
+    }
+    effect = {
+        add_deposit = d_pd_orbital_mirrors
+    }
+    ai_weight = {
+        weight = 1
+        modifier = {
+            factor = 1000
+            num_free_districts = {
+                type = district_generator
+                value <= 0
+            }
+        }
+    }
+}

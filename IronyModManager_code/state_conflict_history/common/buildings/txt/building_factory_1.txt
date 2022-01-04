@@ -116,7 +116,7 @@ building_factory_1 = {
             }
         }
         modifier = {
-            job_artificer_add_add = 1
+            job_artificer_add = 1
         }
     }
     resources = {

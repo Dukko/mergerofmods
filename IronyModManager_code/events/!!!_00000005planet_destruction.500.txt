@@ -31,11 +31,7 @@ planet_event = {
                     NOT = {
                         is_same_value = from.owner
                     }
-                    OR = {
-                        is_country_type = default
-                        is_country_type = fallen_empire
-                        is_country_type = awakened_fallen_empire
-                    }
+                    is_playable_country = yes
                 }
             }
             add_threat = {
@@ -64,7 +60,7 @@ planet_event = {
                         }
                         has_ai_personality = awakened_fallen_empire_spiritualist
                         AND = {
-                            is_country_type = default
+                            is_playable_country = yes
                             OR = {
                                 is_egalitarian = yes
                                 is_spiritualist = yes
@@ -111,7 +107,7 @@ planet_event = {
                         has_communications = from.owner
                         has_communications = root.owner
                     }
-                    is_country_type = default
+                    is_playable_country = yes
                     NOR = {
                         is_xenophobe = yes
                         is_homicidal = yes
@@ -135,7 +131,7 @@ planet_event = {
                     OR = {
                         has_ai_personality = awakened_fallen_empire_xenophile
                         AND = {
-                            is_country_type = default
+                            is_playable_country = yes
                             is_xenophile = yes
                         }
                     }
@@ -204,6 +200,7 @@ planet_event = {
         }
         if = {
             limit = {
+                is_memeable_space_habitat = yes
                 OR = {
                     is_planet_class = pc_habitat
                     is_planet_class = pc_gigaorbital_ring
@@ -213,6 +210,7 @@ planet_event = {
         }
         else_if = {
             limit = {
+                is_memeable_ringworld
                 OR = {
                     is_planet_class = pc_ringworld_habitable
                     is_planet_class = pc_shattered_ring_habitable
@@ -304,6 +302,12 @@ planet_event = {
                 }
                 pc_tidallylocked = {
                     change_pc = pc_tidallylocked
+                }
+                pc_tidallygaia = {
+                    change_pc = pc_tidallygaia
+                }
+                pc_tidallyaquatic = {
+                    change_pc = pc_tidallyaquatic
                 }
                 pc_supercon = {
                     change_pc = pc_supercon
@@ -611,8 +615,29 @@ planet_event = {
                 pc_archive = {
                     change_pc = pc_archive
                 }
-                pc_gd_hydrocarbon_hab = {
-                    change_pc = pc_gd_hydrocarbon_hab
+                pc_ll_methane = {
+                    change_pc = pc_ll_methane
+                }
+                pc_ll_ash = {
+                    change_pc = pc_ll_ash
+                }
+                pc_ll_sulfur = {
+                    change_pc = pc_ll_sulfur
+                }
+                pc_ll_ammonia = {
+                    change_pc = pc_ll_ammonia
+                }
+                pc_ll_ocean = {
+                    change_pc = pc_ll_ocean
+                }
+                pc_ll_tidallylocked_cold = {
+                    change_pc = pc_ll_tidallylocked_cold
+                }
+                pc_ll_tidallylocked = {
+                    change_pc = pc_ll_tidallylocked
+                }
+                pc_ll_rogue = {
+                    change_pc = pc_ll_rogue
                 }
             }
         }

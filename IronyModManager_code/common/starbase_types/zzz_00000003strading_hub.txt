@@ -1,0 +1,152 @@
+strading_hub = {
+    potential = {
+        has_starbase_size > starbase_outpost
+        count_starbase_modules = {
+            type = trading_hub
+            count > 0
+        }
+        exists = owner
+        owner = {
+            NOT = {
+                has_ethic = ethic_gestalt_consciousness
+            }
+        }
+    }
+    weight_modifier = {
+        base = 100
+        modifier = {
+            add = 100
+            count_starbase_modules = {
+                type = trading_hub
+                count > 1
+            }
+        }
+        modifier = {
+            add = 100
+            count_starbase_modules = {
+                type = trading_hub
+                count > 2
+            }
+        }
+        modifier = {
+            add = 100
+            count_starbase_modules = {
+                type = trading_hub
+                count > 3
+            }
+        }
+        modifier = {
+            add = 100
+            count_starbase_modules = {
+                type = trading_hub
+                count > 4
+            }
+        }
+        modifier = {
+            add = 100
+            count_starbase_modules = {
+                type = trading_hub
+                count > 5
+            }
+        }
+    }
+    ai_design = {
+        min = {
+            base = 0
+            factor = 0
+        }
+        ratio = {
+            base = 0.3
+            modifier = {
+                add = 0.05
+                exists = owner
+                owner = {
+                    has_ethic = ethic_materialist
+                }
+            }
+            modifier = {
+                add = 0.1
+                exists = owner
+                owner = {
+                    has_ethic = ethic_fanatic_materialist
+                }
+            }
+        }
+        buildings = {
+            offworld_trading_company = {
+                base = 2
+            }
+            trade_patrol = {
+                base = 1
+            }
+            customs_office = {
+                base = 1
+            }
+            customs_office_criminal = {
+                base = 1
+            }
+            nebula_refinery = {
+                base = 1
+            }
+            dathnak_embassy = {
+                base = 1
+            }
+            resource_silo = {
+                base = 0.25
+            }
+            art_college = {
+                base = 1
+            }
+            curator_think_tank = {
+                base = 1
+            }
+            trader_proxy_office = {
+                base = 2
+            }
+            ice_mining_station = {
+                base = 1
+            }
+            dragon_hatchery = {
+                base = 1
+            }
+            hydroponics_bay = {
+                base = 1
+            }
+            climate_control = {
+                base = 1
+            }
+            warp_fluctuator = {
+                base = 0.9
+            }
+            space_production = {
+                base = 2
+            }
+            deep_space_black_site = {
+                base = 1
+            }
+            listening_post = {
+                base = 0.5
+            }
+            defense_grid = {
+                base = 0.05
+            }
+            starbase_fortifications = {
+                base = 0.05
+            }
+            communications_jammer = {
+                base = 0.05
+            }
+            transit_hub = {
+                base = 2
+            }
+        }
+        modules = {
+            trading_hub = {
+                base = 1
+            }
+            stellar_reducer = {
+                base = 1
+            }
+        }
+    }
+}

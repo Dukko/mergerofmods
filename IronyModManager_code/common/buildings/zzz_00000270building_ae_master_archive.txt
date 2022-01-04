@@ -1,0 +1,93 @@
+building_ae_master_archive = {
+    base_buildtime = 600
+    can_demolish = yes
+    can_build = no
+    category = research
+    prerequisites = {
+        "tech_aot_ae_master_archive"
+    }
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = tech_aot_ae_master_archive
+        }
+    }
+    allow = {
+        has_ascended_capital = yes
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_acot_researcher_add = 6
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_acot_researcher_add = 4
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_acot_researcher_add = 4
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_fallen_empire = yes
+            }
+        }
+        job_fe_archivist_add = 15
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 150
+            acot_sr_dark_energy = 1500
+            sr_dark_matter = 1500
+        }
+        produces = {
+            physics_research = 250
+            society_research = 250
+            engineering_research = 250
+        }
+        upkeep = {
+            acot_sr_dark_energy = 15
+            sr_dark_matter = 15
+        }
+    }
+    upgrades = {
+        building_stellarite_master_archive
+    }
+    ai_weight = {
+        weight = 100
+    }
+    ai_resource_production = {
+        physics_research = 500
+        society_research = 500
+        engineering_research = 500
+        trigger = {
+            always = yes
+        }
+    }
+}

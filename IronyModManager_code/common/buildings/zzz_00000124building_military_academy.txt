@@ -7,7 +7,7 @@ building_military_academy = {
         exists = owner
         owner = {
             NOT = {
-                has_valid_civic = civic_reanimated_armies
+                is_reanimator_empire = yes
             }
         }
     }
@@ -16,7 +16,7 @@ building_military_academy = {
         owner = {
             OR = {
                 is_ai = yes
-                has_valid_civic = civic_reanimated_armies
+                is_reanimator_empire = yes
             }
         }
     }
@@ -101,7 +101,7 @@ building_military_academy = {
     }
     show_tech_unlock_if = {
         NOT = {
-            has_valid_civic = civic_reanimated_armies
+            is_reanimator_empire = yes
         }
     }
     triggered_desc = {

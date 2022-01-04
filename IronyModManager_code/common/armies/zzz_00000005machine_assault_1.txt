@@ -1,0 +1,45 @@
+machine_assault_1 = {
+    damage = 2.4
+    health = 1.2
+    has_morale = no
+    morale_damage = 0.5
+    collateral_damage = 0.75
+    war_exhaustion = 0.25
+    time = 90
+    has_species = yes
+    icon = GFX_army_type_machine_assault
+    resources = {
+        category = armies
+        cost = {
+            minerals = 100
+        }
+        upkeep = {
+            energy = 1
+        }
+    }
+    potential = {
+        owner = {
+            OR = {
+                AND = {
+                    is_ai = no
+                    NOT = {
+                        has_technology = tech_spm_battledroid
+                    }
+                }
+                AND = {
+                    is_ai = yes
+                }
+            }
+            has_authority = auth_machine_intelligence
+        }
+        from = {
+            has_trait = "trait_machine_unit"
+        }
+    }
+    show_tech_unlock_if = {
+        has_authority = auth_machine_intelligence
+    }
+    prerequisites = {
+        "tech_assault_armies"
+    }
+}

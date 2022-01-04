@@ -1,0 +1,93 @@
+namespace = colony
+planet_event = {
+    id = colony.2017
+    title = colony.2015.name
+    desc = colony.2017.desc
+    picture = GFX_evt_alien_city
+    show_sound = event_ghost_town
+    location = root
+    pre_triggers = {
+        has_owner = yes
+        is_homeworld = no
+        original_owner = yes
+        has_ground_combat = no
+    }
+    trigger = {
+        owner = {
+            is_ai = no
+        }
+        has_planet_flag = colony_factory_kidnap_sequel
+        has_deposit = d_odd_factory
+        num_assigned_jobs = {
+            job = odd_factory_worker
+            value > 0
+        }
+        owner = {
+            NOT = {
+                has_country_flag = odd_factory_pause
+            }
+        }
+    }
+    is_triggered_only = yes
+    immediate = {
+        owner = {
+            set_country_flag = odd_factory_pause
+        }
+        random_owned_pop = {
+            limit = {
+                has_job = odd_factory_worker
+            }
+            unemploy_pop = yes
+            kill_pop = yes
+        }
+        random = {
+            chance = 50
+            remove_planet_flag = colony_factory_kidnap_sequel
+        }
+    }
+    after = {
+        hidden_effect = {
+            remove_planet_flag = colony_factory_kidnap
+            remove_planet_flag = colony_factory_kidnap_sequel
+            owner = {
+                remove_country_flag = odd_factory_pause
+            }
+        }
+    }
+    option = {
+        name = colony.2017.a
+        custom_tooltip = colony.2017.a.tooltip
+        add_modifier = {
+            modifier = scared_population
+            days = 1800
+        }
+    }
+    option = {
+        name = colony.2017.b
+        custom_tooltip = colony.2017.b.tooltip
+        add_modifier = {
+            modifier = secured_factory
+            days = 1800
+        }
+    }
+    option = {
+        name = colony.2016.b
+        custom_tooltip = colony.2016.a.tooltip
+        trigger = {
+            hidden_trigger = {
+                has_planet_flag = colony_factory_kidnap_sequel
+            }
+        }
+        remove_deposit = d_odd_factory
+        hidden_effect = {
+            set_planet_flag = odd_factory_destroyed
+            random = {
+                chance = 25
+                planet_event = {
+                    id = colony.2019
+                    days = 1
+                }
+            }
+        }
+    }
+}

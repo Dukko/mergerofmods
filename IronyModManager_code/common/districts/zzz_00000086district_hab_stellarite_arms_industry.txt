@@ -1,0 +1,128 @@
+@hab_cost = 1000
+@hab_cost_stellarite = 500
+@hab_maintenance = 2
+district_hab_stellarite_arms_industry = {
+    base_buildtime = 240
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        uses_district_set = sigma_habitat
+        NOT = {
+            has_planet_flag = energy_habitat
+        }
+    }
+    potential = {
+        uses_district_set = sigma_habitat
+        NOT = {
+            has_planet_flag = energy_habitat
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 3
+    }
+    resources = {
+        category = planet_districts_hab_mining
+        cost = {
+            minerals = @hab_cost
+            acot_sr_stellarite = @hab_cost_stellarite
+        }
+        upkeep = {
+            energy = @hab_maintenance
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_stellarite_alloydrone_add = 4
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_stellarite_alloydrone_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire_spiritualist = no
+            }
+        }
+        modifier = {
+            job_stellarite_alloyman_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_fallen_empire_spiritualist = yes
+            }
+        }
+        modifier = {
+            job_fe_acolyte_mine_add = 3
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_acot_alloydrone_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire_spiritualist = no
+            }
+        }
+        text = job_acot_alloyman_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_fallen_empire_spiritualist = yes
+            }
+        }
+        text = job_fe_acolyte_mine_desc
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 400
+            OR = {
+                owner = {
+                    has_monthly_income = {
+                        resource = energy
+                        value < 200
+                    }
+                }
+                planet = {
+                    has_district = district_dm_hab_energy
+                }
+            }
+        }
+    }
+    ai_resource_production = {
+        minerals = 1
+        trigger = {
+            always = yes
+        }
+    }
+}

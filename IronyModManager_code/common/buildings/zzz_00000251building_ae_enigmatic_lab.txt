@@ -1,0 +1,81 @@
+building_ae_enigmatic_lab = {
+    base_buildtime = 680
+    can_build = no
+    can_demolish = yes
+    category = research
+    allow = {
+        has_ascended_capital = yes
+    }
+    upgrades = {
+        building_stellarite_enigmatic_lab
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_acot_researcher_add = 4
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_acot_researcher_drone_add = 4
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 50
+            sr_dark_matter = 500
+            acot_sr_dark_energy = 500
+        }
+        produces = {
+            trigger = {
+                has_modifier = acot_modifier_ascended_city
+            }
+            physics_research = 50
+            engineering_research = 50
+            society_research = 50
+        }
+        upkeep = {
+            trigger = {
+                has_modifier = acot_modifier_ascended_city
+            }
+            sr_dark_matter = 4
+            acot_sr_dark_energy = 4
+        }
+    }
+    prerequisites = {
+        "tech_ae_enigmatic_lab"
+    }
+    ai_weight = {
+        weight = 50
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = sr_dark_matter
+                    value <= 3
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value <= 10
+                }
+            }
+        }
+    }
+}

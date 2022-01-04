@@ -10,7 +10,11 @@ merchant = {
         is_being_assimilated = no
         is_sapient = yes
     }
+    possible_precalc = can_fill_specialist_job
     possible = {
+        NOT = {
+            has_trait = trait_slave_gene
+        }
         complex_specialist_job_check_trigger = yes
     }
     planet_modifier = {

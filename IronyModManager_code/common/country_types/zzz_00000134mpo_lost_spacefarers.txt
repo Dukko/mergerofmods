@@ -1,0 +1,25 @@
+mpo_lost_spacefarers = {
+    randomize_ethos = yes
+    shuffle_pop_ethos = yes
+    observable = no
+    ai = {
+        enabled = no
+        construction = no
+    }
+    faction = {
+        hostile = no
+        needs_border_access = no
+        generate_borders = no
+        needs_colony = no
+        intel_effects_surveyed = no
+    }
+    modules = {
+        standard_event_module = {
+        }
+        basic_technology_module = {
+        }
+        exclusive_diplomacy_module = {
+            contact_rule = on_action_only
+        }
+    }
+}

@@ -11,8 +11,11 @@ gas_plant_engineer_gestalt = {
         is_being_assimilated = no
         is_sapient = yes
     }
+    possible_precalc = can_fill_drone_job
     possible = {
-        specialist_job_check_trigger = yes
+        NOT = {
+            has_trait = trait_nerve_stapled
+        }
     }
     triggered_planet_modifier = {
         potential = {

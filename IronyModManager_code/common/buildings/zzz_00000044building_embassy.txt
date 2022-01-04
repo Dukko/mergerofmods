@@ -73,14 +73,4 @@ building_embassy = {
             }
         }
     }
-    ai_resource_production = {
-        trigger = {
-            always = yes
-        }
-        energy = 8
-        consumer_goods = 8
-        society_research = 10
-        engineering_research = 10
-        physics_research = 10
-    }
 }

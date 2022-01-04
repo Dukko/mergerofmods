@@ -37,7 +37,7 @@ living_standard_subsistence = {
         exists = from
         NOR = {
             from = {
-                has_valid_civic = civic_shared_burden
+            is_shared_burdens_empire = yes
             }
             from = {
                 has_valid_civic = civic_employee_ownership

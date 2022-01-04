@@ -1,11 +1,12 @@
 defense_army = {
     defensive = yes
     is_pop_spawned = yes
-    health = 1.25
-    damage = 1.5
-    morale = 1.25
+    health = 0.75
+    damage = 2
+    morale = 1.5
+    morale_damage = 0.5
     collateral_damage = 0
-    war_exhaustion = 0
+    war_exhaustion = 0.5
     icon = GFX_army_type_defensive
     potential = {
         from = {

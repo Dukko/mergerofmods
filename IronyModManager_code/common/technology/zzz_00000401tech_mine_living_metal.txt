@@ -1,5 +1,5 @@
 tech_mine_living_metal = {
-    cost = @tier1cost1
+    cost = @tier5cost1
     area = engineering
     tier = 5
     category = {
@@ -10,18 +10,6 @@ tech_mine_living_metal = {
     }
     weight = @tier5weight1
     weight_modifier = {
-        factor = 1000
-        modifier = {
-            factor = 0
-            NOR = {
-                any_planet_within_border = {
-                    has_deposit = d_living_metal_deposit
-                }
-                has_resource = {
-                    type = sr_living_metal
-                    amount > 0
-                }
-            }
-        }
+        factor = 0
     }
 }

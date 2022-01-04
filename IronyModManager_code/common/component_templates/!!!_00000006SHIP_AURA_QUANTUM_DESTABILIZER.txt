@@ -1,0 +1,40 @@
+@shipAuraRange = 14
+utility_component_template = {
+    key = "SHIP_AURA_QUANTUM_DESTABILIZER"
+    size = medium
+    icon = "GFX_ship_part_aura_quantum_destabilizer"
+    icon_frame = 1
+    power = 0
+    size_restriction = {
+        titan
+        scavenger_bot
+        graygoo_mothership
+        dreadnought
+    }
+    component_set = "ship_aura_components"
+    hostile_aura = {
+        name = "aura_quantum_destabilizer"
+        radius = @shipAuraRange
+        apply_on = ships
+        stack_info = {
+            id = hostile_quantum_destabilizer
+            priority = 10
+        }
+        modifier = {
+            ship_fire_rate_mult = -0.1
+        }
+        graphics = {
+            area_effect = {
+                entity = "circle_area_entity"
+                dynamic_scale = yes
+            }
+            ship_effect = {
+                entity = "ship_aura_negative_entity"
+                dynamic_scale = no
+            }
+        }
+    }
+    ai_weight = {
+        weight = 10
+    }
+}

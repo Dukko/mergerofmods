@@ -1,0 +1,57 @@
+ship_section_template = {
+    key = "CORE_DM_ENIGMATIC_PLATFORM_SECTION"
+    ship_size = enigmatic_fortress_platform
+    fits_on_slot = "core"
+    entity = "dm_enigmatic_fortress_platform_hull_entity"
+    icon = "GFX_ship_part_core_mid"
+    should_draw_components = no
+    prerequisites = {
+        tech_dm_enigmatic_fortress_platform
+    }
+    component_slot = {
+        name = "TITANIC_01"
+        template = "invisible_titanic_fixed"
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "TITANIC_02"
+        template = "invisible_titanic_fixed"
+        locatorname = "large_gun_02"
+    }
+    component_slot = {
+        name = "TITANIC_03"
+        template = "invisible_titanic_fixed"
+        locatorname = "large_gun_03"
+    }
+    component_slot = {
+        name = "TITANIC_04"
+        template = "invisible_titanic_fixed"
+        locatorname = "large_gun_04"
+    }
+    component_slot = {
+        name = "TITANIC_05"
+        template = "invisible_titanic_fixed"
+        locatorname = "large_gun_05"
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_01"
+        template = "invisible_extra_large_fixed"
+        locatorname = "large_gun_06"
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_02"
+        template = "invisible_extra_large_fixed"
+        locatorname = "large_gun_07"
+    }
+    small_utility_slots = 0
+    medium_utility_slots = 0
+    large_utility_slots = 5
+    aux_utility_slots = 1
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = 600
+            sr_dark_matter = 500
+        }
+    }
+}

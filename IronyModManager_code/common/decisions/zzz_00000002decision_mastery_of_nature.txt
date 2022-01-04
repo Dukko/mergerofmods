@@ -1,0 +1,33 @@
+decision_mastery_of_nature = {
+    owned_planets_only = yes
+    enactment_time = 360
+    resources = {
+        category = decisions
+        cost = {
+            energy = 2000
+        }
+    }
+    potential = {
+        is_artificial = no
+        owner = {
+            has_ascension_perk = ap_mastery_of_nature
+        }
+        NOT = {
+            has_modifier = mastery_of_nature
+        }
+    }
+    effect = {
+        add_modifier = {
+            modifier = mastery_of_nature
+            days = -1
+        }
+    }
+    ai_weight = {
+        weight = 5
+        modifier = {
+            factor = 0
+            free_district_slots > 0
+            num_pops < 50
+        }
+    }
+}

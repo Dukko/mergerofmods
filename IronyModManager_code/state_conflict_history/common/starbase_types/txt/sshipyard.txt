@@ -6,15 +6,17 @@ sshipyard = {
                 type = shipyard
                 count > 0
             }
-            has_starbase_building = drydock
+            owner = {
+                NOT = {
+                    any_owned_starbase = {
+                        has_starbase_module = shipyard
+                    }
+                }
+            }
         }
     }
     weight_modifier = {
         base = 100
-        modifier = {
-            add = 500
-            has_starbase_building = drydock
-        }
         modifier = {
             add = 100
             count_starbase_modules = {
@@ -64,6 +66,7 @@ sshipyard = {
     ai_design = {
         min = {
             base = 1
+            factor = 1
         }
         ratio = {
             base = 0.25
@@ -84,25 +87,46 @@ sshipyard = {
         }
         buildings = {
             crew_quarters = {
-                base = 0.1
+                base = 1
             }
             fleet_academy = {
-                base = 1
-            }
-            parts_manufactory = {
-                base = 1
-            }
-            naval_logistics_office = {
-                base = 0.05
+                base = 2
             }
             titan_yards = {
-                base = 0.01
+                base = 2
             }
             colossus_yards = {
-                base = 0.01
-            }
-            resource_silo = {
                 base = 5
+            }
+            ice_mining_station = {
+                base = 1
+            }
+            dragon_hatchery = {
+                base = 5
+            }
+            hydroponics_bay = {
+                base = 1
+            }
+            climate_control = {
+                base = 1
+            }
+            space_production = {
+                base = 0.5
+            }
+            deep_space_black_site = {
+                base = 0.5
+            }
+            parts_manufactory = {
+                base = 2
+            }
+            listening_post = {
+                base = 0.25
+            }
+            drydock = {
+                base = 1
+            }
+            transit_hub = {
+                base = 0.25
             }
         }
         modules = {
@@ -114,6 +138,9 @@ sshipyard = {
             }
             hangar_bay = {
                 base = 0.45
+            }
+            stellar_reducer = {
+                base = 1
             }
         }
     }

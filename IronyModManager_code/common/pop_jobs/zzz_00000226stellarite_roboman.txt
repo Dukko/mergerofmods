@@ -1,0 +1,63 @@
+stellarite_roboman = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_stellarite_super_assembly
+    clothes_texture_index = 3
+    icon = acot_roboman
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible_precalc = can_fill_specialist_job
+    planet_modifier = {
+        planet_pop_assembly_add = 30
+    }
+    resources = {
+        category = planet_pop_assemblers
+        upkeep = {
+            acot_sr_stellarite = 15
+        }
+    }
+    weight = {
+        weight = @specialist_job_weight
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+            NOT = {
+                has_trait = trait_mechanical
+            }
+        }
+        modifier = {
+            factor = 1.2
+            is_enslaved = yes
+            has_slavery_type = {
+                type = slavery_indentured
+            }
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 2
+            species = {
+                has_species_flag = racket_species_flag
+            }
+        }
+        modifier = {
+            factor = 100
+            planet = {
+                exists = owner
+                owner = {
+                    is_mechanical_empire = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 1.5
+            has_job = stellarite_roboman
+        }
+    }
+}

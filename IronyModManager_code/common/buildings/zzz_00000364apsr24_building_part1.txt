@@ -1,0 +1,634 @@
+@apsr24part1cost_minerals = 200
+@apsr24part1cost_time = 100
+@apsr24part1upkeep_minerals = 3
+apsr24_building_part1 = {
+    base_buildtime = @apsr24part1cost_time
+    icon = "apsr24_building_part1"
+    base_cap_amount = 1
+    is_capped_by_modifier = no
+    category = resource
+    can_demolish = no
+    position_priority = 48
+    allow = {
+        apsr_buildings_allow = yes
+    }
+    potential = {
+        has_modifier = "apsr24_planet_modifier"
+    }
+    resources = {
+        category = planet_apsr_buildings
+        cost = {
+            minerals = @apsr24part1cost_minerals
+        }
+        upkeep = {
+            minerals = @apsr24part1upkeep_minerals
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr24_building_part1
+                }
+            }
+            energy = 9
+            apsr_knowledge = 0.5
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr24_building_part1
+                    check_variable = {
+                        which = apsr24_powerplant_count
+                        value > 0
+                    }
+                }
+            }
+            energy = 9
+            apsr_knowledge = 0.5
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr24_building_part1
+                    check_variable = {
+                        which = apsr24_powerplant_count
+                        value > 1
+                    }
+                }
+            }
+            energy = 9
+            apsr_knowledge = 0.5
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr24_building_part1
+                    check_variable = {
+                        which = apsr24_powerplant_count
+                        value > 2
+                    }
+                }
+            }
+            energy = 9
+            apsr_knowledge = 0.5
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr24_building_part1
+                    check_variable = {
+                        which = apsr24_powerplant_count
+                        value > 3
+                    }
+                }
+            }
+            energy = 9
+            apsr_knowledge = 0.5
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_deposit = apsr_relic_cube_deposit
+                }
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr24_building_part1
+                }
+            }
+            energy = 40
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_deposit = apsr_relic_cube_deposit
+                }
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr24_building_part1
+                    check_variable = {
+                        which = apsr24_powerplant_count
+                        value > 0
+                    }
+                }
+            }
+            energy = 40
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_deposit = apsr_relic_cube_deposit
+                }
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr24_building_part1
+                    check_variable = {
+                        which = apsr24_powerplant_count
+                        value > 1
+                    }
+                }
+            }
+            energy = 40
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_deposit = apsr_relic_cube_deposit
+                }
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr24_building_part1
+                    check_variable = {
+                        which = apsr24_powerplant_count
+                        value > 2
+                    }
+                }
+            }
+            energy = 40
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_deposit = apsr_relic_cube_deposit
+                }
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr24_building_part1
+                    check_variable = {
+                        which = apsr24_powerplant_count
+                        value > 3
+                    }
+                }
+            }
+            energy = 40
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr24_building_part2
+                }
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr24_building_part1
+                }
+            }
+            energy = 14
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr24_building_part2
+                }
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr24_building_part1
+                    check_variable = {
+                        which = apsr24_powerplant_count
+                        value > 0
+                    }
+                }
+            }
+            energy = 14
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr24_building_part2
+                }
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr24_building_part1
+                    check_variable = {
+                        which = apsr24_powerplant_count
+                        value > 1
+                    }
+                }
+            }
+            energy = 14
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr24_building_part2
+                }
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr24_building_part1
+                    check_variable = {
+                        which = apsr24_powerplant_count
+                        value > 2
+                    }
+                }
+            }
+            energy = 14
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr24_building_part2
+                }
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr24_building_part1
+                    check_variable = {
+                        which = apsr24_powerplant_count
+                        value > 3
+                    }
+                }
+            }
+            energy = 14
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr24_advanced_1
+                }
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr24_building_part1
+                }
+            }
+            energy = 16
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr24_advanced_1
+                }
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr24_building_part1
+                    check_variable = {
+                        which = apsr24_powerplant_count
+                        value > 0
+                    }
+                }
+            }
+            energy = 16
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr24_advanced_1
+                }
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr24_building_part1
+                    check_variable = {
+                        which = apsr24_powerplant_count
+                        value > 1
+                    }
+                }
+            }
+            energy = 16
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr24_advanced_1
+                }
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr24_building_part1
+                    check_variable = {
+                        which = apsr24_powerplant_count
+                        value > 2
+                    }
+                }
+            }
+            energy = 16
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr24_advanced_1
+                }
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr24_building_part1
+                    check_variable = {
+                        which = apsr24_powerplant_count
+                        value > 3
+                    }
+                }
+            }
+            energy = 16
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr24_advanced_2
+                }
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr24_building_part1
+                }
+            }
+            energy = 16
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr24_advanced_2
+                }
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr24_building_part1
+                    check_variable = {
+                        which = apsr24_powerplant_count
+                        value > 0
+                    }
+                }
+            }
+            energy = 16
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr24_advanced_2
+                }
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr24_building_part1
+                    check_variable = {
+                        which = apsr24_powerplant_count
+                        value > 1
+                    }
+                }
+            }
+            energy = 16
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr24_advanced_2
+                }
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr24_building_part1
+                    check_variable = {
+                        which = apsr24_powerplant_count
+                        value > 2
+                    }
+                }
+            }
+            energy = 16
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr24_advanced_2
+                }
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr24_building_part1
+                    check_variable = {
+                        which = apsr24_powerplant_count
+                        value > 3
+                    }
+                }
+            }
+            energy = 16
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr24_advanced_3
+                }
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr24_building_part1
+                }
+            }
+            energy = 16
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr24_advanced_3
+                }
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr24_building_part1
+                    check_variable = {
+                        which = apsr24_powerplant_count
+                        value > 0
+                    }
+                }
+            }
+            energy = 16
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr24_advanced_3
+                }
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr24_building_part1
+                    check_variable = {
+                        which = apsr24_powerplant_count
+                        value > 1
+                    }
+                }
+            }
+            energy = 16
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr24_advanced_3
+                }
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr24_building_part1
+                    check_variable = {
+                        which = apsr24_powerplant_count
+                        value > 2
+                    }
+                }
+            }
+            energy = 16
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr24_advanced_3
+                }
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr24_building_part1
+                    check_variable = {
+                        which = apsr24_powerplant_count
+                        value > 3
+                    }
+                }
+            }
+            energy = 16
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr24_advanced_4
+                }
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr24_building_part1
+                }
+            }
+            energy = 16
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr24_advanced_4
+                }
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr24_building_part1
+                    check_variable = {
+                        which = apsr24_powerplant_count
+                        value > 0
+                    }
+                }
+            }
+            energy = 16
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr24_advanced_4
+                }
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr24_building_part1
+                    check_variable = {
+                        which = apsr24_powerplant_count
+                        value > 1
+                    }
+                }
+            }
+            energy = 16
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr24_advanced_4
+                }
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr24_building_part1
+                    check_variable = {
+                        which = apsr24_powerplant_count
+                        value > 2
+                    }
+                }
+            }
+            energy = 16
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr24_advanced_4
+                }
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr24_building_part1
+                    check_variable = {
+                        which = apsr24_powerplant_count
+                        value > 3
+                    }
+                }
+            }
+            energy = 16
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr24_advanced_5
+                }
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr24_building_part1
+                }
+            }
+            energy = 16
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr24_advanced_5
+                }
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr24_building_part1
+                    check_variable = {
+                        which = apsr24_powerplant_count
+                        value > 0
+                    }
+                }
+            }
+            energy = 16
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr24_advanced_5
+                }
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr24_building_part1
+                    check_variable = {
+                        which = apsr24_powerplant_count
+                        value > 1
+                    }
+                }
+            }
+            energy = 16
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr24_advanced_5
+                }
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr24_building_part1
+                    check_variable = {
+                        which = apsr24_powerplant_count
+                        value > 2
+                    }
+                }
+            }
+            energy = 16
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr24_advanced_5
+                }
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr24_building_part1
+                    check_variable = {
+                        which = apsr24_powerplant_count
+                        value > 3
+                    }
+                }
+            }
+            energy = 16
+        }
+    }
+    upgrades = {
+        "apsr24_building_part0"
+    }
+    prerequisites = {
+        "tech_apsr24_building_part1"
+    }
+    show_tech_unlock_if = {
+        always = no
+    }
+}

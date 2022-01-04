@@ -162,6 +162,10 @@ resolution_industry_building_a_better_tomorrow = {
             }
         }
         modifier = {
+            factor = 0.1
+            has_origin = origin_terraformer
+        }
+        modifier = {
             factor = 0.5
             owner_species = {
                 has_trait = eco_trait_clean

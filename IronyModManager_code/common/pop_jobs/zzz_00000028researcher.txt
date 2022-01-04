@@ -9,7 +9,11 @@ researcher = {
         is_being_assimilated = no
         is_sapient = yes
     }
+    possible_precalc = can_fill_specialist_job
     possible = {
+        NOT = {
+            has_trait = trait_slave_gene
+        }
         complex_specialist_job_check_trigger = yes
     }
     resources = {
@@ -170,13 +174,13 @@ researcher = {
             has_trait = trait_holofrixigram_2
         }
         modifier = {
+            factor = 5
+            has_trait = trait_hologanglion
+        }
+        modifier = {
             factor = 1.2
             is_unemployed = yes
             is_pop_category = specialist
-        }
-        modifier = {
-            factor = 5
-            has_trait = trait_hologanglion
         }
     }
 }

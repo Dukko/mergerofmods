@@ -1,4 +1,4 @@
-@cooldown = 3600
+@cooldown = 720
 succession_type_strongest = {
     potential = {
         NOT = {

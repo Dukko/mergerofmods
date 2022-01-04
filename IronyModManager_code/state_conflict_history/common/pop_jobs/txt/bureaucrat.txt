@@ -9,7 +9,11 @@ bureaucrat = {
         is_being_assimilated = no
         is_sapient = yes
     }
+    possible_precalc = can_fill_specialist_job
     possible = {
+        NOT = {
+            has_trait = trait_slave_gene
+        }
         complex_specialist_job_check_trigger = yes
     }
     resources = {
@@ -18,7 +22,7 @@ bureaucrat = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_valid_civic = civic_byzantine_bureaucracy
+                    is_byzantine_bureaucracy_empire = yes
                 }
             }
             unity = 1
@@ -32,7 +36,7 @@ bureaucrat = {
             exists = owner
             OR = {
                 owner = {
-                    has_valid_civic = civic_byzantine_bureaucracy
+                is_byzantine_bureaucracy_empire = yes
                 }
                 owner = {
                     has_valid_civic = civic_thought_auditing
@@ -78,7 +82,10 @@ bureaucrat = {
         potential = {
             exists = planet
             planet = {
-                has_designation = col_bureau
+                OR = {
+                    has_designation = col_bureau
+                    has_designation = col_habitat_bureau
+                }
             }
         }
         modifier = {

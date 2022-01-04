@@ -1,0 +1,70 @@
+esc_tech_tesla_cannon_1 = {
+    area = physics
+    category = {
+        field_manipulation
+    }
+    tier = 6
+    cost = @ESC_TECH_tier6_cost1
+    weight = @ESC_TECH_tier6_weight1
+    ai_update_type = military
+    prerequisites = {
+        "esc_tech_tesla_coil_2"
+    }
+    gateway = ESC_TESLA_LANCES
+    potential = {
+        NOT = {
+            has_global_flag = ESC_GLOBAL_FLAG_tesla_x_weapons_forbidden
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0.8
+            has_ethic = ethic_fanatic_pacifist
+        }
+        modifier = {
+            factor = 0.9
+            has_ethic = ethic_pacifist
+        }
+        modifier = {
+            factor = 1.1
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.2
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+    ai_weight = {
+        factor = @ESC_AI_tech_weight_multiplier
+        modifier = {
+            factor = 0.8
+            has_ethic = ethic_fanatic_pacifist
+        }
+        modifier = {
+            factor = 0.9
+            has_ethic = ethic_pacifist
+        }
+        modifier = {
+            factor = 1.1
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.2
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+}

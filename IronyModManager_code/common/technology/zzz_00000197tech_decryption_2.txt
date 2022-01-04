@@ -1,7 +1,7 @@
 tech_decryption_2 = {
     area = physics
     tier = 2
-    cost = @tier2cost3
+    cost = @tier2cost2
     category = {
         computing
     }
@@ -9,7 +9,7 @@ tech_decryption_2 = {
         "tech_decryption_1"
         "tech_physics_2"
     }
-    weight = @tier3weight3
+    weight = @tier2weight3
     gateway = espionage
     modifier = {
         intel_decryption_add = 2
@@ -31,21 +31,13 @@ tech_decryption_2 = {
         }
     }
     ai_weight = {
-        weight = 50
+        weight = 3
         modifier = {
             factor = 1.25
             research_leader = {
                 area = physics
                 has_trait = "leader_trait_expertise_computing"
             }
-        }
-        modifier = {
-            factor = 5
-            years_passed > 75
-        }
-        modifier = {
-            factor = 10
-            years_passed > 100
         }
     }
 }

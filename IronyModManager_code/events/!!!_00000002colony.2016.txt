@@ -1,0 +1,99 @@
+namespace = colony
+planet_event = {
+    id = colony.2016
+    title = colony.2015.name
+    desc = colony.2016.desc
+    picture = GFX_evt_alien_city
+    show_sound = event_ghost_town
+    location = root
+    pre_triggers = {
+        has_owner = yes
+        is_homeworld = no
+        original_owner = yes
+        has_ground_combat = no
+    }
+    trigger = {
+        owner = {
+            is_ai = no
+        }
+        has_planet_flag = colony_factory_kidnap
+        has_deposit = d_odd_factory
+        num_assigned_jobs = {
+            job = odd_factory_worker
+            value > 0
+        }
+        owner = {
+            NOT = {
+                has_country_flag = odd_factory_pause
+            }
+        }
+    }
+    is_triggered_only = yes
+    immediate = {
+        owner = {
+            set_country_flag = odd_factory_pause
+        }
+        random_owned_pop = {
+            limit = {
+                has_job = odd_factory_worker
+            }
+            unemploy_pop = yes
+            kill_pop = yes
+        }
+    }
+    after = {
+        hidden_effect = {
+            remove_planet_flag = colony_factory_kidnap
+            owner = {
+                remove_country_flag = odd_factory_pause
+            }
+        }
+    }
+    option = {
+        name = colony.2016.b
+        custom_tooltip = colony.2016.a.tooltip
+        remove_deposit = d_odd_factory
+        hidden_effect = {
+            set_planet_flag = odd_factory_destroyed
+            random = {
+                chance = 50
+                planet_event = {
+                    id = colony.2019
+                    days = 1
+                }
+            }
+        }
+    }
+    option = {
+        name = colony.2016.a
+        custom_tooltip = colony.2016.a.tooltip
+        hidden_effect = {
+            random_list = {
+                50 = {
+                    set_planet_flag = colony_factory_kidnap_sequel
+                    planet_event = {
+                        id = colony.2017
+                        days = 120
+                        random = 30
+                    }
+                }
+                15 = {
+                    set_planet_flag = colony_factory_breaks
+                    planet_event = {
+                        id = colony.2018
+                        days = 180
+                        random = 30
+                    }
+                }
+                35 = {
+                    set_planet_flag = colony_factory_no_effect
+                    planet_event = {
+                        id = colony.2019
+                        days = 180
+                        random = 30
+                    }
+                }
+            }
+        }
+    }
+}

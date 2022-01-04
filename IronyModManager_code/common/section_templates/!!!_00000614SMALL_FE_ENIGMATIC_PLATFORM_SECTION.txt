@@ -1,0 +1,69 @@
+ship_section_template = {
+    key = "SMALL_FE_ENIGMATIC_PLATFORM_SECTION"
+    ship_size = fe_enigmatic_fortress_platform
+    fits_on_slot = "small"
+    entity = "fe_enigmatic_fortress_platform_entity"
+    icon = "GFX_ship_part_core_mid"
+    should_draw_components = no
+    component_slot = {
+        name = "SMALL_GUN_01"
+        template = "invisible_small_turret"
+        locatorname = "small_gun_01.008"
+    }
+    component_slot = {
+        name = "SMALL_GUN_02"
+        template = "invisible_small_turret"
+        locatorname = "small_gun_01.009"
+    }
+    component_slot = {
+        name = "SMALL_GUN_03"
+        template = "invisible_small_turret"
+        locatorname = "small_gun_01.010"
+    }
+    component_slot = {
+        name = "SMALL_GUN_04"
+        template = "invisible_small_turret"
+        locatorname = "small_gun_01.011"
+    }
+    component_slot = {
+        name = "SMALL_GUN_05"
+        template = "invisible_small_turret"
+        locatorname = "small_gun_01.012"
+    }
+    component_slot = {
+        name = "POINT_DEFENSE_GUN_01"
+        template = "invisible_point_defence_turret"
+        locatorname = "small_gun_01.008"
+    }
+    component_slot = {
+        name = "POINT_DEFENSE_GUN_02"
+        template = "invisible_point_defence_turret"
+        locatorname = "small_gun_01.009"
+    }
+    component_slot = {
+        name = "POINT_DEFENSE_GUN_03"
+        template = "invisible_point_defence_turret"
+        locatorname = "small_gun_01.010"
+    }
+    component_slot = {
+        name = "POINT_DEFENSE_GUN_04"
+        template = "invisible_point_defence_turret"
+        locatorname = "small_gun_01.011"
+    }
+    component_slot = {
+        name = "POINT_DEFENSE_GUN_05"
+        template = "invisible_point_defence_turret"
+        locatorname = "small_gun_01.012"
+    }
+    small_utility_slots = 0
+    medium_utility_slots = 0
+    large_utility_slots = 5
+    aux_utility_slots = 1
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = 600
+            sr_dark_matter = 500
+        }
+    }
+}

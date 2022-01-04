@@ -1,4 +1,4 @@
-@shipAuraRange = 80
+@shipAuraRange = 14
 utility_component_template = {
     key = "SHIP_AURA_SUBSPACE_SNARE"
     size = medium

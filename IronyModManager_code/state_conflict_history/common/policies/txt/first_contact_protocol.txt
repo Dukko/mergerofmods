@@ -43,6 +43,10 @@ first_contact_protocol = {
                 has_valid_civic = civic_machine_servitor
             }
             modifier = {
+                factor = 10
+                years_passed > 40
+            }
+            modifier = {
                 factor = 2
                 AND = {
                     has_expanded_pops = yes
@@ -122,6 +126,9 @@ first_contact_protocol = {
                         has_valid_civic = civic_mutualistic_behavior
                     }
                     is_open_gestalt = no
+                    NOT = {
+                        has_valid_civic = civic_machine_servitor
+                    }
                 }
             }
         }
@@ -137,6 +144,11 @@ first_contact_protocol = {
             modifier = {
                 factor = 2
                 is_gestalt = yes
+            }
+            modifier = {
+                factor = 0
+                is_megacorp = yes
+                is_criminal_syndicate = no
             }
             modifier = {
                 factor = 2

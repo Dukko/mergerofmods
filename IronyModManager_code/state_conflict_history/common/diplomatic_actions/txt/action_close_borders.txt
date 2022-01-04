@@ -1,0 +1,62 @@
+action_close_borders = {
+    icon = "GFX_diplomacy_status_closed_borders"
+    auto_accepted = yes
+    requires_actor_independence = no
+    requires_recipient_independence = no
+    should_show_auto_accept_message_recipient = yes
+    action_type = negative
+    possible = {
+        can_control_access_for = from
+        if = {
+            limit = {
+                from = {
+                    is_purists_empire = yes
+                }
+            }
+            if = {
+                limit = {
+                    has_intel = {
+                        who = from
+                        intel = civics
+                    }
+                }
+                custom_tooltip = {
+                    fail_text = requires_recipient_not_pompous_borders
+                    always = no
+                }
+            }
+            else = {
+                custom_tooltip = {
+                    fail_text = diplo_action_no_low_intel
+                    always = no
+                }
+            }
+        }
+        if = {
+            limit = {
+                has_country_flag = abandoned_peepboops@from
+            }
+            custom_tooltip = {
+                fail_text = requires_recipient_not_peepboops_close_borders
+                from = {
+                    NOT = {
+                        has_country_flag = is_peepboops@prev
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                has_country_flag = is_peepboops@from
+            }
+            custom_tooltip = {
+                fail_text = requires_actor_not_peepboops_close_borders
+                from = {
+                    NOT = {
+                        has_country_flag = abandoned_peepboops@prev
+                    }
+                }
+            }
+        }
+    }
+}

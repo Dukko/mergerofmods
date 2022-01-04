@@ -1,0 +1,54 @@
+building_ae_nourishment_center = {
+    base_buildtime = 600
+    can_demolish = yes
+    can_build = no
+    category = resource
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = tech_aot_ae_nourishment_center
+        }
+    }
+    prerequisites = {
+        "tech_aot_ae_nourishment_center"
+    }
+    allow = {
+        has_ascended_capital = yes
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 250
+            sr_dark_matter = 750
+            acot_sr_dark_energy = 750
+        }
+        produces = {
+            food = 300
+        }
+        upkeep = {
+            sr_dark_matter = 10
+            acot_sr_dark_energy = 10
+        }
+    }
+    upgrades = {
+        building_stellarite_nourishment_center
+    }
+    ai_weight = {
+        weight = 10
+        modifier = {
+            factor = 5
+            owner = {
+                has_monthly_income = {
+                    resource = food
+                    value < 10
+                }
+            }
+        }
+    }
+    ai_resource_production = {
+        food = 10
+        trigger = {
+            always = yes
+        }
+    }
+}

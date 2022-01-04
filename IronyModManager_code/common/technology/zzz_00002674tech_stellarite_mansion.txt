@@ -1,0 +1,45 @@
+tech_stellarite_mansion = {
+    cost = @acot_tier8cost1
+    area = society
+    category = {
+        statecraft
+    }
+    tier = 8
+    prerequisites = {
+        "tech_ae_dark_mansion"
+    }
+    weight = @tier5weight1
+    potential = {
+        is_regular_empire = yes
+        NOR = {
+            has_global_flag = acot_building_forbidden
+            is_fallen_empire = yes
+        }
+        has_technology = tech_stellarite_reactor
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOR = {
+                has_technology = tech_mine_dark_matter
+                has_country_flag = has_market_access
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+}

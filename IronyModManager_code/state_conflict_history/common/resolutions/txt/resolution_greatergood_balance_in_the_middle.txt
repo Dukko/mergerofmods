@@ -137,7 +137,15 @@ resolution_greatergood_balance_in_the_middle = {
         weight = @resolution_weight_unpopular
         modifier = {
             factor = 2
+            is_egalitarian = yes
+        }
+        modifier = {
+            factor = 1.2
             is_socialism = yes
+        }
+        modifier = {
+            factor = 2
+            has_ethic = ethic_fanatic_egalitarian
         }
         modifier = {
             factor = 1.5
@@ -182,15 +190,15 @@ resolution_greatergood_balance_in_the_middle = {
         }
         modifier = {
             factor = 0.5
-            is_megacorp = yes
-        }
-        modifier = {
-            factor = 0.5
             is_capitalism = yes
         }
         modifier = {
-            factor = 2
+            factor = 1.2
             has_ethic = ethic_fanatic_socialism
+        }
+        modifier = {
+            factor = 0.5
+            is_auth_corporate = yes
         }
         modifier = {
             factor = 3
@@ -202,13 +210,8 @@ resolution_greatergood_balance_in_the_middle = {
         modifier = {
             factor = 0.6
             OR = {
-                is_authoritarian = yes
                 is_gestalt = yes
             }
-        }
-        modifier = {
-            factor = 0.6
-            has_ethic = ethic_fanatic_authoritarian
         }
         modifier = {
             factor = 0
@@ -268,13 +271,6 @@ resolution_greatergood_balance_in_the_middle = {
                 }
                 is_galactic_community_member = yes
                 in_breach_of = resolution_greatergood_balance_in_the_middle
-            }
-        }
-        modifier = {
-            factor = 0.8
-            OR = {
-                has_valid_civic = civic_aristocratic_elite
-                has_valid_civic = civic_police_state
             }
         }
     }

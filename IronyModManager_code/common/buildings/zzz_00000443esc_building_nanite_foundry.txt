@@ -1,0 +1,84 @@
+esc_building_nanite_foundry = {
+    base_buildtime = 540
+    icon = esc_building_nanite_foundry
+    category = manufacturing
+    potential = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+        NOT = {
+            has_global_flag = ESC_GLOBAL_FLAG_nanite_weapons_forbidden
+        }
+    }
+    allow = {
+        has_upgraded_capital = yes
+        exists = owner
+        owner = {
+            ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 600
+            rare_crystals = 50
+            exotic_gases = 25
+        }
+        upkeep = {
+            energy = 4
+            alloys = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_esc_nanite_breeder_add = 2
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = job_esc_nanite_breeder_effect_desc
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_esc_nanite_breeder_drone_add = 2
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_esc_nanite_breeder_drone_effect_desc
+    }
+    prerequisites = {
+        "esc_tech_synthetic_lifeform_studies"
+    }
+    ai_resource_production = {
+        nanites = 4
+        trigger = {
+            always = yes
+        }
+    }
+}

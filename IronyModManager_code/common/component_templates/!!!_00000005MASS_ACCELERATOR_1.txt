@@ -1,0 +1,64 @@
+weapon_component_template = {
+    type = instant
+    key = "MASS_ACCELERATOR_1"
+    size = extra_large
+    icon = "GFX_ship_part_mass_accelerator_1"
+    icon_frame = 1
+    firing_arc = 25
+    min_range = 2
+    use_ship_kill_target = no
+    prerequisites = {
+        "tech_mass_accelerator_1"
+    }
+    component_set = "MASS_ACCELERATOR_1"
+    projectile_gfx = "kinetic_artillery"
+    tags = {
+        weapon_type_kinetic
+    }
+    ai_tags = {
+        weapon_role_artillery
+    }
+    upgrades_to = "MASS_ACCELERATOR_2"
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @xl_t5_cost
+            volatile_motes = @xl_t5_rare
+        }
+        upkeep = {
+            energy = @xl_t5_upkeep_energy
+            alloys = @xl_t5_upkeep_alloys
+        }
+    }
+    ai_weight = {
+        weight = 500
+        modifier = {
+            factor = 30
+            has_global_flag = extradimensional_invasion_happened
+            not = {
+                has_global_flag = extradimensional_invasion_defeated
+            }
+        }
+        modifier = {
+            factor = 0
+            has_global_flag = prethoryn_invasion_happened
+            or = {
+                not = {
+                    has_global_flag = extradimensional_invasion_happened
+                }
+                has_global_flag = extradimensional_invasion_defeated
+            }
+            not = {
+                has_global_flag = prethoryn_invasion_defeated
+            }
+        }
+        modifier = {
+            factor = 0
+            is_country_type = default
+            resource_stockpile_compare = {
+                resource = volatile_motes
+                value < 10
+            }
+        }
+    }
+}

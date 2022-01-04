@@ -1,0 +1,143 @@
+@section_cost = 3000
+ship_section_template = {
+    key = "STARBOARD_1_JUGGERNAUT_SECTION"
+    ship_size = juggernaut
+    fits_on_slot = "starboard"
+    entity = "fe_01_juggernaut_port_section_entity"
+    icon = "GFX_ship_part_core_mid"
+    prerequisites = {
+        tech_titans
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_01"
+        template = "extra_large_turret"
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_02"
+        template = "extra_large_turret"
+        locatorname = "xl_gun_02"
+    }
+    component_slot = {
+        name = "TORPEDO_01"
+        template = "medium_missile_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_02"
+        template = "medium_missile_turret"
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "TORPEDO_03"
+        template = "medium_missile_turret"
+        locatorname = "medium_gun_03"
+    }
+    component_slot = {
+        name = "TORPEDO_04"
+        template = "medium_missile_turret"
+        locatorname = "medium_gun_04"
+    }
+    component_slot = {
+        name = "TORPEDO_05"
+        template = "medium_missile_turret"
+        locatorname = "medium_gun_05"
+    }
+    component_slot = {
+        name = "TORPEDO_06"
+        template = "medium_missile_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_07"
+        template = "medium_missile_turret"
+        locatorname = "medium_gun_07"
+    }
+    component_slot = {
+        name = "TORPEDO_08"
+        template = "medium_missile_turret"
+        locatorname = "medium_gun_08"
+    }
+    component_slot = {
+        name = "TORPEDO_09"
+        template = "medium_missile_turret"
+        locatorname = "medium_gun_09"
+    }
+    component_slot = {
+        name = "TORPEDO_10"
+        template = "medium_missile_turret"
+        locatorname = "medium_gun_10"
+    }
+    component_slot = {
+        name = "TORPEDO_11"
+        template = "medium_missile_turret"
+        locatorname = "medium_gun_11"
+    }
+    component_slot = {
+        name = "TORPEDO_12"
+        template = "medium_missile_turret"
+        locatorname = "medium_gun_12"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_01"
+        template = "medium_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_02"
+        template = "medium_turret"
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_03"
+        template = "medium_turret"
+        locatorname = "medium_gun_03"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_04"
+        template = "medium_turret"
+        locatorname = "medium_gun_04"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_05"
+        template = "medium_turret"
+        locatorname = "medium_gun_05"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_06"
+        template = "medium_turret"
+        locatorname = "medium_gun_06"
+    }
+    component_slot = {
+        name = "SMALL_GUN_01"
+        template = "point_defence_turret"
+        locatorname = "small_gun_01"
+    }
+    component_slot = {
+        name = "SMALL_GUN_02"
+        template = "point_defence_turret"
+        locatorname = "small_gun_02"
+    }
+    component_slot = {
+        name = "SMALL_GUN_03"
+        template = "point_defence_turret"
+        locatorname = "small_gun_03"
+    }
+    component_slot = {
+        name = "SMALL_GUN_04"
+        template = "point_defence_turret"
+        locatorname = "small_gun_04"
+    }
+    component_slot = {
+        name = "SMALL_GUN_05"
+        template = "point_defence_turret"
+        locatorname = "small_gun_05"
+    }
+    large_utility_slots = 20
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @section_cost
+        }
+    }
+}

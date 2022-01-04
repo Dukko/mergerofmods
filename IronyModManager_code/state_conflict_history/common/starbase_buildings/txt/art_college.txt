@@ -28,7 +28,7 @@ art_college = {
             fail_text = "requires_artisans"
             solar_system = {
                 has_star_flag = enclave
-                any_fleet_in_system = {
+                any_ship_in_system = {
                     exists = owner
                     owner = {
                         is_same_value = event_target:artist_enclave_country
@@ -40,7 +40,7 @@ art_college = {
             fail_text = "requires_artist_agreement"
             solar_system = {
                 has_star_flag = enclave
-                any_fleet_in_system = {
+                any_ship_in_system = {
                     exists = owner
                     owner = {
                         is_same_value = event_target:artist_enclave_country
@@ -68,7 +68,6 @@ art_college = {
                     is_active_resolution = "resolution_galacticstudies_advanced_xenostudies"
                     is_active_resolution = "resolution_galacticstudies_ethical_guideline_refactoring"
                     is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
-                    is_active_resolution = "resolution_galacticstudies_6"
                 }
             }
             unity = 15

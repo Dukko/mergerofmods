@@ -9,8 +9,11 @@ manager = {
         is_being_assimilated = no
         is_sapient = yes
     }
+    possible_precalc = can_fill_specialist_job
     possible = {
-        specialist_job_check_trigger = yes
+        NOT = {
+            has_trait = trait_slave_gene
+        }
     }
     planet_modifier = {
         trade_value_add = 3

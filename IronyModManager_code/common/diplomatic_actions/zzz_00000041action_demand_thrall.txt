@@ -1,0 +1,25 @@
+action_demand_thrall = {
+    icon = "GFX_diplomacy_status_has_vassal"
+    requires_actor_peace = no
+    requires_recipient_peace = no
+    diplo_view_acceptance_icon = yes
+    should_notify_all_communications = no
+    requires_recipient_independence = no
+    AI_acceptance_base_value = -50
+    action_type = aggressive
+    potential = {
+        NAND = {
+            has_galactic_emperor = yes
+            is_galactic_community_member = yes
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_recipient_not_btc"
+            from = {
+                has_been_declared_crisis = no
+            }
+        }
+        get_border_test = yes
+    }
+}

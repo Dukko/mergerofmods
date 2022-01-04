@@ -8,6 +8,8 @@ utility_component_template = {
         juggernaut
         scavenger_bot
         nanite_dragon
+        ascended_juggernaut
+        precursor_juggernaut
     }
     component_set = "ship_aura_components"
     friendly_aura = {

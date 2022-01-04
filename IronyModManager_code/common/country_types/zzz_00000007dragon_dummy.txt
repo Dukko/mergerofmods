@@ -1,0 +1,20 @@
+dragon_dummy = {
+    government = no
+    observable = no
+    share_communications = no
+    ai = {
+        enabled = no
+    }
+    faction = {
+        needs_border_access = no
+        generate_borders = no
+        needs_colony = no
+        auto_delete = no
+    }
+    modules = {
+        exclusive_diplomacy_module = {
+        }
+        basic_technology_module = {
+        }
+    }
+}

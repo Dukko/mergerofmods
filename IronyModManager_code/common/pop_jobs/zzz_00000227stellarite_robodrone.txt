@@ -1,0 +1,55 @@
+stellarite_robodrone = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_stellarite_super_assembly
+    icon = acot_robodrone
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible_precalc = can_fill_drone_job
+    planet_modifier = {
+        planet_pop_assembly_add = 30
+        planet_amenities_no_happiness_add = 30
+    }
+    resources = {
+        category = planet_pop_assemblers
+        upkeep = {
+            acot_sr_stellarite = 15
+        }
+    }
+    weight = {
+        weight = @spawner_drone_job_weight
+        modifier = {
+            factor = 0.9
+            exists = owner
+            years_passed < 1
+            owner = {
+                has_valid_civic = civic_machine_assimilator
+            }
+            has_trait = trait_cybernetic
+        }
+        modifier = {
+            factor = 0.5
+            planet = {
+                has_modifier = planet_population_control_gestalt
+            }
+        }
+        modifier = {
+            factor = 1.25
+            OR = {
+                has_trait = trait_charismatic
+                has_trait = trait_robot_emotion_emulators
+            }
+        }
+        modifier = {
+            factor = 0.9
+            OR = {
+                has_trait = trait_repugnant
+                has_trait = trait_robot_uncanny
+            }
+        }
+    }
+}

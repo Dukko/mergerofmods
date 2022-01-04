@@ -1,0 +1,44 @@
+utility_component_template = {
+    key = "SHIP_AURA_RANGE"
+    size = medium
+    icon = "GFX_ship_part_aura_range"
+    icon_frame = 1
+    power = 0
+    size_restriction = {
+        juggernaut
+        scavenger_bot
+        nanite_dragon
+        ascended_juggernaut
+        precursor_juggernaut
+    }
+    component_set = "ship_aura_components"
+    friendly_aura = {
+        name = "aura_range"
+        system_wide = yes
+        stack_info = {
+            id = friendly_range
+            priority = 1
+        }
+        modifier = {
+            ship_weapon_range_mult = 0.4
+        }
+        graphics = {
+            area_effect = {
+                entity = "circle_area_entity"
+                dynamic_scale = yes
+            }
+            ship_effect = {
+                entity = "ship_aura_negative_entity"
+                dynamic_scale = no
+            }
+        }
+    }
+    ai_weight = {
+        weight = 10
+        modifier = {
+            factor = 2
+            is_ai = yes
+            is_preferred_weapons = weapon_type_energy
+        }
+    }
+}

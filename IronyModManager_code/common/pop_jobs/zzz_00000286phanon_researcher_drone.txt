@@ -1,0 +1,32 @@
+phanon_researcher_drone = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_phanon_enigmatic_lab
+    clothes_texture_index = 3
+    icon = acot_researcher
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible_precalc = can_fill_drone_job
+    resources = {
+        category = planet_researchers
+        produces = {
+            physics_research = 160
+            engineering_research = 160
+            society_research = 160
+        }
+        upkeep = {
+            aot_sr_runic_power = 6
+        }
+    }
+    weight = {
+        weight = @complex_drone_job_weight
+        modifier = {
+            factor = 1.5
+            has_job = acot_researcher_drone
+        }
+    }
+}

@@ -135,6 +135,10 @@ resolution_tiyanki_conservation_act = {
             }
         }
         modifier = {
+            factor = 1.5
+            has_origin = origin_terraformer
+        }
+        modifier = {
             factor = 1.2
             owner_species = {
                 has_trait = eco_trait_clean

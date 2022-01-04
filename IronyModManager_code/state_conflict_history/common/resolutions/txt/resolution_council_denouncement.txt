@@ -23,9 +23,8 @@ resolution_council_denouncement = {
             is_country_type = lost_empire
         }
         is_galactic_community_member = yes
-        NOR = {
+        NOT = {
             is_same_value = from
-            has_modifier = resolution_denounced
         }
         OR = {
             opinion_level = {

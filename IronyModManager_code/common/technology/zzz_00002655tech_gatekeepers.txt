@@ -1,0 +1,33 @@
+tech_gatekeepers = {
+    cost = @acot_tier6cost3
+    area = engineering
+    category = {
+        voidcraft
+    }
+    tier = 6
+    prerequisites = {
+        "tech_dark_matter_power_core"
+    }
+    weight = 0
+    is_rare = yes
+    potential = {
+        has_technology = tech_dark_matter_power_core
+    }
+    prereqfor_desc = {
+        hide_prereq_for_desc = component
+        ship = {
+            title = "TECH_UNLOCK_PRECURSOR_GATEKEEPER_CONSTRUCTION_TITLE"
+            desc = "TECH_UNLOCK_PRECURSOR_GATEKEEPER_CONSTRUCTION_DESC"
+        }
+    }
+    ai_weight = {
+        factor = 100
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+}

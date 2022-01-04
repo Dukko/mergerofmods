@@ -1,0 +1,42 @@
+building_ae_dark_matter_synthersizer = {
+    base_buildtime = 400
+    can_build = no
+    category = manufacturing
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = tech_dark_matter_synthersizer_ae
+        }
+    }
+    allow = {
+        has_ascended_capital = yes
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 3500
+            energy = 3500
+        }
+        produces = {
+            sr_dark_matter = 120
+            acot_sr_dark_energy = 120
+        }
+        upkeep = {
+            minerals = 50
+            energy = 50
+        }
+    }
+    prerequisites = {
+        "tech_dark_matter_synthersizer_ae"
+    }
+    ai_weight = {
+        weight = 25000
+    }
+    ai_resource_production = {
+        sr_dark_matter = 100
+        acot_sr_dark_energy = 100
+        trigger = {
+            always = yes
+        }
+    }
+}

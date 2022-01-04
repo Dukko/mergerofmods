@@ -12,9 +12,8 @@ building_autochthon_monument = {
                 is_gestalt = yes
                 is_spiritualist = yes
                 is_megacorp = yes
-                has_valid_civic = civic_memorialist
-                has_valid_civic = civic_hive_memorialist
-                has_valid_civic = civic_machine_memorialist
+                is_memorialist_empire = yes
+                is_ai = yes
             }
         }
     }
@@ -27,9 +26,8 @@ building_autochthon_monument = {
                     is_gestalt = yes
                     is_spiritualist = yes
                     is_megacorp = yes
-                    has_valid_civic = civic_memorialist
-                    has_valid_civic = civic_hive_memorialist
-                    has_valid_civic = civic_machine_memorialist
+                    is_memorialist_empire = yes
+                    is_ai = yes
                 }
             }
         }

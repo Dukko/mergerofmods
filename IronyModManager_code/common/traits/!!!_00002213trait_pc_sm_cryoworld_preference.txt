@@ -1,0 +1,52 @@
+trait_pc_sm_cryoworld_preference = {
+    sorting_priority = 20
+    icon = "gfx/interface/icons/traits/trait_sm_cryogenesis.dds"
+    modification = no
+    initial = no
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+        LITHOID
+    }
+    modifier = {
+        pc_sm_cryoworld_habitability = 2
+    }
+    custom_tooltip = "TRAIT_SM_CRYOGENESIS_EFFECT"
+    triggered_pop_modifier = {
+        potential = {
+            exists = planet
+            planet = {
+                is_planet_class = pc_sm_cryoworld
+            }
+        }
+        planet_jobs_produces_mult = 0.1
+    }
+    triggered_pop_modifier = {
+        potential = {
+            exists = planet
+            planet = {
+                is_cold = yes
+            }
+        }
+        pop_environment_tolerance = 0.6
+    }
+    triggered_pop_modifier = {
+        potential = {
+            exists = planet
+            planet = {
+                OR = {
+                    is_dry = yes
+                    is_wet = yes
+                }
+            }
+        }
+        pop_environment_tolerance = -1
+        pop_purge_speed = 2
+    }
+    ai_weight = {
+        weight = 0
+    }
+    slave_cost = {
+        energy = 0
+    }
+}

@@ -1,0 +1,57 @@
+@apsr3part4cost_minerals = 15000
+@apsr3part4cost_time = 2000
+@apsr3part4upkeep_energy = 50
+@apsr3part4upkeep_minerals = 50
+@apsr3part4job = 8
+apsr3_building_part4 = {
+    base_buildtime = @apsr3part4cost_time
+    icon = apsr3_building_part4
+    is_capped_by_modifier = no
+    category = research
+    can_build = no
+    can_demolish = no
+    position_priority = 49
+    potential = {
+        has_modifier = "apsr3_planet_modifier"
+    }
+    allow = {
+        is_capital = yes
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+                has_technology = tech_apsr3_building_part4
+            }
+        }
+        modifier = {
+            job_apsr3_scientist_machine_add = @apsr3part4job
+        }
+    }
+    resources = {
+        category = planet_apsr_buildings
+        cost = {
+            minerals = @apsr3part4cost_minerals
+        }
+        upkeep = {
+            energy = @apsr3part4upkeep_energy
+            minerals = @apsr3part4upkeep_minerals
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr3_building_part3
+                }
+            }
+            apsr_knowledge = 3
+        }
+    }
+    prerequisites = {
+        "tech_apsr3_building_part4"
+    }
+    show_tech_unlock_if = {
+        always = no
+    }
+}

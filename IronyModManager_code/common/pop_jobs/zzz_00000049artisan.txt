@@ -8,10 +8,17 @@ artisan = {
         is_being_purged = no
         is_being_assimilated = no
     }
+    possible_precalc = can_fill_specialist_job
     possible = {
-        specialist_job_check_trigger = yes
+        NOT = {
+            has_trait = trait_slave_gene
+        }
+        hidden_trigger = {
+            exists = owner
+        }
         owner = {
             is_gestalt = no
+            is_crafter_empire = no
         }
     }
     resources = {
@@ -21,6 +28,18 @@ artisan = {
         }
         upkeep = {
             minerals = 6
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    or = {
+                        has_valid_civic = civic_environmentalist
+                        has_valid_civic = civic_keepers_harmony
+                    }
+                }
+            }
+            minerals = -0.5
         }
     }
     weight = {
@@ -59,6 +78,10 @@ artisan = {
             }
         }
         modifier = {
+            factor = 1.5
+            has_trait = trait_necrophage
+        }
+        modifier = {
             factor = 1.2
             exists = planet
             planet = {
@@ -72,6 +95,11 @@ artisan = {
                     value < 5
                 }
             }
+        }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = specialist
         }
     }
 }

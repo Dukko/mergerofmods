@@ -1,4 +1,4 @@
-@cooldown = 3600
+@cooldown = 720
 challenge_type_bidding_war = {
     potential = {
         NOT = {

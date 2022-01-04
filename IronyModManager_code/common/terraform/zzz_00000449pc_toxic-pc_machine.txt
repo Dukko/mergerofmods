@@ -1,0 +1,22 @@
+@machineCost = 10000
+@machineTime = 7200
+terraform_link = {
+    to = "pc_machine"
+    from = "pc_toxic"
+    resources = {
+        category = terraforming
+        cost = {
+            energy = @machineCost
+        }
+    }
+    duration = @machineTime
+    potential = {
+        has_ascension_perk = ap_machine_worlds
+        from = {
+            has_modifier = terraforming_candidate
+        }
+    }
+    ai_weight = {
+        weight = 20
+    }
+}

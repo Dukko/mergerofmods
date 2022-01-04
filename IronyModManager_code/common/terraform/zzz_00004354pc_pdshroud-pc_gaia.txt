@@ -1,0 +1,35 @@
+@terraforming_cost_unshroud = 500
+@terraforming_durantion_shroud = 3600
+terraform_link = {
+    from = pc_pdshroud
+    to = pc_gaia
+    resources = {
+        category = terraforming
+        cost = {
+            sr_zro = @terraforming_cost_unshroud
+        }
+    }
+    duration = @terraforming_durantion_shroud
+    condition = {
+        has_technology = tech_climate_restoration
+    }
+    potential = {
+        has_technology = tech_climate_restoration
+    }
+    ai_weight = {
+        weight = 1
+        modifier = {
+            factor = 0
+            NOT = {
+                has_origin = origin_pd_shroud
+            }
+        }
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = sr_zro
+                value < 500
+            }
+        }
+    }
+}

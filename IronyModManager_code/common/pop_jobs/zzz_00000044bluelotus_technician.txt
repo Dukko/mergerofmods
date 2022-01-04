@@ -10,9 +10,7 @@ bluelotus_technician = {
         is_being_assimilated = no
         is_sapient = yes
     }
-    possible = {
-        worker_job_check_trigger = yes
-    }
+    possible_precalc = can_fill_worker_job
     resources = {
         category = planet_metallurgists
         produces = {
@@ -108,6 +106,15 @@ bluelotus_technician = {
         modifier = {
             factor = 1.5
             has_trait = trait_necrophage
+        }
+        modifier = {
+            factor = 1.5
+            has_job = bluelotus_technician
+        }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = specialist
         }
     }
 }

@@ -1,0 +1,37 @@
+building_assaultmechbay = {
+    base_buildtime = 540
+    can_build = no
+    category = army
+    potential = {
+        exists = owner
+        owner = {
+            is_gestalt = no
+            has_ascension_perk = ap_mech_lords
+        }
+    }
+    resources = {
+        category = planet_buildings_strongholds
+        cost = {
+            minerals = 1000
+        }
+        upkeep = {
+            alloys = 3
+        }
+        produces = {
+            engineering_research = 5
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_mechwarrior_l_add = 1
+            job_mechwarrior_add = 2
+            job_mechtech_add = 2
+        }
+    }
+}

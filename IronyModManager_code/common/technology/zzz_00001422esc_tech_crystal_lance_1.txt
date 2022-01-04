@@ -1,0 +1,55 @@
+esc_tech_crystal_lance_1 = {
+    area = society
+    category = {
+        materials
+    }
+    tier = 5
+    cost = @tier5cost3
+    weight = @tier5weight3
+    ai_update_type = military
+    prerequisites = {
+        "esc_tech_crystal_cannon_5"
+        "esc_tech_advanced_heavy_weapons"
+    }
+    gateway = ESC_CRYSTALLINE_LANCE
+    potential = {
+        NOT = {
+            has_global_flag = ESC_GLOBAL_FLAG_crystalline_x_weapons_forbidden
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 2
+            is_lithoid_empire = yes
+        }
+        modifier = {
+            factor = 2.5
+            is_lithoid_devouring_swarm = yes
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+    ai_weight = {
+        factor = @ESC_AI_tech_weight_multiplier
+        modifier = {
+            factor = 2
+            is_lithoid_empire = yes
+        }
+        modifier = {
+            factor = 2.5
+            is_lithoid_devouring_swarm = yes
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+triggered_opinion_lrsk_gvp_flex_shapers = {
+    trigger = {
+        has_valid_civic = lrsk_adv_civ_civic_shapers
+        from = {
+            has_valid_civic = lrsk_adv_civ_civic_shapers
+        }
+    }
+    opinion = {
+        base = 25
+    }
+}

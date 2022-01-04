@@ -1,0 +1,52 @@
+tech_phanon_institute = {
+    area = physics
+    tier = 9
+    cost = @acot_tier10cost3
+    category = {
+        computing
+    }
+    prerequisites = {
+        tech_stellarite_institute
+        tech_civil_phanon_application
+    }
+    weight = @tier5weight1
+    potential = {
+        NOR = {
+            has_global_flag = aot_phanon_content_OFF
+            is_fallen_empire = yes
+        }
+        has_technology = tech_civil_phanon_application
+    }
+    weight_modifier = {
+        factor = 1.5
+        modifier = {
+            factor = 0.25
+            NOR = {
+                research_leader = {
+                    area = physics
+                    has_trait = "leader_trait_expertise_computing"
+                }
+                research_leader = {
+                    area = physics
+                    has_trait = "leader_trait_curator"
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+}

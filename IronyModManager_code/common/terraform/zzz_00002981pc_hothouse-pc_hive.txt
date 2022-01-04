@@ -1,0 +1,46 @@
+@hiveCost = 10000
+@hiveTime = 7200
+terraform_link = {
+    to = "pc_hive"
+    from = "pc_hothouse"
+    resources = {
+        category = terraforming
+        cost = {
+            energy = @hiveCost
+        }
+    }
+    duration = @hiveTime
+    potential = {
+        has_ascension_perk = ap_hive_worlds
+        from = {
+            has_modifier = terraforming_candidate
+            NOT = {
+                has_modifier = pd_infestingplanet
+            }
+        }
+    }
+    ai_weight = {
+        weight = 20
+        modifier = {
+            factor = 0
+            from = {
+                any_owned_pop = {
+                    NOT = {
+                        has_trait = trait_hive_mind
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            from = {
+                is_colony = no
+            }
+        }
+    }
+    effect = {
+        from = {
+            remove_modifier = terraforming_candidate
+        }
+    }
+}

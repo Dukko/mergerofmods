@@ -1,0 +1,38 @@
+esc_tech_auxiliary_fire_control_2 = {
+    area = physics
+    tier = 3
+    cost = @tier3cost2
+    weight = @tier3weight2
+    category = {
+        computing
+    }
+    ai_update_type = military
+    prerequisites = {
+        "tech_auxiliary_fire_control"
+        "esc_tech_grand_research_initiative"
+    }
+    potential = {
+        NOT = {
+            has_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+    ai_weight = {
+        factor = @ESC_AI_tech_weight_multiplier
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+}

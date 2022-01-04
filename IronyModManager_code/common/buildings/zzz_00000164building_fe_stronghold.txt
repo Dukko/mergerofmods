@@ -1,7 +1,5 @@
 building_fe_stronghold = {
-    base_buildtime = @b2_time
     can_build = no
-    icon = building_fortress
     potential = {
         exists = owner
     }
@@ -54,13 +52,9 @@ building_fe_stronghold = {
     }
     resources = {
         category = planet_buildings
-        cost = {
-            minerals = @b2_minerals
-        }
         upkeep = {
-            energy = 10
         }
-     }
+    }
     upgrades = {
         building_ae_stronghold
     }

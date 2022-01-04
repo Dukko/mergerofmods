@@ -1,0 +1,41 @@
+building_stellarite_hive_evochamber = {
+    base_buildtime = 900
+    can_build = no
+    category = government
+    planet_modifier = {
+        pop_growth_speed = 2
+    }
+    allow = {
+        has_stellarite_capital = yes
+    }
+    upgrades = {
+        building_phanon_hive_evochamber
+    }
+    resources = {
+        category = planet_buildings
+        produces = {
+            society_research = 100
+            food = 200
+        }
+        cost = {
+            energy = 2000
+            minerals = 2000
+            acot_sr_stellarite = 800
+        }
+        upkeep = {
+            acot_sr_stellarite = 20
+        }
+    }
+    prerequisites = {
+        tech_stellarite_hive_evochamber
+    }
+    ai_weight = {
+        weight = 10000
+        modifier = {
+            factor = 0
+            OR = {
+                has_building = building_stellarite_hive_evochamber
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+terraform_link = {
+    to = "xvcv_mdlc_pc_mechanical_dummy_for_district_conversion"
+    from = "pc_machine"
+    resources = {
+        category = terraforming
+        cost = {
+            energy = @xvcv_mdlc_pc_mechanical_cost
+            minerals = @xvcv_mdlc_pc_mechanical_cost
+        }
+    }
+    duration = @xvcv_mdlc_pc_mechanical_time
+    potential = {
+        has_ascension_perk = xvcv_mdlc_ap_mechanical_worlds
+    }
+    ai_weight = {
+        weight = 10
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = energy
+                value < 20000
+            }
+        }
+    }
+}

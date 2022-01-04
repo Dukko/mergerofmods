@@ -1,0 +1,84 @@
+tech_negative_e_s = {
+    area = physics
+    cost = @tier5cost2
+    weight = @tier5weight2
+    tier = 5
+    is_rare = yes
+    category = {
+        particles
+    }
+    prerequisites = {
+        "tech_u_r_e_t"
+    }
+    modifier = {
+        factor = 0
+        NOR = {
+            has_country_flag = negative_mass_found
+            any_system_within_border = {
+                any_system_planet = {
+                    has_resource = {
+                        type = sr_negative_mass
+                        amount > 0
+                    }
+                }
+            }
+            any_relation = {
+                AND = {
+                    is_country_type = default
+                    has_communications = ROOT
+                    has_technology = tech_tech_negative_e_s
+                }
+            }
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0.1
+            years_passed < 50
+        }
+        modifier = {
+            factor = 2
+            years_passed > 60
+        }
+        modifier = {
+            factor = 3
+            years_passed > 70
+        }
+        modifier = {
+            factor = 4
+            years_passed > 80
+        }
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+        modifier = {
+            factor = 1.5
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = 2
+            has_federation = yes
+            federation = {
+                has_federation_perk = rare_tech_boost
+                any_member = {
+                    has_technology = tech_grav_control
+                }
+            }
+        }
+    }
+    ai_weight = {
+        factor = @giga_aiweight_multiplier
+        factor = @ehof_t1_weight
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+}

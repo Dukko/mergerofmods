@@ -82,10 +82,11 @@ resolution_ecology_integrated_gardens = {
         }
         modifier = {
             factor = 5
-            OR = {
-                has_valid_civic = civic_environmentalist
-                has_valid_civic = civic_keepers_harmony
-            }
+            is_civic_environmentalist = yes
+        }
+        modifier = {
+            factor = 3
+            has_origin = origin_terraformer
         }
         modifier = {
             factor = 2

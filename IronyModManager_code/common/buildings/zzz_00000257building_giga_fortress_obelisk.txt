@@ -1,0 +1,83 @@
+building_giga_fortress_obelisk = {
+    base_buildtime = 1200
+    add_to_first_building_slot = yes
+    can_be_ruined = no
+    can_be_disabled = no
+    can_demolish = no
+    can_build = no
+    planetary_ftl_inhibitor = yes
+    category = army
+    position_priority = 100
+    potential = {
+        owner = {
+            has_technology = tech_giga_fortress
+        }
+    }
+    allow = {
+        has_ascended_capital = yes
+    }
+    upgrades = {
+        building_stellarite_giga_fortress_obelisk
+    }
+    planet_modifier = {
+        planet_amenities_add = 20
+        planet_housing_add = 20
+        planet_stability_add = 100
+    }
+    army_modifier = {
+        army_defense_morale_mult = 20
+        army_defense_health_mult = 10
+        army_defense_damage_mult = 10
+        army_starting_experience_add = 10000
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        job_acot_giga_fortress_operator_add = 5
+        job_acot_enforcer_add = 15
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        job_acot_giga_fortress_operator_drone_add = 5
+        job_acot_enforcer_drone_add = 15
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_fallen_empire = yes
+            }
+        }
+        job_acot_giga_fortress_operator_ancient_add = 5
+    }
+    resources = {
+        category = planet_buildings
+        produces = {
+            unity = 50
+            influence = 1
+            sr_dark_matter = 10
+            acot_sr_dark_energy = 10
+            food = 50
+        }
+        cost = {
+            minerals = 15000
+            sr_dark_matter = 250
+            acot_sr_dark_energy = 250
+        }
+    }
+    prerequisites = {
+        "tech_giga_fortress"
+    }
+    ai_weight = {
+        weight = 150000
+    }
+}

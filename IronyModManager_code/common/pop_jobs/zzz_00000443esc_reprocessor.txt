@@ -1,0 +1,85 @@
+esc_reprocessor = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = esc_building_reprocessing_plant
+    clothes_texture_index = 2
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_specialist_job
+    possible = {
+        hidden_trigger = {
+            exists = owner
+        }
+        owner = {
+            is_gestalt = no
+        }
+        complex_specialist_job_check_trigger = yes
+    }
+    resources = {
+        category = planet_jobs
+        produces = {
+            consumer_goods = 1.5
+            alloys = 1.5
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_galactic_community_member = yes
+                }
+                ESC_TRIGGER_environment_ordinance_waivers = yes
+            }
+            consumer_goods = 0.075
+            alloys = 0.075
+        }
+        upkeep = {
+            energy = 2
+            minerals = 2
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    OR = {
+                        colony_type = col_foundry
+                        colony_type = col_factory
+                        colony_type = col_ecu_foundry
+                        colony_type = col_ecu_factory
+                        colony_type = col_habitat_foundry
+                        colony_type = col_habitat_factory
+                    }
+                }
+            }
+            energy = -0.4
+            minerals = -0.4
+        }
+    }
+    planet_modifier = {
+        planet_amenities_add = 2
+    }
+    weight = {
+        weight = @specialist_job_weight
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+                has_trait = trait_industrious
+                has_trait = trait_cybernetic
+            }
+        }
+        modifier = {
+            factor = 0.75
+            has_trait = trait_nerve_stapled
+        }
+        modifier = {
+            factor = 5
+            has_job = esc_reprocessor
+        }
+    }
+}

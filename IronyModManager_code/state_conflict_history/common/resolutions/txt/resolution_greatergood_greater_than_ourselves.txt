@@ -145,11 +145,15 @@ resolution_greatergood_greater_than_ourselves = {
         weight = @resolution_weight_normal
         modifier = {
             factor = 2
-            is_socialism = yes
+            is_egalitarian = yes
         }
         modifier = {
             factor = 2
-            has_ethic = ethic_fanatic_socialism
+            has_ethic = ethic_fanatic_egalitarian
+        }
+        modifier = {
+            factor = 1.2
+            is_socialism = yes
         }
         modifier = {
             factor = 1.5
@@ -208,11 +212,15 @@ resolution_greatergood_greater_than_ourselves = {
         }
         modifier = {
             factor = 0.5
-            is_megacorp = yes
+            is_capitalism = yes
+        }
+        modifier = {
+            factor = 1.2
+            has_ethic = ethic_fanatic_socialism
         }
         modifier = {
             factor = 0.5
-            is_capitalism = yes
+            is_auth_corporate = yes
         }
         modifier = {
             factor = 3
@@ -255,13 +263,6 @@ resolution_greatergood_greater_than_ourselves = {
                 has_valid_civic = civic_agrarian_idyll
                 is_civic_free_haven = yes
                 is_civic_inwards_perfection = yes
-            }
-        }
-        modifier = {
-            factor = 0.8
-            OR = {
-                has_valid_civic = civic_aristocratic_elite
-                has_valid_civic = civic_police_state
             }
         }
         modifier = {

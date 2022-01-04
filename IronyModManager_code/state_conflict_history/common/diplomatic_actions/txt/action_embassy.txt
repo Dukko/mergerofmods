@@ -108,5 +108,30 @@ action_embassy = {
                 }
             }
         }
+        if = {
+            limit = {
+                from = {
+                    is_purists_empire = yes
+                }
+            }
+            if = {
+                limit = {
+                    has_intel = {
+                        who = from
+                        intel = civics
+                    }
+                }
+                custom_tooltip = {
+                    fail_text = requires_recipient_not_pompous
+                    always = no
+                }
+            }
+            else = {
+                custom_tooltip = {
+                    fail_text = diplo_action_no_low_intel
+                    always = no
+                }
+            }
+        }
     }
 }

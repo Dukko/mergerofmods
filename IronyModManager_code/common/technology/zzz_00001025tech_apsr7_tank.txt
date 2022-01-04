@@ -1,0 +1,35 @@
+@apsr7costtank = 5000
+@apsr7weighttank = 0
+tech_apsr7_tank = {
+    cost = @apsr7costtank
+    area = engineering
+    tier = 2
+    category = {
+        materials
+    }
+    prerequisites = {
+        "tech_apsr7_building_cordon"
+    }
+    weight = @apsr7weighttank
+    is_rare = yes
+    is_dangerous = yes
+    prereqfor_desc = {
+        custom = {
+            title = "TECH_APSR7_TANK_TITLE"
+            desc = "TECH_APSR7_TANK_DESC"
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_deposit = apsr7_deposit
+                }
+            }
+        }
+    }
+    ai_weight = {
+        factor = 150
+    }
+}

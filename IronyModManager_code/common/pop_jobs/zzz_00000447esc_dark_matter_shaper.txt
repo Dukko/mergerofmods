@@ -1,0 +1,86 @@
+esc_dark_matter_shaper = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = esc_building_dark_matter_facility
+    clothes_texture_index = 2
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_specialist_job
+    possible = {
+        hidden_trigger = {
+            exists = owner
+        }
+        owner = {
+            is_gestalt = no
+        }
+        complex_specialist_job_check_trigger = yes
+    }
+    resources = {
+        category = planet_jobs
+        produces = {
+            sr_dark_matter = @ESC_job_secondary_resource_base_production
+            physics_research = @ESC_job_primary_resource_base_production
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_galactic_community_member = yes
+                }
+                ESC_TRIGGER_environment_ordinance_waivers = yes
+            }
+            sr_dark_matter = @ESC_job_secondary_resource_cornucopia_bonus
+        }
+        upkeep = {
+            energy = @ESC_job_upkeep_primary_resource
+            consumer_goods = @ESC_job_upkeep_secondary_resource
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    colony_type = col_refinery
+                }
+            }
+            energy = @ESC_job_upkeep_primary_resource_discount
+            consumer_goods = @ESC_job_upkeep_secondary_resource_discount
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    colony_type = col_habitat_refinery
+                }
+            }
+            energy = @ESC_job_upkeep_primary_resource_discount_hab
+            consumer_goods = @ESC_job_upkeep_secondary_resource_discount_hab
+        }
+    }
+    weight = {
+        weight = @specialist_job_weight
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+            NOT = {
+                has_trait = trait_mechanical
+            }
+        }
+        modifier = {
+            factor = 2
+            has_trait = trait_natural_physicists
+            has_trait = trait_intelligent
+            has_trait = trait_erudite
+            has_trait = trait_enigmatic_intelligence_poor
+        }
+        modifier = {
+            factor = 2.5
+            has_trait = trait_enigmatic_intelligence
+        }
+        modifier = {
+            factor = 5
+            has_job = esc_dark_matter_shaper
+        }
+    }
+}

@@ -1,0 +1,44 @@
+tech_aot_fe_empyrean_shrine = {
+    cost = @acot_tier8cost3
+    area = society
+    tier = 6
+    icon = tech_fe_empyrean_shrine
+    category = {
+        psionics
+    }
+    potential = {
+        has_technology = tech_dm_production_core
+        has_ethic = ethic_fanatic_spiritualist
+    }
+    prerequisites = {
+        "tech_dark_matter_power_core"
+        "tech_psionic_theory"
+    }
+    weight = @tier5weight1
+    is_rare = yes
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_technology = tech_dm_production_core
+            }
+        }
+        modifier = {
+            factor = 1.75
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_psionics"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 0.8
+        modifier = {
+            factor = 1.75
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_psionics"
+            }
+        }
+    }
+}

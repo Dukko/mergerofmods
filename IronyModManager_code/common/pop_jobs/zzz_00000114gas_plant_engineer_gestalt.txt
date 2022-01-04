@@ -1,0 +1,64 @@
+gas_plant_engineer_gestalt = {
+    category = complex_drone
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_refinery
+    clothes_texture_index = 3
+    icon = gas_refiner_drone
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_drone_job
+    possible = {
+        NOT = {
+            has_trait = trait_nerve_stapled
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                has_deposit = d_spore_vents
+            }
+        }
+        modifier = {
+            planet_jobs_exotic_gases_produces_mult = 0.05
+        }
+    }
+    resources = {
+        category = planet_refiners
+        produces = {
+            exotic_gases = 3
+        }
+        upkeep = {
+            minerals = 10
+        }
+    }
+    weight = {
+        weight = @specialist_job_weight
+        modifier = {
+            factor = 10
+            planet = {
+                any_owned_pop = {
+                    has_job = gas_refiner_drone
+                }
+            }
+        }
+        modifier = {
+            factor = 1.5
+            has_job = gas_plant_engineer_gestalt
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                planet = {
+                    any_owned_pop = {
+                        has_job = gas_refiner_drone
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+tech_field_e_e_t = {
+    cost = @tier7cost1
+    area = physics
+    tier = 7
+    category = {
+        field_manipulation
+    }
+    prerequisites = {
+        "tech_abstract_4"
+        "tech_hyperlane_p_t"
+    }
+    weight = @gigatier7cost1
+    weight_modifier = {
+        factor = 2
+        modifier = {
+            factor = 1.25
+            has_tradition = tr_prosperity_adopt
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+undead_defense_army = {
+    defensive = yes
+    is_pop_spawned = yes
+    health = 1.5
+    damage = 1.5
+    collateral_damage = 0
+    has_morale = no
+    morale_damage = 1.75
+    war_exhaustion = 0.1
+    icon = GFX_army_type_undead
+    use_armynames_from = undead_army
+    potential = {
+        from = {
+            NOR = {
+                has_trait = "trait_mechanical"
+                has_trait = "trait_machine_unit"
+                is_sapient = no
+            }
+        }
+        planet = {
+            has_active_building = building_dread_encampment
+            num_assigned_jobs = {
+                job = necromancer
+                value >= 1
+            }
+        }
+        owner = {
+            is_reanimator_empire = yes
+        }
+    }
+    spawn_chance = {
+        factor = 100
+    }
+}

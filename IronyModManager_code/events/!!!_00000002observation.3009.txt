@@ -1,0 +1,64 @@
+namespace = action
+namespace = necroids
+namespace = observation
+namespace = primitive
+country_event = {
+    id = observation.3009
+    title = "observation.3009.name"
+    desc = "observation.3009.desc"
+    picture = GFX_evt_metropolis
+    show_sound = event_cityscape
+    location = from
+    is_triggered_only = yes
+    immediate = {
+        root = {
+            save_event_target_as = infiltrator_civ
+        }
+        from = {
+            owner = {
+                save_event_target_as = primitive_civ
+                if = {
+                    limit = {
+                        is_species_class = REP
+                        event_target:infiltrator_civ = {
+                            is_species_class = HUM
+                        }
+                    }
+                    event_target:infiltrator_civ = {
+                        set_country_flag = reverse_v
+                    }
+                }
+            }
+            add_modifier = {
+                modifier = infiltration_happiness
+                days = 7300
+            }
+            random_owned_pop = {
+                save_event_target_as = prim_species
+            }
+            fire_on_action = {
+                on_action = on_primitive_planet_transferring
+                scopes = {
+                    from = event_target:infiltrator_civ
+                }
+            }
+            observation_outpost = {
+                dismantle = yes
+            }
+            set_owner = event_target:infiltrator_civ
+            remove_all_armies = yes
+            fire_on_action = {
+                on_action = on_primitive_planet_transferred
+                scopes = {
+                    from = event_target:primitive_civ
+                }
+            }
+            event_target:primitive_civ = {
+                destroy_country = yes
+            }
+        }
+    }
+    option = {
+        name = "observation.3009.a"
+    }
+}

@@ -1,0 +1,65 @@
+ald_megascience = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_research_lab_3
+    icon = researcher
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible_precalc = can_fill_specialist_job
+    resources = {
+        category = planet_researchers
+        produces = {
+            physics_research = 16
+            society_research = 16
+            engineering_research = 16
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    or = {
+                        has_valid_civic = civic_technocracy
+                        has_valid_civic = civic_cyber_dictatorship
+                        has_valid_civic = civic_science_directorate
+                        has_valid_civic = civic_cyber_democracy
+                    }
+                }
+            }
+            unity = 4
+        }
+        upkeep = {
+            consumer_goods = 8
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    or = {
+                        has_valid_civic = civic_technocracy
+                        has_valid_civic = civic_cyber_dictatorship
+                        has_valid_civic = civic_science_directorate
+                        has_valid_civic = civic_cyber_democracy
+                    }
+                }
+            }
+            consumer_goods = 2
+        }
+    }
+    weight = {
+        weight = @specialist_job_weight
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+            NOT = {
+                has_trait = trait_mechanical
+            }
+        }
+        modifier = {
+            factor = 1.5
+            always = yes
+        }
+    }
+}

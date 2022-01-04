@@ -111,5 +111,49 @@ action_offer_federation_association_status = {
                 }
             }
         }
+        if = {
+            limit = {
+                from = {
+                    is_purists_empire = yes
+                }
+            }
+            if = {
+                limit = {
+                    has_intel = {
+                        who = from
+                        intel = civics
+                    }
+                }
+                custom_tooltip = {
+                    fail_text = requires_recipient_not_pompous
+                    always = no
+                }
+            }
+            else = {
+                custom_tooltip = {
+                    fail_text = diplo_action_no_low_intel
+                    always = no
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_good_or_better_opinion"
+            OR = {
+                opinion_level = {
+                    who = from
+                    level >= good
+                }
+                is_improving_relations_with = from
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_actor_recipient_not_in_galactic_empire_2"
+            NAND = {
+                has_galactic_emperor = yes
+                from = {
+                    is_galactic_community_member = yes
+                }
+            }
+        }
     }
 }

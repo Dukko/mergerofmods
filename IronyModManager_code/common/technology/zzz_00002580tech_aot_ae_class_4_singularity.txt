@@ -1,0 +1,51 @@
+tech_aot_ae_class_4_singularity = {
+    cost = @acot_tier7cost3
+    area = physics
+    tier = 7
+    icon = tech_ae_class_4_singularity
+    category = {
+        field_manipulation
+    }
+    prerequisites = {
+        "tech_fe_class_4_singularity"
+        "tech_dark_matter_power_core_ae"
+    }
+    weight = @tier5weight1
+    is_rare = yes
+    potential = {
+        NOT = {
+            has_global_flag = acot_building_forbidden
+        }
+        has_technology = tech_dark_matter_power_core_ae
+        has_technology = tech_fe_class_4_singularity
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 10
+            OR = {
+                has_technology = tech_mine_exotic_gases
+                has_technology = tech_exotic_gases
+            }
+        }
+        modifier = {
+            factor = 2
+            has_tradition = tr_prosperity_adopt
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+}

@@ -1,0 +1,280 @@
+@resolution_weight_unpopular = 5
+@resolution_cost_t4 = 250
+@resolution_flag_timer = 360
+resolution_divinity_silence_the_soulless = {
+    icon = "GFX_resolution_robots_bad"
+    potential = {
+        has_federations_dlc = yes
+    }
+    resources = {
+        category = resolutions
+        cost = {
+            influence = @resolution_cost_t4
+        }
+    }
+    target = no
+    level = 4
+    modifier = {
+        resolution_divinity_comfort_the_fallen = 1
+        resolution_divinity_tithe_on_the_soulless = 1
+        resolution_divinity_right_to_work = 1
+        resolution_divinity_silence_the_soulless = 1
+    }
+    triggered_modifier = {
+        potential = {
+            is_synthetic_empire = yes
+        }
+        modifier = {
+            resolution_divinity_silence_the_soulless_synthetic_empire_effect = 1
+        }
+    }
+    effect = {
+        hidden_effect = {
+            add_modifier = {
+                modifier = resolution_passed_diplomatic_weight
+                days = 2200
+            }
+        }
+        custom_tooltip = resolution_divinity_silence_the_soulless_effect
+        hidden_effect = {
+            set_timed_country_flag = {
+                flag = galactic_community_resolution_passed_divinity
+                days = @resolution_flag_timer
+            }
+            set_timed_country_flag = {
+                flag = faction_materialist_outraged_gc
+                days = 7200
+            }
+            add_modifier = {
+                modifier = resolution_passed_diplomatic_weight
+                days = 2200
+            }
+            set_global_flag = resolution_with_breach_effect_passed
+        }
+        if = {
+            limit = {
+                has_global_flag = resolution_ascension_cyborg_flag
+            }
+            custom_tooltip = resolution_repeal_ascension_cyborg_effect_success
+            hidden_effect = {
+                remove_global_flag = resolution_ascension_cyborg_flag
+            }
+        }
+    }
+    fail_effects = {
+        hidden_effect = {
+            add_modifier = {
+                modifier = resolution_failed_diplomatic_weight
+                days = 2200
+            }
+        }
+        hidden_effect = {
+            set_timed_country_flag = {
+                flag = galactic_community_resolution_failed_divinity
+                days = @resolution_flag_timer
+            }
+            add_modifier = {
+                modifier = resolution_failed_diplomatic_weight
+                days = 2200
+            }
+        }
+    }
+    allow = {
+        is_active_resolution = "resolution_divinity_right_to_work"
+    }
+    breach = {
+        has_country_flag = resolution_breached_synthetic_evolution
+    }
+    ai_weight = {
+        weight = @resolution_weight_unpopular
+        modifier = {
+            factor = 0.625
+            not = {
+                has_country_flag = str_has_bad_tech_score
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_country_flag = str_has_bad_fleet_score
+        }
+        modifier = {
+            factor = 1.4
+            has_country_flag = str_has_terrible_fleet_score
+        }
+        modifier = {
+            factor = 0.9
+            turtler = yes
+        }
+        modifier = {
+            factor = 0.9
+            turtler2 = yes
+        }
+        modifier = {
+            factor = 1.1
+            rusher = yes
+        }
+        modifier = {
+            factor = 1.1
+            rusher2 = yes
+        }
+        modifier = {
+            factor = 0.5
+            count_country = {
+                count < 4
+                limit = {
+                    is_galactic_community_member = yes
+                    relative_power = {
+                        who = prev
+                        category = technology
+                        value >= equivalent
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            is_machine_empire = no
+            is_civic_materialist = no
+            any_relation = {
+                is_galactic_community_member = yes
+                OR = {
+                    is_rival = prev
+                    is_at_war_with = prev
+                }
+                count_country = {
+                    count < 4
+                    limit = {
+                        is_galactic_community_member = yes
+                        relative_power = {
+                            who = prev
+                            category = technology
+                            value >= equivalent
+                        }
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.5
+            NOR = {
+                has_ai_personality_behaviour = robot_exploiter
+                has_ai_personality_behaviour = robot_liberator
+            }
+            is_materialist = no
+            is_spiritualist = no
+            any_relation = {
+                is_galactic_community_member = yes
+                OR = {
+                    is_rival = prev
+                    is_at_war_with = prev
+                }
+                OR = {
+                    has_ai_personality_behaviour = robot_exploiter
+                    has_ai_personality_behaviour = robot_liberator
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            NOR = {
+                has_ai_personality_behaviour = robot_exploiter
+                has_ai_personality_behaviour = robot_liberator
+            }
+            is_materialist = no
+            is_spiritualist = yes
+            any_relation = {
+                is_galactic_community_member = yes
+                OR = {
+                    is_rival = prev
+                    is_at_war_with = prev
+                }
+                OR = {
+                    has_ai_personality_behaviour = robot_exploiter
+                    has_ai_personality_behaviour = robot_liberator
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            is_civic_materialist = yes
+        }
+        modifier = {
+            factor = 0
+            is_materialist = yes
+        }
+        modifier = {
+            factor = 3
+            has_origin = origin_shroud_pact
+        }
+        modifier = {
+            factor = 0.5
+            has_ai_personality_behaviour = robot_exploiter
+        }
+        modifier = {
+            factor = 0.25
+            has_ai_personality_behaviour = robot_liberator
+        }
+        modifier = {
+            factor = 0.8
+            is_gestalt = yes
+        }
+        modifier = {
+            factor = 0
+            is_synthetic_empire = yes
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_ascension_perk = ap_the_flesh_is_weak
+                has_ascension_perk = ap_synthetic_evolution
+            }
+        }
+        modifier = {
+            factor = 1.5
+            NOR = {
+                has_ai_personality_behaviour = robot_exploiter
+                has_ai_personality_behaviour = robot_liberator
+            }
+        }
+        modifier = {
+            factor = 2
+            is_spiritualist = yes
+        }
+        modifier = {
+            factor = 2
+            has_ethic = ethic_fanatic_spiritualist
+        }
+        modifier = {
+            factor = 2
+            is_civic_spiritualist = yes
+        }
+        modifier = {
+            factor = 0.75
+            is_militarist = yes
+            OR = {
+                has_ai_personality_behaviour = robot_exploiter
+                has_ai_personality_behaviour = robot_liberator
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_ai_personality = decadent_technocracy
+                has_ascension_perk = ap_synthetic_servants
+            }
+        }
+        modifier = {
+            factor = 1.5
+            is_materialist = no
+            is_robot_empire = no
+            OR = {
+                has_global_flag = ai_invasion_ongoing
+                has_global_flag = ai_invasion_defeated
+            }
+        }
+        modifier = {
+            factor = 0
+            in_breach_of = resolution_divinity_silence_the_soulless
+        }
+    }
+}

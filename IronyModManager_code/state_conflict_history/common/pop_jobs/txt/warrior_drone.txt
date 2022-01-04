@@ -54,9 +54,7 @@ warrior_drone = {
         is_being_assimilated = no
         is_sapient = yes
     }
-    possible = {
-        drone_job_check_trigger = yes
-    }
+    possible_precalc = can_fill_drone_job
     weight = {
         weight = 5
         modifier = {

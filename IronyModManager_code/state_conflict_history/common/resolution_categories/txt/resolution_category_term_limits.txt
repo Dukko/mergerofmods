@@ -1,0 +1,12 @@
+resolution_category_term_limits = {
+    group = custodianship
+    icon = "GFX_resolution_term_limits"
+    multiple_active_resolutions = yes
+    resolution_types = {
+        "resolution_custodian_extend_custodianship"
+        "resolution_custodian_perpetual_custodianship"
+        "resolution_custodian_emergency_powers"
+        "resolution_grand_custodianship_delcaration"
+        "resolution_custodian_end_custodianship"
+    }
+}

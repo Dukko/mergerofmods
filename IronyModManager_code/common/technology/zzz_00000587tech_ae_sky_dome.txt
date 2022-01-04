@@ -1,0 +1,58 @@
+tech_ae_sky_dome = {
+    cost = @fallentechcost
+    area = society
+    tier = 7
+    category = {
+        statecraft
+    }
+    prerequisites = {
+        "tech_precursor_design"
+        "tech_dark_matter_power_core_ae"
+    }
+    weight = @tier5weight1
+    potential = {
+        NOR = {
+            has_global_flag = has_aot_mod
+            has_global_flag = acot_building_forbidden
+            has_global_flag = zofe_activated
+            is_country_type = fallen_empire
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 10
+            OR = {
+                has_technology = tech_mine_rare_crystals
+                has_technology = tech_rare_crystals
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_building = building_fe_dome
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            has_ae_capital_tech = no
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+}

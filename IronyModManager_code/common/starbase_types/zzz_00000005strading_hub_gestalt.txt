@@ -1,0 +1,139 @@
+strading_hub_gestalt = {
+    potential = {
+        has_starbase_size > starbase_outpost
+        count_starbase_modules = {
+            type = solar_panel_network
+            count > 0
+        }
+        exists = owner
+        owner = {
+            has_ethic = ethic_gestalt_consciousness
+        }
+    }
+    weight_modifier = {
+        base = 100
+        modifier = {
+            add = 100
+            count_starbase_modules = {
+                type = solar_panel_network
+                count > 1
+            }
+        }
+        modifier = {
+            add = 100
+            count_starbase_modules = {
+                type = solar_panel_network
+                count > 2
+            }
+        }
+        modifier = {
+            add = 100
+            count_starbase_modules = {
+                type = solar_panel_network
+                count > 3
+            }
+        }
+        modifier = {
+            add = 100
+            count_starbase_modules = {
+                type = solar_panel_network
+                count > 4
+            }
+        }
+        modifier = {
+            add = 100
+            count_starbase_modules = {
+                type = solar_panel_network
+                count > 5
+            }
+        }
+    }
+    ai_design = {
+        min = {
+            base = 0
+            factor = 0
+        }
+        ratio = {
+            base = 0.2
+            modifier = {
+                add = 0.05
+                exists = owner
+                owner = {
+                    is_machine_empire = yes
+                }
+            }
+            modifier = {
+                add = 0.05
+                exists = owner
+                owner = {
+                    OR = {
+                        has_origin = origin_machine
+                        has_government = gov_machine_industrial
+                        has_government = gov_resource_collector_mind
+                    }
+                }
+            }
+        }
+        buildings = {
+            customs_office_gestalt = {
+                base = 1
+            }
+            nebula_refinery = {
+                base = 1
+            }
+            dathnak_embassy = {
+                base = 1
+            }
+            resource_silo = {
+                base = 1
+            }
+            art_college = {
+                base = 1
+            }
+            curator_think_tank = {
+                base = 1
+            }
+            trader_proxy_office = {
+                base = 2
+            }
+            ice_mining_station = {
+                base = 1
+            }
+            dragon_hatchery = {
+                base = 1
+            }
+            hydroponics_bay = {
+                base = 2
+            }
+            climate_control = {
+                base = 1
+            }
+            space_production = {
+                base = 2
+            }
+            listening_post = {
+                base = 0.5
+            }
+            defense_grid = {
+                base = 0.05
+            }
+            starbase_fortifications = {
+                base = 0.05
+            }
+            communications_jammer = {
+                base = 0.05
+            }
+            transit_hub = {
+                base = 2
+            }
+        }
+        modules = {
+            solar_panel_network = {
+                base = 1
+            }
+            stellar_reducer = {
+                base = 1
+            }
+        }
+    }
+}

@@ -10,8 +10,12 @@ noble = {
         is_being_assimilated = no
         is_sapient = yes
     }
+    possible_precalc = can_fill_ruler_job
     possible = {
-        ruler_job_check_trigger = yes
+        NOR = {
+            has_trait = trait_slave_gene
+            has_trait = trait_symbiotic
+        }
     }
     resources = {
         category = planet_nobles

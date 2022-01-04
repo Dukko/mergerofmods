@@ -1,0 +1,55 @@
+tech_aot_ae_nourishment_center = {
+    cost = @acot_tier7cost3
+    area = society
+    tier = 7
+    icon = tech_ae_nourishment_center
+    category = {
+        biology
+    }
+    prerequisites = {
+        "tech_fe_nourishment_center"
+        "tech_dark_matter_power_core_ae"
+    }
+    weight = @tier5weight1
+    is_rare = yes
+    potential = {
+        NOT = {
+            has_global_flag = acot_building_forbidden
+        }
+        has_technology = tech_dark_matter_power_core_ae
+        has_technology = tech_fe_nourishment_center
+    }
+    weight_modifier = {
+        factor = 2
+        modifier = {
+            factor = 0.01
+            is_machine_empire = yes
+            NOR = {
+                has_valid_civic = civic_machine_servitor
+                has_valid_civic = civic_machine_assimilator
+                any_owned_planet = {
+                    num_districts = {
+                        type = district_farming
+                        value > 0
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+    }
+}

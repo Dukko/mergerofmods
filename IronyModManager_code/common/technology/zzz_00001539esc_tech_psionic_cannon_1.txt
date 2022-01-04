@@ -1,0 +1,53 @@
+esc_tech_psionic_cannon_1 = {
+    area = society
+    category = {
+        psionics
+    }
+    tier = 5
+    cost = @tier5cost1
+    weight = @tier5weight1
+    ai_update_type = military
+    prerequisites = {
+        "esc_tech_psionic_weapons"
+    }
+    gateway = ESC_PSIONIC_CANNONS
+    potential = {
+        ESC_TRIGGER_may_reverse_engineer_psionic_weapons = yes
+        NOT = {
+            has_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0.75
+            NOR = {
+                research_leader = {
+                    area = society
+                    has_trait = "leader_trait_expertise_psionics"
+                }
+                research_leader = {
+                    area = society
+                    has_trait = "leader_trait_curator"
+                }
+                research_leader = {
+                    area = society
+                    has_trait = "leader_trait_spark_of_genius"
+                }
+                research_leader = {
+                    area = society
+                    has_trait = "leader_trait_maniacal"
+                }
+            }
+        }
+    }
+    ai_weight = {
+        factor = @ESC_AI_tech_weight_multiplier
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_psionics"
+            }
+        }
+    }
+}

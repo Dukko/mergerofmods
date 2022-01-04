@@ -1,0 +1,270 @@
+@resolution_weight_unpopular = 5
+@resolution_cost_t4 = 250
+@resolution_flag_timer = 360
+resolution_industry_environmental_ordinance_waivers = {
+    icon = "GFX_resolution_industrial_development"
+    potential = {
+        has_federations_dlc = yes
+    }
+    resources = {
+        category = resolutions
+        cost = {
+            influence = @resolution_cost_t4
+        }
+    }
+    target = no
+    level = 4
+    modifier = {
+        resolution_industry_regulatory_facilitation = 1
+        resolution_industry_collective_waste_management = 1
+        resolution_industry_building_a_better_tomorrow = 1
+        resolution_industry_environmental_ordinance_waivers = 1
+    }
+    effect = {
+        hidden_effect = {
+            add_modifier = {
+                modifier = resolution_passed_diplomatic_weight
+                days = 2200
+            }
+        }
+        custom_tooltip = resolution_industry_environmental_ordinance_waivers_tooltip
+        hidden_effect = {
+            set_timed_country_flag = {
+                flag = galactic_community_resolution_passed_industry
+                days = @resolution_flag_timer
+            }
+        }
+    }
+    fail_effects = {
+        hidden_effect = {
+            add_modifier = {
+                modifier = resolution_failed_diplomatic_weight
+                days = 2200
+            }
+        }
+        hidden_effect = {
+            set_timed_country_flag = {
+                flag = galactic_community_resolution_failed_industry
+                days = @resolution_flag_timer
+            }
+        }
+    }
+    allow = {
+        is_active_resolution = "resolution_industry_building_a_better_tomorrow"
+    }
+    ai_weight = {
+        weight = @resolution_weight_unpopular
+        modifier = {
+            factor = 1.4
+            not = {
+                has_country_flag = str_has_bad_economy_score
+            }
+        }
+        modifier = {
+            factor = 0.8
+            has_country_flag = str_has_bad_economy_score
+        }
+        modifier = {
+            factor = 0.625
+            has_country_flag = str_has_terrible_economy_score
+        }
+        modifier = {
+            factor = 0.9
+            turtler = yes
+        }
+        modifier = {
+            factor = 0.9
+            turtler2 = yes
+        }
+        modifier = {
+            factor = 1.1
+            rusher = yes
+        }
+        modifier = {
+            factor = 1.1
+            rusher2 = yes
+        }
+        modifier = {
+            factor = 1.1
+            is_civic_expansionist = yes
+        }
+        modifier = {
+            factor = 2
+            count_country = {
+                count < 4
+                limit = {
+                    is_galactic_community_member = yes
+                    relative_power = {
+                        who = prev
+                        category = economy
+                        value >= equivalent
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0.5
+            any_relation = {
+                is_galactic_community_member = yes
+                OR = {
+                    is_rival = prev
+                    is_at_war_with = prev
+                }
+                count_country = {
+                    count < 4
+                    limit = {
+                        is_galactic_community_member = yes
+                        relative_power = {
+                            who = prev
+                            category = economy
+                            value >= equivalent
+                        }
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 3
+            has_valid_civic = civic_starvation_fearing
+            is_lithoid_empire = yes
+        }
+        modifier = {
+            factor = 1.5
+            is_militarist = yes
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            is_civic_militarist = yes
+        }
+        modifier = {
+            factor = 1.5
+            is_authoritarian = yes
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_authoritarian
+        }
+        modifier = {
+            factor = 1.5
+            is_civic_has_elite = yes
+        }
+        modifier = {
+            factor = 1.5
+            is_slaver = yes
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                is_civic_environmentalist = yes
+                AND = {
+                    has_valid_civic = civic_agrarian_idyll
+                    is_lithoid_empire = no
+                }
+            }
+        }
+        modifier = {
+            factor = 0.1
+            has_origin = origin_terraformer
+        }
+        modifier = {
+            factor = 0.5
+            owner_species = {
+                has_trait = eco_trait_clean
+            }
+        }
+        modifier = {
+            factor = 1.2
+            owner_species = {
+                has_trait = eco_trait_dirty
+            }
+        }
+        modifier = {
+            factor = 1.25
+            is_civic_functional_architecture = yes
+        }
+        modifier = {
+            factor = 0.5
+            has_valid_civic = civic_agribusiness
+            is_lithoid_empire = no
+        }
+        modifier = {
+            factor = 1.5
+            is_crafter_empire = yes
+        }
+        modifier = {
+            factor = 0.5
+            owner_species = {
+                OR = {
+                    has_trait = trait_nonadaptive
+                    has_trait = trait_endemic
+                }
+            }
+        }
+        modifier = {
+            factor = 2.5
+            has_monthly_income = {
+                resource = minerals
+                value < 50
+            }
+        }
+        modifier = {
+            factor = 2.5
+            has_monthly_income = {
+                resource = alloys
+                value < 25
+            }
+        }
+        modifier = {
+            factor = 2.5
+            has_deficit = minerals
+        }
+        modifier = {
+            factor = 2.5
+            has_deficit = alloys
+        }
+        modifier = {
+            factor = 0.1
+            OR = {
+                is_machine_empire = no
+                has_valid_civic = civic_machine_servitor
+            }
+            NOT = {
+                has_technology = tech_colonization_2
+            }
+        }
+        modifier = {
+            factor = 0.5
+            OR = {
+                is_machine_empire = no
+                has_valid_civic = civic_machine_servitor
+            }
+            NOT = {
+                has_technology = tech_colonization_3
+            }
+        }
+        modifier = {
+            factor = 0.5
+            OR = {
+                is_machine_empire = no
+                has_valid_civic = civic_machine_servitor
+            }
+            NOT = {
+                has_technology = tech_colonization_4
+            }
+        }
+        modifier = {
+            factor = 0.5
+            OR = {
+                is_machine_empire = no
+                has_valid_civic = civic_machine_servitor
+            }
+            NOT = {
+                has_technology = tech_colonization_5
+            }
+        }
+    }
+}

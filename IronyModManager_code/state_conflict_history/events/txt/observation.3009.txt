@@ -1,19 +1,20 @@
 namespace = action
 namespace = necroids
 namespace = observation
+namespace = primitive
 country_event = {
     id = observation.3009
     title = "observation.3009.name"
     desc = "observation.3009.desc"
     picture = GFX_evt_metropolis
     show_sound = event_cityscape
-    location = FROM
+    location = from
     is_triggered_only = yes
     immediate = {
-        ROOT = {
+        root = {
             save_event_target_as = infiltrator_civ
         }
-        FROM = {
+        from = {
             owner = {
                 save_event_target_as = primitive_civ
                 if = {
@@ -46,64 +47,11 @@ country_event = {
             }
             set_owner = event_target:infiltrator_civ
             remove_all_armies = yes
-            create_army = {
-                name = random
-                owner = ROOT
-                species = owner_main_species
-                type = "defense_army"
-            }
-            remove_building = building_primitive_dwellings
-            remove_building = building_stone_palace
-            remove_building = building_primitive_farm
-            remove_building = building_primitive_mine
-            remove_building = building_primitive_factory
-            remove_building = building_primitive_capital
-            remove_building = building_urban_dwellings
-            remove_building = building_urban_dwellings
-            add_building = building_capital
-            if = {
-                limit = {
-                    NOT = {
-                        is_planet_class = pc_ringworld_habitable
-                    }
+            fire_on_action = {
+                on_action = on_primitive_planet_transferred
+                scopes = {
+                    from = event_target:primitive_civ
                 }
-                while = {
-                    count = 3
-                    add_district = {
-                        district_type = district_city
-                        ignore_cap = yes
-                    }
-                }
-                while = {
-                    count = 2
-                    add_district = {
-                        district_type = district_industrial
-                        ignore_cap = yes
-                    }
-                }
-                while = {
-                    count = 3
-                    add_district = {
-                        district_type = district_farming
-                        ignore_cap = yes
-                    }
-                }
-                while = {
-                    count = 3
-                    add_district = {
-                        district_type = district_mining
-                        ignore_cap = yes
-                    }
-                }
-                while = {
-                    count = 3
-                    add_district = {
-                        district_type = district_generator
-                        ignore_cap = yes
-                    }
-                }
-                add_building = building_research_lab_1
-                add_building = building_commercial_forum
             }
             event_target:primitive_civ = {
                 destroy_country = yes
@@ -112,12 +60,5 @@ country_event = {
     }
     option = {
         name = "observation.3009.a"
-        hidden_effect = {
-            remove_country_flag = recently_invaded_primitives
-            set_timed_country_flag = {
-                flag = recently_invaded_primitives
-                days = 7200
-            }
-        }
     }
 }

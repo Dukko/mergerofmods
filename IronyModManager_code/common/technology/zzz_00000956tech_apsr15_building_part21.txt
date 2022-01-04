@@ -1,0 +1,33 @@
+@apsr15cost2 = 20000
+tech_apsr15_building_part21 = {
+    cost = @apsr15cost2
+    area = engineering
+    tier = 2
+    category = {
+        industry
+    }
+    prerequisites = {
+        "tech_fission_power"
+    }
+    weight = 0
+    is_rare = yes
+    prereqfor_desc = {
+        custom = {
+            title = "TECH_APSR15_PART21_TITLE"
+            desc = "TECH_APSR15_PART21_DESC"
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_deposit = apsr15_deposit
+                }
+            }
+        }
+    }
+    ai_weight = {
+        factor = 150
+    }
+}

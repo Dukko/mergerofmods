@@ -1,8 +1,7 @@
 building_nourishment_center = {
-    base_buildtime = @b2_time
+    base_buildtime = 480
     can_build = yes
     can_demolish = yes
-    icon = building_food_processing_center
     potential = {
         custom_tooltip = {
             exists = owner
@@ -27,11 +26,7 @@ building_nourishment_center = {
         produces = {
             food = 100
         }
-        cost = {
-            minerals = @b3_minerals
-        }
         upkeep = {
-            energy = 20
         }
     }
     on_queued = {
@@ -47,6 +42,57 @@ building_nourishment_center = {
             change_variable = {
                 which = nourishment_center_build_count
                 value = 1
+            }
+        }
+    }
+    ai_weight = {
+        weight = 1
+        modifier = {
+            factor = 50
+            owner = {
+                resource_income_compare = {
+                    resource = food
+                    value < 100
+                }
+            }
+        }
+        modifier = {
+            factor = 0.05
+            owner = {
+                resource_income_compare = {
+                    resource = food
+                    value > 200
+                }
+            }
+            owner = {
+                resource_stockpile_compare = {
+                    resource = food
+                    value = 5000
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                not = {
+                    has_country_flag = just_destroyed_awakened_food
+                }
+                resource_income_compare = {
+                    resource = food
+                    value > 500
+                }
+                resource_stockpile_compare = {
+                    resource = food
+                    value > 6000
+                }
+            }
+        }
+    }
+    on_destroy = {
+        owner = {
+            set_timed_country_flag = {
+                flag = just_destroyed_awakened_food
+                days = 40
             }
         }
     }

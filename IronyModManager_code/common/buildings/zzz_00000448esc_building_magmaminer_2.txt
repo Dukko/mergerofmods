@@ -1,0 +1,126 @@
+esc_building_magmaminer_2 = {
+    base_buildtime = 720
+    can_build = no
+    icon = esc_building_magmaminer_2
+    category = resource
+    potential = {
+        ESC_TRIGGER_can_host_upgraded_mantle_miner = yes
+        NOT = {
+            has_global_flag = ESC_GLOBAL_FLAG_mantle_mining_facility_forbidden
+        }
+    }
+    allow = {
+        ESC_TRIGGER_can_build_mantle_miner = yes
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 4000
+            alloys = 1000
+            volatile_motes = 100
+            rare_crystals = 100
+        }
+        produces = {
+            minerals = 20
+        }
+        upkeep = {
+            energy = 30
+            alloys = 20
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_esc_planetary_core_miner_add = 5
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            ESC_TRIGGER_is_city_planet = no
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = esc_planetary_core_miner_effect_regular_1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            ESC_TRIGGER_is_city_planet = yes
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_esc_borehole_maintainer_add = 2
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            ESC_TRIGGER_is_city_planet = yes
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = esc_planetary_core_miner_effect_regular_2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_esc_planetary_core_miner_drone_add = 5
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            ESC_TRIGGER_is_city_planet = no
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = esc_planetary_core_miner_effect_gestalt_1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            ESC_TRIGGER_is_city_planet = yes
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_esc_borehole_maintainer_drone_add = 2
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            ESC_TRIGGER_is_city_planet = yes
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = esc_planetary_core_miner_effect_gestalt_2
+    }
+    prerequisites = {
+        "esc_tech_magmaminer_2"
+    }
+    ai_resource_production = {
+        minerals = 40
+        trigger = {
+            always = yes
+        }
+    }
+}

@@ -1,0 +1,59 @@
+tech_fe_nourishment_center = {
+    cost = @acot_tier6cost2
+    area = society
+    tier = 6
+    category = {
+        biology
+    }
+    prerequisites = {
+        "tech_dm_production_core"
+    }
+    weight = @tier3weight1
+    potential = {
+        has_technology = tech_dm_production_core
+        OR = {
+            is_machine_empire = no
+            has_valid_civic = civic_machine_servitor
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_technology = tech_dm_production_core
+            }
+        }
+        factor = 2
+        modifier = {
+            factor = 0.01
+            is_machine_empire = yes
+            NOR = {
+                has_valid_civic = civic_machine_servitor
+                has_valid_civic = civic_machine_assimilator
+                any_owned_planet = {
+                    num_districts = {
+                        type = district_farming
+                        value > 0
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 30
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+    }
+}

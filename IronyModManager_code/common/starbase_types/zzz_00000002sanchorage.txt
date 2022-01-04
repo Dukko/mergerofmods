@@ -1,0 +1,154 @@
+sanchorage = {
+    potential = {
+        has_starbase_size > starbase_outpost
+        count_starbase_modules = {
+            type = anchorage
+            count > 0
+        }
+    }
+    weight_modifier = {
+        base = 100
+        modifier = {
+            add = 100
+            count_starbase_modules = {
+                type = anchorage
+                count > 1
+            }
+        }
+        modifier = {
+            add = 100
+            count_starbase_modules = {
+                type = anchorage
+                count > 2
+            }
+        }
+        modifier = {
+            add = 100
+            count_starbase_modules = {
+                type = anchorage
+                count > 3
+            }
+        }
+        modifier = {
+            add = 100
+            count_starbase_modules = {
+                type = anchorage
+                count > 4
+            }
+        }
+        modifier = {
+            add = 100
+            count_starbase_modules = {
+                type = anchorage
+                count > 5
+            }
+        }
+    }
+    ai_design = {
+        min = {
+            base = 0
+            factor = 0
+        }
+        ratio = {
+            base = 0.45
+            modifier = {
+                add = 0.05
+                exists = owner
+                owner = {
+                    has_ethic = ethic_militarist
+                }
+            }
+            modifier = {
+                add = 0.02
+                exists = owner
+                owner = {
+                    has_ethic = ethic_fanatic_militarist
+                }
+            }
+            modifier = {
+                add = 0.1
+                exists = owner
+                owner = {
+                    used_naval_capacity_percent > 0.7
+                }
+            }
+            modifier = {
+                add = 0.1
+                exists = owner
+                owner = {
+                    used_naval_capacity_percent > 0.9
+                }
+            }
+        }
+        buildings = {
+            naval_logistics_office = {
+                base = 3
+            }
+            defense_grid = {
+                base = 0.05
+            }
+            starbase_fortifications = {
+                base = 0.05
+            }
+            communications_jammer = {
+                base = 0.05
+            }
+            curator_think_tank = {
+                base = 2
+            }
+            art_college = {
+                base = 2
+            }
+            nebula_refinery = {
+                base = 2
+            }
+            dathnak_embassy = {
+                base = 2
+            }
+            ice_mining_station = {
+                base = 2
+            }
+            dragon_hatchery = {
+                base = 2
+            }
+            hydroponics_bay = {
+                base = 2
+            }
+            climate_control = {
+                base = 2
+            }
+            space_production = {
+                base = 1
+            }
+            deep_space_black_site = {
+                base = 1
+            }
+            listening_post = {
+                base = 0.9
+            }
+            customs_office = {
+                base = 0.5
+            }
+            customs_office_criminal = {
+                base = 0.5
+            }
+            customs_office_gestalt = {
+                base = 0.5
+            }
+            transit_hub = {
+                base = 0.5
+            }
+        }
+        modules = {
+            anchorage = {
+                base = 1
+            }
+            solar_panel_network = {
+                base = 0.25
+            }
+            stellar_reducer = {
+                base = 1
+            }
+        }
+    }
+}

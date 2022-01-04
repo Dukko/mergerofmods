@@ -1,0 +1,63 @@
+building_phanon_hive_pool = {
+    base_buildtime = 900
+    can_build = no
+    category = amenity
+    allow = {
+        has_phanon_capital = yes
+    }
+    potential = {
+        NOT = {
+            has_global_flag = aot_phanon_content_OFF
+        }
+        exists = owner
+        owner = {
+            is_hive_empire = yes
+            has_technology = tech_phanon_hive_pool
+        }
+    }
+    destroy_trigger = {
+        owner = {
+            is_hive_empire = no
+        }
+    }
+    planet_modifier = {
+        job_phanon_broodmother_add = 4
+    }
+    prerequisites = {
+        tech_phanon_hive_pool
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 4000
+            minerals = 4000
+            aot_sr_runic_power = 600
+        }
+        upkeep = {
+            aot_sr_runic_power = 8
+        }
+    }
+    ai_weight = {
+        weight = 100
+        modifier = {
+            factor = 5
+            free_amenities < 2
+        }
+        modifier = {
+            factor = 0
+            count_owned_pop = {
+                limit = {
+                    OR = {
+                        is_unemployed = yes
+                        has_job = servant
+                    }
+                }
+                count < 1
+            }
+        }
+        modifier = {
+            factor = 0
+            has_building = building_phanon_hive_pool
+        }
+    }
+}

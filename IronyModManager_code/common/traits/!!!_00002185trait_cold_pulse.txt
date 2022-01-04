@@ -1,0 +1,44 @@
+trait_cold_pulse = {
+    cost = 1
+    potential_crossbreeding_chance = 1
+    allowed_archetypes = {
+        LITHOID
+    }
+    opposites = {
+        trait_melting
+        trait_pc_arid_preference
+        trait_pc_desert_preference
+        trait_pc_savannah_preference
+    }
+    allowed_planet_classes = {
+        pc_alpine
+        pc_arctic
+        pc_tundra
+        pc_continental
+        pc_ocean
+        pc_tropical
+        pc_gaia
+        pc_shattered_ring_habitable
+        pc_habitat
+    }
+    species_potential_add = {
+        exists = THIS
+        is_scope_type = species
+        NOR = {
+            ideal_planet_class = pc_arid
+            ideal_planet_class = pc_desert
+            ideal_planet_class = pc_savannah
+        }
+    }
+    modifier = {
+        pc_alpine_habitability = 0.5
+        pc_arctic_habitability = 0.5
+        pc_tundra_habitability = 0.5
+    }
+    species_class = {
+        SLCOD
+    }
+    slave_cost = {
+        energy = 150
+    }
+}

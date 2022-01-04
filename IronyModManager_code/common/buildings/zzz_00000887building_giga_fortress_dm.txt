@@ -1,0 +1,88 @@
+building_giga_fortress_dm = {
+    base_buildtime = 1200
+    add_to_first_building_slot = yes
+    can_be_ruined = no
+    can_be_disabled = no
+    can_demolish = no
+    position_priority = 100
+    planetary_ftl_inhibitor = yes
+    base_cap_amount = 1
+    category = army
+    allow = {
+        has_enigmatic_capital = yes
+    }
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = tech_giga_fortress_dm
+        }
+    }
+    planet_modifier = {
+        planet_amenities_add = 10
+        planet_housing_add = 10
+        planet_stability_add = 25
+    }
+    army_modifier = {
+        army_defense_damage_mult = 2.5
+        army_defense_health_mult = 2.5
+        army_defense_morale_mult = 2.5
+    }
+    resources = {
+        category = planet_buildings
+        produces = {
+            unity = 25
+            food = 25
+        }
+        cost = {
+            minerals = 20000
+            influence = 100
+            sr_dark_matter = 300
+            acot_sr_dark_energy = 300
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_fallen_empire = yes
+            }
+        }
+        job_acot_giga_fortress_operator_ancient_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        job_aot_dm_giga_fortress_operator_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        job_aot_dm_giga_fortress_operator_drone_add = 2
+    }
+    prerequisites = {
+        "tech_giga_fortress_dm"
+    }
+    upgrades = {
+        building_giga_fortress
+    }
+    ai_weight = {
+        weight = 15000
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = sr_dark_matter
+                    value <= 3
+                }
+            }
+        }
+    }
+}

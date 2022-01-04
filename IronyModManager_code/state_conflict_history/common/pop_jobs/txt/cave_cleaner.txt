@@ -8,9 +8,7 @@ cave_cleaner = {
         has_owner = yes
         is_sapient = yes
     }
-    possible = {
-        worker_job_check_trigger = yes
-    }
+    possible_precalc = can_fill_worker_job
     triggered_planet_modifier = {
         potential = {
             planet = {
@@ -50,20 +48,20 @@ cave_cleaner = {
         }
         modifier = {
             factor = 0
-            OR = {
-                has_trait = trait_holofrixigram
-                has_trait = trait_holofrixigram_2
-                has_trait = trait_holofrixigram_3
-            }
-            }
-        modifier = {
-            factor = 0
             NOT = {
                 planet = {
                     any_owned_pop = {
                         has_job = miner
                     }
                 }
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_trait = trait_holofrixigram
+                has_trait = trait_holofrixigram_2
+                has_trait = trait_holofrixigram_3
             }
         }
     }

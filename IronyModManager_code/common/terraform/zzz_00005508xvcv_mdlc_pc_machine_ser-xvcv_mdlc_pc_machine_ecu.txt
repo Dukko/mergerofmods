@@ -1,0 +1,17 @@
+terraform_link = {
+    to = "xvcv_mdlc_pc_machine_ecu"
+    from = "xvcv_mdlc_pc_machine_ser"
+    resources = {
+        category = terraforming
+        cost = {
+            energy = @xvcv_mdlc_world_machines_cost
+        }
+    }
+    duration = @xvcv_mdlc_world_machines_time
+    potential = {
+        has_ascension_perk = xvcv_mdlc_ap_planet_scale_machines
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

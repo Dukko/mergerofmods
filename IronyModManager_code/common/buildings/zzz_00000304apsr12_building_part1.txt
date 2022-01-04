@@ -1,0 +1,111 @@
+@apsr12part1cost_minerals = 2500
+@apsr12part1cost_time = 750
+@apsr12part1upkeep_energy = 5
+@apsr12part1upkeep_minerals = 2
+@apsr12part1upkeep_fake = 1
+@apsr12part1job = 1
+apsr12_building_part1 = {
+    base_buildtime = @apsr12part1cost_time
+    icon = apsr12_building_part1
+    base_cap_amount = 1
+    is_capped_by_modifier = no
+    category = government
+    can_demolish = no
+    position_priority = 49
+    allow = {
+        apsr_buildings_allow = yes
+    }
+    potential = {
+        has_modifier = "apsr12_planet_modifier"
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+                has_technology = tech_apsr12_building_part1
+            }
+        }
+        modifier = {
+            job_apsr12_manager_hive_add = @apsr12part1job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+                has_technology = tech_apsr12_building_part1
+            }
+        }
+        modifier = {
+            job_apsr12_manager_machine_add = @apsr12part1job
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                has_technology = tech_apsr12_building_part1
+            }
+        }
+        modifier = {
+            job_apsr12_manager_normal_add = @apsr12part1job
+        }
+    }
+    resources = {
+        category = planet_apsr_buildings
+        cost = {
+            minerals = @apsr12part1cost_minerals
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr12_building_part1
+                }
+            }
+            energy = @apsr12part1upkeep_energy
+            minerals = @apsr12part1upkeep_minerals
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    NOT = {
+                        has_technology = tech_apsr12_building_part1
+                    }
+                }
+            }
+            energy = @apsr12part1upkeep_fake
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr12_building_part1
+                }
+            }
+            apsr_knowledge = 0.3
+        }
+    }
+    upgrades = {
+        "apsr12_building_part2"
+    }
+    prerequisites = {
+        "tech_apsr12_building_part1"
+    }
+    show_tech_unlock_if = {
+        always = no
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                NOT = {
+                    has_technology = tech_apsr12_building_part1
+                }
+            }
+        }
+        text = apsr_building_fake_desc
+    }
+}

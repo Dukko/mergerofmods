@@ -1,0 +1,42 @@
+@terraforming_cost_shroud = 1000
+@terraforming_durantion_shroud = 3600
+terraform_link = {
+    from = pc_lichen
+    to = pc_pdshroud
+    resources = {
+        category = terraforming
+        cost = {
+            sr_zro = @terraforming_cost_shroud
+        }
+    }
+    duration = @terraforming_durantion_shroud
+    potential = {
+        has_ascension_perk = ap_transcendence
+    }
+    condition = {
+        has_ascension_perk = ap_transcendence
+    }
+    effect = {
+        from = {
+            remove_modifier = pdlichen
+            remove_deposit = d_lichen_forest
+            add_deposit = d_pdshroud
+        }
+    }
+    ai_weight = {
+        weight = 1
+        modifier = {
+            factor = 0
+            NOT = {
+                has_origin = origin_pd_shroud
+            }
+        }
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = sr_zro
+                value < 500
+            }
+        }
+    }
+}

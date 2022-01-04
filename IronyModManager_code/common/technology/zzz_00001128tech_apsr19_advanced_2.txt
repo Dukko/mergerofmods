@@ -1,0 +1,60 @@
+@apsr_advanced_2_cost = 50000
+@apsr_advanced_2_weight = 3
+tech_apsr19_advanced_2 = {
+    icon = tech_apsr19_advanced_1
+    cost = @apsr_advanced_2_cost
+    area = society
+    tier = 4
+    category = {
+        biology
+    }
+    prerequisites = {
+        "tech_apsr19_advanced_1"
+    }
+    weight = @apsr_advanced_2_weight
+    is_rare = yes
+    prereqfor_desc = {
+        custom = {
+            title = "TECH_APSR_ADVANCED_TITLE"
+            desc = "TECH_APSR_ADVANCED_DESC"
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_deposit = apsr19_deposit
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                OR = {
+                    has_country_flag = apsr19_event19003_fired
+                    has_country_flag = apsr19_event19006_fired
+                }
+            }
+        }
+        modifier = {
+            factor = 5
+            has_origin = apsr_origin_unique_capital
+        }
+        modifier = {
+            factor = 0
+            has_global_flag = apsr_advanced_count_1
+        }
+        modifier = {
+            factor = 0.5
+            has_global_flag = apsr_advanced_factor_050
+        }
+        modifier = {
+            factor = 2
+            has_global_flag = apsr_advanced_factor_200
+        }
+    }
+    ai_weight = {
+        factor = 190
+    }
+}

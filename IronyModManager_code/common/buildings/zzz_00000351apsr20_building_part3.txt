@@ -1,0 +1,111 @@
+@apsr20part3cost_minerals = 10000
+@apsr20part3cost_time = 1500
+@apsr20part3upkeep_energy = 7
+@apsr20part3upkeep_minerals = 5
+@apsr20part3upkeep_fake = 3
+@apsr20part3job = 15
+apsr20_building_part3 = {
+    base_buildtime = @apsr20part3cost_time
+    icon = apsr20_building_part3
+    is_capped_by_modifier = no
+    category = unity
+    can_build = no
+    can_demolish = no
+    position_priority = 49
+    allow = {
+        has_major_upgraded_capital = yes
+    }
+    potential = {
+        has_modifier = "apsr20_planet_modifier"
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+                has_technology = tech_apsr20_building_part3
+            }
+        }
+        modifier = {
+            job_apsr20_servant_hive_add = @apsr20part3job
+            job_apsr20_servant_hive_per_pop = 0.1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+                has_technology = tech_apsr20_building_part3
+            }
+        }
+        modifier = {
+            job_apsr20_servant_machine_add = @apsr20part3job
+            job_apsr20_servant_machine_per_pop = 0.1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                has_technology = tech_apsr20_building_part3
+            }
+        }
+        modifier = {
+            job_apsr20_servant_normal_add = @apsr20part3job
+            job_apsr20_servant_normal_per_pop = 0.1
+        }
+    }
+    resources = {
+        category = planet_apsr_buildings
+        cost = {
+            minerals = @apsr20part3cost_minerals
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr20_building_part3
+                }
+            }
+            energy = @apsr20part3upkeep_energy
+            minerals = @apsr20part3upkeep_minerals
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    NOT = {
+                        has_technology = tech_apsr20_building_part3
+                    }
+                }
+            }
+            energy = @apsr20part3upkeep_fake
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr20_building_part3
+                }
+            }
+            apsr_knowledge = 3
+        }
+    }
+    prerequisites = {
+        "tech_apsr20_building_part3"
+    }
+    show_tech_unlock_if = {
+        always = no
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                NOT = {
+                    has_technology = tech_apsr20_building_part3
+                }
+            }
+        }
+        text = apsr_building_fake_desc
+    }
+}

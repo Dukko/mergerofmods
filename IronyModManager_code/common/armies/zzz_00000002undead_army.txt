@@ -1,0 +1,46 @@
+undead_army = {
+    damage = 1
+    health = 1.1
+    has_morale = no
+    collateral_damage = 1.25
+    morale_damage = 1.6
+    war_exhaustion = 0.1
+    time = 30
+    icon = GFX_army_type_undead
+    pop_limited = no
+    disband_if_species_lacks_rights = no
+    prerequisites = {
+        "tech_assault_armies"
+    }
+    resources = {
+        category = armies
+        cost = {
+            energy = 100
+        }
+        upkeep = {
+            energy = 0.75
+        }
+    }
+    show_tech_unlock_if = {
+        is_reanimator_empire = yes
+    }
+    potential = {
+        from = {
+            NOR = {
+                has_trait = "trait_mechanical"
+                has_trait = "trait_machine_unit"
+                is_sapient = no
+            }
+        }
+        planet = {
+            has_active_building = building_dread_encampment
+            num_assigned_jobs = {
+                job = necromancer
+                value >= 1
+            }
+        }
+        owner = {
+            is_reanimator_empire = yes
+        }
+    }
+}

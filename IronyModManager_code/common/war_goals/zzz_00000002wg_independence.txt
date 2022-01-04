@@ -1,0 +1,183 @@
+wg_independence = {
+    casus_belli = cb_subject
+    hide_if_no_cb = yes
+    set_defender_wargoal = wg_assert_overlordship
+    potential = {
+        always = yes
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = cannot_use_against_emperor
+            OR = {
+                from = {
+                    is_galactic_emperor = no
+                }
+                is_galactic_community_member = no
+            }
+        }
+        custom_tooltip = {
+            fail_text = pax_galactica_active
+            NAND = {
+                is_active_resolution = resolution_emperor_pax_galactica
+                is_galactic_community_member = yes
+                from = {
+                    is_galactic_community_member = yes
+                }
+            }
+        }
+    }
+    allowed_peace_offers = {
+        status_quo
+        surrender
+        demand_surrender
+    }
+    on_status_quo = {
+        custom_tooltip = wg_independence_status_quo
+        hidden_effect = {
+            set_subject_of = {
+                who = none
+            }
+            if = {
+                limit = {
+                    has_federation = yes
+                    federation = {
+                        has_federation_type = vf_ef_federation
+                    }
+                }
+                leave_alliance = {
+                    override_requirements = yes
+                }
+            }
+        }
+    }
+    on_accept = {
+        custom_tooltip = wg_independence_accept
+        hidden_effect = {
+            set_subject_of = {
+                who = none
+            }
+            if = {
+                limit = {
+                    has_federation = yes
+                    federation = {
+                        has_federation_type = vf_ef_federation
+                    }
+                }
+                leave_alliance = {
+                    override_requirements = yes
+                }
+            }
+            every_system_within_border = {
+                limit = {
+                    from = {
+                        has_claim = prev
+                    }
+                }
+                remove_claims = {
+                    who = from
+                }
+            }
+        }
+    }
+    on_wargoal_set = {
+        every_system_within_border = {
+            limit = {
+                NOT = {
+                    from = {
+                        has_claim = prev
+                    }
+                }
+            }
+            add_claims = {
+                who = from
+            }
+        }
+        if = {
+            limit = {
+                from = {
+                    CmtTriggerIsKhanCountry = yes
+                }
+            }
+            country_event = {
+                id = marauder.554
+            }
+            if = {
+                limit = {
+                    any_war = {
+                        is_war_participant = {
+                            who = root
+                            side = attackers
+                        }
+                        any_attacker = {
+                            NOT = {
+                                is_same_empire = root
+                            }
+                            prev = {
+                                using_war_goal = {
+                                    type = "wg_independence"
+                                    owner = prev
+                                }
+                            }
+                        }
+                    }
+                }
+                random_war = {
+                    limit = {
+                        is_war_participant = {
+                            who = root
+                            side = attackers
+                        }
+                        any_attacker = {
+                            prev = {
+                                using_war_goal = {
+                                    type = "wg_independence"
+                                    owner = prev
+                                }
+                            }
+                        }
+                        any_defender = {
+                            is_same_empire = from
+                        }
+                    }
+                    every_attacker = {
+                        limit = {
+                            is_subject = yes
+                            overlord = {
+                                is_same_empire = from
+                            }
+                        }
+                        if = {
+                            limit = {
+                                has_modifier = "satrapy_of_horde"
+                            }
+                            country_event = {
+                                id = marauder.554
+                            }
+                        }
+                        else = {
+                            set_subject_of = {
+                                who = none
+                            }
+                        }
+                    }
+                    every_defender = {
+                        limit = {
+                            NOR = {
+                                is_same_empire = from
+                                has_origin = "origin_khan_successor"
+                                is_subject_type = war_satrapy
+                            }
+                            CmtTriggerIsMarauder = no
+                        }
+                        prev = {
+                            remove_war_participant = prev
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ai_weight = {
+        weight = 100
+    }
+}

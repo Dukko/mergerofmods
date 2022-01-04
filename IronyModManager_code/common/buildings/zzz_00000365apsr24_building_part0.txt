@@ -1,0 +1,45 @@
+@apsr24part1cost_minerals = 200
+@apsr24part1cost_time = 100
+apsr24_building_part0 = {
+    base_buildtime = @apsr24part1cost_time
+    icon = apsr24_building_part1
+    is_capped_by_modifier = no
+    category = resource
+    can_build = no
+    can_demolish = no
+    position_priority = 48
+    allow = {
+        apsr_buildings_allow = yes
+    }
+    potential = {
+        has_modifier = "apsr24_planet_modifier"
+        exists = owner
+        owner = {
+            check_variable = {
+                which = apsr24_powerplant_count
+                value < 4
+            }
+            has_technology = tech_apsr24_building_part1
+        }
+    }
+    resources = {
+        category = planet_apsr_buildings
+        cost = {
+            minerals = @apsr24part1cost_minerals
+        }
+        upkeep = {
+            minerals = 0
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                NOT = {
+                    has_technology = tech_apsr24_building_part1
+                }
+            }
+        }
+        text = apsr_building_fake_desc
+    }
+}

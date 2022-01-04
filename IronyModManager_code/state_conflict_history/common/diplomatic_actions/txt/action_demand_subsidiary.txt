@@ -6,7 +6,7 @@ action_demand_subsidiary = {
     diplo_view_acceptance_icon = yes
     should_notify_all_communications = no
     requires_recipient_independence = no
-    AI_acceptance_base_value = -50
+    AI_acceptance_base_value = -100
     action_type = aggressive
     potential = {
         is_megacorp = yes
@@ -44,6 +44,7 @@ action_demand_subsidiary = {
                 has_been_declared_crisis = no
             }
         }
+        get_border_test = yes
     }
     proposable = {
         if = {
@@ -56,6 +57,18 @@ action_demand_subsidiary = {
             }
             hidden_trigger = {
                 always = yes
+            }
+        }
+        else_if = {
+            limit = {
+                AND = {
+                    has_global_flag = has_exalted_domination_mod
+                    has_ascension_perk = ap_shared_destiny
+                }
+            }
+            relative_power = {
+                who = from
+                value >= equivalent
             }
         }
         else = {

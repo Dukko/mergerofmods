@@ -1,0 +1,81 @@
+ship_section_template = {
+    key = "SIGMA_AOT_GATEKEEPER_WARDEN_MID_KEY"
+    ship_size = aot_gatekeeper
+    fits_on_slot = mid
+    should_draw_components = yes
+    entity = "aot_gatekeeper_mid_entity"
+    icon = "GFX_ship_part_core_mid"
+    prerequisites = {
+        tech_gatekeepers_sigma
+    }
+    component_slot = {
+        name = "LARGE_GUN_01"
+        template = "invisible_large_turret"
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_02"
+        template = "invisible_large_turret"
+        locatorname = "large_gun_02"
+    }
+    component_slot = {
+        name = "LARGE_GUN_03"
+        template = "invisible_large_turret"
+        locatorname = "large_gun_03"
+    }
+    component_slot = {
+        name = "LARGE_GUN_04"
+        template = "invisible_large_turret"
+        locatorname = "large_gun_04"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_01"
+        template = "invisible_missile_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_02"
+        template = "invisible_missile_turret"
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_03"
+        template = "invisible_missile_turret"
+        locatorname = "medium_gun_03"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_04"
+        template = "invisible_missile_turret"
+        locatorname = "medium_gun_04"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_05"
+        template = "invisible_missile_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_06"
+        template = "invisible_missile_turret"
+        locatorname = "medium_gun_02"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_07"
+        template = "invisible_missile_turret"
+        locatorname = "medium_gun_03"
+    }
+    component_slot = {
+        name = "MEDIUM_GUN_08"
+        template = "invisible_missile_turret"
+        locatorname = "medium_gun_04"
+    }
+    large_utility_slots = 10
+    aux_utility_slots = 2
+    resources = {
+        category = ship_sections
+        cost = {
+            acot_sr_stellarite = 50
+            sr_dark_matter = 200
+            acot_sr_dark_energy = 200
+        }
+    }
+}

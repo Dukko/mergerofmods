@@ -46,6 +46,14 @@ ap_technological_ascendancy = {
             has_ethic = ethic_fanatic_materialist
         }
         modifier = {
+            factor = 0.1
+            rusher = yes
+        }
+        modifier = {
+            factor = 0
+            lategame = yes
+        }
+        modifier = {
             factor = 2
             num_ascension_perks = 0
         }

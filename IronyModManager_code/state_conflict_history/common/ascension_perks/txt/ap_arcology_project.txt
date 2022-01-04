@@ -27,44 +27,41 @@ ap_arcology_project = {
         custom_tooltip = "decision_arcology_project_effects"
     }
     ai_weight = {
-        factor = 40
+        factor = 1000
         modifier = {
-            factor = 0.5
-            num_owned_planets > 10
-        }
-        modifier = {
-            factor = 0.5
-            num_owned_planets > 20
-        }
-        modifier = {
-            factor = 0.5
-            num_owned_planets > 30
-        }
-        modifier = {
-            factor = 0.5
-            num_owned_planets > 40
-        }
-        modifier = {
-            factor = 0.5
-            num_owned_planets > 50
-        }
-        modifier = {
-            factor = 0
-            num_owned_planets < 5
-        }
-        modifier = {
-            factor = 0
-            capital_scope = {
-                OR = {
-                    is_planet_class = pc_relic
-                    is_planet_class = pc_city
-                    habitable_structure = yes
-                    has_modifier = resort_colony
-                    has_modifier = penal_colony
-                    has_modifier = slave_colony
-                    has_modifier = pm_wenkwort_custodian
-                }
+            factor = 10
+            resource_stockpile_compare = {
+                resource = minerals
+                value > 8000
             }
+            nor = {
+                has_ascension_perk = ap_mind_over_matter
+                has_ascension_perk = ap_the_flesh_is_weak
+                has_ascension_perk = ap_engineered_evolution
+            }
+        }
+        modifier = {
+            factor = 200
+            or = {
+                has_ascension_perk = ap_transcendence
+                has_ascension_perk = ap_synthetic_evolution
+                has_ascension_perk = ap_evolutionary_mastery
+            }
+        }
+        modifier = {
+            factor = 0
+            or = {
+                has_origin = origin_remnants
+                has_ecumen = yes
+            }
+        }
+        modifier = {
+            factor = 50
+            is_pacifist = yes
+        }
+        modifier = {
+            factor = 5
+            num_pops > 300
         }
     }
 }

@@ -1,0 +1,66 @@
+tech_phanon_super_assembly = {
+    cost = @acot_tier10cost2
+    area = engineering
+    tier = 9
+    category = {
+        industry
+    }
+    prerequisites = {
+        tech_super_assembly_ae
+        tech_civil_phanon_application
+    }
+    weight = @tier5weight1
+    potential = {
+        NOR = {
+            is_hive_empire = yes
+            has_global_flag = aot_phanon_content_OFF
+        }
+        has_technology = tech_civil_phanon_application
+    }
+    feature_flags = {
+        add_advanced_traits
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            has_policy_flag = robots_outlawed
+        }
+        modifier = {
+            factor = 2
+            has_origin = origin_mechanists
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+                has_level > 2
+            }
+        }
+    }
+    ai_weight = {
+        weight = 2
+        modifier = {
+            factor = 2
+            is_materialist = yes
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_ai_personality_behaviour = robot_exploiter
+                has_ai_personality_behaviour = robot_liberator
+            }
+        }
+        modifier = {
+            factor = 2
+            has_origin = origin_mechanists
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+}

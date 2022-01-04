@@ -11,7 +11,7 @@ elven_civ1 = {
         name = "Ayleid"
         plural = "Ayleids"
         adjective = "Ayleian"
-        name_list = "eos_namelist_elf_ayleid"
+        name_list = "ELVEN1"
         trait = "trait_elven_true"
         trait = "trait_charismatic"
         trait = "trait_talented"
@@ -40,7 +40,7 @@ elven_civ1 = {
     empire_flag = {
         icon = {
             category = "elven"
-            file = "elven_1.dds"
+            file = "eos_flag_ayleid.dds"
         }
         background = {
             category = "backgrounds"

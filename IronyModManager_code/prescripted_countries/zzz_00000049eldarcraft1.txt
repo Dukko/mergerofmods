@@ -1,0 +1,71 @@
+eldarcraft1 = {
+    playable = has_ancrel
+    ship_prefix = ""
+    species = {
+        class = ELDR
+        portrait = eldar
+        name = "Eldar"
+        plural = "Eldar"
+        adjective = "Eldar"
+        species_bio = "The Eldar are an ancient alien race whose vast empire once expanded the width and breadth of the known galaxy. Their empire was without equal, and they counted themselves masters of the stars. But millennia ago, their overweening pride and their fall into hedonistic practices led to a cataclysm that all but eradicated their kind and led to the birth of the Chaos God Slaanesh. Despite their boundless power, the heart of their civilisation was torn out by this catastrophe of their own making, forcing the surviving Eldar to flee upon gigantic starships called Craftworlds. Now they cling to survival by a thread, fighting the horrors of the galaxy with ritualised discipline and consummate skill. Though highly advanced and feared across the galaxy, the Eldar are a dying race - a shadow of their former glory - their race teeters on the brink of annihilation."
+        name_list = ELDR1
+        trait = trait_eldar_age
+        trait = trait_venerable
+        trait = trait_intelligent
+        trait = trait_slow_breeders
+        trait = trait_nonadaptive
+    }
+    name = "Ulthwé Craftworld"
+    adjective = "Ulthwé"
+    planet_name = "Ulthanash Shelwé"
+    planet_class = pc_arid
+    system_name = "Eye of Terror"
+    initializer = eldar_system
+    graphical_culture = avian_01
+    city_graphical_culture = avian_01
+    advisor_voice_type = l_spiritualist
+    authority = auth_imperial
+    government = gov_enlightened_monarchy
+    civics = {
+        "civic_philosopher_king"
+        "civic_environmentalist"
+    }
+    ethic = ethic_xenophobe
+    ethic = ethic_fanatic_spiritualist
+    room = personality_honorbound_warriors_room
+    spawn_enabled = yes
+    ignore_portrait_duplication = no
+    origin = origin_remnants
+    empire_flag = {
+        icon = {
+            category = "pointy"
+            file = "flag_pointy_15.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "circle.dds"
+        }
+        colors = {
+            "black"
+            "beige"
+            "null"
+            "null"
+        }
+    }
+    ruler = {
+        leader_class = ruler
+        gender = male
+        name = "Eldrad Ulthran"
+        portrait = eldar_male_01
+        texture = 1
+        hair = 5
+        clothes = 0
+        ruler_title = "Farseer"
+        ruler_title_female = "Farseer"
+        heir_title = "Seer"
+        heir_title_female = "Seer"
+    }
+    flags = {
+        is_silfae_eldar
+    }
+}

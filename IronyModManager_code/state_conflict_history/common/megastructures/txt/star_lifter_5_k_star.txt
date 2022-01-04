@@ -1,0 +1,196 @@
+star_lifter_5_k_star = {
+    entity = "starlifter_05_entity"
+    construction_entity = "starlifter_05_construction_entity"
+    portrait = "GFX_megastructure_star_lifters"
+    upgrade_from = {
+        star_lifter_4_k_star
+    }
+    ai_weight = {
+        factor = 10
+    }
+    build_time = @starlifter_p5_buildtime_k_star
+    resources = {
+        category = megastructures
+        cost = {
+            alloys = @starlifter_p5_cost_alloys_k_star
+        }
+        produces = {
+            minerals = @starlifter_p5_produces_minerals_k_star
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = tech_stellar_manip_retrofit
+                }
+            }
+            sr_stellar_plasma = @lifter_p5_produces_plasma_k_star
+        }
+        upkeep = {
+            energy = @starlifter_p5_upkeep_energy_k_star
+        }
+    }
+    potential = {
+        NOT = {
+            has_global_flag = lifters_disabled
+        }
+    }
+    possible = {
+        from = {
+            has_technology = giga_tech_star_lifter
+        }
+    }
+    on_build_complete = {
+        save_event_target_as = giga_system
+        fromfrom.planet = {
+            save_event_target_as = giga_planet
+        }
+        from = {
+            country_event = {
+                id = giga_dialog.1605
+            }
+            set_country_flag = has_built_or_repaired_gigastructure
+            if = {
+                limit = {
+                    NOR = {
+                        has_global_flag = giga_achievements_disabled
+                        has_country_flag = giga_achievement_79
+                    }
+                }
+                set_country_flag = giga_achievement_79
+                set_timed_country_flag = {
+                    flag = giga_achievement_79_notification
+                    days = 30
+                }
+                giga_achievement_sound = yes
+            }
+        }
+        every_system_planet = {
+            if = {
+                limit = {
+                    OR = {
+                        has_modifier = terraforming_candidate
+                        has_modifier = pdterra_storm
+                        has_modifier = pdterra_glacio
+                        has_modifier = pdterra_lanthanide
+                        has_modifier = pdterra_karst
+                        has_modifier = pdterra_geothermal
+                        has_modifier = pdterra_superhabitable
+                        has_modifier = pdterra_salt
+                        has_modifier = pdterra_primal
+                        has_modifier = pdterra_aquatic
+                        has_modifier = pdterra_lichen
+                        has_modifier = pdterra_megaflora
+                        has_modifier = pdterra_biolumen
+                        has_modifier = pdterra_aquifer
+                        has_modifier = pdterra_reef
+                        has_modifier = pdterra_coral
+                        has_modifier
+                        terraforming_ammonia
+                        has_modifier
+                        terraforming_sulfur
+                        has_modifier
+                        terraforming_ash
+                        has_modifier
+                        pdterra_tidallocked
+                    }
+                }
+                remove_modifier = terraforming_candidate
+                remove_modifier = pdterra_storm
+                remove_modifier = pdterra_glacio
+                remove_modifier = pdterra_lanthanide
+                remove_modifier = pdterra_karst
+                remove_modifier = pdterra_geothermal
+                remove_modifier = pdterra_superhabitable
+                remove_modifier = pdterra_salt
+                remove_modifier = pdterra_primal
+                remove_modifier = pdterra_aquatic
+                remove_modifier = pdterra_lichen
+                remove_modifier = pdterra_megaflora
+                remove_modifier = pdterra_biolumen
+                remove_modifier = pdterra_aquifer
+                remove_modifier = pdterra_reef
+                remove_modifier = pdterra_coral
+                remove_modifier = terraforming_ammonia
+                remove_modifier = terraforming_sulfur
+                remove_modifier = terraforming_ash
+                remove_modifier = pdterra_tidallocked
+            }
+            if = {
+                limit = {
+                    is_planet_class = pc_barren
+                }
+                change_pc = pc_barren_cold
+            }
+            else_if = {
+                limit = {
+                    OR = {
+                        is_planet_class = pc_molten
+                        is_planet_class = pc_volcanic
+                        is_planet_class = pc_toxic
+                        is_planet_class = pc_hothouse
+                        is_planet_class = pc_tidallylocked_barren
+                    }
+                }
+                if = {
+                    limit = {
+                        is_planet_class = pc_tidallylocked_barren
+                    }
+                    remove_deposit = d_physics_5
+                }
+                random_list = {
+                    95 = {
+                        change_pc = pc_frozen
+                    }
+                    5 = {
+                        modifier = {
+                            factor = 0
+                            NOR = {
+                                is_planet_class = pc_molten
+                                is_planet_class = pc_volcanic
+                            }
+                        }
+                        change_pc = pc_rogue_barren
+                        clear_planet_modifiers = yes
+                        clear_deposits = yes
+                        add_deposit = d_physics_5
+                        add_modifier = {
+                            modifier = pdterra_rogue
+                        }
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    OR = {
+                        is_planet_class = pc_melted_frozen
+                    }
+                }
+                random_list = {
+                    95 = {
+                        change_pc = pc_frozen
+                    }
+                    5 = {
+                        change_pc = pc_subglacial
+                    }
+                }
+            }
+            else_if = {
+                limit = {
+                    OR = {
+                        is_planet_class = pc_hot_gas_giant
+                        is_planet_class = pc_gas_giant
+                    }
+                }
+                random_list = {
+                    50 = {
+                        change_pc = pc_cold_gas_giant
+                    }
+                    50 = {
+                        change_pc = pc_gas_giant
+                    }
+                }
+            }
+        }
+    }
+}

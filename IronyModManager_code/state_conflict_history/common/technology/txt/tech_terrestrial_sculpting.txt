@@ -25,6 +25,10 @@ tech_terrestrial_sculpting = {
         }
         modifier = {
             factor = 1.25
+            has_trait = trait_aquatic
+        }
+        modifier = {
+            factor = 1.25
             research_leader = {
                 area = society
                 has_trait = "leader_trait_expertise_new_worlds"
@@ -47,6 +51,38 @@ tech_terrestrial_sculpting = {
                 area = society
                 has_trait = "leader_trait_expertise_new_worlds"
             }
+        }
+        modifier = {
+            factor = 2
+            is_xenophobe = yes
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_origin = origin_shattered_ring
+                has_origin = origin_void_dwellers
+            }
+            is_ai = yes
+        }
+        modifier = {
+            factor = 5
+            any_system_within_border = {
+                any_system_planet = {
+                    is_colonizable = yes
+                    habitability = {
+                        who = root
+                        value < 0.5
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1000
+            has_trait = trait_aquatic
+        }
+        modifier = {
+            factor = 2
+            is_ai = no
         }
     }
 }

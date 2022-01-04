@@ -1,0 +1,31 @@
+@colossus_power_4 = -500
+@colossus_cost4 = 240
+utility_component_template = {
+    key = "COLOSSUS_SHIP_THRUSTER_4"
+    size = small
+    icon = "GFX_ship_part_thruster_4"
+    icon_frame = 1
+    power = @colossus_power_4
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @colossus_cost4
+        }
+    }
+    modifier = {
+        ship_base_speed_mult = 0.75
+    }
+    prerequisites = {
+        "tech_thrusters_4"
+    }
+    component_set = "thruster_components"
+    size_restriction = {
+        colossus
+        juggernaut
+        star_eater
+    }
+    upgrades_to = "COLOSSUS_ESC_THRUSTERS_5"
+    ai_weight = {
+        weight = 4
+    }
+}

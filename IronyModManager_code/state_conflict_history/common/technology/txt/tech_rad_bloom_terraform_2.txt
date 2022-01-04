@@ -1,0 +1,63 @@
+tech_rad_bloom_terraform_2 = {
+    weight = @tier2weight3
+    icon = tech_rad_bloom_terraform_1
+    cost = @tier2cost3
+    area = society
+    tier = 2
+    category = {
+        new_worlds
+    }
+    prerequisites = {
+        "tech_rad_bloom_farm"
+        "tech_terrestrial_sculpting"
+    }
+    is_rare = yes
+    is_reverse_engineerable = no
+    start_tech = no
+    modifier = {
+        custom_tooltip = RADBLOOM_TERRAFORM
+    }
+    weight_modifier = {
+        factor = 10
+        modifier = {
+            factor = 0
+            NOT = {
+                owner = {
+                    has_trait = trait_pc_irradiated_preference
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+    ai_weight = {
+        weight = 50000
+        factor = 5
+        modifier = {
+            factor = 125
+            always = yes
+        }
+        modifier = {
+            factor = 50
+            has_technology = tech_energy_torpedoes_2
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_new_worlds"
+            }
+        }
+    }
+}

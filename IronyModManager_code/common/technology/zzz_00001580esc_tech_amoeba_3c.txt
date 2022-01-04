@@ -1,0 +1,79 @@
+esc_tech_amoeba_3c = {
+    area = engineering
+    tier = 5
+    cost = @tier5cost3
+    weight = @tier5weight3
+    category = {
+        voidcraft
+    }
+    prerequisites = {
+        "esc_tech_amoeba_2"
+        "esc_tech_new_age_warfare"
+    }
+    ai_update_type = military
+    is_rare = yes
+    is_reverse_engineerable = no
+    gateway = ESC_AMOEBA_STRIKECRAFT_CYBER
+    potential = {
+        NOT = {
+            has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_creature_weapons_forbidden
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            ESC_TRIGGER_may_research_cybernetic_amoeba = no
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = @federation_perk_factor
+            has_federation = yes
+            federation = {
+                has_federation_perk = rare_tech_boost
+                any_member = {
+                    has_technology = esc_tech_amoeba_3c
+                }
+            }
+        }
+    }
+    ai_weight = {
+        factor = @ESC_AI_tech_weight_multiplier
+        modifier = {
+            factor = 0
+            ESC_TRIGGER_may_research_cybernetic_amoeba = no
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = @federation_perk_factor
+            has_federation = yes
+            federation = {
+                has_federation_perk = rare_tech_boost
+                any_member = {
+                    has_technology = esc_tech_amoeba_3c
+                }
+            }
+        }
+    }
+}

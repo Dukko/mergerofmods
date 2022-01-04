@@ -1,0 +1,84 @@
+esc_building_zro_distillery = {
+    base_buildtime = 360
+    base_cap_amount = 1
+    icon = esc_building_zro_distillery
+    category = manufacturing
+    potential = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+        NOT = {
+            has_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden
+        }
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 400
+            rare_crystals = 30
+            exotic_gases = 30
+            volatile_motes = 30
+        }
+        upkeep = {
+            energy = 5
+            rare_crystals = @ESC_job_upkeep_secondary_resource
+            exotic_gases = @ESC_job_upkeep_secondary_resource
+            volatile_motes = @ESC_job_upkeep_secondary_resource
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_esc_zro_distiller_add = 2
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = job_esc_zro_distiller_effect_desc
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_esc_zro_distiller_drone_add = 2
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = job_esc_zro_distiller_drone_effect_desc
+    }
+    prerequisites = {
+        "esc_tech_zro_distilleries"
+    }
+    ai_resource_production = {
+        sr_zro = 4
+        trigger = {
+            always = yes
+        }
+    }
+}

@@ -1,0 +1,51 @@
+building_ae_clone_vats = {
+    base_buildtime = 360
+    can_build = no
+    category = government
+    prerequisites = {
+        tech_ae_clone_vats
+    }
+    allow = {
+        has_ascended_capital = yes
+    }
+    show_tech_unlock_if = {
+        owner = {
+            has_ascension_perk = ap_evolutionary_mastery
+        }
+    }
+    upgrades = {
+        building_stellarite_clone_vats
+    }
+    planet_modifier = {
+        pop_growth_speed = 2
+    }
+    resources = {
+        category = planet_buildings
+        produces = {
+            food = 50
+        }
+        cost = {
+            minerals = 50
+            sr_dark_matter = 350
+            acot_sr_dark_energy = 350
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    is_ai = no
+                }
+            }
+            sr_dark_matter = 10
+            acot_sr_dark_energy = 10
+        }
+    }
+    ai_weight = {
+        weight = 100
+        modifier = {
+            factor = 0
+            OR = {
+                has_building = building_ae_clone_vats
+            }
+        }
+    }
+}

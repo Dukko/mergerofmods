@@ -11,9 +11,7 @@ cave_cleaner_gestalt = {
         is_being_assimilated = no
         is_sapient = yes
     }
-    possible = {
-        drone_job_check_trigger = yes
-    }
+    possible_precalc = can_fill_drone_job
     triggered_planet_modifier = {
         potential = {
             planet = {
@@ -36,14 +34,6 @@ cave_cleaner_gestalt = {
     weight = {
         weight = @simple_drone_job_weight
         modifier = {
-            factor = 0
-            OR = {
-                has_trait = trait_holofrixigram
-                has_trait = trait_holofrixigram_2
-                has_trait = trait_holofrixigram_3
-            }
-        }
-        modifier = {
             factor = 10
             planet = {
                 any_owned_pop = {
@@ -63,6 +53,14 @@ cave_cleaner_gestalt = {
                         has_job = mining_drone
                     }
                 }
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_trait = trait_holofrixigram
+                has_trait = trait_holofrixigram_2
+                has_trait = trait_holofrixigram_3
             }
         }
     }

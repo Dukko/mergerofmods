@@ -9,8 +9,11 @@ patrol_drone = {
         is_being_assimilated = no
         is_sapient = yes
     }
+    possible_precalc = can_fill_drone_job
     possible = {
-        drone_job_check_trigger = yes
+        NOT = {
+            has_trait = trait_nerve_stapled
+        }
     }
     resources = {
         category = planet_jobs
@@ -30,13 +33,6 @@ patrol_drone = {
             factor = 50
             planet = {
                 planet_crime > 22
-            }
-        }
-        modifier = {
-            weight = 20
-            exists = owner
-            owner = {
-                is_ai = yes
             }
         }
         modifier = {

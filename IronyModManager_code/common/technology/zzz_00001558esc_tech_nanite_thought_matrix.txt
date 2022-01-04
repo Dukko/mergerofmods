@@ -1,0 +1,22 @@
+esc_tech_nanite_thought_matrix = {
+    area = physics
+    tier = 5
+    cost = @tier5cost3
+    category = {
+        computing
+    }
+    ai_update_type = military
+    prerequisites = {
+        "esc_tech_synthetic_lifeform_studies"
+    }
+    weight = 0
+    is_rare = yes
+    is_reverse_engineerable = no
+    prereqfor_desc = {
+        hide_prereq_for_desc = component
+        custom = {
+            title = "ESC_TECH_UNLOCK_COMBAT_COMPUTERS_NANITE_TITLE"
+            desc = "ESC_TECH_UNLOCK_COMBAT_COMPUTERS_NANITE_DESC"
+        }
+    }
+}

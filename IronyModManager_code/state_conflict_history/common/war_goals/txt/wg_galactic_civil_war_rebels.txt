@@ -1,0 +1,77 @@
+wg_galactic_civil_war_rebels = {
+    casus_belli = cb_event
+    cede_claims = no
+    allowed_peace_offers = {
+        status_quo
+        surrender
+        demand_surrender
+    }
+    war_exhaustion = 0.25
+    potential = {
+        always = no
+    }
+    possible = {
+        always = yes
+    }
+    on_accept = {
+        custom_tooltip = wg_galactic_civil_war_rebels_accept
+        hidden_effect = {
+            save_event_target_as = rebel_leader
+            random_playable_country = {
+                limit = {
+                    is_galactic_emperor = yes
+                }
+                save_event_target_as = gal_emperor
+                country_event = {
+                    id = emperor.202
+                }
+                restore_galactic_community_leader_backup_data = yes
+                set_galactic_emperor = no
+            }
+            set_council_size = 0
+            remove_global_flag = galactic_council_formed
+            cancel_resolution = resolution_galacticreforms_form_council
+            set_country_flag = sic_semper_tyrannis_achievement
+            federation = {
+                every_member = {
+                    country_event = {
+                        id = emperor.200
+                    }
+                    leave_alliance = {
+                        override_requirements = yes
+                    }
+                    remove_country_flag = empire_rebel
+                    add_to_galactic_community = yes
+                }
+            }
+            from = {
+                federation = {
+                    every_member = {
+                        limit = {
+                            has_country_flag = empire_loyalist
+                        }
+                        leave_alliance = {
+                            override_requirements = yes
+                        }
+                        remove_country_flag = empire_loyalist
+                        country_event = {
+                            id = emperor.201
+                        }
+                    }
+                }
+            }
+            every_playable_country = {
+                limit = {
+                    is_ai = no
+                    is_galactic_community_member = no
+                }
+                country_event = {
+                    id = emperor.203
+                }
+            }
+        }
+    }
+    ai_weight = {
+        weight = 100
+    }
+}

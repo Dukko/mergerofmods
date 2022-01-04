@@ -4,7 +4,6 @@ col_ecu_factory = {
         OR = {
             uses_district_set = city_world
             uses_district_set = pdcorpoarc
-            uses_district_set = pdshroudarc
         }
         exists = owner
         owner = {
@@ -25,7 +24,6 @@ col_ecu_factory = {
             OR = {
                 is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
                 is_active_resolution = "resolution_industry_project_cornucopia"
-                is_active_resolution = "resolution_industry_6"
             }
         }
         modifier = {
@@ -82,6 +80,10 @@ col_ecu_factory = {
             has_building = building_factory_2
         }
         modifier = {
+            add = 10
+            has_building = building_factory_3
+        }
+        modifier = {
             factor = 0
             num_buildings = {
                 type = building_factory_1
@@ -89,6 +91,10 @@ col_ecu_factory = {
             }
             num_buildings = {
                 type = building_factory_2
+                value = 0
+            }
+            num_buildings = {
+                type = building_factory_3
                 value = 0
             }
         }

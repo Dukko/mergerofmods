@@ -9,8 +9,11 @@ telepath = {
         is_being_assimilated = no
         is_sapient = yes
     }
+    possible_precalc = can_fill_specialist_job
     possible = {
-        specialist_job_check_trigger = yes
+        NOT = {
+            has_trait = trait_slave_gene
+        }
         OR = {
             has_trait = trait_latent_psionic
             has_trait = trait_psionic
@@ -54,6 +57,17 @@ telepath = {
     }
     planet_modifier = {
         planet_crime_add = -35
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_active_tradition = tr_domination_judgment_corps
+            }
+        }
+        modifier = {
+            planet_crime_add = -5
+        }
     }
     triggered_planet_modifier = {
         potential = {
@@ -161,6 +175,11 @@ telepath = {
         modifier = {
             factor = 1.5
             has_trait = trait_necrophage
+        }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = specialist
         }
     }
 }

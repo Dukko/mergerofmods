@@ -1,0 +1,39 @@
+tech_phanon_mineral_processing_plant = {
+    cost = @acot_tier10cost1
+    area = engineering
+    tier = 9
+    category = {
+        industry
+    }
+    prerequisites = {
+        tech_stellarite_mineral_processing_plant
+        tech_civil_phanon_application
+    }
+    weight = @tier5weight1
+    potential = {
+        NOR = {
+            has_global_flag = aot_phanon_content_OFF
+            is_fallen_empire = yes
+        }
+        has_technology = tech_civil_phanon_application
+    }
+    weight_modifier = {
+        factor = 2
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+}

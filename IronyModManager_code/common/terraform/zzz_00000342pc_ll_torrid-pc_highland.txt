@@ -1,0 +1,25 @@
+@terraforming_cost_ll = 5000
+@terraforming_duration_level_2 = 3600
+terraform_link = {
+    from = pc_ll_torrid
+    to = pc_highland
+    resources = {
+        category = terraforming
+        cost = {
+            energy = @terraforming_cost_ll
+        }
+    }
+    duration = @terraforming_duration_level_2
+    condition = {
+        has_technology = tech_climate_restoration
+    }
+    effect = {
+        from = {
+            remove_modifier = lifeless_torrid
+            remove_modifier = lifeless_torrid_tectonics
+        }
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

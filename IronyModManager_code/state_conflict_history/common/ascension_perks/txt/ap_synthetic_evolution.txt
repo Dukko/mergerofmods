@@ -93,7 +93,19 @@ ap_synthetic_evolution = {
         is_mechanical_empire = no
     }
     ai_weight = {
-        factor = 100
+        factor = 5000
+        modifier = {
+            factor = 10
+            has_ethic = ethic_fanatic_materialist
+        }
+        modifier = {
+            factor = 0.5
+            has_ethic = ethic_egalitarian
+        }
+        modifier = {
+            factor = 0
+            has_ethic = ethic_fanatic_egalitarian
+        }
         modifier = {
             factor = 0
             has_origin = origin_necrophage

@@ -1,0 +1,57 @@
+esc_tech_stellarite_powercore = {
+    area = physics
+    category = {
+        field_manipulation
+    }
+    tier = 5
+    cost = @tier5cost1
+    weight = @tier5weight1
+    ai_update_type = all
+    prerequisites = {
+    }
+    is_rare = yes
+    potential = {
+        NOT = {
+            has_global_flag = ESC_GLOBAL_FLAG_stellarite_tech_forbidden
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = ESC_COUNTRY_FLAG_killed_stellarite_devourer
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+    }
+    ai_weight = {
+        factor = @ESC_AI_tech_weight_multiplier
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = ESC_COUNTRY_FLAG_killed_stellarite_devourer
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+    }
+}

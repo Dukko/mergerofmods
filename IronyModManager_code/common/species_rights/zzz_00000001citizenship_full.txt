@@ -50,7 +50,6 @@ citizenship_full = {
             fail_text = too_alien
             OR = {
                 is_same_species = from
-                has_trait = trait_mechanical
                 from = {
                     NOR = {
                         has_ethic = ethic_xenophobe
@@ -77,14 +76,6 @@ citizenship_full = {
     ai_will_do = {
         factor = 2000
         modifier = {
-            factor = 10000
-            has_trait = trait_hive_mind_remote_drone
-            from = {
-                has_authority = auth_hive_mind
-                has_origin = origin_hive_overmind
-            }
-        }
-        modifier = {
             factor = 0.001
             is_multiplayer = yes
             from = {
@@ -94,6 +85,14 @@ citizenship_full = {
                 has_citizenship_type = {
                     type = citizenship_full
                 }
+            }
+        }
+        modifier = {
+            factor = 10000
+            has_trait = trait_hive_mind_remote_drone
+            from = {
+                has_authority = auth_hive_mind
+                has_origin = origin_hive_overmind
             }
         }
     }

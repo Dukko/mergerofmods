@@ -1,9 +1,10 @@
 clone_army = {
-    damage = 1
-    health = 1
-    morale = 1
-    collateral_damage = 1.25
-    war_exhaustion = 0.5
+    health = 0.8
+    damage = 2
+    morale = 1.5
+    morale_damage = 0.75
+    collateral_damage = 1
+    war_exhaustion = 0.25
     time = 30
     icon = GFX_army_type_clone
     pop_limited = no

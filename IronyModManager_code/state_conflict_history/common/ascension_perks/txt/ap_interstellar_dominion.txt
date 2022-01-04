@@ -20,10 +20,29 @@ ap_interstellar_dominion = {
         }
     }
     ai_weight = {
-        factor = 1
+        factor = 10
         modifier = {
-            factor = 2
-            has_ascension_perk = ap_imperial_prerogative
+            factor = 10
+            rusher = yes
+            num_ascension_perks < 2
+        }
+        modifier = {
+            factor = 0.01
+            resource_stockpile_compare = {
+                resource = influence
+                value > 300
+            }
+        }
+        modifier = {
+            factor = 0.001
+            num_ascension_perks > 0
+        }
+        modifier = {
+            factor = 0
+            or = {
+                has_ethic = ethic_pacifist
+                has_ethic = ethic_fanatic_pacifist
+            }
         }
         modifier = {
             factor = 0
@@ -35,32 +54,12 @@ ap_interstellar_dominion = {
             }
         }
         modifier = {
-            factor = 2
-            has_civic = civic_nationalistic_zeal
+            factor = 1.25
+            has_ethic = ethic_xenophobe
         }
         modifier = {
-            factor = 2
-            has_ethic = ethic_militarist
-        }
-        modifier = {
-            factor = 4
-            has_ethic = ethic_fanatic_militarist
-        }
-        modifier = {
-            factor = 0.5
-            has_technology = tech_interstellar_campaigns
-        }
-        modifier = {
-            factor = 0.1
-            num_ascension_perks > 1
-        }
-        modifier = {
-            factor = 0.1
-            num_ascension_perks > 2
-        }
-        modifier = {
-            factor = 0.1
-            num_ascension_perks > 3
+            factor = 1.25
+            has_ethic = ethic_fanatic_xenophobe
         }
     }
 }

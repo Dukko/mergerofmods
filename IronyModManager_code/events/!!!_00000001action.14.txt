@@ -1,0 +1,73 @@
+namespace = action
+namespace = necroids
+namespace = observation
+namespace = primitive
+country_event = {
+    id = action.14
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        from = {
+            is_country_type = primitive
+        }
+        is_country_type = default
+    }
+    immediate = {
+        log = "primitive conquest: [FromFrom.GetName] ([From.GetName]) conquered by the [Root.GetName]"
+        save_event_target_as = conquering_country
+        from = {
+            save_event_target_as = actually_conquered_primitive_country
+            owner_species = {
+                save_event_target_as = conquered_primitive_species
+                set_timed_species_flag = {
+                    flag = primitive_species
+                    years = 10
+                }
+            }
+        }
+        fromfrom = {
+            save_event_target_as = conquered_primitive_country
+            fire_on_action = {
+                on_action = on_primitive_planet_transferring
+                scopes = {
+                    from = event_target:conquering_country
+                }
+            }
+            if = {
+                limit = {
+                    event_target:conquering_country = {
+                        is_regular_empire = yes
+                    }
+                }
+                add_modifier = {
+                    modifier = planet_culture_shock
+                    years = 10
+                }
+            }
+            set_owner = event_target:conquering_country
+            fire_on_action = {
+                on_action = on_primitive_planet_transferred
+                scopes = {
+                    from = event_target:actually_conquered_primitive_country
+                }
+            }
+        }
+        every_country = {
+            limit = {
+                has_communications = event_target:conquering_country
+                is_country_type = default
+                NOT = {
+                    is_country = event_target:conquering_country
+                }
+            }
+            add_opinion_modifier = {
+                who = event_target:conquering_country
+                modifier = opinion_primitive_violation
+            }
+        }
+        country_event = {
+            id = action.140
+        }
+        reset_years_of_peace = yes
+    }
+}

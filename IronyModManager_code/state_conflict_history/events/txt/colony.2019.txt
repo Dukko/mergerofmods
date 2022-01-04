@@ -1,0 +1,31 @@
+namespace = colony
+planet_event = {
+    id = colony.2019
+    title = colony.2015.name
+    desc = colony.2019.desc
+    picture = GFX_evt_alien_city
+    show_sound = event_administrative_work
+    location = root
+    pre_triggers = {
+        has_owner = yes
+        is_homeworld = no
+        original_owner = yes
+        has_ground_combat = no
+    }
+    trigger = {
+        owner = {
+            is_ai = no
+        }
+        has_planet_flag = colony_factory_no_effect
+        has_deposit = d_odd_factory
+    }
+    is_triggered_only = yes
+    immediate = {
+    }
+    option = {
+        name = GOOD
+        hidden_effect = {
+            remove_planet_flag = colony_factory_no_effect
+        }
+    }
+}

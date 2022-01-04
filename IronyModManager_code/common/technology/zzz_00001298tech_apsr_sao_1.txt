@@ -1,0 +1,52 @@
+@apsr_sao_cost1 = 10000
+@apsr_sao_weight = 20
+tech_apsr_sao_1 = {
+    cost = @apsr_sao_cost1
+    area = engineering
+    tier = 5
+    category = {
+        materials
+    }
+    prerequisites = {
+        "tech_fission_power"
+    }
+    weight = @apsr_sao_weight
+    is_rare = yes
+    prereqfor_desc = {
+        custom = {
+            title = "TECH_UNLOCK_APSR_SAO_TITLE"
+            desc = "TECH_UNLOCK_APSR_SAO_DESC"
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = apsr_sao_tech_unlock
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_maniacal"
+            }
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+                research_leader = {
+                    area = engineering
+                    has_trait = "leader_trait_curator"
+                }
+                research_leader = {
+                    area = engineering
+                    has_trait = "leader_trait_spark_of_genius"
+                }
+            }
+        }
+    }
+    ai_weight = {
+        factor = 100
+    }
+}

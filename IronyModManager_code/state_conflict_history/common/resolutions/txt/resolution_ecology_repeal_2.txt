@@ -87,6 +87,10 @@ resolution_ecology_repeal_2 = {
         }
         modifier = {
             factor = 0.5
+            has_origin = origin_terraformer
+        }
+        modifier = {
+            factor = 0.5
             is_xenophile = yes
         }
         modifier = {

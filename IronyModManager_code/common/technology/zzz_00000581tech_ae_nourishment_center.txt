@@ -1,0 +1,67 @@
+tech_ae_nourishment_center = {
+    cost = @fallentechcost
+    area = society
+    tier = 7
+    category = {
+        biology
+    }
+    prerequisites = {
+        "tech_precursor_design"
+        "tech_dark_matter_power_core_ae"
+    }
+    weight = @tier5weight1
+    is_rare = yes
+    potential = {
+        NOR = {
+            has_global_flag = has_aot_mod
+            has_global_flag = acot_building_forbidden
+            has_global_flag = zofe_activated
+            is_country_type = fallen_empire
+        }
+    }
+    weight_modifier = {
+        factor = 2
+        modifier = {
+            factor = 0.01
+            is_machine_empire = yes
+            NOR = {
+                has_valid_civic = civic_machine_servitor
+                has_valid_civic = civic_machine_assimilator
+                any_owned_planet = {
+                    num_districts = {
+                        type = district_farming
+                        value > 0
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_building = building_nourishment_center
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            has_ae_capital_tech = no
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+    }
+}

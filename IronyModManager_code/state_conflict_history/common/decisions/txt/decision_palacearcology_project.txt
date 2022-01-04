@@ -73,9 +73,15 @@ decision_palacearcology_project = {
                 type = district_industrial
                 value < 1
             }
-            num_districts = {
-                type = district_farming
-                value < 1
+            OR = {
+                num_districts = {
+                    type = district_farming
+                    value < 1
+                }
+                num_districts = {
+                    type = district_farming_uncapped
+                    value < 1
+                }
             }
             num_districts = {
                 type = district_mining

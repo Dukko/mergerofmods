@@ -1,0 +1,46 @@
+tech_aot_ae_sky_dome = {
+    cost = @acot_tier7cost3
+    area = society
+    tier = 7
+    icon = tech_ae_sky_dome
+    category = {
+        statecraft
+    }
+    prerequisites = {
+        "tech_fe_sky_dome"
+        "tech_dark_matter_power_core_ae"
+    }
+    weight = @tier5weight1
+    potential = {
+        NOT = {
+            has_global_flag = acot_building_forbidden
+        }
+        has_technology = tech_dark_matter_power_core_ae
+        has_technology = tech_fe_sky_dome
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 10
+            OR = {
+                has_technology = tech_mine_rare_crystals
+                has_technology = tech_rare_crystals
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+}

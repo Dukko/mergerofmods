@@ -201,8 +201,7 @@ resolution_ecology_repeal_5 = {
             factor = 3
             OR = {
                 has_ascension_perk = ap_arcology_project
-                has_origin = origin_machine
-                has_origin = origin_terraformer
+                is_civic_terraformer = yes
             }
             NOR = {
                 has_ascension_perk = ap_world_shaper
@@ -210,6 +209,10 @@ resolution_ecology_repeal_5 = {
                 has_valid_civic = civic_agrarian_idyll
                 has_origin = origin_life_seeded
             }
+        }
+        modifier = {
+            factor = 10
+            has_ascension_perk = ap_hydrocentric
         }
         modifier = {
             factor = 1.25

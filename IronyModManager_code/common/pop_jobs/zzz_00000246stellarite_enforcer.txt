@@ -1,0 +1,164 @@
+stellarite_enforcer = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_stellarite_stronghold
+    clothes_texture_index = 5
+    icon = acot_enforcer
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible_precalc = can_fill_specialist_job
+    possible = {
+        owner = {
+            is_gestalt = no
+        }
+    }
+    country_modifier = {
+        country_naval_cap_add = 40
+    }
+    resources = {
+        category = planet_enforcers
+        produces = {
+            unity = 40
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    is_planet_class = pc_dark_fractured
+                }
+            }
+            unity = 20
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    is_planet_class = pc_dark_fractured_ae
+                }
+            }
+            unity = 40
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    NOT = {
+                        is_planet_class = pc_dark_fractured_ae
+                    }
+                }
+            }
+            acot_sr_stellarite = 4
+        }
+    }
+    triggered_pop_modifier = {
+        potential = {
+            planet = {
+                NOR = {
+                    is_planet_class = pc_dark_fractured
+                    is_planet_class = pc_dark_fractured_ae
+                }
+            }
+        }
+        pop_defense_armies_add = 2
+    }
+    triggered_pop_modifier = {
+        potential = {
+            planet = {
+                is_planet_class = pc_dark_fractured
+            }
+        }
+        pop_defense_armies_add = 1
+    }
+    triggered_pop_modifier = {
+        potential = {
+            planet = {
+                is_planet_class = pc_dark_fractured_ae
+            }
+        }
+        pop_defense_armies_add = 2
+    }
+    planet_modifier = {
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                NOR = {
+                    is_planet_class = pc_dark_fractured
+                    is_planet_class = pc_dark_fractured
+                }
+            }
+        }
+        modifier = {
+            planet_crime_add = -60
+            planet_stability_add = 60
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                is_planet_class = pc_dark_fractured
+            }
+        }
+        modifier = {
+            planet_crime_add = -50
+            planet_stability_add = 50
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                is_planet_class = pc_dark_fractured_ae
+            }
+        }
+        modifier = {
+            planet_crime_add = -70
+            planet_stability_add = 70
+        }
+    }
+    weight = {
+        weight = @specialist_job_weight
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+            NOT = {
+                has_trait = trait_mechanical
+            }
+        }
+        modifier = {
+            factor = 2
+            has_trait = trait_resilient
+        }
+        modifier = {
+            factor = 2
+            has_trait = trait_very_strong
+        }
+        modifier = {
+            factor = 1.5
+            has_trait = trait_strong
+        }
+        modifier = {
+            factor = 10
+            is_enslaved = yes
+            has_slavery_type = {
+                type = slavery_military
+            }
+        }
+        modifier = {
+            factor = 0.5
+            has_trait = trait_weak
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 1.5
+            has_job = acot_enforcer
+        }
+        modifier = {
+            factor = 0
+            can_be_soldier = no
+        }
+    }
+}

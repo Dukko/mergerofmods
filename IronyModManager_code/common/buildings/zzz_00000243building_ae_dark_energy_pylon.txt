@@ -1,0 +1,74 @@
+building_ae_dark_energy_pylon = {
+    base_buildtime = 600
+    can_demolish = yes
+    can_build = no
+    category = manufacturing
+    potential = {
+    }
+    allow = {
+        has_ascended_capital = yes
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_ae_dark_energy_man_add = 4
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_ae_dark_energy_drone_add = 4
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 1150
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    is_ai = yes
+                }
+            }
+            acot_sr_dark_energy = 4
+        }
+        upkeep = {
+            energy = 2
+        }
+    }
+    prerequisites = {
+        "tech_ae_dark_energy_pylon"
+    }
+    ai_weight = {
+        weight = 15
+        modifier = {
+            factor = 10000
+            owner = {
+                has_monthly_income = {
+                    resource = acot_sr_dark_energy
+                    value < 3
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value <= 10
+                }
+            }
+        }
+    }
+}

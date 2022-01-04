@@ -62,7 +62,6 @@ resolution_divinity_comfort_the_fallen = {
                 is_active_resolution = "resolution_divinity_right_to_work"
                 is_active_resolution = "resolution_divinity_silence_the_soulless"
                 is_active_resolution = "resolution_divinity_a_defined_purpose"
-                is_active_resolution = "resolution_divinity_crusade_against_the_heretic"
             }
         }
     }
@@ -182,7 +181,7 @@ resolution_divinity_comfort_the_fallen = {
         }
         modifier = {
             factor = 0.85
-            is_megacorp = yes
+            is_auth_corporate = yes
             is_spiritualist = no
         }
         modifier = {
@@ -227,7 +226,7 @@ resolution_divinity_comfort_the_fallen = {
         }
         modifier = {
             factor = 2
-            has_valid_civic = civic_shared_burden
+            is_civic_shared_burden = yes
         }
         modifier = {
             factor = 1.5

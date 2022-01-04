@@ -1,0 +1,40 @@
+tech_phanon_transmutor = {
+    cost = @acot_tier10cost1
+    area = physics
+    tier = 9
+    category = {
+        particles
+    }
+    prerequisites = {
+        tech_stellarite_transmutor
+        tech_civil_phanon_application
+    }
+    weight = @tier5weight1
+    potential = {
+        NOR = {
+            has_global_flag = aot_phanon_content_OFF
+            is_fallen_empire = yes
+        }
+        has_technology = tech_civil_phanon_application
+    }
+    weight_modifier = {
+        factor = 2
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 5
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+}

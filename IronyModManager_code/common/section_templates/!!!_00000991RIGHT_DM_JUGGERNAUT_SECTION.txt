@@ -1,0 +1,29 @@
+ship_section_template = {
+    key = "RIGHT_DM_JUGGERNAUT_SECTION"
+    ship_size = precursor_juggernaut
+    fits_on_slot = "right"
+    entity = "precursor_juggernaut_entity"
+    icon = "GFX_ship_part_core_mid"
+    should_draw_components = no
+    component_slot = {
+        name = "TITANIC_01"
+        template = "invisible_titanic_fixed"
+        locatorname = "T_weapon_slot_03"
+    }
+    component_slot = {
+        name = "TITANIC_02"
+        template = "invisible_titanic_fixed"
+        locatorname = "T_weapon_slot_04"
+    }
+    small_utility_slots = 0
+    medium_utility_slots = 0
+    large_utility_slots = 10
+    aux_utility_slots = 2
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = 600
+            sr_dark_matter = 500
+        }
+    }
+}

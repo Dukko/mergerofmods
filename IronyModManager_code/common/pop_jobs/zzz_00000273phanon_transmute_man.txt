@@ -1,0 +1,104 @@
+phanon_transmute_man = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_phanon_transmutor
+    clothes_texture_index = 3
+    icon = stellarite_alloyman
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible_precalc = can_fill_specialist_job
+    resources = {
+        category = planet_jobs
+        produces = {
+            rare_crystals = 32
+            exotic_gases = 32
+            volatile_motes = 32
+            sr_zro = 32
+            sr_living_metal = 32
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_nanite_transmutation
+                }
+            }
+            nanites = 32
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    has_technology = tech_rare_crystals
+                }
+            }
+            aot_sr_runic_power = 1
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    has_technology = tech_volatile_motes
+                }
+            }
+            aot_sr_runic_power = 1
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    has_technology = tech_exotic_gases
+                }
+            }
+            aot_sr_runic_power = 1
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    has_technology = tech_mine_living_metal
+                }
+            }
+            aot_sr_runic_power = 1
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    has_technology = tech_nanite_transmutation
+                }
+            }
+            aot_sr_runic_power = 1
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    has_technology = tech_mine_zro
+                }
+            }
+            aot_sr_runic_power = 1
+        }
+    }
+    weight = {
+        weight = @specialist_job_weight
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+            NOT = {
+                has_trait = trait_mechanical
+            }
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 1.5
+            has_job = phanon_transmute_man
+        }
+        modifier = {
+            factor = 1.2
+            is_enslaved = yes
+            has_slavery_type = {
+                type = slavery_indentured
+            }
+        }
+    }
+}

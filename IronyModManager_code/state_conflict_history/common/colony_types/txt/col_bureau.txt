@@ -7,10 +7,7 @@ col_bureau = {
         }
         NOR = {
             uses_district_set = hive_world
-            uses_district_set = pdbioforge
-            uses_district_set = pdfloraforge
-            uses_district_set = pdmilarc
-            uses_district_set = pdbiocapital
+            uses_district_set = habitat
         }
         is_special_colony_type = no
     }

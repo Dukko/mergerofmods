@@ -1,0 +1,24 @@
+@apsr8part3cost_minerals = 10000
+@apsr8part3cost_time = 1500
+apsr8_building_cataclysm = {
+    base_buildtime = @apsr8part3cost_time
+    icon = "apsr8_building_cataclysm"
+    is_capped_by_modifier = no
+    category = resource
+    can_build = no
+    can_demolish = no
+    can_be_ruined = no
+    position_priority = 49
+    allow = {
+        apsr_buildings_allow = yes
+    }
+    potential = {
+        has_modifier = "apsr8_planet_modifier"
+    }
+    resources = {
+        category = planet_apsr_buildings
+        cost = {
+            minerals = @apsr8part3cost_minerals
+        }
+    }
+}

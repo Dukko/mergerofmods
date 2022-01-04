@@ -1,0 +1,16 @@
+is_planetary_diversity_hab = {
+    OR = {
+        is_planet_class = pc_archive
+        is_planet_class = pc_pd_gas_giant_hab
+        is_planet_class = pc_pd_barren_hab
+        is_planet_class = pc_pd_barren_cold_hab
+        is_planet_class = pc_pd_frozen_hab
+        is_planet_class = pc_pd_molten_hab
+        is_planet_class = pc_pd_toxic_hab
+        is_planet_class = pc_pd_hothouse_hab
+        is_planet_class = pc_pd_asteroid_hab
+        is_planet_class = pc_aquatichab
+        is_planet_class = pc_aquatichothab
+        is_planet_class = pc_aquaticcoldhab
+    }
+}

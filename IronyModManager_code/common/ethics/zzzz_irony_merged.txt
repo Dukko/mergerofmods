@@ -21,7 +21,7 @@ ethic_fanatic_authoritarian = {
     use_for_pops = no
     regular_variant = ethic_authoritarian
     country_modifier = {
-        country_base_influence_produces_add = 1.5
+        country_ethic_influence_produces_add = 1.5
         job_enforcer_per_pop = 0.02
         ruler_skill_levels = 2
         country_energy_produces_mult = -0.05
@@ -40,7 +40,7 @@ ethic_authoritarian = {
     category_value = 1
     fanatic_variant = ethic_fanatic_authoritarian
     country_modifier = {
-        country_base_influence_produces_add = 0.75
+        country_ethic_influence_produces_add = 0.75
         job_enforcer_per_pop = 0.01
         ruler_skill_levels = 1
     }
@@ -2515,7 +2515,7 @@ ethic_gestalt_consciousness = {
     use_for_pops = no
     country_modifier = {
         country_war_exhaustion_mult = -0.2
-        country_base_influence_produces_add = 1
+        country_ethic_influence_produces_add = 1
         intel_encryption_add = 2
     }
     tags = {

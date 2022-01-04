@@ -1,0 +1,70 @@
+building_ae_empyrean_shrine = {
+    base_buildtime = 600
+    can_demolish = yes
+    can_build = no
+    category = unity
+    prerequisites = {
+        "tech_aot_ae_empyrean_shrine"
+    }
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = tech_aot_ae_empyrean_shrine
+        }
+    }
+    allow = {
+        has_ascended_capital = yes
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_fallen_empire = yes
+            }
+        }
+        job_fe_augur_add = 8
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_fallen_empire = no
+                is_spiritualist = yes
+            }
+        }
+        job_acot_priest_add = 4
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_fallen_empire = no
+                is_spiritualist = no
+            }
+        }
+        job_researcher_add = 4
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 150
+            sr_dark_matter = 600
+            acot_sr_dark_energy = 600
+        }
+        produces = {
+            society_research = 80
+            unity = 80
+            influence = 1
+        }
+        upkeep = {
+            sr_dark_matter = 15
+            acot_sr_dark_energy = 15
+        }
+    }
+    upgrades = {
+        building_stellarite_empyrean_shrine
+    }
+    ai_weight = {
+        weight = 100
+    }
+}

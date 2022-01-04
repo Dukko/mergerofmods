@@ -1,0 +1,11 @@
+tr_subterfuge_adopt = {
+    modifier = {
+        intel_decryption_add = 1
+    }
+    possible = {
+        or = {
+            is_ai = no
+            num_ascension_perks > 4
+        }
+    }
+}

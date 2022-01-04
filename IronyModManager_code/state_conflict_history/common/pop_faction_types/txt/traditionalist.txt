@@ -18,12 +18,6 @@ traditionalist = {
         NOT = {
             has_country_flag = suppress_vanilla_factions
         }
-        count_owned_pop = {
-            count >= 5
-            limit = {
-                has_ethic = ethic_spiritualist
-            }
-        }
     }
     parameters = {
         empire = {
@@ -41,10 +35,6 @@ traditionalist = {
     can_join_faction = {
         NOT = {
             has_trait = trait_nerve_stapled
-        }
-        OR = {
-            has_ethic = ethic_spiritualist
-            has_ethic = ethic_fanatic_spiritualist
         }
     }
     attraction = {
@@ -388,26 +378,10 @@ traditionalist = {
         fulfilled_effect = 10
         unfulfilled_effect = -0.001
         potential = {
-            exists = owner
-            exists = owner
-            owner = {
-                pop_percentage = {
-                    percentage > 0.09
-                    limit = {
-                        pop_has_ethic = ethic_spiritualist
-                    }
-                }
-            }
+            support >= 0.1
         }
         trigger = {
-            owner = {
-                pop_percentage = {
-                    percentage > 0.24
-                    limit = {
-                        pop_has_ethic = ethic_spiritualist
-                    }
-                }
-            }
+            support >= 0.25
         }
     }
     demand = {
@@ -417,25 +391,10 @@ traditionalist = {
         unfulfilled_effect = -10
         fulfilled_effect = 0.001
         potential = {
-            exists = owner
-            owner = {
-                pop_percentage = {
-                    percentage < 0.25
-                    limit = {
-                        pop_has_ethic = ethic_spiritualist
-                    }
-                }
-            }
+            support < 0.25
         }
         trigger = {
-            owner = {
-                pop_percentage = {
-                    percentage > 0.09
-                    limit = {
-                        pop_has_ethic = ethic_spiritualist
-                    }
-                }
-            }
+            support >= 0.1
         }
     }
     demand = {

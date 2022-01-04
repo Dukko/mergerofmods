@@ -1,0 +1,33 @@
+@destroyer_power_4 = -50
+@destroyer_cost4 = 24
+utility_component_template = {
+    key = "DESTROYER_SHIP_THRUSTER_4"
+    size = small
+    icon = "GFX_ship_part_thruster_4"
+    icon_frame = 1
+    power = @destroyer_power_4
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @destroyer_cost4
+        }
+    }
+    modifier = {
+        ship_base_speed_mult = 0.75
+        ship_evasion_add = 12
+    }
+    prerequisites = {
+        "tech_thrusters_4"
+    }
+    component_set = "thruster_components"
+    size_restriction = {
+        destroyer
+        crisis_destroyer
+        pirate_destroyer
+        marauder_destroyer
+    }
+    upgrades_to = "DESTROYER_ESC_THRUSTERS_5"
+    ai_weight = {
+        weight = 4
+    }
+}

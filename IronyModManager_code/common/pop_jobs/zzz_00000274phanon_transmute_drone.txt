@@ -1,0 +1,119 @@
+phanon_transmute_drone = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_phanon_transmutor
+    icon = phanon_alloyman
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible_precalc = can_fill_drone_job
+    resources = {
+        category = planet_jobs
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_rare_crystals
+                }
+            }
+            rare_crystals = 32
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_volatile_motes
+                }
+            }
+            volatile_motes = 32
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_exotic_gases
+                }
+            }
+            exotic_gases = 32
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_mine_living_metal
+                }
+            }
+            sr_living_metal = 32
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_nanite_transmutation
+                }
+            }
+            nanites = 32
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_mine_zro
+                }
+            }
+            sr_zro = 32
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    has_technology = tech_rare_crystals
+                }
+            }
+            aot_sr_runic_power = 1
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    has_technology = tech_volatile_motes
+                }
+            }
+            aot_sr_runic_power = 1
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    has_technology = tech_exotic_gases
+                }
+            }
+            aot_sr_runic_power = 1
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    has_technology = tech_mine_living_metal
+                }
+            }
+            aot_sr_runic_power = 1
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    has_technology = tech_nanite_transmutation
+                }
+            }
+            aot_sr_runic_power = 1
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    has_technology = tech_mine_zro
+                }
+            }
+            aot_sr_runic_power = 1
+        }
+    }
+    weight = {
+        weight = @complex_drone_job_weight
+        modifier = {
+            factor = 1.5
+            has_job = phanon_transmute_drone
+        }
+    }
+}

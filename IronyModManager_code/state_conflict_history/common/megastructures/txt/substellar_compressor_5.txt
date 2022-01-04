@@ -88,10 +88,24 @@ substellar_compressor_5 = {
                                 remove_modifier = terraforming_methane
                             }
                             7 = {
-                                change_pc = pc_melted_frozen
-                                remove_modifier = pdhabsubglacialocean
-                                remove_modifier = terraforming_methane
-                                reroll_deposits = yes
+                                random_list = {
+                                    9 = {
+                                        change_pc = pc_melted_frozen
+                                        remove_modifier = pdhabsubglacialocean
+                                        remove_modifier = terraforming_methane
+                                        reroll_deposits = yes
+                                    }
+                                    1 = {
+                                        change_pc = pc_ll_ocean
+                                        giga_reroll_lifeless = yes
+                                        add_modifier = {
+                                            modifier = "lifeless_ocean"
+                                            days = -1
+                                        }
+                                        remove_modifier = pdhabsubglacialocean
+                                        remove_modifier = terraforming_methane
+                                    }
+                                }
                             }
                         }
                     }
@@ -116,30 +130,64 @@ substellar_compressor_5 = {
                             1 = {
                                 random_list = {
                                     4 = {
-                                        change_pc = pc_melted_frozen
-                                        remove_modifier = pdhabsubglacialocean
-                                        remove_modifier = terraforming_methane
-                                        reroll_deposits = yes
+                                        random_list = {
+                                            9 = {
+                                                change_pc = pc_melted_frozen
+                                                remove_modifier = pdhabsubglacialocean
+                                                remove_modifier = terraforming_methane
+                                                reroll_deposits = yes
+                                            }
+                                            1 = {
+                                                change_pc = pc_ll_ocean
+                                                giga_reroll_lifeless = yes
+                                                add_modifier = {
+                                                    modifier = "lifeless_ocean"
+                                                    days = -1
+                                                }
+                                                remove_modifier = terraforming_methane
+                                                remove_modifier = pdhabsubglacialocean
+                                            }
+                                        }
                                     }
                                     1 = {
-                                        change_pc = pc_ethane_ocean
-                                        add_modifier = {
-                                            modifier = "giga_pd_ethane_planet"
-                                            days = -1
-                                        }
-                                        if = {
-                                            limit = {
-                                                has_global_flag = planetarydiversityexotics
-                                                NOT = {
-                                                    has_modifier = terraforming_methane
+                                        random_list = {
+                                            4 = {
+                                                change_pc = pc_ethane_ocean
+                                                add_modifier = {
+                                                    modifier = "giga_pd_ethane_planet"
+                                                    days = -1
                                                 }
+                                                if = {
+                                                    limit = {
+                                                        has_global_flag = planetarydiversityexotics
+                                                        NOT = {
+                                                            has_modifier = terraforming_methane
+                                                        }
+                                                    }
+                                                    add_modifier = {
+                                                        modifier = "terraforming_methane"
+                                                        days = -1
+                                                    }
+                                                }
+                                                reroll_deposits = yes
                                             }
-                                            add_modifier = {
-                                                modifier = "terraforming_methane"
-                                                days = -1
+                                            1 = {
+                                                modifier = {
+                                                    factor = 0
+                                                    NOT = {
+                                                        has_global_flag = planetarydiversityexotics
+                                                    }
+                                                }
+                                                change_pc = pc_ll_methane
+                                                add_modifier = {
+                                                    modifier = "lifeless_methane"
+                                                    days = -1
+                                                }
+                                                remove_modifier = terraforming_methane
+                                                remove_modifier = pdhabsubglacialocean
+                                                giga_reroll_lifeless = yes
                                             }
                                         }
-                                        reroll_deposits = yes
                                     }
                                 }
                             }
@@ -164,30 +212,64 @@ substellar_compressor_5 = {
                             1 = {
                                 random_list = {
                                     1 = {
-                                        change_pc = pc_melted_frozen
-                                        remove_modifier = terraforming_methane
-                                        remove_modifier = pdhabsubglacialocean
-                                        reroll_deposits = yes
+                                        random_list = {
+                                            9 = {
+                                                change_pc = pc_melted_frozen
+                                                remove_modifier = terraforming_methane
+                                                remove_modifier = pdhabsubglacialocean
+                                                reroll_deposits = yes
+                                            }
+                                            1 = {
+                                                change_pc = pc_ll_ocean
+                                                giga_reroll_lifeless = yes
+                                                add_modifier = {
+                                                    modifier = "lifeless_ocean"
+                                                    days = -1
+                                                }
+                                                remove_modifier = terraforming_methane
+                                                remove_modifier = pdhabsubglacialocean
+                                            }
+                                        }
                                     }
                                     4 = {
-                                        change_pc = pc_ethane_ocean
-                                        add_modifier = {
-                                            modifier = "giga_pd_ethane_planet"
-                                            days = -1
-                                        }
-                                        if = {
-                                            limit = {
-                                                has_global_flag = planetarydiversityexotics
-                                                NOT = {
-                                                    has_modifier = terraforming_methane
+                                        random_list = {
+                                            4 = {
+                                                change_pc = pc_ethane_ocean
+                                                add_modifier = {
+                                                    modifier = "giga_pd_ethane_planet"
+                                                    days = -1
                                                 }
+                                                if = {
+                                                    limit = {
+                                                        has_global_flag = planetarydiversityexotics
+                                                        NOT = {
+                                                            has_modifier = terraforming_methane
+                                                        }
+                                                    }
+                                                    add_modifier = {
+                                                        modifier = "terraforming_methane"
+                                                        days = -1
+                                                    }
+                                                }
+                                                reroll_deposits = yes
                                             }
-                                            add_modifier = {
-                                                modifier = "terraforming_methane"
-                                                days = -1
+                                            1 = {
+                                                modifier = {
+                                                    factor = 0
+                                                    NOT = {
+                                                        has_global_flag = planetarydiversityexotics
+                                                    }
+                                                }
+                                                change_pc = pc_ll_methane
+                                                add_modifier = {
+                                                    modifier = "lifeless_methane"
+                                                    days = -1
+                                                }
+                                                remove_modifier = terraforming_methane
+                                                remove_modifier = pdhabsubglacialocean
+                                                giga_reroll_lifeless = yes
                                             }
                                         }
-                                        reroll_deposits = yes
                                     }
                                 }
                             }
@@ -222,9 +304,193 @@ substellar_compressor_5 = {
                         limit = {
                             is_planet_class = pc_molten
                         }
-                        change_pc = pc_ll_torrid
-                        remove_modifier = pdhabvolcanicminerals
-                        remove_modifier = terraforming_ash
+                        random_list = {
+                            8 = {
+                                change_pc = pc_ll_torrid
+                                remove_modifier = pdhabvolcanicminerals
+                                remove_modifier = terraforming_ash
+                                giga_reroll_lifeless = yes
+                                add_modifier = {
+                                    modifier = "lifeless_torrid"
+                                    days = -1
+                                }
+                            }
+                            1 = {
+                                modifier = {
+                                    factor = 0
+                                    NOT = {
+                                        has_modifier = terraforming_ash
+                                    }
+                                }
+                                change_pc = pc_ll_ash
+                                remove_modifier = pdhabvolcanicminerals
+                                remove_modifier = terraforming_ash
+                                add_modifier = {
+                                    modifier = "lifeless_ash"
+                                    days = -1
+                                }
+                                giga_reroll_lifeless = yes
+                            }
+                        }
+                    }
+                    else_if = {
+                        limit = {
+                            is_planet_class = pc_volcanic
+                        }
+                        random_list = {
+                            4 = {
+                                change_pc = pc_ll_torrid
+                                remove_modifier = pdhabvolcanicminerals
+                                remove_modifier = terraforming_sulfur
+                                remove_modifier = terraforming_ash
+                                giga_reroll_lifeless = yes
+                                add_modifier = {
+                                    modifier = "lifeless_torrid"
+                                    days = -1
+                                }
+                            }
+                            1 = {
+                                modifier = {
+                                    factor = 0
+                                    NOR = {
+                                        has_modifier = terraforming_sulfur
+                                        has_modifier = terraforming_ash
+                                    }
+                                }
+                                random_list = {
+                                    1 = {
+                                        modifier = {
+                                            factor = 0
+                                            NOT = {
+                                                has_modifier = terraforming_sulfur
+                                            }
+                                        }
+                                        change_pc = pc_ll_sulfur
+                                        remove_modifier = pdhabvolcanicminerals
+                                        remove_modifier = terraforming_sulfur
+                                        remove_modifier = terraforming_ash
+                                        add_modifier = {
+                                            modifier = "lifeless_sulfur"
+                                            days = -1
+                                        }
+                                        giga_reroll_lifeless = yes
+                                    }
+                                    1 = {
+                                        modifier = {
+                                            factor = 0
+                                            NOT = {
+                                                has_modifier = terraforming_ash
+                                            }
+                                        }
+                                        change_pc = pc_ll_ash
+                                        remove_modifier = pdhabvolcanicminerals
+                                        remove_modifier = terraforming_sulfur
+                                        remove_modifier = terraforming_ash
+                                        add_modifier = {
+                                            modifier = "lifeless_ash"
+                                            days = -1
+                                        }
+                                        giga_reroll_lifeless = yes
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    else_if = {
+                        limit = {
+                            is_planet_class = pc_ethane_ocean
+                        }
+                        random_list = {
+                            4 = {
+                                modifier = {
+                                    factor = 0
+                                    NAND = {
+                                        has_global_flag = planetarydiversityexotics
+                                        has_modifier = terraforming_methane
+                                    }
+                                }
+                                add_modifier = {
+                                    modifier = "terraforming_methane"
+                                    days = -1
+                                }
+                            }
+                            1 = {
+                                modifier = {
+                                    factor = 0
+                                    AND = {
+                                        NOT = {
+                                            has_global_flag = planetarydiversityexotics
+                                        }
+                                        has_modifier = terraforming_methane
+                                    }
+                                }
+                                change_pc = pc_ll_methane
+                                add_modifier = {
+                                    modifier = "lifeless_methane"
+                                    days = -1
+                                }
+                                remove_modifier = terraforming_methane
+                                remove_modifier = giga_pd_ethane_planet
+                                giga_reroll_lifeless = yes
+                            }
+                            4 = {
+                                change_pc = pc_ll_foggy
+                                remove_modifier = terraforming_methane
+                                remove_modifier = giga_pd_ethane_planet
+                                add_modifier = {
+                                    modifier = "lifeless_foggy"
+                                    days = -1
+                                }
+                                giga_reroll_lifeless = yes
+                            }
+                        }
+                    }
+                    else_if = {
+                        limit = {
+                            is_planet_class = pc_hydrocarbon
+                        }
+                        random_list = {
+                            4 = {
+                                modifier = {
+                                    factor = 0
+                                    NAND = {
+                                        has_global_flag = planetarydiversityexotics
+                                        has_modifier = terraforming_methane
+                                    }
+                                }
+                                add_modifier = {
+                                    modifier = "terraforming_methane"
+                                    days = -1
+                                }
+                            }
+                            1 = {
+                                modifier = {
+                                    factor = 0
+                                    AND = {
+                                        NOT = {
+                                            has_global_flag = planetarydiversityexotics
+                                        }
+                                        has_modifier = terraforming_methane
+                                    }
+                                }
+                                change_pc = pc_ll_methane
+                                add_modifier = {
+                                    modifier = "lifeless_methane"
+                                    days = -1
+                                }
+                                remove_modifier = terraforming_methane
+                                giga_reroll_lifeless = yes
+                            }
+                            4 = {
+                                change_pc = pc_ll_foggy
+                                remove_modifier = terraforming_methane
+                                add_modifier = {
+                                    modifier = "lifeless_foggy"
+                                    days = -1
+                                }
+                                giga_reroll_lifeless = yes
+                            }
+                        }
                     }
                     else_if = {
                         limit = {

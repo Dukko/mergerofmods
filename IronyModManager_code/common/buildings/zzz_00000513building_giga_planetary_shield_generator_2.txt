@@ -1,0 +1,26 @@
+building_giga_planetary_shield_generator_2 = {
+    base_buildtime = 1200
+    can_build = no
+    allow = {
+        has_upgraded_capital = yes
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b4_minerals
+            exotic_gases = @b2_minerals
+            ehof_sr_negative_mass = 20
+        }
+        upkeep = {
+            energy = @b4_upkeep
+            exotic_gases = @b2_upkeep
+            ehof_sr_negative_mass = 2
+        }
+    }
+    planet_modifier = {
+        planet_orbital_bombardment_damage = -0.7
+    }
+    prerequisites = {
+        "tech_giga_planetary_shield_generator_2"
+    }
+}

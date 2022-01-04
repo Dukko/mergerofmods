@@ -1,0 +1,28 @@
+ald_hyperfactorio_drone = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_factory_3
+    icon = artisan
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible_precalc = can_fill_drone_job
+    resources = {
+        category = planet_artisans
+        produces = {
+            consumer_goods = 80
+        }
+        upkeep = {
+            minerals = 80
+        }
+    }
+    weight = {
+        weight = @complex_drone_job_weight
+        modifier = {
+            factor = 1.5
+            always = yes
+        }
+    }
+}

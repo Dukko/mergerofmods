@@ -1,0 +1,25 @@
+col_fortress = {
+    icon = GFX_colony_type_fortress
+    potential = {
+        exists = owner
+        NOR = {
+            uses_district_set = ring_world
+            uses_district_set = habitat
+            uses_district_set = ring_world
+            uses_district_set = habitat
+            uses_district_set = pdarchive
+            uses_district_set = pdpalacearc
+            uses_district_set = pdplanethab
+            uses_district_set = pdcorpoarc
+        }
+        is_special_colony_type = no
+    }
+    planet_modifier = {
+        custom_tooltip = fortress_desig_tooltip
+        planet_building_stronghold_build_speed_mult = 0.25
+        planet_buildings_volatile_motes_upkeep_mult = -0.2
+    }
+    weight_modifier = {
+        base = 0
+    }
+}

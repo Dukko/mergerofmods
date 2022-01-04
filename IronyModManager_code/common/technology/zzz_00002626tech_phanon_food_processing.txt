@@ -1,0 +1,59 @@
+tech_phanon_food_processing = {
+    cost = @acot_tier10cost1
+    area = society
+    tier = 9
+    category = {
+        biology
+    }
+    prerequisites = {
+        tech_stellarite_food_processing
+        tech_civil_phanon_application
+    }
+    weight = @tier5weight1
+    potential = {
+        NOR = {
+            has_global_flag = aot_phanon_content_OFF
+            is_fallen_empire = yes
+        }
+        has_technology = tech_civil_phanon_application
+    }
+    weight_modifier = {
+        factor = 2
+        modifier = {
+            factor = 0.01
+            is_machine_empire = yes
+            NOR = {
+                has_valid_civic = civic_machine_servitor
+                has_valid_civic = civic_machine_assimilator
+                any_owned_planet = {
+                    num_districts = {
+                        type = district_farming
+                        value > 0
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_technology = tech_mine_dark_matter
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+    }
+}

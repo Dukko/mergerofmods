@@ -58,7 +58,12 @@ yggdrasil_orchid_0 = {
         planet_possible = {
             custom_tooltip = {
                 fail_text = "must_build_around_gas"
-                is_planet_class = pc_gas_giant
+                OR = {
+                    is_planet_class = pc_gas_giant
+                    is_planet_class = pc_hot_gas_giant
+                    is_planet_class = pc_cold_gas_giant
+                    is_planet_class = pc_cloudless_gas_giant
+                }
             }
             custom_tooltip = {
                 fail_text = "requires_no_anomaly"

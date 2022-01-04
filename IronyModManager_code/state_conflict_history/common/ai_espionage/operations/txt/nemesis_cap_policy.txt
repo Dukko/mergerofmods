@@ -1,0 +1,13 @@
+nemesis_cap_policy = {
+    weight = {
+        base = 60
+        modifier = {
+            is_spynetwork_max_level < 60
+            factor = 0
+        }
+        modifier = {
+            is_spynetwork_level > 60
+            factor = 1.5
+        }
+    }
+}

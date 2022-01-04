@@ -1,0 +1,8 @@
+opinion_received_traitor = {
+    opinion = {
+        base = -250
+    }
+    decay = {
+        base = 4
+    }
+}

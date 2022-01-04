@@ -1,0 +1,41 @@
+building_lightmechbay = {
+    base_buildtime = 360
+    category = army
+    base_cap_amount = 1
+    potential = {
+        exists = owner
+        owner = {
+            is_gestalt = no
+        }
+    }
+    resources = {
+        category = planet_buildings_strongholds
+        cost = {
+            minerals = 500
+        }
+        upkeep = {
+            alloys = 1
+        }
+        produces = {
+            engineering_research = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_mechwarrior_add = 1
+            job_mechtech_add = 1
+        }
+    }
+    prerequisites = {
+        "tech_powered_exoskeletons"
+    }
+    upgrades = {
+        building_mediummechbay
+    }
+}

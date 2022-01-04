@@ -1,0 +1,107 @@
+building_negative_mass_factory_2 = {
+    base_buildtime = 1000
+    category = manufacturing
+    can_build = no
+    prerequisites = {
+        "tech_nm_utilization_2"
+    }
+    potential = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+        building_relaxed_basic_income_check = yes
+    }
+    allow = {
+        has_upgraded_capital = yes
+        buildings_upgrade_allow = yes
+    }
+    destroy_trigger = {
+        OR = {
+            has_modifier = resort_colony
+            has_modifier = slave_colony
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_ehof_energy_converter_drone_add = @b2_jobs
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_ehof_energy_converter_drone_add = @b2_jobs
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_ehof_energy_converter_add = @b2_jobs
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = job_ehof_energy_converter_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = job_ehof_energy_converter_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = job_ehof_energy_converter_effect_desc
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b4_minerals
+            exotic_gases = @b3_rare_cost
+            rare_crystals = @b3_rare_cost
+        }
+        cost = {
+            trigger = {
+                owner = {
+                    is_robot_empire = yes
+                }
+            }
+            minerals = 900
+            alloys = 700
+        }
+        upkeep = {
+            energy = @b3_upkeep
+        }
+    }
+}

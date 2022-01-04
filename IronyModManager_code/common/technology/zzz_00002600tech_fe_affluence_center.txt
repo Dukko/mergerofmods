@@ -1,0 +1,44 @@
+tech_fe_affluence_center = {
+    cost = @acot_tier6cost2
+    area = engineering
+    tier = 6
+    category = {
+        materials
+    }
+    prerequisites = {
+        "tech_dm_production_core"
+    }
+    weight = @tier4weight1
+    potential = {
+        has_technology = tech_dm_production_core
+        OR = {
+            is_gestalt = no
+            has_valid_civic = civic_machine_servitor
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_technology = tech_dm_production_core
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 30
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+}

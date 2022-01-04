@@ -1,0 +1,91 @@
+building_stellarite_generator = {
+    base_buildtime = 600
+    can_demolish = yes
+    category = manufacturing
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = tech_stellarite_reactor
+        }
+    }
+    allow = {
+        has_major_upgraded_capital = yes
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_acot_stellaritedrone_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_acot_stellariteman_add = 2
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 1150
+            energy = 1150
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    is_ai = yes
+                }
+            }
+            acot_sr_stellarite = 100
+            energy = 200
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    is_ai = no
+                }
+            }
+            energy = 10
+        }
+    }
+    prerequisites = {
+        "tech_stellarite_reactor"
+    }
+    upgrades = {
+        building_stellarite_generator_ae
+    }
+    ai_weight = {
+        weight = 150000
+        modifier = {
+            factor = 100000
+            owner = {
+                has_monthly_income = {
+                    resource = acot_sr_stellarite
+                    value <= 3
+                }
+            }
+        }
+        modifier = {
+            factor = 0.1
+            num_buildings = {
+                type = building_stellarite_generator
+                value >= 2
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                is_country_type = awakened_fallen_empire
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+building_stellarite_psg = {
+    base_buildtime = 900
+    add_to_first_building_slot = yes
+    can_build = no
+    category = army
+    position_priority = 100
+    allow = {
+        has_stellarite_capital = yes
+    }
+    upgrades = {
+        building_phanon_psg
+    }
+    planet_modifier = {
+        planet_orbital_bombardment_damage = -0.99
+    }
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = tech_stellarite_psg
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 5000
+            minerals = 5000
+            acot_sr_stellarite = 1000
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    is_ai = no
+                }
+            }
+            energy = 1000
+            acot_sr_stellarite = 100
+        }
+    }
+    prerequisites = {
+        "tech_stellarite_psg"
+    }
+    ai_weight = {
+        weight = 15000
+    }
+}

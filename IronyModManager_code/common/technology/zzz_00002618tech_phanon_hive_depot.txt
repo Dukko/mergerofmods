@@ -1,0 +1,40 @@
+tech_phanon_hive_depot = {
+    cost = @acot_tier10cost1
+    area = society
+    tier = 9
+    category = {
+        biology
+    }
+    prerequisites = {
+        tech_stellarite_hive_depot
+        tech_civil_phanon_application
+    }
+    weight = @tier5weight3
+    potential = {
+        NOR = {
+            has_global_flag = aot_phanon_content_OFF
+            is_fallen_empire = yes
+        }
+        is_hive_empire = yes
+        has_technology = tech_civil_phanon_application
+    }
+    weight_modifier = {
+        factor = 1.5
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+    }
+}

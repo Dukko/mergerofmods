@@ -1,0 +1,49 @@
+phanon_dimension_folderdrone = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_phanon_runic_generator
+    icon = phanon_runicdrone
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible_precalc = can_fill_drone_job
+    resources = {
+        category = planet_jobs
+        produces = {
+            aot_sr_runic_power = 50
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    is_ai = no
+                }
+            }
+            acot_sr_stellarite = 500
+            energy = 100
+            alloys = 50
+            sr_living_metal = 10
+            sr_zro = 10
+            volatile_motes = 10
+            exotic_gases = 10
+            rare_crystals = 10
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    is_ai = yes
+                }
+            }
+            energy = 100
+        }
+    }
+    weight = {
+        weight = @complex_drone_job_weight
+        modifier = {
+            factor = 1.5
+            has_job = aot_ae_stellaritedrone
+        }
+    }
+}

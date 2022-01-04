@@ -1,0 +1,34 @@
+gigamind_drone = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_super_computers_station
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        drone_job_check_trigger = yes
+    }
+    planet_modifier = {
+        planet_researchers_physics_research_produces_mult = 0.1
+    }
+    resources = {
+        category = planet_gigamind_drone
+        upkeep = {
+            minerals = 3
+        }
+    }
+    weight = {
+        weight = @specialist_job_weight
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 5
+            has_job = gigamind_drone
+        }
+    }
+}

@@ -77,5 +77,44 @@ trading_hub = {
     ai_build_at_chokepoint = no
     ai_weight = {
         weight = 0
+        modifier = {
+            factor = 0
+            NOT = {
+                has_starbase_module = trading_hub
+            }
+            solar_system = {
+                NOR = {
+                    any_system_planet = {
+                        is_colony = yes
+                    }
+                    any_neighbor_system = {
+                        has_uncollected_system_trade_value >= 5
+                    }
+                    any_neighbor_system = {
+                        has_system_trade_value > 25
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            has_starbase_module = trading_hub
+            solar_system = {
+                any_system_planet = {
+                    is_colony = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 5
+            NOT = {
+                has_starbase_module = trading_hub
+            }
+            solar_system = {
+                any_neighbor_system = {
+                    has_system_trade_value > 50
+                }
+            }
+        }
     }
 }

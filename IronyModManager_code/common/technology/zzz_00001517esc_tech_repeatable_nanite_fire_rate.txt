@@ -1,0 +1,52 @@
+esc_tech_repeatable_nanite_fire_rate = {
+    area = physics
+    cost = @repeatableTechBaseCost
+    cost_per_level = @repeatableTechLevelCost
+    tier = @repeatableTechTier
+    category = {
+        computing
+    }
+    levels = -1
+    prerequisites = {
+        "esc_tech_synthetic_lifeform_studies"
+    }
+    weight = @repeatableTechWeight
+    potential = {
+        NOT = {
+            has_global_flag = ESC_GLOBAL_FLAG_nanite_weapons_forbidden
+        }
+    }
+    modifier = {
+        weapon_type_nanite_weapon_fire_rate_mult = 0.05
+    }
+    weight_modifier = {
+        factor = @repatableTechFactor
+        modifier = {
+            factor = 0
+            NOR = {
+                has_technology = esc_tech_nanite_cannon_1
+                has_technology = esc_tech_nanite_torpedo_1
+                has_technology = esc_tech_nanite_bomber
+            }
+        }
+        modifier = {
+            factor = 0
+            ESC_TRIGGER_may_research_nanite_weapon_fire_rate_repeatable = no
+        }
+    }
+    ai_weight = {
+        factor = @repatableTechFactor
+        modifier = {
+            factor = 0
+            NOR = {
+                has_technology = esc_tech_nanite_cannon_1
+                has_technology = esc_tech_nanite_torpedo_1
+                has_technology = esc_tech_nanite_bomber
+            }
+        }
+        modifier = {
+            factor = 0
+            ESC_TRIGGER_may_research_nanite_weapon_fire_rate_repeatable = no
+        }
+    }
+}

@@ -1,0 +1,59 @@
+@apsr24cost3 = 50000
+@apsr24weight3 = 5
+tech_apsr24_building_talisman = {
+    cost = @apsr24cost3
+    area = engineering
+    tier = 5
+    category = {
+        industry
+    }
+    prerequisites = {
+        "tech_apsr24_building_part1"
+    }
+    weight = @apsr24weight3
+    is_rare = yes
+    is_dangerous = yes
+    prereqfor_desc = {
+        custom = {
+            title = "TECH_APSR24_TALISMAN_TITLE"
+            desc = "TECH_APSR24_TALISMAN_DESC"
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_deposit = apsr24_deposit
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_maniacal"
+            }
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+                research_leader = {
+                    area = engineering
+                    has_trait = "leader_trait_curator"
+                }
+                research_leader = {
+                    area = engineering
+                    has_trait = "leader_trait_spark_of_genius"
+                }
+            }
+        }
+        modifier = {
+            factor = 5
+            has_origin = apsr_origin_unique_capital
+        }
+    }
+    ai_weight = {
+        factor = 150
+    }
+}

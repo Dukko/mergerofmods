@@ -1,0 +1,84 @@
+esc_tech_arcenciel = {
+    area = physics
+    category = {
+        field_manipulation
+    }
+    tier = 7
+    cost = @ESC_TECH_tier7_cost2
+    weight = @ESC_TECH_tier7_weight2
+    ai_update_type = military
+    prerequisites = {
+        "esc_tech_chrono_cannon"
+    }
+    is_rare = yes
+    is_dangerous = yes
+    is_reverse_engineerable = no
+    potential = {
+        ESC_TRIGGER_may_research_oversized_weapons = no
+        NOT = {
+            has_global_flag = ESC_GLOBAL_FLAG_arcenciel_forbidden
+        }
+    }
+    weight_modifier = {
+        factor = 0.5
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_maniacal"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = @federation_perk_factor
+            has_federation = yes
+            federation = {
+                has_federation_perk = rare_tech_boost
+                any_member = {
+                    has_technology = esc_tech_arcenciel
+                }
+            }
+        }
+    }
+    ai_weight = {
+        factor = @ESC_AI_tech_weight_multiplier
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_maniacal"
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = @federation_perk_factor
+            has_federation = yes
+            federation = {
+                has_federation_perk = rare_tech_boost
+                any_member = {
+                    has_technology = esc_tech_arcenciel
+                }
+            }
+        }
+    }
+}

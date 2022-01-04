@@ -62,7 +62,7 @@ ap_the_flesh_is_weak = {
         is_mechanical_empire = no
     }
     ai_weight = {
-        factor = 100
+        factor = 1000
         modifier = {
             factor = 0.1
             NOR = {

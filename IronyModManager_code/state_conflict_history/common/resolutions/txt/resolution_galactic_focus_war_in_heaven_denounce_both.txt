@@ -10,6 +10,8 @@ resolution_galactic_focus_war_in_heaven_denounce_both = {
         }
     }
     target = no
+    modifier = {
+    }
     triggered_modifier = {
         potential = {
             has_global_flag = war_in_heaven_ongoing
@@ -132,12 +134,14 @@ resolution_galactic_focus_war_in_heaven_denounce_both = {
     }
     potential = {
         has_global_flag = war_in_heaven_ongoing
+        has_galactic_emperor = no
         NOT = {
             has_global_flag = galactic_focus_war_in_heaven
         }
         exists = event_target:FirstSleeper
         exists = event_target:SecondSleeper
-        has_galactic_emperor = no
+    }
+    allow = {
     }
     active = {
         has_global_flag = war_in_heaven_ongoing
@@ -152,13 +156,6 @@ resolution_galactic_focus_war_in_heaven_denounce_both = {
     }
     ai_weight = {
         base = @resolution_weight_normal
-        modifier = {
-            factor = 10
-            has_federation = yes
-            alliance = {
-                has_federation_flag = non_aligned_league
-            }
-        }
         modifier = {
             factor = 0
             exists = overlord

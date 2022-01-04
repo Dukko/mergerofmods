@@ -1,0 +1,48 @@
+tech_negative_pressure = {
+    area = physics
+    cost = @tier4cost1
+    weight = @tier4weight1
+    tier = 4
+    category = {
+        field_manipulation
+    }
+    prerequisites = {
+        "tech_abstract_2"
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0.1
+            years_passed < 30
+        }
+        modifier = {
+            factor = 2
+            years_passed > 40
+        }
+        modifier = {
+            factor = 3
+            years_passed > 50
+        }
+        modifier = {
+            factor = 4
+            years_passed > 60
+        }
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+    ai_weight = {
+        factor = @giga_aiweight_multiplier
+        factor = @ehof_t1_weight
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+}

@@ -31,7 +31,10 @@ building_undersea_gasmine = {
         NOT = {
             has_modifier = resort_colony
         }
-        is_planet_class = pc_aquatic
+        OR = {
+            is_planet_class = pc_aquatic
+            is_planet_class = pc_ll_ocean
+        }
     }
     allow = {
         has_upgraded_capital = yes

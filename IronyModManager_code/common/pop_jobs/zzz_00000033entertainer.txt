@@ -136,5 +136,10 @@ entertainer = {
             factor = 1.25
             has_trait = trait_necrophage
         }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = specialist
+        }
     }
 }

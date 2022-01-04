@@ -14,7 +14,7 @@ tech_planetary_unification = {
         campaign_edicts
     }
     modifier = {
-        country_base_unity_produces_add = 2
+        country_tech_unity_produces_add = 2
     }
     weight_modifier = {
         factor = 4
@@ -29,7 +29,15 @@ tech_planetary_unification = {
         }
     }
     ai_weight = {
-        factor = 2
+        weight = 17
+        modifier = {
+            factor = 3000
+            reroll_society = yes
+        }
+        modifier = {
+            factor = 500
+            has_technology = tech_energy_torpedoes_2
+        }
         modifier = {
             factor = 0.75
             NOT = {

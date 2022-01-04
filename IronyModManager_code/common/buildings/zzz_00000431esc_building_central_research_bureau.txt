@@ -1,0 +1,130 @@
+esc_building_central_research_bureau = {
+    base_buildtime = 540
+    category = research
+    icon = esc_building_centralresearchbureau
+    empire_limit = {
+        base = 1
+    }
+    potential = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+        NOT = {
+            has_global_flag = ESC_GLOBAL_FLAG_central_research_bureau_forbidden
+        }
+    }
+    allow = {
+        has_major_upgraded_capital = yes
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 750
+        }
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_ai = no
+                }
+            }
+            influence = 15
+            rare_crystals = 25
+            volatile_motes = 25
+            exotic_gases = 25
+        }
+        upkeep = {
+            energy = 10
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_ai = no
+                }
+            }
+            rare_crystals = 1
+            volatile_motes = 1
+            exotic_gases = 1
+        }
+    }
+    planet_modifier = {
+        planet_researchers_produces_mult = 0.2
+    }
+    country_modifier = {
+        all_technology_research_speed = 0.05
+        num_tech_alternatives_add = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_head_researcher_add = 1
+            job_researcher_add = 4
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = esc_central_research_bureau_effect_regular
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_brain_drone_add = 7
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = job_brain_drone_effect_desc
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_calculator_add = 7
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = job_calculator_effect_desc
+    }
+    show_tech_unlock_if = {
+        NOT = {
+            has_global_flag = ESC_GLOBAL_FLAG_central_research_bureau_forbidden
+        }
+    }
+    prerequisites = {
+        "esc_tech_grand_research_initiative"
+    }
+}

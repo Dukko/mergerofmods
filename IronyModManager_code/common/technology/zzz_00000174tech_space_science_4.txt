@@ -10,7 +10,7 @@ tech_space_science_4 = {
     }
     weight = @tier2weight3
     modifier = {
-        station_researchers_produces_mult = 0.15
+        station_researchers_produces_mult = 0.1
     }
     weight_modifier = {
         modifier = {

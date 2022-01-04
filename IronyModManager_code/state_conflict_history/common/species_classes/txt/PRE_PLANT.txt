@@ -1,0 +1,46 @@
+PRE_PLANT = {
+    archetype = PRESAPIENT
+    playable = {
+        always = no
+    }
+    randomized = no
+    gender = no
+    portraits = {
+        "pla1"
+        "pla2"
+        "pla3"
+        "pla4"
+        "pla5"
+        "pre_pla6"
+        "pre_pla7"
+        "pre_pla8"
+        "pre_pla9"
+        "pre_pla10"
+        "pla11"
+        "pla12"
+        "pla13"
+        "pla14"
+        "pla15"
+        "pla16_baol"
+    }
+    graphical_culture = plantoid_01
+    uplifted_into = "PLANT"
+    uplifted_portraits = {
+        "pla1"
+        "pla2"
+        "pla3"
+        "pla4"
+        "pla5"
+        "pla6"
+        "pla7"
+        "pla8"
+        "pla9"
+        "pla10"
+        "pla12"
+        "pla11"
+        "pla13"
+        "pla14"
+        "pla15"
+        "pla16_baol"
+    }
+}

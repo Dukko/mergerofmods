@@ -1,0 +1,100 @@
+@base_cost = 300
+district_sm_glacial = {
+    base_buildtime = 240
+    is_capped_by_modifier = yes
+    show_on_uncolonized = {
+        OR = {
+            uses_district_set = hive_world
+            uses_district_set = machine_world
+            uses_district_set = standard
+        }
+        is_cold = yes
+        exists = from
+        from = {
+            OR = {
+                has_valid_civic = civic_agrarian_idyll
+                has_valid_civic = civic_sm_iceminers
+                has_valid_civic = civic_sm_corporate_iceminers
+                has_valid_civic = civic_sm_hive_iceminers
+                has_valid_civic = civic_sm_machine_iceminers
+            }
+        }
+    }
+    potential = {
+        OR = {
+            uses_district_set = hive_world
+            uses_district_set = machine_world
+            uses_district_set = standard
+        }
+        is_cold = yes
+        exists = owner
+        owner = {
+            OR = {
+                has_valid_civic = civic_sm_iceminers
+                has_valid_civic = civic_sm_corporate_iceminers
+                has_valid_civic = civic_sm_hive_iceminers
+                has_valid_civic = civic_sm_machine_iceminers
+            }
+        }
+    }
+    allow = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @base_cost
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_sm_icebreaker_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_sm_icebreaker_drone_add = 2
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_sm_icebreaker_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        text = job_sm_icebreaker_effect_desc
+    }
+    ai_resource_production = {
+        minerals = 4
+        trigger = {
+            always = yes
+        }
+    }
+}

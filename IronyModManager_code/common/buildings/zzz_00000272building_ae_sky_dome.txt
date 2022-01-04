@@ -1,0 +1,39 @@
+building_ae_sky_dome = {
+    base_buildtime = 600
+    can_build = no
+    category = amenity
+    prerequisites = {
+        "tech_aot_ae_sky_dome"
+    }
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = tech_aot_ae_sky_dome
+        }
+    }
+    allow = {
+        has_ascended_capital = yes
+    }
+    planet_modifier = {
+        planet_housing_add = 100
+        planet_amenities_add = 100
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 150
+            sr_dark_matter = 750
+            acot_sr_dark_energy = 750
+        }
+        upkeep = {
+            sr_dark_matter = 20
+            acot_sr_dark_energy = 20
+        }
+    }
+    upgrades = {
+        building_stellarite_sky_dome
+    }
+    ai_weight = {
+        weight = 5
+    }
+}

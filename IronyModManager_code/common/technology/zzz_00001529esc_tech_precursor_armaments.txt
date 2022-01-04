@@ -1,0 +1,16 @@
+esc_tech_precursor_armaments = {
+    area = physics
+    category = {
+        field_manipulation
+    }
+    tier = 7
+    cost = @ESC_TECH_tier7_cost1
+    weight = 0
+    ai_update_type = all
+    is_rare = yes
+    potential = {
+        NOT = {
+            has_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden
+        }
+    }
+}

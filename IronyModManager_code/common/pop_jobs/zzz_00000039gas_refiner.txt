@@ -9,8 +9,11 @@ gas_refiner = {
         is_being_assimilated = no
         is_sapient = yes
     }
+    possible_precalc = can_fill_specialist_job
     possible = {
-        specialist_job_check_trigger = yes
+        NOT = {
+            has_trait = trait_slave_gene
+        }
     }
     resources = {
         category = planet_refiners

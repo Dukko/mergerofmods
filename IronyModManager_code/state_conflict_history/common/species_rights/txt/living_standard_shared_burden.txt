@@ -6,6 +6,7 @@ living_standard_shared_burden = {
         from = {
             is_gestalt = no
             OR = {
+                is_shared_burdens_empire = yes
                 has_valid_civic = civic_employee_ownership
             }
             }

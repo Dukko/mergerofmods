@@ -1,0 +1,66 @@
+@apsr19cost1 = 5000
+@apsr19weight1 = 50
+tech_apsr19_building_part_b1 = {
+    cost = @apsr19cost1
+    area = society
+    tier = 2
+    category = {
+        biology
+    }
+    prerequisites = {
+        "tech_fission_power"
+    }
+    weight = @apsr19weight1
+    is_rare = yes
+    prereqfor_desc = {
+        hide_prereq_for_desc = component
+        custom = {
+            title = "TECH_APSR19_PART1B_TITLE"
+            desc = "TECH_APSR19_PART1B_DESC"
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_deposit = apsr19_deposit
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_authority = auth_machine_intelligence
+                is_lithoid_empire = yes
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_maniacal"
+            }
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+                research_leader = {
+                    area = society
+                    has_trait = "leader_trait_curator"
+                }
+                research_leader = {
+                    area = society
+                    has_trait = "leader_trait_spark_of_genius"
+                }
+            }
+        }
+        modifier = {
+            factor = 5
+            has_origin = apsr_origin_unique_capital
+        }
+    }
+    ai_weight = {
+        factor = 150
+    }
+}

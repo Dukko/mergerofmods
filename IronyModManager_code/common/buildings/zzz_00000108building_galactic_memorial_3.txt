@@ -9,13 +9,10 @@ building_galactic_memorial_3 = {
         }
         owner = {
             OR = {
-                has_valid_civic = civic_memorialist
-                has_valid_civic = civic_hive_memorialist
-                has_valid_civic = civic_machine_memorialist
+                is_memorialist_empire = yes
             }
             NOT = {
                 OR = {
-                    is_megacorp = yes
                     has_valid_civic = civic_fanatic_purifiers
                     has_valid_civic = civic_hive_devouring_swarm
                     has_valid_civic = civic_machine_assimilator
@@ -35,16 +32,13 @@ building_galactic_memorial_3 = {
             buildings_no_exotic_gases = yes
             owner = {
                 OR = {
-                    is_megacorp = yes
                     has_valid_civic = civic_fanatic_purifiers
                     has_valid_civic = civic_hive_devouring_swarm
                     has_valid_civic = civic_machine_assimilator
                     has_valid_civic = civic_machine_terminator
                     NOT = {
                         OR = {
-                            has_valid_civic = civic_memorialist
-                            has_valid_civic = civic_hive_memorialist
-                            has_valid_civic = civic_machine_memorialist
+                            is_memorialist_empire = yes
                         }
                     }
                 }

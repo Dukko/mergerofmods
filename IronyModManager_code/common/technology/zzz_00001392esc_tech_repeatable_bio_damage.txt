@@ -1,0 +1,50 @@
+esc_tech_repeatable_bio_damage = {
+    area = society
+    cost = @repeatableTechBaseCost
+    cost_per_level = @repeatableTechLevelCost
+    tier = @repeatableTechTier
+    category = {
+        biology
+    }
+    levels = -1
+    prerequisites = {
+        "esc_tech_biological_weapons"
+    }
+    weight = @repeatableTechWeight
+    potential = {
+        NOT = {
+            has_global_flag = ESC_GLOBAL_FLAG_biological_weapons_forbidden
+        }
+    }
+    modifier = {
+        weapon_type_biological_weapon_damage_mult = 0.05
+    }
+    weight_modifier = {
+        factor = @repatableTechFactor
+        modifier = {
+            factor = 0
+            NOR = {
+                has_technology = esc_tech_bio_cannon_1
+                has_technology = esc_tech_bio_missile_1
+            }
+        }
+        modifier = {
+            factor = 0
+            ESC_TRIGGER_may_research_bio_weapon_damage_repeatable = no
+        }
+    }
+    ai_weight = {
+        factor = @repatableTechFactor
+        modifier = {
+            factor = 0
+            NOR = {
+                has_technology = esc_tech_bio_cannon_1
+                has_technology = esc_tech_bio_missile_1
+            }
+        }
+        modifier = {
+            factor = 0
+            ESC_TRIGGER_may_research_bio_weapon_damage_repeatable = no
+        }
+    }
+}

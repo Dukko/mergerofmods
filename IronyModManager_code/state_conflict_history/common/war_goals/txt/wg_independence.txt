@@ -95,14 +95,12 @@ wg_independence = {
         if = {
             limit = {
                 from = {
-                    is_country_type = awakened_marauders
+                    CmtTriggerIsKhanCountry = yes
                 }
             }
-            set_subject_of = {
-                who = none
+            country_event = {
+                id = marauder.554
             }
-            set_country_flag = rebelling_satrapy
-            remove_modifier = "satrapy_of_horde"
             if = {
                 limit = {
                     any_war = {
@@ -116,7 +114,7 @@ wg_independence = {
                             }
                             prev = {
                                 using_war_goal = {
-                                    type = wg_independence
+                                    type = "wg_independence"
                                     owner = prev
                                 }
                             }
@@ -132,10 +130,13 @@ wg_independence = {
                         any_attacker = {
                             prev = {
                                 using_war_goal = {
-                                    type = wg_independence
+                                    type = "wg_independence"
                                     owner = prev
                                 }
                             }
+                        }
+                        any_defender = {
+                            is_same_empire = from
                         }
                     }
                     every_attacker = {
@@ -149,11 +150,27 @@ wg_independence = {
                             limit = {
                                 has_modifier = "satrapy_of_horde"
                             }
-                            set_country_flag = rebelling_satrapy
-                            remove_modifier = "satrapy_of_horde"
+                            country_event = {
+                                id = marauder.554
+                            }
                         }
-                        set_subject_of = {
-                            who = none
+                        else = {
+                            set_subject_of = {
+                                who = none
+                            }
+                        }
+                    }
+                    every_defender = {
+                        limit = {
+                            NOR = {
+                                is_same_empire = from
+                                has_origin = "origin_khan_successor"
+                                is_subject_type = war_satrapy
+                            }
+                            CmtTriggerIsMarauder = no
+                        }
+                        prev = {
+                            remove_war_participant = prev
                         }
                     }
                 }

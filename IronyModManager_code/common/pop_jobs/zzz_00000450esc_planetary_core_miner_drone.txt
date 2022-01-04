@@ -1,0 +1,82 @@
+esc_planetary_core_miner_drone = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = esc_building_dark_matter_facility
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_drone_job
+    possible = {
+        hidden_trigger = {
+            exists = owner
+        }
+        owner = {
+            is_gestalt = yes
+        }
+    }
+    resources = {
+        category = planet_miners
+        produces = {
+            minerals = 20
+            engineering_research = 5
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    OR = {
+                        has_building = building_mineral_purification_plant
+                        has_building = building_mineral_purification_hub
+                    }
+                }
+            }
+            minerals = 4
+        }
+        upkeep = {
+            trigger = {
+                NOR = {
+                    has_trait = trait_lithoid
+                    has_trait = trait_mechanical
+                    has_trait = trait_machine_unit
+                }
+            }
+            food = 10
+            energy = 5
+        }
+        upkeep = {
+            trigger = {
+                has_trait = trait_lithoid
+            }
+            minerals = 10
+            energy = 5
+        }
+        upkeep = {
+            trigger = {
+                OR = {
+                    has_trait = trait_mechanical
+                    has_trait = trait_machine_unit
+                }
+            }
+            energy = 10
+            alloys = 2.5
+        }
+    }
+    weight = {
+        weight = @complex_drone_job_weight
+        modifier = {
+            factor = 2
+            has_trait = trait_strong
+            has_trait = trait_very_strong
+            has_trait = trait_industrious
+            has_trait = trait_resilient
+            has_trait = trait_robot_power_drills
+        }
+        modifier = {
+            factor = 1.5
+            has_job = esc_planetary_core_miner_drone
+        }
+    }
+}

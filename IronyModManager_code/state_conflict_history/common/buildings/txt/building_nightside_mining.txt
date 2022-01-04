@@ -31,7 +31,10 @@ building_nightside_mining = {
         NOT = {
             has_modifier = resort_colony
         }
-        is_planet_class = pc_tidallylocked
+        OR = {
+            is_planet_class = pc_tidallylocked
+            is_planet_class = pc_ll_tidallylocked
+        }
     }
     allow = {
         has_upgraded_capital = yes

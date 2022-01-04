@@ -1,0 +1,27 @@
+tech_hollowrift = {
+    area = society
+    tier = 1
+    category = {
+        biology
+    }
+    start_tech = yes
+    potential = {
+        owner_main_species = {
+            is_species_class = HRWRM
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                owner_main_species = {
+                    is_species_class = HRWRM
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            has_leviathans = no
+        }
+    }
+}

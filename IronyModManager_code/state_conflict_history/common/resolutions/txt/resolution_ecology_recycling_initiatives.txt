@@ -54,7 +54,6 @@ resolution_ecology_recycling_initiatives = {
                 is_active_resolution = "resolution_ecology_integrated_gardens"
                 is_active_resolution = "resolution_ecology_environmental_control_board"
                 is_active_resolution = "resolution_ecology_paradise_initiative"
-                is_active_resolution = "resolution_ecology_6"
             }
         }
     }
@@ -93,6 +92,10 @@ resolution_ecology_recycling_initiatives = {
         modifier = {
             factor = 0.9
             rusher2 = yes
+        }
+        modifier = {
+            factor = 3
+            has_origin = origin_terraformer
         }
         modifier = {
             factor = 2

@@ -6,7 +6,6 @@ col_habitat_mining = {
             uses_district_set = pdarchive
         }
         has_planet_flag = mining_habitat
-        is_capital = no
     }
     planet_modifier = {
         planet_district_hab_mining_build_speed_mult = 0.25
@@ -24,7 +23,6 @@ col_habitat_mining = {
                 is_active_resolution = "resolution_greatergood_greater_than_ourselves"
                 is_active_resolution = "resolution_greatergood_balance_in_the_middle"
                 is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
-                is_active_resolution = "resolution_greatergood_6"
             }
         }
         modifier = {
@@ -43,7 +41,6 @@ col_habitat_mining = {
                 is_active_resolution = "resolution_greatergood_greater_than_ourselves"
                 is_active_resolution = "resolution_greatergood_balance_in_the_middle"
                 is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
-                is_active_resolution = "resolution_greatergood_6"
             }
         }
         modifier = {

@@ -1,0 +1,39 @@
+tech_stellarite_hive_depot = {
+    cost = @acot_tier8cost1
+    area = society
+    tier = 8
+    category = {
+        biology
+    }
+    prerequisites = {
+        "tech_ae_hive_depot"
+    }
+    weight = @tier5weight3
+    potential = {
+        NOR = {
+            has_global_flag = acot_building_forbidden
+            is_fallen_empire = yes
+        }
+        is_hive_empire = yes
+        has_technology = tech_stellarite_reactor
+    }
+    weight_modifier = {
+        factor = 1.5
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+    }
+}

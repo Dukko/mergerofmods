@@ -1,0 +1,61 @@
+phanon_dimension_folder = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_phanon_runic_generator
+    clothes_texture_index = 3
+    icon = phanon_runicman
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible_precalc = can_fill_specialist_job
+    resources = {
+        category = planet_jobs
+        produces = {
+            aot_sr_runic_power = 50
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    is_ai = no
+                }
+            }
+            acot_sr_stellarite = 500
+            energy = 100
+            alloys = 50
+            sr_living_metal = 10
+            sr_zro = 10
+            volatile_motes = 10
+            exotic_gases = 10
+            rare_crystals = 10
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    is_ai = yes
+                }
+            }
+            energy = 100
+        }
+    }
+    weight = {
+        weight = @specialist_job_weight
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+            NOT = {
+                has_trait = trait_mechanical
+            }
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 1.5
+            has_job = sun_master
+        }
+    }
+}

@@ -1,0 +1,63 @@
+esc_borehole_maintainer_drone = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = esc_building_dark_matter_facility
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_drone_job
+    possible = {
+        hidden_trigger = {
+            exists = owner
+        }
+        owner = {
+            is_gestalt = yes
+        }
+    }
+    resources = {
+        category = planet_miners
+        produces = {
+            rare_crystals = 1
+            engineering_research = 8
+        }
+        upkeep = {
+            trigger = {
+                NOR = {
+                    has_trait = trait_lithoid
+                    has_trait = trait_mechanical
+                    has_trait = trait_machine_unit
+                }
+            }
+            food = 5
+            alloys = 1
+        }
+        upkeep = {
+            trigger = {
+                has_trait = trait_lithoid
+            }
+            minerals = 5
+            alloys = 1
+        }
+        upkeep = {
+            trigger = {
+                OR = {
+                    has_trait = trait_mechanical
+                    has_trait = trait_machine_unit
+                }
+            }
+            energy = 4
+            alloys = 1.5
+        }
+    }
+    weight = {
+        weight = @complex_drone_job_weight
+        modifier = {
+            factor = 1.5
+            has_job = esc_borehole_maintainer_drone
+        }
+    }
+}

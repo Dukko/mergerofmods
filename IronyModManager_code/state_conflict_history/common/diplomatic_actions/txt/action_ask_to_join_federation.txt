@@ -176,5 +176,6 @@ action_ask_to_join_federation = {
                 }
             }
         }
+        get_border_test = yes
     }
 }

@@ -40,7 +40,7 @@ curator_think_tank = {
             fail_text = "requires_curator_agreement"
             solar_system = {
                 has_star_flag = enclave
-                any_fleet_in_system = {
+                any_ship_in_system = {
                     exists = owner
                     owner = {
                         has_country_flag = curator_enclave_country
@@ -70,7 +70,6 @@ curator_think_tank = {
                     is_active_resolution = "resolution_galacticstudies_advanced_xenostudies"
                     is_active_resolution = "resolution_galacticstudies_ethical_guideline_refactoring"
                     is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
-                    is_active_resolution = "resolution_galacticstudies_6"
                 }
             }
             physics_research = 10

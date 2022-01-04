@@ -1,0 +1,9 @@
+fake_news_cap_policy = {
+    weight = {
+        base = 10
+        modifier = {
+            is_spynetwork_level > 35
+            factor = 0.5
+        }
+    }
+}

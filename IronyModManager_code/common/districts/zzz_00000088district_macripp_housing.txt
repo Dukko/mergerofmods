@@ -1,0 +1,75 @@
+@hab_cost = 10000
+@hab_cost_phanon = 500
+@hab_maintenance = 100
+@planet_housing_generic = 20
+district_macripp_housing = {
+    base_buildtime = 300
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        uses_district_set = phanon_macripp
+    }
+    potential = {
+        uses_district_set = phanon_macripp
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @hab_cost
+            alloys = @hab_cost
+            aot_sr_runic_power = @hab_cost_phanon
+        }
+        upkeep = {
+            energy = @hab_maintenance
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = @planet_housing_generic
+        job_merchant_add = 1
+        job_phanon_clerk_add = 10
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_maintenance_drone_add = 4
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_maintenance_drone_desc
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 250
+            planet = {
+                num_districts = {
+                    type = district_hab_housing
+                    value < 1
+                }
+            }
+        }
+        modifier = {
+            weight = 250
+            planet = {
+                owner = {
+                    is_regular_empire = yes
+                    has_ascension_perk = ap_master_builders
+                }
+                num_districts = {
+                    type = district_hab_housing
+                    value < 2
+                }
+            }
+        }
+    }
+}

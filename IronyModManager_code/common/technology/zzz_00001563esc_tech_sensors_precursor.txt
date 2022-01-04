@@ -1,0 +1,25 @@
+esc_tech_sensors_precursor = {
+    area = physics
+    category = {
+        computing
+    }
+    tier = 6
+    cost = @ESC_TECH_tier6_cost3
+    weight = 0
+    prerequisites = {
+    }
+    ai_update_type = all
+    is_rare = yes
+    prereqfor_desc = {
+        hide_prereq_for_desc = component
+        custom = {
+            title = "ESC_TECH_UNLOCK_PRECURSOR_SENSOR_TITLE"
+            desc = "ESC_TECH_UNLOCK_PRECURSOR_SENSOR_DESC"
+        }
+    }
+    potential = {
+        NOT = {
+            has_global_flag = ESC_GLOBAL_FLAG_sensors_forbidden
+        }
+    }
+}

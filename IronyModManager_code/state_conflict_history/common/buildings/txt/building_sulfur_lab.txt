@@ -31,7 +31,10 @@ building_sulfur_lab = {
         NOT = {
             has_modifier = resort_colony
         }
-        is_planet_class = pc_sulfur
+        OR = {
+            is_planet_class = pc_sulfur
+            is_planet_class = pc_ll_sulfur
+        }
     }
     allow = {
         has_upgraded_capital = yes

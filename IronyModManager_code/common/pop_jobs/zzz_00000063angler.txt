@@ -1,0 +1,80 @@
+angler = {
+    category = worker
+    condition_string = WORKER_JOB_TRIGGER
+    building_icon = building_food_processing_facility
+    clothes_texture_index = 2
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_worker_job
+    possible = {
+        hidden_trigger = {
+            exists = owner
+        }
+        owner = {
+            is_gestalt = no
+            is_anglers_empire = yes
+        }
+    }
+    resources = {
+        category = planet_farmers
+        produces = {
+            food = 8
+        }
+    }
+    triggered_planet_modifier = {
+        modifier = {
+            trade_value_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_trait = trait_thrifty
+        }
+        modifier = {
+            trade_value_add = 0.5
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_trait = trait_nuumismatic_administration
+        }
+        modifier = {
+            trade_value_add = 0.2
+        }
+    }
+    weight = {
+        weight = @worker_job_weight
+        modifier = {
+            factor = 3
+            has_trait = trait_agrarian
+        }
+        modifier = {
+            factor = 10
+            is_enslaved = yes
+            can_take_servant_job = no
+        }
+        modifier = {
+            factor = 0.25
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 1.5
+            has_trait = trait_syncretic_proles
+        }
+        modifier = {
+            factor = 1.4
+            has_trait = trait_presapient_proles
+        }
+        modifier = {
+            factor = 1.1
+            OR = {
+                has_trait = trait_robust
+                has_trait = trait_robot_efficient_processors
+            }
+        }
+    }
+}

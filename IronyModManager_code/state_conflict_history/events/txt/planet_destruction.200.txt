@@ -91,11 +91,7 @@ planet_event = {
                     NOT = {
                         is_same_value = from.owner
                     }
-                    OR = {
-                        is_country_type = default
-                        is_country_type = fallen_empire
-                        is_country_type = awakened_fallen_empire
-                    }
+                    is_playable_country = yes
                 }
             }
             add_threat = {
@@ -124,7 +120,7 @@ planet_event = {
                         }
                         has_ai_personality = awakened_fallen_empire_xenophile
                         AND = {
-                            is_country_type = default
+                            is_playable_country = yes
                             OR = {
                                 is_egalitarian = yes
                                 is_xenophile = yes
@@ -175,7 +171,7 @@ planet_event = {
         }
         if = {
             limit = {
-                is_planet_class = pc_habitat
+                is_memeable_space_habitat = yes
             }
             spawn_habitat_pacifier_effect = yes
             change_pc = {
@@ -185,7 +181,7 @@ planet_event = {
         }
         else_if = {
             limit = {
-                is_planet_class = pc_ringworld_habitable
+                is_memeable_ringworld = yes
             }
             spawn_ringworld_pacifier_effect = yes
             change_pc = {
@@ -200,6 +196,9 @@ planet_event = {
             }
         }
         clear_deposits = yes
-        add_deposit = d_society_10
+        add_deposit = d_society_3
+        add_deposit = d_society_3
+        add_deposit = d_society_3
+        add_deposit = d_society_1
     }
 }

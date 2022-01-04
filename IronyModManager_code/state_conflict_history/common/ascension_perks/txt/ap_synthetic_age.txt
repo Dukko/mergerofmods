@@ -24,6 +24,6 @@ ap_synthetic_age = {
         }
     }
     ai_weight = {
-        factor = 100
+        factor = 50
     }
 }

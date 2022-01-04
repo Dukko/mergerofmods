@@ -155,6 +155,10 @@ resolution_industry_collective_waste_management = {
             is_civic_environmentalist = yes
         }
         modifier = {
+            factor = 0.25
+            has_origin = origin_terraformer
+        }
+        modifier = {
             factor = 5
             is_machine_empire = yes
             NOT = {

@@ -92,6 +92,15 @@ building_hab_capital = {
     }
     triggered_planet_modifier = {
         potential = {
+            exists = branch_office_owner
+            branch_office_owner = {
+                is_constructors_megacorp = yes
+            }
+        }
+        planet_max_branch_office_buildings_add = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
             exists = owner
             owner = {
                 is_ai = yes
@@ -145,7 +154,7 @@ building_hab_capital = {
             exists = owner
             owner = {
                 NOT = {
-                    has_authority = auth_corporate
+                    is_megacorp = yes
                 }
                 is_regular_empire = yes
             }
@@ -156,7 +165,7 @@ building_hab_capital = {
         potential = {
             exists = owner
             owner = {
-                has_authority = auth_corporate
+                is_megacorp = yes
             }
         }
         modifier = {
@@ -201,7 +210,7 @@ building_hab_capital = {
             exists = owner
             owner = {
                 NOT = {
-                    has_authority = auth_corporate
+                    is_megacorp = yes
                 }
                 is_regular_empire = yes
             }
@@ -221,7 +230,7 @@ building_hab_capital = {
         trigger = {
             exists = owner
             owner = {
-                has_authority = auth_corporate
+                is_megacorp = yes
             }
         }
         text = job_executive_effect_desc

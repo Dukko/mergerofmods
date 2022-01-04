@@ -1,0 +1,29 @@
+@toxicCost = 10000
+@toxicTime = 5400
+terraform_link = {
+    from = "pc_toxic"
+    to = "pc_desert"
+    resources = {
+        category = terraforming
+        cost = {
+            energy = @toxicCost
+        }
+    }
+    duration = @toxicTime
+    potential = {
+        from = {
+            has_modifier = terraforming_candidate
+        }
+    }
+    condition = {
+        has_technology = "tech_climate_restoration"
+    }
+    effect = {
+        from = {
+            remove_modifier = terraforming_candidate
+        }
+    }
+    ai_weight = {
+        weight = 5
+    }
+}

@@ -1,0 +1,71 @@
+esc_tech_missiles_6 = {
+    area = engineering
+    category = {
+        propulsion
+    }
+    tier = 5
+    cost = @tier5cost1
+    weight = @tier5weight1
+    ai_update_type = military
+    prerequisites = {
+        "tech_missiles_5"
+        "esc_tech_new_age_warfare"
+    }
+    gateway = ESC_ADVANCED_MISSILES
+    potential = {
+        NOT = {
+            has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_missile_weapons_forbidden
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0.8
+            has_ethic = ethic_fanatic_pacifist
+        }
+        modifier = {
+            factor = 0.9
+            has_ethic = ethic_pacifist
+        }
+        modifier = {
+            factor = 1.1
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.2
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_propulsion"
+            }
+        }
+    }
+    ai_weight = {
+        factor = @ESC_AI_tech_weight_multiplier
+        modifier = {
+            factor = 0.8
+            has_ethic = ethic_fanatic_pacifist
+        }
+        modifier = {
+            factor = 0.9
+            has_ethic = ethic_pacifist
+        }
+        modifier = {
+            factor = 1.1
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.2
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_propulsion"
+            }
+        }
+    }
+}

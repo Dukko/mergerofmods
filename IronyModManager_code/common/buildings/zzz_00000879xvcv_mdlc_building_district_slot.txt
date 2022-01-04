@@ -1,0 +1,36 @@
+xvcv_mdlc_building_district_slot = {
+    base_buildtime = @b2_time
+    category = government
+    potential = {
+        OR = {
+            xvcv_mdlc_world_machines_planet_classes_trigger = yes
+            is_planet_class = xvcv_mdlc_pc_virtual
+        }
+    }
+    planet_modifier = {
+        planet_max_districts_add = 1
+    }
+    on_destroy = {
+        if = {
+            limit = {
+                free_district_slots < 1
+            }
+            remove_last_built_district = yes
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b2_minerals
+            volatile_motes = @b2_rare_cost
+            exotic_gases = @b2_rare_cost
+            rare_crystals = @b2_rare_cost
+        }
+        upkeep = {
+            energy = @b1_upkeep
+            volatile_motes = @b2_rare_upkeep
+            exotic_gases = @b2_rare_upkeep
+            rare_crystals = @b2_rare_upkeep
+        }
+    }
+}

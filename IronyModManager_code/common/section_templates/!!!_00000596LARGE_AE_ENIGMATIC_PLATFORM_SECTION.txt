@@ -1,0 +1,98 @@
+ship_section_template = {
+    key = "LARGE_AE_ENIGMATIC_PLATFORM_SECTION"
+    ship_size = enigmatic_fortress_platform
+    fits_on_slot = "large"
+    entity = "enigmatic_fortress_platform_entity"
+    icon = "GFX_ship_part_core_mid"
+    should_draw_components = no
+    prerequisites = {
+        tech_ae_enigmatic_fortress_platform
+    }
+    component_slot = {
+        name = "TITANIC_01"
+        template = "invisible_titanic_fixed"
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "TITANIC_02"
+        template = "invisible_titanic_fixed"
+        locatorname = "large_gun_02"
+    }
+    component_slot = {
+        name = "TITANIC_03"
+        template = "invisible_titanic_fixed"
+        locatorname = "large_gun_03"
+    }
+    component_slot = {
+        name = "TITANIC_04"
+        template = "invisible_titanic_fixed"
+        locatorname = "large_gun_04"
+    }
+    component_slot = {
+        name = "TITANIC_05"
+        template = "invisible_titanic_fixed"
+        locatorname = "large_gun_05"
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_06"
+        template = "invisible_extra_large_fixed"
+        locatorname = "large_gun_01.002"
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_07"
+        template = "invisible_extra_large_fixed"
+        locatorname = "large_gun_01.003"
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_08"
+        template = "invisible_extra_large_fixed"
+        locatorname = "large_gun_01.004"
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_09"
+        template = "invisible_extra_large_fixed"
+        locatorname = "large_gun_01.001"
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_10"
+        template = "invisible_extra_large_fixed"
+        locatorname = "large_gun_01.002"
+    }
+    component_slot = {
+        name = "LARGE_GUN_11"
+        template = "large_turret"
+        locatorname = "large_gun_01.002"
+    }
+    component_slot = {
+        name = "LARGE_GUN_12"
+        template = "large_turret"
+        locatorname = "large_gun_01.003"
+    }
+    component_slot = {
+        name = "LARGE_GUN_13"
+        template = "large_turret"
+        locatorname = "large_gun_01.004"
+    }
+    component_slot = {
+        name = "LARGE_GUN_14"
+        template = "large_turret"
+        locatorname = "large_gun_01.001"
+    }
+    component_slot = {
+        name = "LARGE_GUN_15"
+        template = "large_turret"
+        locatorname = "large_gun_01.002"
+    }
+    small_utility_slots = 0
+    medium_utility_slots = 0
+    large_utility_slots = 10
+    aux_utility_slots = 2
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = 1200
+            sr_dark_matter = 1000
+            acot_sr_dark_energy = 1000
+        }
+    }
+}

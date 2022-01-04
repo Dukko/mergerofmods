@@ -33,6 +33,19 @@ building_food_processing_facility = {
             owner = {
                 is_regular_empire = yes
                 is_fallen_empire_spiritualist = no
+                OR = {
+                    is_anglers_empire = no
+                    AND = {
+                        is_anglers_empire = yes
+                        NOT = {
+                            PREV = {
+                                planet = {
+                                    is_wet = yes
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
         modifier = {
@@ -61,6 +74,24 @@ building_food_processing_facility = {
             job_agri_drone_add = 1
         }
     }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                is_fallen_empire_spiritualist = no
+                is_anglers_empire = yes
+                PREV = {
+                    planet = {
+                        is_wet = yes
+                    }
+                }
+            }
+        }
+        modifier = {
+            job_angler_add = 1
+        }
+    }
     resources = {
         category = planet_buildings
         cost = {
@@ -68,19 +99,6 @@ building_food_processing_facility = {
         }
         upkeep = {
             energy = 2
-        }
-    }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = {
-                is_ai = yes
-            }
-            str_force_food_processing = yes
-        }
-        modifier = {
-            job_starnet_spice_melange_farmer_add = 1
-            job_starnet_spice_melange_antifarmer_add = -1
         }
     }
     triggered_desc = {
@@ -110,6 +128,21 @@ building_food_processing_facility = {
             }
         }
         text = job_fe_acolyte_farm_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_fallen_empire_spiritualist = no
+                is_anglers_empire = yes
+                PREV = {
+                    planet = {
+                        is_wet = yes
+                    }
+                }
+            }
+        }
+        text = job_aqu_angler_effect_desc
     }
     upgrades = {
         building_food_processing_center

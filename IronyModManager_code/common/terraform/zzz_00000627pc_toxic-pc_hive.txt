@@ -1,0 +1,22 @@
+@hiveCost = 10000
+@hiveTime = 7200
+terraform_link = {
+    to = "pc_hive"
+    from = "pc_toxic"
+    resources = {
+        category = terraforming
+        cost = {
+            energy = @hiveCost
+        }
+    }
+    duration = @hiveTime
+    potential = {
+        has_ascension_perk = ap_hive_worlds
+        from = {
+            has_modifier = terraforming_candidate
+        }
+    }
+    ai_weight = {
+        weight = 20
+    }
+}

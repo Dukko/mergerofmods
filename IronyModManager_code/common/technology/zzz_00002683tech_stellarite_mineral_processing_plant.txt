@@ -1,0 +1,38 @@
+tech_stellarite_mineral_processing_plant = {
+    cost = @acot_tier8cost1
+    area = engineering
+    tier = 8
+    category = {
+        industry
+    }
+    prerequisites = {
+        "tech_ae_mineral_processing_plant"
+    }
+    weight = @tier5weight1
+    potential = {
+        NOR = {
+            has_global_flag = acot_building_forbidden
+            is_fallen_empire = yes
+        }
+        has_technology = tech_stellarite_reactor
+    }
+    weight_modifier = {
+        factor = 2
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+}

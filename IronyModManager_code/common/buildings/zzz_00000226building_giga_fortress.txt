@@ -1,0 +1,108 @@
+building_giga_fortress = {
+    base_buildtime = 900
+    add_to_first_building_slot = yes
+    can_be_ruined = no
+    can_be_disabled = no
+    can_demolish = no
+    can_build = no
+    position_priority = 100
+    planetary_ftl_inhibitor = yes
+    category = army
+    allow = {
+        has_ascended_capital = yes
+    }
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = tech_giga_fortress
+        }
+    }
+    planet_modifier = {
+        planet_amenities_add = 20
+        planet_housing_add = 20
+        planet_stability_add = 50
+    }
+    army_modifier = {
+        army_defense_damage_mult = 2.5
+        army_defense_health_mult = 2.5
+        army_defense_morale_mult = 2.5
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        job_acot_giga_fortress_operator_add = 3
+        job_acot_enforcer_add = 10
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        job_acot_giga_fortress_operator_drone_add = 3
+        job_acot_enforcer_drone_add = 10
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_fallen_empire = yes
+            }
+        }
+        job_acot_giga_fortress_operator_ancient_add = 3
+    }
+    resources = {
+        category = planet_buildings
+        produces = {
+            unity = 50
+            food = 50
+        }
+        cost = {
+            trigger = {
+                owner = {
+                    is_ai = no
+                }
+            }
+            minerals = 15000
+            influence = 50
+            sr_dark_matter = 200
+            acot_sr_dark_energy = 200
+        }
+        cost = {
+            trigger = {
+                owner = {
+                    is_ai = yes
+                }
+            }
+            minerals = 1250
+            influence = 25
+            sr_dark_matter = 100
+            acot_sr_dark_energy = 100
+        }
+    }
+    prerequisites = {
+        "tech_giga_fortress"
+    }
+    ai_weight = {
+        weight = 15000
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = sr_dark_matter
+                    value <= 3
+                }
+            }
+        }
+    }
+    upgrades = {
+        building_giga_fortress_array
+        building_giga_fortress_lab
+        building_giga_fortress_obelisk
+    }
+}

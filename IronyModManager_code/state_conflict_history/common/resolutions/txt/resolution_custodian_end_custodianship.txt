@@ -1,0 +1,110 @@
+@resolution_weight_popular = 6.5
+@resolution_cost_t3 = 200
+resolution_custodian_end_custodianship = {
+    icon = "GFX_resolution_end_custodianship"
+    resources = {
+        category = resolutions
+        cost = {
+            influence = @resolution_cost_t3
+        }
+    }
+    target = no
+    modifier = {
+    }
+    effect = {
+        custom_tooltip = resolution_custodian_end_custodianship_tooltip
+        hidden_effect = {
+            country_event = {
+                id = custodian.14
+            }
+        }
+    }
+    fail_effects = {
+    }
+    potential = {
+        has_nemesis = yes
+        is_galactic_custodian = yes
+        NOT = {
+            has_global_flag = grand_custodianship_declared
+        }
+    }
+    active = {
+        has_galactic_custodian = yes
+    }
+    ai_weight = {
+        weight = @resolution_weight_popular
+        modifier = {
+            factor = 0
+            is_galactic_custodian = yes
+        }
+        modifier = {
+            factor = 0.1
+            any_neighbor_country = {
+                is_crisis_faction = yes
+            }
+        }
+        modifier = {
+            factor = 0.75
+            has_crisis_stage_1 = yes
+        }
+        modifier = {
+            factor = 0.5
+            has_crisis_stage_2 = yes
+        }
+        modifier = {
+            factor = 0.25
+            has_crisis_stage_3 = yes
+        }
+        modifier = {
+            factor = 0.1
+            has_crisis_stage_4 = yes
+        }
+        modifier = {
+            factor = 0.1
+            any_playable_country = {
+                has_country_flag = crisis_sphere_revealed
+            }
+        }
+        modifier = {
+            factor = 0.25
+            any_playable_country = {
+                has_been_declared_crisis = yes
+            }
+        }
+        modifier = {
+            factor = 0.25
+            has_global_flag = gray_goo_crisis_active
+        }
+        modifier = {
+            factor = 0.25
+            has_global_flag = marauder_crisis_ongoing
+        }
+        modifier = {
+            factor = 0.25
+            any_country = {
+                is_country_type = awakened_fallen_empire
+            }
+        }
+        modifier = {
+            factor = 0.1
+            has_global_flag = war_in_heaven_ongoing
+        }
+        modifier = {
+            factor = 3
+            is_xenophobic_isolationists = yes
+        }
+        modifier = {
+            factor = 2
+            is_xenophobe = yes
+        }
+        modifier = {
+            factor = 2
+            is_civic_cutthroat_politics = yes
+            is_galactic_custodian = no
+        }
+        modifier = {
+            factor = 0.5
+            is_civic_diplomatic_corps = yes
+        }
+    }
+}

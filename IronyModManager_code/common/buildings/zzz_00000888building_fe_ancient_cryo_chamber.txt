@@ -1,0 +1,65 @@
+building_fe_ancient_cryo_chamber = {
+    base_buildtime = 360
+    can_build = no
+    can_demolish = yes
+    icon = building_dm_ancient_cryo_chamber
+    category = unity
+    potential = {
+        exists = owner
+        owner = {
+            is_country_type = ascended_empire
+            is_machine_empire = yes
+            has_technology = tech_ascended_society_1
+        }
+        NOR = {
+            is_planet_class = pc_habitat
+            has_modifier = resort_colony
+            has_modifier = slave_colony
+        }
+    }
+    show_tech_unlock_if = {
+        has_authority = auth_machine_intelligence
+    }
+    allow = {
+        has_enigmatic_capital = yes
+    }
+    convert_to = {
+        building_fe_mansion
+        building_fe_hive_depot
+    }
+    planet_modifier = {
+        planet_housing_add = 20
+        planet_amenities_add = 20
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 550
+            sr_dark_matter = 50
+        }
+        upkeep = {
+            energy = 20
+        }
+    }
+    prerequisites = {
+        "tech_ascended_society_1"
+    }
+    ai_weight = {
+        weight = 10
+        modifier = {
+            factor = 20000
+            free_housing < 0
+        }
+        modifier = {
+            factor = 30000
+            free_amenities < 2
+        }
+        modifier = {
+            factor = 0
+            free_housing > 1
+        }
+    }
+    upgrades = {
+        building_ae_ancient_cryo_chamber
+    }
+}

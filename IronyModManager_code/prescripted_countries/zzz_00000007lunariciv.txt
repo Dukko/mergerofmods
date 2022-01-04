@@ -11,7 +11,7 @@ lunariciv = {
         name = "Naerelýn"
         plural = "Naerelýn"
         adjective = "Naerelýn"
-        name_list = "eos_namelist_elf_lunari"
+        name_list = "ELVEN3"
         trait = "trait_elven_true"
         trait = "trait_intelligent"
         trait = "trait_natural_physicists"
@@ -40,7 +40,7 @@ lunariciv = {
     empire_flag = {
         icon = {
             category = "elven"
-            file = "elven_2.dds"
+            file = "eos_flag_lunari_1.dds"
         }
         background = {
             category = "backgrounds"

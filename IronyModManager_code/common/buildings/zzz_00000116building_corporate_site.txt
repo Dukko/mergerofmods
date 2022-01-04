@@ -11,6 +11,8 @@ building_corporate_site = {
         owner = {
             is_megacorp = yes
             is_spiritualist = no
+            is_memorialist_empire = no
+            is_ai = no
         }
     }
     allow = {
@@ -24,6 +26,7 @@ building_corporate_site = {
             buildings_no_crystals = yes
             owner = {
                 OR = {
+                    is_ai = yes
                     is_megacorp = no
                     is_spiritualist = yes
                 }

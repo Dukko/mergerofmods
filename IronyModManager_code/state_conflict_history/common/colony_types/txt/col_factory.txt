@@ -1,4 +1,3 @@
-@built_districts_medium_threshold = 4
 @free_districts_high_threshold = 15
 col_factory = {
     icon = GFX_colony_type_factory
@@ -43,14 +42,13 @@ col_factory = {
             OR = {
                 is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
                 is_active_resolution = "resolution_industry_project_cornucopia"
-                is_active_resolution = "resolution_industry_6"
             }
         }
         modifier = {
             planet_artisans_produces_mult = 0.05
         }
     }
-    triggered_planet_modifier = {
+   triggered_planet_modifier = {
         potential = {
             exists = owner
             owner = {
@@ -62,7 +60,7 @@ col_factory = {
             planet_artisans_produces_mult = 0.1
         }
     }
-    weight_modifier = {
+weight_modifier = {
         modifier = {
             add = 4
             owner = {

@@ -8,9 +8,14 @@ artificer = {
         is_being_purged = no
         is_being_assimilated = no
     }
+    possible_precalc = can_fill_specialist_job
     possible = {
-        specialist_job_check_trigger = yes
-        exists = owner
+        NOT = {
+            has_trait = trait_slave_gene
+        }
+        hidden_trigger = {
+            exists = owner
+        }
         owner = {
             is_gestalt = no
             is_crafter_empire = yes

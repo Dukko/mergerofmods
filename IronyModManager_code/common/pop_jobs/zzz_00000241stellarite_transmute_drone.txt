@@ -1,0 +1,119 @@
+stellarite_transmute_drone = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_stellarite_transmutor
+    icon = stellarite_alloyman
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible_precalc = can_fill_drone_job
+    resources = {
+        category = planet_jobs
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_rare_crystals
+                }
+            }
+            rare_crystals = 16
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_volatile_motes
+                }
+            }
+            volatile_motes = 16
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_exotic_gases
+                }
+            }
+            exotic_gases = 16
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_mine_living_metal
+                }
+            }
+            sr_living_metal = 16
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_nanite_transmutation
+                }
+            }
+            nanites = 16
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_mine_zro
+                }
+            }
+            sr_zro = 16
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    has_technology = tech_rare_crystals
+                }
+            }
+            acot_sr_stellarite = 1
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    has_technology = tech_volatile_motes
+                }
+            }
+            acot_sr_stellarite = 1
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    has_technology = tech_exotic_gases
+                }
+            }
+            acot_sr_stellarite = 1
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    has_technology = tech_mine_living_metal
+                }
+            }
+            acot_sr_stellarite = 1
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    has_technology = tech_nanite_transmutation
+                }
+            }
+            acot_sr_stellarite = 1
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    has_technology = tech_mine_zro
+                }
+            }
+            acot_sr_stellarite = 1
+        }
+    }
+    weight = {
+        weight = @complex_drone_job_weight
+        modifier = {
+            factor = 1.5
+            has_job = stellarite_transmute_drone
+        }
+    }
+}

@@ -1,0 +1,42 @@
+tech_stellarite_civilian_factory = {
+    cost = @acot_tier8cost1
+    area = engineering
+    tier = 8
+    category = {
+        materials
+    }
+    prerequisites = {
+        "tech_ae_factory"
+    }
+    weight = @tier5weight1
+    potential = {
+        OR = {
+            is_gestalt = no
+            has_valid_civic = civic_machine_servitor
+        }
+        NOR = {
+            has_global_flag = acot_building_forbidden
+            is_fallen_empire = yes
+        }
+        has_technology = tech_stellarite_reactor
+    }
+    weight_modifier = {
+        factor = 2
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+}

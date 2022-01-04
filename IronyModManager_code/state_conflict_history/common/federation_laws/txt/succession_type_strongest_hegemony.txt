@@ -1,4 +1,4 @@
-@cooldown = 3600
+@cooldown = 720
 succession_type_strongest_hegemony = {
     potential = {
         has_federation_type = hegemony_federation

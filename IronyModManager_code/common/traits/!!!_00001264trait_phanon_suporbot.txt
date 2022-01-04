@@ -1,0 +1,31 @@
+trait_phanon_suporbot = {
+    cost = -4
+    initial = no
+    randomized = no
+    icon = "gfx/interface/icons/traits/leader_traits/trait_leader_phanon_big_brain.dds"
+    improves_leaders = yes
+    prerequisites = {
+        tech_phanon_augmentations
+    }
+    allowed_archetypes = {
+        ROBOT
+        MACHINE
+    }
+    modifier = {
+        planet_jobs_energy_produces_mult = 0.5
+        planet_jobs_minerals_produces_mult = 0.5
+        planet_jobs_alloys_produces_mult = 0.5
+        planet_jobs_consumer_goods_produces_mult = 0.5
+        planet_jobs_exotic_gases_produces_mult = 1
+        planet_jobs_rare_crystals_produces_mult = 1
+        planet_jobs_volatile_motes_produces_mult = 1
+        planet_jobs_sr_living_metal_produces_mult = 1
+        planet_jobs_sr_zro_produces_mult = 1
+        planet_jobs_acot_sr_stellarite_produces_mult = 0.2
+        planet_jobs_aot_sr_runic_power_produces_mult = 0.2
+        trade_value_mult = 0.25
+    }
+    slave_cost = {
+        energy = 500
+    }
+}

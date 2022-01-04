@@ -1,0 +1,51 @@
+robotic_army = {
+    health = 0.9
+    damage = 2.2
+    morale_damage = 0.5
+    collateral_damage = 0.75
+    war_exhaustion = 0.25
+    has_morale = no
+    time = 90
+    icon = GFX_army_type_robot
+    has_species = yes
+    resources = {
+        category = armies
+        cost = {
+            minerals = 150
+        }
+        upkeep = {
+            energy = 1.5
+        }
+    }
+    potential = {
+        from = {
+            has_trait = "trait_mechanical"
+        }
+        owner = {
+            OR = {
+                AND = {
+                    is_ai = no
+                    NOT = {
+                        has_technology = tech_omnidroid
+                    }
+                }
+                AND = {
+                    is_ai = yes
+                }
+            }
+            NOT = {
+                has_authority = auth_machine_intelligence
+            }
+        }
+    }
+    prerequisites = {
+        "tech_droid_workers"
+    }
+    allow = {
+        owner = {
+            NOT = {
+                has_policy_flag = robots_outlawed
+            }
+        }
+    }
+}

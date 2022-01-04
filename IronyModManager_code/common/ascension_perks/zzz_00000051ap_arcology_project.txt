@@ -1,0 +1,67 @@
+ap_arcology_project = {
+    potential = {
+        host_has_dlc = "Megacorp"
+        OR = {
+            is_regular_empire = yes
+            has_valid_civic = civic_machine_servitor
+        }
+        NOT = {
+            has_valid_civic = civic_agrarian_idyll
+        }
+        NOT = {
+            has_ascension_perk = ap_arcology_project
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_technology_housing_2"
+            has_technology = tech_housing_2
+        }
+        custom_tooltip = {
+            fail_text = "requires_ascension_perks_2"
+            num_ascension_perks > 1
+        }
+    }
+    on_enabled = {
+        custom_tooltip = "allow_arcology_project"
+        custom_tooltip = "decision_arcology_project_effects"
+    }
+    ai_weight = {
+        factor = 1000
+        modifier = {
+            factor = 10
+            resource_stockpile_compare = {
+                resource = minerals
+                value > 8000
+            }
+            nor = {
+                has_ascension_perk = ap_mind_over_matter
+                has_ascension_perk = ap_the_flesh_is_weak
+                has_ascension_perk = ap_engineered_evolution
+            }
+        }
+        modifier = {
+            factor = 200
+            or = {
+                has_ascension_perk = ap_transcendence
+                has_ascension_perk = ap_synthetic_evolution
+                has_ascension_perk = ap_evolutionary_mastery
+            }
+        }
+        modifier = {
+            factor = 0
+            or = {
+                has_origin = origin_remnants
+                has_ecumen = yes
+            }
+        }
+        modifier = {
+            factor = 50
+            is_pacifist = yes
+        }
+        modifier = {
+            factor = 5
+            num_pops > 300
+        }
+    }
+}

@@ -14,7 +14,6 @@ building_communal_housing = {
                     is_planet_class = pc_pd_hothouse_hab
                     is_planet_class = pc_pd_toxic_hab
                     is_planet_class = pc_pd_molten_hab
-                    is_planet_class = pc_gd_hydrocarbon_hab
                 }
             }
             has_planet_flag = advanced_habitat
@@ -25,10 +24,7 @@ building_communal_housing = {
         exists = owner
         owner = {
             is_regular_empire = yes
-            OR = {
-            has_valid_civic = civic_shared_burden
-            has_valid_civic = civic_employee_ownership
-            }
+            is_shared_burdens_empire = yes
         }
     }
     allow = {
@@ -38,6 +34,19 @@ building_communal_housing = {
             }
             not = {
                 has_building = building_communal_housing
+            }
+        }
+        or = {
+            owner = {
+                is_ai = no
+            }
+            nor = {
+                is_capital = yes
+                num_buildings = {
+                    type = building_research_lab_1
+                    value > 0
+                }
+                num_pops < 13
             }
         }
         or = {
@@ -92,10 +101,7 @@ building_communal_housing = {
             NOT = {
                 owner = {
                     is_regular_empire = yes
-                    OR = {
-                        has_valid_civic = civic_shared_burden
-                        has_valid_civic = civic_employee_ownership
-                    }
+                    is_shared_burdens_empire = yes
                 }
             }
         }

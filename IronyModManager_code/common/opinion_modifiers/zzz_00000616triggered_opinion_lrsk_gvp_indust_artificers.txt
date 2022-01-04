@@ -1,0 +1,11 @@
+triggered_opinion_lrsk_gvp_indust_artificers = {
+    trigger = {
+        has_valid_civic = lrsk_adv_civ_civic_artificers
+        from = {
+            has_valid_civic = lrsk_adv_civ_civic_artificers
+        }
+    }
+    opinion = {
+        base = 25
+    }
+}

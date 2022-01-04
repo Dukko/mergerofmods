@@ -92,6 +92,32 @@ action_make_rival = {
                 }
             }
         }
+        if = {
+            limit = {
+                has_country_flag = abandoned_peepboops@from
+            }
+            custom_tooltip = {
+                fail_text = requires_recipient_not_peepboops_make_rival
+                from = {
+                    NOT = {
+                        has_country_flag = is_peepboops@prev
+                    }
+                }
+            }
+        }
+        else_if = {
+            limit = {
+                has_country_flag = is_peepboops@from
+            }
+            custom_tooltip = {
+                fail_text = requires_actor_not_peepboops_make_rival
+                from = {
+                    NOT = {
+                        has_country_flag = abandoned_peepboops@prev
+                    }
+                }
+            }
+        }
     }
     on_accept = {
         hidden_effect = {

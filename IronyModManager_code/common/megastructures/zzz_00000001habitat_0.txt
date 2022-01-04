@@ -18,16 +18,29 @@ habitat_0 = {
         }
     }
     potential = {
-        NOT = {
-            has_global_flag = giga_habitats_disabled
+            has_starborn = no
+            AND = {
+                NOT = {
+                     has_global_flag = giga_habitats_disabled
+                    }
+                OR = {
+                    has_technology = tech_habitat_1
+                    has_civic = civic_diadochi
+                    has_civic = civic_great_khans_legacy
+                    has_country_flag = democratic_khanate_flag
         }
-        OR = {
-            has_technology = tech_habitat_1
-            has_civic = civic_diadochi
-            has_civic = civic_great_khans_legacy
-            has_country_flag = democratic_khanate_flag
+        or = {
+            is_ai = no
+            and = {
+                ai_colonize_plans < 1
+                is_at_war = no
+                resource_stockpile_compare = {
+                    resource = influence
+                    value > 450
+                }
+            }
         }
-        has_starborn = no
+    }
     }
     possible = {
         exists = starbase
@@ -480,8 +493,8 @@ habitat_0 = {
                 value = 1
             }
             set_timed_country_flag = {
-                flag = has_recently_built_habitat
-                years = 20
+                flag = str_just_built_a_hab
+                days = 1800
             }
         }
     }

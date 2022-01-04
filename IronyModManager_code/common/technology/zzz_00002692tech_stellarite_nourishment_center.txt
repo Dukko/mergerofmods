@@ -1,0 +1,55 @@
+tech_stellarite_nourishment_center = {
+    cost = @acot_tier8cost3
+    area = society
+    tier = 8
+    category = {
+        biology
+    }
+    prerequisites = {
+        "tech_aot_ae_nourishment_center"
+    }
+    weight = @tier5weight1
+    is_rare = yes
+    potential = {
+        NOR = {
+            has_global_flag = acot_building_forbidden
+            is_fallen_empire = yes
+        }
+        has_technology = tech_stellarite_reactor
+        has_technology = tech_aot_ae_nourishment_center
+        has_country_flag = finished_dm_production_core_chain
+    }
+    weight_modifier = {
+        factor = 2
+        modifier = {
+            factor = 0.01
+            is_machine_empire = yes
+            NOR = {
+                has_valid_civic = civic_machine_servitor
+                has_valid_civic = civic_machine_assimilator
+                any_owned_planet = {
+                    num_districts = {
+                        type = district_farming
+                        value > 0
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_biology"
+            }
+        }
+    }
+}

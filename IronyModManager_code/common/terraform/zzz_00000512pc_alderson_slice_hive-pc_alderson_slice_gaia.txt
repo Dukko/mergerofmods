@@ -1,0 +1,23 @@
+terraform_link = {
+    from = "pc_alderson_slice_hive"
+    to = "pc_alderson_slice_gaia"
+    resources = {
+        category = terraforming
+        cost = {
+            energy = 75000
+        }
+    }
+    duration = 3600
+    ai_weight = {
+        weight = 0
+    }
+    condition = {
+        has_technology = giga_tech_alderson_disk
+    }
+    effect = {
+        from = {
+            remove_planet_flag = giga_alderson_hive
+            set_planet_flag = giga_alderson_gaia
+        }
+    }
+}

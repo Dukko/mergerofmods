@@ -1,0 +1,180 @@
+@hab_cost = 1000
+@hab_cost_stellarite = 500
+district_stellarite_hab_stellarite = {
+    base_buildtime = 240
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        uses_district_set = sigma_habitat
+        exists = owner
+        owner = {
+            has_technology = tech_stellarite_generator_ae
+        }
+    }
+    potential = {
+        uses_district_set = sigma_habitat
+        exists = owner
+        owner = {
+            has_technology = tech_stellarite_generator_ae
+        }
+    }
+    resources = {
+        category = planet_districts_hab_stellarite
+        cost = {
+            minerals = @hab_cost
+            energy = @hab_cost
+            acot_sr_stellarite = @hab_cost_stellarite
+        }
+        upkeep = {
+            energy = 20
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 3
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_aot_ae_stellariteman_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_aot_ae_stellaritedrone_add = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_aot_ae_stellaritedrone_add = 4
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+            has_active_building = building_stellarite_generator_ae
+        }
+        modifier = {
+            job_aot_ae_stellariteman_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+            has_active_building = building_stellarite_generator_lvl3
+        }
+        modifier = {
+            job_sun_master_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+            has_active_building = building_stellarite_generator_ae
+        }
+        modifier = {
+            job_aot_ae_stellaritedrone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+            has_active_building = building_stellarite_generator_lvl3
+        }
+        modifier = {
+            job_sun_masterdrone_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+            has_active_building = building_stellarite_generator_ae
+        }
+        modifier = {
+            job_aot_ae_stellaritedrone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+            has_active_building = building_stellarite_generator_lvl3
+        }
+        modifier = {
+            job_sun_masterdrone_add = 2
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = job_aot_ae_stellariteman_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                OR = {
+                    is_machine_empire = yes
+                    is_hive_empire = yes
+                }
+            }
+        }
+        text = job_aot_ae_stellaritedrone_desc
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 200
+            owner = {
+                has_valid_civic = civic_machine_servitor
+            }
+            NOT = {
+                planet = {
+                    has_district = district_hab_cultural
+                }
+            }
+        }
+    }
+    ai_resource_production = {
+        unity = 1
+        trigger = {
+            always = yes
+        }
+    }
+}

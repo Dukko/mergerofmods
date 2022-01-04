@@ -6,7 +6,7 @@ action_demand_protectorate = {
     diplo_view_acceptance_icon = yes
     should_notify_all_communications = no
     requires_recipient_independence = no
-    AI_acceptance_base_value = -50
+    AI_acceptance_base_value = -500
     action_type = aggressive
     potential = {
         NOT = {
@@ -25,6 +25,7 @@ action_demand_protectorate = {
                     has_valid_civic = civic_shadow_state
                 }
             }
+        }            
         custom_tooltip = {
             fail_text = "requires_actor_not_fanatic_purifiers"
             OR = {
@@ -129,16 +130,19 @@ action_demand_protectorate = {
             fail_text = "requires_recipient_not_btc"
             from = {
                 has_been_declared_crisis = no
-                }
             }
         }
+        get_border_test = yes
     }
     proposable = {
         if = {
             limit = {
                 OR = {
-                has_ascension_perk = ap_shared_destiny
-                has_valid_civic = civic_feudal_realm
+                    has_valid_civic = civic_feudal_realm
+                    AND = {
+                        has_global_flag = has_exalted_domination_mod
+                        has_ascension_perk = ap_shared_destiny
+                    }
                 }
             }
             relative_power = {

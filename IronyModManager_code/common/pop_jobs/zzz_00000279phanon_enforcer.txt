@@ -1,0 +1,135 @@
+phanon_enforcer = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_phanon_stronghold
+    clothes_texture_index = 5
+    icon = acot_enforcer
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible_precalc = can_fill_specialist_job
+    possible = {
+        owner = {
+            is_gestalt = no
+        }
+    }
+    country_modifier = {
+        country_naval_cap_add = 80
+    }
+    resources = {
+        category = planet_enforcers
+        produces = {
+            unity = 80
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    is_planet_class = pc_phanon_macripp
+                }
+            }
+            unity = 80
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    NOT = {
+                        is_planet_class = pc_phanon_macripp
+                    }
+                }
+            }
+            aot_sr_runic_power = 4
+        }
+    }
+    triggered_pop_modifier = {
+        potential = {
+            planet = {
+                NOT = {
+                    is_planet_class = pc_phanon_macripp
+                }
+            }
+        }
+        pop_defense_armies_add = 2
+    }
+    triggered_pop_modifier = {
+        potential = {
+            planet = {
+                is_planet_class = pc_phanon_macripp
+            }
+        }
+        pop_defense_armies_add = 2
+    }
+    planet_modifier = {
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                NOT = {
+                    is_planet_class = pc_phanon_macripp
+                }
+            }
+        }
+        modifier = {
+            planet_crime_add = -120
+            planet_stability_add = 120
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                is_planet_class = pc_phanon_macripp
+            }
+        }
+        modifier = {
+            planet_crime_add = -140
+            planet_stability_add = 140
+        }
+    }
+    weight = {
+        weight = @specialist_job_weight
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+            NOT = {
+                has_trait = trait_mechanical
+            }
+        }
+        modifier = {
+            factor = 2
+            has_trait = trait_resilient
+        }
+        modifier = {
+            factor = 2
+            has_trait = trait_very_strong
+        }
+        modifier = {
+            factor = 1.5
+            has_trait = trait_strong
+        }
+        modifier = {
+            factor = 10
+            is_enslaved = yes
+            has_slavery_type = {
+                type = slavery_military
+            }
+        }
+        modifier = {
+            factor = 0.5
+            has_trait = trait_weak
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 1.5
+            has_job = acot_enforcer
+        }
+        modifier = {
+            factor = 0
+            can_be_soldier = no
+        }
+    }
+}

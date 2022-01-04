@@ -1,0 +1,88 @@
+@terraforming_cost_gghab = 10000
+@terraforming_duration_gghab = 3600
+terraform_link = {
+    from = pc_pd_gas_giant_hab
+    to = pc_habitable_gas_giant
+    resources = {
+        category = terraforming
+        cost = {
+            energy = @terraforming_cost_gghab
+        }
+    }
+    duration = @terraforming_duration_gghab
+    potential = {
+        from = {
+            has_modifier = habitable_gas_giant_terraform
+        }
+    }
+    condition = {
+        from = {
+            has_modifier = habitable_gas_giant_terraform
+        }
+    }
+    effect = {
+        from = {
+            remove_modifier = habitable_gas_giant_terraform
+            set_planet_flag = giga_hab_gas_giant
+            set_planet_flag = colony_event
+            remove_planet_flag = pdhab
+            remove_planet_flag = pdhab_coldgg
+            remove_planet_flag = pdhab_hotgg
+            remove_planet_flag = pdhab_cloudlessgg
+            remove_planet_flag = pd_mining_hab
+            remove_planet_flag = pd_hab_d1
+            remove_planet_flag = pd_hab_d2
+            remove_planet_flag = pd_energy_hab
+            remove_planet_flag = pd_science_hab
+            remove_planet_flag = pd_commercial_hab
+            remove_planet_flag = pd_foundry_hab
+            remove_planet_flag = pd_farming_hab
+            clear_deposits = yes
+            reroll_deposits = yes
+            add_deposit = d_fluffy_plains
+            random_list = {
+                2 = {
+                    while = {
+                        count = 1
+                        add_deposit = d_gassy_rivers
+                    }
+                }
+                2 = {
+                    while = {
+                        count = 1
+                        add_deposit = d_mote_cloud
+                    }
+                }
+                2 = {
+                    while = {
+                        count = 1
+                        add_deposit = d_floaters
+                    }
+                }
+                1 = {
+                    while = {
+                        count = 2
+                        add_deposit = d_gassy_rivers
+                    }
+                }
+                1 = {
+                    while = {
+                        count = 2
+                        add_deposit = d_mote_cloud
+                    }
+                }
+                1 = {
+                    while = {
+                        count = 2
+                        add_deposit = d_floaters
+                    }
+                }
+            }
+            remove_modifier = helioforming_candidate
+            set_planet_flag = used_to_be_gasgiant
+        }
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

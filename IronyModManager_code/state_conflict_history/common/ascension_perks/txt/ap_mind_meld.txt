@@ -24,8 +24,8 @@ ap_mind_meld = {
             num_ascension_perks > 0
         }
         custom_tooltip = {
-            fail_text = "requires_technology_psionic_theory"
-            has_technology = tech_psionic_theory
+            fail_text = "requires_technology_hive_confluence"
+            has_technology = tech_hive_confluence
         }
     }
     potential = {

@@ -1,0 +1,37 @@
+@apsr_terraforming_cost_1 = 10000
+@apsr_terraforming_time_1 = 3600
+terraform_link = {
+    from = "pc_barren_cold"
+    to = "pc_apsr_unique"
+    resources = {
+        category = terraforming
+        cost = {
+            energy = @apsr_terraforming_cost_1
+        }
+    }
+    duration = @apsr_terraforming_time_1
+    condition = {
+        has_technology = "tech_climate_restoration"
+    }
+    potential = {
+        from = {
+            has_unique_apsr_modifiers = yes
+        }
+    }
+    effect = {
+        from = {
+            remove_modifier = apsr_terraforming_candidate
+            remove_modifier = apsr_restoration_candidate
+            remove_modifier = apsr_uninfected_candidate
+            reset_planet = yes
+            clear_deposits = yes
+            prevent_anomaly = yes
+            apsr_generate_unique_deposits = yes
+            set_planet_flag = colony_event
+            apsr_set_planet_picture_by_resource = yes
+        }
+    }
+    ai_weight = {
+        weight = 900
+    }
+}

@@ -1,0 +1,103 @@
+building_dm_ancient_control_center = {
+    base_buildtime = 900
+    capital = yes
+    can_demolish = no
+    can_be_ruined = no
+    can_be_disabled = no
+    position_priority = 0
+    country_modifier = {
+        country_resource_max_add = 10000
+    }
+    category = government
+    upgrades = {
+        building_ae_ancient_control_center
+    }
+    potential = {
+        exists = owner
+        owner = {
+            is_machine_empire = yes
+        }
+    }
+    convert_to = {
+        building_dm_ancient_palace
+        building_dm_ancient_hive_cluster
+    }
+    allow = {
+        num_pops >= 25
+    }
+    prerequisites = {
+        "tech_dm_ancient_control_center"
+    }
+    show_tech_unlock_if = {
+        is_machine_empire = yes
+    }
+    planet_modifier = {
+        planet_housing_add = 30
+        planet_amenities_add = 30
+        planet_max_districts_add = 2
+        planet_max_buildings_add = 8
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_fallen_machine_empire = no
+            }
+        }
+        modifier = {
+            job_acot_overlord_droid_add = 1
+            job_acot_overseer_droid_add = 4
+            job_aot_dm_enforcer_drone_add = 4
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_fallen_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_fe_guardian_bot_add = 10
+        }
+    }
+    resources = {
+        category = planet_buildings
+        produces = {
+            energy = 20
+            sr_dark_matter = 10
+            acot_sr_dark_energy = 10
+        }
+        produces = {
+            trigger = {
+                is_planet_class = pc_dark_fractured
+            }
+            energy = 10
+            sr_dark_matter = 5
+            acot_sr_dark_energy = 5
+        }
+        produces = {
+            trigger = {
+                is_planet_class = pc_dark_fractured_ae
+            }
+            energy = 20
+            sr_dark_matter = 10
+            acot_sr_dark_energy = 10
+        }
+        produces = {
+            trigger = {
+                is_planet_class = pc_acot_enigmopolis
+            }
+            energy = 60
+            sr_dark_matter = 30
+            acot_sr_dark_energy = 30
+        }
+        cost = {
+            minerals = 1000
+            sr_dark_matter = 100
+        }
+    }
+    ai_weight = {
+        weight = 100
+    }
+}

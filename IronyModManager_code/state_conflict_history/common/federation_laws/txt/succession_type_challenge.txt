@@ -1,4 +1,4 @@
-@cooldown = 3600
+@cooldown = 720
 succession_type_challenge = {
     potential = {
         host_has_dlc = Federations
@@ -121,7 +121,11 @@ succession_type_challenge = {
             exists = ruler
             ruler = {
                 species = {
-                    has_trait = trait_very_strong
+                    OR = {
+                        has_trait = trait_very_strong
+                        has_trait = trait_titanic_strength
+                        has_trait = trait_lithoid_titanic_strength
+                    }
                 }
             }
         }
@@ -133,7 +137,20 @@ succession_type_challenge = {
         modifier = {
             desc = federation_acceptance_warrior_culture
             add = 50
-            has_civic = civic_warrior_culture
+            OR = {
+                has_civic = civic_warrior_culture
+                has_civic = civic_barbaric_despoilers
+            }
+        }
+        modifier = {
+            desc = federation_acceptance_strength_of_legions
+            add = 25
+            has_civic = civic_hive_strength_of_legions
+        }
+        modifier = {
+            desc = federation_acceptance_warbots
+            add = 25
+            has_civic = civic_machine_warbots
         }
         modifier = {
             desc = federation_acceptance_ruler_chosen

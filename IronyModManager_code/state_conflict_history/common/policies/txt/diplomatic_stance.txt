@@ -199,8 +199,8 @@ diplomatic_stance = {
                 factor = 0.1
                 OR = {
                     has_ethic = ethic_xenophobe
-                    has_civic = civic_infestation
-                    has_civic = civic_living_hosts
+                    has_valid_civic = civic_infestation
+                    has_valid_civic = civic_living_hosts
                 }
             }
             modifier = {
@@ -325,10 +325,20 @@ diplomatic_stance = {
             }
             modifier = {
                 factor = 100
-                has_valid_civic = civic_inwards_perfection
-                AND = {
-                    has_ethics_redux = yes
-                    has_valid_civic = civic_isolationism
+                OR = {
+                    has_valid_civic = civic_inwards_perfection
+                    AND = {
+                        has_ethics_redux = yes
+                        has_valid_civic = civic_isolationism
+                    }
+                    AND = {
+                        has_expanded_pops = yes
+                        OR = {
+                            has_valid_civic = civic_closed_collective
+                            has_valid_civic = civic_closed_network
+                            has_valid_civic = civic_pompous_purists
+                        }
+                    }
                 }
             }
             modifier = {
@@ -403,6 +413,15 @@ diplomatic_stance = {
                 factor = 0.01
                 has_ascension_perk = ap_become_the_crisis
             }
+            modifier = {
+                factor = 1.5
+                has_ai_expansion_plan = yes
+            }
+            modifier = {
+                factor = 3
+                has_ai_expansion_plan = yes
+                has_ai_personality_behaviour = propagator
+            }
         }
     }
     option = {
@@ -419,17 +438,30 @@ diplomatic_stance = {
             }
             is_gestalt = no
             OR = {
-                is_megacorp = yes
-                has_ethic = ethic_capitalism
-                has_ethic = ethic_fanatic_capitalism
-            }
-            NOR = {
-                has_valid_civic = civic_inwards_perfection
+                has_any_ethics_mod = no
+                AND = {
+                    has_any_ethics_mod = yes
+                    OR = {
+                        is_megacorp = yes
+                        is_capitalism = yes
+                    }
+                    NOR = {
+                        has_valid_civic = civic_inwards_perfection
+                    }
+                }
             }
         }
         valid = {
             NOR = {
                 has_valid_civic = civic_inwards_perfection
+                AND = {
+                    has_expanded_pops = yes
+                    OR = {
+                        has_valid_civic = civic_closed_collective
+                        has_valid_civic = civic_closed_network
+                        has_valid_civic = civic_pompous_purists
+                    }
+                }
                 AND = {
                     has_ethics_redux = yes
                     has_valid_civic = civic_isolationism
@@ -447,13 +479,12 @@ diplomatic_stance = {
                 limit = {
                     has_megacorp = yes
                 }
-                has_civic = civic_merchant_guilds
+                has_valid_civic = civic_merchant_guilds
             }
             else = {
                 OR = {
-                    has_civic = civic_corporate_dominion
-                    has_ethic = ethic_capitalism
-                    has_ethic = ethic_fanatic_capitalism
+                    has_valid_civic = civic_corporate_dominion
+                    is_capitalism = yes
                     has_valid_civic = civic_corporate_dominion
                     has_valid_civic = civic_merchant_guilds
                 }
@@ -498,6 +529,10 @@ diplomatic_stance = {
                 }
             }
             modifier = {
+                factor = 2
+                has_civic = civic_merchant_guilds
+            }
+            modifier = {
                 factor = 0.01
                 has_valid_civic = civic_shadow_state
             }
@@ -526,6 +561,14 @@ diplomatic_stance = {
                 AND = {
                     has_ethics_redux = yes
                     has_valid_civic = civic_isolationism
+                }
+                AND = {
+                    has_expanded_pops = yes
+                    OR = {
+                        has_valid_civic = civic_closed_collective
+                        has_valid_civic = civic_closed_network
+                        has_valid_civic = civic_pompous_purists
+                    }
                 }
             }
             is_homicidal = no
@@ -813,7 +856,7 @@ diplomatic_stance = {
             ship_military_station_small_cost_mult = -0.1
         }
         ai_weight = {
-            weight = 10
+            weight = 1
         }
     }
 }

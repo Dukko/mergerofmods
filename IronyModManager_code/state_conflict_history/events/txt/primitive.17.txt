@@ -1,0 +1,28 @@
+namespace = action
+namespace = necroids
+namespace = observation
+namespace = primitive
+country_event = {
+    id = primitive.17
+    title = "primitive.17.name"
+    desc = "primitive.17.desc"
+    picture = GFX_evt_satellite_in_orbit
+    location = FROM.home_planet
+    is_triggered_only = yes
+    immediate = {
+        FROM = {
+            capital_scope = {
+                observation_outpost = {
+                    dismantle = yes
+                }
+            }
+        }
+        add_intel = {
+            who = from
+            amount = 100
+        }
+    }
+    option = {
+        name = "primitive.17.a"
+    }
+}

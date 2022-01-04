@@ -5,6 +5,8 @@ sfortress = {
             has_starbase_module = gun_battery
             has_starbase_module = missile_battery
             has_starbase_module = hangar_bay
+            has_starbase_module = point_defense_battery
+            has_starbase_module = large_gun_battery
         }
     }
     weight_modifier = {
@@ -135,10 +137,95 @@ sfortress = {
                 count > 5
             }
         }
+        modifier = {
+            add = 75
+            count_starbase_modules = {
+                type = point_defense_battery
+                count > 0
+            }
+        }
+        modifier = {
+            add = 75
+            count_starbase_modules = {
+                type = point_defense_battery
+                count > 1
+            }
+        }
+        modifier = {
+            add = 75
+            count_starbase_modules = {
+                type = point_defense_battery
+                count > 2
+            }
+        }
+        modifier = {
+            add = 75
+            count_starbase_modules = {
+                type = point_defense_battery
+                count > 3
+            }
+        }
+        modifier = {
+            add = 75
+            count_starbase_modules = {
+                type = point_defense_battery
+                count > 4
+            }
+        }
+        modifier = {
+            add = 75
+            count_starbase_modules = {
+                type = point_defense_battery
+                count > 5
+            }
+        }
+        modifier = {
+            add = 75
+            count_starbase_modules = {
+                type = large_gun_battery
+                count > 0
+            }
+        }
+        modifier = {
+            add = 75
+            count_starbase_modules = {
+                type = large_gun_battery
+                count > 1
+            }
+        }
+        modifier = {
+            add = 75
+            count_starbase_modules = {
+                type = large_gun_battery
+                count > 2
+            }
+        }
+        modifier = {
+            add = 75
+            count_starbase_modules = {
+                type = large_gun_battery
+                count > 3
+            }
+        }
+        modifier = {
+            add = 75
+            count_starbase_modules = {
+                type = large_gun_battery
+                count > 4
+            }
+        }
+        modifier = {
+            add = 75
+            count_starbase_modules = {
+                type = large_gun_battery
+                count > 5
+            }
+        }
     }
     ai_design = {
         min = {
             base = 0
+            factor = 0
         }
         ratio = {
             base = 0.25
@@ -161,13 +248,16 @@ sfortress = {
             target_uplink_computer = {
                 base = 1
             }
-            hydroponics_bay = {
-                base = 1
-            }
             command_center = {
                 base = 1
             }
+            starbase_minefield = {
+                base = 1
+            }
             defense_grid = {
+                base = 1
+            }
+            starbase_fortifications = {
                 base = 1
             }
             communications_jammer = {
@@ -176,8 +266,41 @@ sfortress = {
             disruption_field = {
                 base = 0.9
             }
+            ice_mining_station = {
+                base = 3
+            }
+            dragon_hatchery = {
+                base = 3
+            }
+            hydroponics_bay = {
+                base = 0.25
+            }
+            climate_control = {
+                base = 0.25
+            }
+            space_production = {
+                base = 0.25
+            }
+            deep_space_black_site = {
+                base = 0.25
+            }
+            customs_office = {
+                base = 0.5
+            }
+            customs_office_criminal = {
+                base = 0.5
+            }
+            customs_office_gestalt = {
+                base = 0.5
+            }
             warp_fluctuator = {
-                base = 0.9
+                base = 0.5
+            }
+            listening_post = {
+                base = 0.5
+            }
+            trade_patrol = {
+                base = 0.5
             }
         }
         modules = {
@@ -188,6 +311,9 @@ sfortress = {
                 base = 1
             }
             gun_battery = {
+                base = 1
+            }
+            stellar_reducer = {
                 base = 1
             }
         }

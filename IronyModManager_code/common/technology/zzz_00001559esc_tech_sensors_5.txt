@@ -1,0 +1,48 @@
+esc_tech_sensors_5 = {
+    area = physics
+    category = {
+        computing
+    }
+    tier = 5
+    cost = @tier5cost1
+    weight = @tier5weight1
+    prerequisites = {
+        "tech_sensors_4"
+        "esc_tech_grand_research_initiative"
+    }
+    ai_update_type = all
+    prereqfor_desc = {
+        hide_prereq_for_desc = component
+        custom = {
+            title = "ESC_TECH_UNLOCK_ADV_TACHYON_SENSOR_TITLE"
+            desc = "ESC_TECH_UNLOCK_ADV_TACHYON_SENSOR_DESC"
+        }
+    }
+    modifier = {
+        science_ship_survey_speed = 0.1
+    }
+    potential = {
+        NOT = {
+            has_global_flag = ESC_GLOBAL_FLAG_sensors_forbidden
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+    ai_weight = {
+        factor = @ESC_AI_tech_weight_multiplier
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+}

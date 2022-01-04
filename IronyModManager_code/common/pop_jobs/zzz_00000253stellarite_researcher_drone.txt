@@ -1,0 +1,32 @@
+stellarite_researcher_drone = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_stellarite_enigmatic_lab
+    clothes_texture_index = 3
+    icon = acot_researcher
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible_precalc = can_fill_drone_job
+    resources = {
+        category = planet_researchers
+        produces = {
+            physics_research = 80
+            engineering_research = 80
+            society_research = 80
+        }
+        upkeep = {
+            acot_sr_stellarite = 6
+        }
+    }
+    weight = {
+        weight = @complex_drone_job_weight
+        modifier = {
+            factor = 1.5
+            has_job = acot_researcher_drone
+        }
+    }
+}

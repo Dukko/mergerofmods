@@ -8,7 +8,6 @@ col_refinery = {
             uses_district_set = city_world
             uses_district_set = ring_world
             uses_district_set = habitat
-            uses_district_set = pdshroudarc
             uses_district_set = pdarchive
             uses_district_set = pdecocity
             uses_district_set = pdpalacearc
@@ -28,12 +27,9 @@ col_refinery = {
         planet_building_chemical_plant_build_speed_mult = 0.25
         planet_building_refinery_build_speed_mult = 0.25
         planet_building_crystal_plant_build_speed_mult = 0.25
-        planet_chemists_upkeep_mult = -0.1
-        planet_refiners_upkeep_mult = -0.1
-        planet_translucers_upkeep_mult = -0.1
-        planet_chemists_produces_mult = 0.1
-        planet_refiners_produces_mult = 0.1
-        planet_translucers_produces_mult = 0.1
+        planet_chemists_produces_mult = 0.2
+        planet_refiners_produces_mult = 0.2
+        planet_translucers_produces_mult = 0.2
     }
     triggered_planet_modifier = {
         potential = {
@@ -44,7 +40,6 @@ col_refinery = {
             OR = {
                 is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
                 is_active_resolution = "resolution_industry_project_cornucopia"
-                is_active_resolution = "resolution_industry_6"
             }
         }
         modifier = {

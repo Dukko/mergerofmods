@@ -1,0 +1,11 @@
+triggered_opinion_lrsk_gvp_insight_essentialists = {
+    trigger = {
+        has_valid_civic = lrsk_adv_civ_civic_essentialists
+        from = {
+            has_valid_civic = lrsk_adv_civ_civic_essentialists
+        }
+    }
+    opinion = {
+        base = 25
+    }
+}

@@ -1,0 +1,37 @@
+@cost4 = 20
+@power4 = -30
+utility_component_template = {
+    key = "JUMP_DRIVE_1"
+    size = small
+    icon = "GFX_ship_part_jump_drive_1"
+    icon_frame = 1
+    power = @power4
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @cost4
+        }
+    }
+    ftl = yes
+    jumpdrive = yes
+    ship_modifier = {
+        ship_windup_mult = -0.7
+    }
+    ai_weight = {
+        weight = 4
+    }
+    class_restriction = {
+        shipclass_military
+        shipclass_constructor
+        shipclass_colonizer
+        shipclass_science_ship
+        shipclass_transport
+        shipclass_military_special
+        shipclass_starbase
+    }
+    prerequisites = {
+        "tech_jump_drive_1"
+    }
+    component_set = "ftl_components"
+    upgrades_to = "ESC_JUMP_DRIVE_2"
+}

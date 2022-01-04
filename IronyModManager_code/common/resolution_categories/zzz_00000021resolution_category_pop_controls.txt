@@ -1,8 +1,0 @@
-resolution_category_pop_controls = {
-    group = environment_technology
-    icon = "GFX_resolution_gce_popgrowth"
-    resolution_types = {
-        "resolution_pop_controls_repeal_1"
-        "resolution_galactic_population_controls"
-    }
-}

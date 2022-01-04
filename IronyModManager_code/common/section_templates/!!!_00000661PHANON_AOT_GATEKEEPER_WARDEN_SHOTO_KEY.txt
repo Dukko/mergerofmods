@@ -1,0 +1,80 @@
+ship_section_template = {
+    key = "PHANON_AOT_GATEKEEPER_WARDEN_SHOTO_KEY"
+    ship_size = aot_gatekeeper
+    fits_on_slot = shoto
+    should_draw_components = yes
+    entity = "aot_gatekeeper_mid_entity"
+    icon = "GFX_ship_part_core_mid"
+    prerequisites = {
+        tech_gatekeepers_phanon
+    }
+    component_slot = {
+        name = "LARGE_GUN_01"
+        template = "invisible_large_turret"
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_02"
+        template = "invisible_large_turret"
+        locatorname = "large_gun_02"
+    }
+    component_slot = {
+        name = "LARGE_GUN_03"
+        template = "invisible_large_turret"
+        locatorname = "large_gun_03"
+    }
+    component_slot = {
+        name = "LARGE_GUN_04"
+        template = "invisible_large_turret"
+        locatorname = "large_gun_04"
+    }
+    component_slot = {
+        name = "LARGE_GUN_05"
+        template = "invisible_large_turret"
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_06"
+        template = "invisible_large_turret"
+        locatorname = "large_gun_02"
+    }
+    component_slot = {
+        name = "LARGE_GUN_07"
+        template = "invisible_large_turret"
+        locatorname = "large_gun_03"
+    }
+    component_slot = {
+        name = "LARGE_GUN_08"
+        template = "invisible_large_turret"
+        locatorname = "large_gun_04"
+    }
+    component_slot = {
+        name = "LARGE_GUN_09"
+        template = "invisible_large_turret"
+        locatorname = "large_gun_03"
+    }
+    component_slot = {
+        name = "LARGE_GUN_10"
+        template = "invisible_large_turret"
+        locatorname = "large_gun_04"
+    }
+    component_slot = {
+        name = "LARGE_GUN_11"
+        template = "invisible_large_turret"
+        locatorname = "large_gun_01"
+    }
+    component_slot = {
+        name = "LARGE_GUN_12"
+        template = "invisible_large_turret"
+        locatorname = "large_gun_02"
+    }
+    large_utility_slots = 15
+    aux_utility_slots = 2
+    resources = {
+        category = ship_sections
+        cost = {
+            sr_dark_matter = 400
+            acot_sr_dark_energy = 400
+        }
+    }
+}

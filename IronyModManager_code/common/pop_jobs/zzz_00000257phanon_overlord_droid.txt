@@ -1,0 +1,49 @@
+phanon_overlord_droid = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_phanon_control_center
+    icon = coordinator
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_drone_job
+    country_modifier = {
+        country_admin_cap_add = 200
+    }
+    resources = {
+        category = planet_bureaucrats
+        produces = {
+            physics_research = 600
+            engineering_research = 600
+            society_research = 600
+            unity = 600
+            influence = 1.2
+        }
+        upkeep = {
+        }
+    }
+    planet_modifier = {
+        planet_stability_add = 600
+        planet_amenities_no_happiness_add = 600
+        planet_crime_no_happiness_add = -60
+    }
+    weight = {
+        weight = @synapse_drone_job_weight
+        modifier = {
+            factor = 10
+        }
+        modifier = {
+            factor = 0.9
+            exists = owner
+            years_passed < 1
+            owner = {
+                has_valid_civic = civic_machine_assimilator
+            }
+            has_trait = trait_cybernetic
+        }
+    }
+}

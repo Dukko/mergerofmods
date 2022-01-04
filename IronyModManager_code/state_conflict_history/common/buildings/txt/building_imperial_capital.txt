@@ -260,8 +260,8 @@ building_imperial_capital = {
             }
         }
         modifier = {
-            planet_jobs_upkeep_mult = 0.1
-            planet_jobs_produces_mult = 0.1
+            planet_jobs_productive_upkeep_mult = 0.1
+            planet_jobs_productive_produces_mult = 0.1
         }
     }
     triggered_planet_modifier = {
@@ -272,8 +272,8 @@ building_imperial_capital = {
             }
         }
         modifier = {
-            planet_jobs_upkeep_mult = 0.1
-            planet_jobs_produces_mult = 0.1
+            planet_jobs_productive_upkeep_mult = 0.1
+            planet_jobs_productive_produces_mult = 0.1
         }
     }
     triggered_planet_modifier = {
@@ -284,8 +284,8 @@ building_imperial_capital = {
             }
         }
         modifier = {
-            planet_jobs_upkeep_mult = 0.1
-            planet_jobs_produces_mult = 0.1
+            planet_jobs_productive_upkeep_mult = 0.1
+            planet_jobs_productive_produces_mult = 0.1
         }
     }
     resources = {

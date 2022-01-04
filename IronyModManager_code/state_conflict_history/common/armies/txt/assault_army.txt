@@ -1,0 +1,58 @@
+assault_army = {
+    health = 0.8
+    damage = 2.2
+    morale = 1.25
+    morale_damage = 0.75
+    collateral_damage = 1
+    war_exhaustion = 1
+    time = 90
+    icon = GFX_army_type_assault
+    prerequisites = {
+        "tech_assault_armies"
+    }
+    resources = {
+        category = armies
+        cost = {
+            minerals = 100
+        }
+        upkeep = {
+            energy = 1
+        }
+    }
+    show_tech_unlock_if = {
+        OR = {
+            NOT = {
+                has_authority = auth_machine_intelligence
+            }
+            has_valid_civic = civic_machine_assimilator
+        }
+    }
+    potential = {
+        from = {
+            NOR = {
+                has_trait = "trait_mechanical"
+                has_trait = "trait_machine_unit"
+                is_sapient = no
+            }
+        }
+        owner = {
+            OR = {
+                AND = {
+                    is_ai = no
+                    NOT = {
+                        has_technology = tech_dark_matter_army
+                    }
+                }
+                AND = {
+                    is_ai = yes
+                }
+            }
+            OR = {
+                NOT = {
+                    has_authority = auth_machine_intelligence
+                }
+                has_valid_civic = civic_machine_assimilator
+            }
+        }
+    }
+}

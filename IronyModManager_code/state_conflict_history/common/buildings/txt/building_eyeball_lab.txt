@@ -30,7 +30,10 @@ building_eyeball_lab = {
         NOT = {
             has_modifier = resort_colony
         }
-        is_planet_class = pc_eyeball
+        OR = {
+            is_planet_class = pc_eyeball
+            is_planet_class = lifeless_tidallylocked_cold
+        }
     }
     allow = {
         has_upgraded_capital = yes

@@ -1,0 +1,43 @@
+esc_tech_reactor_booster_4 = {
+    area = physics
+    category = {
+        particles
+    }
+    tier = 4
+    cost = @tier4cost2
+    weight = @tier4weight2
+    ai_update_type = all
+    prerequisites = {
+        "tech_zero_point_power"
+        "tech_reactor_boosters_3"
+        "esc_tech_grand_research_initiative"
+    }
+    potential = {
+        NOR = {
+            has_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden
+            has_global_flag = ESC_GLOBAL_FLAG_reactors_forbidden
+            has_global_flag = @NSC_active_flag
+            has_global_flag = @ACOT_active_flag
+        }
+    }
+    weight_modifier = {
+        factor = 1.5
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+    ai_weight = {
+        factor = @ESC_AI_tech_weight_multiplier
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+}

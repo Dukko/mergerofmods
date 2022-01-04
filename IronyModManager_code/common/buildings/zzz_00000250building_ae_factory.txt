@@ -1,0 +1,111 @@
+building_ae_factory = {
+    base_buildtime = 520
+    can_build = no
+    category = manufacturing
+    country_modifier = {
+        country_resource_max_consumer_goods_add = 15000
+    }
+    allow = {
+        has_ascended_capital = yes
+    }
+    upgrades = {
+        building_stellarite_civilian_factory
+    }
+    potential = {
+        exists = owner
+        owner = {
+            OR = {
+                is_gestalt = no
+                has_valid_civic = civic_machine_servitor
+            }
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_acot_artisan_add = 4
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_acot_artisan_add = 4
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 200
+            sr_dark_matter = 600
+        }
+        produces = {
+            trigger = {
+                has_modifier = acot_modifier_ascended_city
+            }
+            consumer_goods = 40
+        }
+        upkeep = {
+            trigger = {
+                has_modifier = acot_modifier_ascended_city
+            }
+            sr_dark_matter = 2
+        }
+    }
+    prerequisites = {
+        tech_ae_factory
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = job_artisan_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_artisan_drone_effect_desc
+    }
+    ai_weight = {
+        weight = 2
+        modifier = {
+            factor = 5
+            owner = {
+                has_monthly_income = {
+                    resource = consumer_goods
+                    value < 5
+                }
+                has_monthly_income = {
+                    resource = minerals
+                    value > 6
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            free_jobs > 0
+        }
+    }
+    ai_resource_production = {
+        consumer_goods = 1
+        trigger = {
+            always = yes
+        }
+    }
+}

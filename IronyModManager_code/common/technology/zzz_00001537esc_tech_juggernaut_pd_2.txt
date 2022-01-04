@@ -1,0 +1,67 @@
+esc_tech_juggernaut_pd_2 = {
+    area = physics
+    category = {
+        computing
+    }
+    tier = 6
+    cost = @ESC_TECH_tier6_cost2
+    weight = @ESC_TECH_tier6_weight2
+    ai_update_type = military
+    prerequisites = {
+        "esc_tech_juggernaut_pd_1"
+    }
+    is_rare = yes
+    potential = {
+        host_has_dlc = "Federations"
+        NOT = {
+            has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_pd_weapons_forbidden
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = @federation_perk_factor
+            has_federation = yes
+            federation = {
+                has_federation_perk = rare_tech_boost
+                any_member = {
+                    has_technology = esc_tech_juggernaut_pd_2
+                }
+            }
+        }
+    }
+    ai_weight = {
+        factor = @ESC_AI_tech_weight_multiplier
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = @federation_perk_factor
+            has_federation = yes
+            federation = {
+                has_federation_perk = rare_tech_boost
+                any_member = {
+                    has_technology = esc_tech_juggernaut_pd_2
+                }
+            }
+        }
+    }
+}

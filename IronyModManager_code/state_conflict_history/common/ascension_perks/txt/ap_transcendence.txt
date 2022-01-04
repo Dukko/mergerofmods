@@ -83,6 +83,6 @@ ap_transcendence = {
         }
     }
     ai_weight = {
-        factor = 1000
+        factor = 5000
     }
 }

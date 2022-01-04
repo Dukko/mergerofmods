@@ -26,5 +26,11 @@ action_ask_to_become_signatory = {
             fail_text = "requires_recipient_not_btc"
             has_been_declared_crisis = no
         }
+        custom_tooltip = {
+            fail_text = "requires_actor_not_pompous"
+            NOT = {
+                is_purists_empire = yes
+            }
+        }
     }
 }

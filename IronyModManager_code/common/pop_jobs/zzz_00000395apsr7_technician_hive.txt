@@ -1,0 +1,90 @@
+apsr7_technician_hive = {
+    category = simple_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = apsr7_building_part2
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_drone_job
+    resources = {
+        category = apsr7_planet_technician_hive
+        produces = {
+            energy = 7
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_deposit = apsr_relic_cube_deposit
+                }
+            }
+            energy = 3.5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr7_advanced_1
+                }
+            }
+            energy = 2.5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr7_advanced_2
+                }
+            }
+            energy = 2.5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr7_advanced_3
+                }
+            }
+            energy = 2.5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr7_advanced_4
+                }
+            }
+            energy = 2.5
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr7_advanced_5
+                }
+            }
+            energy = 2.5
+        }
+    }
+    weight = {
+        weight = 130
+        modifier = {
+            factor = 2
+            OR = {
+                has_trait = trait_robot_superconductive
+                has_trait = trait_ingenious
+            }
+        }
+        modifier = {
+            factor = 0.9
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value > 50
+                }
+            }
+        }
+        modifier = {
+            factor = 0.65
+            has_trait = trait_necrophage
+        }
+    }
+}

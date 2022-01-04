@@ -1,0 +1,14 @@
+trait_brittle = {
+    cost = -1
+    allowed_archetypes = {
+        LITHOID
+    }
+    opposites = {
+        "trait_solid_shape"
+    }
+    modifier = {
+        army_health = -0.15
+        leader_age = -5
+        pop_environment_tolerance = -0.05
+    }
+}

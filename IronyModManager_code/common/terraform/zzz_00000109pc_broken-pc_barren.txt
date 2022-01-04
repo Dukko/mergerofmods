@@ -1,0 +1,24 @@
+@apsr_terraforming_cost_2 = 25000
+@apsr_terraforming_time_2 = 7200
+terraform_link = {
+    from = "pc_broken"
+    to = "pc_barren"
+    resources = {
+        category = terraforming
+        cost = {
+            energy = @apsr_terraforming_cost_2
+        }
+    }
+    duration = @apsr_terraforming_time_2
+    condition = {
+        has_technology = "tech_climate_restoration"
+    }
+    potential = {
+        from = {
+            has_ancient_complex_apsr_modifiers = yes
+        }
+    }
+    ai_weight = {
+        weight = 900
+    }
+}

@@ -1,0 +1,23 @@
+tech_achimod_apsr_achivement_12_stage_5 = {
+    icon = tech_achimod_apsr_achivement_07_stage_1
+    cost = 0
+    area = engineering
+    tier = 5
+    category = {
+        materials
+    }
+    prerequisites = {
+        "tech_apsr_special"
+    }
+    weight = 0
+    is_rare = yes
+    prereqfor_desc = {
+        custom = {
+            title = "TECH_achimod_bonus_TITLE"
+            desc = "TECH_achimod_bonus_DESC"
+        }
+    }
+    ai_weight = {
+        factor = 0
+    }
+}

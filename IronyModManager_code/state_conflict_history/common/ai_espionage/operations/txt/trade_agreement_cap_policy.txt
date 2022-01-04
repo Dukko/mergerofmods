@@ -1,0 +1,9 @@
+trade_agreement_cap_policy = {
+    weight = {
+        base = 10
+        modifier = {
+            is_spynetwork_level > 30
+            factor = 0
+        }
+    }
+}

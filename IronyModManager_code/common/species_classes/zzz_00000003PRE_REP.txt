@@ -1,0 +1,48 @@
+PRE_REP = {
+    archetype = PRESAPIENT
+    playable = {
+        always = no
+    }
+    randomized = no
+    portraits = {
+        "pre_rep1"
+        "pre_rep2"
+        "pre_rep3"
+        "pre_rep4"
+        "pre_rep5"
+        "pre_rep6"
+        "pre_rep7"
+        "pre_rep8"
+        "pre_rep09"
+        "pre_rep10"
+        "pre_rep11"
+        "pre_rep12"
+        "pre_rep13"
+        "pre_rep14"
+        "pre_rep15"
+        "pre_rep16"
+        "pre_rep17"
+    }
+    graphical_culture = reptilian_01
+    move_pop_sound_effect = "reptilian_pops_move"
+    uplifted_into = "REP"
+    uplifted_portraits = {
+        "rep1"
+        "rep2"
+        "rep3"
+        "rep4"
+        "rep5"
+        "rep6"
+        "rep7"
+        "rep8"
+        "rep9"
+        "rep10"
+        "rep11"
+        "rep12"
+        "rep13"
+        "rep14"
+        "rep15"
+        "rep16"
+        "rep17"
+    }
+}

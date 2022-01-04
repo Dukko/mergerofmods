@@ -71,14 +71,4 @@ building_embassy_hive = {
             }
         }
     }
-    ai_resource_production = {
-        trigger = {
-            always = yes
-        }
-        energy = 8
-        minerals = 8
-        society_research = 10
-        engineering_research = 10
-        physics_research = 10
-    }
 }

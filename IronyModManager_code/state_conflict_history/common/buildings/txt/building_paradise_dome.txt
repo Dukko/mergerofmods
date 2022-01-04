@@ -40,10 +40,7 @@ building_paradise_dome = {
                 is_regular_empire = no
             }
             owner = {
-                OR = {
-                    has_valid_civic = civic_shared_burden
-                    has_valid_civic = civic_employee_ownership
-                }
+                is_shared_burdens_empire = yes
             }
             buildings_no_crystals = yes
             has_modifier = slave_colony
@@ -103,10 +100,7 @@ building_paradise_dome = {
         owner = {
             is_regular_empire = yes
             NOT = {
-                OR = {
-                    has_valid_civic = civic_shared_burden
-                    has_valid_civic = civic_employee_ownership
-                }
+                is_shared_burdens_empire = yes
             }
         }
     }

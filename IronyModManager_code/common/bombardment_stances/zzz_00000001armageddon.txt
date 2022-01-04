@@ -1,10 +1,12 @@
 armageddon = {
     trigger = {
-        owner = {
-            OR = {
-                has_policy_flag = orbital_bombardment_armageddon
-                prob_forced_armageddon_bombardment = yes
-                has_menace_perk = menp_death_from_above
+        exists = owner
+        OR = {
+            owner = {
+                OR = {
+                    has_policy_flag = orbital_bombardment_armageddon
+                    is_crisis_faction = yes
+                    has_menace_perk = menp_death_from_above
                 }
             }
             AND = {
@@ -16,59 +18,31 @@ armageddon = {
                 }
             }
         }
+    }
     default = no
     stop_when_armies_dead = no
     abduct_pops = no
-    planet_damage = 1.5
-    army_damage = 2
+    planet_damage = 25
+    army_damage = 25
     kill_pop_chance = {
-        base = 1.25
-        modifier = {
-            factor = 2
-            planet = {
-                has_planet_flag = prob_javorian_pox
-            }
-            NOR = {
-                pop_has_trait = trait_mechanical
-                pop_has_trait = trait_machine_unit
-            }
-        }
+        base = 3
     }
-    min_pops_to_kill_pop = -1
+    min_pops_to_kill_pop = 0
     ai_weight = {
         weight = 10
         modifier = {
-            factor = 0.02
-            exists = owner
+            factor = 0.01
             exists = from
-            exists = from.owner
-            from.owner = {
-                NOT = {
-                    is_hostile = root.owner
-                }
-                is_crisis_faction = no
-                opinion = {
-                    who = root.owner
-                    value > -299
+            from = {
+                owner = {
+                    NOT = {
+                        is_hostile = root.owner
+                    }
                 }
             }
-        }
-        modifier = {
-            factor = 0
             exists = owner
-            exists = from
-            exists = from.owner
             owner = {
-                has_policy_flag = orbital_bombardment_armageddon
-                OR = {
-                    NOT = {
-                        is_rival = from.owner
-                    }
-                    opinion = {
-                        who = from.owner
-                        value > -299
-                    }
-                }
+                is_crisis_faction = no
             }
         }
     }

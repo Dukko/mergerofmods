@@ -2,7 +2,7 @@
 @resolution_cost_denounce = 25
 @resolution_flag_timer = 360
 resolution_amoeba_conservation_act = {
-    icon = "GFX_resolution_gce_amoeba"
+    icon = "GFX_resolution_tiyanki_preservation"
     potential = {
         has_federations_dlc = yes
         has_modifier = pacified_amoebas
@@ -80,10 +80,6 @@ resolution_amoeba_conservation_act = {
                 is_active_resolution = "resolution_space_cloud_conservation_act"
                 is_active_resolution = "resolution_drone_conservation_act"
             }
-            }
-        custom_tooltip = {
-            fail_text = "gce_must_have_pacified_amoebas"
-            has_modifier = pacified_amoebas
         }
     }
     breach = {
@@ -145,6 +141,10 @@ resolution_amoeba_conservation_act = {
                 is_civic_machine_servitor = yes
                 has_valid_civic = civic_hive_empath
             }
+        }
+        modifier = {
+            factor = 1.5
+            has_origin = origin_terraformer
         }
         modifier = {
             factor = 1.2

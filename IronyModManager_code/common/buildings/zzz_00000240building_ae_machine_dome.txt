@@ -1,0 +1,118 @@
+building_ae_machine_dome = {
+    base_buildtime = 360
+    can_build = no
+    category = government
+    upgrades = {
+        building_stellarite_machine_dome
+    }
+    planet_modifier = {
+        planet_jobs_complex_drone_produces_mult = 0.05
+        planet_jobs_simple_drone_produces_mult = 0.05
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            num_pops >= 25
+        }
+        planet_jobs_complex_drone_produces_mult = 0.05
+        planet_jobs_simple_drone_produces_mult = 0.05
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            num_pops >= 50
+        }
+        planet_jobs_complex_drone_produces_mult = 0.05
+        planet_jobs_simple_drone_produces_mult = 0.05
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            num_pops >= 75
+        }
+        planet_jobs_complex_drone_produces_mult = 0.05
+        planet_jobs_simple_drone_produces_mult = 0.05
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            num_pops >= 100
+        }
+        planet_jobs_complex_drone_produces_mult = 0.05
+        planet_jobs_simple_drone_produces_mult = 0.05
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            num_pops >= 125
+        }
+        planet_jobs_complex_drone_produces_mult = 0.05
+        planet_jobs_simple_drone_produces_mult = 0.05
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            num_pops >= 150
+        }
+        planet_jobs_complex_drone_produces_mult = 0.05
+        planet_jobs_simple_drone_produces_mult = 0.05
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            num_pops >= 175
+        }
+        planet_jobs_complex_drone_produces_mult = 0.05
+        planet_jobs_simple_drone_produces_mult = 0.05
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            num_pops >= 200
+        }
+        planet_jobs_complex_drone_produces_mult = 0.05
+        planet_jobs_simple_drone_produces_mult = 0.05
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            num_pops >= 225
+        }
+        planet_jobs_complex_drone_produces_mult = 0.05
+        planet_jobs_simple_drone_produces_mult = 0.05
+    }
+    allow = {
+        has_ascended_capital = yes
+    }
+    resources = {
+        category = planet_buildings
+        produces = {
+        }
+        cost = {
+            minerals = 150
+            sr_dark_matter = 250
+            acot_sr_dark_energy = 250
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    is_ai = no
+                }
+            }
+            sr_dark_matter = 10
+            acot_sr_dark_energy = 10
+        }
+    }
+    prerequisites = {
+        tech_ae_machine_dome
+    }
+    ai_weight = {
+        weight = 10000
+        modifier = {
+            factor = 0
+            OR = {
+                has_building = building_ae_machine_dome
+            }
+        }
+    }
+}

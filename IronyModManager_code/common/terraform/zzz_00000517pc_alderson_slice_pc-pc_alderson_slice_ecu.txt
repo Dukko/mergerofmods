@@ -1,0 +1,32 @@
+terraform_link = {
+    from = "pc_alderson_slice_pc"
+    to = "pc_alderson_slice_ecu"
+    resources = {
+        category = terraforming
+        cost = {
+            energy = 40000
+            alloys = 30000
+        }
+    }
+    duration = 3600
+    ai_weight = {
+        weight = 0
+    }
+    potential = {
+        is_regular_empire = yes
+        NOT = {
+            has_global_flag = alderson_disabled
+        }
+    }
+    effect = {
+        from = {
+            remove_modifier = giga_planetary_computer
+            remove_planet_flag = giga_alderson_pc
+            set_planet_flag = giga_alderson_ecu
+        }
+    }
+    condition = {
+        has_technology = giga_tech_alderson_disk
+        has_ascension_perk = ap_arcology_project
+    }
+}

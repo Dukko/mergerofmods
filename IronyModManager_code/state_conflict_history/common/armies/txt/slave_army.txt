@@ -1,0 +1,52 @@
+slave_army = {
+    health = 0.5
+    damage = 1
+    morale = 0.5
+    morale_damage = 0.25
+    collateral_damage = 1.5
+    war_exhaustion = 0.1
+    time = 60
+    icon = GFX_army_type_slave
+    resources = {
+        category = armies
+        cost = {
+            minerals = 50
+        }
+        upkeep = {
+            energy = 0.5
+        }
+    }
+    prerequisites = {
+        "tech_neural_implants"
+    }
+    allow = {
+        any_owned_pop = {
+            is_pop_category = slave
+        }
+        has_building = building_slave_processing
+        NOT = {
+            has_building = building_plentiful_traditions_advanced_slave_processing
+        }
+    }
+    potential = {
+        owner = {
+            any_owned_pop = {
+                is_pop_category = slave
+                is_same_species = from
+            }
+        }
+        from = {
+            NOR = {
+                has_trait = "trait_mechanical"
+                has_trait = "trait_machine_unit"
+                is_sapient = no
+            }
+        }
+        owner = {
+            has_policy_flag = slavery_allowed
+            NOT = {
+                has_authority = auth_machine_intelligence
+            }
+        }
+    }
+}

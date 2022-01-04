@@ -1,0 +1,40 @@
+esc_tech_shields_6 = {
+    area = physics
+    category = {
+        field_manipulation
+    }
+    tier = 5
+    cost = @tier5cost2
+    weight = @tier5weight2
+    ai_update_type = all
+    prerequisites = {
+        "tech_shields_5"
+        "esc_tech_grand_research_initiative"
+    }
+    gateway = ESC_SHIELDS
+    potential = {
+        NOT = {
+            has_global_flag = ESC_GLOBAL_FLAG_shields_forbidden
+        }
+    }
+    weight_modifier = {
+        factor = 1.25
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+    ai_weight = {
+        factor = @ESC_AI_tech_weight_multiplier
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+}

@@ -1,0 +1,72 @@
+ship_section_template = {
+    key = "MEDIUM_DM_ENIGMATIC_PLATFORM_SECTION"
+    ship_size = enigmatic_fortress_platform
+    fits_on_slot = "medium"
+    entity = "enigmatic_fortress_platform_entity"
+    icon = "GFX_ship_part_core_mid"
+    should_draw_components = no
+    prerequisites = {
+        tech_dm_enigmatic_fortress_platform
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_01"
+        template = "invisible_extra_large_fixed"
+        locatorname = "large_gun_01.001"
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_02"
+        template = "invisible_extra_large_fixed"
+        locatorname = "large_gun_01.002"
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_03"
+        template = "invisible_extra_large_fixed"
+        locatorname = "large_gun_01.003"
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_04"
+        template = "invisible_extra_large_fixed"
+        locatorname = "large_gun_01.004"
+    }
+    component_slot = {
+        name = "EXTRA_LARGE_05"
+        template = "invisible_extra_large_fixed"
+        locatorname = "large_gun_01.001"
+    }
+    component_slot = {
+        name = "LARGE_GUN_01"
+        template = "large_turret"
+        locatorname = "large_gun_01.002"
+    }
+    component_slot = {
+        name = "LARGE_GUN_02"
+        template = "large_turret"
+        locatorname = "large_gun_01.003"
+    }
+    component_slot = {
+        name = "LARGE_GUN_03"
+        template = "large_turret"
+        locatorname = "large_gun_01.004"
+    }
+    component_slot = {
+        name = "LARGE_GUN_04"
+        template = "large_turret"
+        locatorname = "large_gun_01.001"
+    }
+    component_slot = {
+        name = "LARGE_GUN_05"
+        template = "large_turret"
+        locatorname = "large_gun_01.002"
+    }
+    small_utility_slots = 0
+    medium_utility_slots = 0
+    large_utility_slots = 5
+    aux_utility_slots = 1
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = 600
+            sr_dark_matter = 500
+        }
+    }
+}

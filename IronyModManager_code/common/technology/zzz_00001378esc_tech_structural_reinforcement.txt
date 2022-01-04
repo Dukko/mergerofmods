@@ -1,0 +1,38 @@
+esc_tech_structural_reinforcement = {
+    area = engineering
+    category = {
+        materials
+    }
+    tier = 3
+    cost = @tier3cost3
+    weight = @tier3weight3
+    prerequisites = {
+        "esc_tech_grand_research_initiative"
+        "tech_cruisers"
+    }
+    potential = {
+        NOT = {
+            has_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden
+        }
+    }
+    weight_modifier = {
+        factor = 1.25
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+    ai_weight = {
+        factor = @ESC_AI_tech_weight_multiplier
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+}

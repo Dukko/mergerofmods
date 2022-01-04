@@ -31,7 +31,10 @@ building_ammonia_electrodeposition = {
         NOT = {
             has_modifier = resort_colony
         }
-        is_planet_class = pc_ammonia
+        OR = {
+            is_planet_class = pc_ammonia
+            is_planet_class = pc_ll_ammonia
+        }
     }
     allow = {
         has_upgraded_capital = yes

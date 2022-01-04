@@ -34,6 +34,7 @@ building_lava_mine = {
         OR = {
             is_planet_class = pc_primal
             is_planet_class = pc_ash
+            is_planet_class = pc_ll_ash
         }
     }
     allow = {

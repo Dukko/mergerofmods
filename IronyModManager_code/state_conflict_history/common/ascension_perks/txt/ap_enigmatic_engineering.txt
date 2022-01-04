@@ -39,7 +39,7 @@ ap_enigmatic_engineering = {
         }
     }
     ai_weight = {
-        factor = 1
+        factor = 0.05
         modifier = {
             factor = 2
             has_ascension_perk = ap_technological_ascendancy
@@ -58,7 +58,7 @@ ap_enigmatic_engineering = {
             has_ethic = ethic_materialist
         }
         modifier = {
-            factor = 4
+            factor = 3
             has_ethic = ethic_fanatic_materialist
         }
         modifier = {

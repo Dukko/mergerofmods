@@ -158,6 +158,10 @@ resolution_industry_repeal_2 = {
             is_civic_environmentalist = yes
         }
         modifier = {
+            factor = 2
+            has_origin = origin_terraformer
+        }
+        modifier = {
             factor = 1.5
             owner_species = {
                 has_trait = eco_trait_clean

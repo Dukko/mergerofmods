@@ -1,0 +1,22 @@
+tech_prob_c = {
+    area = physics
+    cost = @gigatier7cost1
+    weight = 0
+    tier = 7
+    is_rare = yes
+    is_reverse_engineerable = no
+    category = {
+        computing
+    }
+    ai_weight = {
+        factor = @giga_aiweight_multiplier
+        factor = @ehof_t1_weight
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+}

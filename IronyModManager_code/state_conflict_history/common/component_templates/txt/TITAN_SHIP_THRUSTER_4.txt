@@ -13,7 +13,7 @@ utility_component_template = {
         }
     }
     modifier = {
-        ship_base_speed_mult = 0.45
+        ship_base_speed_mult = 0.75
         ship_evasion_add = 3
     }
     prerequisites = {
@@ -25,7 +25,7 @@ utility_component_template = {
         galleon
         marauder_galleon
     }
-    upgrades_to = "TITAN_SHIP_THRUSTER_5"
+    upgrades_to = "TITAN_ESC_THRUSTERS_5"
     ai_weight = {
         weight = 4
     }

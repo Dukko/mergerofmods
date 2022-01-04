@@ -1,0 +1,52 @@
+tech_phanon_class_11_singularity = {
+    cost = @acot_tier10cost3
+    area = physics
+    tier = 9
+    category = {
+        field_manipulation
+    }
+    prerequisites = {
+        tech_stellarite_class_7_singularity
+        tech_civil_phanon_application
+    }
+    weight = @tier5weight1
+    is_rare = yes
+    potential = {
+        NOR = {
+            has_global_flag = aot_phanon_content_OFF
+            is_fallen_empire = yes
+        }
+        has_technology = tech_civil_phanon_application
+        has_technology = tech_stellarite_class_7_singularity
+        has_country_flag = finished_dm_production_core_chain
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 10
+            OR = {
+                has_technology = tech_mine_exotic_gases
+                has_technology = tech_exotic_gases
+            }
+        }
+        modifier = {
+            factor = 2
+            has_tradition = tr_prosperity_adopt
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+}

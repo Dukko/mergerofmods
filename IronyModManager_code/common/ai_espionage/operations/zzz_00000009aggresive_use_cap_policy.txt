@@ -1,0 +1,8 @@
+aggresive_use_cap_policy = {
+    weight = {
+        modifier = {
+            is_spynetwork_level > 40
+            weight = 30
+        }
+    }
+}

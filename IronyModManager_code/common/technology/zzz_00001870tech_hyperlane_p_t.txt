@@ -1,0 +1,36 @@
+tech_hyperlane_p_t = {
+    cost = @tier5cost2
+    area = physics
+    tier = 5
+    category = {
+        field_manipulation
+    }
+    prerequisites = {
+        "tech_abstract_3"
+        "tech_l_conductor"
+    }
+    weight = @tier5weight2
+    weight_modifier = {
+        factor = 2
+        modifier = {
+            factor = 1.25
+            has_tradition = tr_prosperity_adopt
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+}

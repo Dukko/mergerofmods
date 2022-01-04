@@ -1,0 +1,14 @@
+col_ecu_refinery = {
+    icon = GFX_colony_type_refinery
+    potential = {
+        uses_district_set = city_world
+    }
+    planet_modifier = {
+        planet_refiners_produces_mult = 0.05
+        planet_translucers_produces_mult = 0.05
+        planet_chemists_produces_mult = 0.05
+    }
+    weight_modifier = {
+        base = 10
+    }
+}

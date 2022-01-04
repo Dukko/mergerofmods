@@ -1,4 +1,4 @@
-@cooldown = 3600
+@cooldown = 720
 succession_type_random = {
     potential = {
         host_has_dlc = Federations
@@ -80,27 +80,30 @@ succession_type_random = {
             is_federation_leader = no
             federation = {
                 federation_cohesion < 0
+                federation_cohesion >= -25
             }
         }
         modifier = {
             desc = federation_acceptance_poor_cohesion
-            add = 20
+            add = 40
             is_federation_leader = no
             federation = {
                 federation_cohesion < -25
+                federation_cohesion >= -50
             }
         }
         modifier = {
             desc = federation_acceptance_poor_cohesion
-            add = 20
+            add = 60
             is_federation_leader = no
             federation = {
                 federation_cohesion < -50
+                federation_cohesion >= -75
             }
         }
         modifier = {
             desc = federation_acceptance_poor_cohesion
-            add = 20
+            add = 80
             is_federation_leader = no
             federation = {
                 federation_cohesion < -75

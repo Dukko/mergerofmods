@@ -1,0 +1,14 @@
+triggered_opinion_lrsk_gvp_obscene_shapers = {
+    trigger = {
+        OR = {
+            has_valid_civic = lrsk_adv_civ_civic_artificers
+            has_valid_civic = lrsk_adv_civ_civic_essentialists
+        }
+        from = {
+            has_valid_civic = lrsk_adv_civ_civic_shapers
+        }
+    }
+    opinion = {
+        base = -25
+    }
+}

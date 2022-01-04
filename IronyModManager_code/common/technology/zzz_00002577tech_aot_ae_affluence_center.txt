@@ -1,0 +1,41 @@
+tech_aot_ae_affluence_center = {
+    cost = @acot_tier7cost3
+    area = engineering
+    tier = 7
+    icon = tech_ae_affluence_center
+    category = {
+        materials
+    }
+    prerequisites = {
+        "tech_fe_affluence_center"
+        "tech_dark_matter_power_core_ae"
+    }
+    weight = @tier5weight1
+    is_rare = yes
+    potential = {
+        NOT = {
+            has_global_flag = acot_building_forbidden
+        }
+        has_technology = tech_dark_matter_power_core_ae
+        has_technology = tech_fe_affluence_center
+    }
+    weight_modifier = {
+        factor = 2
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+}

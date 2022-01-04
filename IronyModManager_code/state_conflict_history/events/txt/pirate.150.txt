@@ -1,0 +1,141 @@
+namespace = marauder
+namespace = crisis
+namespace = emperor
+namespace = pirate
+country_event = {
+    id = pirate.150
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        NOR = {
+            exists = event_target:thalassocracy_country
+            any_country = {
+                has_country_flag = met_thalassocracy
+            }
+        }
+    }
+    immediate = {
+        create_thalassocracy_country = yes
+        if = {
+            limit = {
+                any_system = {
+                    num_planets_in_system > 1
+                    NOR = {
+                        exists = space_owner
+                        has_star_flag = hostile_system
+                        has_star_flag = guardian
+                        has_star_flag = tiyanki_home_system
+                        has_star_flag = amoeba_home_system
+                        has_star_flag = lcluster
+                        has_star_flag = sealed_system
+                    }
+                }
+            }
+            random_system = {
+                limit = {
+                    num_planets_in_system > 1
+                    NOR = {
+                        exists = space_owner
+                        has_star_flag = hostile_system
+                        has_star_flag = guardian
+                        has_star_flag = tiyanki_home_system
+                        has_star_flag = amoeba_home_system
+                        has_star_flag = lcluster
+                        has_star_flag = sealed_system
+                    }
+                }
+                save_global_event_target_as = thalassocracy_target_system
+                random_system_planet = {
+                    save_global_event_target_as = thalassocracy_spawn_planet
+                    set_planet_flag = thalassocracy_visited
+                }
+                random_system_planet = {
+                    limit = {
+                        NOT = {
+                            has_planet_flag = thalassocracy_visited
+                        }
+                    }
+                    save_global_event_target_as = thalassocracy_target_planet
+                }
+                event_target:thalassocracy_country = {
+                    set_country_flag = spawned_fleet
+                }
+                create_thalassocracy_fleet = yes
+            }
+        }
+        else_if = {
+            limit = {
+                any_system = {
+                    exists = space_owner
+                    num_planets_in_system > 1
+                    NOR = {
+                        is_pirate_system = yes
+                        has_star_flag = hostile_system
+                        has_star_flag = guardian
+                        has_star_flag = enclave
+                        any_system_planet = {
+                            is_capital = yes
+                        }
+                    }
+                    has_system_trade_value >= 80
+                    distance = {
+                        source = this.capital_scope.solar_system
+                        use_bypasses = no
+                        min_jumps = 2
+                        max_jumps = 5
+                    }
+                }
+            }
+            random_system = {
+                limit = {
+                    exists = space_owner
+                    num_planets_in_system > 1
+                    NOR = {
+                        is_pirate_system = yes
+                        has_star_flag = hostile_system
+                        has_star_flag = guardian
+                        has_star_flag = enclave
+                        any_system_planet = {
+                            is_capital = yes
+                        }
+                    }
+                    has_system_trade_value >= 80
+                    distance = {
+                        source = this.capital_scope.solar_system
+                        use_bypasses = no
+                        min_jumps = 2
+                        max_jumps = 5
+                    }
+                }
+                save_global_event_target_as = thalassocracy_target_system
+                random_system_planet = {
+                    save_global_event_target_as = thalassocracy_spawn_planet
+                    set_planet_flag = thalassocracy_visited
+                }
+                random_galaxy_planet = {
+                    limit = {
+                        NOT = {
+                            has_planet_flag = thalassocracy_visited
+                        }
+                    }
+                    save_global_event_target_as = thalassocracy_target_planet
+                }
+                event_target:thalassocracy_country = {
+                    set_country_flag = spawned_fleet
+                }
+                create_thalassocracy_fleet = yes
+                space_owner = {
+                    country_event = {
+                        id = pirate.155
+                        days = 0
+                        scopes = {
+                            from = event_target:thalassocracy_country
+                        }
+                    }
+                }
+            }
+        }
+        else = {
+        }
+    }
+}

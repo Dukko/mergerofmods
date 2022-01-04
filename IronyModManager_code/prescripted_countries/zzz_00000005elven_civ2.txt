@@ -11,7 +11,7 @@ elven_civ2 = {
         name = "Aenari"
         plural = "Aenarii"
         adjective = "Aenarí"
-        name_list = "eos_namelist_elf_aenari"
+        name_list = "ELVEN4"
         trait = "trait_elven_true"
         trait = "trait_traditional"
         trait = "trait_communal"
@@ -42,7 +42,7 @@ elven_civ2 = {
     empire_flag = {
         icon = {
             category = "elven"
-            file = "elven_3.dds"
+            file = "eos_flag_aenari.dds"
         }
         background = {
             category = "backgrounds"

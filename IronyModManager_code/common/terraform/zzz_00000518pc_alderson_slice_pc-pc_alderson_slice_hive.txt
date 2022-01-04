@@ -1,0 +1,33 @@
+terraform_link = {
+    from = "pc_alderson_slice_pc"
+    to = "pc_alderson_slice_hive"
+    resources = {
+        category = terraforming
+        cost = {
+            energy = 50000
+            alloys = 25000
+            food = 50000
+        }
+    }
+    duration = 3600
+    ai_weight = {
+        weight = 0
+    }
+    potential = {
+        is_hive_empire = yes
+        NOT = {
+            has_global_flag = alderson_disabled
+        }
+    }
+    effect = {
+        from = {
+            remove_modifier = giga_planetary_computer
+            remove_planet_flag = giga_alderson_pc
+            set_planet_flag = giga_alderson_hive
+        }
+    }
+    condition = {
+        has_technology = giga_tech_alderson_disk
+        has_ascension_perk = ap_hive_worlds
+    }
+}

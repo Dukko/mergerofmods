@@ -1,0 +1,29 @@
+phanon_fooddrone = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_phanon_food_processing_complex
+    icon = acot_fooddrone
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible_precalc = can_fill_drone_job
+    resources = {
+        category = planet_jobs
+        produces = {
+            food = 120
+        }
+        upkeep = {
+            aot_sr_runic_power = 3
+        }
+    }
+    weight = {
+        weight = @complex_drone_job_weight
+        modifier = {
+            factor = 1.5
+            has_job = phanon_fooddrone
+        }
+    }
+}

@@ -1,0 +1,36 @@
+@apsr_terraforming_cost_3 = 50000
+@apsr_terraforming_time_3 = 10800
+terraform_link = {
+    from = "pc_shielded"
+    to = "pc_apsr_ancient"
+    resources = {
+        category = terraforming
+        cost = {
+            energy = @apsr_terraforming_cost_3
+        }
+    }
+    duration = @apsr_terraforming_time_3
+    condition = {
+        has_technology = "tech_climate_restoration"
+    }
+    potential = {
+        from = {
+            has_ancient_complex_apsr_modifiers = yes
+        }
+    }
+    effect = {
+        from = {
+            remove_modifier = apsr_unshielded_candidate
+            remove_modifier = apsr_uninfected_candidate
+            reset_planet = yes
+            clear_deposits = yes
+            prevent_anomaly = yes
+            apsr_generate_ancient_complex_deposits = yes
+            set_planet_flag = colony_event
+            apsr_set_planet_picture_by_resource = yes
+        }
+    }
+    ai_weight = {
+        weight = 900
+    }
+}

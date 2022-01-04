@@ -5,7 +5,19 @@ hangar_bay = {
     potential = {
         exists = owner
         owner = {
-            has_technology = tech_strike_craft_1
+            and = {
+                has_technology = tech_starbase_2
+                or = {
+                    has_technology = tech_strike_craft_1
+                    has_technology = tech_amoeba_strike_craft_1
+                }
+            }
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_starport"
+            has_starbase_size >= starbase_starport
         }
     }
     resources = {
@@ -18,8 +30,8 @@ hangar_bay = {
         }
     }
     station_modifier = {
-        ship_hull_mult = 0.1
-        ship_armor_mult = 0.1
+        ship_hull_mult = 0.2
+        ship_armor_mult = 0.2
         starbase_trade_protection_range_add = 1
         starbase_trade_protection_add = 10
     }
@@ -43,4 +55,5 @@ hangar_bay = {
         }
     }
     show_in_tech = "tech_strike_craft_1"
+    show_in_tech = "tech_amoeba_strike_craft_1"
 }

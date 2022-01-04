@@ -1,0 +1,78 @@
+building_phanon_runic_generator = {
+    base_buildtime = 900
+    can_demolish = yes
+    can_build = yes
+    category = manufacturing
+    potential = {
+        NOT = {
+            has_global_flag = aot_phanon_content_OFF
+        }
+        exists = owner
+        owner = {
+            has_technology = tech_phanon_runic_generator
+        }
+    }
+    allow = {
+        has_phanon_capital = yes
+    }
+    planet_modifier = {
+        planet_jobs_aot_sr_runic_power_produces_mult = 0.1
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 5000
+            energy = 5000
+            acot_sr_stellarite = 5000
+        }
+        produces = {
+            trigger = {
+                NOT = {
+                    is_planet_class = pc_phanon_macripp
+                }
+            }
+            aot_sr_runic_power = 100
+        }
+        produces = {
+            trigger = {
+                is_planet_class = pc_phanon_macripp
+            }
+            aot_sr_runic_power = 1000
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    is_ai = yes
+                }
+            }
+            aot_sr_runic_power = 500
+            energy = 200
+        }
+        upkeep = {
+            energy = 1000
+            acot_sr_stellarite = 1000
+        }
+    }
+    prerequisites = {
+        "tech_phanon_runic_generator"
+    }
+    ai_weight = {
+        weight = 150000
+        modifier = {
+            factor = 100000
+            owner = {
+                has_monthly_income = {
+                    resource = aot_sr_runic_power
+                    value <= 3
+                }
+            }
+        }
+        modifier = {
+            factor = 0.1
+            num_buildings = {
+                type = building_stellarite_generator_lvl3
+                value >= 2
+            }
+        }
+    }
+}

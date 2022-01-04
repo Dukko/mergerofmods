@@ -6,7 +6,7 @@ tech_juggernaut = {
     }
     tier = 5
     prerequisites = {
-        "tech_starbase_6"
+        "tech_starbase_5"
         "tech_battleships"
     }
     weight = @tier5weight3

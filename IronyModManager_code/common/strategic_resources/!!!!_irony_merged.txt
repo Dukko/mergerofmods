@@ -1,3 +1,23 @@
+@critical_alloys_value_1 = 50
+@critical_alloys_value_2 = 50
+@critical_consumer_goods_target_value_1 = 1000
+@critical_consumer_goods_value_1 = 50
+@critical_consumer_goods_value_2 = 50
+@critical_energy_value_1 = 50
+@critical_energy_value_2 = 50
+@critical_exotic_gases_value_1 = 25
+@critical_exotic_gases_value_2 = 25
+@critical_food_value_1 = 100
+@critical_food_value_2 = 100
+@critical_minerals_target_value_1 = 7000
+@critical_minerals_value_1 = 700
+@critical_minerals_value_2 = 700
+@critical_mote_value_1 = 25
+@critical_mote_value_2 = 25
+@critical_rare_crystals_value_1 = 25
+@critical_rare_crystals_value_2 = 25
+@target_consumer_goods_value_1 = 350
+@target_minerals_value_1 = 5000
 time = {
 }
 energy = {
@@ -18,10 +38,220 @@ minerals = {
     max = 15000
     deficit_modifier = minerals_deficit
     ai_weight = {
-        weight = 1
+        weight = 1.5
+        modifier = {
+            factor = 3
+            resource_stockpile_compare = {
+                resource = minerals
+                value < @critical_minerals_value_2
+            }
+            resource_income_compare = {
+                resource = minerals
+                value < 20
+            }
+        }
+        modifier = {
+            factor = 2
+            resource_stockpile_compare = {
+                resource = minerals
+                value < @critical_minerals_value_2
+            }
+            resource_income_compare = {
+                resource = minerals
+                value < 40
+            }
+        }
     }
     ai_wants = {
-        base = 1000
+        base = 1
+        modifier = {
+            add = 25000
+            resource_income_compare = {
+                resource = minerals
+                value < 100
+            }
+            resource_stockpile_compare = {
+                resource = minerals
+                value < 400
+            }
+            resource_stockpile_compare = {
+                resource = energy
+                value > 400
+            }
+        }
+        modifier = {
+            add = 25000
+            years_passed > 40
+            resource_income_compare = {
+                resource = minerals
+                value < 150
+            }
+            resource_stockpile_compare = {
+                resource = minerals
+                value < 400
+            }
+            resource_stockpile_compare = {
+                resource = energy
+                value > 400
+            }
+        }
+        modifier = {
+            add = 25000
+            years_passed > 60
+            resource_stockpile_compare = {
+                resource = minerals
+                value < 800
+            }
+            resource_stockpile_compare = {
+                resource = energy
+                value > 1000
+            }
+        }
+        modifier = {
+            add = 25000
+            or = {
+                has_ascension_perk = ap_arcology_project
+                and = {
+                    has_origin = origin_remnants
+                    has_technology = tech_housing_2
+                }
+            }
+            resource_stockpile_compare = {
+                resource = minerals
+                value < 20000
+            }
+            resource_stockpile_compare = {
+                resource = energy
+                value > 1000
+            }
+        }
+        modifier = {
+            add = 25000
+            str_menacing_crisis = yes
+            resource_stockpile_compare = {
+                resource = minerals
+                value < 1000
+            }
+            resource_stockpile_compare = {
+                resource = energy
+                value > 5000
+            }
+        }
+        modifier = {
+            add = 10000
+            or = {
+                has_origin = origin_void_dwellers
+                has_origin = origin_shattered_ring
+            }
+            resource_income_compare = {
+                resource = minerals
+                value < 100
+            }
+            resource_stockpile_compare = {
+                resource = minerals
+                value < 800
+            }
+            resource_stockpile_compare = {
+                resource = energy
+                value > 400
+            }
+        }
+        modifier = {
+            add = @target_minerals_value_1
+            NOR = {
+                AND = {
+                    resource_stockpile_compare = {
+                        resource = energy
+                        value < @critical_energy_value_2
+                    }
+                    resource_income_compare = {
+                        resource = energy
+                        value < 0
+                    }
+                }
+                AND = {
+                    resource_stockpile_compare = {
+                        resource = minerals
+                        value < @critical_minerals_value_2
+                    }
+                    resource_income_compare = {
+                        resource = minerals
+                        value < 0
+                    }
+                }
+                AND = {
+                    resource_stockpile_compare = {
+                        resource = food
+                        value < @critical_food_value_2
+                    }
+                    resource_income_compare = {
+                        resource = food
+                        value < 0
+                    }
+                }
+                AND = {
+                    resource_stockpile_compare = {
+                        resource = alloys
+                        value < @critical_alloys_value_2
+                    }
+                    resource_income_compare = {
+                        resource = alloys
+                        value < 0
+                    }
+                }
+                AND = {
+                    resource_stockpile_compare = {
+                        resource = consumer_goods
+                        value < @critical_consumer_goods_value_2
+                    }
+                    resource_income_compare = {
+                        resource = consumer_goods
+                        value < 0
+                    }
+                }
+                AND = {
+                    resource_stockpile_compare = {
+                        resource = volatile_motes
+                        value < @critical_mote_value_2
+                    }
+                    resource_income_compare = {
+                        resource = volatile_motes
+                        value < 0
+                    }
+                }
+                AND = {
+                    resource_stockpile_compare = {
+                        resource = exotic_gases
+                        value < @critical_exotic_gases_value_2
+                    }
+                    resource_income_compare = {
+                        resource = exotic_gases
+                        value < 0
+                    }
+                }
+                AND = {
+                    resource_stockpile_compare = {
+                        resource = rare_crystals
+                        value < @critical_rare_crystals_value_2
+                    }
+                    resource_income_compare = {
+                        resource = rare_crystals
+                        value < 0
+                    }
+                }
+            }
+        }
+        modifier = {
+            add = @critical_minerals_target_value_1
+            resource_stockpile_compare = {
+                resource = minerals
+                value < @critical_minerals_value_2
+            }
+            resource_income_compare = {
+                resource = minerals
+                value < 40
+            }
+        }
     }
 }
 food = {
@@ -86,10 +316,138 @@ consumer_goods = {
     max = 15000
     deficit_modifier = consumer_goods_deficit
     ai_weight = {
-        weight = 5
+        weight = 2
+        modifier = {
+            factor = 2
+            resource_stockpile_compare = {
+                resource = consumer_goods
+                value < @critical_consumer_goods_value_1
+            }
+            resource_income_compare = {
+                resource = consumer_goods
+                value < 0
+            }
+        }
     }
     ai_wants = {
-        base = 500
+        base = 1
+        modifier = {
+            add = 5000
+            resource_stockpile_compare = {
+                resource = minerals
+                value > 300
+            }
+            resource_income_compare = {
+                resource = consumer_goods
+                value < 10
+            }
+            resource_stockpile_compare = {
+                resource = consumer_goods
+                value < 180
+            }
+            resource_stockpile_compare = {
+                resource = energy
+                value > 1000
+            }
+            is_at_war = no
+            ai_colonize_plans > 0
+        }
+        modifier = {
+            add = @target_consumer_goods_value_1
+            NOR = {
+                AND = {
+                    resource_stockpile_compare = {
+                        resource = energy
+                        value < @critical_energy_value_1
+                    }
+                    resource_income_compare = {
+                        resource = energy
+                        value < 0
+                    }
+                }
+                AND = {
+                    resource_stockpile_compare = {
+                        resource = minerals
+                        value < @critical_minerals_value_1
+                    }
+                    resource_income_compare = {
+                        resource = minerals
+                        value < 0
+                    }
+                }
+                AND = {
+                    resource_stockpile_compare = {
+                        resource = food
+                        value < @critical_food_value_1
+                    }
+                    resource_income_compare = {
+                        resource = food
+                        value < 0
+                    }
+                }
+                AND = {
+                    resource_stockpile_compare = {
+                        resource = alloys
+                        value < @critical_alloys_value_1
+                    }
+                    resource_income_compare = {
+                        resource = alloys
+                        value < 0
+                    }
+                }
+                AND = {
+                    resource_stockpile_compare = {
+                        resource = consumer_goods
+                        value < @critical_consumer_goods_value_1
+                    }
+                    resource_income_compare = {
+                        resource = consumer_goods
+                        value < 0
+                    }
+                }
+                AND = {
+                    resource_stockpile_compare = {
+                        resource = volatile_motes
+                        value < @critical_mote_value_1
+                    }
+                    resource_income_compare = {
+                        resource = volatile_motes
+                        value < 0
+                    }
+                }
+                AND = {
+                    resource_stockpile_compare = {
+                        resource = exotic_gases
+                        value < @critical_exotic_gases_value_1
+                    }
+                    resource_income_compare = {
+                        resource = exotic_gases
+                        value < 0
+                    }
+                }
+                AND = {
+                    resource_stockpile_compare = {
+                        resource = rare_crystals
+                        value < @critical_rare_crystals_value_1
+                    }
+                    resource_income_compare = {
+                        resource = rare_crystals
+                        value < 0
+                    }
+                }
+            }
+        }
+        modifier = {
+            add = @critical_consumer_goods_target_value_1
+            resource_stockpile_compare = {
+                resource = consumer_goods
+                value < @critical_consumer_goods_value_1
+            }
+            resource_income_compare = {
+                resource = consumer_goods
+                value < 0
+            }
+        }
     }
 }
 volatile_motes = {
@@ -217,11 +575,6 @@ menace = {
         weight = 1
     }
 }
-mec_biotics = {
-    ai_weight = {
-        weight = 1
-    }
-}
 starnet_spice_melange = {
     tradable = no
     max = 100000
@@ -283,6 +636,31 @@ acot_sr_light_matter = {
     }
     ai_weight = {
         weight = 100
+    }
+}
+aot_sr_runic_power = {
+    tradable = no
+    max = 15000
+    prerequisites = {
+        "tech_dark_matter_power_core_pe"
+    }
+    visibility_prerequisite = {
+        always = yes
+    }
+    ai_weight = {
+        weight = 100
+    }
+}
+apsr_knowledge = {
+    tradable = no
+    visibility_prerequisite = {
+        always = yes
+    }
+    ai_weight = {
+        weight = 10000
+    }
+    ai_wants = {
+        base = 50
     }
 }
 larva = {
@@ -351,7 +729,7 @@ ehof_sr_negative_mass = {
     tradable = no
     max = 1000000
     prerequisites = {
-        "tech_negative_pressure"
+        "tech_negative_e_s"
     }
     visibility_prerequisite = {
         always = yes
@@ -424,5 +802,42 @@ sr_tiyanki_parts = {
     }
     ai_weight = {
         weight = 100
+    }
+}
+sr_stellar_plasma = {
+    tradable = no
+    max = 1000000
+    prerequisites = {
+        "tech_stellar_manip_1"
+    }
+    visibility_prerequisite = {
+        always = yes
+    }
+    ai_weight = {
+        weight = 100
+    }
+}
+resource_starcore = {
+    tradable = no
+    max = 1000
+    tooltip_decimals = 1
+    fixed_max_amount = yes
+    prerequisites = {
+        "tech_extreme_energies"
+    }
+    ai_weight = {
+        weight = 1000
+    }
+}
+resource_illunia = {
+    tradable = no
+    max = 1000
+    tooltip_decimals = 1
+    fixed_max_amount = yes
+    prerequisites = {
+        "tech_special_materials"
+    }
+    ai_weight = {
+        weight = 1000
     }
 }

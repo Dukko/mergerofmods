@@ -1,0 +1,51 @@
+weapon_component_template = {
+    key = "ENERGY_LANCE_1"
+    size = extra_large
+    type = instant
+    icon = "GFX_ship_part_energy_lance_1"
+    icon_frame = 1
+    firing_arc = 25
+    min_range = 2
+    use_ship_kill_target = no
+    prerequisites = {
+        "tech_energy_lance_1"
+    }
+    component_set = "ENERGY_LANCE_1"
+    projectile_gfx = "particle_lance"
+    tags = {
+        weapon_type_energy
+    }
+    ai_tags = {
+        weapon_role_artillery
+    }
+    upgrades_to = "ENERGY_LANCE_2"
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @xl_t5_cost
+            rare_crystals = @xl_t5_rare
+        }
+        upkeep = {
+            energy = @xl_t5_upkeep_energy
+            alloys = @xl_t5_upkeep_alloys
+        }
+    }
+    ai_weight = {
+        weight = 3
+        modifier = {
+            factor = 900
+            has_global_flag = prethoryn_invasion_happened
+            not = {
+                has_global_flag = prethoryn_invasion_defeated
+            }
+        }
+        modifier = {
+            factor = 0
+            is_country_type = default
+            resource_stockpile_compare = {
+                resource = rare_crystals
+                value < 10
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+building_ae_ancient_cryo_chamber = {
+    base_buildtime = 450
+    can_demolish = yes
+    can_build = no
+    category = amenity
+    potential = {
+        owner = {
+            is_machine_empire = yes
+            has_technology = tech_ae_ancient_cryo_chamber
+        }
+    }
+    convert_to = {
+        building_ae_mansion
+        building_ae_hive_depot
+    }
+    allow = {
+        has_ascended_capital = yes
+    }
+    planet_modifier = {
+        planet_housing_add = 35
+        planet_amenities_add = 35
+        job_maintenance_drone_add = 5
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 550
+            sr_dark_matter = 50
+            acot_sr_dark_energy = 50
+        }
+        upkeep = {
+            energy = 2
+            sr_dark_matter = 2
+            acot_sr_dark_energy = 2
+        }
+    }
+    prerequisites = {
+        "tech_ae_ancient_cryo_chamber"
+    }
+    ai_weight = {
+        weight = 10
+        modifier = {
+            factor = 20000
+            free_housing < 0
+        }
+        modifier = {
+            factor = 30000
+            free_amenities < 2
+        }
+        modifier = {
+            factor = 0
+            free_housing > 1
+        }
+    }
+}

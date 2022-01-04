@@ -1,0 +1,15 @@
+swarm_army = {
+    damage = 4
+    morale_damage = 2
+    health = 1.5
+    has_morale = no
+    time = 180
+    icon = GFX_army_type_xenomorph
+    has_species = no
+    potential = {
+        exists = owner
+        owner = {
+            is_country_type = "swarm"
+        }
+    }
+}

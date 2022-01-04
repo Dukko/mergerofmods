@@ -1,0 +1,75 @@
+technician_drone = {
+    category = simple_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_energy_grid
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_drone_job
+    resources = {
+        category = planet_technician
+        produces = {
+            energy = 6
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_robot_empire = yes
+                }
+            }
+            energy = 2
+        }
+    }
+    weight = {
+        weight = @simple_drone_job_weight
+        modifier = {
+            factor = 2
+            OR = {
+                has_trait = trait_robot_superconductive
+                has_trait = trait_ingenious
+            }
+        }
+        modifier = {
+            factor = 0.9
+            NOT = {
+                has_job = mining_drone
+            }
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value > 50
+                }
+            }
+        }
+        modifier = {
+            factor = 1.2
+            has_job = technician_drone
+        }
+        modifier = {
+            factor = 1.1
+            exists = owner
+            years_passed < 1
+            owner = {
+                has_valid_civic = civic_machine_assimilator
+            }
+            has_trait = trait_cybernetic
+        }
+        modifier = {
+            factor = 0.65
+            has_trait = trait_necrophage
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                has_trait = trait_holofrixigram
+                has_trait = trait_holofrixigram_2
+                has_trait = trait_holofrixigram_3
+            }
+        }
+    }
+}

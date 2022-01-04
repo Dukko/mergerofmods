@@ -1,0 +1,25 @@
+utility_component_template = {
+    key = "LARGE_DRAGON_ARMOR"
+    size = large
+    icon = "GFX_ship_part_dragon_armor"
+    icon_frame = 1
+    power = 0
+    modifier = {
+        ship_armor_add = @armor_6L
+    }
+    prerequisites = {
+        "tech_dragon_armor"
+    }
+    component_set = "DRAGON_ARMOR"
+    upgrades_to = "LARGE_ESC_DRAGON_NANOARMOR"
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @l_t6_cost
+        }
+        upkeep = {
+            energy = @l_t6_upkeep_energy
+            alloys = @l_t6_upkeep_alloys
+        }
+    }
+}

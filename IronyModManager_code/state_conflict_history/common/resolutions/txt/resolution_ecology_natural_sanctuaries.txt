@@ -112,6 +112,10 @@ resolution_ecology_natural_sanctuaries = {
             is_civic_environmentalist = yes
         }
         modifier = {
+            factor = 3
+            has_origin = origin_terraformer
+        }
+        modifier = {
             factor = 2
             is_civic_environmentalist = yes
             is_xenophobe = no

@@ -9,8 +9,11 @@ colonist = {
         is_being_assimilated = no
         is_sapient = yes
     }
+    possible_precalc = can_fill_specialist_job
     possible = {
-        specialist_job_check_trigger = yes
+        NOT = {
+            has_trait = trait_slave_gene
+        }
     }
     pop_modifier = {
         pop_defense_armies_add = 1
@@ -38,7 +41,15 @@ colonist = {
         }
     }
     resources = {
-        category = planet_jobs
+        category = planet_administrators
+        produces = {
+            trigger = {
+                owner = {
+                    has_valid_civic = civic_star_settlers
+                }
+            }
+            unity = 5
+        }
         produces = {
             trigger = {
                 is_lithoid = no
@@ -116,6 +127,11 @@ colonist = {
             planet = {
                 is_artificial = no
             }
+        }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = specialist
         }
     }
 }

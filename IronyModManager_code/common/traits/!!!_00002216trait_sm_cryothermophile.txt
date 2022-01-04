@@ -1,0 +1,106 @@
+trait_sm_cryothermophile = {
+    sorting_priority = 5
+    icon = gfx/interface/icons/traits/trait_sm_cryothermophile.dds
+    cost = 2
+    potential_crossbreeding_chance = 0
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    modification = yes
+    species_potential_add = {
+        exists = from
+        from = {
+            has_ascension_perk = ap_evolutionary_mastery
+        }
+    }
+    species_possible_remove = {
+        if = {
+            limit = {
+                exists = from
+            }
+            custom_tooltip = {
+                fail_text = trait_aquatic_remove_evolutionary_mastery
+                from = {
+                    has_ascension_perk = ap_evolutionary_mastery
+                }
+            }
+        }
+    }
+    initial = yes
+    allowed_planet_classes = {
+        pc_arctic
+        pc_tundra
+        pc_alpine
+        pc_mud
+        pc_basalt
+        pc_frozen_desert
+        pc_glacial
+        pc_mushroom
+        pc_antarctic
+        pc_aeolian
+        pc_boreal
+        pc_swamp
+        pc_snow
+        pc_highland
+        pc_duneforest
+        pc_storm
+        pc_rogue
+        pc_lichen
+        pc_eyeball
+        pc_glacio
+        pc_lanthanide
+        pc_sm_cryoworld
+    }
+    custom_tooltip = TRAIT_SM_CRYOTHERMOPHILE_EFFECT
+    triggered_pop_modifier = {
+        potential = {
+            exists = planet
+            planet = {
+                OR = {
+                    is_planet_class = pc_arctic
+                    is_planet_class = pc_sm_cryoworld
+                    is_planet_class = pc_frozen_desert
+                    is_planet_class = pc_glacial
+                    is_planet_class = pc_antarctic
+                    is_planet_class = pc_aeolian
+                    is_planet_class = pc_storm
+                    is_planet_class = pc_eyeball
+                }
+            }
+        }
+        planet_jobs_produces_mult = 0.1
+    }
+    triggered_pop_modifier = {
+        potential = {
+            exists = planet
+            planet = {
+                is_cold = yes
+            }
+        }
+        pop_environment_tolerance = 0.2
+        pop_amenities_usage_mult = -0.1
+    }
+    triggered_pop_modifier = {
+        potential = {
+            exists = planet
+            planet = {
+                is_cold = no
+            }
+        }
+        pop_environment_tolerance = -0.2
+    }
+    triggered_pop_modifier = {
+        potential = {
+            exists = planet
+            planet = {
+                is_dry = yes
+            }
+        }
+        planet_jobs_produces_mult = -0.1
+        pop_amenities_usage_mult = 0.1
+    }
+    slave_cost = {
+        energy = 150
+    }
+}

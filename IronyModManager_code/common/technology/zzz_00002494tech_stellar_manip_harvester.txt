@@ -1,0 +1,32 @@
+tech_stellar_manip_harvester = {
+    cost = @tier5cost2
+    area = engineering
+    tier = 5
+    category = {
+        voidcraft
+    }
+    is_rare = yes
+    weight = @tier5weight2
+    prerequisites = {
+        "tech_gigas_stellar_manip_1"
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 3
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_voidcraft"
+            }
+        }
+    }
+}

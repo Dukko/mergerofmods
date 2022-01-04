@@ -1,0 +1,19 @@
+leader_trait_former_ruler_hive_ruler = {
+    leader_trait = {
+        ruler
+    }
+    leader_class = {
+        ruler
+    }
+    cost = 0
+    modification = no
+    initial = no
+    randomized = no
+    icon = "gfx/interface/icons/traits/leader_traits/leader_trait_ruler_hive_mind.dds"
+    modifier = {
+        country_ruler_influence_produces_add = 1
+        planet_buildings_cost_mult = -0.05
+        planet_districts_cost_mult = -0.05
+        planet_building_build_speed_mult = 0.5
+    }
+}

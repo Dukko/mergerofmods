@@ -1,0 +1,30 @@
+lot_ap_repeatable = {
+    area = society
+    cost = @repeatableTechBaseCost
+    cost_per_level = @repeatableTechLevelCost
+    tier = @repeatableTechTier
+    category = {
+        statecraft
+    }
+    levels = 14
+    prerequisites = {
+        "tech_ascension_theory"
+    }
+    weight = @repeatableTechWeight
+    icon = tech_ascension_theory
+    modifier = {
+        ascension_perks_add = 1
+    }
+    weight_modifier = {
+        factor = @repatableTechFactor
+    }
+    ai_weight = {
+        factor = 1
+    }
+    weight_groups = {
+        repeatable
+    }
+    mod_weight_if_group_picked = {
+        repeatable = 0.01
+    }
+}

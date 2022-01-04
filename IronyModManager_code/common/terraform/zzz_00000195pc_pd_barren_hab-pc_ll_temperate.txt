@@ -1,0 +1,85 @@
+@terraforming_cost_hab = 7500
+@terraforming_duration_hab = 3600
+terraform_link = {
+    from = pc_pd_barren_hab
+    to = pc_ll_temperate
+    resources = {
+        category = terraforming
+        cost = {
+            energy = @terraforming_cost_hab
+        }
+    }
+    duration = @terraforming_duration_hab
+    potential = {
+        from = {
+            has_modifier = lifeless_temperate_terrafrom
+        }
+    }
+    condition = {
+        from = {
+            has_modifier = lifeless_temperate_terrafrom
+        }
+    }
+    effect = {
+        from = {
+            remove_planet_flag = pdhab
+            remove_planet_flag = pd_mining_hab
+            remove_planet_flag = pd_hab_d1
+            remove_planet_flag = pd_hab_d2
+            remove_planet_flag = pd_energy_hab
+            remove_planet_flag = pd_science_hab
+            remove_planet_flag = pd_commercial_hab
+            remove_planet_flag = pd_foundry_hab
+            remove_planet_flag = pd_farming_hab
+            remove_planet_flag = pdhab_hydrocarbon
+            remove_planet_flag = pdhab_subglacial
+            remove_planet_flag = pdhab_volcanic
+            remove_planet_flag = pdhab_chthonian
+            remove_planet_flag = pdhab_diamond
+            remove_planet_flag = pdhab_iron
+            remove_planet_flag = pdhab_carbon
+            remove_modifier = giga_pd_diamond_planet
+            remove_modifier = giga_pd_ethane_planet
+            remove_modifier = giga_pd_chthonian_planet
+            remove_modifier = gd_pd_iron_planet
+            remove_modifier = lifeless_temperate_terrafrom
+            remove_modifier = lifeless_foggy_terrafrom
+            remove_modifier = lifeless_torrid_terrafrom
+            remove_modifier = lifeless_methane_terrafrom
+            remove_modifier = lifeless_ammonia_terrafrom
+            remove_modifier = lifeless_ash_terrafrom
+            remove_modifier = lifeless_sulfur_terrafrom
+            remove_modifier = lifeless_ocean_terrafrom
+            remove_modifier = lifeless_rogue_terrafrom
+            remove_modifier = terraforming_candidate
+            remove_modifier = hab_terraforming_candidate
+            remove_modifier = terraforming_ash
+            remove_modifier = terraforming_ammonia
+            remove_modifier = terraforming_sulfur
+            remove_modifier = terraforming_methane
+            remove_modifier = pdammoniaatmosphere
+            remove_modifier = pdsulfuratmosphere
+            remove_modifier = pdmethaneatmosphere
+            remove_modifier = pdashatmosphere
+            remove_modifier = gpm_habitat_engineering
+            remove_modifier = gpm_habitat_engineering_mastery
+            remove_modifier = gpm_habitat_engineering_void_mastery
+            remove_modifier = master_builders_habitats
+            remove_deposit = d_expanded_dome_system
+            remove_deposit = d_expanded_dome_system_1
+            reroll_planet = yes
+            clear_deposits = yes
+            giga_reroll_lifeless = yes
+            if = {
+                limit = {
+                    has_building = building_hab_capital
+                }
+                remove_building = building_hab_capital
+                add_building = building_major_capital
+            }
+        }
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

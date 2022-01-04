@@ -1,0 +1,72 @@
+esc_tech_mhd_cannon_1 = {
+    area = engineering
+    category = {
+        propulsion
+    }
+    tier = 5
+    cost = @tier5cost3
+    weight = @tier5weight3
+    ai_update_type = military
+    prerequisites = {
+        "esc_tech_advanced_heavy_weapons"
+        "esc_tech_advanced_materials"
+        "tech_mass_accelerator_2"
+    }
+    gateway = ESC_MHD_CANNONS
+    potential = {
+        NOT = {
+            has_global_flag = ESC_GLOBAL_FLAG_mhd_cannons_forbidden
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0.8
+            has_ethic = ethic_fanatic_pacifist
+        }
+        modifier = {
+            factor = 0.9
+            has_ethic = ethic_pacifist
+        }
+        modifier = {
+            factor = 1.1
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.2
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_propulsion"
+            }
+        }
+    }
+    ai_weight = {
+        factor = @ESC_AI_tech_weight_multiplier
+        modifier = {
+            factor = 0.8
+            has_ethic = ethic_fanatic_pacifist
+        }
+        modifier = {
+            factor = 0.9
+            has_ethic = ethic_pacifist
+        }
+        modifier = {
+            factor = 1.1
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.2
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_propulsion"
+            }
+        }
+    }
+}

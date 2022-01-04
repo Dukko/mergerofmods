@@ -39,7 +39,9 @@ planet_event = {
             }
             every_country = {
                 limit = {
-                    has_event_chain = "prethoryn_scourge_chain"
+                    AND = {
+                        has_event_chain = "prethoryn_scourge_chain"
+                    }
                 }
                 add_event_chain_counter = {
                     event_chain = "prethoryn_scourge_chain"
@@ -74,14 +76,10 @@ planet_event = {
                 owner = {
                     NOT = {
                         is_same_value = from.owner
-                    }
-                    OR = {
-                        is_country_type = default
-                        is_country_type = fallen_empire
-                        is_country_type = awakened_fallen_empire
-                    }
                 }
-            }
+                    is_playable_country = yes
+                }
+                }
             add_threat = {
                 who = from.owner
                 amount = 3
@@ -89,8 +87,10 @@ planet_event = {
             every_country = {
                 limit = {
                     NOR = {
+                        OR = {
                         is_same_value = from.owner
                         is_same_value = root.owner
+                        }
                         AND = {
                             has_federation = yes
                             is_in_federation_with = from.owner
@@ -108,7 +108,7 @@ planet_event = {
                         }
                         has_ai_personality = awakened_fallen_empire_xenophile
                         AND = {
-                            is_country_type = default
+                            is_playable_country = yes
                             OR = {
                                 is_egalitarian = yes
                                 is_xenophile = yes
@@ -149,14 +149,16 @@ planet_event = {
             }
             every_country = {
                 limit = {
+                    OR = {
                     NOT = {
                         is_same_value = from.owner
+                        }
                     }
                     OR = {
                         has_communications = from.owner
                         has_communications = root.owner
                     }
-                    is_country_type = default
+                    is_playable_country = yes
                     NOR = {
                         is_xenophobe = yes
                         is_homicidal = yes
@@ -180,7 +182,7 @@ planet_event = {
                     OR = {
                         has_ai_personality = awakened_fallen_empire_xenophile
                         AND = {
-                            is_country_type = default
+                            is_playable_country = yes
                             is_xenophile = yes
                         }
                     }
@@ -221,6 +223,7 @@ planet_event = {
         if = {
             limit = {
                 OR = {
+                    is_memeable_space_habitat = yes
                     is_planet_class = pc_habitat
                     is_planet_class = pc_gigaorbital_ring
                     is_planet_class = pc_ehof_habitat
@@ -231,6 +234,7 @@ planet_event = {
         else_if = {
             limit = {
                 OR = {
+                    is_memeable_ringworld = yes
                     is_planet_class = pc_ringworld_habitable
                     is_planet_class = pc_shattered_ring_habitable
                     is_planet_class = pc_alderson_slice_gaia
@@ -321,6 +325,12 @@ planet_event = {
                 }
                 pc_tidallylocked = {
                     change_pc = pc_tidallylocked
+                }
+                pc_tidallygaia = {
+                    change_pc = pc_tidallygaia
+                }
+                pc_tidallyaquatic = {
+                    change_pc = pc_tidallyaquatic
                 }
                 pc_supercon = {
                     change_pc = pc_supercon
@@ -628,8 +638,29 @@ planet_event = {
                 pc_archive = {
                     change_pc = pc_archive
                 }
-                pc_gd_hydrocarbon_hab = {
-                    change_pc = pc_gd_hydrocarbon_hab
+                pc_ll_methane = {
+                    change_pc = pc_ll_methane
+                }
+                pc_ll_ash = {
+                    change_pc = pc_ll_ash
+                }
+                pc_ll_sulfur = {
+                    change_pc = pc_ll_sulfur
+                }
+                pc_ll_ammonia = {
+                    change_pc = pc_ll_ammonia
+                }
+                pc_ll_ocean = {
+                    change_pc = pc_ll_ocean
+                }
+                pc_ll_tidallylocked_cold = {
+                    change_pc = pc_ll_tidallylocked_cold
+                }
+                pc_ll_tidallylocked = {
+                    change_pc = pc_ll_tidallylocked
+                }
+                pc_ll_rogue = {
+                    change_pc = pc_ll_rogue
                 }
             }
         }

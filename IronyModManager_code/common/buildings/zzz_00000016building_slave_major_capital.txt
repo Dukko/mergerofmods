@@ -40,10 +40,19 @@ building_slave_major_capital = {
     }
     triggered_planet_modifier = {
         potential = {
+            exists = branch_office_owner
+            branch_office_owner = {
+                is_constructors_megacorp = yes
+            }
+        }
+        planet_max_branch_office_buildings_add = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
             exists = owner
             owner = {
                 NOT = {
-                    has_authority = auth_corporate
+                    is_megacorp = yes
                 }
             }
         }
@@ -53,7 +62,7 @@ building_slave_major_capital = {
         potential = {
             exists = owner
             owner = {
-                has_authority = auth_corporate
+                is_megacorp = yes
             }
         }
         modifier = {
@@ -68,8 +77,8 @@ building_slave_major_capital = {
             }
         }
         modifier = {
-            planet_jobs_upkeep_mult = 0.1
-            planet_jobs_produces_mult = 0.1
+            planet_jobs_productive_upkeep_mult = 0.1
+            planet_jobs_productive_produces_mult = 0.1
         }
     }
     triggered_desc = {
@@ -77,7 +86,7 @@ building_slave_major_capital = {
             exists = owner
             owner = {
                 NOT = {
-                    has_authority = auth_corporate
+                    is_megacorp = yes
                 }
             }
         }
@@ -87,7 +96,7 @@ building_slave_major_capital = {
         trigger = {
             exists = owner
             owner = {
-                has_authority = auth_corporate
+                is_megacorp = yes
             }
         }
         text = job_executive_effect_desc

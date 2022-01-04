@@ -1,0 +1,9 @@
+opinion_culprit_exposed = {
+    trigger = {
+        has_global_flag = mmc_plague_ended
+        has_country_flag = mmc_culprit_exposed
+    }
+    opinion = {
+        base = -500
+    }
+}

@@ -1,0 +1,47 @@
+building_phanon_hive_evochamber = {
+    base_buildtime = 900
+    can_build = no
+    category = government
+    potential = {
+        NOT = {
+            has_global_flag = aot_phanon_content_OFF
+        }
+        exists = owner
+        owner = {
+            has_technology = tech_phanon_hive_evochamber
+        }
+    }
+    planet_modifier = {
+        pop_growth_speed = 2
+    }
+    allow = {
+        has_phanon_capital = yes
+    }
+    resources = {
+        category = planet_buildings
+        produces = {
+            society_research = 200
+            food = 400
+        }
+        cost = {
+            energy = 4000
+            minerals = 4000
+            aot_sr_runic_power = 800
+        }
+        upkeep = {
+            aot_sr_runic_power = 20
+        }
+    }
+    prerequisites = {
+        tech_phanon_hive_evochamber
+    }
+    ai_weight = {
+        weight = 10000
+        modifier = {
+            factor = 0
+            OR = {
+                has_building = building_phanon_hive_evochamber
+            }
+        }
+    }
+}

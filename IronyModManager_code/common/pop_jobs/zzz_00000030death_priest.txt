@@ -10,7 +10,11 @@ death_priest = {
         is_being_purged = no
         is_being_assimilated = no
     }
+    possible_precalc = can_fill_specialist_job
     possible = {
+        NOT = {
+            has_trait = trait_slave_gene
+        }
         complex_specialist_job_check_trigger = yes
     }
     resources = {
@@ -23,7 +27,7 @@ death_priest = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_valid_civic = civic_exalted_priesthood
+                    is_theocracy = yes
                 }
             }
             unity = 1
@@ -67,7 +71,7 @@ death_priest = {
             factor = 2
             exists = owner
             owner = {
-                has_civic = civic_exalted_priesthood
+                is_theocracy = yes
             }
         }
         modifier = {
@@ -107,13 +111,17 @@ death_priest = {
         modifier = {
             factor = 0.1
             has_ethic = ethic_materialist
-            NOT = {
+            NOR = {
                 has_job = priest
+                has_job = death_priest
             }
         }
         modifier = {
             factor = 1.5
-            has_job = priest
+            OR = {
+                has_job = priest
+                has_job = death_priest
+            }
         }
         modifier = {
             factor = 1.5
@@ -186,6 +194,11 @@ death_priest = {
         modifier = {
             factor = 1.5
             has_trait = trait_necrophage
+        }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = specialist
         }
     }
 }

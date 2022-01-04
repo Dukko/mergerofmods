@@ -1,0 +1,23 @@
+tech_non_local_r_i = {
+    area = physics
+    cost = @tier7cost2
+    weight = @gigatier6weight3
+    tier = 7
+    category = {
+        computing
+    }
+    prerequisites = {
+        "tech_abstract_4"
+    }
+    ai_weight = {
+        factor = @giga_aiweight_multiplier
+        factor = @ehof_t1_weight
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+}

@@ -33,16 +33,16 @@ trader_proxy_office = {
                         }
                     }
                     AND = {
-                has_star_flag = enclave
-                any_fleet_in_system = {
-                    exists = owner
-                    owner = {
-                        has_country_flag = trader_enclave_country
+                        has_star_flag = enclave
+                        any_fleet_in_system = {
+                            exists = owner
+                            owner = {
+                                has_country_flag = trader_enclave_country
+                            }
+                        }
                     }
                 }
             }
-        }
-    }
         }
     }
     resources = {
@@ -70,7 +70,6 @@ trader_proxy_office = {
                 is_active_resolution = "resolution_galacticstudies_advanced_xenostudies"
                 is_active_resolution = "resolution_galacticstudies_ethical_guideline_refactoring"
                 is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
-                is_active_resolution = "resolution_galacticstudies_6"
             }
         }
         trade_value_add = 10
@@ -81,10 +80,7 @@ trader_proxy_office = {
             solar_system = {
                 OR = {
                     any_system_planet = {
-                        exists = owner
-                        owner = {
-                            is_country_type = default
-                        }
+                        is_owned_by = from
                     }
                     AND = {
                         has_star_flag = enclave

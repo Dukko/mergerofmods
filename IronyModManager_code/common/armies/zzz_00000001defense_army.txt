@@ -1,0 +1,29 @@
+defense_army = {
+    defensive = yes
+    is_pop_spawned = yes
+    health = 0.75
+    damage = 2
+    morale = 1.5
+    morale_damage = 0.5
+    collateral_damage = 0
+    war_exhaustion = 0.5
+    icon = GFX_army_type_defensive
+    potential = {
+        from = {
+            NOR = {
+                has_trait = "trait_mechanical"
+                has_trait = "trait_machine_unit"
+                is_sapient = no
+            }
+        }
+        owner = {
+            is_primitive = no
+            OR = {
+                NOT = {
+                    has_authority = auth_machine_intelligence
+                }
+                has_valid_civic = civic_machine_assimilator
+            }
+        }
+    }
+}

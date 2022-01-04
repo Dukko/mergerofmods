@@ -1,0 +1,128 @@
+building_dm_stronghold = {
+    can_build = yes
+    base_buildtime = 400
+    planetary_ftl_inhibitor = yes
+    add_to_first_building_slot = yes
+    category = army
+    position_priority = 100
+    allow = {
+        has_enigmatic_capital = yes
+    }
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = tech_dm_stronghold
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 5
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_fallen_empire = no
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_aot_dm_enforcer_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_fallen_empire = no
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_aot_dm_enforcer_drone_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_fallen_empire = yes
+            }
+        }
+        modifier = {
+            job_fe_protector_add = 3
+        }
+    }
+    prerequisites = {
+        "tech_dm_stronghold"
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 50
+            num_pops >= 25
+            NOR = {
+                num_buildings = {
+                    type = building_dm_stronghold
+                    value <= 2
+                }
+            }
+            owner = {
+                has_monthly_income = {
+                    resource = sr_dark_matter
+                    value <= 3
+                }
+                has_monthly_income = {
+                    resource = acot_sr_dark_energy
+                    value <= 3
+                }
+            }
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 400
+            sr_dark_matter = 100
+            acot_sr_dark_energy = 100
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    NOT = {
+                        has_technology = tech_acot_fractured_autoharvesting
+                    }
+                }
+            }
+            sr_dark_matter = 2
+            acot_sr_dark_energy = 2
+        }
+    }
+    upgrades = {
+        building_ae_stronghold
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 100000
+            num_pops >= 40
+            NOR = {
+                OR = {
+                    num_buildings = {
+                        type = building_dm_stronghold
+                        value <= 1
+                    }
+                    num_buildings = {
+                        type = building_ae_stronghold
+                        value <= 1
+                    }
+                }
+            }
+            owner = {
+                has_monthly_income = {
+                    resource = sr_dark_matter
+                    value <= 3
+                }
+            }
+        }
+    }
+}

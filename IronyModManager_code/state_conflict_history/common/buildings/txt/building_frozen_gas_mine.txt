@@ -31,7 +31,10 @@ building_frozen_gas_mine = {
         NOT = {
             has_modifier = resort_colony
         }
-        is_planet_class = pc_methane
+        OR = {
+            is_planet_class = pc_methane
+            is_planet_class = pc_ll_methane
+        }
     }
     allow = {
         has_upgraded_capital = yes

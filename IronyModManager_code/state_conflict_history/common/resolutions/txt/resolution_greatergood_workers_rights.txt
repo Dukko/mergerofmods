@@ -90,7 +90,6 @@ resolution_greatergood_workers_rights = {
                 is_active_resolution = "resolution_greatergood_greater_than_ourselves"
                 is_active_resolution = "resolution_greatergood_balance_in_the_middle"
                 is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
-                is_active_resolution = "resolution_greatergood_6"
             }
         }
     }
@@ -98,11 +97,15 @@ resolution_greatergood_workers_rights = {
         weight = @resolution_weight_loved
         modifier = {
             factor = 2
+            is_egalitarian = yes
+        }
+        modifier = {
+            factor = 1.2
             is_socialism = yes
         }
         modifier = {
             factor = 2
-            has_ethic = ethic_fanatic_socialism
+            has_ethic = ethic_fanatic_egalitarian
         }
         modifier = {
             factor = 0.75
@@ -126,15 +129,19 @@ resolution_greatergood_workers_rights = {
         }
         modifier = {
             factor = 0.5
+            is_capitalism = yes
+        }
+        modifier = {
+            factor = 0.5
             has_ai_personality_behaviour = slaver
         }
         modifier = {
             factor = 0.5
-            is_megacorp = yes
+            is_auth_corporate = yes
         }
         modifier = {
-            factor = 0.5
-            is_capitalism = yes
+            factor = 1.2
+            has_ethic = ethic_fanatic_socialism
         }
         modifier = {
             factor = 3
@@ -153,11 +160,7 @@ resolution_greatergood_workers_rights = {
         }
         modifier = {
             factor = 0.8
-            OR = {
-                is_gestalt = yes
-                has_valid_civic = civic_aristocratic_elite
-                has_valid_civic = civic_police_state
-            }
+            is_gestalt = yes
         }
         modifier = {
             factor = 0.5
@@ -169,7 +172,6 @@ resolution_greatergood_workers_rights = {
                 is_civic_slaver_guilds = yes
                 is_origin_syncretic_livestock = yes
                 is_slaver = yes
-                has_ethic = ethic_fanatic_capitalism
             }
         }
     }

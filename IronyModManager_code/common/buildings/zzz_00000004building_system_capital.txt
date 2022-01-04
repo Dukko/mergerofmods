@@ -46,6 +46,15 @@ building_system_capital = {
     }
     triggered_planet_modifier = {
         potential = {
+            exists = branch_office_owner
+            branch_office_owner = {
+                is_constructors_megacorp = yes
+            }
+        }
+        planet_max_branch_office_buildings_add = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
             exists = owner
             owner = {
                 has_valid_civic = civic_spiritual_seekers

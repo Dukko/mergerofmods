@@ -1,0 +1,105 @@
+building_fiiral_defense_megalopolis = {
+    base_buildtime = 720
+    category = army
+    can_build = yes
+    can_demolish = yes
+    can_be_ruined = no
+    can_be_disabled = yes
+    position_priority = 150
+    planetary_ftl_inhibitor = yes
+    potential = {
+        exists = planet
+        planet = {
+            OR = {
+                is_planet_class = pc_fiiral_eperopolis_dry
+                is_planet_class = pc_fiiral_eperopolis_wet
+                is_planet_class = pc_fiiral_eperopolis_cold
+                is_planet_class = pc_fiiral_eperopolis_gaia
+                is_planet_class = pc_city
+                is_planet_class = pc_ringworld_habitable
+                is_planet_class = pc_shattered_ring_habitable
+            }
+        }
+    }
+    allow = {
+        exists = planet
+        NOT = {
+            check_variable = {
+                which = fiiral_megalopolis_number
+                value >= 2
+            }
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 1200
+        }
+        upkeep = {
+            energy = 10
+        }
+    }
+    planet_modifier = {
+        planet_orbital_bombardment_damage = -0.2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_soldier_add = 10
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_warrior_drone_add = 10
+        }
+    }
+    on_queued = {
+        planet = {
+            if = {
+                limit = {
+                    check_variable = {
+                        which = fiiral_megalopolis_number
+                        value = 0
+                    }
+                }
+                set_variable = {
+                    which = fiiral_megalopolis_number
+                    value = 1
+                }
+            }
+            else = {
+                change_variable = {
+                    which = fiiral_megalopolis_number
+                    value = 1
+                }
+            }
+        }
+    }
+    on_unqueued = {
+        planet = {
+            subtract_variable = {
+                which = fiiral_megalopolis_number
+                value = 1
+            }
+        }
+    }
+    on_destroy = {
+        planet = {
+            subtract_variable = {
+                which = fiiral_megalopolis_number
+                value = 1
+            }
+        }
+    }
+}

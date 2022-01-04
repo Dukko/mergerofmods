@@ -1,0 +1,87 @@
+building_phanon_embassy = {
+    base_buildtime = 1200
+    can_build = no
+    category = government
+    potential = {
+        exists = owner
+        owner = {
+            is_regular_empire = yes
+            has_technology = tech_phanon_embassy
+        }
+        planet = {
+            is_capital = yes
+        }
+        NOR = {
+            has_global_flag = aot_phanon_content_OFF
+            has_modifier = resort_colony
+            has_modifier = slave_colony
+        }
+    }
+    allow = {
+        has_phanon_capital = yes
+        buildings_simple_allow = yes
+    }
+    destroy_trigger = {
+        OR = {
+            AND = {
+                exists = owner
+                owner = {
+                    is_regular_empire = no
+                }
+            }
+            planet = {
+                is_capital = no
+            }
+        }
+    }
+    country_modifier = {
+        envoys_add = 16
+        diplo_weight_mult = 4
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            influence = 300
+            energy = 6000
+            minerals = 6000
+            aot_sr_runic_power = 1500
+        }
+        upkeep = {
+            aot_sr_runic_power = 30
+        }
+    }
+    prerequisites = {
+        "tech_phanon_embassy"
+    }
+    show_tech_unlock_if = {
+        is_regular_empire = yes
+    }
+    ai_weight = {
+        weight = 10
+        modifier = {
+            factor = 0
+            buildings_has_crystals = no
+        }
+        modifier = {
+            factor = 5
+            exists = owner
+            owner = {
+                is_galactic_community_member = yes
+            }
+        }
+        modifier = {
+            factor = 5
+            exists = owner
+            owner = {
+                has_federation = yes
+            }
+        }
+        modifier = {
+            factor = 3
+            exists = owner
+            owner = {
+                is_part_of_galactic_council = yes
+            }
+        }
+    }
+}

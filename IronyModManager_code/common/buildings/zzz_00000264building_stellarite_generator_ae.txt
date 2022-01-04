@@ -1,0 +1,125 @@
+building_stellarite_generator_ae = {
+    base_buildtime = 750
+    can_demolish = yes
+    can_build = no
+    category = manufacturing
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = tech_stellarite_generator_ae
+        }
+    }
+    allow = {
+        has_stellarite_capital = yes
+    }
+    upgrades = {
+        building_stellarite_generator_lvl3
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_aot_ae_stellaritedrone_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_aot_ae_stellariteman_add = 2
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            uses_district_set = sigma_habitat
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = building_stellarite_generator_ae_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            uses_district_set = sigma_habitat
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = building_stellarite_generator_ae_hive_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            uses_district_set = sigma_habitat
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = building_stellarite_generator_ae_effect_desc
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 850
+            energy = 850
+            acot_sr_dark_energy = 500
+            sr_dark_matter = 500
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    is_ai = yes
+                }
+            }
+            acot_sr_stellarite = 100
+            energy = 200
+        }
+        produces = {
+            trigger = {
+                has_building = building_stellarite_nexus
+            }
+            acot_sr_stellarite = 10
+        }
+        upkeep = {
+            energy = 20
+        }
+    }
+    prerequisites = {
+        "tech_stellarite_generator_ae"
+    }
+    ai_weight = {
+        weight = 150000
+        modifier = {
+            factor = 100000
+            owner = {
+                has_monthly_income = {
+                    resource = acot_sr_stellarite
+                    value <= 3
+                }
+            }
+        }
+        modifier = {
+            factor = 0.1
+            num_buildings = {
+                type = building_stellarite_generator
+                value >= 2
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                is_country_type = awakened_fallen_empire
+            }
+        }
+    }
+}

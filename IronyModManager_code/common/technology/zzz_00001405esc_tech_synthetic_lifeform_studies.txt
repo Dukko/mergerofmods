@@ -1,0 +1,112 @@
+esc_tech_synthetic_lifeform_studies = {
+    area = society
+    category = {
+        materials
+    }
+    tier = 5
+    cost = @tier5cost2
+    weight = @tier5weight2
+    prerequisites = {
+        "esc_tech_new_age_warfare"
+        "esc_tech_advanced_materials"
+    }
+    is_rare = yes
+    gateway = ESC_NANITE_COMPONENTS
+    prereqfor_desc = {
+        custom = {
+            title = "ESC_TECH_UNLOCK_NANITIES_TITLE"
+            desc = "ESC_TECH_UNLOCK_NANITIES_DESC"
+        }
+    }
+    potential = {
+    }
+    modifier = {
+        planet_building_build_speed_mult = 0.1
+        starbase_shipyard_build_speed_mult = 0.1
+        megastructure_build_speed_mult = 0.1
+        starbase_upgrade_speed_mult = 0.15
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 2
+            ESC_TRIGGER_may_research_cybernetic_amoeba = yes
+        }
+        modifier = {
+            factor = 1.15
+            OR = {
+                has_ethic = ethic_xenophile
+                has_ethic = ethic_fanatic_xenophile
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_maniacal"
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = @federation_perk_factor
+            has_federation = yes
+            federation = {
+                has_federation_perk = rare_tech_boost
+                any_member = {
+                    has_technology = esc_tech_synthetic_lifeform_studies
+                }
+            }
+        }
+    }
+    ai_weight = {
+        factor = @ESC_AI_tech_weight_multiplier
+        modifier = {
+            factor = 2
+            ESC_TRIGGER_may_research_cybernetic_amoeba = yes
+        }
+        modifier = {
+            factor = 1.15
+            OR = {
+                has_ethic = ethic_xenophile
+                has_ethic = ethic_fanatic_xenophile
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 1.5
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_maniacal"
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = @federation_perk_factor
+            has_federation = yes
+            federation = {
+                has_federation_perk = rare_tech_boost
+                any_member = {
+                    has_technology = esc_tech_synthetic_lifeform_studies
+                }
+            }
+        }
+    }
+}

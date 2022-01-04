@@ -15,7 +15,7 @@ building_corporate_vault = {
         }
     }
     allow = {
-        has_fully_upgraded_capital = yes
+        has_major_upgraded_capital = yes
     }
     destroy_trigger = {
         exists = owner

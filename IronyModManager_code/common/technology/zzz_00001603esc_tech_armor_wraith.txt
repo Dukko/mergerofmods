@@ -1,0 +1,56 @@
+esc_tech_armor_wraith = {
+    area = physics
+    category = {
+        particles
+    }
+    tier = 5
+    cost = @tier5cost2
+    weight = @tier5weight2
+    prerequisites = {
+    }
+    is_rare = yes
+    potential = {
+        NOT = {
+            has_global_flag = ESC_GLOBAL_FLAG_wraith_tech_forbidden
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = killed_wraith
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+    }
+    ai_weight = {
+        factor = @ESC_AI_tech_weight_multiplier
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = killed_wraith
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+    }
+}

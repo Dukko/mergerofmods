@@ -1,0 +1,9 @@
+opinion_stopped_plague = {
+    trigger = {
+        has_global_flag = mmc_plague_ended
+        has_country_flag = mmc_stopped_plague
+    }
+    opinion = {
+        base = 40
+    }
+}

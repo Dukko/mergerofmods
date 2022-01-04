@@ -1,0 +1,74 @@
+building_ae_institute = {
+    base_buildtime = 520
+    can_build = no
+    category = research
+    potential = {
+        exists = owner
+    }
+    allow = {
+        has_ascended_capital = yes
+    }
+    upgrades = {
+        building_stellarite_institute
+    }
+    resources = {
+        category = planet_buildings
+        produces = {
+            physics_research = 100
+            engineering_research = 100
+            society_research = 100
+            minor_artifacts = 2
+        }
+        cost = {
+            minerals = 100
+            sr_dark_matter = 2000
+            acot_sr_dark_energy = 2000
+        }
+        upkeep = {
+            sr_dark_matter = 40
+            acot_sr_dark_energy = 40
+        }
+    }
+    planet_modifier = {
+        planet_jobs_society_research_produces_mult = 0.5
+        planet_jobs_engineering_research_produces_mult = 0.5
+        planet_jobs_physics_research_produces_mult = 0.5
+    }
+    country_modifier = {
+        num_tech_alternatives_add = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_acot_researcher_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_acot_researcher_drone_add = 2
+        }
+    }
+    prerequisites = {
+        "tech_ae_institute"
+    }
+    show_tech_unlock_if = {
+    }
+    ai_weight = {
+        weight = 1000
+        modifier = {
+            factor = 0
+            free_jobs > 0
+        }
+    }
+}

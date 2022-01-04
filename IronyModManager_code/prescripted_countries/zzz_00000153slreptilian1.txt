@@ -1,0 +1,81 @@
+slreptilian1 = {
+    playable = has_utopia
+    ship_prefix = "GEO"
+    species = {
+        class = SLRPTLN
+        portrait = slreptilian
+        name = "Elder"
+        plural = "Elders"
+        adjective = "Shadow"
+        name_list = HUM2
+        trait = trait_intelligent
+        trait = trait_enduring
+        trait = trait_charismatic
+        trait = trait_slow_breeders
+        trait = trait_weak
+    }
+    secondary_species = {
+        class = HUM
+        portrait = human
+        name = PRESCRIPTED_species_name_humans1
+        plural = PRESCRIPTED_species_plural_humans1
+        adjective = PRESCRIPTED_species_adjective_humans1
+        name_list = HUMAN1
+        trait = trait_adaptive
+        trait = trait_nomadic
+        trait = trait_wasteful
+    }
+    name = "Global Earth Order"
+    adjective = PRESCRIPTED_adjective_humans1
+    authority = auth_oligarchic
+    government = gov_secretworld_order
+    advisor_voice_type = l_authoritarian
+    planet_name = NAME_Earth
+    planet_class = pc_continental
+    system_name = NAME_Sol
+    initializer = sol_system_initializer
+    graphical_culture = mammalian_01
+    city_graphical_culture = slreptilian_01
+    origin = origin_shadowy_evolution
+    empire_flag = {
+        icon = {
+            category = "human"
+            file = "flag_human_9.dds"
+        }
+        background = {
+            category = "backgrounds"
+            file = "00_solid.dds"
+        }
+        colors = {
+            "black"
+            "black"
+            "null"
+            "null"
+        }
+    }
+    flags = {
+        is_slreptilians
+        custom_start_screen
+    }
+    ruler = {
+        leader_class = ruler
+        gender = male
+        name = "Tetran"
+        portrait = slreptilian_male_02
+        texture = 6
+        clothes = 0
+        ruler_title = "Illuminated Master"
+        ruler_title_female = "Illuminated Mistress"
+    }
+    spawn_enabled = yes
+    spawn_as_fallen = no
+    ignore_portrait_duplication = no
+    room = slreptilian_room
+    ethic = ethic_authoritarian
+    ethic = ethic_xenophobe
+    ethic = ethic_materialist
+    civics = {
+        civic_shadow_council
+        civic_geneticists
+    }
+}

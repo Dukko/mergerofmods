@@ -1,6 +1,6 @@
 solar_panel_network = {
     icon = "GFX_solar_panel_network"
-    section = "REFINERY_STARBASE_SECTION"
+    section = "SCIENCE_STARBASE_SECTION"
     construction_days = 180
     initial = yes
     potential = {
@@ -43,7 +43,6 @@ solar_panel_network = {
                     is_active_resolution = "resolution_galacticstudies_advanced_xenostudies"
                     is_active_resolution = "resolution_galacticstudies_ethical_guideline_refactoring"
                     is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
-                    is_active_resolution = "resolution_galacticstudies_6"
                 }
             }
             energy = 6

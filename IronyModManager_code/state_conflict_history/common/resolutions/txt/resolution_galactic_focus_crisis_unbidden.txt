@@ -1,6 +1,5 @@
 @resolution_weight_normal = 6
 @resolution_cost_t1 = 100
-@resolution_flag_timer = 360
 resolution_galactic_focus_crisis_unbidden = {
     icon = "GFX_resolution_emergency_measure"
     resources = {
@@ -48,6 +47,8 @@ resolution_galactic_focus_crisis_unbidden = {
             has_global_flag = extradimensional_invasion_defeated
             has_global_flag = galactic_focus_crisis_unbidden
         }
+    }
+    allow = {
     }
     active = {
         NOT = {

@@ -1,0 +1,53 @@
+tech_ae_affluence_center = {
+    cost = @fallentechcost
+    area = engineering
+    tier = 7
+    category = {
+        materials
+    }
+    prerequisites = {
+        "tech_precursor_design"
+        "tech_dark_matter_power_core_ae"
+    }
+    weight = @tier5weight1
+    is_rare = yes
+    potential = {
+        NOR = {
+            has_global_flag = has_aot_mod
+            has_global_flag = acot_building_forbidden
+            has_global_flag = zofe_activated
+            is_country_type = fallen_empire
+        }
+    }
+    weight_modifier = {
+        factor = 2
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = 0
+            has_ae_capital_tech = no
+        }
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_building = building_affluence_center
+                }
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+}

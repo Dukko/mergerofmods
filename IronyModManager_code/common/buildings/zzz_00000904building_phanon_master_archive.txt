@@ -1,0 +1,75 @@
+building_phanon_master_archive = {
+    base_buildtime = 900
+    can_demolish = yes
+    can_build = no
+    category = research
+    prerequisites = {
+        "tech_phanon_master_archive"
+    }
+    potential = {
+        NOT = {
+            has_global_flag = aot_phanon_content_OFF
+        }
+        exists = owner
+        owner = {
+            has_technology = tech_phanon_master_archive
+        }
+    }
+    allow = {
+        has_phanon_capital = yes
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_phanon_researcher_add = 6
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+                is_fallen_empire = no
+            }
+        }
+        modifier = {
+            job_phanon_researcher_drone_add = 8
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 5000
+            minerals = 5000
+            aot_sr_runic_power = 1500
+        }
+        produces = {
+            physics_research = 1000
+            society_research = 1000
+            engineering_research = 1000
+        }
+        upkeep = {
+            energy = 500
+            aot_sr_runic_power = 60
+        }
+    }
+    upgrades = {
+    }
+    ai_weight = {
+        weight = 100
+    }
+    ai_resource_production = {
+        physics_research = 500
+        society_research = 500
+        engineering_research = 500
+        trigger = {
+            always = yes
+        }
+    }
+}

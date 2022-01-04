@@ -1,0 +1,41 @@
+tech_stellarite_nano_forge = {
+    cost = @acot_tier8cost3
+    area = engineering
+    tier = 8
+    category = {
+        materials
+    }
+    prerequisites = {
+        "tech_aot_ae_nano_forge"
+    }
+    weight = @tier5weight1
+    is_rare = yes
+    potential = {
+        NOR = {
+            has_global_flag = acot_building_forbidden
+            is_fallen_empire = yes
+        }
+        has_technology = tech_stellarite_reactor
+        has_technology = tech_aot_ae_nano_forge
+        has_country_flag = finished_dm_production_core_chain
+    }
+    weight_modifier = {
+        factor = 2
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+}

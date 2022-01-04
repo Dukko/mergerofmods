@@ -1,0 +1,27 @@
+building_giga_planetary_shield_generator_1 = {
+    base_buildtime = @b4_time
+    base_cap_amount = 1
+    allow = {
+        has_upgraded_capital = yes
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b3_minerals
+            exotic_gases = 20
+        }
+        upkeep = {
+            energy = @b3_upkeep
+            exotic_gases = 1
+        }
+    }
+    upgrades = {
+        building_giga_planetary_shield_generator_2
+    }
+    planet_modifier = {
+        planet_orbital_bombardment_damage = -0.6
+    }
+    prerequisites = {
+        "tech_giga_planetary_shield_generator_1"
+    }
+}

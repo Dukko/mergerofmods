@@ -1,0 +1,55 @@
+ald_corpmanager = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_corporate_vault
+    icon = manager
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible_precalc = can_fill_specialist_job
+    planet_modifier = {
+        trade_value_add = 30
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_trait = trait_thrifty
+        }
+        modifier = {
+            trade_value_add = 7.5
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            has_trait = trait_nuumismatic_administration
+        }
+        modifier = {
+            trade_value_add = 7.5
+        }
+    }
+    resources = {
+        category = planet_managers
+        produces = {
+            unity = 30
+            society_research = 20
+        }
+        upkeep = {
+            consumer_goods = 20
+        }
+    }
+    weight = {
+        weight = @specialist_job_weight
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+            NOT = {
+                has_trait = trait_mechanical
+            }
+        }
+        modifier = {
+            factor = 1.5
+            always = yes
+        }
+    }
+}

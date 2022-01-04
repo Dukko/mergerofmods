@@ -1,0 +1,40 @@
+@terraforming_cost_level_4 = 15000
+@terraforming_duration_level_4 = 7200
+terraform_link = {
+    from = pc_pdshroud
+    to = pc_machine
+    resources = {
+        category = terraforming
+        cost = {
+            energy = @terraforming_cost_level_4
+        }
+    }
+    duration = @terraforming_duration_level_4
+    condition = {
+        has_ascension_perk = ap_machine_worlds
+    }
+    potential = {
+        has_ascension_perk = ap_machine_worlds
+    }
+    ai_weight = {
+        weight = 1
+        modifier = {
+            factor = 0
+            NOT = {
+                has_origin = origin_pd_shroud
+            }
+        }
+        modifier = {
+            factor = 0
+            resource_stockpile_compare = {
+                resource = sr_zro
+                value < 500
+            }
+        }
+    }
+    effect = {
+        from = {
+            remove_modifier = ammonia
+        }
+    }
+}

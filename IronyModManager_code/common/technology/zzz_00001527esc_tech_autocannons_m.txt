@@ -1,0 +1,58 @@
+esc_tech_autocannons_m = {
+    area = engineering
+    category = {
+        propulsion
+    }
+    tier = 5
+    cost = @tier5cost1
+    weight = @tier5weight1
+    prerequisites = {
+        "esc_tech_autocannon_4"
+    }
+    gateway = ESC_BIG_AUTOCANNONS
+    potential = {
+        NOT = {
+            has_global_flag = ESC_GLOBAL_FLAG_big_autocannons_forbidden
+        }
+    }
+    prereqfor_desc = {
+        hide_prereq_for_desc = component
+        custom = {
+            title = "ESC_TECH_UNLOCK_M_AUTOCANNONS_TITLE"
+            desc = "ESC_TECH_UNLOCK_M_AUTOCANNONS_DESC"
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_propulsion"
+            }
+        }
+        modifier = {
+            factor = 2
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_maniacal"
+            }
+        }
+    }
+    ai_weight = {
+        factor = @ESC_AI_tech_weight_multiplier
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_propulsion"
+            }
+        }
+        modifier = {
+            factor = 2
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_maniacal"
+            }
+        }
+    }
+}

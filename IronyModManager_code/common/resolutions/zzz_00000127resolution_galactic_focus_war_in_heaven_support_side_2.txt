@@ -1,0 +1,105 @@
+@resolution_weight_normal = 6
+@resolution_cost_t1 = 100
+resolution_galactic_focus_war_in_heaven_support_side_2 = {
+    icon = "GFX_resolution_emergency_measure"
+    resources = {
+        category = resolutions
+        cost = {
+            influence = @resolution_cost_t1
+        }
+    }
+    target = no
+    modifier = {
+    }
+    effect = {
+        hidden_effect = {
+            add_modifier = {
+                modifier = resolution_passed_diplomatic_weight
+                days = 2200
+            }
+        }
+        custom_tooltip = resolution_galactic_focus_war_in_heaven_support_side_2_success
+        hidden_effect = {
+            set_global_flag = galactic_focus_war_in_heaven
+            set_global_flag = galactic_community_resolution_passed
+            if = {
+                limit = {
+                    event_target:SecondSleeper = {
+                        is_xenophile = yes
+                    }
+                }
+                set_timed_country_flag = {
+                    flag = faction_xenophile_outraged_gc
+                    days = 7200
+                }
+            }
+            if = {
+                limit = {
+                    event_target:SecondSleeper = {
+                        is_xenophobe = yes
+                    }
+                }
+                set_timed_country_flag = {
+                    flag = faction_xenophobe_supremacist_outraged_gc
+                    days = 7200
+                }
+            }
+            if = {
+                limit = {
+                    event_target:SecondSleeper = {
+                        is_materialist = yes
+                    }
+                }
+                set_timed_country_flag = {
+                    flag = faction_materialist_outraged_gc
+                    days = 7200
+                }
+            }
+            if = {
+                limit = {
+                    event_target:SecondSleeper = {
+                        is_spiritualist = yes
+                    }
+                }
+                set_timed_country_flag = {
+                    flag = faction_spiritualist_outraged_gc
+                    days = 7200
+                }
+            }
+        }
+    }
+    potential = {
+        has_global_flag = war_in_heaven_ongoing
+        has_galactic_emperor = no
+        NOT = {
+            has_global_flag = galactic_focus_war_in_heaven
+        }
+        exists = event_target:FirstSleeper
+    }
+    allow = {
+    }
+    active = {
+        has_global_flag = war_in_heaven_ongoing
+        exists = event_target:FirstSleeper
+        exists = event_target:SecondSleeper
+    }
+    breach = {
+        NAND = {
+            exists = overlord
+            has_overlord = event_target:SecondSleeper
+        }
+    }
+    ai_weight = {
+        base = @resolution_weight_normal
+        modifier = {
+            factor = 0
+            exists = overlord
+            has_overlord = event_target:FirstSleeper
+        }
+        modifier = {
+            factor = 2
+            exists = overlord
+            has_overlord = event_target:SecondSleeper
+        }
+    }
+}

@@ -13,7 +13,7 @@ utility_component_template = {
         }
     }
     modifier = {
-        ship_base_speed_mult = 0.45
+        ship_base_speed_mult = 0.75
         ship_evasion_add = 12
     }
     prerequisites = {
@@ -26,7 +26,7 @@ utility_component_template = {
         pirate_destroyer
         marauder_destroyer
     }
-    upgrades_to = "DESTROYER_SHIP_THRUSTER_5"
+    upgrades_to = "DESTROYER_ESC_THRUSTERS_5"
     ai_weight = {
         weight = 4
     }

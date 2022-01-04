@@ -1,0 +1,112 @@
+@apsr2part5cost_minerals = 10000
+@apsr2part5cost_time = 2000
+@apsr2part5upkeep_energy = 30
+@apsr2part5upkeep_minerals = 0
+@apsr2part5upkeep_fake = 5
+@apsr2part5job = 25
+@apsr2part5geojob = 7
+apsr2_building_part5 = {
+    base_buildtime = @apsr2part5cost_time
+    icon = "apsr2_building_part5"
+    is_capped_by_modifier = no
+    category = resource
+    can_build = no
+    can_demolish = no
+    position_priority = 49
+    allow = {
+        has_major_upgraded_capital = yes
+    }
+    potential = {
+        has_modifier = "apsr2_planet_modifier"
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+                has_technology = tech_apsr2_building_part5
+            }
+        }
+        modifier = {
+            job_apsr2_miner_hive_add = @apsr2part5job
+            job_apsr2_geologist_hive_add = @apsr2part5geojob
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+                has_technology = tech_apsr2_building_part5
+            }
+        }
+        modifier = {
+            job_apsr2_miner_machine_add = @apsr2part5job
+            job_apsr2_geologist_machine_add = @apsr2part5geojob
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                has_technology = tech_apsr2_building_part5
+            }
+        }
+        modifier = {
+            job_apsr2_miner_normal_add = @apsr2part5job
+            job_apsr2_geologist_normal_add = @apsr2part5geojob
+        }
+    }
+    resources = {
+        category = planet_apsr_buildings
+        cost = {
+            minerals = @apsr2part5cost_minerals
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr2_building_part5
+                }
+            }
+            energy = @apsr2part5upkeep_energy
+            minerals = @apsr2part5upkeep_minerals
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    NOT = {
+                        has_technology = tech_apsr2_building_part5
+                    }
+                }
+            }
+            energy = @apsr2part5upkeep_fake
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr2_building_part5
+                }
+            }
+            apsr_knowledge = 3
+        }
+    }
+    prerequisites = {
+        "tech_apsr2_building_part5"
+    }
+    show_tech_unlock_if = {
+        always = no
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                NOT = {
+                    has_technology = tech_apsr2_building_part5
+                }
+            }
+        }
+        text = apsr_building_fake_desc
+    }
+}

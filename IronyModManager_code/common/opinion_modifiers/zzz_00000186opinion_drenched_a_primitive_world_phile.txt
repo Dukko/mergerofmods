@@ -1,0 +1,10 @@
+opinion_drenched_a_primitive_world_phile = {
+    opinion = {
+        base = -60
+    }
+    accumulative = yes
+    min = -300
+    decay = {
+        base = 1
+    }
+}

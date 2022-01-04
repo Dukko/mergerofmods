@@ -1,0 +1,54 @@
+building_ae_nano_forge = {
+    base_buildtime = 600
+    can_demolish = yes
+    can_build = no
+    category = manufacturing
+    prerequisites = {
+        "tech_aot_ae_nano_forge"
+    }
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = tech_aot_ae_nano_forge
+        }
+    }
+    allow = {
+        has_ascended_capital = yes
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 100
+            sr_dark_matter = 1000
+            acot_sr_dark_energy = 1000
+        }
+        produces = {
+            alloys = 100
+        }
+        upkeep = {
+            acot_sr_dark_energy = 30
+            sr_dark_matter = 30
+        }
+    }
+    upgrades = {
+        building_stellarite_nano_forge
+    }
+    ai_weight = {
+        weight = 10
+        modifier = {
+            factor = 5
+            owner = {
+                has_monthly_income = {
+                    resource = alloys
+                    value < 30
+                }
+            }
+        }
+    }
+    ai_resource_production = {
+        alloys = 100
+        trigger = {
+            always = yes
+        }
+    }
+}

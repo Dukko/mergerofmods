@@ -1,0 +1,84 @@
+building_giga_fortress_array = {
+    base_buildtime = 1200
+    add_to_first_building_slot = yes
+    can_be_ruined = no
+    can_be_disabled = no
+    can_demolish = no
+    can_build = no
+    planetary_ftl_inhibitor = yes
+    category = army
+    position_priority = 100
+    potential = {
+        owner = {
+            has_technology = tech_giga_fortress
+        }
+    }
+    upgrades = {
+        building_stellarite_giga_fortress_array
+    }
+    allow = {
+        has_ascended_capital = yes
+    }
+    planet_modifier = {
+        planet_amenities_add = 20
+        planet_housing_add = 20
+        planet_stability_add = 50
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        job_acot_giga_fortress_operator_add = 3
+        job_acot_giga_fortress_operator_mentat_add = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        job_acot_giga_fortress_operator_drone_add = 3
+        job_aot_ae_giga_fortress_operator_mentat_drone_add = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_fallen_empire = yes
+            }
+        }
+        job_acot_giga_fortress_operator_ancient_add = 3
+    }
+    army_modifier = {
+        army_defense_morale_mult = 10
+        army_defense_health_mult = 5
+        army_defense_damage_mult = 5
+    }
+    country_modifier = {
+        country_naval_cap_add = 200
+        starbase_shipyard_build_speed_mult = 0.1
+    }
+    resources = {
+        category = planet_buildings
+        produces = {
+            unity = 50
+            influence = 1
+            food = 50
+        }
+        cost = {
+            minerals = 15000
+            sr_dark_matter = 250
+            acot_sr_dark_energy = 250
+        }
+    }
+    prerequisites = {
+        "tech_giga_fortress"
+    }
+    ai_weight = {
+        weight = 150000
+    }
+}

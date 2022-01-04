@@ -1,0 +1,231 @@
+action_invite_to_federation = {
+    icon = "GFX_diplomacy_status_federation"
+    requires_actor_peace = yes
+    requires_recipient_peace = yes
+    requires_alliance_vote = yes
+    diplo_view_acceptance_icon = yes
+    should_notify_all_communications = yes
+    AI_acceptance_base_value = -50
+    action_type = positive
+    should_show_auto_accept_message_recipient = yes
+    should_open_auto_accept_message_recipient = yes
+    should_notify_auto_recipient_on_vote_fail = yes
+    requires_recipient_independence = no
+    potential = {
+        hidden_trigger = {
+            is_fallen_machine_empire = no
+            from = {
+                is_fallen_machine_empire = no
+            }
+        }
+        NOT = {
+            root = {
+                has_federation = yes
+                federation = {
+                    has_federation_type = vf_ef_federation
+                }
+            }
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "ACTION_RECIPIENT_NOT_YOURS"
+            FROM = {
+                NOT = {
+                    AND = {
+                        is_subject = yes
+                        NOT = {
+                            has_overlord = root
+                        }
+                    }
+                }
+            }
+        }
+        if = {
+            limit = {
+                has_federation = no
+                is_country_type = default
+            }
+            custom_tooltip = {
+                fail_text = requires_tradition_the_federation
+                has_tradition = tr_diplomacy_the_federation
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_recipient_not_shadow_state"
+            from = {
+                NOT = {
+                    has_valid_civic = civic_shadow_state
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_actor_not_shadow_state"
+            NOT = {
+                has_valid_civic = civic_shadow_state
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_actor_not_fanatic_purifiers"
+            OR = {
+                is_same_species = from
+                NOT = {
+                    has_valid_civic = civic_fanatic_purifiers
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_recipient_not_fanatic_purifiers"
+            OR = {
+                is_same_species = from
+                from = {
+                    NOT = {
+                        has_valid_civic = civic_fanatic_purifiers
+                    }
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_actor_not_devouring_swarm"
+            OR = {
+                from = {
+                    has_valid_civic = civic_hive_devouring_swarm
+                }
+                NOT = {
+                    has_valid_civic = civic_hive_devouring_swarm
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_recipient_not_devouring_swarm"
+            OR = {
+                from = {
+                    NOT = {
+                        has_valid_civic = civic_hive_devouring_swarm
+                    }
+                }
+                has_valid_civic = civic_hive_devouring_swarm
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_actor_not_machine_terminator"
+            OR = {
+                is_same_species = from
+                NOT = {
+                    has_civic = civic_machine_terminator
+                }
+                AND = {
+                    has_civic = civic_machine_terminator
+                    from = {
+                        OR = {
+                            has_country_flag = synthetic_empire
+                            has_authority = auth_machine_intelligence
+                        }
+                    }
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_recipient_not_machine_terminator"
+            OR = {
+                is_same_species = from
+                from = {
+                    NOT = {
+                        has_civic = civic_machine_terminator
+                    }
+                }
+                AND = {
+                    from = {
+                        has_civic = civic_machine_terminator
+                    }
+                    OR = {
+                        has_country_flag = synthetic_empire
+                        has_authority = auth_machine_intelligence
+                    }
+                }
+            }
+        }
+        if = {
+            limit = {
+                from = {
+                    has_valid_civic = civic_inwards_perfection
+                }
+            }
+            if = {
+                limit = {
+                    has_intel = {
+                        who = from
+                        intel = civics
+                    }
+                }
+                custom_tooltip = {
+                    fail_text = requires_recipient_not_inward_perfection
+                    always = no
+                }
+            }
+            else = {
+                custom_tooltip = {
+                    fail_text = diplo_action_no_low_intel
+                    always = no
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_actor_not_inward_perfection"
+            NOT = {
+                has_valid_civic = civic_inwards_perfection
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_excellent_or_better_opinion"
+            OR = {
+                from = {
+                    is_same_value = prevprev
+                }
+                opinion_level = {
+                    who = from
+                    level >= excellent
+                }
+                is_improving_relations_with = from
+            }
+        }
+        if = {
+            limit = {
+                from = {
+                    is_purists_empire = yes
+                }
+            }
+            if = {
+                limit = {
+                    has_intel = {
+                        who = from
+                        intel = civics
+                    }
+                }
+                custom_tooltip = {
+                    fail_text = requires_recipient_not_pompous
+                    always = no
+                }
+            }
+            else = {
+                custom_tooltip = {
+                    fail_text = diplo_action_no_low_intel
+                    always = no
+                }
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_actor_recipient_not_in_galactic_empire"
+            NAND = {
+                has_galactic_emperor = yes
+                OR = {
+                    is_galactic_community_member = yes
+                    from = {
+                        is_galactic_community_member = yes
+                    }
+                }
+            }
+        }
+        get_border_test = yes
+    }
+}

@@ -1,0 +1,42 @@
+tech_stellarite_control_center = {
+    cost = @acot_tier8cost3
+    area = society
+    tier = 8
+    category = {
+        statecraft
+    }
+    prerequisites = {
+        "tech_stellarite_reactor"
+        "tech_ae_ancient_control_center"
+    }
+    weight = 100000
+    gateway = capital
+    potential = {
+        is_machine_empire = yes
+        NOR = {
+            has_global_flag = acot_building_forbidden
+            is_fallen_empire = yes
+        }
+        has_technology = tech_stellarite_reactor
+    }
+    weight_modifier = {
+        factor = 4
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 10
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+}

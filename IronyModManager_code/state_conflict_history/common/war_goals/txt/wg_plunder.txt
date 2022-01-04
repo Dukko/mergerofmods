@@ -2,6 +2,8 @@ wg_plunder = {
     casus_belli = cb_despoliation
     hide_if_no_cb = no
     total_war = no
+    cede_claims = no
+    set_defender_wargoal = wg_stop_raiding
     galactic_empire_joins_defender = {
         from = {
             is_galactic_emperor = yes
@@ -69,53 +71,9 @@ wg_plunder = {
     on_accept = {
         custom_tooltip = wg_plunder_accept_them
         add_resource = {
-            energy = 10
-            minerals = 10
-            alloys = 10
-            consumer_goods = 10
-            mult = from.trigger:num_pops
-        }
-        if = {
-            limit = {
-                from = {
-                    OR = {
-                        has_technology = tech_mine_volatile_motes
-                        has_technology = tech_volatile_motes
-                    }
-                }
-            }
-            add_resource = {
-                volatile_motes = 1
-                mult = from.trigger:num_pops
-            }
-        }
-        if = {
-            limit = {
-                from = {
-                    OR = {
-                        has_technology = tech_mine_exotic_gases
-                        has_technology = tech_exotic_gases
-                    }
-                }
-            }
-            add_resource = {
-                exotic_gases = 1
-                mult = from.trigger:num_pops
-            }
-        }
-        if = {
-            limit = {
-                from = {
-                    OR = {
-                        has_technology = tech_mine_rare_crystals
-                        has_technology = tech_rare_crystals
-                    }
-                }
-            }
-            add_resource = {
-                rare_crystals = 1
-                mult = from.trigger:num_pops
-            }
+            energy = 250
+            minerals = 250
+            mult = from.trigger:num_owned_planets
         }
         hidden_effect = {
             from = {
@@ -141,15 +99,7 @@ wg_plunder = {
                 prev = {
                     remove_war_participant = prev
                 }
-                }
             }
-        }
-    on_status_quo = {
-        add_resource = {
-            energy = 500
-            minerals = 500
-            alloys = 500
-            consumer_goods = 500
         }
     }
     ai_weight = {

@@ -1,8 +1,7 @@
 building_empyrean_shrine = {
-    base_buildtime = @b2_time
+    base_buildtime = 480
     can_build = no
     can_demolish = yes
-    icon = building_citadel_of_faith
     potential = {
         exists = owner
     }
@@ -42,7 +41,6 @@ building_empyrean_shrine = {
             unity = 25
         }
         upkeep = {
-            energy = 10
         }
     }
     upgrades = {

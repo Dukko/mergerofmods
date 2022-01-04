@@ -1,0 +1,50 @@
+tech_phanon_power_hub = {
+    cost = @acot_tier10cost1
+    area = physics
+    tier = 9
+    category = {
+        field_manipulation
+    }
+    prerequisites = {
+        tech_stellarite_power_hub
+        tech_civil_phanon_application
+    }
+    weight = @tier5weight1
+    potential = {
+        NOR = {
+            has_global_flag = aot_phanon_content_OFF
+            is_fallen_empire = yes
+        }
+        has_technology = tech_civil_phanon_application
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOR = {
+                has_technology = tech_mine_exotic_gases
+                has_technology = tech_exotic_gases
+                has_country_flag = has_market_access
+            }
+        }
+        modifier = {
+            factor = 2
+            has_tradition = tr_prosperity_adopt
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_field_manipulation"
+            }
+        }
+    }
+}

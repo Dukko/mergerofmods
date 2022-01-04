@@ -1,0 +1,147 @@
+namespace = utopia
+namespace = mega
+namespace = feda
+namespace = akx
+country_event = {
+    id = utopia.4002
+    title = utopia.4002.name
+    desc = {
+        text = "utopia.4002.desc.a"
+        trigger = {
+            from = {
+                has_country_flag = started_first_dyson_sphere
+                NOT = {
+                    has_country_flag = started_first_dyson_sphere_2
+                }
+            }
+        }
+    }
+    desc = {
+        text = "utopia.4002.desc.b"
+        trigger = {
+            from = {
+                has_country_flag = started_first_dyson_sphere_2
+            }
+        }
+    }
+    picture = GFX_evt_dyson_sphere
+    show_sound = event_mega_structure_other_empire_build_start
+    location = event_target:dyson_system
+    is_triggered_only = yes
+    option = {
+        name = "utopia.4002.a"
+        trigger = {
+            any_owned_megastructure = {
+                OR = {
+                    is_megastructure_type = dyson_sphere_0
+                    is_megastructure_type = dyson_sphere_0_a_star
+                    is_megastructure_type = dyson_sphere_0_b_star
+                    is_megastructure_type = dyson_sphere_0_f_star
+                    is_megastructure_type = dyson_sphere_0_g_star
+                    is_megastructure_type = dyson_sphere_0_k_star
+                    is_megastructure_type = dyson_sphere_0_m_giant_star
+                    is_megastructure_type = dyson_sphere_0_m_star
+                    is_megastructure_type = dyson_sphere_1
+                    is_megastructure_type = dyson_sphere_1_a_star
+                    is_megastructure_type = dyson_sphere_1_b_star
+                    is_megastructure_type = dyson_sphere_1_f_star
+                    is_megastructure_type = dyson_sphere_1_g_star
+                    is_megastructure_type = dyson_sphere_1_k_star
+                    is_megastructure_type = dyson_sphere_1_m_giant_star
+                    is_megastructure_type = dyson_sphere_1_m_star
+                    is_megastructure_type = dyson_sphere_2
+                    is_megastructure_type = dyson_sphere_2_a_star
+                    is_megastructure_type = dyson_sphere_2_b_star
+                    is_megastructure_type = dyson_sphere_2_f_star
+                    is_megastructure_type = dyson_sphere_2_g_star
+                    is_megastructure_type = dyson_sphere_2_k_star
+                    is_megastructure_type = dyson_sphere_2_m_giant_star
+                    is_megastructure_type = dyson_sphere_2_m_star
+                    is_megastructure_type = dyson_sphere_3
+                    is_megastructure_type = dyson_sphere_3_a_star
+                    is_megastructure_type = dyson_sphere_3_b_star
+                    is_megastructure_type = dyson_sphere_3_f_star
+                    is_megastructure_type = dyson_sphere_3_g_star
+                    is_megastructure_type = dyson_sphere_3_k_star
+                    is_megastructure_type = dyson_sphere_3_m_giant_star
+                    is_megastructure_type = dyson_sphere_3_m_star
+                    is_megastructure_type = dyson_sphere_4
+                    is_megastructure_type = dyson_sphere_4_a_star
+                    is_megastructure_type = dyson_sphere_4_b_star
+                    is_megastructure_type = dyson_sphere_4_f_star
+                    is_megastructure_type = dyson_sphere_4_g_star
+                    is_megastructure_type = dyson_sphere_4_k_star
+                    is_megastructure_type = dyson_sphere_4_m_giant_star
+                    is_megastructure_type = dyson_sphere_4_m_star
+                    is_megastructure_type = dyson_sphere_5
+                    is_megastructure_type = dyson_sphere_5_a_star
+                    is_megastructure_type = dyson_sphere_5_b_star
+                    is_megastructure_type = dyson_sphere_5_f_star
+                    is_megastructure_type = dyson_sphere_5_g_star
+                    is_megastructure_type = dyson_sphere_5_k_star
+                    is_megastructure_type = dyson_sphere_5_m_giant_star
+                    is_megastructure_type = dyson_sphere_5_m_star
+                }
+            }
+        }
+    }
+    option = {
+        name = "utopia.4002.b"
+        trigger = {
+            NOT = {
+                any_owned_megastructure = {
+                    OR = {
+                        is_megastructure_type = dyson_sphere_0
+                        is_megastructure_type = dyson_sphere_0_a_star
+                        is_megastructure_type = dyson_sphere_0_b_star
+                        is_megastructure_type = dyson_sphere_0_f_star
+                        is_megastructure_type = dyson_sphere_0_g_star
+                        is_megastructure_type = dyson_sphere_0_k_star
+                        is_megastructure_type = dyson_sphere_0_m_giant_star
+                        is_megastructure_type = dyson_sphere_0_m_star
+                        is_megastructure_type = dyson_sphere_1
+                        is_megastructure_type = dyson_sphere_1_a_star
+                        is_megastructure_type = dyson_sphere_1_b_star
+                        is_megastructure_type = dyson_sphere_1_f_star
+                        is_megastructure_type = dyson_sphere_1_g_star
+                        is_megastructure_type = dyson_sphere_1_k_star
+                        is_megastructure_type = dyson_sphere_1_m_giant_star
+                        is_megastructure_type = dyson_sphere_1_m_star
+                        is_megastructure_type = dyson_sphere_2
+                        is_megastructure_type = dyson_sphere_2_a_star
+                        is_megastructure_type = dyson_sphere_2_b_star
+                        is_megastructure_type = dyson_sphere_2_f_star
+                        is_megastructure_type = dyson_sphere_2_g_star
+                        is_megastructure_type = dyson_sphere_2_k_star
+                        is_megastructure_type = dyson_sphere_2_m_giant_star
+                        is_megastructure_type = dyson_sphere_2_m_star
+                        is_megastructure_type = dyson_sphere_3
+                        is_megastructure_type = dyson_sphere_3_a_star
+                        is_megastructure_type = dyson_sphere_3_b_star
+                        is_megastructure_type = dyson_sphere_3_f_star
+                        is_megastructure_type = dyson_sphere_3_g_star
+                        is_megastructure_type = dyson_sphere_3_k_star
+                        is_megastructure_type = dyson_sphere_3_m_giant_star
+                        is_megastructure_type = dyson_sphere_3_m_star
+                        is_megastructure_type = dyson_sphere_4
+                        is_megastructure_type = dyson_sphere_4_a_star
+                        is_megastructure_type = dyson_sphere_4_b_star
+                        is_megastructure_type = dyson_sphere_4_f_star
+                        is_megastructure_type = dyson_sphere_4_g_star
+                        is_megastructure_type = dyson_sphere_4_k_star
+                        is_megastructure_type = dyson_sphere_4_m_giant_star
+                        is_megastructure_type = dyson_sphere_4_m_star
+                        is_megastructure_type = dyson_sphere_5
+                        is_megastructure_type = dyson_sphere_5_a_star
+                        is_megastructure_type = dyson_sphere_5_b_star
+                        is_megastructure_type = dyson_sphere_5_f_star
+                        is_megastructure_type = dyson_sphere_5_g_star
+                        is_megastructure_type = dyson_sphere_5_k_star
+                        is_megastructure_type = dyson_sphere_5_m_giant_star
+                        is_megastructure_type = dyson_sphere_5_m_star
+                    }
+                }
+            }
+        }
+    }
+}

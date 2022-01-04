@@ -1,0 +1,100 @@
+@apsr14cost3 = 50000
+@apsr14weight3 = 1
+tech_apsr14_building_part_b3 = {
+    cost = @apsr14cost3
+    area = society
+    tier = 5
+    category = {
+        biology
+    }
+    prerequisites = {
+        "tech_apsr14_building_part_b2"
+    }
+    weight = @apsr14weight3
+    is_rare = yes
+    is_dangerous = yes
+    prereqfor_desc = {
+        custom = {
+            title = "TECH_APSR14_PART3B_TITLE"
+            desc = "TECH_APSR14_PART3B_DESC"
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_deposit = apsr14_deposit
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            AND = {
+                years_passed < 200
+                num_owned_planets < 15
+                num_pops < 700
+                num_rare_techs < 25
+            }
+        }
+        modifier = {
+            factor = 2
+            AND = {
+                years_passed > 200
+                num_owned_planets > 15
+            }
+        }
+        modifier = {
+            factor = 2
+            AND = {
+                years_passed > 200
+                num_pops > 700
+            }
+        }
+        modifier = {
+            factor = 2
+            AND = {
+                years_passed > 200
+                num_rare_techs > 25
+            }
+        }
+        modifier = {
+            factor = 10
+            has_resource = {
+                type = apsr_knowledge
+                amount >= 500
+            }
+        }
+        modifier = {
+            factor = 0
+            has_authority = auth_machine_intelligence
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_maniacal"
+            }
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+                research_leader = {
+                    area = society
+                    has_trait = "leader_trait_curator"
+                }
+                research_leader = {
+                    area = society
+                    has_trait = "leader_trait_spark_of_genius"
+                }
+            }
+        }
+        modifier = {
+            factor = 5
+            has_origin = apsr_origin_unique_capital
+        }
+    }
+    ai_weight = {
+        factor = 150
+    }
+}

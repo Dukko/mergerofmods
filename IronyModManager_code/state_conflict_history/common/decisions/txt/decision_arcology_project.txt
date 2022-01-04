@@ -14,6 +14,8 @@ decision_arcology_project = {
             is_planet_class = pc_pdshroud
             is_planet_class = pc_city
             is_planet_class = pc_relic
+            is_planet_class = pc_apsr_ancient
+            is_planet_class = pc_apsr_unique
             is_planet_class = pc_milarc_relic
             is_planet_class = pc_ecocity
             is_planet_class = pc_corpoarc
@@ -50,9 +52,15 @@ decision_arcology_project = {
         custom_tooltip = {
             fail_text = decision_arcology_project_requirements
             free_district_slots < 1
-            num_districts = {
-                type = district_farming
-                value < 1
+            OR = {
+                num_districts = {
+                    type = district_farming
+                    value < 1
+                }
+                num_districts = {
+                    type = district_farming_uncapped
+                    value < 1
+                }
             }
             num_districts = {
                 type = district_mining
@@ -72,16 +80,6 @@ decision_arcology_project = {
             set_industrial_focus_flags = yes
             remove_modifier = industrialized_planet
             remove_modifier = urban_idyll_colony
-            change_pc = pc_city
-            relic_world_conversion_effect = {
-                DISTRICT = district_arcology_housing
-                VARIABLE = num_housing_districts
-            }
-            relic_world_conversion_effect = {
-                DISTRICT = district_arcology_arms_industry
-                VARIABLE = num_industrial_districts
-            }
-            set_ecu_industrial_districts_effect = yes
             change_pc = pc_city
             IF = {
                 limit = {
@@ -232,13 +230,17 @@ decision_arcology_project = {
         }
     }
     ai_weight = {
-        weight = 10
+        weight = 100
         modifier = {
             factor = 0
+            exists = owner
             owner = {
-                any_owned_planet = {
-                    is_planet_class = pc_city
-                }
+                is_ai = yes
+            }
+            NAND = {
+                has_planet_flag = str_designated_alloy_guaranteed
+                has_designation = col_foundry
+                num_pops > 20
             }
         }
     }

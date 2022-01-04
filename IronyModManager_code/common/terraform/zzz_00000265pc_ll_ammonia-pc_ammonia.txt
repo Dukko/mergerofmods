@@ -1,0 +1,32 @@
+@terraforming_cost_ll = 5000
+@terraforming_duration_level_2 = 3600
+terraform_link = {
+    from = pc_ll_ammonia
+    to = pc_ammonia
+    resources = {
+        category = terraforming
+        cost = {
+            energy = @terraforming_cost_ll
+        }
+    }
+    duration = @terraforming_duration_level_2
+    condition = {
+        has_technology = tech_climate_restoration
+    }
+    potential = {
+        has_technology = tech_climate_restoration
+        has_global_flag = planetarydiversityexotics
+    }
+    effect = {
+        from = {
+            remove_modifier = lifeless_ammonia
+            add_modifier = {
+                modifier = ammonia
+                days = -1
+            }
+        }
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

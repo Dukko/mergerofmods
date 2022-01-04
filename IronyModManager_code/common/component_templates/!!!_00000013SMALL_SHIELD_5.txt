@@ -1,0 +1,38 @@
+utility_component_template = {
+    key = "SMALL_SHIELD_5"
+    size = small
+    icon = "GFX_ship_part_shield_5"
+    icon_frame = 1
+    power = @power_S5
+    resources = {
+        category = ship_components
+        cost = {
+            alloys = @shield_s_t5_cost
+            exotic_gases = 0.333
+        }
+        upkeep = {
+            energy = @shield_s_t5_upkeep_energy
+            alloys = @shield_s_t5_upkeep_alloys
+        }
+    }
+    modifier = {
+        ship_shield_add = @shield_S5
+        ship_shield_regen_add_static = @regen_S5
+    }
+    prerequisites = {
+        "tech_shields_5"
+    }
+    upgrades_to = "SMALL_DARK_MATTER_DEFLECTOR"
+    component_set = "SHIELD_5"
+    ai_weight = {
+        weight = 1
+        modifier = {
+            factor = 0
+            is_country_type = default
+            resource_stockpile_compare = {
+                resource = exotic_gases
+                value <= 50
+            }
+        }
+    }
+}

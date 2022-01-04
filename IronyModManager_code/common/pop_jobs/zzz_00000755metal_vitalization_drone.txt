@@ -1,0 +1,35 @@
+metal_vitalization_drone = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_metal_vitalization_labs
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        drone_job_check_trigger = yes
+    }
+    resources = {
+        category = planet_metal_vitalizer_drone
+        produces = {
+            sr_living_metal = 2
+        }
+        upkeep = {
+            alloys = 5
+            volatile_motes = 2
+        }
+    }
+    weight = {
+        weight = @specialist_job_weight
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+        modifier = {
+            factor = 5
+            has_job = metal_vitalization_drone
+        }
+    }
+}

@@ -11,7 +11,7 @@ drow_tulshar_civ = {
         name = "Moravar"
         plural = "Moravari"
         adjective = "Moravari"
-        name_list = "eos_namelist_drow_ilythiiri"
+        name_list = "DROW1"
         trait = "trait_drow"
         trait = "trait_drow_xenocidal"
         trait = "trait_talented"
@@ -42,8 +42,8 @@ drow_tulshar_civ = {
     }
     empire_flag = {
         icon = {
-            category = "drow"
-            file = "tulshar_1.dds"
+            category = "elven"
+            file = "eos_flag_tulshar.dds"
         }
         background = {
             category = "backgrounds"

@@ -1,0 +1,28 @@
+migration_control_yes = {
+    token = migration_control_yes
+    ai_will_do = {
+        factor = 2
+        modifier = {
+            factor = 0.1
+            from = {
+                OR = {
+                    NOT = {
+                        has_authority = auth_machine_intelligence
+                    }
+                    has_valid_civic = civic_machine_servitor
+                }
+            }
+        }
+        modifier = {
+            factor = 100
+            has_citizenship_type = {
+                country = from
+                type = citizenship_slavery
+            }
+            OR = {
+                ariphaos_patch_slaves_rare_trait = no
+                ariphaos_patch_slaves_poor_merit = yes
+            }
+        }
+    }
+}

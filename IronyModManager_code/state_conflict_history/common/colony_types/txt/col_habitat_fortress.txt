@@ -8,6 +8,7 @@ col_habitat_fortress = {
     }
     planet_modifier = {
         custom_tooltip = fortress_desig_tooltip
+        planet_building_stronghold_build_speed_mult = 0.25
         planet_buildings_volatile_motes_upkeep_mult = -0.2
     }
     weight_modifier = {

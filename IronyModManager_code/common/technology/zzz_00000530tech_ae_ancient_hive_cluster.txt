@@ -1,0 +1,41 @@
+tech_ae_ancient_hive_cluster = {
+    cost = @acot_tier7cost3
+    area = society
+    tier = 7
+    category = {
+        statecraft
+    }
+    prerequisites = {
+        "tech_dark_matter_power_core_ae"
+        "tech_dm_ancient_hive_cluster"
+    }
+    weight = 100000
+    gateway = capital
+    potential = {
+        is_hive_empire = yes
+        NOT = {
+            has_global_flag = acot_building_forbidden
+        }
+        has_technology = tech_dark_matter_power_core_ae
+    }
+    weight_modifier = {
+        factor = 4
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 10
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_statecraft"
+            }
+        }
+    }
+}

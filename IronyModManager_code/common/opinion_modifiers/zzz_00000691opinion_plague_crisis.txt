@@ -1,0 +1,10 @@
+opinion_plague_crisis = {
+    trigger = {
+        has_global_flag = mmc_plague_ongoing
+        is_fallen_empire = no
+        is_subject = no
+    }
+    opinion = {
+        base = -200
+    }
+}

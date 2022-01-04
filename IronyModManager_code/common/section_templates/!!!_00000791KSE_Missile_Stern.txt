@@ -1,0 +1,31 @@
+@section_cost = 100
+ship_section_template = {
+    key = "KSE Missile Stern"
+    ship_size = cruiser
+    fits_on_slot = stern
+    should_draw_components = yes
+    entity = "fe_01_KSE_cruiser_stern_M2_entity"
+    prerequisites = {
+        tech_kurogane
+    }
+    ai_weight = {
+        factor = 0
+    }
+    component_slot = {
+        name = "TORPEDO_01"
+        template = "medium_missile_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "TORPEDO_02"
+        template = "medium_missile_turret"
+        locatorname = "medium_gun_02"
+    }
+    aux_utility_slots = 4
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = @section_cost
+        }
+    }
+}

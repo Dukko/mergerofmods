@@ -1,0 +1,33 @@
+@apsr15cost3 = 50000
+tech_apsr15_building_part33 = {
+    cost = @apsr15cost3
+    area = society
+    tier = 2
+    category = {
+        biology
+    }
+    prerequisites = {
+        "tech_fission_power"
+    }
+    weight = 0
+    is_rare = yes
+    prereqfor_desc = {
+        custom = {
+            title = "TECH_APSR15_PART33_TITLE"
+            desc = "TECH_APSR15_PART33_DESC"
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_deposit = apsr15_deposit
+                }
+            }
+        }
+    }
+    ai_weight = {
+        factor = 150
+    }
+}

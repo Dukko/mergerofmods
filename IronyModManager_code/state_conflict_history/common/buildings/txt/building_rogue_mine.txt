@@ -26,7 +26,10 @@ building_rogue_mine = {
         NOT = {
             has_modifier = resort_colony
         }
-        is_planet_class = pc_rogue
+        OR = {
+            is_planet_class = pc_rogue
+            is_planet_class = pc_ll_rogue
+        }
     }
     allow = {
         has_upgraded_capital = yes

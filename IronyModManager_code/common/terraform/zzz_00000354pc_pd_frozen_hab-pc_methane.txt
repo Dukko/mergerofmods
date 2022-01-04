@@ -1,0 +1,63 @@
+@terraforming_cost_level_2 = 5000
+@terraforming_duration_level_2 = 3600
+terraform_link = {
+    from = pc_pd_frozen_hab
+    to = pc_methane
+    resources = {
+        category = terraforming
+        cost = {
+            energy = @terraforming_cost_level_2
+        }
+    }
+    duration = @terraforming_duration_level_2
+    potential = {
+        from = {
+            has_modifier = terraforming_methane
+        }
+        has_global_flag = planetarydiversityexotics
+    }
+    condition = {
+        has_technology = "tech_methane_terraform"
+    }
+    effect = {
+        from = {
+            remove_modifier = terraforming_methane
+            remove_modifier = gd_convert_frozen_adaptive_core_activation_facilities
+            remove_modifier = gd_convert_barren_focused_hypercoil
+            remove_modifier = gd_convert_frozen_crustal_repurposing_facilities
+            remove_modifier = gd_convert_barren_dynamic_core_power_generators
+            remove_deposit = d_expanded_dome_system
+            remove_deposit = d_expanded_dome_system_1
+            remove_modifier = terraforming_ammonia
+            remove_modifier = terraforming_sulfur
+            remove_modifier = terraforming_ash
+            remove_modifier = pdammoniaatmosphere
+            remove_modifier = pdsulfuratmosphere
+            remove_modifier = pdmethaneatmosphere
+            remove_modifier = pdashatmosphere
+            remove_modifier = hab_terraforming_candidate
+            remove_modifier = terraforming_candidate
+            remove_modifier = terraforming_candidate
+            remove_modifier = gpm_habitat_engineering
+            remove_modifier = gpm_habitat_engineering_mastery
+            remove_modifier = gpm_habitat_engineering_void_mastery
+            remove_modifier = pdhabsubglacialocean
+            reroll_deposits = yes
+            remove_modifier = master_builders_habitats
+            remove_building = building_hab_capital
+            remove_building = building_hab_capital
+            add_building = building_major_capital
+        }
+    }
+    ai_weight = {
+        weight = 5
+        modifier = {
+            factor = 0
+            NOT = {
+                owner_species = {
+                    has_trait = trait_pc_methane_preference
+                }
+            }
+        }
+    }
+}

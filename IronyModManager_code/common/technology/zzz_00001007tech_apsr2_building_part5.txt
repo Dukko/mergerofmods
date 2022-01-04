@@ -1,0 +1,96 @@
+@apsr2cost5 = 50000
+@apsr2weight5 = 1
+tech_apsr2_building_part5 = {
+    cost = @apsr2cost5
+    area = engineering
+    tier = 5
+    category = {
+        industry
+    }
+    prerequisites = {
+        "tech_apsr2_building_part4"
+    }
+    weight = @apsr2weight5
+    is_rare = yes
+    is_dangerous = yes
+    prereqfor_desc = {
+        custom = {
+            title = "TECH_APSR2_PART5_TITLE"
+            desc = "TECH_APSR2_PART5_DESC"
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_deposit = apsr2_deposit
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            AND = {
+                years_passed < 200
+                num_owned_planets < 15
+                num_pops < 700
+                num_rare_techs < 25
+            }
+        }
+        modifier = {
+            factor = 2
+            AND = {
+                years_passed > 200
+                num_owned_planets > 15
+            }
+        }
+        modifier = {
+            factor = 2
+            AND = {
+                years_passed > 200
+                num_pops > 700
+            }
+        }
+        modifier = {
+            factor = 2
+            AND = {
+                years_passed > 200
+                num_rare_techs > 25
+            }
+        }
+        modifier = {
+            factor = 10
+            has_resource = {
+                type = apsr_knowledge
+                amount >= 500
+            }
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_maniacal"
+            }
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+                research_leader = {
+                    area = engineering
+                    has_trait = "leader_trait_curator"
+                }
+                research_leader = {
+                    area = engineering
+                    has_trait = "leader_trait_spark_of_genius"
+                }
+            }
+        }
+        modifier = {
+            factor = 5
+            has_origin = apsr_origin_unique_capital
+        }
+    }
+    ai_weight = {
+        factor = 150
+    }
+}

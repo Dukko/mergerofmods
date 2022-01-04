@@ -1,0 +1,46 @@
+tech_stellarite_enigmatic_lab = {
+    area = physics
+    category = {
+        computing
+    }
+    tier = 8
+    cost = @acot_tier8cost2
+    prerequisites = {
+        "tech_ae_enigmatic_lab"
+    }
+    weight = @tier5weight1
+    potential = {
+        NOR = {
+            is_fallen_empire = yes
+            has_global_flag = acot_building_forbidden
+        }
+        has_technology = tech_stellarite_reactor
+    }
+    weight_modifier = {
+        factor = 2
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+        modifier = {
+            factor = 0
+            NOR = {
+                has_technology = tech_stellarite_control_center
+                has_technology = tech_stellarite_palace
+                has_technology = tech_stellarite_hive_cluster
+            }
+        }
+    }
+    ai_weight = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+    }
+}

@@ -9,11 +9,11 @@ miner = {
         is_being_assimilated = no
         is_sapient = yes
     }
+    possible_precalc = can_fill_worker_job
     possible = {
         hidden_trigger = {
             exists = owner
         }
-        worker_job_check_trigger = yes
         owner = {
             is_gestalt = no
         }

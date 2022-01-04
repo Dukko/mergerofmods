@@ -12,10 +12,9 @@ tech_psionic_theory = {
     potential = {
         OR = {
             NOT = {
-                has_ethic = ethic_gestalt_consciousness
+                has_authority = auth_machine_intelligence
             }
-            is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
-            is_active_resolution = "resolution_galacticstudies_6"
+            is_active_resolution = resolution_galacticstudies_extradimensional_experimentation
         }
     }
     modifier = {
@@ -77,9 +76,7 @@ tech_psionic_theory = {
             factor = 1.25
             any_owned_species = {
                 has_trait = trait_latent_psionic
-            }
-            NOT = {
-                any_owned_species = {
+                NOT = {
                     has_trait = trait_psionic
                 }
             }

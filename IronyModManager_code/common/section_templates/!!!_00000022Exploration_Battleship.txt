@@ -1,0 +1,50 @@
+ship_section_template = {
+    key = "Exploration Battleship"
+    ship_size = battleship
+    fits_on_slot = mid
+    should_draw_components = yes
+    entity = "fe_01_explorationbattleship_mid_entity"
+    icon = "GFX_ship_part_core_mid"
+    ai_weight = {
+        factor = 0
+    }
+    component_slot = {
+        name = "SMALL_GUN_01"
+        template = "point_defence_turret"
+        locatorname = "small_gun_01"
+    }
+    component_slot = {
+        name = "SMALL_GUN_02"
+        template = "point_defence_turret"
+        locatorname = "small_gun_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_01"
+        template = "large_strike_craft"
+        rotation = 90
+        locatorname = "strike_craft_locator_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_02"
+        template = "large_strike_craft"
+        rotation = 90
+        locatorname = "strike_craft_locator_02"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_03"
+        template = "large_strike_craft"
+        rotation = 90
+        locatorname = "strike_craft_locator_02"
+    }
+    prerequisites = {
+        tech_kurogane
+    }
+    large_utility_slots = 7
+    aux_utility_slots = 3
+    resources = {
+        category = ship_sections
+        cost = {
+            alloys = 120
+        }
+    }
+}

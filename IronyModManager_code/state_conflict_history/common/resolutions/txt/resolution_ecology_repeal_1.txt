@@ -98,6 +98,10 @@ resolution_ecology_repeal_1 = {
         }
         modifier = {
             factor = 0.5
+            has_origin = origin_terraformer
+        }
+        modifier = {
+            factor = 0.5
             owner_species = {
                 has_trait = eco_trait_clean
             }

@@ -1,0 +1,101 @@
+col_habitat_energy = {
+    icon = GFX_colony_type_habitat_energy
+    potential = {
+        OR = {
+            uses_district_set = habitat
+            uses_district_set = pdarchive
+        }
+        exists = owner
+        OR = {
+            owner = {
+                is_gestalt = yes
+            }
+            has_planet_flag = energy_habitat
+        }
+    }
+    planet_modifier = {
+        planet_district_hab_energy_build_speed_mult = 0.25
+        planet_technician_produces_mult = 0.25
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_galactic_community_member = yes
+                is_gestalt = no
+            }
+            OR = {
+                is_active_resolution = "resolution_greatergood_five_year_plans"
+                is_active_resolution = "resolution_greatergood_greater_than_ourselves"
+                is_active_resolution = "resolution_greatergood_balance_in_the_middle"
+                is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
+            }
+        }
+        modifier = {
+            planet_jobs_worker_produces_mult = 0.1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_galactic_community_member = yes
+                is_gestalt = yes
+            }
+            OR = {
+                is_active_resolution = "resolution_greatergood_five_year_plans"
+                is_active_resolution = "resolution_greatergood_greater_than_ourselves"
+                is_active_resolution = "resolution_greatergood_balance_in_the_middle"
+                is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
+            }
+        }
+        modifier = {
+            planet_jobs_simple_drone_produces_mult = 0.1
+        }
+    }
+    weight_modifier = {
+        base = 0
+        modifier = {
+            add = 1.8
+            num_districts = {
+                type = district_hab_energy
+                value >= 1
+            }
+        }
+        modifier = {
+            add = 1.8
+            num_districts = {
+                type = district_hab_energy
+                value >= 2
+            }
+        }
+        modifier = {
+            add = 3.6
+            num_districts = {
+                type = district_hab_energy
+                value >= 4
+            }
+        }
+        modifier = {
+            add = 3.6
+            num_districts = {
+                type = district_hab_energy
+                value >= 6
+            }
+        }
+        modifier = {
+            factor = 1.16
+            has_building = building_energy_grid
+        }
+        modifier = {
+            factor = 1.33
+            has_building = building_energy_nexus
+        }
+        modifier = {
+            factor = 1.33
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+    }
+}

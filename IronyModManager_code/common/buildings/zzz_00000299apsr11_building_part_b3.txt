@@ -1,0 +1,138 @@
+@apsr11part3cost_energy = 0
+@apsr11part3cost_minerals = 10000
+@apsr11part3cost_time = 1500
+@apsr11part3upkeep_energy = 15
+@apsr11part3upkeep_minerals = 15
+@apsr11part3upkeep_fake = 5
+@apsr11part3job = 15
+@apsr11cubejobs1 = 3
+@apsr11part3agrjob = 5
+@apsr11cubejobs2 = 1
+apsr11_building_part_b3 = {
+    base_buildtime = @apsr11part3cost_time
+    icon = apsr11_building_part_b3
+    is_capped_by_modifier = no
+    category = resource
+    can_build = no
+    can_demolish = no
+    position_priority = 49
+    allow = {
+        has_major_upgraded_capital = yes
+    }
+    potential = {
+        has_modifier = "apsr11_planet_modifier"
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+                has_technology = tech_apsr11_building_part_b3
+            }
+        }
+        modifier = {
+            job_apsr11_farmer_hive_add = @apsr11part3job
+            job_apsr11_agronomist_hive_add = @apsr11part3agrjob
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                has_deposit = apsr_relic_cube_deposit
+            }
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+                has_technology = tech_apsr11_building_part_b3
+            }
+        }
+        modifier = {
+            job_apsr11_farmer_hive_add = @apsr11cubejobs1
+            job_apsr11_agronomist_hive_add = @apsr11cubejobs2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                has_technology = tech_apsr11_building_part_b3
+            }
+        }
+        modifier = {
+            job_apsr11_farmer_normal_add = @apsr11part3job
+            job_apsr11_agronomist_normal_add = @apsr11part3agrjob
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                has_deposit = apsr_relic_cube_deposit
+            }
+            exists = owner
+            owner = {
+                is_gestalt = no
+                has_technology = tech_apsr11_building_part_b3
+            }
+        }
+        modifier = {
+            job_apsr11_farmer_normal_add = @apsr11cubejobs1
+            job_apsr11_agronomist_normal_add = @apsr11cubejobs2
+        }
+    }
+    resources = {
+        category = planet_apsr_buildings
+        cost = {
+            energy = @apsr11part3cost_energy
+            minerals = @apsr11part3cost_minerals
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    has_technology = tech_apsr11_building_part_b3
+                }
+            }
+            energy = @apsr11part3upkeep_energy
+            minerals = @apsr11part3upkeep_minerals
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    NOT = {
+                        has_technology = tech_apsr11_building_part_b3
+                    }
+                }
+            }
+            energy = @apsr11part3upkeep_fake
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_technology = tech_apsr11_building_part_b3
+                }
+            }
+            apsr_knowledge = 3
+        }
+    }
+    upgrades = {
+        "apsr11_building_part_mech_conversion"
+    }
+    prerequisites = {
+        "tech_apsr11_building_part_b3"
+    }
+    show_tech_unlock_if = {
+        always = no
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                NOT = {
+                    has_technology = tech_apsr11_building_part_b3
+                }
+            }
+        }
+        text = apsr_building_fake_desc
+    }
+}

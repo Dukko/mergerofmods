@@ -1,0 +1,80 @@
+esc_building_crystal_farm_1 = {
+    base_buildtime = 360
+    icon = esc_building_crystal_farm_1
+    category = manufacturing
+    potential = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+        NOT = {
+            has_global_flag = ESC_GLOBAL_FLAG_crystalline_weapons_forbidden
+        }
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 360
+        }
+        upkeep = {
+            minerals = 4
+        }
+    }
+    upgrades = {
+        esc_building_crystal_farm_2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_esc_crystal_farmer_add = 2
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = job_esc_crystal_farmer_effect_desc
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_esc_crystal_farmer_drone_add = 2
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_esc_crystal_farmer_drone_effect_desc
+    }
+    prerequisites = {
+        "esc_tech_crystal_cannon_1"
+    }
+    ai_resource_production = {
+        rare_crystals = 8
+        trigger = {
+            always = yes
+        }
+    }
+}

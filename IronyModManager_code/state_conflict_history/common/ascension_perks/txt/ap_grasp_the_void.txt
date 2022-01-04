@@ -28,14 +28,6 @@ ap_grasp_the_void = {
             }
             add_research_option = tech_starbase_5
         }
-        else_if = {
-            limit = {
-                NOT = {
-                    has_technology = tech_starbase_6
-                }
-            }
-            add_research_option = tech_starbase_6
-        }
         if = {
             limit = {
                 NOT = {
@@ -51,58 +43,38 @@ ap_grasp_the_void = {
         }
     }
     ai_weight = {
-        factor = 4
+        factor = 10
         modifier = {
-            factor = 0
-            num_ascension_perks > 0
-        }
-        modifier = {
-            factor = 2
+            factor = 1.2
             has_civic = civic_inwards_perfection
         }
         modifier = {
-            factor = 2
-            has_ethic = ethic_xenophobe
-        }
-        modifier = {
-            factor = 4
-            has_ethic = ethic_fanatic_xenophobe
-        }
-        modifier = {
-            factor = 2
-            has_ethic = ethic_pacifist
-        }
-        modifier = {
-            factor = 4
-            has_ethic = ethic_fanatic_pacifist
-        }
-        modifier = {
-            factor = 2
-            is_egalitarian = yes
-        }
-        modifier = {
-            factor = 0.1
-            has_ethic = ethic_militarist
+            factor = 1.5
+            is_xenophobe = yes
         }
         modifier = {
             factor = 0
-            has_ethic = ethic_fanatic_militarist
+            resource_stockpile_compare = {
+                resource = alloys
+                value < 2500
+            }
+            used_naval_capacity_percent < 0.6
         }
         modifier = {
-            factor = 0.5
-            has_technology = tech_habitat_1
+            factor = 5
+            resource_stockpile_compare = {
+                resource = alloys
+                value > 4000
+            }
         }
         modifier = {
-            factor = 0.1
-            num_ascension_perks > 1
-        }
-        modifier = {
-            factor = 0.1
-            num_ascension_perks > 2
-        }
-        modifier = {
-            factor = 0.1
-            num_ascension_perks > 3
+            factor = 5
+            rusher = yes
+            used_naval_capacity_percent > 0.95
+            resource_stockpile_compare = {
+                resource = alloys
+                value > 3000
+            }
         }
     }
 }

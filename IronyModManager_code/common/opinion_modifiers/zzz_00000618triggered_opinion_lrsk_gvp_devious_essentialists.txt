@@ -1,0 +1,14 @@
+triggered_opinion_lrsk_gvp_devious_essentialists = {
+    trigger = {
+        OR = {
+            has_valid_civic = lrsk_adv_civ_civic_shapers
+            has_valid_civic = lrsk_adv_civ_civic_artificers
+        }
+        from = {
+            has_valid_civic = lrsk_adv_civ_civic_essentialists
+        }
+    }
+    opinion = {
+        base = -25
+    }
+}

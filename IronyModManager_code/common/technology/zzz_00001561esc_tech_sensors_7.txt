@@ -1,0 +1,76 @@
+esc_tech_sensors_7 = {
+    area = physics
+    category = {
+        computing
+    }
+    tier = 6
+    cost = @ESC_TECH_tier6_cost1
+    weight = @ESC_TECH_tier6_weight1
+    prerequisites = {
+        "esc_tech_sensors_6"
+    }
+    ai_update_type = all
+    is_rare = yes
+    prereqfor_desc = {
+        hide_prereq_for_desc = component
+        custom = {
+            title = "ESC_TECH_UNLOCK_ADV_STRING_SENSOR_TITLE"
+            desc = "ESC_TECH_UNLOCK_ADV_STRING_SENSOR_DESC"
+        }
+    }
+    modifier = {
+        science_ship_survey_speed = 0.1
+    }
+    potential = {
+        NOT = {
+            has_global_flag = ESC_GLOBAL_FLAG_sensors_forbidden
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = @federation_perk_factor
+            has_federation = yes
+            federation = {
+                has_federation_perk = rare_tech_boost
+                any_member = {
+                    has_technology = esc_tech_sensors_7
+                }
+            }
+        }
+    }
+    ai_weight = {
+        factor = @ESC_AI_tech_weight_multiplier
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_computing"
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+        modifier = {
+            factor = @federation_perk_factor
+            has_federation = yes
+            federation = {
+                has_federation_perk = rare_tech_boost
+                any_member = {
+                    has_technology = esc_tech_sensors_7
+                }
+            }
+        }
+    }
+}

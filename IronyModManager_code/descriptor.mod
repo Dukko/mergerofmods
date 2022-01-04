@@ -1,5 +1,5 @@
-name="IronyModManager_Lem"
+name="IronyModManager_Herbert"
 tags={
 	"Fixes"
 }
-supported_version="3.1.2"
+supported_version="3.2.2"

@@ -1,0 +1,65 @@
+ap_interstellar_dominion = {
+    modifier = {
+        country_claim_influence_cost_mult = -0.2
+        country_war_exhaustion_mult = -0.2
+    }
+    on_enabled = {
+        if = {
+            limit = {
+                NOT = {
+                    has_technology = tech_interstellar_campaigns
+                }
+            }
+            add_research_option = tech_interstellar_campaigns
+        }
+    }
+    potential = {
+        is_pacifist = no
+        NOT = {
+            has_ascension_perk = ap_interstellar_dominion
+        }
+    }
+    ai_weight = {
+        factor = 10
+        modifier = {
+            factor = 10
+            rusher = yes
+            num_ascension_perks < 2
+        }
+        modifier = {
+            factor = 0.01
+            resource_stockpile_compare = {
+                resource = influence
+                value > 300
+            }
+        }
+        modifier = {
+            factor = 0.001
+            num_ascension_perks > 0
+        }
+        modifier = {
+            factor = 0
+            or = {
+                has_ethic = ethic_pacifist
+                has_ethic = ethic_fanatic_pacifist
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_civic = civic_fanatic_purifiers
+                has_civic = civic_hive_devouring_swarm
+                has_civic = civic_machine_terminator
+                has_civic = civic_machine_assimilator
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_xenophobe
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_fanatic_xenophobe
+        }
+    }
+}

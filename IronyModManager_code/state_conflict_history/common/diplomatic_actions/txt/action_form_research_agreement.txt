@@ -30,6 +30,19 @@ action_form_research_agreement = {
             }
         }
         custom_tooltip = {
+            fail_text = "ACTION_RECIPIENT_NOT_YOURS"
+            FROM = {
+                NOT = {
+                    AND = {
+                        is_subject = yes
+                        NOT = {
+                            has_overlord = root
+                        }
+                    }
+                }
+            }
+        }
+        custom_tooltip = {
             fail_text = "requires_actor_not_fanatic_purifiers"
             OR = {
                 is_same_species = from
@@ -224,6 +237,31 @@ action_form_research_agreement = {
                 }
             }
         }
+        if = {
+            limit = {
+                from = {
+                    is_purists_empire = yes
+                }
+            }
+            if = {
+                limit = {
+                    has_intel = {
+                        who = from
+                        intel = civics
+                    }
+                }
+                custom_tooltip = {
+                    fail_text = requires_recipient_not_pompous
+                    always = no
+                }
+            }
+            else = {
+                custom_tooltip = {
+                    fail_text = diplo_action_no_low_intel
+                    always = no
+                }
+            }
+        }
         custom_tooltip = {
             fail_text = "requires_good_or_better_opinion"
             OR = {
@@ -232,8 +270,6 @@ action_form_research_agreement = {
                     level >= good
                 }
                 is_improving_relations_with = from
-                is_overlord_to = from
-                has_overlord = from
             }
         }
     }

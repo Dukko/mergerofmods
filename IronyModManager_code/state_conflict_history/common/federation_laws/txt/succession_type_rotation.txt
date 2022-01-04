@@ -1,4 +1,4 @@
-@cooldown = 3600
+@cooldown = 720
 succession_type_rotation = {
     potential = {
         NOT = {
@@ -121,12 +121,12 @@ succession_type_rotation = {
         modifier = {
             desc = federation_acceptance_democratic_crusaders
             add = 25
-            has_ai_personality = democratic_crusaders
+            is_democratic_crusaders = yes
         }
         modifier = {
             desc = federation_acceptance_xenophobic_isolationists
             add = 50
-            has_ai_personality = xenophobic_isolationists
+            is_xenophobic_isolationists = yes
         }
         modifier = {
             desc = federation_acceptance_hive_mind
@@ -141,7 +141,7 @@ succession_type_rotation = {
         modifier = {
             desc = federation_acceptance_servitors
             add = 50
-            has_ai_personality = servitors
+            is_civic_machine_servitor = yes
         }
     }
 }

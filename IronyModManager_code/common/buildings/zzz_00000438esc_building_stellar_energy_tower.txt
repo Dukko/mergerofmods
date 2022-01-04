@@ -1,0 +1,113 @@
+esc_building_stellar_energy_tower = {
+    base_buildtime = 360
+    base_cap_amount = 1
+    icon = esc_building_stellar_energy_tower
+    category = resource
+    potential = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+        NOT = {
+            has_global_flag = ESC_GLOBAL_FLAG_stellarite_tech_forbidden
+        }
+        exists = owner
+        owner = {
+            has_country_flag = ESC_COUNTRY_FLAG_killed_stellarite_devourer
+        }
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 600
+            rare_crystals = 25
+            exotic_gases = 25
+        }
+        produces = {
+            energy = 10
+            unity = 3
+        }
+    }
+    planet_modifier = {
+        planet_jobs_food_produces_mult = 0.15
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_researcher_add = 1
+            job_technician_add = 1
+            job_technician_per_pop = 0.05
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = esc_stellar_tower_effect_regular
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_brain_drone_add = 1
+            job_technician_drone_add = 1
+            job_technician_drone_per_pop = 0.05
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = esc_stellar_tower_effect_hive
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_calculator_add = 1
+            job_technician_drone_add = 1
+            job_technician_drone_per_pop = 0.05
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = esc_stellar_tower_effect_machine
+    }
+    show_tech_unlock_if = {
+        NOT = {
+            has_global_flag = ESC_GLOBAL_FLAG_stellarite_tech_forbidden
+        }
+    }
+    prerequisites = {
+        "esc_tech_stellar_energy_tower"
+    }
+}

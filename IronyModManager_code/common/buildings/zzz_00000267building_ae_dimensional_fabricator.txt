@@ -1,0 +1,62 @@
+building_ae_dimensional_fabricator = {
+    base_buildtime = 600
+    can_demolish = yes
+    can_build = no
+    category = resource
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = tech_aot_ae_dimensional_fabricator
+        }
+    }
+    prerequisites = {
+        "tech_aot_ae_dimensional_fabricator"
+    }
+    allow = {
+        has_ascended_capital = yes
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 250
+            acot_sr_dark_energy = 750
+            sr_dark_matter = 750
+        }
+        produces = {
+            minerals = 300
+            rare_crystals = 8
+            exotic_gases = 8
+            volatile_motes = 8
+            sr_zro = 8
+            sr_living_metal = 8
+        }
+        upkeep = {
+            acot_sr_dark_energy = 30
+        }
+    }
+    upgrades = {
+        building_stellarite_dimensional_fabricator
+    }
+    ai_weight = {
+        weight = 10
+        modifier = {
+            factor = 5
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 10
+                }
+            }
+        }
+    }
+    ai_resource_production = {
+        minerals = 1000
+        rare_crystals = 50
+        exotic_gases = 50
+        volatile_motes = 50
+        sr_living_metal = 25
+        trigger = {
+            always = yes
+        }
+    }
+}

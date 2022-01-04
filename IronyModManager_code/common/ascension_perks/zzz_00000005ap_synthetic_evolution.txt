@@ -1,0 +1,118 @@
+ap_synthetic_evolution = {
+    on_enabled = {
+        custom_tooltip = "synthetic_evolution_tooltip"
+        if = {
+            limit = {
+                has_origin = origin_necrophage
+                has_trait = trait_necrophage
+            }
+            custom_tooltip = disables_necrophage_features
+        }
+        if = {
+            limit = {
+                has_origin = origin_clone_army
+                OR = {
+                    has_trait = trait_clone_soldier_infertile
+                    has_trait = trait_clone_soldier_infertile_full_potential
+                    has_trait = trait_clone_soldier_fertile
+                }
+            }
+            custom_tooltip = disables_clone_army_origin_features
+        }
+        if = {
+            limit = {
+                OR = {
+                    has_valid_civic = civic_idyllic_bloom
+                    has_valid_civic = civic_hive_idyllic_bloom
+                }
+            }
+            custom_tooltip = disables_idyllic_bloom
+        }
+        hidden_effect = {
+            country_event = {
+                id = esap_ascension_paths.3
+            }
+        }
+    }
+    modifier = {
+        planet_jobs_robotic_produces_mult = 0.1
+        ROBOT_species_trait_points_add = 1
+        modify_species_cost_mult = -0.5
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "synthetic_empire_synthetic_ascension"
+            NOT = {
+                has_trait = trait_mechanical
+            }
+        }
+        custom_tooltip = {
+            fail_text = "hive_mind_biological_ascension_only2"
+            NOT = {
+                has_authority = auth_hive_mind
+            }
+        }
+        custom_tooltip = {
+            fail_text = "requires_ascension_perks_2"
+            num_ascension_perks > 1
+        }
+        custom_tooltip = {
+            fail_text = "requires_technology_synthetic_workers"
+            has_technology = tech_synthetic_workers
+        }
+        custom_tooltip = {
+            fail_text = "requires_technology_synthetic_leaders"
+            has_technology = tech_synthetic_leaders
+        }
+        custom_tooltip = {
+            fail_text = "requires_ap_the_flesh_is_weak"
+            has_ascension_perk = ap_the_flesh_is_weak
+        }
+        custom_tooltip = {
+            fail_text = "requires_finished_cybernetics_project"
+            NOT = {
+                has_special_project = FLESH_IS_WEAK_PROJECT
+            }
+        }
+        custom_tooltip = {
+            fail_text = "ap_esap_ascension_path_t2_req_1"
+            Or = {
+                Not = {
+                    esap_has_bio_cyber_psi_1 = yes
+                }
+                esap_has_bio_cyber_psi_2 = yes
+            }
+        }
+    }
+    potential = {
+        host_has_dlc = "Utopia"
+        NOT = {
+            has_ascension_perk = ap_synthetic_evolution
+            has_authority = "auth_machine_intelligence"
+        }
+        is_mechanical_empire = no
+    }
+    ai_weight = {
+        factor = 5000
+        modifier = {
+            factor = 10
+            has_ethic = ethic_fanatic_materialist
+        }
+        modifier = {
+            factor = 0.5
+            has_ethic = ethic_egalitarian
+        }
+        modifier = {
+            factor = 0
+            has_ethic = ethic_fanatic_egalitarian
+        }
+        modifier = {
+            factor = 0
+            has_origin = origin_necrophage
+        }
+        modifier = {
+            factor = 0
+            is_spiritualist = yes
+        }
+    }
+}

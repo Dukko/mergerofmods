@@ -12,9 +12,7 @@ tech_modular_engineering = {
     weight = @tier2weight3
     modifier = {
         starbase_buildings_cost_mult = -0.25
-        starbase_building_build_speed_mult = 0.25
         starbase_modules_cost_mult = -0.25
-        starbase_module_build_speed_mult = 0.25
     }
     weight_modifier = {
         factor = 0.5

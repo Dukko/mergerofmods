@@ -1,0 +1,53 @@
+gray_goo = {
+    attack_unarmed_orbital_stations = yes
+    has_difficulty_bonuses = yes
+    always_valid_target_aggressive = yes
+    scaled_difficulty_bonuses = 1
+    counts_for_victory = no
+    destroys_starbases = yes
+    show_in_contacts_list = no
+    share_survey_data = no
+    custom_diplomacy = no
+    mid_game_crisis = yes
+    enforces_borders = no
+    orbital_bombardment = yes
+    can_have_their_comms_shared = yes
+    needs_survey = no
+    has_complete_sensor = yes
+    has_capital = no
+    playable = no
+    government = no
+    observable = no
+    pop_growth = no
+    uses_special_buildables = yes
+    custom_starbase = starbase_gatebuilders
+    can_use_invalid_technology = yes
+    uses_origins = no
+    targets = {
+        awakened_fallen_empire
+        awakened_marauders
+    }
+    ai = {
+        enabled = yes
+        modules = {
+            berserk_military_minister_module
+        }
+    }
+    faction = {
+        hostile = yes
+        needs_border_access = no
+        generate_borders = no
+        needs_colony = no
+    }
+    modules = {
+        exclusive_diplomacy_module = {
+            contact_rule = on_action_only
+        }
+        tiered_technology_module = {
+            tier = 3
+            rare = no
+        }
+        standard_event_module = {
+        }
+    }
+}

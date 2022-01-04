@@ -76,7 +76,7 @@ ruler = {
         trigger = {
             owner = {
                 NOT = {
-                    has_valid_civic = civic_corvee_system
+                    is_exploitative_empire = yes
                 }
             }
         }

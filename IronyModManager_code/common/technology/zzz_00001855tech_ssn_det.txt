@@ -1,0 +1,50 @@
+tech_ssn_det = {
+    area = physics
+    cost = @tier5cost2
+    weight = @tier5weight2
+    tier = 5
+    category = {
+        particles
+    }
+    prerequisites = {
+        "tech_u_r_e_t"
+        "tech_sensors_4"
+        "tech_mine_dark_matter"
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0.1
+            years_passed < 50
+        }
+        modifier = {
+            factor = 2
+            years_passed > 60
+        }
+        modifier = {
+            factor = 3
+            years_passed > 70
+        }
+        modifier = {
+            factor = 4
+            years_passed > 80
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+    ai_weight = {
+        factor = @giga_aiweight_multiplier
+        factor = @ehof_t1_weight
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+esc_tech_grand_research_initiative = {
+    area = society
+    category = {
+        statecraft
+    }
+    tier = 3
+    cost = @tier3cost2
+    weight = @ESC_TECH_weight_core_tech
+    prerequisites = {
+        "tech_physics_2"
+        "tech_society_2"
+        "tech_engineering_2"
+    }
+    is_rare = yes
+    gateway = ESC_TECHNOLOGIES
+    prereqfor_desc = {
+        custom = {
+            title = "ESC_TECH_UNLOCK_ADV_RESEARCH_TITLE"
+            desc = "ESC_TECH_UNLOCK_ADV_RESEARCH_DESC"
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.1
+            OR = {
+                has_ethic = ethic_materialist
+                has_ethic = ethic_fanatic_materialist
+            }
+        }
+    }
+    ai_weight = {
+        factor = @ESC_AI_tech_weight_multiplier
+    }
+}

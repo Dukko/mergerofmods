@@ -1,0 +1,58 @@
+@apsr_advanced_3_cost = 100000
+@apsr_advanced_3_weight = 1
+tech_apsr6_advanced_3 = {
+    icon = tech_apsr6_advanced_1
+    cost = @apsr_advanced_3_cost
+    area = physics
+    tier = 5
+    category = {
+        computing
+    }
+    prerequisites = {
+        "tech_apsr6_advanced_2"
+    }
+    weight = @apsr_advanced_3_weight
+    is_rare = yes
+    prereqfor_desc = {
+        custom = {
+            title = "TECH_APSR_ADVANCED_TITLE"
+            desc = "TECH_APSR_ADVANCED_DESC"
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    has_deposit = apsr6_deposit
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            mid_game_years_passed < 50
+        }
+        modifier = {
+            factor = 5
+            has_origin = apsr_origin_unique_capital
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                has_global_flag = apsr_advanced_count_1
+                has_global_flag = apsr_advanced_count_2
+            }
+        }
+        modifier = {
+            factor = 0.5
+            has_global_flag = apsr_advanced_factor_050
+        }
+        modifier = {
+            factor = 2
+            has_global_flag = apsr_advanced_factor_200
+        }
+    }
+    ai_weight = {
+        factor = 150
+    }
+}

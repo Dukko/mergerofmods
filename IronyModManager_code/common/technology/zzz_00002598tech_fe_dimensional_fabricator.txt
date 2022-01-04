@@ -1,0 +1,41 @@
+tech_fe_dimensional_fabricator = {
+    cost = @acot_tier6cost2
+    area = engineering
+    tier = 6
+    category = {
+        industry
+    }
+    prerequisites = {
+        "tech_dm_production_core"
+    }
+    weight = @tier3weight1
+    potential = {
+        has_technology = tech_dm_production_core
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_technology = tech_dm_production_core
+            }
+        }
+        factor = 2
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+    ai_weight = {
+        factor = 30
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+}

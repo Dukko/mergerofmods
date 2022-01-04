@@ -1,0 +1,76 @@
+esc_tech_voidspawn_missile_x = {
+    area = society
+    category = {
+        materials
+    }
+    tier = 6
+    cost = @ESC_TECH_tier6_cost1
+    weight = @ESC_TECH_tier6_weight1
+    ai_update_type = military
+    prerequisites = {
+        "esc_tech_voidspawn_missile"
+        "esc_tech_advanced_heavy_weapons"
+    }
+    is_rare = yes
+    potential = {
+        ESC_TRIGGER_may_research_oversized_weapons = yes
+        NOT = {
+            has_global_flag = ESC_GLOBAL_FLAG_voidspawn_tech_forbidden
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = hatchling_killed
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+    }
+    ai_weight = {
+        factor = @ESC_AI_tech_weight_multiplier
+        modifier = {
+            factor = 0
+            NOT = {
+                has_country_flag = hatchling_killed
+            }
+        }
+        modifier = {
+            factor = 1.25
+            has_ethic = ethic_militarist
+        }
+        modifier = {
+            factor = 1.5
+            has_ethic = ethic_fanatic_militarist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = society
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+    }
+}

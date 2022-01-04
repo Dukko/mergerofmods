@@ -1,0 +1,13 @@
+large_turret = {
+    size = large
+    component = weapon
+    entities = {
+        weapon_type_kinetic = "large_kinetic_gun_entity"
+        weapon_type_energy = "large_laser_gun_entity"
+        weapon_type_explosive = "turret_torpedo_entity"
+        weapon_type_explosive = "turret_missile_large_entity"
+        weapon_type_biological = "large_kinetic_gun_entity"
+        weapon_type_psionic = "large_laser_gun_entity"
+        weapon_type_nanite = "large_kinetic_gun_entity"
+    }
+}

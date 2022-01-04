@@ -1,0 +1,24 @@
+tech_stellarite_generator_lvl3 = {
+    area = physics
+    cost = @acot_tier8cost3
+    tier = 8
+    category = {
+        field_manipulation
+    }
+    weight = 5
+    ai_update_type = military
+    is_rare = yes
+    prerequisites = {
+        tech_stellarite_generator_ae
+    }
+    potential = {
+        NOR = {
+            has_global_flag = acot_building_forbidden
+            is_fallen_empire = yes
+        }
+        has_technology = tech_stellarite_reactor
+    }
+    ai_weight = {
+        factor = 200
+    }
+}

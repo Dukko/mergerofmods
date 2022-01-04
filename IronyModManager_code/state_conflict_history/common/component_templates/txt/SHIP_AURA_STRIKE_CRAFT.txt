@@ -6,6 +6,8 @@ utility_component_template = {
     power = 0
     size_restriction = {
         juggernaut
+        ascended_juggernaut
+        precursor_juggernaut
         scavenger_bot
         nanite_dragon
     }

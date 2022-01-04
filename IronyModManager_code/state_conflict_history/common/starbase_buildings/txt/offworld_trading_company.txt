@@ -15,12 +15,9 @@ offworld_trading_company = {
         }
         OR = {
             has_starbase_module = trading_hub
-            OR = {
-                exists = owner
-                owner = {
-                    has_valid_civic = civic_trading_fleet
-                }
-                has_starbase_module = anchorage
+            starbase_buildable_is_in_queue_before = {
+                first = trading_hub
+                second = offworld_trading_company
             }
         }
     }
@@ -32,7 +29,13 @@ offworld_trading_company = {
     }
     custom_tooltip = sm_offworld_trading_company_desc_modifier
     show_in_tech = "tech_space_trading"
-triggered_station_modifier = {
+    triggered_system_modifier = {
+        potential = {
+            has_starbase_building = offworld_trading_company
+        }
+        trade_value_mult = 0.1
+    }
+    triggered_station_modifier = {
         potential = {
             exists = owner
             owner = {
@@ -40,6 +43,98 @@ triggered_station_modifier = {
             }
         }
         trade_value_add = 4
+    }
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = trading_hub
+                count >= 1
+            }
+            count_starbase_modules = {
+                type = trading_hub
+                count < 2
+            }
+        }
+        trade_value_add = 2
+    }
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = trading_hub
+                count >= 2
+            }
+            count_starbase_modules = {
+                type = trading_hub
+                count < 3
+            }
+        }
+        trade_value_add = 4
+    }
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = trading_hub
+                count >= 3
+            }
+            count_starbase_modules = {
+                type = trading_hub
+                count < 4
+            }
+        }
+        trade_value_add = 6
+    }
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = trading_hub
+                count >= 4
+            }
+            count_starbase_modules = {
+                type = trading_hub
+                count < 5
+            }
+        }
+        trade_value_add = 8
+    }
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = trading_hub
+                count >= 5
+            }
+            count_starbase_modules = {
+                type = trading_hub
+                count < 6
+            }
+        }
+        trade_value_add = 10
+    }
+    triggered_station_modifier = {
+        potential = {
+            hidden_trigger = {
+                exists = this
+            }
+            count_starbase_modules = {
+                type = trading_hub
+                count >= 6
+            }
+        }
+        trade_value_add = 12
     }
     triggered_station_modifier = {
         potential = {
@@ -150,13 +245,9 @@ triggered_station_modifier = {
             }
         }
         trade_value_add = 12
-    }    
-    triggered_system_modifier = {
-        potential = {
-            has_starbase_building = offworld_trading_company
-        }
-        trade_value_mult = 0.1
     }
+    custom_tooltip = sm_offworld_trading_company_desc_modifier
+    show_in_tech = "tech_space_trading"
     ai_build_at_chokepoint = no
     ai_build_outside_chokepoint = yes
     ai_weight = {

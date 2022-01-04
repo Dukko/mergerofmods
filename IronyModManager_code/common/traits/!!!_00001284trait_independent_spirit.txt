@@ -1,0 +1,18 @@
+trait_independent_spirit = {
+    cost = 0
+    modification = no
+    initial = no
+    randomized = no
+    potential_crossbreeding_chance = 0
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+        ROBOT
+        MACHINE
+    }
+    modifier = {
+    }
+    slave_cost = {
+        energy = -25
+    }
+}

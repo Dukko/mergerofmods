@@ -35,7 +35,7 @@ necromancer = {
         }
     }
     resources = {
-        category = planet_researchers
+        category = planet_necromancers
         produces = {
             physics_research = 6
             society_research = 6
@@ -145,15 +145,6 @@ necromancer = {
             has_trait = trait_lithoid
         }
         modifier = {
-            factor = 1.5
-            has_job = necromancer
-        }
-        modifier = {
-            factor = 1.2
-            is_unemployed = yes
-            is_pop_category = specialist
-        }
-        modifier = {
             factor = 2
             has_trait = trait_necrophage
         }
@@ -169,6 +160,15 @@ necromancer = {
         modifier = {
             factor = 1.5
             has_trait = trait_hologanglion
+        }
+        modifier = {
+            factor = 1.5
+            has_job = necromancer
+        }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = specialist
         }
     }
 }

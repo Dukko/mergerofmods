@@ -1,0 +1,38 @@
+esc_tech_repair_drones = {
+    area = engineering
+    category = {
+        materials
+    }
+    tier = 4
+    cost = @tier4cost1
+    weight = @tier4weight1
+    prerequisites = {
+        "esc_tech_grand_research_initiative"
+        "tech_cruisers"
+    }
+    potential = {
+        NOT = {
+            has_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden
+        }
+    }
+    weight_modifier = {
+        factor = 1.25
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+    ai_weight = {
+        factor = @ESC_AI_tech_weight_multiplier
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_materials"
+            }
+        }
+    }
+}

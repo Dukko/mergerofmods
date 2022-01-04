@@ -1,0 +1,104 @@
+esc_tech_enigmatic_energy_harvesting = {
+    area = physics
+    category = {
+        particles
+    }
+    tier = 6
+    cost = @ESC_TECH_tier6_cost1
+    weight = @ESC_TECH_tier6_weight1
+    ai_update_type = military
+    prerequisites = {
+        "esc_tech_sensors_6"
+    }
+    is_rare = yes
+    is_reverse_engineerable = no
+    gateway = ESC_ENIGMATIC_WEAPONS
+    potential = {
+        NOT = {
+            has_global_flag = ESC_GLOBAL_FLAG_enigmatic_weapons_forbidden
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+            NOT = {
+                OR = {
+                    has_country_flag = fortress_solved
+                    has_technology = tech_enigmatic_encoder
+                    has_tech_option = tech_enigmatic_encoder
+                    has_technology = tech_enigmatic_decoder
+                    has_tech_option = tech_enigmatic_decoder
+                }
+            }
+        }
+        modifier = {
+            factor = 0.8
+            has_ethic = ethic_fanatic_pacifist
+        }
+        modifier = {
+            factor = 0.9
+            has_ethic = ethic_pacifist
+        }
+        modifier = {
+            factor = 1.1
+            has_ethic = ethic_materialist
+        }
+        modifier = {
+            factor = 1.2
+            has_ethic = ethic_fanatic_materialist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+    }
+    ai_weight = {
+        factor = @ESC_AI_tech_weight_multiplier
+        modifier = {
+            factor = 0
+            NOT = {
+                OR = {
+                    has_country_flag = fortress_solved
+                    has_technology = tech_enigmatic_encoder
+                    has_tech_option = tech_enigmatic_encoder
+                    has_technology = tech_enigmatic_decoder
+                    has_tech_option = tech_enigmatic_decoder
+                }
+            }
+        }
+        modifier = {
+            factor = 0.8
+            has_ethic = ethic_fanatic_pacifist
+        }
+        modifier = {
+            factor = 0.9
+            has_ethic = ethic_pacifist
+        }
+        modifier = {
+            factor = 1.1
+            has_ethic = ethic_materialist
+        }
+        modifier = {
+            factor = 1.2
+            has_ethic = ethic_fanatic_materialist
+        }
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = physics
+                has_trait = "leader_trait_expertise_particles"
+            }
+        }
+        modifier = {
+            factor = @ap_technological_ascendancy_rare_tech
+            has_ascension_perk = ap_technological_ascendancy
+        }
+    }
+}

@@ -1,0 +1,196 @@
+namespace = primitive
+planet_event = {
+    id = primitive.130
+    hide_window = yes
+    trigger = {
+        is_artificial = no
+        has_owner = yes
+        owner = {
+            is_country_type = primitive
+            is_pacifist = no
+            OR = {
+                has_country_flag = atomic_age
+                has_country_flag = early_space_age
+            }
+            NOT = {
+                has_country_flag = suppress_vanilla_primitive_nuking
+            }
+            NOT = {
+                ruler = {
+                    has_trait = leader_trait_ruler_chosen
+                }
+            }
+        }
+        OR = {
+            has_observation_outpost = no
+            AND = {
+                has_observation_outpost = yes
+                observation_outpost = {
+                    has_mission = passive_observation
+                }
+            }
+            AND = {
+                has_observation_outpost = yes
+                observation_outpost = {
+                    has_mission = native_indoctrination
+                }
+            }
+            AND = {
+                has_observation_outpost = yes
+                observation_outpost = {
+                    has_mission = specimen_collection
+                }
+            }
+            AND = {
+                has_observation_outpost = yes
+                observation_outpost = {
+                    has_scion_mission = yes
+                }
+            }
+        }
+    }
+    mean_time_to_happen = {
+        years = 50
+    }
+    immediate = {
+        random_list = {
+            5 = {
+                owner = {
+                    random_owned_ship = {
+                        limit = {
+                            is_ship_size = primitive_space_station
+                        }
+                        fleet = {
+                            destroy_fleet = THIS
+                        }
+                    }
+                }
+                if = {
+                    limit = {
+                        has_observation_outpost = yes
+                    }
+                    observation_outpost_owner = {
+                        random_list = {
+                            25 = {
+                                country_event = {
+                                    id = primitive.131
+                                }
+                                modifier = {
+                                    factor = 0
+                                    root = {
+                                        OR = {
+                                            is_planet_class = pc_ringworld_habitable
+                                            is_planet_class = pc_habitat
+                                        }
+                                    }
+                                }
+                            }
+                            70 = {
+                                country_event = {
+                                    id = primitive.133
+                                }
+                            }
+                            5 = {
+                                country_event = {
+                                    id = prim_orig.30
+                                }
+                                modifier = {
+                                    factor = 0
+                                    NAND = {
+                                        root = {
+                                            OR = {
+                                                is_planet_class = pc_ringworld_habitable
+                                                is_planet_class = pc_habitat
+                                            }
+                                        }
+                                        host_has_dlc = Apocalypse
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                else = {
+                    owner = {
+                        random_list = {
+                            25 = {
+                                country_event = {
+                                    id = primitive.131
+                                }
+                                modifier = {
+                                    factor = 0
+                                    root = {
+                                        OR = {
+                                            is_planet_class = pc_ringworld_habitable
+                                            is_planet_class = pc_habitat
+                                        }
+                                    }
+                                }
+                            }
+                            70 = {
+                                country_event = {
+                                    id = primitive.133
+                                }
+                            }
+                            5 = {
+                                country_event = {
+                                    id = prim_orig.30
+                                }
+                                modifier = {
+                                    factor = 0
+                                    NAND = {
+                                        root = {
+                                            OR = {
+                                                is_planet_class = pc_ringworld_habitable
+                                                is_planet_class = pc_habitat
+                                            }
+                                        }
+                                        host_has_dlc = Apocalypse
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                modifier = {
+                    factor = 2
+                    has_observation_outpost = yes
+                    observation_outpost = {
+                        has_mission = native_indoctrination
+                    }
+                }
+                modifier = {
+                    factor = 1.5
+                    has_observation_outpost = yes
+                    observation_outpost = {
+                        has_mission = specimen_collection
+                    }
+                }
+            }
+            5 = {
+                modifier = {
+                    factor = 0
+                    has_observation_outpost = yes
+                    observation_outpost = {
+                        has_mission = native_indoctrination
+                    }
+                }
+                modifier = {
+                    factor = 0.5
+                    has_observation_outpost = yes
+                    observation_outpost = {
+                        has_mission = specimen_collection
+                    }
+                }
+            }
+            10 = {
+                modifier = {
+                    factor = 0
+                    owner = {
+                        is_militarist = yes
+                    }
+                }
+            }
+        }
+    }
+}

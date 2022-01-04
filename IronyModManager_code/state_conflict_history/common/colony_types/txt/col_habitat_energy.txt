@@ -6,7 +6,6 @@ col_habitat_energy = {
             uses_district_set = pdarchive
         }
         exists = owner
-        is_capital = no
         OR = {
             owner = {
                 is_gestalt = yes
@@ -30,7 +29,6 @@ col_habitat_energy = {
                 is_active_resolution = "resolution_greatergood_greater_than_ourselves"
                 is_active_resolution = "resolution_greatergood_balance_in_the_middle"
                 is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
-                is_active_resolution = "resolution_greatergood_6"
             }
         }
         modifier = {
@@ -49,7 +47,6 @@ col_habitat_energy = {
                 is_active_resolution = "resolution_greatergood_greater_than_ourselves"
                 is_active_resolution = "resolution_greatergood_balance_in_the_middle"
                 is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
-                is_active_resolution = "resolution_greatergood_6"
             }
         }
         modifier = {

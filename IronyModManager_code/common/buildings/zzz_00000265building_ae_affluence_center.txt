@@ -1,0 +1,59 @@
+building_ae_affluence_center = {
+    base_buildtime = 600
+    can_demolish = yes
+    can_build = no
+    category = manufacturing
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = tech_aot_ae_affluence_center
+        }
+    }
+    prerequisites = {
+        tech_aot_ae_affluence_center
+    }
+    allow = {
+        has_ascended_capital = yes
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 250
+            sr_dark_matter = 750
+            acot_sr_dark_energy = 750
+        }
+        produces = {
+            consumer_goods = 150
+            unity = 300
+        }
+        upkeep = {
+            acot_sr_dark_energy = 10
+            sr_dark_matter = 10
+        }
+    }
+    upgrades = {
+        building_stellarite_affluence_center
+    }
+    ai_weight = {
+        weight = 10
+        modifier = {
+            factor = 5
+            owner = {
+                has_monthly_income = {
+                    resource = consumer_goods
+                    value < 10
+                }
+                has_monthly_income = {
+                    resource = minerals
+                    value > 12
+                }
+            }
+        }
+    }
+    ai_resource_production = {
+        consumer_goods = 6
+        trigger = {
+            always = yes
+        }
+    }
+}

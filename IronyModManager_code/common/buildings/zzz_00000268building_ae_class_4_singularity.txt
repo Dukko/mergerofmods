@@ -1,0 +1,53 @@
+building_ae_class_4_singularity = {
+    base_buildtime = 600
+    can_demolish = yes
+    can_build = no
+    category = resource
+    prerequisites = {
+        "tech_aot_ae_class_4_singularity"
+    }
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = tech_aot_ae_class_4_singularity
+        }
+    }
+    allow = {
+        has_ascended_capital = yes
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 250
+            acot_sr_dark_energy = 750
+            sr_dark_matter = 750
+        }
+        produces = {
+            energy = 600
+        }
+        upkeep = {
+            sr_dark_matter = 30
+        }
+    }
+    upgrades = {
+        building_stellarite_class_7_singularity
+    }
+    ai_weight = {
+        weight = 10
+        modifier = {
+            factor = 5
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 20
+                }
+            }
+        }
+    }
+    ai_resource_production = {
+        energy = 800
+        trigger = {
+            always = yes
+        }
+    }
+}

@@ -9,8 +9,11 @@ roboticist = {
         is_being_assimilated = no
         is_sapient = yes
     }
+    possible_precalc = can_fill_specialist_job
     possible = {
-        specialist_job_check_trigger = yes
+        NOT = {
+            has_trait = trait_slave_gene
+        }
     }
     planet_modifier = {
         planet_pop_assembly_add = 2
@@ -18,10 +21,27 @@ roboticist = {
     resources = {
         category = planet_pop_assemblers
         upkeep = {
+            trigger = {
+                planet = {
+                    NOR = {
+                        has_modifier = planet_robot_assembly_control
+                        has_modifier = planet_population_control_gestalt
+                    }
+                }
+            }
             alloys = 2
         }
     }
     weight = {
         weight = 500
+        modifier = {
+            factor = 1.5
+            has_job = roboticist
+        }
+        modifier = {
+            factor = 1.2
+            is_unemployed = yes
+            is_pop_category = specialist
+        }
     }
 }

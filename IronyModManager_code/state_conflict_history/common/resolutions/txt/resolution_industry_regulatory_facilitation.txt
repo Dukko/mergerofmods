@@ -161,6 +161,10 @@ resolution_industry_regulatory_facilitation = {
         }
         modifier = {
             factor = 0.5
+            has_origin = origin_terraformer
+        }
+        modifier = {
+            factor = 0.5
             owner_species = {
                 has_trait = eco_trait_clean
             }

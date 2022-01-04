@@ -1,5 +1,5 @@
 building_master_archive = {
-    base_buildtime = @b2_time
+    base_buildtime = 480
     can_build = no
     can_demolish = yes
     potential = {
@@ -29,11 +29,7 @@ building_master_archive = {
             society_research = 100
             engineering_research = 100
         }
-        cost = {
-            minerals = @b2_minerals
-        }
         upkeep = {
-            energy = 20
         }
     }
     upgrades = {

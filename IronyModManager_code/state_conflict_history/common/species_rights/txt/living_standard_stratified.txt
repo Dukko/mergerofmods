@@ -6,7 +6,7 @@ living_standard_stratified = {
         from = {
             is_gestalt = no
             NOR = {
-                has_valid_civic = civic_shared_burden
+                is_shared_burdens_empire = yes
                 has_valid_civic = civic_employee_ownership
                 }
         }

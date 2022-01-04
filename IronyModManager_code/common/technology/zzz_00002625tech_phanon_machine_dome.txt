@@ -1,0 +1,41 @@
+tech_phanon_machine_dome = {
+    cost = @acot_tier10cost2
+    area = engineering
+    tier = 9
+    category = {
+        industry
+    }
+    prerequisites = {
+        tech_stellarite_machine_dome
+        tech_civil_phanon_application
+    }
+    weight = @tier5weight1
+    potential = {
+        has_ascension_perk = ap_synthetic_age
+        NOR = {
+            has_global_flag = aot_phanon_content_OFF
+            is_fallen_empire = yes
+        }
+        has_technology = tech_civil_phanon_application
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+                has_level > 2
+            }
+        }
+    }
+    ai_weight = {
+        weight = 2
+        modifier = {
+            factor = 1.25
+            research_leader = {
+                area = engineering
+                has_trait = "leader_trait_expertise_industry"
+            }
+        }
+    }
+}

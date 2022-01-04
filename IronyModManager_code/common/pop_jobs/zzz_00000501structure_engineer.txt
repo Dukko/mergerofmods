@@ -1,0 +1,96 @@
+@insula_structure_engineer_weight = 1500
+structure_engineer = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_colony_shelter
+    clothes_texture_index = 2
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_specialist_job
+    possible = {
+        owner = {
+            is_fallen_empire = no
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 30
+        planet_amenities_add = 25
+    }
+    resources = {
+        category = planet_infrastructure
+        produces = {
+            unity = 2
+            engineering_research = 5
+        }
+    }
+    weight = {
+        weight = @insula_structure_engineer_weight
+        modifier = {
+            factor = 2
+            has_living_standard = {
+                type = living_standard_academic_privilege
+            }
+        }
+        modifier = {
+            factor = 3
+            has_trait = trait_erudite
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                has_trait = trait_robot_logic_engines
+                has_trait = trait_intelligent
+            }
+        }
+        modifier = {
+            factor = 2
+            has_trait = trait_brainslug
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+                has_trait = trait_natural_engineers
+                has_trait = trait_natural_physicists
+                has_trait = trait_natural_sociologists
+            }
+        }
+        modifier = {
+            factor = 1.5
+            has_job = structure_engineer
+        }
+        modifier = {
+            factor = 1.5
+            has_trait = trait_latent_psionic
+        }
+        modifier = {
+            factor = 2
+            has_trait = trait_psionic
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                has_trait = trait_enigmatic_intelligence
+                has_trait = trait_enigmatic_intelligence_poor
+            }
+        }
+        modifier = {
+            factor = 2
+            has_trait = trait_presapient_natural_intellectuals
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+                has_trait = trait_robust
+                has_trait = trait_robot_efficient_processors
+            }
+        }
+        modifier = {
+            factor = 1.5
+            has_trait = trait_void_dweller_1
+        }
+    }
+}
