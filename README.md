@@ -3,7 +3,7 @@ This is my Stellaris collection of mods, mostly compatible with each other. See 
 Don't forget to subscribe to all the mods here: https://steamcommunity.com/sharedfiles/filedetails/?id=2606660126
 
 How to apply the collection:
-- Download the latest zip from above or here: https://github.com/Dukko/mergerofmods/raw/main/Lem.zip.
+- Download the latest zip from above
 - Subscribe to all mods (https://steamcommunity.com/sharedfiles/filedetails/?id=2606660126). 
 - LET STEAM FINISH DOWNLOADING BEFORE GOING TO THE NEXT STEP.
 - DID YOU CHECK IF STEAM IS DONE DOWNLOADING? IT WILL STOP AND START A FEW TIMES.
