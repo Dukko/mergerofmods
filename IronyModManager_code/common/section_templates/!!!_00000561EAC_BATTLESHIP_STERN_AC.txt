@@ -18,7 +18,7 @@ ship_section_template = {
         template = "point_defence_turret"
         locatorname = "medium_gun_02"
     }
-    large_utility_slots = 2
+    large_utility_slots = 1
     aux_utility_slots = 2
     resources = {
         category = ship_sections

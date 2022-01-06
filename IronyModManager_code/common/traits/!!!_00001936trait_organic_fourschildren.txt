@@ -9,7 +9,6 @@ trait_organic_fourschildren = {
     sorting_priority = 20
     initial = no
     randomized = no
-    improves_leaders = yes
     modification = no
     forced_happiness = no
     immortal_leaders = yes

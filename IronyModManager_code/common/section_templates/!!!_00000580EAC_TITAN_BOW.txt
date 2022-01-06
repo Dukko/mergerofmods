@@ -11,7 +11,7 @@ ship_section_template = {
     }
     ai_weight = {
         modifier = {
-            factor = 20
+            factor = 10
             is_preferred_weapons = weapon_type_strike_craft
         }
         modifier = {
@@ -41,6 +41,30 @@ ship_section_template = {
     }
     component_slot = {
         name = "STRIKE_CRAFT_04"
+        template = "large_strike_craft"
+        rotation = -22
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_05"
+        template = "large_strike_craft"
+        rotation = 45
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_06"
+        template = "large_strike_craft"
+        rotation = -45
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_07"
+        template = "large_strike_craft"
+        rotation = 22
+        locatorname = "xl_gun_01"
+    }
+    component_slot = {
+        name = "STRIKE_CRAFT_08"
         template = "large_strike_craft"
         rotation = -22
         locatorname = "xl_gun_01"

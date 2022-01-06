@@ -11,7 +11,7 @@ ship_section_template = {
     }
     ai_weight = {
         modifier = {
-            factor = 20
+            factor = 10
             is_preferred_weapons = weapon_type_strike_craft
         }
         modifier = {

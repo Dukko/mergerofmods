@@ -47,6 +47,14 @@ ap_world_shaper = {
         factor = 10000
         modifier = {
             factor = 0
+            OR = {
+                has_origin = origin_void_dwellers
+                has_origin = origin_shattered_ring
+                has_trait = trait_aquatic
+            }
+            }
+        modifier = {
+            factor = 0
             has_ascension_perk = ap_machine_worlds
             has_ascension_perk = ap_hive_worlds
         }

@@ -8,7 +8,7 @@ ship_section_template = {
     icon = "GFX_ship_part_core_mid"
     ai_weight = {
         modifier = {
-            factor = 20
+            factor = 10
             is_preferred_weapons = weapon_type_explosive
         }
         modifier = {

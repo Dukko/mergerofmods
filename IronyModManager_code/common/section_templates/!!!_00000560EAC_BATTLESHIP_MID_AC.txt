@@ -44,7 +44,7 @@ ship_section_template = {
         rotation = -120
         locatorname = "strike_craft_locator_02"
     }
-    large_utility_slots = 6
+    large_utility_slots = 3
     resources = {
         category = ship_sections
         cost = {
@@ -53,7 +53,7 @@ ship_section_template = {
     }
     ai_weight = {
         modifier = {
-            factor = 70
+            factor = 10
             is_preferred_weapons = weapon_type_strike_craft
         }
         modifier = {

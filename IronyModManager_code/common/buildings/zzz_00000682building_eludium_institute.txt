@@ -90,7 +90,11 @@ building_eludium_institute = {
         "tech_eludium_research_initiative"
     }
     show_tech_unlock_if = {
-        is_regular_empire = yes
+        owner = {
+            any_owned_planet = {
+                is_planet_class = pc_floating
+            }
+        }
     }
     ai_resource_production = {
         trigger = {

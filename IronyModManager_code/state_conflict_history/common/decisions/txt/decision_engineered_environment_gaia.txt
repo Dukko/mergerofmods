@@ -1,0 +1,195 @@
+decision_engineered_environment_gaia = {
+    icon = decision_engineered_environment_gaia
+    owned_planets_only = yes
+    enactment_time = 1800
+    resources = {
+        category = decisions
+        cost = {
+            energy = 5000
+        }
+    }
+    allow = {
+        NOT = {
+            is_planet_class = pc_gaia
+        }
+    }
+    potential = {
+        is_artificial = no
+        is_pd_arcology = no
+        NOT = {
+            is_planet_class = pc_pdshroud
+        }
+        NOT = {
+            is_planet_class = pc_gaia
+        }
+        NOT = {
+            is_planet_class = pc_city
+        }
+        NOT = {
+            is_planet_class = pc_ecocity
+        }
+        NOT = {
+            is_planet_class = pc_corpoarc
+        }
+        NOT = {
+            is_planet_class = pc_palacearc
+        }
+        NOT = {
+            is_planet_class = pc_capitalarc
+        }
+        NOT = {
+            is_planet_class = pc_necropolis
+        }
+        NOT = {
+            is_planet_class = pc_machine_necropolis
+        }
+        NOT = {
+            is_planet_class = pc_necrohive
+        }
+        NOT = {
+            is_planet_class = pc_relic
+        }
+        NOT = {
+            is_planet_class = pc_milarc_relic
+        }
+        NOT = {
+            is_planet_class = pc_crystal
+        }
+        NOT = {
+            is_planet_class = pc_graveyard
+        }
+        NOT = {
+            is_planet_class = pc_floating
+        }
+        NOT = {
+            is_planet_class = pc_archive
+        }
+        NOT = {
+            is_planet_class = pc_technoorganic
+        }
+        NOT = {
+            is_planet_class = pc_pd_gas_giant_hab
+        }
+        NOT = {
+            is_planet_class = pc_pd_barren_hab
+        }
+        NOT = {
+            is_planet_class = pc_pd_barren_cold_hab
+        }
+        NOT = {
+            is_planet_class = pc_pd_frozen_hab
+        }
+        NOT = {
+            is_planet_class = pc_pd_molten_hab
+        }
+        NOT = {
+            is_planet_class = pc_pd_toxic_hab
+        }
+        NOT = {
+            is_planet_class = pc_pd_hothouse_hab
+        }
+        NOT = {
+            is_planet_class = pc_pd_asteroid_hab
+        }
+        NOT = {
+            is_planet_class = pc_hive
+        }
+        NOT = {
+            is_planet_class = pc_pdhive1
+        }
+        NOT = {
+            is_planet_class = pc_pdhive2
+        }
+        NOT = {
+            is_planet_class = pc_bioforge
+        }
+        NOT = {
+            is_planet_class = pc_biocapital
+        }
+        NOT = {
+            is_planet_class = pc_megafloraforge
+        }
+        NOT = {
+            is_planet_class = pc_megafloracapital
+        }
+        NOT = {
+            is_planet_class = pc_milarc
+        }
+        NOT = {
+            is_planet_class = pc_biofort
+        }
+        NOT = {
+            is_planet_class = pc_megaflorafort
+        }
+        NOT = {
+            is_planet_class = pc_machine_fort
+        }
+        NOT = {
+            is_planet_class = pc_shroudcity
+        }
+        NOT = {
+            is_planet_class = pc_shroudecocity
+        }
+        NOT = {
+            is_planet_class = pc_shroudcapitalarc
+        }
+        NOT = {
+            is_planet_class = pc_shroudpalacearc
+        }
+        NOT = {
+            is_planet_class = pc_shroudmilarc
+        }
+        NOT = {
+            is_planet_class = pc_shroudcorpoarc
+        }
+        has_modifier = engineered_environment
+        owner = {
+            has_ascension_perk = ap_world_shaper
+        }
+        NOT = {
+            is_planet_class = pc_habitable_gas_giant
+        }
+    }
+    effect = {
+        if = {
+            limit = {
+                NOT = {
+                    is_planet_class = pc_gaia
+                }
+            }
+            add_modifier = {
+                modifier = engineered_environment_gaia
+                days = -1
+            }
+        }
+        hidden_effect = {
+            remove_modifier = engineered_environment
+        }
+    }
+    ai_weight = {
+        weight = 3
+        modifier = {
+            factor = 0
+            or = {
+                num_pops < 20
+                and = {
+                    free_building_slots > 0
+                    free_jobs <= 0
+                }
+                free_building_slots > 2
+                owner = {
+                    or = {
+                        resource_stockpile_compare = {
+                            resource = energy
+                            value < 10000
+                        }
+                        resource_stockpile_compare = {
+                            resource = influence
+                            value < 150
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
