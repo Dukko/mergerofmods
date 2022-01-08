@@ -1,0 +1,21 @@
+building_vbp_power_grid = {
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = no
+    icon = building_primitive_power_plant
+    potential = {
+        exists = owner
+        owner = {
+            is_country_type = vbp_machine
+        }
+    }
+    planet_modifier = {
+        job_vbp_power_drone_add = 8
+    }
+    destroy_trigger = {
+        exists = owner
+        owner = {
+            is_primitive = no
+        }
+    }
+}

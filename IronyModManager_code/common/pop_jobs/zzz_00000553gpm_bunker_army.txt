@@ -1,0 +1,109 @@
+gpm_bunker_army = {
+    category = worker
+    condition_string = WORKER_JOB_TRIGGER
+    building_icon = gpm_building_stronghold
+    clothes_texture_index = 4
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_worker_job
+    possible = {
+        hidden_trigger = {
+            exists = owner
+        }
+        owner = {
+            is_gestalt = no
+        }
+    }
+    country_modifier = {
+        country_naval_cap_add = 4
+    }
+    triggered_country_modifier = {
+        potential = {
+            planet = {
+                exists = owner
+                owner = {
+                    has_technology = "tech_ground_defense_planning"
+                }
+            }
+        }
+        modifier = {
+            country_naval_cap_add = 2
+        }
+    }
+    pop_modifier = {
+        pop_defense_armies_add = 4
+    }
+    resources = {
+        category = planet_soldiers
+        produces = {
+            unity = 4
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    has_valid_civic = civic_martial_brotherhood
+                }
+            }
+            unity = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                has_modifier = martial_law
+            }
+        }
+        modifier = {
+            planet_stability_add = 5
+        }
+    }
+    weight = {
+        weight = @soldier_job_weight
+        modifier = {
+            factor = 10
+            planet = {
+                has_modifier = martial_law
+            }
+        }
+        modifier = {
+            factor = 2
+            has_trait = trait_resilient
+        }
+        modifier = {
+            factor = 2
+            has_trait = trait_very_strong
+        }
+        modifier = {
+            factor = 1.5
+            has_trait = trait_strong
+        }
+        modifier = {
+            factor = 0.5
+            has_trait = trait_weak
+        }
+        modifier = {
+            factor = 0.1
+            is_enslaved = yes
+            NOT = {
+                has_slavery_type = {
+                    type = slavery_military
+                }
+            }
+        }
+        modifier = {
+            factor = 10
+            is_enslaved = yes
+            has_slavery_type = {
+                type = slavery_military
+            }
+        }
+        modifier = {
+            factor = 0.1
+            can_take_servant_job = yes
+        }
+    }
+}

@@ -1,0 +1,59 @@
+building_stellarite_affluence_center = {
+    base_buildtime = 900
+    can_demolish = yes
+    can_build = no
+    category = manufacturing
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = tech_stellarite_affluence_center
+        }
+    }
+    prerequisites = {
+        tech_stellarite_affluence_center
+    }
+    allow = {
+        has_stellarite_capital = yes
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 2500
+            minerals = 2500
+            acot_sr_stellarite = 750
+        }
+        produces = {
+            consumer_goods = 300
+            unity = 600
+        }
+        upkeep = {
+            energy = 40
+            acot_sr_stellarite = 10
+        }
+    }
+    upgrades = {
+        building_phanon_affluence_center
+    }
+    ai_weight = {
+        weight = 10
+        modifier = {
+            factor = 5
+            owner = {
+                has_monthly_income = {
+                    resource = consumer_goods
+                    value < 10
+                }
+                has_monthly_income = {
+                    resource = minerals
+                    value > 12
+                }
+            }
+        }
+    }
+    ai_resource_production = {
+        consumer_goods = 6
+        trigger = {
+            always = yes
+        }
+    }
+}

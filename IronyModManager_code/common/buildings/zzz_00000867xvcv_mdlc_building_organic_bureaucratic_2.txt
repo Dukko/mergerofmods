@@ -1,0 +1,49 @@
+xvcv_mdlc_building_organic_bureaucratic_2 = {
+    base_buildtime = @b2_time
+    can_build = no
+    category = government
+    potential = {
+        exists = owner
+        owner = {
+            has_authority = auth_machine_intelligence
+            has_ascension_perk = xvcv_mdlc_ap_organic_work
+        }
+    }
+    destroy_trigger = {
+        exists = owner
+        owner = {
+            NAND = {
+                has_authority = auth_machine_intelligence
+                has_ascension_perk = xvcv_mdlc_ap_organic_work
+            }
+        }
+    }
+    convert_to = {
+        building_bureaucratic_3
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b3_minerals
+            rare_crystals = @b3_rare_cost
+        }
+        upkeep = {
+            energy = @b3_upkeep
+            rare_crystals = @b3_rare_upkeep
+        }
+    }
+    prerequisites = {
+        "tech_paradise_dome"
+    }
+    show_tech_unlock_if = {
+        owner = {
+            has_ascension_perk = xvcv_mdlc_ap_organic_work
+        }
+    }
+    planet_modifier = {
+        job_xvcv_mdlc_organic_bureaucrat_add = @xvcv_mdlc_ap_organic_work_tier_2_buildings_jobs
+    }
+    triggered_desc = {
+        text = job_xvcv_mdlc_organic_bureaucrat_effect_desc
+    }
+}

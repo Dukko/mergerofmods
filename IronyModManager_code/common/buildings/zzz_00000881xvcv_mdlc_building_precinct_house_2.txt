@@ -1,0 +1,54 @@
+xvcv_mdlc_building_precinct_house_2 = {
+    base_buildtime = @b2_time
+    can_build = no
+    category = unity
+    potential = {
+        exists = owner
+        owner = {
+            has_authority = auth_machine_intelligence
+            has_ascension_perk = xvcv_mdlc_ap_organic_work
+        }
+    }
+    destroy_trigger = {
+        exists = owner
+        owner = {
+            NAND = {
+                has_authority = auth_machine_intelligence
+                has_ascension_perk = xvcv_mdlc_ap_organic_work
+            }
+        }
+    }
+    convert_to = {
+        building_hypercomms_forum
+        building_sacred_nexus
+        building_hive_confluence
+        building_simulation_3
+        building_corporate_forum
+        building_galactic_memorial_3
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b2_minerals
+            volatile_motes = @b2_rare_cost
+        }
+        upkeep = {
+            energy = @b1_upkeep
+            volatile_motes = @b2_rare_upkeep
+        }
+    }
+    prerequisites = {
+        "tech_paradise_dome"
+    }
+    show_tech_unlock_if = {
+        owner = {
+            has_ascension_perk = xvcv_mdlc_ap_organic_work
+        }
+    }
+    planet_modifier = {
+        job_xvcv_mdlc_organic_enforcer_add = @b2_jobs
+    }
+    triggered_desc = {
+        text = job_xvcv_mdlc_organic_enforcer_effect_desc
+    }
+}

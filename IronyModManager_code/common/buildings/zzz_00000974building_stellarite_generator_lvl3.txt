@@ -1,0 +1,125 @@
+building_stellarite_generator_lvl3 = {
+    base_buildtime = 900
+    can_demolish = yes
+    can_build = no
+    category = manufacturing
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = tech_stellarite_generator_lvl3
+        }
+    }
+    allow = {
+        has_stellarite_capital = yes
+    }
+    upgrades = {
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_sun_masterdrone_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_sun_master_add = 2
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            uses_district_set = sigma_habitat
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = building_stellarite_generator_lvl3_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            uses_district_set = sigma_habitat
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = building_stellarite_generator_lvl3_hive_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            uses_district_set = sigma_habitat
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = building_stellarite_generator_lvl3_machine_effect_desc
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 2500
+            energy = 2500
+            acot_sr_stellarite = 2500
+        }
+        produces = {
+        }
+        produces = {
+            trigger = {
+                owner = {
+                    is_ai = yes
+                }
+            }
+            acot_sr_stellarite = 1000
+            energy = 200
+        }
+        produces = {
+            trigger = {
+                has_building = building_stellarite_nexus
+            }
+            acot_sr_stellarite = 200
+        }
+        produces = {
+            trigger = {
+                has_building = building_phanon_stellarite_nexus
+            }
+            acot_sr_stellarite = 2000
+        }
+        upkeep = {
+            energy = 800
+        }
+    }
+    prerequisites = {
+        "tech_stellarite_generator_lvl3"
+    }
+    ai_weight = {
+        weight = 150000
+        modifier = {
+            factor = 100000
+            owner = {
+                has_monthly_income = {
+                    resource = acot_sr_stellarite
+                    value <= 3
+                }
+            }
+        }
+        modifier = {
+            factor = 0.1
+            num_buildings = {
+                type = building_stellarite_generator_lvl3
+                value >= 2
+            }
+        }
+    }
+}

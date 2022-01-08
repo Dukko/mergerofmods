@@ -1,0 +1,34 @@
+alien_colonist = {
+    icon = colonist
+    category = xeno_ward
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = building_colony_shelter
+    clothes_texture_index = 3
+    possible_pre_triggers = {
+        has_owner = yes
+        is_sapient = yes
+    }
+    possible = {
+        has_pop_flag = alien_colonist
+    }
+    pop_modifier = {
+        planet_pops_food_upkeep_mult = -2
+        planet_pops_minerals_upkeep_mult = -2
+        pop_housing_usage_add = -2
+        planet_pops_consumer_goods_upkeep_mult = -2
+        pop_amenities_usage_add = -2
+        pop_government_ethic_attraction = -1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            planet = {
+                has_planet_flag = communications_with_primitives
+            }
+        }
+        trade_value_add = 3
+        planet_jobs_society_research_produces_mult = 0.1
+    }
+    weight = {
+        weight = 10000
+    }
+}

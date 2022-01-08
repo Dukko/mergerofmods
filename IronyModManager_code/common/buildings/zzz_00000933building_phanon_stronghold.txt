@@ -1,0 +1,96 @@
+building_phanon_stronghold = {
+    base_buildtime = 900
+    planetary_ftl_inhibitor = yes
+    add_to_first_building_slot = yes
+    can_build = no
+    category = army
+    position_priority = 100
+    allow = {
+        has_phanon_capital = yes
+    }
+    planet_modifier = {
+        planet_housing_add = 40
+        planet_army_build_time_mult = -0.1
+        planet_crime_add = -20
+        planet_stability_add = 10
+    }
+    army_modifier = {
+        army_defense_damage_mult = 4
+        army_defense_health_mult = 4
+        army_defense_morale_mult = 4
+    }
+    potential = {
+        NOT = {
+            has_global_flag = aot_phanon_content_OFF
+        }
+        exists = owner
+        owner = {
+            has_technology = tech_phanon_stronghold
+        }
+    }
+    upgrades = {
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_fallen_empire = no
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_phanon_enforcer_add = 8
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_fallen_empire = no
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_phanon_enforcer_drone_add = 8
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 5000
+            energy = 5000
+            aot_sr_runic_power = 1000
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    is_ai = no
+                }
+            }
+            energy = 100
+            aot_sr_runic_power = 20
+        }
+    }
+    prerequisites = {
+        "tech_phanon_stronghold"
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 100000
+            num_pops >= 40
+            NOR = {
+                num_buildings = {
+                    type = building_phanon_stronghold
+                    value <= 2
+                }
+            }
+            owner = {
+                has_monthly_income = {
+                    resource = aot_sr_runic_power
+                    value <= 3
+                }
+            }
+        }
+    }
+}

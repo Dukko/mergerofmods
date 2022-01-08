@@ -1,0 +1,45 @@
+building_phanon_psg = {
+    base_buildtime = 900
+    add_to_first_building_slot = yes
+    can_build = no
+    category = army
+    position_priority = 100
+    potential = {
+        NOT = {
+            has_global_flag = aot_phanon_content_OFF
+        }
+        exists = owner
+        owner = {
+            has_technology = tech_phanon_psg
+        }
+    }
+    allow = {
+        has_phanon_capital = yes
+    }
+    planet_modifier = {
+        planet_orbital_bombardment_damage = -1
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 10000
+            minerals = 10000
+            aot_sr_runic_power = 2000
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    is_ai = no
+                }
+            }
+            energy = 2000
+            aot_sr_runic_power = 100
+        }
+    }
+    prerequisites = {
+        "tech_phanon_psg"
+    }
+    ai_weight = {
+        weight = 15000
+    }
+}

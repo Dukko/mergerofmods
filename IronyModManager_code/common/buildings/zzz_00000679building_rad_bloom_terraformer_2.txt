@@ -1,0 +1,24 @@
+building_rad_bloom_terraformer_2 = {
+    base_buildtime = @b2_time
+    can_build = no
+    category = government
+    can_be_disabled = no
+    icon = building_rad_bloom_terraformer
+    prerequisites = {
+        "tech_rad_bloom_terraform_2"
+    }
+    allow = {
+        buildings_simple_allow = yes
+        has_upgraded_capital = yes
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 2000
+            sr_rad_bloom = 500
+        }
+    }
+    triggered_desc = {
+        text = building_rad_bloom_terraformer_2_effect_desc
+    }
+}

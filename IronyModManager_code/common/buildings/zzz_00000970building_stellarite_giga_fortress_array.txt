@@ -1,0 +1,75 @@
+building_stellarite_giga_fortress_array = {
+    base_buildtime = 1200
+    add_to_first_building_slot = yes
+    can_be_ruined = no
+    can_be_disabled = no
+    can_demolish = no
+    can_build = no
+    planetary_ftl_inhibitor = yes
+    category = army
+    position_priority = 100
+    potential = {
+    }
+    allow = {
+        has_stellarite_capital = yes
+    }
+    upgrades = {
+        building_phanon_giga_fortress_array
+    }
+    planet_modifier = {
+        planet_amenities_add = 40
+        planet_housing_add = 40
+        planet_stability_add = 100
+        planet_crime_add = -100
+    }
+    army_modifier = {
+        army_defense_damage_mult = 20
+        army_defense_health_mult = 20
+        army_defense_morale_mult = 20
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        job_stellarite_giga_fortress_operator_add = 6
+        job_stellarite_enforcer_add = 20
+        job_stellarite_giga_fortress_operator_mentat_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        job_stellarite_giga_fortress_operator_drone_add = 6
+        job_stellarite_enforcer_drone_add = 20
+        job_stellarite_giga_fortress_operator_mentat_drone_add = 2
+    }
+    country_modifier = {
+        country_naval_cap_add = 400
+        starbase_shipyard_build_speed_mult = 0.2
+    }
+    resources = {
+        category = planet_buildings
+        produces = {
+            unity = 100
+            influence = 2
+            food = 100
+        }
+        cost = {
+            energy = 50000
+            minerals = 30000
+            acot_sr_stellarite = 10000
+        }
+    }
+    prerequisites = {
+        "tech_stellarite_giga_fortress"
+    }
+    ai_weight = {
+        weight = 150000
+    }
+}

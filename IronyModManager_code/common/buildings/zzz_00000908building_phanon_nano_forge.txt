@@ -1,0 +1,55 @@
+building_phanon_nano_forge = {
+    base_buildtime = 900
+    can_demolish = yes
+    can_build = no
+    category = manufacturing
+    prerequisites = {
+        "tech_phanon_nano_forge"
+    }
+    potential = {
+        NOT = {
+            has_global_flag = aot_phanon_content_OFF
+        }
+        exists = owner
+        owner = {
+            has_technology = tech_phanon_nano_forge
+        }
+    }
+    allow = {
+        has_phanon_capital = yes
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 5000
+            minerals = 5000
+            aot_sr_runic_power = 1000
+        }
+        produces = {
+            alloys = 400
+        }
+        upkeep = {
+            aot_sr_runic_power = 20
+        }
+    }
+    upgrades = {
+    }
+    ai_weight = {
+        weight = 10
+        modifier = {
+            factor = 5
+            owner = {
+                has_monthly_income = {
+                    resource = alloys
+                    value < 30
+                }
+            }
+        }
+    }
+    ai_resource_production = {
+        alloys = 100
+        trigger = {
+            always = yes
+        }
+    }
+}

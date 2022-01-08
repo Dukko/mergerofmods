@@ -1,0 +1,41 @@
+building_monolith_mysterious = {
+    base_buildtime = @b2_time
+    base_cap_amount = 1
+    can_build = no
+    planetary_ftl_inhibitor = no
+    can_demolish = no
+    can_be_ruined = no
+    can_be_disabled = no
+    position_priority = 25
+    potential = {
+    }
+    triggered_planet_modifier = {
+    }
+    triggered_planet_modifier = {
+    }
+    triggered_desc = {
+    }
+    country_modifier = {
+        category_psionics_research_speed_mult = 0.2
+    }
+    planet_modifier = {
+        planet_stability_add = -10
+        planet_jobs_engineering_research_produces_mult = 0.15
+        planet_max_buildings_add = 1
+    }
+    army_modifier = {
+    }
+    resources = {
+        category = planet_buildings_strongholds
+        produces = {
+        }
+        cost = {
+        }
+        upkeep = {
+        }
+    }
+    on_built = {
+    }
+    on_destroy = {
+    }
+}

@@ -1,0 +1,60 @@
+@insula_worker_weight = 2
+void_bore_drone = {
+    category = simple_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_nano_forge
+    clothes_texture_index = 2
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible = {
+        owner = {
+            is_fallen_empire = no
+        }
+    }
+    resources = {
+        category = planet_bore
+        produces = {
+            minerals = 450
+        }
+    }
+    possible_precalc = can_fill_drone_job
+    weight = {
+        weight = @insula_worker_weight
+        modifier = {
+            factor = 2
+            OR = {
+                has_trait = trait_industrious
+                has_trait = trait_robot_power_drills
+            }
+        }
+        modifier = {
+            factor = 1.1
+            exists = owner
+            years_passed < 1
+            owner = {
+                has_valid_civic = civic_machine_assimilator
+            }
+            has_trait = trait_cybernetic
+        }
+        modifier = {
+            factor = 1.2
+            has_job = void_bore_drone
+        }
+        modifier = {
+            factor = 0.9
+            NOT = {
+                has_job = void_bore_drone
+            }
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value > 85
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+building_vbp_strip_mines = {
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = no
+    icon = building_primitive_mine
+    potential = {
+        exists = owner
+        owner = {
+            is_country_type = vbp_machine
+        }
+    }
+    planet_modifier = {
+        job_vbp_miner_drone_machine_add = 6
+    }
+    destroy_trigger = {
+        exists = owner
+        owner = {
+            is_primitive = no
+        }
+    }
+}

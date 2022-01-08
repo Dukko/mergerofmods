@@ -1,0 +1,48 @@
+xvcv_mdlc_building_organic_clinic = {
+    base_buildtime = @b1_time
+    base_cap_amount = 1
+    category = amenity
+    potential = {
+        exists = owner
+        owner = {
+            has_authority = auth_machine_intelligence
+            has_ascension_perk = xvcv_mdlc_ap_organic_work
+        }
+    }
+    destroy_trigger = {
+        exists = owner
+        owner = {
+            NAND = {
+                has_authority = auth_machine_intelligence
+                has_ascension_perk = xvcv_mdlc_ap_organic_work
+            }
+        }
+    }
+    convert_to = {
+        building_clinic
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b2_minerals
+        }
+        upkeep = {
+            energy = @b2_upkeep
+        }
+    }
+    upgrades = {
+        "xvcv_mdlc_building_organic_clinic_2"
+    }
+    planet_modifier = {
+        job_xvcv_mdlc_organic_healthcare_add = @xvcv_mdlc_ap_organic_work_tier_1_buildings_jobs
+    }
+    triggered_desc = {
+        text = job_xvcv_mdlc_organic_healthcare_effect_desc
+    }
+    ai_resource_production = {
+        society_research = 10
+        trigger = {
+            always = yes
+        }
+    }
+}

@@ -1,0 +1,89 @@
+building_phanon_giga_fortress_lab = {
+    base_buildtime = 1200
+    add_to_first_building_slot = yes
+    can_be_ruined = no
+    can_be_disabled = no
+    can_demolish = no
+    can_build = no
+    planetary_ftl_inhibitor = yes
+    category = army
+    position_priority = 100
+    potential = {
+        NOT = {
+            has_global_flag = aot_phanon_content_OFF
+        }
+        exists = owner
+        owner = {
+            has_technology = tech_phanon_giga_fortress
+        }
+    }
+    allow = {
+        has_phanon_capital = yes
+    }
+    planet_modifier = {
+        planet_amenities_add = 400
+        planet_housing_add = 400
+        planet_stability_add = 200
+        planet_crime_add = -200
+    }
+    army_modifier = {
+        army_defense_damage_mult = 40
+        army_defense_health_mult = 40
+        army_defense_morale_mult = 40
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        job_phanon_giga_fortress_operator_add = 6
+        job_phanon_enforcer_add = 20
+        job_acot_overseer_add = 4
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        job_phanon_giga_fortress_operator_drone_add = 6
+        job_phanon_enforcer_drone_add = 20
+        job_acot_overseer_droid_add = 4
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        job_phanon_giga_fortress_operator_drone_add = 6
+        job_phanon_enforcer_drone_add = 20
+        job_acot_overseer_droid_add = 4
+    }
+    country_modifier = {
+        country_admin_cap_add = 100
+    }
+    resources = {
+        category = planet_buildings
+        produces = {
+            unity = 400
+            influence = 8
+            food = 100
+        }
+        cost = {
+            energy = 100000
+            minerals = 60000
+            aot_sr_runic_power = 5000
+        }
+    }
+    prerequisites = {
+        "tech_phanon_giga_fortress"
+    }
+    ai_weight = {
+        weight = 15
+    }
+}

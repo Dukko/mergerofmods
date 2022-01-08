@@ -1,0 +1,28 @@
+building_mem_colony_ship_industrial_outpost = {
+    can_build = no
+    can_demolish = yes
+    can_be_ruined = no
+    icon = building_primitive_factory
+    potential = {
+        exists = owner
+        owner = {
+            is_country_type = primitive
+            has_country_flag = mem_use_custom_primitive_buildings
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 2
+        job_mem_primitive_laborer_add = 2
+    }
+    upgrades = {
+    }
+    destroy_trigger = {
+        NAND = {
+            exists = owner
+            owner = {
+                is_country_type = primitive
+                has_country_flag = mem_use_custom_primitive_buildings
+            }
+        }
+    }
+}

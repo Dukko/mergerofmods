@@ -1,0 +1,63 @@
+xvcv_mdlc_organic_artisan = {
+    category = bio_trophy
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = xvcv_mdlc_building_organic_factory
+    clothes_texture_index = 3
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        has_citizenship_type = {
+            type = citizenship_organic_trophy
+        }
+    }
+    resources = {
+        category = planet_artisans
+        produces = {
+            consumer_goods = 6
+        }
+        upkeep = {
+            minerals = 6
+        }
+    }
+    pop_modifier = {
+        pop_housing_usage_add = -1
+    }
+    weight = {
+        weight = @specialist_job_weight
+        modifier = {
+            factor = 2
+            is_enslaved = yes
+            can_take_servant_job = no
+        }
+        modifier = {
+            factor = 5
+            has_job = xvcv_mdlc_organic_artisan
+        }
+        modifier = {
+            factor = 10
+            has_job = xvcv_mdlc_organic_artisan
+            OR = {
+                has_trait = trait_robust
+                has_trait = trait_robot_efficient_processors
+            }
+        }
+        modifier = {
+            factor = 1.2
+            exists = planet
+            planet = {
+                has_available_jobs = xvcv_mdlc_organic_artisan
+            }
+            exists = owner
+            owner = {
+                is_ai = yes
+                has_monthly_income = {
+                    resource = consumer_goods
+                    value < 5
+                }
+            }
+        }
+    }
+}

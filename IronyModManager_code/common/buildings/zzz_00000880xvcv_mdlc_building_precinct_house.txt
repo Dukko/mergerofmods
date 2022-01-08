@@ -1,0 +1,46 @@
+xvcv_mdlc_building_precinct_house = {
+    base_buildtime = @b1_time
+    category = unity
+    potential = {
+        exists = owner
+        owner = {
+            has_authority = auth_machine_intelligence
+            has_ascension_perk = xvcv_mdlc_ap_organic_work
+        }
+    }
+    destroy_trigger = {
+        exists = owner
+        owner = {
+            NAND = {
+                has_authority = auth_machine_intelligence
+                has_ascension_perk = xvcv_mdlc_ap_organic_work
+            }
+        }
+    }
+    convert_to = {
+        building_heritage_site
+        building_holotemple
+        building_simulation_2
+        building_hive_cluster
+        building_corporate_site
+        building_galactic_memorial_2
+    }
+    planet_modifier = {
+        job_xvcv_mdlc_organic_enforcer_add = @b1_jobs
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b2_minerals
+        }
+        upkeep = {
+            energy = @b2_upkeep
+        }
+    }
+    upgrades = {
+        "xvcv_mdlc_building_precinct_house_2"
+    }
+    triggered_desc = {
+        text = job_xvcv_mdlc_organic_enforcer_effect_desc
+    }
+}

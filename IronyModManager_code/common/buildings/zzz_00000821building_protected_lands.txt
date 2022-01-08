@@ -1,0 +1,664 @@
+building_protected_lands = {
+    base_buildtime = @building_build_time3
+    can_demolish = yes
+    base_cap_amount = 1
+    category = manufacturing
+    potential = {
+        exists = owner
+        NOR = {
+            has_modifier = resort_colony
+            has_modifier = slave_colony
+            has_modifier = penal_colony
+        }
+    }
+    allow = {
+        OR = {
+            has_district = district_farming
+            has_district = district_farming_uncapped
+        }
+        NOR = {
+            has_modifier = resort_colony
+            has_modifier = slave_colony
+            has_modifier = penal_colony
+        }
+    }
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            owner = {
+                is_ai = yes
+            }
+        }
+    }
+    on_destroy = {
+        owner = {
+            set_timed_country_flag = {
+                flag = freed_building_protected_lands
+                days = 180
+            }
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+            num_districts = {
+                type = district_farming
+                value >= 2
+            }
+        }
+        modifier = {
+            job_brain_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+            num_districts = {
+                type = district_farming
+                value >= 4
+            }
+        }
+        modifier = {
+            job_brain_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+            num_districts = {
+                type = district_farming
+                value >= 6
+            }
+        }
+        modifier = {
+            job_brain_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+            num_districts = {
+                type = district_farming
+                value >= 8
+            }
+        }
+        modifier = {
+            job_brain_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+            num_districts = {
+                type = district_farming
+                value >= 10
+            }
+        }
+        modifier = {
+            job_brain_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+            num_districts = {
+                type = district_farming
+                value >= 12
+            }
+        }
+        modifier = {
+            job_brain_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+            num_districts = {
+                type = district_farming
+                value >= 14
+            }
+        }
+        modifier = {
+            job_brain_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+            num_districts = {
+                type = district_farming
+                value >= 16
+            }
+        }
+        modifier = {
+            job_brain_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+            num_districts = {
+                type = district_farming
+                value >= 18
+            }
+        }
+        modifier = {
+            job_brain_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+            num_districts = {
+                type = district_farming
+                value >= 20
+            }
+        }
+        modifier = {
+            job_brain_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+            num_districts = {
+                type = district_farming
+                value >= 2
+            }
+        }
+        modifier = {
+            job_calculator_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+            num_districts = {
+                type = district_farming
+                value >= 4
+            }
+        }
+        modifier = {
+            job_calculator_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+            num_districts = {
+                type = district_farming
+                value >= 6
+            }
+        }
+        modifier = {
+            job_calculator_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+            num_districts = {
+                type = district_farming
+                value >= 8
+            }
+        }
+        modifier = {
+            job_calculator_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+            num_districts = {
+                type = district_farming
+                value >= 10
+            }
+        }
+        modifier = {
+            job_calculator_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+            num_districts = {
+                type = district_farming
+                value >= 12
+            }
+        }
+        modifier = {
+            job_calculator_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+            num_districts = {
+                type = district_farming
+                value >= 14
+            }
+        }
+        modifier = {
+            job_calculator_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+            num_districts = {
+                type = district_farming
+                value >= 16
+            }
+        }
+        modifier = {
+            job_calculator_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+            num_districts = {
+                type = district_farming
+                value >= 18
+            }
+        }
+        modifier = {
+            job_calculator_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+            num_districts = {
+                type = district_farming
+                value >= 20
+            }
+        }
+        modifier = {
+            job_calculator_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+            num_districts = {
+                type = district_farming
+                value >= 2
+            }
+        }
+        modifier = {
+            job_researcher_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+            num_districts = {
+                type = district_farming
+                value >= 4
+            }
+        }
+        modifier = {
+            job_researcher_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+            num_districts = {
+                type = district_farming
+                value >= 6
+            }
+        }
+        modifier = {
+            job_researcher_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+            num_districts = {
+                type = district_farming
+                value >= 8
+            }
+        }
+        modifier = {
+            job_researcher_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+            num_districts = {
+                type = district_farming
+                value >= 10
+            }
+        }
+        modifier = {
+            job_researcher_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+            num_districts = {
+                type = district_farming
+                value >= 12
+            }
+        }
+        modifier = {
+            job_researcher_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+            num_districts = {
+                type = district_farming
+                value >= 14
+            }
+        }
+        modifier = {
+            job_researcher_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+            num_districts = {
+                type = district_farming
+                value >= 16
+            }
+        }
+        modifier = {
+            job_researcher_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+            num_districts = {
+                type = district_farming
+                value >= 18
+            }
+        }
+        modifier = {
+            job_researcher_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+            num_districts = {
+                type = district_farming
+                value >= 20
+            }
+        }
+        modifier = {
+            job_researcher_add = 1
+        }
+    }
+    triggered_desc = {
+        text = dash_14
+    }
+    triggered_desc = {
+        text = buildings_effect_properties
+    }
+    triggered_desc = {
+        text = buildings_effect_condition_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = protected_lands_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = protected_lands_hive_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = protected_lands_machine_effect_desc
+    }
+    triggered_desc = {
+        text = dash_14
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = job_researcher_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = job_brain_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = job_calculator_effect_desc
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            exotic_gases = @building_build_srcost2
+            minerals = @building_build_cost4
+        }
+        upkeep = {
+            exotic_gases = @building_build_srupkeep2
+            energy = @building_build_upkeep4
+        }
+        produces = {
+            trigger = {
+                num_districts = {
+                    type = district_farming
+                    value >= 2
+                }
+            }
+            food = 1
+        }
+        produces = {
+            trigger = {
+                num_districts = {
+                    type = district_farming
+                    value >= 4
+                }
+            }
+            food = 1
+        }
+        produces = {
+            trigger = {
+                num_districts = {
+                    type = district_farming
+                    value >= 6
+                }
+            }
+            food = 1
+        }
+        produces = {
+            trigger = {
+                num_districts = {
+                    type = district_farming
+                    value >= 8
+                }
+            }
+            food = 1
+        }
+        produces = {
+            trigger = {
+                num_districts = {
+                    type = district_farming
+                    value >= 10
+                }
+            }
+            food = 1
+        }
+        produces = {
+            trigger = {
+                num_districts = {
+                    type = district_farming
+                    value >= 12
+                }
+            }
+            food = 1
+        }
+        produces = {
+            trigger = {
+                num_districts = {
+                    type = district_farming
+                    value >= 14
+                }
+            }
+            food = 1
+        }
+        produces = {
+            trigger = {
+                num_districts = {
+                    type = district_farming
+                    value >= 16
+                }
+            }
+            food = 1
+        }
+        produces = {
+            trigger = {
+                num_districts = {
+                    type = district_farming
+                    value >= 18
+                }
+            }
+            food = 1
+        }
+        produces = {
+            trigger = {
+                num_districts = {
+                    type = district_farming
+                    value >= 20
+                }
+            }
+            food = 1
+        }
+    }
+    ai_weight = {
+        weight = 0
+    }
+    prerequisites = {
+        "tech_hydroponics"
+    }
+}

@@ -1,0 +1,47 @@
+xvcv_mdlc_building_organic_crystal_plant = {
+    base_buildtime = @b1_time
+    category = manufacturing
+    potential = {
+        exists = owner
+        owner = {
+            has_authority = auth_machine_intelligence
+            has_ascension_perk = xvcv_mdlc_ap_organic_work
+        }
+    }
+    destroy_trigger = {
+        exists = owner
+        owner = {
+            NAND = {
+                has_authority = auth_machine_intelligence
+                has_ascension_perk = xvcv_mdlc_ap_organic_work
+            }
+        }
+    }
+    convert_to = {
+        building_crystal_plant
+    }
+    planet_modifier = {
+        job_xvcv_mdlc_organic_translucer_add = @b1_jobs
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b2_minerals
+        }
+        upkeep = {
+            energy = @b2_upkeep
+        }
+    }
+    upgrades = {
+        "xvcv_mdlc_building_organic_crystal_plant_2"
+    }
+    triggered_desc = {
+        text = job_xvcv_mdlc_organic_translucer_effect_desc
+    }
+    ai_resource_production = {
+        rare_crystals = 5
+        trigger = {
+            always = yes
+        }
+    }
+}

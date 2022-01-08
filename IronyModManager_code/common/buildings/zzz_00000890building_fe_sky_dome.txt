@@ -1,0 +1,59 @@
+building_fe_sky_dome = {
+    base_buildtime = 360
+    can_build = yes
+    icon = building_fe_dome
+    base_cap_amount = 3
+    category = amenity
+    potential = {
+        exists = owner
+        owner = {
+            is_regular_empire = yes
+            has_technology = tech_fe_sky_dome
+        }
+    }
+    allow = {
+        has_enigmatic_capital = yes
+    }
+    convert_to = {
+        building_drone_megastorage
+        building_expanded_warren
+        building_communal_housing_large
+    }
+    planet_modifier = {
+        planet_housing_add = 20
+        planet_amenities_add = 20
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_active_tradition = tr_domination_imperious_architecture
+            }
+        }
+        modifier = {
+            planet_housing_add = 1
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 750
+            rare_crystals = 100
+        }
+        upkeep = {
+            energy = 10
+        }
+    }
+    upgrades = {
+        building_ae_sky_dome
+    }
+    prerequisites = {
+        "tech_fe_sky_dome"
+    }
+    show_tech_unlock_if = {
+        is_regular_empire = yes
+    }
+    ai_weight = {
+        weight = 5000
+    }
+}

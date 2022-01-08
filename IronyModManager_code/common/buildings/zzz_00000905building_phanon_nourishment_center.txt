@@ -1,0 +1,56 @@
+building_phanon_nourishment_center = {
+    base_buildtime = 900
+    can_demolish = yes
+    can_build = no
+    category = resource
+    potential = {
+        NOT = {
+            has_global_flag = aot_phanon_content_OFF
+        }
+        exists = owner
+        owner = {
+            has_technology = tech_phanon_nourishment_center
+        }
+    }
+    prerequisites = {
+        "tech_phanon_nourishment_center"
+    }
+    allow = {
+        has_phanon_capital = yes
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 5000
+            minerals = 5000
+            aot_sr_runic_power = 750
+        }
+        produces = {
+            food = 1200
+        }
+        upkeep = {
+            energy = 40
+            aot_sr_runic_power = 20
+        }
+    }
+    upgrades = {
+    }
+    ai_weight = {
+        weight = 10
+        modifier = {
+            factor = 5
+            owner = {
+                has_monthly_income = {
+                    resource = food
+                    value < 10
+                }
+            }
+        }
+    }
+    ai_resource_production = {
+        food = 10
+        trigger = {
+            always = yes
+        }
+    }
+}

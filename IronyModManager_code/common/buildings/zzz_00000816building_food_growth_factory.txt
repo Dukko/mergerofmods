@@ -1,0 +1,252 @@
+building_food_growth_factory = {
+    base_buildtime = @building_build_time3
+    can_demolish = yes
+    category = manufacturing
+    potential = {
+        exists = owner
+        owner = {
+            is_machine_empire = no
+        }
+        NOT = {
+            has_modifier = resort_colony
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    destroy_trigger = {
+        exists = owner
+        owner = {
+            is_ai = yes
+            OR = {
+                has_monthly_income = {
+                    resource = food
+                    value > 300
+                }
+                AND = {
+                    has_monthly_income = {
+                        resource = food
+                        value > 150
+                    }
+                    has_monthly_income = {
+                        resource = minerals
+                        value <= 10
+                    }
+                }
+                AND = {
+                    has_monthly_income = {
+                        resource = food
+                        value > 75
+                    }
+                    has_monthly_income = {
+                        resource = minerals
+                        value <= 10
+                    }
+                    has_monthly_income = {
+                        resource = energy
+                        value <= 5
+                    }
+                }
+            }
+        }
+        owner = {
+            NOT = {
+                has_country_flag = freed_energy
+                has_country_flag = freed_minerals
+            }
+        }
+    }
+    on_destroy = {
+        owner = {
+            set_timed_country_flag = {
+                flag = freed_energy
+                days = 60
+            }
+            set_timed_country_flag = {
+                flag = freed_minerals
+                days = 60
+            }
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_food_growth_factory_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_food_growth_factory_drone_add = 2
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @building_build_cost4
+        }
+        upkeep = {
+            energy = @building_build_upkeep2
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_food_growth_factory_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        text = job_food_growth_factory_effect_desc
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 1000
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value > 50
+                }
+                has_monthly_income = {
+                    resource = minerals
+                    value > 25
+                }
+            }
+            NOT = {
+                is_planet_class = pc_habitat
+            }
+            OR = {
+                free_jobs < 3
+                buildings_unemployed = yes
+            }
+            OR = {
+                num_free_districts = {
+                    type = district_farming
+                    value = 0
+                }
+                free_district_slots = 0
+            }
+            owner = {
+                OR = {
+                    is_mechanical_empire = no
+                    AND = {
+                        is_mechanical_empire = yes
+                        OR = {
+                            has_civic = civic_machine_servitor
+                            has_civic = civic_machine_assimilator
+                        }
+                    }
+                }
+                has_monthly_income = {
+                    resource = food
+                    value < 0
+                }
+            }
+        }
+        modifier = {
+            weight = 2000
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value > 20
+                }
+                has_monthly_income = {
+                    resource = minerals
+                    value > 10
+                }
+            }
+            OR = {
+                free_housing > 3
+                owner = {
+                    is_gestalt = no
+                }
+            }
+            OR = {
+                free_jobs < 3
+                buildings_unemployed = yes
+            }
+            OR = {
+                is_planet_class = pc_habitat
+                is_planet_class = pc_city
+                is_planet_class = pc_relic
+            }
+            OR = {
+                owner = {
+                    OR = {
+                        is_mechanical_empire = no
+                        AND = {
+                            is_mechanical_empire = yes
+                            OR = {
+                                has_civic = civic_machine_servitor
+                                has_civic = civic_machine_assimilator
+                            }
+                        }
+                    }
+                    has_monthly_income = {
+                        resource = food
+                        value < 125
+                    }
+                }
+                has_building = building_food_growth_factory
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_monthly_income = {
+                    resource = food
+                    value > 1
+                }
+            }
+            OR = {
+                is_planet_class = pc_city
+                is_planet_class = pc_relic
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                has_country_flag = new_buildings_food_growth_factory
+            }
+        }
+    }
+    on_built = {
+        owner = {
+            set_timed_country_flag = {
+                flag = new_buildings_food_growth_factory
+                days = 480
+            }
+        }
+    }
+    ai_resource_production = {
+        food = 1
+        trigger = {
+            always = yes
+        }
+    }
+    prerequisites = {
+        "tech_standard_automation"
+    }
+}

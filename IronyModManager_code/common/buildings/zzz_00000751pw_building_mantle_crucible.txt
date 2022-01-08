@@ -1,0 +1,1101 @@
+pw_building_mantle_crucible = {
+    base_buildtime = @pw_building_buildtime
+    position_priority = 120
+    category = manufacturing
+    base_cap_amount = 1
+    can_be_ruined = no
+    prerequisites = {
+        pw_tech_planetary_mantle_production
+    }
+    potential = {
+        exists = owner
+        NOT = {
+            has_modifier = resort_colony
+        }
+        NOT = {
+            habitable_structure = yes
+        }
+    }
+    allow = {
+        has_major_upgraded_capital = yes
+        OR = {
+            free_district_slots > 0
+            hidden_trigger = {
+                has_modifier = pw_mod_integrated_monuments
+            }
+        }
+        pw_can_build_planetary_wonder = yes
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @pw_building_cost
+        }
+        cost = {
+            trigger = {
+                planet = {
+                    pw_has_any_planetary_wonder = yes
+                }
+            }
+            minerals = @pw_building_cost_extra
+        }
+        upkeep = {
+            trigger = {
+                has_modifier = pw_mod_mantle_crucible_alloys
+            }
+            energy = @pw_building_upkeep
+            volatile_motes = @pw_building_upkeep_rare_1
+        }
+        upkeep = {
+            trigger = {
+                has_modifier = pw_mod_mantle_crucible_consumer_goods
+            }
+            energy = @pw_building_upkeep
+            rare_crystals = @pw_building_upkeep_rare_1
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    country_uses_consumer_goods = no
+                }
+            }
+            energy = @pw_building_upkeep
+            volatile_motes = @pw_building_upkeep_rare_1
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    country_uses_consumer_goods = yes
+                }
+                NOT = {
+                    has_modifier = pw_mod_mantle_crucible_alloys
+                }
+                NOT = {
+                    has_modifier = pw_mod_mantle_crucible_consumer_goods
+                }
+            }
+            energy = @pw_building_upkeep
+        }
+        upkeep = {
+            trigger = {
+                planet = {
+                    pw_has_any_additional_planetary_wonder = yes
+                }
+            }
+            energy = @pw_building_upkeep_extra
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_edict = pw_wonders_beyond_ambition
+                }
+            }
+            energy = @pw_building_upkeep_ambition
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_tradition = tr_pw_monumentality_architecture_parlante
+                }
+            }
+            unity = @pw_unity_production
+        }
+    }
+    destroy_trigger = {
+        OR = {
+            has_modifier = resort_colony
+            habitable_structure = yes
+        }
+    }
+    convert_to = {
+        building_factory_2
+        building_foundry_2
+    }
+    upgrades = {
+        pw_building_titan_forge
+        pw_building_industrial_hearth
+    }
+    triggered_planet_modifier = {
+        potential = {
+            NOT = {
+                has_modifier = pw_mod_integrated_monuments
+            }
+        }
+        modifier = {
+            planet_max_districts_add = -1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            is_ideal_planet_class = {
+                who = owner
+                status = no
+            }
+            owner = {
+                NOT = {
+                    has_country_flag = pw_mantle_crucible_habitability_project_completed
+                }
+            }
+        }
+        pop_environment_tolerance = -0.2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                NOR = {
+                    has_valid_civic = civic_catalytic_processing
+                    has_valid_civic = civic_corporate_catalytic_processing
+                }
+            }
+        }
+        modifier = {
+            job_foundry_add = 4
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                OR = {
+                    has_valid_civic = civic_catalytic_processing
+                    has_valid_civic = civic_corporate_catalytic_processing
+                }
+            }
+        }
+        modifier = {
+            job_catalytic_technician_add = 4
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                country_uses_consumer_goods = yes
+                NOR = {
+                    has_valid_civic = civic_crafters
+                    has_valid_civic = civic_corporate_crafters
+                }
+            }
+        }
+        modifier = {
+            job_artisan_add = 4
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                country_uses_consumer_goods = yes
+                OR = {
+                    has_valid_civic = civic_crafters
+                    has_valid_civic = civic_corporate_crafters
+                }
+            }
+        }
+        modifier = {
+            job_artificer_add = 4
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+            owner = {
+                country_uses_consumer_goods = no
+            }
+        }
+        modifier = {
+            job_miner_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                country_uses_consumer_goods = no
+                NOR = {
+                    has_valid_civic = civic_catalytic_processing
+                    has_valid_civic = civic_corporate_catalytic_processing
+                }
+            }
+        }
+        modifier = {
+            job_foundry_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                country_uses_consumer_goods = no
+                OR = {
+                    has_valid_civic = civic_catalytic_processing
+                    has_valid_civic = civic_corporate_catalytic_processing
+                }
+            }
+        }
+        modifier = {
+            job_catalytic_technician_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_mining_drone_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+                NOT = {
+                    has_valid_civic = civic_hive_catalytic_processing
+                }
+            }
+        }
+        modifier = {
+            job_alloy_drone_add = 6
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+                has_valid_civic = civic_hive_catalytic_processing
+            }
+        }
+        modifier = {
+            job_catalytic_drone_add = 6
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+                NOT = {
+                    has_valid_civic = civic_machine_catalytic_processing
+                }
+            }
+        }
+        modifier = {
+            job_fabricator_add = 4
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+                has_valid_civic = civic_machine_catalytic_processing
+            }
+        }
+        modifier = {
+            job_catalytic_drone_add = 4
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+            owner = {
+                country_uses_consumer_goods = yes
+            }
+        }
+        modifier = {
+            job_artisan_drone_add = 4
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+            owner = {
+                country_uses_consumer_goods = no
+            }
+        }
+        modifier = {
+            job_mining_drone_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+                country_uses_consumer_goods = no
+                NOT = {
+                    has_valid_civic = civic_machine_catalytic_processing
+                }
+            }
+        }
+        modifier = {
+            job_fabricator_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+                country_uses_consumer_goods = no
+                has_valid_civic = civic_machine_catalytic_processing
+            }
+        }
+        modifier = {
+            job_catalytic_drone_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                NOR = {
+                    has_valid_civic = civic_catalytic_processing
+                    has_valid_civic = civic_corporate_catalytic_processing
+                }
+            }
+            OR = {
+                has_designation = col_foundry
+                has_designation = col_ecu_foundry
+            }
+        }
+        modifier = {
+            job_foundry_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                OR = {
+                    has_valid_civic = civic_catalytic_processing
+                    has_valid_civic = civic_corporate_catalytic_processing
+                }
+            }
+            OR = {
+                has_designation = col_foundry
+                has_designation = col_ecu_foundry
+            }
+        }
+        modifier = {
+            job_catalytic_technician_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                country_uses_consumer_goods = yes
+                NOR = {
+                    has_valid_civic = civic_crafters
+                    has_valid_civic = civic_corporate_crafters
+                }
+            }
+            OR = {
+                has_designation = col_foundry
+                has_designation = col_ecu_foundry
+            }
+        }
+        modifier = {
+            job_artisan_add = -1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                country_uses_consumer_goods = yes
+                OR = {
+                    has_valid_civic = civic_crafters
+                    has_valid_civic = civic_corporate_crafters
+                }
+            }
+            OR = {
+                has_designation = col_foundry
+                has_designation = col_ecu_foundry
+            }
+        }
+        modifier = {
+            job_artificer_add = -1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                NOR = {
+                    has_valid_civic = civic_catalytic_processing
+                    has_valid_civic = civic_corporate_catalytic_processing
+                }
+            }
+            OR = {
+                has_designation = col_factory
+                has_designation = col_ecu_factory
+            }
+        }
+        modifier = {
+            job_foundry_add = -1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                OR = {
+                    has_valid_civic = civic_catalytic_processing
+                    has_valid_civic = civic_corporate_catalytic_processing
+                }
+            }
+            OR = {
+                has_designation = col_factory
+                has_designation = col_ecu_factory
+            }
+        }
+        modifier = {
+            job_catalytic_technician_add = -1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                country_uses_consumer_goods = yes
+                NOR = {
+                    has_valid_civic = civic_crafters
+                    has_valid_civic = civic_corporate_crafters
+                }
+            }
+            OR = {
+                has_designation = col_factory
+                has_designation = col_ecu_factory
+            }
+        }
+        modifier = {
+            job_artisan_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                country_uses_consumer_goods = yes
+                OR = {
+                    has_valid_civic = civic_crafters
+                    has_valid_civic = civic_corporate_crafters
+                }
+            }
+            OR = {
+                has_designation = col_factory
+                has_designation = col_ecu_factory
+            }
+        }
+        modifier = {
+            job_artificer_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+            owner = {
+                country_uses_consumer_goods = yes
+            }
+            has_designation = col_mac_foundry
+        }
+        modifier = {
+            job_artisan_drone_add = -1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+                country_uses_consumer_goods = yes
+                NOT = {
+                    has_valid_civic = civic_machine_catalytic_processing
+                }
+            }
+            has_designation = col_mac_foundry
+        }
+        modifier = {
+            job_fabricator_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+                country_uses_consumer_goods = yes
+                has_valid_civic = civic_machine_catalytic_processing
+            }
+            has_designation = col_mac_foundry
+        }
+        modifier = {
+            job_catalytic_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+            owner = {
+                country_uses_consumer_goods = yes
+            }
+            has_designation = col_mac_factory
+        }
+        modifier = {
+            job_artisan_drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+                country_uses_consumer_goods = yes
+                NOT = {
+                    has_valid_civic = civic_machine_catalytic_processing
+                }
+            }
+            has_designation = col_mac_factory
+        }
+        modifier = {
+            job_fabricator_add = -1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+                country_uses_consumer_goods = yes
+                has_valid_civic = civic_machine_catalytic_processing
+            }
+            has_designation = col_mac_factory
+        }
+        modifier = {
+            job_catalytic_drone_add = -1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                NOR = {
+                    has_valid_civic = civic_catalytic_processing
+                    has_valid_civic = civic_corporate_catalytic_processing
+                }
+            }
+            has_modifier = pw_mod_mantle_crucible_alloys
+        }
+        modifier = {
+            job_foundry_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                OR = {
+                    has_valid_civic = civic_catalytic_processing
+                    has_valid_civic = civic_corporate_catalytic_processing
+                }
+            }
+            has_modifier = pw_mod_mantle_crucible_alloys
+        }
+        modifier = {
+            job_catalytic_technician_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                country_uses_consumer_goods = yes
+                NOR = {
+                    has_valid_civic = civic_crafters
+                    has_valid_civic = civic_corporate_crafters
+                }
+            }
+            has_modifier = pw_mod_mantle_crucible_alloys
+        }
+        modifier = {
+            job_artisan_add = -2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                country_uses_consumer_goods = yes
+                OR = {
+                    has_valid_civic = civic_crafters
+                    has_valid_civic = civic_corporate_crafters
+                }
+            }
+            has_modifier = pw_mod_mantle_crucible_alloys
+        }
+        modifier = {
+            job_artificer_add = -2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                NOR = {
+                    has_valid_civic = civic_catalytic_processing
+                    has_valid_civic = civic_corporate_catalytic_processing
+                }
+            }
+            has_modifier = pw_mod_mantle_crucible_consumer_goods
+        }
+        modifier = {
+            job_foundry_add = -2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                OR = {
+                    has_valid_civic = civic_catalytic_processing
+                    has_valid_civic = civic_corporate_catalytic_processing
+                }
+            }
+            has_modifier = pw_mod_mantle_crucible_consumer_goods
+        }
+        modifier = {
+            job_catalytic_technician_add = -2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                country_uses_consumer_goods = yes
+                NOR = {
+                    has_valid_civic = civic_crafters
+                    has_valid_civic = civic_corporate_crafters
+                }
+            }
+            has_modifier = pw_mod_mantle_crucible_consumer_goods
+        }
+        modifier = {
+            job_artisan_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                country_uses_consumer_goods = yes
+                OR = {
+                    has_valid_civic = civic_crafters
+                    has_valid_civic = civic_corporate_crafters
+                }
+            }
+            has_modifier = pw_mod_mantle_crucible_consumer_goods
+        }
+        modifier = {
+            job_artificer_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+            has_modifier = pw_mod_mantle_crucible_alloys
+        }
+        modifier = {
+            job_artisan_drone_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+                NOT = {
+                    has_valid_civic = civic_machine_catalytic_processing
+                }
+            }
+            has_modifier = pw_mod_mantle_crucible_alloys
+        }
+        modifier = {
+            job_fabricator_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+                country_uses_consumer_goods = yes
+                has_valid_civic = civic_machine_catalytic_processing
+            }
+            has_modifier = pw_mod_mantle_crucible_alloys
+        }
+        modifier = {
+            job_catalytic_drone_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+            has_modifier = pw_mod_mantle_crucible_consumer_goods
+        }
+        modifier = {
+            job_artisan_drone_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+                NOT = {
+                    has_valid_civic = civic_machine_catalytic_processing
+                }
+            }
+            has_modifier = pw_mod_mantle_crucible_consumer_goods
+        }
+        modifier = {
+            job_fabricator_add = -2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+                has_valid_civic = civic_machine_catalytic_processing
+            }
+            has_modifier = pw_mod_mantle_crucible_consumer_goods
+        }
+        modifier = {
+            job_catalytic_drone_add = -2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_tradition = tr_pw_monumentality_brutalism
+            }
+        }
+        modifier = {
+            planet_stability_add = @pw_stability_production
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_edict = pw_wonders_beyond_ambition
+            }
+        }
+        modifier = {
+            planet_metallurgists_produces_mult = 0.05
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                country_uses_consumer_goods = yes
+                has_edict = pw_wonders_beyond_ambition
+            }
+        }
+        modifier = {
+            planet_artisans_produces_mult = 0.05
+        }
+    }
+    triggered_desc = {
+        text = pw_planet_wonder_lb
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                NOR = {
+                    has_valid_civic = civic_catalytic_processing
+                    has_valid_civic = civic_corporate_catalytic_processing
+                }
+            }
+        }
+        text = job_foundry_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                OR = {
+                    has_valid_civic = civic_catalytic_processing
+                    has_valid_civic = civic_corporate_catalytic_processing
+                }
+            }
+        }
+        text = job_catalytic_technician_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                country_uses_consumer_goods = yes
+                NOR = {
+                    has_valid_civic = civic_crafters
+                    has_valid_civic = civic_corporate_crafters
+                }
+            }
+        }
+        text = job_artisan_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                country_uses_consumer_goods = yes
+                OR = {
+                    has_valid_civic = civic_crafters
+                    has_valid_civic = civic_corporate_crafters
+                }
+            }
+        }
+        text = job_artificer_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+            owner = {
+                country_uses_consumer_goods = no
+            }
+        }
+        text = job_miner_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+                NOT = {
+                    has_valid_civic = civic_hive_catalytic_processing
+                }
+            }
+        }
+        text = job_alloy_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+                has_valid_civic = civic_hive_catalytic_processing
+            }
+        }
+        text = job_catalytic_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        text = job_mining_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+                NOT = {
+                    has_valid_civic = civic_machine_catalytic_processing
+                }
+            }
+        }
+        text = job_fabricator_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+                has_valid_civic = civic_machine_catalytic_processing
+            }
+        }
+        text = job_catalytic_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+            owner = {
+                country_uses_consumer_goods = yes
+            }
+        }
+        text = job_artisan_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+            owner = {
+                country_uses_consumer_goods = no
+            }
+        }
+        text = job_mining_drone_effect_desc
+    }
+    on_built = {
+        planet_event = {
+            id = pw_wonder.1300
+        }
+    }
+    ai_weight = {
+        weight = 50
+        modifier = {
+            factor = 0
+            building_relaxed_basic_income_check = no
+        }
+        modifier = {
+            factor = 0.25
+            free_building_slots < 1
+            free_district_slots < 1
+        }
+        modifier = {
+            factor = 0.25
+            pw_has_any_planetary_wonder = yes
+            exists = owner
+            NOT = {
+                owner = {
+                    has_ascension_perk = pw_ap_planetary_wonders
+                }
+            }
+            NOT = {
+                has_active_building = pw_building_mantle_crucible
+            }
+            NOT = {
+                has_building_construction = pw_building_mantle_crucible
+            }
+        }
+        modifier = {
+            factor = 1.5
+            exists = owner
+            OR = {
+                owner = {
+                    is_machine_empire = yes
+                }
+                owner = {
+                    is_lithoid_empire = yes
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                has_active_building = building_foundry_1
+                has_active_building = building_foundry_2
+                has_active_building = building_foundry_3
+                has_active_building = building_factory_1
+                has_active_building = building_factory_2
+                has_active_building = building_factory_3
+            }
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                has_designation = col_foundry
+                has_designation = col_ecu_foundry
+                has_designation = col_mac_foundry
+                has_designation = col_hiv_foundry
+                has_designation = col_factory
+                has_designation = col_ecu_factory
+                has_designation = col_mac_factory
+            }
+        }
+        modifier = {
+            factor = 2
+            exists = owner
+            owner = {
+                has_monthly_income = {
+                    resource = alloys
+                    value < 100
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            exists = owner
+            owner = {
+                has_monthly_income = {
+                    resource = consumer_goods
+                    value < 10
+                }
+            }
+        }
+    }
+}

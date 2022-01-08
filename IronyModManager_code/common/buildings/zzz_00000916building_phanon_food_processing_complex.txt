@@ -1,0 +1,119 @@
+building_phanon_food_processing_complex = {
+    base_buildtime = 900
+    category = resource
+    can_build = no
+    planet_modifier = {
+        planet_jobs_food_produces_mult = 0.4
+    }
+    potential = {
+        NOT = {
+            has_global_flag = aot_phanon_content_OFF
+        }
+        exists = owner
+        owner = {
+            has_technology = tech_phanon_food_processing
+        }
+    }
+    country_modifier = {
+        country_resource_max_food_add = 30000
+    }
+    allow = {
+        has_phanon_capital = yes
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_phanon_foodman_add = 4
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_phanon_fooddrone_add = 4
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 4000
+            minerals = 4000
+            aot_sr_runic_power = 800
+        }
+        upkeep = {
+            energy = 20
+            aot_sr_runic_power = 10
+        }
+    }
+    prerequisites = {
+        "tech_phanon_food_processing"
+    }
+    ai_weight = {
+        weight = 2
+        modifier = {
+            factor = 5
+            owner = {
+                has_monthly_income = {
+                    resource = food
+                    value < 5
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                OR = {
+                    is_mechanical_empire = no
+                    AND = {
+                        is_mechanical_empire = yes
+                        OR = {
+                            has_civic = civic_machine_servitor
+                            has_civic = civic_machine_assimilator
+                        }
+                    }
+                }
+                has_monthly_income = {
+                    resource = energy
+                    value < 5
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            owner = {
+                is_mechanical_empire = yes
+                NOR = {
+                    has_civic = civic_machine_servitor
+                    has_civic = civic_machine_assimilator
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            count_owned_pop = {
+                limit = {
+                    OR = {
+                        is_unemployed = yes
+                        has_job = servant
+                    }
+                }
+                count < 1
+            }
+        }
+    }
+    ai_resource_production = {
+        food = 10
+        trigger = {
+            always = yes
+        }
+    }
+}

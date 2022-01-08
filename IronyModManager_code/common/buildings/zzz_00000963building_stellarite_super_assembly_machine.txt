@@ -1,0 +1,44 @@
+building_stellarite_super_assembly_machine = {
+    icon = building_stellarite_super_assembly
+    base_buildtime = 900
+    can_build = no
+    category = pop_assembly
+    allow = {
+        has_stellarite_capital = yes
+    }
+    potential = {
+        owner = {
+            is_machine_empire = yes
+        }
+    }
+    upgrades = {
+        building_phanon_super_assembly_machine
+    }
+    planet_modifier = {
+        job_stellarite_robodrone_add = 2
+    }
+    prerequisites = {
+        "tech_stellarite_super_assembly"
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 2000
+            minerals = 2000
+            acot_sr_stellarite = 600
+        }
+        upkeep = {
+            acot_sr_stellarite = 8
+        }
+    }
+    ai_weight = {
+        weight = 10
+        modifier = {
+            factor = 0
+            num_buildings = {
+                type = building_stellarite_super_assembly_machine
+                value >= 1
+            }
+        }
+    }
+}

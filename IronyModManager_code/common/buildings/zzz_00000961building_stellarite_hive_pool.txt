@@ -1,0 +1,61 @@
+building_stellarite_hive_pool = {
+    base_buildtime = 900
+    can_build = no
+    category = amenity
+    allow = {
+        has_stellarite_capital = yes
+    }
+    upgrades = {
+        building_phanon_hive_pool
+    }
+    potential = {
+        owner = {
+            is_hive_empire = yes
+        }
+    }
+    destroy_trigger = {
+        owner = {
+            is_hive_empire = no
+        }
+    }
+    planet_modifier = {
+        job_stellarite_broodmother_add = 4
+    }
+    prerequisites = {
+        tech_stellarite_hive_pool
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            energy = 2000
+            minerals = 2000
+            acot_sr_stellarite = 600
+        }
+        upkeep = {
+            acot_sr_stellarite = 8
+        }
+    }
+    ai_weight = {
+        weight = 100
+        modifier = {
+            factor = 5
+            free_amenities < 2
+        }
+        modifier = {
+            factor = 0
+            count_owned_pop = {
+                limit = {
+                    OR = {
+                        is_unemployed = yes
+                        has_job = servant
+                    }
+                }
+                count < 1
+            }
+        }
+        modifier = {
+            factor = 0
+            has_building = building_stellarite_hive_pool
+        }
+    }
+}

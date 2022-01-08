@@ -1,0 +1,46 @@
+building_stellarite_clone_vats = {
+    base_buildtime = 900
+    can_build = no
+    category = government
+    prerequisites = {
+        tech_stellarite_clone_vats
+    }
+    allow = {
+        has_stellarite_capital = yes
+    }
+    show_tech_unlock_if = {
+        owner = {
+            has_ascension_perk = ap_evolutionary_mastery
+        }
+    }
+    upgrades = {
+        building_phanon_clone_vats
+    }
+    planet_modifier = {
+        pop_growth_speed = 4
+        planet_pop_assembly_organic_add = 16
+    }
+    resources = {
+        category = planet_buildings
+        produces = {
+            food = 100
+        }
+        cost = {
+            energy = 2000
+            minerals = 2000
+            acot_sr_stellarite = 700
+        }
+        upkeep = {
+            acot_sr_stellarite = 20
+        }
+    }
+    ai_weight = {
+        weight = 100
+        modifier = {
+            factor = 0
+            OR = {
+                has_building = building_stellarite_clone_vats
+            }
+        }
+    }
+}

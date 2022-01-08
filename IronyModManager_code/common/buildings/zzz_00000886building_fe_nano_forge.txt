@@ -1,0 +1,49 @@
+building_fe_nano_forge = {
+    base_buildtime = 360
+    can_build = yes
+    can_demolish = yes
+    icon = building_nano_forge
+    category = manufacturing
+    potential = {
+        exists = owner
+        owner = {
+            has_technology = tech_fe_nano_forge
+        }
+    }
+    allow = {
+        has_enigmatic_capital = yes
+    }
+    planet_modifier = {
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 1000
+            sr_living_metal = 50
+        }
+        produces = {
+            alloys = 25
+        }
+        upkeep = {
+            minerals = 40
+            energy = 10
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_modifier = pm_planet_fe_buildings_boost
+                }
+            }
+            alloys = 5
+        }
+    }
+    upgrades = {
+        building_ae_nano_forge
+    }
+    prerequisites = {
+        "tech_fe_nano_forge"
+    }
+    ai_weight = {
+        weight = 10000
+    }
+}

@@ -1,0 +1,79 @@
+building_starborn_alloy_foundry = {
+    base_buildtime = 600
+    base_cap_amount = 1
+    category = manufacturing
+    potential = {
+        is_planet_class = pc_habitat
+        OR = {
+            has_deposit = d_hab_alloy_1
+            has_deposit = d_hab_alloy_2
+            has_deposit = d_hab_alloy_3
+            has_deposit = d_hab_alloy_4
+            has_deposit = d_hab_alloy_5
+        }
+        owner = {
+            has_starborn = yes
+        }
+    }
+    planet_modifier = {
+        planet_jobs_alloys_produces_mult = 0.25
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 500
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_deposit = d_hab_alloy_1
+                }
+            }
+            alloys = 5
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_deposit = d_hab_alloy_2
+                }
+            }
+            alloys = 10
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_deposit = d_hab_alloy_3
+                }
+            }
+            alloys = 15
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_deposit = d_hab_alloy_4
+                }
+            }
+            alloys = 20
+        }
+        produces = {
+            trigger = {
+                planet = {
+                    has_deposit = d_hab_alloy_5
+                }
+            }
+            alloys = 25
+        }
+        upkeep = {
+            energy = 5
+        }
+    }
+    prerequisites = {
+        tech_alloys_1
+    }
+    ai_resource_production = {
+        alloys = 1
+        trigger = {
+            always = yes
+        }
+    }
+}

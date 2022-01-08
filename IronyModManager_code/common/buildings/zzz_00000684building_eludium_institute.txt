@@ -1,0 +1,144 @@
+building_eludium_institute = {
+    base_buildtime = @b3_time
+    base_cap_amount = 1
+    category = research
+    potential = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+        exists = owner
+        text = EMPIRE_UNIQUE_BUILDING
+        owner = {
+            NOT = {
+                has_country_flag = building_eludium_institute
+            }
+        }
+    }
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            has_modifier = resort_colony
+            has_modifier = slave_colony
+        }
+    }
+    allow = {
+        has_major_upgraded_capital = yes
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b3_minerals
+            sr_eludium = 2000
+        }
+        upkeep = {
+            energy = @b3_upkeep
+            sr_eludium = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                NOT = {
+                    has_deficit = sr_eludium
+                }
+            }
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        planet_researchers_produces_mult = 0.1
+        job_head_researcher_add = 1
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                NOT = {
+                    has_deficit = sr_eludium
+                }
+            }
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        planet_researchers_produces_mult = 0.1
+        job_brain_drone_add = 2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                NOT = {
+                    has_deficit = sr_eludium
+                }
+            }
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        planet_researchers_produces_mult = 0.1
+        job_calculator_add = 2
+    }
+    country_modifier = {
+        all_technology_research_speed = 0.05
+    }
+    prerequisites = {
+        "tech_eludium_research_initiative"
+    }
+    show_tech_unlock_if = {
+        owner = {
+            any_owned_planet = {
+                is_planet_class = pc_floating
+            }
+        }
+    }
+    ai_resource_production = {
+        trigger = {
+            always = yes
+        }
+        physics_research = 3
+        society_research = 3
+        engineering_research = 3
+    }
+    ai_resource_production = {
+        trigger = {
+            planet_resource_compare = {
+                resource = physics_research
+                value >= 20
+            }
+        }
+        physics_research = 3
+        society_research = 3
+        engineering_research = 3
+    }
+    ai_resource_production = {
+        trigger = {
+            planet_resource_compare = {
+                resource = physics_research
+                value >= 40
+            }
+        }
+        physics_research = 3
+        society_research = 3
+        engineering_research = 3
+    }
+    on_built = {
+        owner = {
+            set_country_flag = building_eludium_institute
+        }
+    }
+    on_destroy = {
+        owner = {
+            if = {
+                limit = {
+                    has_country_flag = building_eludium_institute
+                }
+                remove_country_flag = building_eludium_institute
+            }
+        }
+    }
+}

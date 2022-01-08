@@ -1,0 +1,53 @@
+building_eden_garden = {
+    base_buildtime = 5
+    category = resource
+    can_be_ruined = no
+    can_be_disabled = no
+    show_tech_unlock_if = {
+        OR = {
+            is_country_Type = original_empire
+            is_country_Type = original_empire_passive
+            is_country_Type = original_empire_active
+            has_valid_civic = civic_solar_empire_ascended
+            has_valid_civic = civic_champion_empire
+        }
+    }
+    potential = {
+        owner = {
+            OR = {
+                is_country_Type = original_empire
+                is_country_Type = original_empire_passive
+                is_country_Type = original_empire_active
+                has_valid_civic = civic_solar_empire_ascended
+                has_valid_civic = civic_champion_empire
+            }
+        }
+    }
+    allow = {
+        is_progenitor_worlds = yes
+    }
+    planet_modifier = {
+        planet_amenities_add = 100
+        planet_housing_add = 50
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_progenitor_empires = no
+                }
+            }
+            acot_sr_light_matter = 3500
+        }
+        produces = {
+            food = 1000
+            consumer_goods = 1000
+            unity = 250
+        }
+    }
+    ai_weight = {
+        weight = 15000
+    }
+}

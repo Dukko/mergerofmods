@@ -1,0 +1,195 @@
+building_gravity_condensation_labs = {
+    base_buildtime = @building_build_time4
+    can_demolish = yes
+    category = manufacturing
+    potential = {
+        NOT = {
+            has_modifier = resort_colony
+        }
+        NOT = {
+            has_modifier = slave_colony
+        }
+    }
+    allow = {
+        has_upgraded_capital = yes
+    }
+    destroy_trigger = {
+        exists = owner
+        owner = {
+            is_ai = yes
+            has_monthly_income = {
+                resource = sr_dark_matter
+                value >= 5
+            }
+            OR = {
+                has_monthly_income = {
+                    resource = alloys
+                    value < 0
+                }
+                has_monthly_income = {
+                    resource = exotic_gases
+                    value < 0
+                }
+                has_monthly_income = {
+                    resource = energy
+                    value < 0
+                }
+                NOR = {
+                    has_country_flag = freed_alloys
+                    has_country_flag = freed_exotic_gases
+                    has_country_flag = freed_energy
+                }
+            }
+        }
+    }
+    on_destroy = {
+        owner = {
+            set_timed_country_flag = {
+                flag = freed_alloys
+                days = 120
+            }
+            set_timed_country_flag = {
+                flag = freed_exotic_gases
+                days = 120
+            }
+            set_timed_country_flag = {
+                flag = freed_energy
+                days = 60
+            }
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_gravity_condensation_op_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_gravity_condensation_drone_add = 1
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @building_build_cost8
+        }
+        upkeep = {
+            energy = @building_build_upkeep4
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_gravity_condensation_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        text = job_gravity_condensation_op_effect_desc
+    }
+    ai_weight = {
+        weight = 1
+        modifier = {
+            weight = 10
+            num_buildings = {
+                type = building_space_powderization_labs
+                value >= 1
+            }
+        }
+        modifier = {
+            weight = 10
+            num_buildings = {
+                type = building_space_powderization_labs
+                value >= 2
+            }
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                owner = {
+                    has_monthly_income = {
+                        resource = sr_dark_matter
+                        value < 0
+                    }
+                }
+                AND = {
+                    owner = {
+                        has_monthly_income = {
+                            resource = alloys
+                            value > 10
+                        }
+                        has_monthly_income = {
+                            resource = exotic_gases
+                            value > 4
+                        }
+                        has_monthly_income = {
+                            resource = energy
+                            value > 20
+                        }
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                owner = {
+                    OR = {
+                        has_monthly_income = {
+                            resource = sr_dark_matter
+                            value > 4
+                        }
+                        has_monthly_income = {
+                            resource = alloys
+                            value < 0
+                        }
+                        has_monthly_income = {
+                            resource = exotic_gases
+                            value < 0
+                        }
+                        has_monthly_income = {
+                            resource = energy
+                            value < 0
+                        }
+                        has_country_flag = new_gravity_condensation_labs
+                    }
+                }
+                num_buildings = {
+                    type = building_gravity_condensation_labs
+                    value >= 4
+                }
+            }
+        }
+    }
+    on_built = {
+        owner = {
+            set_timed_country_flag = {
+                flag = new_gravity_condensation_labs
+                days = 480
+            }
+        }
+    }
+    prerequisites = {
+        "tech_dark_matter_containment_theory"
+    }
+}
