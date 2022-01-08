@@ -24,7 +24,7 @@ nanite_agri_worker = {
             food = 6
         }
         upkeep = {
-            energy = 8
+            energy = 6
         }
     }
     weight = {

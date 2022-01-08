@@ -11,9 +11,6 @@ telepath = {
     }
     possible_precalc = can_fill_specialist_job
     possible = {
-        NOT = {
-            has_trait = trait_slave_gene
-        }
         OR = {
             has_trait = trait_latent_psionic
             has_trait = trait_psionic

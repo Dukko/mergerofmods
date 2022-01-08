@@ -10,11 +10,6 @@ translucer = {
         is_sapient = yes
     }
     possible_precalc = can_fill_specialist_job
-    possible = {
-        NOT = {
-            has_trait = trait_slave_gene
-        }
-    }
     resources = {
         category = planet_translucers
         produces = {

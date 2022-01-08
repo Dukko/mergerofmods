@@ -10,11 +10,6 @@ healthcare = {
         is_sapient = yes
     }
     possible_precalc = can_fill_specialist_job
-    possible = {
-        NOT = {
-            has_trait = trait_slave_gene
-        }
-    }
     planet_modifier = {
         planet_amenities_add = 5
         pop_growth_speed = 0.05

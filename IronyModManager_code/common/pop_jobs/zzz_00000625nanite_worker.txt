@@ -24,7 +24,7 @@ nanite_worker = {
             minerals = 4
         }
         upkeep = {
-            energy = 6
+            energy = 4
         }
     }
     weight = {

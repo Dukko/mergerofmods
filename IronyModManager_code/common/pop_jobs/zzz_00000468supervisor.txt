@@ -11,12 +11,6 @@ supervisor = {
         is_sapient = yes
     }
     possible_precalc = can_fill_ruler_job
-    possible = {
-        NOR = {
-            has_trait = trait_slave_gene
-            has_trait = trait_symbiotic
-        }
-    }
     resources = {
         category = planet_administrators
         produces = {

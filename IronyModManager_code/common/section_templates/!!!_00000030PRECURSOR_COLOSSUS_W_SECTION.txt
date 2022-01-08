@@ -29,14 +29,21 @@ ship_section_template = {
         template = "invisible_titanic_turret"
         locatorname = "medium_gun_04"
     }
+    component_slot = {
+        name = "TITANIC_05"
+        template = "invisible_titanic_turret"
+        locatorname = "medium_gun_01"
+    }
+    component_slot = {
+        name = "TITANIC_06"
+        template = "invisible_titanic_turret"
+        locatorname = "medium_gun_02"
+    }
     large_utility_slots = 10
     aux_utility_slots = 5
     resources = {
         category = ship_sections
         cost = {
-            alloys = 800
-            sr_dark_matter = 200
-            acot_sr_dark_energy = 200
         }
     }
 }

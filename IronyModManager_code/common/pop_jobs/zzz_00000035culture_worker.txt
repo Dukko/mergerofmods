@@ -11,9 +11,6 @@ culture_worker = {
     }
     possible_precalc = can_fill_specialist_job
     possible = {
-        NOT = {
-            has_trait = trait_slave_gene
-        }
         complex_specialist_job_check_trigger = yes
     }
     resources = {

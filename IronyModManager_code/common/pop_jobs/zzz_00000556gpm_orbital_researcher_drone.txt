@@ -3,7 +3,17 @@ gpm_orbital_researcher_drone = {
     condition_string = SPECIALIST_JOB_TRIGGER
     building_icon = building_research_lab_1
     clothes_texture_index = 3
-    possible_precalc = can_fill_specialist_job
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
+    possible_precalc = can_fill_drone_job
+    possible = {
+        complex_specialist_job_check_trigger = yes
+    }
     resources = {
         category = planet_researchers
         produces = {

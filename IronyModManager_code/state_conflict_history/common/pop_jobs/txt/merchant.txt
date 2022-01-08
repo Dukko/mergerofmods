@@ -10,6 +10,7 @@ merchant = {
         is_being_assimilated = no
         is_sapient = yes
     }
+    possible_precalc = can_fill_specialist_job
     possible = {
         complex_specialist_job_check_trigger = yes
     }
@@ -101,21 +102,21 @@ merchant = {
         modifier = {
             factor = 1.25
             owner = {
-                has_valid_civic = civic_corporate_dominion
+                is_merchant_guilds_empire = yes
             }
             has_trait = trait_brainslug
         }
         modifier = {
             factor = 1.125
             owner = {
-                has_valid_civic = civic_corporate_dominion
+                is_merchant_guilds_empire = yes
             }
             has_trait = trait_presapient_natural_intellectuals
         }
         modifier = {
             factor = 1.125
             owner = {
-                has_valid_civic = civic_corporate_dominion
+                is_merchant_guilds_empire = yes
             }
             has_trait = trait_robust
         }

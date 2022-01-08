@@ -13,7 +13,9 @@ dimensional_portal_researcher_gestalt = {
     }
     possible_precalc = can_fill_drone_job
     possible = {
-        complex_drone_job_check_trigger = yes
+        NOT = {
+            has_trait = trait_nerve_stapled
+        }
     }
     triggered_planet_modifier = {
         potential = {
@@ -96,7 +98,7 @@ dimensional_portal_researcher_gestalt = {
             trigger = {
                 exists = owner
                 owner = {
-                    has_valid_civic = civic_technocracy
+                    is_technocracy = yes
                 }
             }
             unity = 1

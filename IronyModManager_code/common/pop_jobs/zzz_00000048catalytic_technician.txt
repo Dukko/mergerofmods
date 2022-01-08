@@ -10,9 +10,6 @@ catalytic_technician = {
     }
     possible_precalc = can_fill_specialist_job
     possible = {
-        NOT = {
-            has_trait = trait_slave_gene
-        }
         hidden_trigger = {
             exists = owner
         }

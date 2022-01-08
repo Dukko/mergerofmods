@@ -3,6 +3,12 @@ gpm_asteroid_miner = {
     condition_string = WORKER_JOB_TRIGGER
     building_icon = building_crystal_mines
     clothes_texture_index = 2
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
     possible_precalc = can_fill_worker_job
     possible = {
         hidden_trigger = {

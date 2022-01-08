@@ -80,6 +80,9 @@ acot_enforcer = {
     }
     triggered_planet_modifier = {
         potential = {
+            owner = {
+                is_gestalt = no
+            }
             planet = {
                 NOR = {
                     is_planet_class = pc_dark_fractured
@@ -94,6 +97,26 @@ acot_enforcer = {
     }
     triggered_planet_modifier = {
         potential = {
+            owner = {
+                is_gestalt = yes
+            }
+            planet = {
+                NOR = {
+                    is_planet_class = pc_dark_fractured
+                    is_planet_class = pc_dark_fractured
+                }
+            }
+        }
+        modifier = {
+            planet_crime_no_happiness_add = -20
+            planet_stability_add = 20
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            owner = {
+                is_gestalt = no
+            }
             planet = {
                 is_planet_class = pc_dark_fractured
             }
@@ -105,12 +128,43 @@ acot_enforcer = {
     }
     triggered_planet_modifier = {
         potential = {
+            owner = {
+                is_gestalt = yes
+            }
+            planet = {
+                is_planet_class = pc_dark_fractured
+            }
+        }
+        modifier = {
+            planet_crime_no_happiness_add = -10
+            planet_stability_add = 10
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            owner = {
+                is_gestalt = no
+            }
             planet = {
                 is_planet_class = pc_dark_fractured_ae
             }
         }
         modifier = {
             planet_crime_add = -20
+            planet_stability_add = 20
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            owner = {
+                is_gestalt = yes
+            }
+            planet = {
+                is_planet_class = pc_dark_fractured_ae
+            }
+        }
+        modifier = {
+            planet_crime_no_happiness_add = -20
             planet_stability_add = 20
         }
     }

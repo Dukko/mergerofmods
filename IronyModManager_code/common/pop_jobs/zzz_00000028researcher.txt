@@ -28,9 +28,8 @@ researcher = {
                 exists = owner
                 owner = {
                     or = {
-                        has_valid_civic = civic_technocracy
+                    is_technocracy = yes
                         has_valid_civic = civic_cyber_dictatorship
-                        has_valid_civic = civic_science_directorate
                         has_valid_civic = civic_cyber_demos_cratos
                     }
                 }
@@ -45,9 +44,8 @@ researcher = {
                 exists = owner
                 owner = {
                     or = {
-                        has_valid_civic = civic_technocracy
+                    is_technocracy = yes
                         has_valid_civic = civic_cyber_dictatorship
-                        has_valid_civic = civic_science_directorate
                         has_valid_civic = civic_cyber_demos_cratos
                     }
                 }

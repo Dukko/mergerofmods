@@ -1,7 +1,11 @@
 ship_section_template = {
     key = "ALPHA_PRECURSOR_COLOSSUS_XL_SECTION"
     ship_size = precursor_colossus
+    fits_on_slot = "weapon1"
     fits_on_slot = "weapon2"
+    fits_on_slot = "weapon3"
+    fits_on_slot = "weapon4"
+    fits_on_slot = "weapon5"
     entity = "precursor_colossus_core_entity"
     icon = "GFX_ship_part_core_mid"
     prerequisites = {
@@ -50,35 +54,20 @@ ship_section_template = {
     component_slot = {
         name = "XL_09"
         template = "invisible_extra_large_turret"
-        locatorname = "medium_gun_03"
+        locatorname = "medium_gun_01"
     }
     component_slot = {
         name = "XL_10"
         template = "invisible_extra_large_turret"
-        locatorname = "medium_gun_04"
+        locatorname = "medium_gun_02"
     }
     component_slot = {
         name = "XL_11"
         template = "invisible_extra_large_turret"
-        locatorname = "medium_gun_02"
+        locatorname = "medium_gun_03"
     }
     component_slot = {
         name = "XL_12"
-        template = "invisible_extra_large_turret"
-        locatorname = "medium_gun_03"
-    }
-    component_slot = {
-        name = "XL_13"
-        template = "invisible_extra_large_turret"
-        locatorname = "medium_gun_04"
-    }
-    component_slot = {
-        name = "XL_14"
-        template = "invisible_extra_large_turret"
-        locatorname = "medium_gun_03"
-    }
-    component_slot = {
-        name = "XL_15"
         template = "invisible_extra_large_turret"
         locatorname = "medium_gun_04"
     }
@@ -87,8 +76,6 @@ ship_section_template = {
     resources = {
         category = ship_sections
         cost = {
-            sr_dark_matter = 400
-            acot_sr_dark_energy = 400
         }
     }
 }

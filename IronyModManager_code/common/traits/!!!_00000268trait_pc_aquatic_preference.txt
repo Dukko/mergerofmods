@@ -33,5 +33,8 @@ trait_pc_aquatic_preference = {
         pc_reef_habitability = 0.8
         pc_geothermal_habitability = 0.6
         pc_biolumen_habitability = 0.6
+        pc_storm_habitability = 0.2
+        pc_aquifer_habitability = 0.2
+        pc_supercon_habitability = 0.2
     }
 }

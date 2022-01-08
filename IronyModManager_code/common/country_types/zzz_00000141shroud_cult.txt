@@ -1,0 +1,27 @@
+shroud_cult = {
+    government = no
+    observable = no
+    ship_disengagement = no
+    scaled_difficulty_bonuses = 2
+    ai = {
+        enabled = yes
+        modules = {
+            horde_interior_minister_module
+            horde_military_minister_module
+        }
+    }
+    faction = {
+        hostile = yes
+        needs_border_access = no
+        generate_borders = no
+        needs_colony = no
+        auto_delete = yes
+    }
+    modules = {
+        exclusive_diplomacy_module = {
+            contact_rule = on_action_only
+        }
+        all_technology_module = {
+        }
+    }
+}

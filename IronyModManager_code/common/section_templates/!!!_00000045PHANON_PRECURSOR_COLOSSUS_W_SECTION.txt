@@ -42,73 +42,13 @@ ship_section_template = {
         template = "invisible_titanic_turret"
         locatorname = "medium_gun_02"
     }
-    component_slot = {
-        name = "TITANIC_07"
-        template = "invisible_titanic_turret"
-        locatorname = "medium_gun_03"
-    }
-    component_slot = {
-        name = "TITANIC_08"
-        template = "invisible_titanic_turret"
-        locatorname = "medium_gun_04"
-    }
-    component_slot = {
-        name = "TITANIC_09"
-        template = "invisible_titanic_turret"
-        locatorname = "medium_gun_04"
-    }
-    component_slot = {
-        name = "TITANIC_10"
-        template = "invisible_titanic_turret"
-        locatorname = "medium_gun_01"
-    }
-    component_slot = {
-        name = "TITANIC_11"
-        template = "invisible_titanic_turret"
-        locatorname = "medium_gun_02"
-    }
-    component_slot = {
-        name = "TITANIC_12"
-        template = "invisible_titanic_turret"
-        locatorname = "medium_gun_03"
-    }
-    component_slot = {
-        name = "TITANIC_13"
-        template = "invisible_titanic_turret"
-        locatorname = "medium_gun_04"
-    }
-    component_slot = {
-        name = "TITANIC_14"
-        template = "invisible_titanic_turret"
-        locatorname = "medium_gun_04"
-    }
-    component_slot = {
-        name = "TITANIC_15"
-        template = "invisible_titanic_turret"
-        locatorname = "medium_gun_01"
-    }
-    component_slot = {
-        name = "TITANIC_16"
-        template = "invisible_titanic_turret"
-        locatorname = "medium_gun_02"
-    }
-    component_slot = {
-        name = "TITANIC_17"
-        template = "invisible_titanic_turret"
-        locatorname = "medium_gun_03"
-    }
-    component_slot = {
-        name = "TITANIC_18"
-        template = "invisible_titanic_turret"
-        locatorname = "medium_gun_04"
-    }
-    component_slot = {
-        name = "TITANIC_19"
-        template = "invisible_titanic_turret"
-        locatorname = "medium_gun_04"
-    }
-    large_utility_slots = 25
+    large_utility_slots = 15
     aux_utility_slots = 5
+    resources = {
+        category = ship_sections
+        cost = {
+        }
+    }
     resources = {
         category = ship_sections
         cost = {

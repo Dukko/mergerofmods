@@ -3,7 +3,16 @@ gpm_precursor_archaeologist = {
     condition_string = SPECIALIST_JOB_TRIGGER
     building_icon = building_research_lab_1
     clothes_texture_index = 3
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_purged = no
+        is_being_assimilated = no
+        is_sapient = yes
+    }
     possible_precalc = can_fill_specialist_job
+    possible = {
+        complex_specialist_job_check_trigger = yes
+    }
     resources = {
         category = planet_researchers
         produces = {

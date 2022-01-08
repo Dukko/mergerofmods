@@ -14,6 +14,6 @@ trait_acot_robot_scv = {
     modifier = {
         planet_jobs_produces_mult = 0.15
         planet_pops_robotics_upkeep_mult = -0.15
-        pop_assembly_speed = 0.15
+        planet_pop_assembly_mult = 0.15
     }
 }

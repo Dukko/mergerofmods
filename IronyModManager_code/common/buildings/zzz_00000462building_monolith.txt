@@ -1,83 +1,118 @@
 building_monolith = {
     base_buildtime = @b2_time
-    category = government
     base_cap_amount = 1
-    potential = {
-        exists = owner
-        owner = {
-            is_regular_empire = yes
-        }
-        exists = planet
-        planet = {
-            is_capital = yes
-        }
-        NOT = {
-            has_modifier = resort_colony
-        }
-        NOT = {
-            has_modifier = slave_colony
-        }
-    }
+    can_be_ruined = no
+    can_build = yes
+    planetary_ftl_inhibitor = no
+    position_priority = 100
+    can_demolish = yes
+    can_be_ruined = no
+    can_be_disabled = no
+    icon = building_monolith_mysterious
     allow = {
-        has_upgraded_capital = yes
-        buildings_simple_allow = yes
     }
-    destroy_trigger = {
-        OR = {
-            AND = {
-                exists = owner
-                owner = {
-                    is_regular_empire = no
-                }
-            }
-            planet = {
-                is_capital = no
-            }
-            buildings_no_crystals = yes
-        }
+    triggered_planet_modifier = {
+    }
+    triggered_planet_modifier = {
+    }
+    triggered_desc = {
+        text = building_monolith_effect_desc
+    }
+    country_modifier = {
+        category_psionics_research_speed_mult = 0.2
+    }
+    planet_modifier = {
+        planet_stability_add = 15
+        pop_ethic_spiritualist_attraction_mult = 0.15
+        planet_max_buildings_add = 1
+    }
+    army_modifier = {
     }
     resources = {
-        category = planet_buildings
+        category = planet_buildings_strongholds
+        produces = {
+            unity = 3
+        }
         cost = {
+            sr_zro = 100
+            alloys = 150
             minerals = @b2_minerals
-            exotic_gases = @b2_rare_cost
         }
         upkeep = {
-            energy = @b2_upkeep
-            exotic_gases = @b2_rare_upkeep
         }
-        produces = {
-            influence = 2
-        }
-    }
-    show_tech_unlock_if = {
-        is_regular_empire = yes
     }
     prerequisites = {
-        "tech_fiiral_econ_influence"
+        tech_shroud_monolith
+    }
+    on_built = {
+        set_planet_flag = has_shroud_monolith
+        if = {
+            limit = {
+                is_planet_class = pc_shroud_touched
+            }
+            change_pc = pc_gaia
+            remove_modifier = shroud_composer_effect
+            remove_modifier = shroud_eater_effect
+            remove_modifier = shroud_desire_effect
+            remove_modifier = shroud_whisperer_effect
+        }
+    }
+    on_destroy = {
+        remove_planet_flag = has_shroud_monolith
     }
     ai_weight = {
-        weight = 50
+        weight = 1
         modifier = {
-            factor = 5
-            exists = owner
+            factor = 2
             owner = {
-                is_galactic_community_member = yes
-            }
-        }
-        modifier = {
-            factor = 10
-            exists = owner
-            owner = {
-                has_federation = yes
+                OR = {
+                    has_ethic = "ethic_fanatic_militarist"
+                    has_ethic = "ethic_militarist"
+                }
             }
         }
         modifier = {
             factor = 3
-            exists = owner
+            has_global_flag = eye_of_terror_open
+        }
+        modifier = {
+            factor = 2
+        }
+        modifier = {
+            factor = 5
             owner = {
-                is_part_of_galactic_council = yes
+                any_owned_planet = {
+                    OR = {
+                        has_planet_flag = eye_of_terror_shrouded_world
+                        has_building_construction = building_stronghold
+                    }
+                }
+                has_country_flag = had_world_invaded_by_cult
+                has_country_flag = world_devoured
             }
+        }
+        modifier = {
+            factor = 1.5
+            num_pops >= 70
+        }
+        modifier = {
+            factor = 1
+            num_pops >= 60
+            num_pops < 70
+        }
+        modifier = {
+            factor = 0.5
+            num_pops >= 45
+            num_pops < 60
+        }
+        modifier = {
+            factor = 0.25
+            num_pops >= 30
+            num_pops < 45
+        }
+        modifier = {
+            factor = 0
+            num_pops < 30
         }
     }
 }

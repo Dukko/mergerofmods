@@ -36,6 +36,11 @@ building_dark_energy_pylon = {
             minerals = 850
         }
         produces = {
+            trigger = {
+                owner = {
+                    is_ai = yes
+                }
+            }
             acot_sr_dark_energy = 2
         }
         upkeep = {

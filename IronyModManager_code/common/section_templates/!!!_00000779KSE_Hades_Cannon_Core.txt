@@ -1,9 +1,10 @@
 @cost0 = 2000
 ship_section_template = {
     key = "KSE Hades Cannon Core"
-    fits_on_slot = "ship"
     ship_size = xl_cannon
-    entity = "fe_01_ion_cannon_section_entity"
+    fits_on_slot = "ship"
+    should_draw_components = yes
+    entity = "fe_01_anni_cannon_section_entity"
     icon = "GFX_ship_part_core_mid"
     components_add_to_cost = yes
     component_slot = {

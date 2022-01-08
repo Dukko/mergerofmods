@@ -45,30 +45,23 @@ ship_section_template = {
     component_slot = {
         name = "TITANIC_07"
         template = "invisible_titanic_turret"
-        locatorname = "medium_gun_03"
+        locatorname = "medium_gun_01"
     }
     component_slot = {
         name = "TITANIC_08"
         template = "invisible_titanic_turret"
-        locatorname = "medium_gun_04"
-    }
-    component_slot = {
-        name = "TITANIC_09"
-        template = "invisible_titanic_turret"
-        locatorname = "medium_gun_04"
-    }
-    component_slot = {
-        name = "TITANIC_10"
-        template = "invisible_titanic_turret"
-        locatorname = "medium_gun_01"
+        locatorname = "medium_gun_02"
     }
     large_utility_slots = 15
     aux_utility_slots = 5
     resources = {
         category = ship_sections
         cost = {
-            sr_dark_matter = 400
-            acot_sr_dark_energy = 400
+        }
+    }
+    resources = {
+        category = ship_sections
+        cost = {
         }
     }
 }

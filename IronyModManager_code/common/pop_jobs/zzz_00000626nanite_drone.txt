@@ -1,5 +1,5 @@
 nanite_drone = {
-    category = worker
+    category = simple_drone
     condition_string = DRONE_JOB_TRIGGER
     building_icon = building_nanite_transmuter
     clothes_texture_index = 2
@@ -24,11 +24,11 @@ nanite_drone = {
             minerals = 4
         }
         upkeep = {
-            energy = 6
+            energy = 4
         }
     }
     weight = {
-        weight = @worker_job_weight
+        weight = @simple_drone_job_weight
         modifier = {
             factor = 1.5
             OR = {
@@ -61,7 +61,10 @@ nanite_drone = {
         }
         modifier = {
             factor = 1.2
-            has_trait = trait_very_strong
+            OR = {
+                has_trait = trait_very_strong
+                has_job = nanite_drone
+            }
         }
         modifier = {
             factor = 1.1

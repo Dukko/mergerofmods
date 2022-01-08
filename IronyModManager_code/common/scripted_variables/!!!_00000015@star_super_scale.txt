@@ -1,1 +1,0 @@
-@star_super_scale = 350

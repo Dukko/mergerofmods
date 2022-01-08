@@ -1,0 +1,34 @@
+pc_shroud_touched = {
+    entity = "shroud_planet"
+    entity_scale = @planet_standard_scale
+    icon = GFX_planet_type_shrouded
+    atmosphere_color = hsv {
+        0
+        0.9
+        0.45
+    }
+    atmosphere_intensity = 0.5
+    atmosphere_width = 1.5
+    city_color_lut = "gfx/portraits/misc/colorcorrection_neutral.tga"
+    spawn_odds = 0
+    extra_orbit_size = 0
+    extra_planet_count = 0
+    planet_size = {
+        min = 10
+        max = 25
+    }
+    moon_size = {
+        min = 6
+        max = 10
+    }
+    district_set = standard
+    ideal = yes
+    starting_planet = no
+    colonizable = yes
+    modifier = {
+        planet_jobs_society_research_produces_mult = 0.25
+        pop_ethic_spiritualist_attraction_mult = 0.5
+        pop_government_ethic_attraction = -0.25
+        planet_stability_add = -25
+    }
+}

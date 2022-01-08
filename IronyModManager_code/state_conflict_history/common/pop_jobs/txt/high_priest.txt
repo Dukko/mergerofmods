@@ -10,8 +10,8 @@ high_priest = {
         is_being_assimilated = no
         is_sapient = yes
     }
+    possible_precalc = can_fill_ruler_job
     possible = {
-        ruler_job_check_trigger = yes
         NOT = {
             has_ethic = ethic_materialist
         }
@@ -21,6 +21,15 @@ high_priest = {
         produces = {
             unity = 7
             society_research = 2
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    is_exalted_priesthood = yes
+                }
+            }
+            unity = 1
         }
         produces = {
             trigger = {

@@ -10,7 +10,7 @@ trait_pc_hive_preference = {
     modifier = {
         pc_hive_habitability = 1
         pc_pdhive2_habitability = 1
-        pop_environment_tolerance = 0.6
+        pop_environment_tolerance = 0.5
     }
     ai_weight = {
         weight = 0

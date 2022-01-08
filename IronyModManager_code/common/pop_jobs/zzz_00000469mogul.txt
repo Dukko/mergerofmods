@@ -12,12 +12,8 @@ mogul = {
     }
     possible_precalc = can_fill_ruler_job
     possible = {
-        NOR = {
-            has_trait = trait_slave_gene
-            has_trait = trait_symbiotic
-        }
-        owner = {
-            NOT = {
+        NOT = {
+            owner = {
                 has_valid_civic = civic_distributism
             }
         }
