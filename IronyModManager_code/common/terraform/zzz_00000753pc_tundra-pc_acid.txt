@@ -3,7 +3,12 @@
 terraform_link = {
     from = pc_tundra
     to = pc_acid
-    energy = @terraforming_cost_level_4
+    resources = {
+        category = terraforming
+        cost = {
+            energy = @terraforming_cost_level_4
+        }
+    }
     duration = @terraforming_duration_level_4
     condition = {
         has_technology = tech_climate_restoration

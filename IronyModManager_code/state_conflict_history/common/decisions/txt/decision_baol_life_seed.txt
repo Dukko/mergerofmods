@@ -12,21 +12,6 @@ decision_baol_life_seed = {
             is_planet_class = pc_hive
             is_planet_class = pc_apsr_ancient
             is_planet_class = pc_apsr_unique
-            is_planet_class = pc_pd_barren_hab
-            is_planet_class = pc_pd_barren_cold_hab
-            is_planet_class = pc_pd_gas_giant_hab
-            is_planet_class = pc_pd_frozen_hab
-            is_planet_class = pc_pd_molten_hab
-            is_planet_class = pc_pd_toxic_hab
-            is_planet_class = pc_pd_hothouse_hab
-            is_planet_class = pc_pd_asteroid_hab
-            is_planet_class = pc_necropolis
-            is_planet_class = pc_ecocity
-            is_planet_class = pc_capitalarc
-            is_planet_class = pc_palacearc
-            is_planet_class = pc_milarc
-            is_planet_class = pc_milarc_relic
-            is_planet_class = pc_corpoarc
             is_planet_class = pc_pdhive1
             is_planet_class = pc_pdhive2
             is_planet_class = pc_necrohive
@@ -54,7 +39,6 @@ decision_baol_life_seed = {
             gpm_is_planet_class_hive = yes
             gpm_is_planet_class_machine = yes
             is_planet_class = pc_habitable_gas_giant
-            is_planet_class = pc_giga_planetary_computer
             is_planet_class = pc_flat_world
             is_planet_class = pc_katzenland
         }
@@ -88,13 +72,7 @@ decision_baol_life_seed = {
             if = {
                 limit = {
                     NOT = {
-                        OR = {
-                            is_planet_class = pc_tidallygaia
-                            is_planet_class = pc_tidallylocked
-                            is_planet_class = pc_eyeball
-                            is_planet_class = pc_ll_tidallylocked
-                            is_planet_class = pc_ll_tidallylocked_cold
-                        }
+                        is_planet_class = pc_tidallygaia
                     }
                 }
                 change_pc = pc_gaia

@@ -1,0 +1,34 @@
+@terraforming_duration_level_4 = 7200
+@terraforming_cost_radblooms = 1000
+terraform_link = {
+    from = pc_pd_barren_cold_hab
+    to = pc_irradiated
+    resources = {
+        category = terraforming
+        cost = {
+            sr_rad_bloom = @terraforming_cost_radblooms
+        }
+    }
+    duration = @terraforming_duration_level_4
+    condition = {
+        has_technology = tech_climate_restoration
+    }
+    potential = {
+        has_technology = tech_climate_restoration
+    }
+    potential = {
+        from = {
+            has_modifier = terraforming_candidate
+        }
+    }
+    effect = {
+        from = {
+            remove_modifier = terraforming_candidate
+            reroll_planet = yes
+            remove_modifier = master_builders_habitats
+        }
+    }
+    ai_weight = {
+        weight = 5
+    }
+}

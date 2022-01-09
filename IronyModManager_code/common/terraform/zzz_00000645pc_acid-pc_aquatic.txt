@@ -1,15 +1,22 @@
-@terraforming_cost_level_3 = 10000
-@terraforming_duration_level_3 = 5400
+@terraforming_cost_gaia = 7500
+@terraforming_duration_gaia = 3600
 terraform_link = {
     from = pc_acid
     to = pc_aquatic
-    energy = @terraforming_cost_level_3
-    duration = @terraforming_duration_level_3
-    condition = {
-        has_technology = tech_climate_restoration
+    resources = {
+        category = terraforming
+        cost = {
+            energy = @terraforming_cost_gaia
+        }
     }
+    duration = @terraforming_duration_gaia
     potential = {
-        has_technology = tech_climate_restoration
+        has_ascension_perk = ap_hydrocentric
+        has_ascension_perk = ap_world_shaper
+    }
+    condition = {
+        has_ascension_perk = ap_hydrocentric
+        has_ascension_perk = ap_world_shaper
     }
     ai_weight = {
         weight = 5

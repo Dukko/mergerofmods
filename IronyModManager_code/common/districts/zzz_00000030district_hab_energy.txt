@@ -73,7 +73,9 @@ district_hab_energy = {
                 is_machine_empire = yes
             }
         }
-        job_technician_drone_add = 3
+        modifier = {
+            job_technician_drone_add = 3
+        }
     }
     triggered_planet_modifier = {
         potential = {
@@ -82,7 +84,9 @@ district_hab_energy = {
                 is_hive_empire = yes
             }
         }
-        job_technician_drone_add = 4
+        modifier = {
+            job_technician_drone_add = 4
+        }
     }
     triggered_desc = {
         trigger = {

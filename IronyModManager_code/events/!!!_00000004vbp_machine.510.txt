@@ -1,0 +1,120 @@
+namespace = vbp_machine
+country_event = {
+    id = vbp_machine.510
+    title = vbp_machine.510.name
+    desc = {
+        trigger = {
+            has_authority = auth_machine_intelligence
+        }
+        text = vbp_machine.510.machine
+    }
+    desc = {
+        trigger = {
+            NOT = {
+                has_authority = auth_machine_intelligence
+            }
+        }
+        text = vbp_machine.510.normal
+    }
+    picture = GFX_evt_circuitry_modification
+    location = FROM
+    is_triggered_only = yes
+    immediate = {
+        FROMFROM = {
+            save_event_target_as = robot_planet
+            vbp_machine_clear_mods = yes
+            owner = {
+                save_event_target_as = robot_country
+            }
+            observation_outpost = {
+                dismantle = yes
+            }
+            IF = {
+                limit = {
+                    root = {
+                        has_authority = auth_machine_intelligence
+                    }
+                }
+                every_owned_pop = {
+                    limit = {
+                        is_same_species = event_target:robot_country
+                    }
+                    add_modifier = {
+                        modifier = vbp_protocol_conflict
+                        days = 1800
+                    }
+                }
+            }
+            else = {
+                hidden_effect = {
+                    random_owned_pop = {
+                        create_species = {
+                            is_mod = yes
+                            name = this
+                            namelist = AI
+                            plural = this
+                            class = "ROBOT"
+                            portrait = this.species
+                            traits = {
+                                trait = "trait_mechanical"
+                            }
+                            traits = this
+                        }
+                        change_species = last_created_species
+                        modify_species = {
+                            species = this
+                            remove_trait = trait_machine_unit
+                        }
+                    }
+                    every_owned_pop = {
+                        limit = {
+                            is_same_species = event_target:robot_country
+                        }
+                        change_species = last_created_species
+                    }
+                }
+                every_owned_pop = {
+                    limit = {
+                        is_same_species = event_target:robot_country
+                    }
+                    add_modifier = {
+                        modifier = vbp_repurposed_machines
+                        days = 1800
+                    }
+                    hidden_effect = {
+                        change_species = last_created_species
+                    }
+                }
+            }
+            set_owner = root
+        }
+    }
+    option = {
+        name = vbp_machine.510.a.machine
+        trigger = {
+            has_authority = auth_machine_intelligence
+        }
+        hidden_effect = {
+            remove_country_flag = recently_invaded_primitives
+            set_timed_country_flag = {
+                flag = recently_invaded_primitives
+                days = 7200
+            }
+        }
+    }
+    option = {
+        name = EXCELLENT
+        trigger = {
+            NOT = {
+                has_authority = auth_machine_intelligence
+            }
+        }
+        hidden_effect = {
+            remove_country_flag = recently_invaded_primitives
+            set_timed_country_flag = {
+                flag = recently_invaded_primitives
+                days = 7200
+            }
+        }
+    }
+}

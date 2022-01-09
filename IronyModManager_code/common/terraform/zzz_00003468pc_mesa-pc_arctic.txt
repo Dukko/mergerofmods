@@ -1,0 +1,31 @@
+@terraforming_cost_level_2 = 5000
+@terraforming_duration_level_2 = 3600
+terraform_link = {
+    from = pc_mesa
+    to = pc_arctic
+    resources = {
+        category = terraforming
+        cost = {
+            energy = @terraforming_cost_level_2
+        }
+    }
+    duration = @terraforming_duration_level_2
+    condition = {
+        has_technology = tech_terrestrial_sculpting
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 10
+            from = {
+                has_planet_flag = str_terraform_arctic
+                num_pops > 8
+            }
+            NOR = {
+                has_ascension_perk = ap_hive_worlds
+                has_ascension_perk = ap_machine_worlds
+                has_ascension_perk = ap_world_shaper
+            }
+        }
+    }
+}

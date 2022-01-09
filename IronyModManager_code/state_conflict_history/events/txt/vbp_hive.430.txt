@@ -1,0 +1,45 @@
+namespace = vbp_hive
+country_event = {
+    id = vbp_hive.430
+    title = vbp_hive.430.name
+    desc = vbp_hive.430.desc
+    picture = GFX_evt_alien_cavemen
+    location = fromfrom
+    is_triggered_only = yes
+    immediate = {
+        FROMFROM = {
+            random_owned_pop = {
+                create_species = {
+                    name = THIS
+                    class = this
+                    portrait = this
+                    traits = THIS
+                    homeworld = PREV
+                }
+                change_species = last_created_species
+                modify_species = {
+                    species = this
+                    remove_trait = trait_hive_mind
+                }
+            }
+            set_owner = root
+            every_owned_pop = {
+                change_species = last_created_species
+            }
+            observation_outpost = {
+                dismantle = yes
+            }
+        }
+    }
+    option = {
+        name = vbp_hive.430.a
+        custom_tooltip = vbp_hive.430.a.tooltip
+        hidden_effect = {
+            remove_country_flag = recently_invaded_primitives
+            set_timed_country_flag = {
+                flag = recently_invaded_primitives
+                days = 7200
+            }
+        }
+    }
+}

@@ -1,7 +1,13 @@
 terraform_link = {
     from = "pc_shattered"
     to = "pc_molten"
-    energy = 50000
+    resources = {
+        category = terraforming
+        cost = {
+            energy = 50000
+            sr_dark_matter = 500
+        }
+    }
     duration = 7200
     potential = {
         has_tradition = tr_plentiful_transformation_5

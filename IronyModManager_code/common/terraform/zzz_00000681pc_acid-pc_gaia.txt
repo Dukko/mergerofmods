@@ -3,7 +3,12 @@
 terraform_link = {
     from = pc_acid
     to = pc_gaia
-    energy = @terraforming_cost_level_4
+    resources = {
+        category = terraforming
+        cost = {
+            energy = @terraforming_cost_level_4
+        }
+    }
     duration = @terraforming_duration_level_4
     condition = {
         has_ascension_perk = ap_world_shaper
@@ -12,24 +17,20 @@ terraform_link = {
         has_ascension_perk = ap_world_shaper
     }
     ai_weight = {
-        weight = 20
-        modifier = {
-            factor = 10
-            from = {
-                num_pops > 10
-            }
-        }
-        modifier = {
-            factor = 2
-            from = {
-                num_pops > 25
-            }
-        }
+        weight = 1
         modifier = {
             factor = 0
             resource_stockpile_compare = {
                 resource = energy
-                value < 6000
+                value < 40000
+            }
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = auth_machine_intelligence
             }
         }
     }

@@ -1,0 +1,32 @@
+@terraforming_duration_level_3 = 5400
+@terraforming_cost_radblooms = 1000
+terraform_link = {
+    from = pc_barren
+    to = pc_irradiated
+    resources = {
+        category = terraforming
+        cost = {
+            sr_rad_bloom = @terraforming_cost_radblooms
+        }
+    }
+    duration = @terraforming_duration_level_3
+    condition = {
+        has_technology = tech_rad_bloom_terraform_2
+    }
+    potential = {
+        has_technology = tech_rad_bloom_terraform_2
+    }
+    potential = {
+        from = {
+            has_modifier = terraforming_candidate
+        }
+    }
+    effect = {
+        from = {
+            remove_modifier = terraforming_candidate
+        }
+    }
+    ai_weight = {
+        weight = 5
+    }
+}

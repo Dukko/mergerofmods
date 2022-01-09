@@ -1,7 +1,12 @@
 terraform_link = {
     from = pc_gray_goo
     to = pc_acid
-    energy = 1000
+    resources = {
+        category = terraforming
+        cost = {
+            energy = 1000
+        }
+    }
     duration = 360
     potential = {
         from = {

@@ -1,7 +1,16 @@
 terraform_link = {
     from = "pc_barren"
     to = "pc_toxic"
-    energy = 50000
+    resources = {
+        category = terraforming
+        cost = {
+            energy = 50000
+            alloys = 5000
+            volatile_motes = 500
+            exotic_gases = 500
+            rare_crystals = 500
+        }
+    }
     duration = 7200
     potential = {
         has_tradition = tr_plentiful_transformation_5

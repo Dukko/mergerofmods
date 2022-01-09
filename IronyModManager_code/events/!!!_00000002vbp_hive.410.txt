@@ -1,0 +1,28 @@
+namespace = vbp_hive
+country_event = {
+    id = vbp_hive.410
+    title = vbp_hive.410.name
+    desc = vbp_hive.410.desc
+    picture = GFX_evt_unspeakable_horror
+    location = fromfrom
+    is_triggered_only = yes
+    immediate = {
+        FROMFROM = {
+            set_owner = root
+            observation_outpost = {
+                dismantle = yes
+            }
+        }
+    }
+    option = {
+        name = vbp_hive.410.a
+        custom_tooltip = vbp_hive.410.a.tooltip
+        hidden_effect = {
+            remove_country_flag = recently_invaded_primitives
+            set_timed_country_flag = {
+                flag = recently_invaded_primitives
+                days = 7200
+            }
+        }
+    }
+}

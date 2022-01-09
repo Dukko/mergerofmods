@@ -1,7 +1,12 @@
 terraform_link = {
     from = "pc_alpine"
     to = "pc_nuked"
-    energy = 1000
+    resources = {
+        category = terraforming
+        cost = {
+            energy = 1000
+        }
+    }
     duration = 2400
     condition = {
         has_technology = "tech_climate_restoration"

@@ -1,0 +1,27 @@
+@terraforming_cost_level_3 = 10000
+@terraforming_duration_level_4 = 7200
+terraform_link = {
+    from = pc_machine
+    to = pc_glacial
+    resources = {
+        category = terraforming
+        cost = {
+            energy = @terraforming_cost_level_3
+        }
+    }
+    duration = @terraforming_duration_level_4
+    condition = {
+        has_technology = tech_climate_restoration
+    }
+    ai_weight = {
+        weight = 5
+        modifier = {
+            factor = 0
+            OR = {
+                is_mechanical_empire = yes
+                is_cyborg_empire = yes
+                has_authority = auth_machine_intelligence
+            }
+        }
+    }
+}

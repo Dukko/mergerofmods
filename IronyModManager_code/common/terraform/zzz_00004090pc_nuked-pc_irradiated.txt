@@ -1,0 +1,15 @@
+@terraforming_duration_level_1 = 1800
+terraform_link = {
+    from = pc_nuked
+    to = pc_irradiated
+    resources = {
+        category = terraforming
+        cost = {
+            sr_rad_bloom = 500
+        }
+    }
+    duration = @terraforming_duration_level_1
+    ai_weight = {
+        weight = 5
+    }
+}

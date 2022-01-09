@@ -172,7 +172,7 @@ district_rw_industrial = {
                 is_crafter_empire = no
             }
         }
-        text = "job_artisan_effect_desc"
+        text = job_artisan_effect_desc
     }
     triggered_desc = {
         trigger = {
