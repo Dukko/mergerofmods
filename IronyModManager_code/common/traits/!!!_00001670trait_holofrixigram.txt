@@ -1,0 +1,36 @@
+trait_holofrixigram = {
+    cost = 0
+    allowed_archetypes = {
+        HOLOARCH
+    }
+    potential_crossbreeding_chance = 0
+    species_potential_add = {
+        always = no
+    }
+    species_possible_remove = {
+        always = no
+    }
+    sorting_priority = 22
+    initial = no
+    randomized = no
+    modification = no
+    opposites = {
+        trait_holooverseer
+        trait_holodrone
+        trait_hologanglion
+        trait_holofrixigram_2
+        trait_holofrixigram_3
+        trait_holowarrior
+        trait_holowarrior_2
+    }
+    prerequisites = {
+        tech_holocastes
+        tech_robotic_workers
+    }
+    modifier = {
+        planet_pops_upkeep_mult = 0.4
+        planet_researchers_produces_mult = -1
+        planet_miners_produces_mult = -1
+        planet_technician_produces_mult = 0.6
+    }
+}

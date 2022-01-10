@@ -1,0 +1,36 @@
+@rulercategorybonus = 0.15
+ruler_trait_science_fanatic_biology = {
+    cost = 1
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/leader_trait_expertise_biology.dds"
+    modifier = {
+        category_biology_research_speed_mult = @rulercategorybonus
+    }
+    leader_potential_add = {
+        NOT = {
+            from = {
+                has_ethic = "ethic_gestalt_consciousness"
+            }
+        }
+    }
+    leader_trait = {
+        ruler
+    }
+    leader_class = {
+        ruler
+    }
+    opposites = {
+        "ruler_trait_science_fanatic_biology"
+        "ruler_trait_science_fanatic_computing"
+        "ruler_trait_science_fanatic_field_manipulation"
+        "ruler_trait_science_fanatic_industry"
+        "ruler_trait_science_fanatic_materials"
+        "ruler_trait_science_fanatic_military_theory"
+        "ruler_trait_science_fanatic_new_worlds"
+        "ruler_trait_science_fanatic_particles"
+        "ruler_trait_science_fanatic_psionics"
+        "ruler_trait_science_fanatic_propulsion"
+        "ruler_trait_science_fanatic_statecraft"
+        "ruler_trait_science_fanatic_voidcraft"
+    }
+}

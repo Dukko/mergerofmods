@@ -1,0 +1,33 @@
+trait_silicoid = {
+    cost = 0
+    potential_crossbreeding_chance = 0
+    sorting_priority = 20
+    initial = yes
+    randomized = no
+    modification = no
+    allowed_archetypes = {
+        LITHOID
+    }
+    opposites = {
+        trait_venerable
+        trait_enduring
+        trait_fleeting
+        trait_fleeting_lithoid
+        trait_nomadic
+        trait_sedentary
+    }
+    custom_tooltip = TRAIT_SILICOID_EFFECTS
+    modifier = {
+        pop_growth_speed = -0.1
+        pop_assembly_speed = -0.1
+        pop_environment_tolerance = 0.2
+        army_health = 0.25
+        leader_age = 10
+    }
+    species_class = {
+        SLCOD
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

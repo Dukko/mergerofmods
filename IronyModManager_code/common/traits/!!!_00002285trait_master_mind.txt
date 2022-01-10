@@ -1,0 +1,24 @@
+trait_master_mind = {
+    cost = -25
+    improves_leaders = yes
+    advanced_trait = yes
+    initial = no
+    randomized = no
+    modification = no
+    improves_leaders = yes
+    immortal_leaders = yes
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+        PRESAPIENT
+        MACHINE
+        ROBOT
+        DEITY
+    }
+    modifier = {
+        army_morale = 50
+        army_morale_damage_mult = 25
+        pop_happiness = 10
+        species_leader_exp_gain = 100
+    }
+}

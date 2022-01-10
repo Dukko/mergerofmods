@@ -1,0 +1,66 @@
+pouchkinn_engine_2 = {
+    entity = "pouchkinn_engine_2_entity"
+    construction_entity = "pouchkinn_engine_2_construction_entity"
+    portrait = "GFX_megastructure_construction_background"
+    build_time = 9500
+    upgrade_from = {
+        pouchkinn_engine_1
+    }
+    country_modifier = {
+        ship_weapon_damage = 0.1
+    }
+    potential = {
+        has_civic = civic_deranged_researchers
+    }
+    on_build_complete = {
+        event_target:giga_backup_pouchkinn = {
+            kill_leader = {
+                show_notification = no
+            }
+        }
+        event_target:global_event_country = {
+            create_species = {
+                name = "Katzen"
+                plural = "Katzens"
+                class = POUCHKINN
+                portrait = pouchkinnascended
+                traits = {
+                    trait = trait_industrious
+                    trait = trait_natural_engineers
+                }
+                effect = {
+                    save_global_event_target_as = ascended_pouchkinn_species
+                }
+            }
+            create_leader = {
+                class = scientist
+                gender = male
+                species = event_target:ascended_pouchkinn_species
+                immortal = yes
+                name = "Weeny Pouchkinn"
+                skill = 8
+                set_age = 14697
+                effect = {
+                    save_global_event_target_as = giga_backup_pouchkinn
+                }
+            }
+        }
+        every_country = {
+            limit = {
+                OR = {
+                    ehof_default_country = yes
+                    is_ai = no
+                }
+            }
+            country_event = {
+                id = giga_fallen_empire_misc.1027
+            }
+        }
+        event_target:global_event_country = {
+            country_event = {
+                id = giga_fallen_empire_misc.1026
+                days = 2
+            }
+        }
+    }
+}

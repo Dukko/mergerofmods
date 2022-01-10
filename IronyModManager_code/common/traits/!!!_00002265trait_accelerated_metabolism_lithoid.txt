@@ -1,0 +1,17 @@
+trait_accelerated_metabolism_lithoid = {
+    cost = -1
+    icon = gfx/interface/icons/traits/trait_accelerated_metabolism.dds
+    potential_crossbreeding_chance = 0.5
+    initial = no
+    randomized = no
+    advanced_trait = yes
+    allowed_archetypes = {
+        LITHOID
+    }
+    modifier = {
+        planet_pops_minerals_upkeep_mult = 0.5
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

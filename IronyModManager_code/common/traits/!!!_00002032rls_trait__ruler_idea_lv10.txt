@@ -1,0 +1,18 @@
+rls_trait__ruler_idea_lv10 = {
+    cost = 0
+    leader_trait = {
+        ruler
+    }
+    leader_class = {
+        ruler
+    }
+    initial = no
+    modification = no
+    randomized = no
+    custom_tooltip = rls_trait__ruler_idea_lv10_tooltip
+    self_modifier = {
+        species_leader_exp_gain = 0.2
+    }
+    modifier = {
+    }
+}

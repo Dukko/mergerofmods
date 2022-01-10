@@ -1,0 +1,20 @@
+trait_plentiful_traditions_robot_buildspeed4 = {
+    cost = -2
+    initial = no
+    randomized = no
+    prerequisites = {
+        tech_plentiful_traditions_metaverse_ecosystem
+    }
+    opposites = {
+        trait_plentiful_traditions_robot_buildspeed1
+        trait_plentiful_traditions_robot_buildspeed2
+        trait_plentiful_traditions_robot_buildspeed3
+    }
+    allowed_archetypes = {
+        ROBOT
+        MACHINE
+    }
+    modifier = {
+        pop_assembly_speed = -0.15
+    }
+}

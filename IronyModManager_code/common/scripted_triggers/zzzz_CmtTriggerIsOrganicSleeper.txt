@@ -1,0 +1,9 @@
+CmtTriggerIsOrganicSleeper = {        ## change to CmtTriggerSleeperPotentialAwakening
+    is_country_type = fallen_empire
+    NOR = {
+        has_ethic = ethic_gestalt_consciousness
+        has_country_flag = FEE_spiritualist_ascended
+        has_ai_personality = fallen_empire_gamers
+        has_ai_personality = fallen_empire_pouchkinn
+    }
+}

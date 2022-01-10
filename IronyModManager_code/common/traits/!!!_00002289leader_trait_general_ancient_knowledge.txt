@@ -1,0 +1,18 @@
+leader_trait_general_ancient_knowledge = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/trait_ancient_knowledge.dds"
+    modifier = {
+        army_damage_mult = 1
+        army_disengage_chance_mult = 0.35
+        army_experience_gain_mult = 10
+    }
+    leader_trait = {
+        general
+    }
+    leader_class = {
+        general
+    }
+    initial = no
+    randomized = no
+}

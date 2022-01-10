@@ -1,0 +1,15 @@
+xvcv_mdlc_ruler_trait_xeno_friendship_drones = {
+    cost = 0
+    modification = no
+    initial = no
+    randomized = no
+    icon = "gfx/interface/icons/customgui/leader_traits/xvcv_mdlc_ruler_trait_xeno_friendship_drones.dds"
+    modifier = {
+        envoys_add = 1
+    }
+    leader_class = {
+        ruler
+    }
+    leader_trait = all
+    custom_tooltip = xvcv_mdlc_ruler_trait_xeno_friendship_drones_tooltip
+}

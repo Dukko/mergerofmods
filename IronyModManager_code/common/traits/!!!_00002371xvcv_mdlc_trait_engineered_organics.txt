@@ -1,0 +1,15 @@
+xvcv_mdlc_trait_engineered_organics = {
+    cost = 0
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    sorting_priority = 20
+    initial = no
+    randomized = no
+    species_potential_add = {
+        always = no
+    }
+    modifier = {
+        pop_environment_tolerance = 0.6
+    }
+}

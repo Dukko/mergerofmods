@@ -8,9 +8,9 @@ action_form_research_agreement = {
     action_type = positive
     potential = {
         hidden_trigger = {
-            is_country_type = default
+            is_country_type_with_subjects = yes
             from = {
-                is_country_type = default
+                is_country_type_with_subjects = yes
             }
         }
     }

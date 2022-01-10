@@ -1,0 +1,12 @@
+rls_ruler_idea_level_4 = {
+    cost = 0
+    leader_trait = {
+        ruler
+    }
+    leader_class = {
+        ruler
+    }
+    initial = no
+    modification = no
+    randomized = no
+}

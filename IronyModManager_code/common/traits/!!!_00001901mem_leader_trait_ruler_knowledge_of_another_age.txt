@@ -1,0 +1,17 @@
+mem_leader_trait_ruler_knowledge_of_another_age = {
+    cost = 1
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/leader_trait_scroll.dds"
+    immortal_leaders = yes
+    modifier = {
+        all_technology_research_speed = 0.25
+    }
+    leader_trait = {
+        ruler
+    }
+    leader_class = {
+        ruler
+    }
+    initial = no
+    randomized = no
+}

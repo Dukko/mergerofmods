@@ -1,0 +1,14 @@
+trait_grotesque = {
+    cost = -1
+    allowed_archetypes = {
+        LITHOID
+    }
+    opposites = {
+        "trait_sparkly"
+    }
+    modifier = {
+        pop_other_species_happiness = -0.02
+        pop_happiness = -0.01
+        country_trust_growth = -0.1
+    }
+}

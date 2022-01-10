@@ -1444,5 +1444,24 @@ room_selector = {
                 has_trait = trait_horrorworm
             }
         }
+        "personality_fallen_empire_gamer_room" = {
+            exists = owner
+            owner = {
+                OR = {
+                    has_ai_personality = experienced_awakened_fallen_empire_gamers
+                    has_ai_personality = lethargic_awakened_fallen_empire_gamers
+                    has_ai_personality = fallen_empire_gamers
+                }
+            }
+        }
+        "personality_fallen_empire_pouchkinn_room" = {
+            exists = owner
+            owner = {
+                OR = {
+                    has_ai_personality = fallen_empire_pouchkinn
+                    has_ai_personality = fallen_empire_awoken_pouchkinn
+                }
+            }
+        }
     }
 }

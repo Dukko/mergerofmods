@@ -1,0 +1,16 @@
+trait_accelerated_metabolism = {
+    cost = -1
+    potential_crossbreeding_chance = 0.5
+    initial = no
+    randomized = no
+    advanced_trait = yes
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    modifier = {
+        planet_pops_food_upkeep_mult = 0.5
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

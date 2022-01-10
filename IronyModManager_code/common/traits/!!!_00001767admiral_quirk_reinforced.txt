@@ -1,0 +1,38 @@
+admiral_quirk_reinforced = {
+    cost = 0
+    modification = no
+    icon = "gfx/interface/icons/traits/admiral_quirk_reinforced.dds"
+    modifier = {
+        ships_upkeep_mult = 0.04
+        ship_speed_mult = -0.08
+        ship_hull_mult = 0.04
+        ship_armor_mult = 0.1
+    }
+    leader_trait = {
+        admiral
+    }
+    leader_class = {
+        admiral
+    }
+    opposites = {
+        "leader_trait_nervous"
+        "leader_trait_stubborn"
+        "leader_trait_substance_abuser"
+        "leader_trait_rigid_programming"
+        "leader_trait_unstable_code_base"
+        "admiral_flaw_hesitant"
+        "admiral_flaw_poor_maintainer"
+        "admiral_flaw_proud"
+        "admiral_flaw_sitting_duck"
+        "admiral_flaw_slacker"
+        "admiral_quirk_evasive"
+        "admiral_quirk_offensive"
+        "admiral_quirk_reinforced"
+        "admiral_quirk_scrappy"
+        "leader_flaw_greedy"
+        "leader_flaw_terminal"
+        "leader_quirk_enduring"
+        "leader_quirk_sickly"
+        "leader_quirk_smart"
+    }
+}

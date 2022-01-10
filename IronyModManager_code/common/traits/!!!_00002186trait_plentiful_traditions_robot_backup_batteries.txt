@@ -1,0 +1,22 @@
+trait_plentiful_traditions_robot_backup_batteries = {
+    cost = 1
+    initial = no
+    randomized = no
+    prerequisites = {
+        tech_plentiful_traditions_cybernetics_construct_amplifiers
+    }
+    opposites = {
+        trait_plentiful_traditions_robot_energy1
+        trait_plentiful_traditions_robot_energy2
+        trait_plentiful_traditions_robot_energy3
+        trait_plentiful_traditions_robot_energy4
+    }
+    allowed_archetypes = {
+        ROBOT
+        MACHINE
+    }
+    modifier = {
+        planet_jobs_energy_produces_mult = 0.15
+        planet_jobs_minerals_produces_mult = -0.1
+    }
+}
