@@ -340,6 +340,30 @@ slave = {
         }
         produces = {
             trigger = {
+                has_trait = trait_yanz_neon_fur
+            }
+            sr_zro = 0.05
+        }
+        produces = {
+            trigger = {
+                has_trait = trait_yanz_crystal_skin
+            }
+            rare_crystals = 0.05
+        }
+        produces = {
+            trigger = {
+                has_trait = trait_yanz_unique_thick_fur
+            }
+            volatile_motes = 0.05
+        }
+        produces = {
+            trigger = {
+                has_trait = trait_yanz_living_metal_fluids
+            }
+            sr_living_metal = 0.05
+        }
+        produces = {
+            trigger = {
                 is_lithoid = yes
                 has_trait = trait_lithoid_zro_byproducts
             }

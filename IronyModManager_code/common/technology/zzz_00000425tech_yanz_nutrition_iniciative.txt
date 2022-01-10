@@ -1,0 +1,28 @@
+tech_yanz_nutrition_iniciative = {
+    area = society
+    start_tech = no
+    cost = @tier3cost3
+    is_rare = yes
+    tier = 3
+    category = {
+        biology
+    }
+    prerequisites = {
+        "tech_frontier_health"
+    }
+    weight = @tier3weight3
+    potential = {
+        is_gestalt = no
+    }
+    modifier = {
+        leader_age = 10
+        planet_jobs_produces_mult = 0.05
+        pop_growth_speed = 0.05
+    }
+    prereqfor_desc = {
+        custom = {
+            title = ""
+            desc = ""
+        }
+    }
+}

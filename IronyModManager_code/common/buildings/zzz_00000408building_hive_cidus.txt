@@ -1,0 +1,42 @@
+building_hive_cidus = {
+    base_buildtime = 720
+    category = government
+    prerequisites = {
+        tech_yanz_hive_gargantuan_biology
+    }
+    resources = {
+        category = planet_buildings
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        cost = {
+            minerals = 1000
+            food = 5000
+            exotic_gases = 100
+        }
+        upkeep = {
+            energy = 10
+            exotic_gases = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            planet_farmers_food_produces_mult = 0.25
+            planet_amenities_add = 15
+            planet_housing_add = 15
+            job_agri_drone_add = 10
+            job_gas_refiner_drone_add = 2
+            job_patrol_drone_add = 1
+            job_spawning_drone_add = 1
+        }
+    }
+}

@@ -1,0 +1,21 @@
+tech_yanz_quantum_biology = {
+    area = society
+    start_tech = no
+    cost = @tier5cost3
+    is_rare = yes
+    tier = 5
+    category = {
+        biology
+    }
+    weight = 0
+    modifier = {
+        pop_growth_speed = 0.1
+        planet_researchers_society_research_produces_mult = 0.2
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "tech_yanz_quantum_biology_info"
+            desc = ""
+        }
+    }
+}

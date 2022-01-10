@@ -1,0 +1,27 @@
+trait_yanz_overload = {
+    cost = 5
+    initial = no
+    randomized = no
+    modification = yes
+    potential_crossbreeding_chance = 0.1
+    opposites = {
+        "trait_hive_mind"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    sorting_priority = 5
+    icon = "gfx/interface/icons/traits/bio_path/trait_yanz_overload.dds"
+    prerequisites = {
+        tech_yanz_perfect_servants
+    }
+    modifier = {
+        planet_jobs_produces_mult = 0.25
+        leader_age = -50
+        pop_environment_tolerance = -0.25
+    }
+    slave_cost = {
+        energy = 100
+    }
+}

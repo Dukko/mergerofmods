@@ -1,0 +1,27 @@
+trait_yanz_biological_perfection = {
+    cost = -20
+    initial = no
+    randomized = no
+    modification = yes
+    potential_crossbreeding_chance = 0
+    opposites = {
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    sorting_priority = 10
+    icon = "gfx/interface/icons/traits/bio_path/trait_yanz_biological_perfection.dds"
+    prerequisites = {
+        tech_yanz_quantum_biology
+    }
+    modifier = {
+        planet_jobs_produces_mult = 0.2
+        pop_environment_tolerance = 0.2
+        pop_growth_speed = 0.2
+        leader_age = 40
+    }
+    slave_cost = {
+        energy = 2000
+    }
+}

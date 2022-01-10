@@ -1,0 +1,29 @@
+trait_yanz_born_miners = {
+    cost = 4
+    initial = no
+    randomized = no
+    modification = yes
+    advanced_trait = yes
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_industrious"
+        "trait_yanz_born_farmers"
+        "trait_yanz_born_inventors"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    sorting_priority = 4
+    icon = "gfx/interface/icons/traits/bio_path/trait_yanz_born_miners.dds"
+    prerequisites = {
+        tech_yanz_quantum_biology
+    }
+    modifier = {
+        planet_jobs_minerals_produces_mult = 0.33
+        planet_jobs_engineering_research_produces_mult = 0.05
+    }
+    slave_cost = {
+        energy = 400
+    }
+}

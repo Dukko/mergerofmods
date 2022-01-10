@@ -1,0 +1,24 @@
+trait_yanz_extremely_fertile = {
+    cost = 6
+    initial = no
+    randomized = no
+    modification = yes
+    potential_crossbreeding_chance = 0.1
+    opposites = {
+        "trait_slow_breeders"
+        "trait_rapid_breeders"
+        "trait_fertile"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    sorting_priority = 6
+    icon = "gfx/interface/icons/traits/bio_path/trait_yanz_extremely_fertile.dds"
+    prerequisites = {
+        tech_yanz_quantum_biology
+    }
+    modifier = {
+        pop_growth_speed = 0.5
+    }
+}

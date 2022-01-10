@@ -1,0 +1,32 @@
+trait_yanz_genius_engineers = {
+    cost = 5
+    initial = no
+    randomized = no
+    modification = yes
+    potential_crossbreeding_chance = 0.1
+    opposites = {
+        "trait_natural_physicists"
+        "trait_natural_engineers"
+        "trait_natural_sociologists"
+        "trait_nerve_stapled"
+        "trait_yanz_genius_physicists"
+        "trait_yanz_genius_sociologists"
+        "trait_hive_mind"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    sorting_priority = 5
+    icon = "gfx/interface/icons/traits/bio_path/trait_yanz_genius_engineers.dds"
+    prerequisites = {
+        tech_yanz_quantum_biology
+    }
+    modifier = {
+        planet_jobs_engineering_research_produces_mult = 0.5
+        planet_jobs_minerals_produces_mult = 0.1
+    }
+    slave_cost = {
+        energy = 500
+    }
+}

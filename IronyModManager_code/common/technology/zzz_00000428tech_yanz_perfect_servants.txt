@@ -1,0 +1,33 @@
+tech_yanz_perfect_servants = {
+    area = society
+    start_tech = no
+    cost = @tier5cost3
+    is_rare = yes
+    tier = 5
+    category = {
+        biology
+    }
+    prerequisites = {
+        "tech_yanz_quantum_biology"
+    }
+    weight = @tier5weight1
+    modifier = {
+        planet_jobs_slave_produces_mult = 0.05
+        pop_cat_slave_political_power = -0.5
+    }
+    potential = {
+        is_gestalt = no
+        OR = {
+            has_ethic = ethic_authoritarian
+            has_ethic = ethic_fanatic_authoritarian
+            has_ethic = ethic_xenophobe
+            has_ethic = ethic_fanatic_xenophobe
+        }
+    }
+    prereqfor_desc = {
+        custom = {
+            title = "tech_yanz_perfect_servants_info"
+            desc = ""
+        }
+    }
+}

@@ -1,0 +1,24 @@
+trait_yanz_short_lived = {
+    cost = -5
+    randomized = yes
+    modification = yes
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_yanz_eternal"
+        "trait_venerable"
+        "trait_enduring"
+        "trait_fleeting"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    sorting_priority = 0
+    icon = "gfx/interface/icons/traits/trait_yanz_short_lived.dds"
+    modifier = {
+        leader_age = -30
+    }
+    slave_cost = {
+        energy = -25
+    }
+}

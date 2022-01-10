@@ -1,0 +1,25 @@
+trait_yanz_decentralized_mind = {
+    cost = 10
+    initial = no
+    randomized = no
+    modification = yes
+    potential_crossbreeding_chance = 0.1
+    opposites = {
+        "trait_intelligent"
+        "trait_erudite"
+        "trait_nerve_stapled"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    sorting_priority = 10
+    icon = "gfx/interface/icons/traits/bio_path/trait_yanz_decentralized_mind.dds"
+    custom_tooltip = TRAIT_YANZ_DECENTRALIZED_MIND
+    prerequisites = {
+        tech_yanz_hive_evolutionary_plan
+    }
+    slave_cost = {
+        energy = 1000
+    }
+}

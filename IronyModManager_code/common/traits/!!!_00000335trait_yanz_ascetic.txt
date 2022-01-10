@@ -1,0 +1,31 @@
+trait_yanz_ascetic = {
+    cost = 6
+    initial = no
+    randomized = no
+    modification = yes
+    potential_crossbreeding_chance = 0.1
+    opposites = {
+        "trait_conservational"
+        "trait_wasteful"
+        "trait_nerve_stapled"
+        "trait_hive_mind"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    sorting_priority = 6
+    icon = "gfx/interface/icons/traits/bio_path/trait_yanz_ascetic.dds"
+    prerequisites = {
+        tech_yanz_quantum_biology
+    }
+    modifier = {
+        planet_pops_consumer_goods_upkeep_mult = -0.25
+        planet_pops_food_upkeep_mult = -0.1
+        pop_housing_usage_mult = -0.1
+        planet_jobs_unity_produces_mult = 0.1
+    }
+    slave_cost = {
+        energy = 600
+    }
+}

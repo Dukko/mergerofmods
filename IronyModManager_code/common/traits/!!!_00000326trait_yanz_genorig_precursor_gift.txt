@@ -1,0 +1,25 @@
+trait_yanz_genorig_precursor_gift = {
+    cost = 0
+    initial = no
+    randomized = no
+    modification = no
+    potential_crossbreeding_chance = 0
+    opposites = {
+        "trait_yanz_genorig_precursor_gift"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    sorting_priority = 10
+    icon = "gfx/interface/icons/traits/trait_yanz_genorig_precursor_gift.dds"
+    modifier = {
+        planet_jobs_produces_mult = 0.1
+        pop_environment_tolerance = 0.1
+        pop_growth_speed = 0.1
+        leader_age = 20
+    }
+    slave_cost = {
+        energy = 2000
+    }
+}

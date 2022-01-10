@@ -1,0 +1,21 @@
+leader_trait_governor_yanz_biological_perfection = {
+    cost = 0
+    modification = no
+    initial = no
+    randomized = no
+    icon = "gfx/interface/icons/traits/bio_path/trait_yanz_biological_perfection.dds"
+    modifier = {
+        planet_jobs_engineering_research_produces_mult = 0.2
+        planet_jobs_physics_research_produces_mult = 0.2
+        planet_jobs_society_research_produces_mult = 0.2
+        planet_jobs_unity_produces_mult = 0.2
+        planet_stability_add = 20
+        planet_crime_add = -20
+    }
+    leader_trait = {
+        governor
+    }
+    leader_class = {
+        governor
+    }
+}

@@ -1,0 +1,18 @@
+trait_yanz_workaholic = {
+    cost = 5
+    randomized = no
+    modification = yes
+    potential_crossbreeding_chance = 0.1
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    sorting_priority = 5
+    icon = "gfx/interface/icons/traits/trait_yanz_workaholic.dds"
+    modifier = {
+        planet_jobs_produces_mult = 0.1
+    }
+    slave_cost = {
+        energy = 100
+    }
+}

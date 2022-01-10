@@ -1,0 +1,20 @@
+tech_yanz_hive_evolutionary_plan = {
+    area = society
+    start_tech = no
+    cost = @tier5cost3
+    is_rare = yes
+    tier = 5
+    category = {
+        biology
+    }
+    weight = 0
+    potential = {
+        is_gestalt = yes
+    }
+    prereqfor_desc = {
+        custom = {
+            title = ""
+            desc = ""
+        }
+    }
+}

@@ -1,0 +1,19 @@
+leader_trait_general_yanz_biological_perfection = {
+    cost = 0
+    modification = no
+    initial = no
+    randomized = no
+    icon = "gfx/interface/icons/traits/bio_path/trait_yanz_biological_perfection.dds"
+    modifier = {
+        army_morale = 0.2
+        army_morale_damage_mult = 0.2
+        army_damage_mult = 0.2
+        armies_upkeep_mult = -0.2
+    }
+    leader_trait = {
+        general
+    }
+    leader_class = {
+        general
+    }
+}

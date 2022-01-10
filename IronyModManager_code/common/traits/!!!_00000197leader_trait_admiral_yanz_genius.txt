@@ -1,0 +1,27 @@
+leader_trait_admiral_yanz_genius = {
+    cost = 0
+    modification = no
+    initial = no
+    randomized = no
+    icon = "gfx/interface/icons/traits/bio_path/trait_yanz_genius.dds"
+    modifier = {
+        ship_emergency_ftl_mult = -0.1
+        ship_disengage_chance_mult = 0.1
+        ships_upkeep_mult = -0.33
+        ship_fire_rate_mult = 0.1
+        ship_speed_mult = 0.1
+        ship_evasion_mult = 0.1
+        ship_weapon_damage = 0.1
+        ship_hull_regen_add_perc = 0.1
+        ship_armor_regen_add_perc = 0.1
+    }
+    leader_trait = {
+        admiral
+    }
+    leader_class = {
+        admiral
+    }
+    opposites = {
+        "leader_trait_admiral_erudite"
+    }
+}

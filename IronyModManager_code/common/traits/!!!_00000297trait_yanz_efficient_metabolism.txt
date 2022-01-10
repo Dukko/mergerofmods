@@ -1,0 +1,19 @@
+trait_yanz_efficient_metabolism = {
+    cost = 3
+    randomized = yes
+    modification = yes
+    potential_crossbreeding_chance = 1
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    sorting_priority = 4
+    icon = "gfx/interface/icons/traits/trait_yanz_efficient_metabolism.dds"
+    modifier = {
+        planet_pops_food_upkeep_mult = -0.3
+        planet_pops_minerals_upkeep_mult = -0.3
+    }
+    slave_cost = {
+        energy = 50
+    }
+}

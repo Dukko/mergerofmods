@@ -1,0 +1,25 @@
+trait_yanz_slow_metabolism = {
+    cost = -6
+    potential_crossbreeding_chance = 1
+    randomized = no
+    modification = yes
+    opposites = {
+        "trait_yanz_efficient_metabolism"
+        "trait_yanz_workaholic"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    sorting_priority = 105
+    icon = "gfx/interface/icons/traits/trait_yanz_slow_metabolism.dds"
+    prerequisites = {
+        tech_yanz_biological_perfection
+    }
+    modifier = {
+        planet_jobs_produces_mult = -0.1
+    }
+    slave_cost = {
+        energy = -25
+    }
+}

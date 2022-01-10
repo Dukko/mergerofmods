@@ -42,6 +42,30 @@ specialist = {
             }
             consumer_goods = 2
         }
+        produces = {
+            trigger = {
+                has_trait = trait_yanz_neon_fur
+            }
+            sr_zro = 0.05
+        }
+        produces = {
+            trigger = {
+                has_trait = trait_yanz_crystal_skin
+            }
+            rare_crystals = 0.05
+        }
+        produces = {
+            trigger = {
+                has_trait = trait_yanz_unique_thick_fur
+            }
+            volatile_motes = 0.05
+        }
+        produces = {
+            trigger = {
+                has_trait = trait_yanz_living_metal_fluids
+            }
+            sr_living_metal = 0.05
+        }
     }
     triggered_pop_modifier = {
         potential = {
@@ -620,6 +644,30 @@ specialist = {
                 has_trait = trait_lithoid_volatile_excretions
             }
             volatile_motes = @lithoid_trait_resource_production
+        }
+        produces = {
+            trigger = {
+                has_trait = trait_yanz_neon_fur
+            }
+            sr_zro = 0.05
+        }
+        produces = {
+            trigger = {
+                has_trait = trait_yanz_crystal_skin
+            }
+            rare_crystals = 0.05
+        }
+        produces = {
+            trigger = {
+                has_trait = trait_yanz_unique_thick_fur
+            }
+            volatile_motes = 0.05
+        }
+        produces = {
+            trigger = {
+                has_trait = trait_yanz_living_metal_fluids
+            }
+            sr_living_metal = 0.05
         }
         produces = {
             trigger = {

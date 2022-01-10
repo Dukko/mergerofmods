@@ -1,0 +1,24 @@
+trait_yanz_extremely_nonadaptive = {
+    cost = -4
+    randomized = yes
+    modification = yes
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_adaptive"
+        "trait_extremely_adaptive"
+        "trait_robust"
+        "trait_nonadaptive"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    sorting_priority = 0
+    icon = "gfx/interface/icons/traits/trait_yanz_extremely_nonadaptive.dds"
+    modifier = {
+        pop_environment_tolerance = -0.2
+    }
+    slave_cost = {
+        energy = -25
+    }
+}

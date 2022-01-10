@@ -1,0 +1,28 @@
+trait_yanz_living_refinery = {
+    cost = 4
+    initial = no
+    randomized = no
+    modification = yes
+    potential_crossbreeding_chance = 0.1
+    opposites = {
+        "trait_lithoid_volatile_excretions"
+        "trait_lithoid_gaseous_byproducts"
+        "trait_lithoid_scintillating"
+    }
+    allowed_archetypes = {
+        LITHOID
+    }
+    sorting_priority = 4
+    icon = "gfx/interface/icons/traits/bio_path/trait_yanz_living_refinery.dds"
+    prerequisites = {
+        tech_yanz_perfect_servants
+    }
+    modifier = {
+        planet_livestock_exotic_gases_produces_add = 0.1
+        planet_livestock_rare_crystals_produces_add = 0.1
+        planet_livestock_volatile_motes_produces_add = 0.1
+    }
+    slave_cost = {
+        energy = 4000
+    }
+}
