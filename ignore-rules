@@ -2,8 +2,6 @@ localisation
 common/economic_categories
 common/scripted_loc
 common/button_effects
-modName:!!Ariphaos Unofficial Patch (3.1)
-modName:Community Flash Patch
 Localisation\*
 interface\ap*
 common\armies\fe_*
@@ -60,6 +58,11 @@ common\terraform
 gfx/worldgfx
 prescripted_countries
 
+ #this is a bunch of modifiers from Expanded Pops
+common\opinion_modifiers\triggered*
+#GPM3.14patch
+common\casus_belli\cb_gpm*
+common\deposits\gpm*
 # From LordOfLA
 flags
 common\random_names
@@ -71,9 +74,12 @@ gfx\models
 gfx\portraits
 gfx\projectiles
 gfx\ui_overhaul_qhd
-
+gfx\keyicons
+#lazy
+common\resolutions
+common\scripted_triggers
+common\scripted_variables
 # Overrides
-
-
 !gfx\portraits\asset_selectors
 !common\random_names\base
+modName:Guilli's Planet Modifiers and Features - 3.14 Patch--count:2
