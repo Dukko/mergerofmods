@@ -1,19 +1,27 @@
 # The Merger of Mods
-This is my Stellaris collection of mods, mostly compatible with each other. See the discord for more information: https://discord.gg/hTn9cX7wbu
-Don't forget to subscribe to all the mods here: https://steamcommunity.com/sharedfiles/filedetails/?id=2973711249
 
-How to apply the collection:
-- Download the latest zip from here: https://drive.google.com/drive/folders/1NGK9UKX4HBCq5m5v-lzfSc9bLuG-_P3I?usp=sharing
-- Subscribe to all mods https://steamcommunity.com/sharedfiles/filedetails/?id=2990720020 . 
-- LET STEAM FINISH DOWNLOADING BEFORE GOING TO THE NEXT STEP.
-- DID YOU CHECK IF STEAM IS DONE DOWNLOADING? IT WILL STOP AND START A FEW TIMES.
-- Open Irony Mod Manager and click Import
-- Import the zip you downloaded
-- Apply
-- NEVER PRESS CONFLICT SOLVER UNLESS YOU KNOW WHAT YOU'RE DOING
+A curated Stellaris mod collection, mostly compatible with each other.
 
-Issues with the collection?
-See the Issues tab (https://github.com/Dukko/mergerofmods/issues) for known issues/bugs.
+[![Discord](https://img.shields.io/badge/Discord-Join-5865F2?logo=discord&logoColor=white)](https://discord.gg/hTn9cX7wbu)
+[![Steam](https://img.shields.io/badge/Steam-Mod%20List-1b2838?logo=steam&logoColor=white)](https://steamcommunity.com/sharedfiles/filedetails/?id=3712943982)
 
-More info needed?
-Check the wiki here: https://github.com/Dukko/mergerofmods/wiki
+---
+
+## Setup
+
+1. [Download the latest zip](https://github.com/Dukko/mergerofmods/blob/master/vanillaish.zip) from this repo.
+2. [Subscribe to all mods](https://steamcommunity.com/sharedfiles/filedetails/?id=3712943982) on Steam.
+3. **Wait for Steam to finish downloading before continuing.** It may stop and restart a few times — that's normal.
+4. Open **Irony Mod Manager** and click **Import**.
+5. Import the zip you downloaded, then click **Apply**.
+
+> [!CAUTION]
+> Do not press **Conflict Solver** unless you know exactly what you're doing.
+
+---
+
+## Resources
+
+- [Known issues and bugs](https://github.com/Dukko/mergerofmods/issues)
+- [Wiki](https://github.com/Dukko/mergerofmods/wiki)
+- [Discord](https://discord.gg/hTn9cX7wbu)
