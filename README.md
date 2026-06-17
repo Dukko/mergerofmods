@@ -9,7 +9,7 @@ A curated Stellaris mod collection, mostly compatible with each other.
 
 ## Setup
 
-1. [Download the latest zip](https://github.com/Dukko/mergerofmods/blob/master/vanillaish.zip) from this repo.
+1. [Download the latest zip](https://github.com/Dukko/mergerofmods/blob/master/4.4_-_Achievements.zip) from this repo.
 2. [Subscribe to all mods](https://steamcommunity.com/sharedfiles/filedetails/?id=3746705140) on Steam. *(Collection is UI-only for now — it's still early in the update cycle, so not many mods are available yet.)*
 3. **Wait for Steam to finish downloading before continuing.** It may stop and restart a few times — that's normal.
 4. Open **Irony Mod Manager** and click **Import**.
