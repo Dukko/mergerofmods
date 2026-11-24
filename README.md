@@ -10,7 +10,7 @@ My Stellaris collection of mods, mostly compatible with each other. Curated with
 
 Grab the latest zip from [Releases](https://github.com/Dukko/mergerofmods/releases/latest).
 
-That's **Corona Borealis v0.1** right now: Stellaris 4.6, 55 mods, the load order, a `collection.json` with every Workshop ID, and the patch files.
+That's **Corona Borealis v0.2** right now: Stellaris 4.6, 65 mods, the load order, a `collection.json` with every Workshop ID, and the patch files.
 
 The matching Steam collection is [Drukhal's Corona Borealis](https://steamcommunity.com/sharedfiles/filedetails/?id=3845268990).
 
