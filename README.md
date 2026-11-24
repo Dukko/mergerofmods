@@ -1,6 +1,6 @@
 # The Merger of Mods
 
-A curated Stellaris mod collection, mostly compatible with each other.
+My Stellaris collection of mods, mostly compatible with each other. Curated with love, occasional suffering, and too many hours in mod managers.
 
 [![Discord](https://img.shields.io/badge/Discord-Join-5865F2?logo=discord&logoColor=white)](https://discord.gg/hTn9cX7wbu)
 
@@ -8,34 +8,31 @@ A curated Stellaris mod collection, mostly compatible with each other.
 
 ## Download
 
-**[Latest release →](https://github.com/Dukko/mergerofmods/releases/latest)**
+Grab the latest zip from [Releases](https://github.com/Dukko/mergerofmods/releases/latest).
 
-Current build: **Corona Borealis v0.1** — Stellaris **4.6.x**, 56 mods. The zip is a mod list export: the load order, `collection.json` with every mod's Workshop ID, and the Drukhal patch files.
+That's **Corona Borealis v0.1** right now: Stellaris 4.6, 56 mods, the load order, a `collection.json` with every Workshop ID, and the patch files.
 
-Every build is kept on the [releases page](https://github.com/Dukko/mergerofmods/releases).
+## How to actually use it
 
-## Setup
+1. Download the zip.
+2. Subscribe to all the mods it lists.
+3. Let Steam finish downloading. It stops and starts a few times. Yes, really. Wait for it.
+4. Open **DrukhalManager**, click Import, pick the zip, click Apply.
 
-1. Download the zip from the latest release.
-2. Subscribe to all the mods it lists. **Wait for Steam to finish downloading** — it may stop and restart a few times, that's normal.
-3. Open **[Drukhal Manager](https://github.com/Dukko/DrukhalManager)** and click **Import**, pick the zip, then click **Apply**.
-
-**Using Irony Mod Manager?** It should import the same zip — Drukhal Manager is an Irony fork and the export format is identical — it just isn't what these builds are tested on.
+DrukhalManager is my own mod manager, an Irony fork rewritten in Rust/GTK that merges conflicting mods with AI. It's what I build these collections with, on Linux and Windows, and you can get it [here](https://github.com/Dukko/DrukhalManager). If you're on Irony it should take the same zip, the format is identical, I just haven't tested this build there.
 
 > [!CAUTION]
-> Do not press **Conflict Solver** unless you know exactly what you're doing.
+> Don't press Conflict Solver unless you know what you're doing. Seriously.
 
-## Legacy versions
+## Old versions
 
-No longer updated. The downloads live on the [v4.4 archive release](https://github.com/Dukko/mergerofmods/releases/tag/v4.4).
+The 4.4 builds are archived on the [v4.4 release](https://github.com/Dukko/mergerofmods/releases/tag/v4.4) and won't be updated again:
 
-| Version | Mods | Asset | Steam collection |
-| --- | --- | --- | --- |
-| Heavy modded (4.4.x) | 100 | `4.4.X.zip` | [3746976933](https://steamcommunity.com/sharedfiles/filedetails/?id=3746976933) |
-| Achievement-friendly (4.4.x) | 35 | `4.4_-_Achievements.zip` | [3746705140](https://steamcommunity.com/sharedfiles/filedetails/?id=3746705140) |
+- Heavy, 100 mods: `4.4.X.zip` ([Steam collection](https://steamcommunity.com/sharedfiles/filedetails/?id=3746976933))
+- Achievement friendly, 35 mods: `4.4_-_Achievements.zip` ([Steam collection](https://steamcommunity.com/sharedfiles/filedetails/?id=3746705140))
 
-## Resources
+## Something broke
 
-- [Known issues and bugs](https://github.com/Dukko/mergerofmods/issues)
-- [Wiki](https://github.com/Dukko/mergerofmods/wiki)
-- [Discord](https://discord.gg/hTn9cX7wbu)
+- Bugs and mod suggestions: [Issues](https://github.com/Dukko/mergerofmods/issues). All welcome.
+- FAQ and troubleshooting: [Wiki](https://github.com/Dukko/mergerofmods/wiki).
+- Still stuck: [Discord](https://discord.gg/hTn9cX7wbu), ask nicely.
