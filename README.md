@@ -10,12 +10,14 @@ My Stellaris collection of mods, mostly compatible with each other. Curated with
 
 Grab the latest zip from [Releases](https://github.com/Dukko/mergerofmods/releases/latest).
 
-That's **Corona Borealis v0.1** right now: Stellaris 4.6, 56 mods, the load order, a `collection.json` with every Workshop ID, and the patch files.
+That's **Corona Borealis v0.1** right now: Stellaris 4.6, 55 mods, the load order, a `collection.json` with every Workshop ID, and the patch files.
+
+The matching Steam collection is [Drukhal's Corona Borealis](https://steamcommunity.com/sharedfiles/filedetails/?id=3845268990).
 
 ## How to actually use it
 
 1. Download the zip.
-2. Subscribe to all the mods it lists.
+2. Subscribe to all the mods in the [Steam collection](https://steamcommunity.com/sharedfiles/filedetails/?id=3845268990).
 3. Let Steam finish downloading. It stops and starts a few times. Yes, really. Wait for it.
 4. Open **DrukhalManager**, click Import, pick the zip, click Apply.
 
