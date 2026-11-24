@@ -6,42 +6,33 @@ A curated Stellaris mod collection, mostly compatible with each other.
 
 ---
 
-## Versions
+## Download
 
-There are two versions to choose from depending on what you're after:
+**[Latest release →](https://github.com/Dukko/mergerofmods/releases/latest)**
 
-### Achievement-Friendly
-A lighter collection that keeps Steam achievements enabled.
+Current build: **Corona Borealis v0.1** — Stellaris **4.6.x**, 56 mods. The zip is a mod list export: the load order, `collection.json` with every mod's Workshop ID, and the Drukhal patch files.
 
-[![Steam](https://img.shields.io/badge/Steam-Collection-1b2838?logo=steam&logoColor=white)](https://steamcommunity.com/sharedfiles/filedetails/?id=3746705140)
-
-- Fewer mods, focused on QoL and visuals
-- Achievements still work
-- [Download zip](https://github.com/Dukko/mergerofmods/blob/master/4.4_-_Achievements.zip)
-
-### Heavy Modded
-The full experience — more mods, more content, achievements disabled.
-
-[![Steam](https://img.shields.io/badge/Steam-Collection-1b2838?logo=steam&logoColor=white)](https://steamcommunity.com/sharedfiles/filedetails/?id=3746976933)
-
-- Larger mod list with overhauls and major additions
-- Achievements are disabled (incompatible mods)
-- [Download zip](https://github.com/Dukko/mergerofmods/blob/master/4.4.X.zip)
-
----
+Every build is kept on the [releases page](https://github.com/Dukko/mergerofmods/releases).
 
 ## Setup
 
-1. Download the zip for your chosen version (links above).
-2. Subscribe to all mods in the matching Steam collection.
-3. **Wait for Steam to finish downloading before continuing.** It may stop and restart a few times — that's normal.
-4. Open **Irony Mod Manager** and click **Import**.
-5. Import the zip you downloaded, then click **Apply**.
+1. Download the zip from the latest release.
+2. Subscribe to all the mods it lists. **Wait for Steam to finish downloading** — it may stop and restart a few times, that's normal.
+3. Open **[Drukhal Manager](https://github.com/Dukko/DrukhalManager)** and click **Import**, pick the zip, then click **Apply**.
+
+**Using Irony Mod Manager?** It should import the same zip — Drukhal Manager is an Irony fork and the export format is identical — it just isn't what these builds are tested on.
 
 > [!CAUTION]
 > Do not press **Conflict Solver** unless you know exactly what you're doing.
 
----
+## Legacy versions
+
+No longer updated. The downloads live on the [v4.4 archive release](https://github.com/Dukko/mergerofmods/releases/tag/v4.4).
+
+| Version | Mods | Asset | Steam collection |
+| --- | --- | --- | --- |
+| Heavy modded (4.4.x) | 100 | `4.4.X.zip` | [3746976933](https://steamcommunity.com/sharedfiles/filedetails/?id=3746976933) |
+| Achievement-friendly (4.4.x) | 35 | `4.4_-_Achievements.zip` | [3746705140](https://steamcommunity.com/sharedfiles/filedetails/?id=3746705140) |
 
 ## Resources
 

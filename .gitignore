@@ -1,0 +1,2 @@
+# Build artifacts are published as release assets, not committed
+*.zip
